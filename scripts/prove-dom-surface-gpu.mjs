@@ -14,6 +14,12 @@ const output =
   process.env.DESIGN_DOM_GPU_OUTPUT ?? 'artifacts/dom-surfaces-gpu';
 const readbackDiagnostic =
   process.env.DESIGN_DOM_GPU_READBACK_DIAGNOSTIC === '1';
+const transformDiagnostic =
+  process.env.DESIGN_DOM_GPU_TRANSFORM_DIAGNOSTIC === 'none';
+const headedDiagnostic =
+  process.env.DESIGN_DOM_GPU_HEADED_DIAGNOSTIC === '1';
+const transformDiagnosticCss =
+  '.proof-card.dt-dom-surface{transform:none!important}';
 await mkdir(output, { recursive: true });
 const files = [
   'scripts/dom-surface-observation.mjs',
@@ -37,6 +43,7 @@ const hashes = () =>
   );
 const report = {
   generatedAt: new Date().toISOString(),
+  browserMode: headedDiagnostic ? 'headed' : 'headless',
   sources: await hashes(),
   checks: [],
   engines: [],
@@ -47,6 +54,17 @@ const report = {
     'Contrast covers the recorded real DOM copy at sampled poses/exposures. It cannot certify every supplied color, backdrop or motion path.',
   ],
 };
+if (headedDiagnostic)
+  report.limits.push(
+    'Headed diagnostic changes browser display participation but retains the same Playwright screenshot API. An Xvfb snapshot is not an observation of a physical screen or a performance benchmark.',
+  );
+if (transformDiagnostic)
+  report.fixtureDiagnostic = {
+    kind: 'ancestor-transform-none',
+    css: transformDiagnosticCss,
+    caveat:
+      'Fixture-only layer-topology comparison in a separate browser run. A changed screenshot result would implicate the ancestor transform path, without establishing live compositor behavior or a production fix.',
+  };
 if (readbackDiagnostic)
   report.diagnostic = {
     kind: 'same-stack-readback',
@@ -308,7 +326,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       ? process.env.DESIGN_WEBKIT_EXECUTABLE
       : process.env.DESIGN_CHROMIUM;
   const browser = await type.launch({
-    headless: true,
+    headless: !headedDiagnostic,
     ...(executablePath ? { executablePath } : {}),
   });
   let page;
@@ -322,6 +340,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     await page.setContent(
       '<!doctype html><html><head><meta charset="utf-8"></head><body></body></html>',
     );
+    if (transformDiagnostic)
+      await page.addStyleTag({ content: transformDiagnosticCss });
     if (readbackDiagnostic) await installReadbackDiagnostic(page);
     await page.addScriptTag({ content: bundle });
     await page.evaluate(
@@ -555,6 +575,16 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
             (pass) => proof.oracle(1, pass),
             pass,
           );
+          const fixture = transformDiagnostic
+            ? await page.evaluate(() => ({
+                transform: getComputedStyle(proof.cards[1]).transform,
+                cardRect: proof.cards[1].getBoundingClientRect().toJSON(),
+                canvasRect: proof.cards[1]
+                  .querySelector('canvas')
+                  .getBoundingClientRect()
+                  .toJSON(),
+              }))
+            : null;
           const { bytes, captureSha256 } = await captureStaticDomSurface(page, {
             fullPage: true,
           });
@@ -593,6 +623,9 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
             expected: oracle.expected,
             observed,
             captureSha256,
+            ...(fixture
+              ? { fixture, screenshotPoint: { x: oracle.x, y: oracle.y } }
+              : {}),
             ...(diagnosticTrace
               ? {
                   diagnosticTrace,
@@ -610,6 +643,17 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       parity.every((p) => p.maxChannelError < 3),
       parity,
     );
+    if (transformDiagnostic)
+      check(
+        engine,
+        'fixture ancestor transform remains none for all GGX probes',
+        parity.length === 8 &&
+          parity.every((p) => p.fixture.transform === 'none'),
+        parity.map(({ fixture, screenshotPoint }) => ({
+          fixture,
+          screenshotPoint,
+        })),
+      );
     if (readbackDiagnostic) {
       const trace = await page.evaluate(() => window.__dtReadback);
       check(

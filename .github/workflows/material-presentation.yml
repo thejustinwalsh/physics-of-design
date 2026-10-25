@@ -15,7 +15,7 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium webkit --only-shell
+      - run: npx playwright install --with-deps chromium webkit
       - name: Strict uninstrumented control
         id: control
         continue-on-error: true
@@ -31,6 +31,24 @@ jobs:
           DESIGN_DOM_GPU_OUTPUT: artifacts/material-presentation/instrumented
           DESIGN_DOM_GPU_READBACK_DIAGNOSTIC: '1'
         run: node scripts/prove-dom-surface-gpu.mjs
+      - name: Separate uninstrumented transform-none fixture
+        id: transform_none
+        if: ${{ !cancelled() && steps.control.outcome != 'skipped' }}
+        continue-on-error: true
+        env:
+          DESIGN_DOM_GPU_OUTPUT: artifacts/material-presentation/transform-none
+          DESIGN_DOM_GPU_READBACK_DIAGNOSTIC: '0'
+          DESIGN_DOM_GPU_TRANSFORM_DIAGNOSTIC: none
+        run: node scripts/prove-dom-surface-gpu.mjs
+      - name: Separate uninstrumented headed control
+        id: headed
+        if: ${{ !cancelled() && steps.control.outcome != 'skipped' }}
+        continue-on-error: true
+        env:
+          DESIGN_DOM_GPU_OUTPUT: artifacts/material-presentation/headed
+          DESIGN_DOM_GPU_READBACK_DIAGNOSTIC: '0'
+          DESIGN_DOM_GPU_HEADED_DIAGNOSTIC: '1'
+        run: xvfb-run --auto-servernum --server-args="-screen 0 1920x1600x24" node scripts/prove-dom-surface-gpu.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -38,5 +56,5 @@ jobs:
           path: artifacts/material-presentation
           if-no-files-found: warn
       - name: Preserve strict failure status
-        if: ${{ !cancelled() && (steps.control.outcome != 'success' || steps.instrumented.outcome != 'success') }}
+        if: ${{ !cancelled() && (steps.control.outcome != 'success' || steps.instrumented.outcome != 'success' || steps.transform_none.outcome != 'success' || steps.headed.outcome != 'success') }}
         run: exit 1
