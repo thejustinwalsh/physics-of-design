@@ -1,0 +1,334 @@
+{
+  "createdAt": "2026-10-25T11:05:30.793Z",
+  "sources": {
+    "src/validation-machine.ts": "a18f6772d88b658a954130b59f23d3e136d8f9d430d3f6e71ef3feddfb30d60b",
+    "src/measurement.ts": "0d7941f3260524b728324ed5e3e6e0e5b1c1fa74ae4401bd36515b1b4ae1966d",
+    "src/responsive.ts": "49b4e878b57f842eb1cfcd3d19ea5413ab86ce0e9f45b3bbe6a28c062396beaf",
+    "src/palette.ts": "afc45f45af6c9d1235c9147429800058c531d90d5404f6131da8da8f8b579575",
+    "scripts/prove-validation-machine.mjs": "ca0d669fa6b0f32960a936cb5ee79f0daba6ee3a7343b74d96229f70989da865"
+  },
+  "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+  "receipts": [
+    {
+      "requirement": "phone-geometry",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "713fb66cf6154eb768000e88b8336fc2290bdff94a74f948cdb855a00fe70df2",
+      "tool": "layout measure",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/phone-geometry.json",
+      "observedAt": "2026-10-25T11:05:30.338Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    },
+    {
+      "requirement": "phone-contrast",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "aed9cba8f3573d64a2d818d957416acd72f3e2ac7e351f13e75cc207effe5f9e",
+      "tool": "palette analyze",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/phone-contrast.json",
+      "observedAt": "2026-10-25T11:05:30.341Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    },
+    {
+      "requirement": "ipad-large-text-geometry",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "cd55d8e07b0ba0b4cd1b4f78450c2703403a3cc20733a6eb6a5309cfc691a11c",
+      "tool": "layout measure",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/ipad-large-text-geometry.json",
+      "observedAt": "2026-10-25T11:05:30.562Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    },
+    {
+      "requirement": "ipad-large-text-contrast",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "7344498c908ad05ac01f2df2dc27d0e98733db23d31ad38d987c1d55be53afd0",
+      "tool": "palette analyze",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/ipad-large-text-contrast.json",
+      "observedAt": "2026-10-25T11:05:30.562Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    },
+    {
+      "requirement": "desktop-geometry",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "3c19bbe79d655500f48075cb38f7e42428a7a47f8181e719f777c0dec93d9e91",
+      "tool": "layout measure",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/desktop-geometry.json",
+      "observedAt": "2026-10-25T11:05:30.788Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    },
+    {
+      "requirement": "desktop-contrast",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "aed9cba8f3573d64a2d818d957416acd72f3e2ac7e351f13e75cc207effe5f9e",
+      "tool": "palette analyze",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/desktop-contrast.json",
+      "observedAt": "2026-10-25T11:05:30.789Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    }
+  ],
+  "missingPermutation": {
+    "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+    "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+    "state": "geometry",
+    "complete": false,
+    "phases": [
+      {
+        "id": "geometry",
+        "purpose": "Measure phone, iPad enlarged content and desktop before progressing",
+        "ready": false,
+        "requirements": [
+          {
+            "id": "phone-geometry",
+            "scenario": "phone",
+            "tool": "layout measure",
+            "inputIdentity": "713fb66cf6154eb768000e88b8336fc2290bdff94a74f948cdb855a00fe70df2",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "pass",
+            "resultRef": "artifacts/validation/phone-geometry.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          },
+          {
+            "id": "ipad-large-text-geometry",
+            "scenario": "ipad-large-text",
+            "tool": "layout measure",
+            "inputIdentity": "cd55d8e07b0ba0b4cd1b4f78450c2703403a3cc20733a6eb6a5309cfc691a11c",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "missing",
+            "resultRef": null,
+            "detail": null
+          },
+          {
+            "id": "desktop-geometry",
+            "scenario": "desktop",
+            "tool": "layout measure",
+            "inputIdentity": "3c19bbe79d655500f48075cb38f7e42428a7a47f8181e719f777c0dec93d9e91",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "pass",
+            "resultRef": "artifacts/validation/desktop-geometry.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          }
+        ]
+      },
+      {
+        "id": "contrast",
+        "purpose": "Check every authored palette before completing this proof",
+        "ready": true,
+        "requirements": [
+          {
+            "id": "phone-contrast",
+            "scenario": "phone",
+            "tool": "palette analyze",
+            "inputIdentity": "aed9cba8f3573d64a2d818d957416acd72f3e2ac7e351f13e75cc207effe5f9e",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "pass",
+            "resultRef": "artifacts/validation/phone-contrast.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          },
+          {
+            "id": "ipad-large-text-contrast",
+            "scenario": "ipad-large-text",
+            "tool": "palette analyze",
+            "inputIdentity": "7344498c908ad05ac01f2df2dc27d0e98733db23d31ad38d987c1d55be53afd0",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "pass",
+            "resultRef": "artifacts/validation/ipad-large-text-contrast.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          },
+          {
+            "id": "desktop-contrast",
+            "scenario": "desktop",
+            "tool": "palette analyze",
+            "inputIdentity": "aed9cba8f3573d64a2d818d957416acd72f3e2ac7e351f13e75cc207effe5f9e",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "pass",
+            "resultRef": "artifacts/validation/desktop-contrast.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          }
+        ]
+      }
+    ],
+    "next": [
+      {
+        "id": "ipad-large-text-geometry",
+        "scenario": "ipad-large-text",
+        "tool": "layout measure",
+        "inputIdentity": "cd55d8e07b0ba0b4cd1b4f78450c2703403a3cc20733a6eb6a5309cfc691a11c",
+        "evidenceKind": "deterministic",
+        "unsupportedPolicy": "block",
+        "rationale": "Explicit proof requirement, scoped to the declared tool input",
+        "status": "missing",
+        "resultRef": null,
+        "detail": null
+      }
+    ],
+    "recordedUnsupported": [],
+    "neuralCalls": 0,
+    "scope": "XState phase guards require current matching receipt declarations. They do not execute tools, inspect or authenticate receipt files, infer missing permutations, certify aesthetics or replace deterministic validators. Synthetic review cannot satisfy a human-review requirement."
+  },
+  "state": "complete",
+  "complete": true,
+  "changedScenario": {
+    "planIdentity": "fd46cc01bb035e3cdbb303444d1fda942007f97b9e41c850baea7a5b3ad51e87",
+    "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+    "state": "geometry",
+    "complete": false,
+    "phases": [
+      {
+        "id": "geometry",
+        "purpose": "Measure phone, iPad enlarged content and desktop before progressing",
+        "ready": false,
+        "requirements": [
+          {
+            "id": "phone-geometry",
+            "scenario": "phone",
+            "tool": "layout measure",
+            "inputIdentity": "713fb66cf6154eb768000e88b8336fc2290bdff94a74f948cdb855a00fe70df2",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "stale",
+            "resultRef": "artifacts/validation/phone-geometry.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          },
+          {
+            "id": "ipad-large-text-geometry",
+            "scenario": "ipad-large-text",
+            "tool": "layout measure",
+            "inputIdentity": "cd55d8e07b0ba0b4cd1b4f78450c2703403a3cc20733a6eb6a5309cfc691a11c",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "stale",
+            "resultRef": "artifacts/validation/ipad-large-text-geometry.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          },
+          {
+            "id": "desktop-geometry",
+            "scenario": "desktop",
+            "tool": "layout measure",
+            "inputIdentity": "3c19bbe79d655500f48075cb38f7e42428a7a47f8181e719f777c0dec93d9e91",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "stale",
+            "resultRef": "artifacts/validation/desktop-geometry.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          }
+        ]
+      },
+      {
+        "id": "contrast",
+        "purpose": "Check every authored palette before completing this proof",
+        "ready": false,
+        "requirements": [
+          {
+            "id": "phone-contrast",
+            "scenario": "phone",
+            "tool": "palette analyze",
+            "inputIdentity": "aed9cba8f3573d64a2d818d957416acd72f3e2ac7e351f13e75cc207effe5f9e",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "stale",
+            "resultRef": "artifacts/validation/phone-contrast.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          },
+          {
+            "id": "ipad-large-text-contrast",
+            "scenario": "ipad-large-text",
+            "tool": "palette analyze",
+            "inputIdentity": "7344498c908ad05ac01f2df2dc27d0e98733db23d31ad38d987c1d55be53afd0",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "stale",
+            "resultRef": "artifacts/validation/ipad-large-text-contrast.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          },
+          {
+            "id": "desktop-contrast",
+            "scenario": "desktop",
+            "tool": "palette analyze",
+            "inputIdentity": "aed9cba8f3573d64a2d818d957416acd72f3e2ac7e351f13e75cc207effe5f9e",
+            "evidenceKind": "deterministic",
+            "unsupportedPolicy": "block",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input",
+            "status": "stale",
+            "resultRef": "artifacts/validation/desktop-contrast.json",
+            "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+          }
+        ]
+      }
+    ],
+    "next": [
+      {
+        "id": "phone-geometry",
+        "scenario": "phone",
+        "tool": "layout measure",
+        "inputIdentity": "713fb66cf6154eb768000e88b8336fc2290bdff94a74f948cdb855a00fe70df2",
+        "evidenceKind": "deterministic",
+        "unsupportedPolicy": "block",
+        "rationale": "Explicit proof requirement, scoped to the declared tool input",
+        "status": "stale",
+        "resultRef": "artifacts/validation/phone-geometry.json",
+        "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+      },
+      {
+        "id": "ipad-large-text-geometry",
+        "scenario": "ipad-large-text",
+        "tool": "layout measure",
+        "inputIdentity": "cd55d8e07b0ba0b4cd1b4f78450c2703403a3cc20733a6eb6a5309cfc691a11c",
+        "evidenceKind": "deterministic",
+        "unsupportedPolicy": "block",
+        "rationale": "Explicit proof requirement, scoped to the declared tool input",
+        "status": "stale",
+        "resultRef": "artifacts/validation/ipad-large-text-geometry.json",
+        "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+      },
+      {
+        "id": "desktop-geometry",
+        "scenario": "desktop",
+        "tool": "layout measure",
+        "inputIdentity": "3c19bbe79d655500f48075cb38f7e42428a7a47f8181e719f777c0dec93d9e91",
+        "evidenceKind": "deterministic",
+        "unsupportedPolicy": "block",
+        "rationale": "Explicit proof requirement, scoped to the declared tool input",
+        "status": "stale",
+        "resultRef": "artifacts/validation/desktop-geometry.json",
+        "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+      }
+    ],
+    "recordedUnsupported": [],
+    "neuralCalls": 0,
+    "scope": "XState phase guards require current matching receipt declarations. They do not execute tools, inspect or authenticate receipt files, infer missing permutations, certify aesthetics or replace deterministic validators. Synthetic review cannot satisfy a human-review requirement."
+  },
+  "scope": "Six actual deterministic tool invocations feed an XState planning gate. This is a scoped geometry/palette example, not a complete app, native, motion, contrast-over-PBR or aesthetic certification."
+}

@@ -1,0 +1,46 @@
+{
+  "analysis": {
+    "file": "native/assets/fieldwork/headland.png",
+    "provenance": {
+      "origin": "original-generated",
+      "source": "research/fieldwork-asset-provenance.json",
+      "creator": "built-in imagegen; original imagined editorial landscape",
+      "license": null,
+      "licenseEvidence": null,
+      "expectedSha256": "8fee5f6272e740a888eb4212c52223758a7c94a2db4c234aa9b2ab389ce639a3"
+    },
+    "sampleLimit": 4096,
+    "contrastRegions": [
+      {
+        "id": "ocean-white-type",
+        "region": { "x": 0.02, "y": 0.45, "width": 0.32, "height": 0.25 },
+        "foreground": [1, 1, 1],
+        "minimum": 4.5
+      },
+      {
+        "id": "sky-dark-type",
+        "region": { "x": 0.03, "y": 0.03, "width": 0.5, "height": 0.13 },
+        "foreground": [0.03, 0.03, 0.03],
+        "minimum": 4.5
+      }
+    ]
+  },
+  "crop": {
+    "sourceWidth": 1536,
+    "sourceHeight": 1024,
+    "width": 720,
+    "height": 600,
+    "focal": { "x": 0.82, "y": 0.18 },
+    "target": { "x": 0.8, "y": 0.25 },
+    "subjects": [{ "x": 0.77, "y": 0.13, "width": 0.11, "height": 0.1 }],
+    "negativeSpaces": [{ "x": 0.02, "y": 0.45, "width": 0.32, "height": 0.25 }],
+    "textRegion": { "x": 0.04, "y": 0.48, "width": 0.4, "height": 0.25 },
+    "weights": {
+      "subjectLoss": 4,
+      "focalDisplacement": 1,
+      "negativeSpaceLoss": 1,
+      "textSubjectOverlap": 4
+    }
+  },
+  "annotationProvenance": "Agent-authored rectangles after inspecting the original image on 2026-10-25. They describe an editorial intention, not object detection. The original asset manifest records generation and hash but does not declare a separate image license; rights remain unknown in this report."
+}

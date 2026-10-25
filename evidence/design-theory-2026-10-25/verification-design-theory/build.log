@@ -1,0 +1,4 @@
+
+> @design-theory/toolkit@0.1.0 build
+> tsc && chmod +x dist/cli.js
+

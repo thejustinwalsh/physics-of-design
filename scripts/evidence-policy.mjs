@@ -20,16 +20,33 @@ export const verificationStages = Object.freeze([
   'matrix-native-ios',
   'matrix-native-android',
 ]);
+// Preserve the frozen eighteen-stage milestone while requiring the expanded
+// ordered lane for newly versioned full-verification receipts.
+export const currentFullVerificationStages = Object.freeze([
+  ...verificationStages.slice(0, 12),
+  'workflow-mathematical',
+  'vela-motion',
+  'gallery-build',
+  'gallery-web',
+  'validation-phases',
+  'typography',
+  'migrations',
+  ...verificationStages.slice(12),
+]);
 
 export function assertFullVerification(summary) {
+  const stages =
+    summary?.verificationVersion === 2
+      ? currentFullVerificationStages
+      : verificationStages;
   assert.equal(summary?.complete, true, 'Verification is incomplete');
   assert.equal(summary?.passed, true, 'Verification did not pass');
-  assert.equal(summary?.expectedStages, verificationStages.length);
+  assert.equal(summary?.expectedStages, stages.length);
   assert.ok(Array.isArray(summary?.results), 'Missing verification stages');
   assert.deepEqual(
     summary.results.map((s) => s.name),
-    verificationStages,
-    'Verification must contain the exact ordered eighteen stages',
+    stages,
+    'Verification must contain the exact ordered stages for its version',
   );
   for (const stage of summary.results)
     assert.equal(stage.code, 0, `Verification failed: ${stage.name}`);

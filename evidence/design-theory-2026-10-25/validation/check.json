@@ -1,0 +1,179 @@
+{
+  "plan": {
+    "version": 1,
+    "id": "responsive-finalists",
+    "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+    "scenarios": [
+      {
+        "id": "phone",
+        "platform": "web",
+        "width": 390,
+        "height": 844,
+        "textScale": 1,
+        "colorScheme": "light",
+        "reducedMotion": false,
+        "contentId": "original",
+        "source": "Authored responsive proof scope"
+      },
+      {
+        "id": "ipad-large-text",
+        "platform": "web",
+        "width": 834,
+        "height": 1194,
+        "textScale": 2,
+        "colorScheme": "dark",
+        "reducedMotion": true,
+        "contentId": "long-copy",
+        "source": "Authored responsive proof scope"
+      },
+      {
+        "id": "desktop",
+        "platform": "web",
+        "width": 1440,
+        "height": 1000,
+        "textScale": 1,
+        "colorScheme": "light",
+        "reducedMotion": true,
+        "contentId": "original",
+        "source": "Authored responsive proof scope"
+      }
+    ],
+    "phases": [
+      {
+        "id": "geometry",
+        "purpose": "Measure phone, iPad enlarged content and desktop before progressing",
+        "requirements": [
+          {
+            "id": "phone-geometry",
+            "scenario": "phone",
+            "tool": "layout measure",
+            "inputIdentity": "713fb66cf6154eb768000e88b8336fc2290bdff94a74f948cdb855a00fe70df2",
+            "evidenceKind": "deterministic",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input"
+          },
+          {
+            "id": "ipad-large-text-geometry",
+            "scenario": "ipad-large-text",
+            "tool": "layout measure",
+            "inputIdentity": "cd55d8e07b0ba0b4cd1b4f78450c2703403a3cc20733a6eb6a5309cfc691a11c",
+            "evidenceKind": "deterministic",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input"
+          },
+          {
+            "id": "desktop-geometry",
+            "scenario": "desktop",
+            "tool": "layout measure",
+            "inputIdentity": "3c19bbe79d655500f48075cb38f7e42428a7a47f8181e719f777c0dec93d9e91",
+            "evidenceKind": "deterministic",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input"
+          }
+        ]
+      },
+      {
+        "id": "contrast",
+        "purpose": "Check every authored palette before completing this proof",
+        "requirements": [
+          {
+            "id": "phone-contrast",
+            "scenario": "phone",
+            "tool": "palette analyze",
+            "inputIdentity": "aed9cba8f3573d64a2d818d957416acd72f3e2ac7e351f13e75cc207effe5f9e",
+            "evidenceKind": "deterministic",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input"
+          },
+          {
+            "id": "ipad-large-text-contrast",
+            "scenario": "ipad-large-text",
+            "tool": "palette analyze",
+            "inputIdentity": "7344498c908ad05ac01f2df2dc27d0e98733db23d31ad38d987c1d55be53afd0",
+            "evidenceKind": "deterministic",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input"
+          },
+          {
+            "id": "desktop-contrast",
+            "scenario": "desktop",
+            "tool": "palette analyze",
+            "inputIdentity": "aed9cba8f3573d64a2d818d957416acd72f3e2ac7e351f13e75cc207effe5f9e",
+            "evidenceKind": "deterministic",
+            "rationale": "Explicit proof requirement, scoped to the declared tool input"
+          }
+        ]
+      }
+    ]
+  },
+  "receipts": [
+    {
+      "requirement": "phone-geometry",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "713fb66cf6154eb768000e88b8336fc2290bdff94a74f948cdb855a00fe70df2",
+      "tool": "layout measure",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/phone-geometry.json",
+      "observedAt": "2026-10-25T11:05:30.338Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    },
+    {
+      "requirement": "phone-contrast",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "aed9cba8f3573d64a2d818d957416acd72f3e2ac7e351f13e75cc207effe5f9e",
+      "tool": "palette analyze",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/phone-contrast.json",
+      "observedAt": "2026-10-25T11:05:30.341Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    },
+    {
+      "requirement": "ipad-large-text-geometry",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "cd55d8e07b0ba0b4cd1b4f78450c2703403a3cc20733a6eb6a5309cfc691a11c",
+      "tool": "layout measure",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/ipad-large-text-geometry.json",
+      "observedAt": "2026-10-25T11:05:30.562Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    },
+    {
+      "requirement": "ipad-large-text-contrast",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "7344498c908ad05ac01f2df2dc27d0e98733db23d31ad38d987c1d55be53afd0",
+      "tool": "palette analyze",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/ipad-large-text-contrast.json",
+      "observedAt": "2026-10-25T11:05:30.562Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    },
+    {
+      "requirement": "desktop-geometry",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "3c19bbe79d655500f48075cb38f7e42428a7a47f8181e719f777c0dec93d9e91",
+      "tool": "layout measure",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/desktop-geometry.json",
+      "observedAt": "2026-10-25T11:05:30.788Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    },
+    {
+      "requirement": "desktop-contrast",
+      "planIdentity": "62d6b488fbbe9f8ffb0f9d978b44524507643ac21c10b13c34e239a0faabc378",
+      "designIdentity": "be0895c5fa6821d9f9d029ec3a86819305c0bbbadc23cb4f259959c77856e6c4",
+      "inputIdentity": "aed9cba8f3573d64a2d818d957416acd72f3e2ac7e351f13e75cc207effe5f9e",
+      "tool": "palette analyze",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "artifacts/validation/desktop-contrast.json",
+      "observedAt": "2026-10-25T11:05:30.789Z",
+      "detail": "Actual toolkit handler executed; layout receipt or palette constraints checked. Reduced-motion metadata does not imply an animated-scene check."
+    }
+  ],
+  "advance": 16
+}

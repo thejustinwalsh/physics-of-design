@@ -1,0 +1,1428 @@
+{
+  "capturedAt": "2026-10-25T10:31:49.173Z",
+  "hashes": {
+    "examples/design-theory/web.jsx": "b9f9a73ccd566d348817a4ba47666ea07301b3dfd44530d0c8c257a9c5435147",
+    "examples/design-theory/LayoutPreview.jsx": "513697be38077762222cf930600a726daf79738386ce97a6bcc91ddc66ae8220",
+    "examples/design-theory/Surface.jsx": "312d23fecb0910938e3da09a301378885d10634b4065c305970e5b5d7e4f519f",
+    "examples/design-theory/surface-worker.js": "4c1014273b3f63d0d70079733d9fef88710abd9dce8966224cce04e26abab805",
+    "artifacts/vela/web/design-theory/app.js": "7ad9ece43c8c23cdda1be66c7bbcdaaa15221d43cceabcb5976390cc547e4f2b"
+  },
+  "initial": [
+    {
+      "width": 320,
+      "pixels": {
+        "width": 284,
+        "height": 303,
+        "changedFraction": 0.010156649467763677,
+        "quantizedColors": 43
+      },
+      "stats": {
+        "renderer": "worker",
+        "frames": 1,
+        "initializationMilliseconds": 3273.5,
+        "settings": {
+          "surface": {
+            "baseColor": [
+              0.2,
+              0.34,
+              0.22
+            ],
+            "roughness": 0.32,
+            "metalness": 0
+          },
+          "accentSurface": {
+            "baseColor": [
+              0.62,
+              0.43,
+              0.22
+            ],
+            "roughness": 0.55,
+            "metalness": 1
+          },
+          "normalScale": 1,
+          "normalStrength": 0.11
+        },
+        "workerInitializationMilliseconds": 3242.099999964237,
+        "draw": {
+          "drawCalls": 3,
+          "triangles": 9152
+        },
+        "lastRenderMilliseconds": 49.60000002384186
+      }
+    },
+    {
+      "width": 834,
+      "pixels": {
+        "width": 321,
+        "height": 458,
+        "changedFraction": 0.2799997279244718,
+        "quantizedColors": 306
+      },
+      "stats": {
+        "renderer": "worker",
+        "frames": 1,
+        "initializationMilliseconds": 2909.800000011921,
+        "settings": {
+          "surface": {
+            "baseColor": [
+              0.2,
+              0.34,
+              0.22
+            ],
+            "roughness": 0.32,
+            "metalness": 0
+          },
+          "accentSurface": {
+            "baseColor": [
+              0.62,
+              0.43,
+              0.22
+            ],
+            "roughness": 0.55,
+            "metalness": 1
+          },
+          "normalScale": 1,
+          "normalStrength": 0.11
+        },
+        "workerInitializationMilliseconds": 2882.199999988079,
+        "draw": {
+          "drawCalls": 3,
+          "triangles": 9152
+        },
+        "lastRenderMilliseconds": 2
+      }
+    }
+  ],
+  "geometry": [
+    {
+      "actualWidth": 1440,
+      "width": "390",
+      "extreme": false,
+      "design": {
+        "scale": 1,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 32,
+            "y": 30,
+            "width": 326,
+            "height": 40,
+            "scrollHeight": 39,
+            "clientHeight": 39,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 32,
+            "y": 104,
+            "width": 326,
+            "height": 197,
+            "scrollHeight": 197,
+            "clientHeight": 197,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 32,
+            "y": 329,
+            "width": 326,
+            "height": 255,
+            "scrollHeight": 255,
+            "clientHeight": 255,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 32,
+            "y": 610,
+            "width": 160,
+            "height": 44,
+            "scrollHeight": 44,
+            "clientHeight": 44,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 32,
+            "y": 698,
+            "width": 326,
+            "height": 28,
+            "scrollHeight": 27,
+            "clientHeight": 27,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 32,
+            "y": 30,
+            "width": 326,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 32,
+            "y": 104,
+            "width": 326,
+            "height": 197
+          },
+          {
+            "id": "image",
+            "x": 32,
+            "y": 329,
+            "width": 326,
+            "height": 255
+          },
+          {
+            "id": "action",
+            "x": 32,
+            "y": 610,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 32,
+            "y": 698,
+            "width": 326,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 87.03790283203125,
+        "scrollHeight": 827,
+        "height": 520
+      },
+      "maxError": 0
+    },
+    {
+      "actualWidth": 1440,
+      "width": "390",
+      "extreme": true,
+      "design": {
+        "scale": 1,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 64,
+            "y": 30,
+            "width": 262,
+            "height": 40,
+            "scrollHeight": 39,
+            "clientHeight": 39,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 64,
+            "y": 104,
+            "width": 262,
+            "height": 197,
+            "scrollHeight": 197,
+            "clientHeight": 197,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 64,
+            "y": 349,
+            "width": 262,
+            "height": 255,
+            "scrollHeight": 255,
+            "clientHeight": 255,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 64,
+            "y": 630,
+            "width": 160,
+            "height": 44,
+            "scrollHeight": 44,
+            "clientHeight": 44,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 64,
+            "y": 708,
+            "width": 262,
+            "height": 28,
+            "scrollHeight": 27,
+            "clientHeight": 27,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 64,
+            "y": 30,
+            "width": 262,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 64,
+            "y": 104,
+            "width": 262,
+            "height": 197
+          },
+          {
+            "id": "image",
+            "x": 64,
+            "y": 349,
+            "width": 262,
+            "height": 255
+          },
+          {
+            "id": "action",
+            "x": 64,
+            "y": 630,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 64,
+            "y": 708,
+            "width": 262,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 77.55926513671875,
+        "scrollHeight": 827,
+        "height": 520
+      },
+      "maxError": 0
+    },
+    {
+      "actualWidth": 1440,
+      "width": "834",
+      "extreme": false,
+      "design": {
+        "scale": 1,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 32,
+            "y": 30,
+            "width": 770,
+            "height": 40,
+            "scrollHeight": 39,
+            "clientHeight": 39,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 32,
+            "y": 104,
+            "width": 371,
+            "height": 230,
+            "scrollHeight": 230,
+            "clientHeight": 230,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 32,
+            "y": 362,
+            "width": 160,
+            "height": 44,
+            "scrollHeight": 44,
+            "clientHeight": 44,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 431,
+            "y": 104,
+            "width": 371,
+            "height": 290,
+            "scrollHeight": 290,
+            "clientHeight": 290,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 32,
+            "y": 448,
+            "width": 770,
+            "height": 28,
+            "scrollHeight": 27,
+            "clientHeight": 27,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 32,
+            "y": 30,
+            "width": 770,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 32,
+            "y": 104,
+            "width": 371,
+            "height": 230
+          },
+          {
+            "id": "image",
+            "x": 431,
+            "y": 104,
+            "width": 371,
+            "height": 290
+          },
+          {
+            "id": "action",
+            "x": 32,
+            "y": 362,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 32,
+            "y": 448,
+            "width": 770,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 85.0576171875,
+        "scrollHeight": 572,
+        "height": 520
+      },
+      "maxError": 0
+    },
+    {
+      "actualWidth": 1440,
+      "width": "834",
+      "extreme": true,
+      "design": {
+        "scale": 1,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 64,
+            "y": 30,
+            "width": 706,
+            "height": 40,
+            "scrollHeight": 39,
+            "clientHeight": 39,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 64,
+            "y": 104,
+            "width": 329,
+            "height": 230,
+            "scrollHeight": 230,
+            "clientHeight": 230,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 64,
+            "y": 382,
+            "width": 160,
+            "height": 44,
+            "scrollHeight": 44,
+            "clientHeight": 44,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 441,
+            "y": 104,
+            "width": 329,
+            "height": 290,
+            "scrollHeight": 290,
+            "clientHeight": 290,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 64,
+            "y": 460,
+            "width": 706,
+            "height": 28,
+            "scrollHeight": 27,
+            "clientHeight": 27,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 64,
+            "y": 30,
+            "width": 706,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 64,
+            "y": 104,
+            "width": 329,
+            "height": 230
+          },
+          {
+            "id": "image",
+            "x": 441,
+            "y": 104,
+            "width": 329,
+            "height": 290
+          },
+          {
+            "id": "action",
+            "x": 64,
+            "y": 382,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 64,
+            "y": 460,
+            "width": 706,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 74.05517578125,
+        "scrollHeight": 572,
+        "height": 520
+      },
+      "maxError": 0
+    },
+    {
+      "actualWidth": 1440,
+      "width": "960",
+      "extreme": false,
+      "design": {
+        "scale": 0.9017740885416666,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 31.985560869957585,
+            "y": 29.992960924104324,
+            "width": 895.994224347983,
+            "height": 39.990614565472434,
+            "scrollHeight": 35,
+            "clientHeight": 35,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 31.985560869957585,
+            "y": 103.9790632614385,
+            "width": 433.98826820684053,
+            "height": 229.99801461961917,
+            "scrollHeight": 207,
+            "clientHeight": 207,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 31.985560869957585,
+            "y": 361.9601119032578,
+            "width": 159.99711217399152,
+            "height": 43.99314141322986,
+            "scrollHeight": 40,
+            "clientHeight": 40,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 493.9568630989983,
+            "y": 103.9790632614385,
+            "width": 433.98826820684053,
+            "height": 289.98393646782785,
+            "scrollHeight": 262,
+            "clientHeight": 262,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 31.985560869957585,
+            "y": 447.9364678278134,
+            "width": 895.994224347983,
+            "height": 27.983034022200165,
+            "scrollHeight": 24,
+            "clientHeight": 24,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 32,
+            "y": 30,
+            "width": 896,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 32,
+            "y": 104,
+            "width": 434,
+            "height": 230
+          },
+          {
+            "id": "image",
+            "x": 494,
+            "y": 104,
+            "width": 434,
+            "height": 290
+          },
+          {
+            "id": "action",
+            "x": 32,
+            "y": 362,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 32,
+            "y": 448,
+            "width": 896,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 76.272216796875,
+        "scrollHeight": 506,
+        "height": 506
+      },
+      "maxError": 0.06353217218662621
+    },
+    {
+      "actualWidth": 1440,
+      "width": "960",
+      "extreme": true,
+      "design": {
+        "scale": 0.9017740885416666,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 63.98844869596607,
+            "y": 29.992960924104324,
+            "width": 831.9884486959661,
+            "height": 39.990614565472434,
+            "scrollHeight": 35,
+            "clientHeight": 35,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 63.98844869596607,
+            "y": 103.9790632614385,
+            "width": 391.98772673946394,
+            "height": 229.99801461961917,
+            "scrollHeight": 207,
+            "clientHeight": 207,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 63.98844869596607,
+            "y": 381.97274614204497,
+            "width": 159.99711217399152,
+            "height": 43.99314141322986,
+            "scrollHeight": 40,
+            "clientHeight": 40,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 503.9718436964173,
+            "y": 103.9790632614385,
+            "width": 391.98772673946394,
+            "height": 289.98393646782785,
+            "scrollHeight": 262,
+            "clientHeight": 262,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 63.98844869596607,
+            "y": 459.9613753271366,
+            "width": 831.9884486959661,
+            "height": 27.983034022200165,
+            "scrollHeight": 24,
+            "clientHeight": 24,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 64,
+            "y": 30,
+            "width": 832,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 64,
+            "y": 104,
+            "width": 392,
+            "height": 230
+          },
+          {
+            "id": "image",
+            "x": 504,
+            "y": 104,
+            "width": 392,
+            "height": 290
+          },
+          {
+            "id": "action",
+            "x": 64,
+            "y": 382,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 64,
+            "y": 460,
+            "width": 832,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 66.59765625,
+        "scrollHeight": 506,
+        "height": 506
+      },
+      "maxError": 0.03862467286342053
+    },
+    {
+      "actualWidth": 320,
+      "width": "390",
+      "extreme": false,
+      "design": {
+        "scale": 0.7230769230769231,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 31.981382978723406,
+            "y": 29.993351063829788,
+            "width": 325.99401595744683,
+            "height": 39.998337765957444,
+            "scrollHeight": 28,
+            "clientHeight": 28,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 31.981382978723406,
+            "y": 103.98271276595744,
+            "width": 325.99401595744683,
+            "height": 196.9880319148936,
+            "scrollHeight": 142,
+            "clientHeight": 142,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 31.981382978723406,
+            "y": 328.95445478723406,
+            "width": 325.99401595744683,
+            "height": 254.98670212765958,
+            "scrollHeight": 184,
+            "clientHeight": 184,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 31.981382978723406,
+            "y": 609.936835106383,
+            "width": 159.99335106382978,
+            "height": 43.996010638297875,
+            "scrollHeight": 32,
+            "clientHeight": 32,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 31.981382978723406,
+            "y": 697.9288563829788,
+            "width": 325.99401595744683,
+            "height": 27.98371010638298,
+            "scrollHeight": 19,
+            "clientHeight": 19,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 32,
+            "y": 30,
+            "width": 326,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 32,
+            "y": 104,
+            "width": 326,
+            "height": 197
+          },
+          {
+            "id": "image",
+            "x": 32,
+            "y": 329,
+            "width": 326,
+            "height": 255
+          },
+          {
+            "id": "action",
+            "x": 32,
+            "y": 610,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 32,
+            "y": 698,
+            "width": 326,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 56.366943359375,
+        "scrollHeight": 486,
+        "height": 486
+      },
+      "maxError": 0.07114361702122096
+    },
+    {
+      "actualWidth": 320,
+      "width": "390",
+      "extreme": true,
+      "design": {
+        "scale": 0.7230769230769231,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 63.984375,
+            "y": 29.993351063829788,
+            "width": 261.9880319148936,
+            "height": 39.998337765957444,
+            "scrollHeight": 28,
+            "clientHeight": 28,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 63.984375,
+            "y": 103.98271276595744,
+            "width": 261.9880319148936,
+            "height": 196.9880319148936,
+            "scrollHeight": 142,
+            "clientHeight": 142,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 63.984375,
+            "y": 348.9644281914894,
+            "width": 261.9880319148936,
+            "height": 254.98670212765958,
+            "scrollHeight": 184,
+            "clientHeight": 184,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 63.984375,
+            "y": 629.9468085106383,
+            "width": 159.99335106382978,
+            "height": 43.996010638297875,
+            "scrollHeight": 32,
+            "clientHeight": 32,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 63.984375,
+            "y": 707.9338430851064,
+            "width": 261.9880319148936,
+            "height": 27.98371010638298,
+            "scrollHeight": 19,
+            "clientHeight": 19,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 64,
+            "y": 30,
+            "width": 262,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 64,
+            "y": 104,
+            "width": 262,
+            "height": 197
+          },
+          {
+            "id": "image",
+            "x": 64,
+            "y": 349,
+            "width": 262,
+            "height": 255
+          },
+          {
+            "id": "action",
+            "x": 64,
+            "y": 630,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 64,
+            "y": 708,
+            "width": 262,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 50.9239501953125,
+        "scrollHeight": 486,
+        "height": 486
+      },
+      "maxError": 0.06615691489355413
+    },
+    {
+      "actualWidth": 320,
+      "width": "834",
+      "extreme": false,
+      "design": {
+        "scale": 0.3381294964028777,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 31.977393617021274,
+            "y": 29.99035904255319,
+            "width": 769.9990026595744,
+            "height": 39.9717420212766,
+            "scrollHeight": 13,
+            "clientHeight": 13,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 31.977393617021274,
+            "y": 103.92652925531915,
+            "width": 370.97473404255317,
+            "height": 229.9876994680851,
+            "scrollHeight": 78,
+            "clientHeight": 78,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 31.977393617021274,
+            "y": 361.8713430851064,
+            "width": 159.97938829787233,
+            "height": 43.99202127659574,
+            "scrollHeight": 15,
+            "clientHeight": 15,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 430.9092420212766,
+            "y": 103.92652925531915,
+            "width": 370.97473404255317,
+            "height": 289.9684175531915,
+            "scrollHeight": 98,
+            "clientHeight": 98,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 31.977393617021274,
+            "y": 447.8221409574468,
+            "width": 769.9990026595744,
+            "height": 27.95711436170213,
+            "scrollHeight": 8,
+            "clientHeight": 8,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 32,
+            "y": 30,
+            "width": 770,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 32,
+            "y": 104,
+            "width": 371,
+            "height": 230
+          },
+          {
+            "id": "image",
+            "x": 431,
+            "y": 104,
+            "width": 371,
+            "height": 290
+          },
+          {
+            "id": "action",
+            "x": 32,
+            "y": 362,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 32,
+            "y": 448,
+            "width": 770,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 142.4215087890625,
+        "scrollHeight": 300,
+        "height": 300
+      },
+      "maxError": 0.17785904255322293
+    },
+    {
+      "actualWidth": 320,
+      "width": "834",
+      "extreme": true,
+      "design": {
+        "scale": 0.3381294964028777,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 63.95478723404255,
+            "y": 29.99035904255319,
+            "width": 705.9980053191489,
+            "height": 39.9717420212766,
+            "scrollHeight": 13,
+            "clientHeight": 13,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 63.95478723404255,
+            "y": 103.92652925531915,
+            "width": 328.9697473404255,
+            "height": 229.9876994680851,
+            "scrollHeight": 78,
+            "clientHeight": 78,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 63.95478723404255,
+            "y": 381.88031914893617,
+            "width": 159.97938829787233,
+            "height": 43.99202127659574,
+            "scrollHeight": 15,
+            "clientHeight": 15,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 440.890625,
+            "y": 103.92652925531915,
+            "width": 328.9697473404255,
+            "height": 289.9684175531915,
+            "scrollHeight": 98,
+            "clientHeight": 98,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 63.95478723404255,
+            "y": 459.8367686170213,
+            "width": 705.9980053191489,
+            "height": 27.95711436170213,
+            "scrollHeight": 8,
+            "clientHeight": 8,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 64,
+            "y": 30,
+            "width": 706,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 64,
+            "y": 104,
+            "width": 329,
+            "height": 230
+          },
+          {
+            "id": "image",
+            "x": 441,
+            "y": 104,
+            "width": 329,
+            "height": 290
+          },
+          {
+            "id": "action",
+            "x": 64,
+            "y": 382,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 64,
+            "y": 460,
+            "width": 706,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 139.04901123046875,
+        "scrollHeight": 300,
+        "height": 300
+      },
+      "maxError": 0.1632313829787222
+    },
+    {
+      "actualWidth": 320,
+      "width": "960",
+      "extreme": false,
+      "design": {
+        "scale": 0.29375,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 31.96808510638298,
+            "y": 30,
+            "width": 895.9574468085106,
+            "height": 40,
+            "scrollHeight": 11,
+            "clientHeight": 11,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 31.96808510638298,
+            "y": 103.98936170212765,
+            "width": 433.98936170212767,
+            "height": 230,
+            "scrollHeight": 68,
+            "clientHeight": 68,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 31.96808510638298,
+            "y": 361.96808510638294,
+            "width": 160,
+            "height": 43.98936170212766,
+            "scrollHeight": 13,
+            "clientHeight": 13,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 493.93617021276594,
+            "y": 103.98936170212765,
+            "width": 433.98936170212767,
+            "height": 290,
+            "scrollHeight": 85,
+            "clientHeight": 85,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 31.96808510638298,
+            "y": 447.9255319148936,
+            "width": 895.9574468085106,
+            "height": 27.97872340425532,
+            "scrollHeight": 7,
+            "clientHeight": 7,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 32,
+            "y": 30,
+            "width": 896,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 32,
+            "y": 104,
+            "width": 434,
+            "height": 230
+          },
+          {
+            "id": "image",
+            "x": 494,
+            "y": 104,
+            "width": 434,
+            "height": 290
+          },
+          {
+            "id": "action",
+            "x": 32,
+            "y": 362,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 32,
+            "y": 448,
+            "width": 896,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 159.99884033203125,
+        "scrollHeight": 300,
+        "height": 300
+      },
+      "maxError": 0.07446808510638903
+    },
+    {
+      "actualWidth": 320,
+      "width": "960",
+      "extreme": true,
+      "design": {
+        "scale": 0.29375,
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 63.98936170212766,
+            "y": 30,
+            "width": 831.968085106383,
+            "height": 40,
+            "scrollHeight": 11,
+            "clientHeight": 11,
+            "descendantBottom": 0
+          },
+          {
+            "id": "title",
+            "x": 63.98936170212766,
+            "y": 103.98936170212765,
+            "width": 391.96808510638294,
+            "height": 230,
+            "scrollHeight": 68,
+            "clientHeight": 68,
+            "descendantBottom": 0
+          },
+          {
+            "id": "action",
+            "x": 63.98936170212766,
+            "y": 381.96808510638294,
+            "width": 160,
+            "height": 43.98936170212766,
+            "scrollHeight": 13,
+            "clientHeight": 13,
+            "descendantBottom": 0
+          },
+          {
+            "id": "image",
+            "x": 503.93617021276594,
+            "y": 103.98936170212765,
+            "width": 391.96808510638294,
+            "height": 290,
+            "scrollHeight": 85,
+            "clientHeight": 85,
+            "descendantBottom": 0
+          },
+          {
+            "id": "footer",
+            "x": 63.98936170212766,
+            "y": 459.9468085106383,
+            "width": 831.968085106383,
+            "height": 27.97872340425532,
+            "scrollHeight": 7,
+            "clientHeight": 7,
+            "descendantBottom": 0
+          }
+        ]
+      },
+      "drawing": {
+        "nodes": [
+          {
+            "id": "nav",
+            "x": 64,
+            "y": 30,
+            "width": 832,
+            "height": 40
+          },
+          {
+            "id": "title",
+            "x": 64,
+            "y": 104,
+            "width": 392,
+            "height": 230
+          },
+          {
+            "id": "image",
+            "x": 504,
+            "y": 104,
+            "width": 392,
+            "height": 290
+          },
+          {
+            "id": "action",
+            "x": 64,
+            "y": 382,
+            "width": 160,
+            "height": 44
+          },
+          {
+            "id": "footer",
+            "x": 64,
+            "y": 460,
+            "width": 832,
+            "height": 28
+          }
+        ],
+        "topGap": 12,
+        "footerBottomGap": 157.0335693359375,
+        "scrollHeight": 300,
+        "height": 300
+      },
+      "maxError": 0.06382978723405586
+    }
+  ],
+  "errors": [],
+  "failures": [
+    "320: initial hero missing visible material pixels"
+  ],
+  "browser": "156.0.8078.4",
+  "saved": {
+    "id": "editorial",
+    "brief": "Independent closure fixture: matte green with deliberately edited movement.",
+    "motion": {
+      "mass": 1,
+      "stiffness": 165,
+      "damping": 35
+    },
+    "materialParameters": {
+      "roughness": 0.81,
+      "metalness": 0.7,
+      "normalScale": 2.5,
+      "normalStrength": 0.4
+    }
+  },
+  "download": {
+    "spring": {
+      "mass": 1,
+      "stiffness": 165,
+      "damping": 35
+    },
+    "coordinate": {
+      "unit": "px",
+      "from": 0,
+      "to": 120
+    },
+    "durationSeconds": 2,
+    "sampleCount": 121
+  },
+  "replayed": {
+    "Motion damping": "35",
+    "Material roughness": "0.81",
+    "Material metalness": "0.7",
+    "Normal texture scale": "2.5",
+    "Normal texture amplitude": "0.4"
+  },
+  "reloaded": {
+    "Motion damping": "35",
+    "Material roughness": "0.81",
+    "Material metalness": "0.7",
+    "Normal texture scale": "2.5",
+    "Normal texture amplitude": "0.4"
+  },
+  "reloadedBrief": "Independent closure fixture: matte green with deliberately edited movement.",
+  "replayedMaterialRenderer": {
+    "renderer": "worker",
+    "frames": 1,
+    "initializationMilliseconds": 3174.599999964237,
+    "settings": {
+      "surface": {
+        "baseColor": [
+          0.2,
+          0.34,
+          0.22
+        ],
+        "roughness": 0.81,
+        "metalness": 0.7
+      },
+      "accentSurface": {
+        "baseColor": [
+          0.62,
+          0.43,
+          0.22
+        ],
+        "roughness": 0.55,
+        "metalness": 1
+      },
+      "normalScale": 2.5,
+      "normalStrength": 0.4
+    },
+    "workerInitializationMilliseconds": 3147.699999988079,
+    "draw": {
+      "drawCalls": 3,
+      "triangles": 9152
+    },
+    "lastRenderMilliseconds": 307.39999997615814
+  }
+}

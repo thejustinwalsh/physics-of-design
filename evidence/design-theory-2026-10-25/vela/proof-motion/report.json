@@ -1,0 +1,1215 @@
+{
+  "createdAt": "2026-10-25T11:04:43.760Z",
+  "browser": "156.0.8078.4",
+  "implementationProvenance": {
+    "examples/vela/web.jsx": "5fdb7b174e6cc3408844cb8df0e1cbeb8996855bdb7ea7946b2f3f9481fd3861",
+    "examples/vela/web-motion.js": "50d8550075126fa40bac1c63921316f63d3c516dd4c26274d5563f07a69c4f8c",
+    "src/motion-dynamics.ts": "a1d4b5c49631f3b9fa50ac8e6def7e9091530dc95898459cf3f0cbdc27db3093",
+    "src/motion.ts": "9f9502b04059d4aafe53d0250b9c750f3a27b9c88537c7759dd6bdea4342ea1d",
+    "artifacts/vela/web/app.js": "5b24ed70ee279505ba16a89896fc34f6008fe5abf4292978687a8c298202bcfb",
+    "examples/vela/design.generated.json": "84c94d083652d1697e68fcb47a21bfad531febab8deb832464484bb3442cb20f",
+    "package-lock.json": "dc82ff1d7932a21163672c0bcba893740bc348639f9e481797011eb1205c554d",
+    "scripts/build-vela.mjs": "85d034fe77c72e03282d59e253fcd6dfd32d93dee3dafda88911771a03ab97d7",
+    "scripts/prove-vela-motion.mjs": "1cb44f1140b5d4b689a621c058009baf44d633bb1eca35a026a85f2bd0000fba"
+  },
+  "pressed": {
+    "scaleX": 0.981984,
+    "scaleY": 0.981984
+  },
+  "observations": [
+    {
+      "label": "detail-entering",
+      "screen": "detail",
+      "policyIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+      "motion": {
+        "implementation": "vela-web-motion-v1",
+        "events": [
+          {
+            "kind": "scene-start",
+            "screen": "today",
+            "reduced": false,
+            "at": 61.80000001192093,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "today",
+            "reduced": false,
+            "at": 907.1999999880791
+          },
+          {
+            "kind": "press",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089,
+            "label": "Open session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089.099999964237
+          },
+          {
+            "kind": "cleanup",
+            "screen": "today",
+            "reduced": false,
+            "at": 2091.899999976158
+          },
+          {
+            "kind": "scene-start",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2092.599999964237,
+            "entries": 1,
+            "completion": false,
+            "durationSeconds": 0.8
+          }
+        ],
+        "activeScenes": 1,
+        "activePresses": 0,
+        "driver": "GSAP timelines + Design Theory sampled/held-target spring dynamics"
+      },
+      "mainTransform": "matrix(1, 0, 0, 1, 0, 21.1204)",
+      "elements": [
+        {
+          "name": "H1",
+          "transform": "matrix(1, 0, 0, 1, 0, 5.0701)",
+          "opacity": 0.8293,
+          "bounds": {
+            "x": 270,
+            "y": 133.78424072265625,
+            "width": 1120,
+            "height": 93.625,
+            "top": 133.78424072265625,
+            "right": 1390,
+            "bottom": 227.40924072265625,
+            "left": 270
+          }
+        }
+      ],
+      "horizontalOverflow": 0
+    },
+    {
+      "label": "detail-settled",
+      "screen": "detail",
+      "policyIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+      "motion": {
+        "implementation": "vela-web-motion-v1",
+        "events": [
+          {
+            "kind": "scene-start",
+            "screen": "today",
+            "reduced": false,
+            "at": 61.80000001192093,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "today",
+            "reduced": false,
+            "at": 907.1999999880791
+          },
+          {
+            "kind": "press",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089,
+            "label": "Open session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089.099999964237
+          },
+          {
+            "kind": "cleanup",
+            "screen": "today",
+            "reduced": false,
+            "at": 2091.899999976158
+          },
+          {
+            "kind": "scene-start",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2092.599999964237,
+            "entries": 1,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2773.800000011921
+          }
+        ],
+        "activeScenes": 0,
+        "activePresses": 0,
+        "driver": "GSAP timelines + Design Theory sampled/held-target spring dynamics"
+      },
+      "mainTransform": "matrix(1, 0, 0, 1, 0, -3.81016e-07)",
+      "elements": [
+        {
+          "name": "H1",
+          "transform": "none",
+          "opacity": 1,
+          "bounds": {
+            "x": 270,
+            "y": 107.59375,
+            "width": 1120,
+            "height": 93.625,
+            "top": 107.59375,
+            "right": 1390,
+            "bottom": 201.21875,
+            "left": 270
+          }
+        }
+      ],
+      "horizontalOverflow": 0
+    },
+    {
+      "label": "completion-entering",
+      "screen": "complete",
+      "policyIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+      "motion": {
+        "implementation": "vela-web-motion-v1",
+        "events": [
+          {
+            "kind": "scene-start",
+            "screen": "today",
+            "reduced": false,
+            "at": 61.80000001192093,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "today",
+            "reduced": false,
+            "at": 907.1999999880791
+          },
+          {
+            "kind": "press",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089,
+            "label": "Open session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089.099999964237
+          },
+          {
+            "kind": "cleanup",
+            "screen": "today",
+            "reduced": false,
+            "at": 2091.899999976158
+          },
+          {
+            "kind": "scene-start",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2092.599999964237,
+            "entries": 1,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2773.800000011921
+          },
+          {
+            "kind": "press",
+            "screen": "detail",
+            "reduced": false,
+            "at": 4174.5,
+            "label": "Start session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "detail",
+            "reduced": false,
+            "at": 4292.399999976158
+          },
+          {
+            "kind": "press",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5101.800000011921,
+            "label": "Start session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5101.899999976158
+          },
+          {
+            "kind": "cleanup",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5104.699999988079
+          },
+          {
+            "kind": "scene-start",
+            "screen": "active",
+            "reduced": false,
+            "at": 5105.5,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "active",
+            "reduced": false,
+            "at": 5956.899999976158
+          },
+          {
+            "kind": "press",
+            "screen": "active",
+            "reduced": false,
+            "at": 6127.399999976158,
+            "label": "Finish session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "active",
+            "reduced": false,
+            "at": 6127.599999964237
+          },
+          {
+            "kind": "cleanup",
+            "screen": "active",
+            "reduced": false,
+            "at": 6130
+          },
+          {
+            "kind": "scene-start",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6131.099999964237,
+            "entries": 1,
+            "completion": true,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "completion-start",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6132.199999988079
+          }
+        ],
+        "activeScenes": 1,
+        "activePresses": 0,
+        "driver": "GSAP timelines + Design Theory sampled/held-target spring dynamics"
+      },
+      "mainTransform": "matrix(1, 0, 0, 1, 0, 17.7645)",
+      "elements": [
+        {
+          "name": "H1",
+          "transform": "matrix(1, 0, 0, 1, 0, 5.0701)",
+          "opacity": 0.8293,
+          "bounds": {
+            "x": 270,
+            "y": 130.42832946777344,
+            "width": 830.875,
+            "height": 179.18751525878906,
+            "top": 130.42832946777344,
+            "right": 1100.875,
+            "bottom": 309.6158447265625,
+            "left": 270
+          }
+        },
+        {
+          "name": "saved-session",
+          "transform": "matrix(0.9407, 0, 0, 0.9407, 0, 14.8336)",
+          "opacity": 0.7033,
+          "bounds": {
+            "x": 1147.867431640625,
+            "y": 148.74307250976562,
+            "width": 234.7340087890625,
+            "height": 271.3037414550781,
+            "top": 148.74307250976562,
+            "right": 1382.6014404296875,
+            "bottom": 420.04681396484375,
+            "left": 1147.867431640625
+          }
+        },
+        {
+          "name": "svg",
+          "transform": "matrix(0.523081, -0.169959, 0.169959, 0.523081, 0, 0)",
+          "opacity": 1,
+          "bounds": {
+            "x": 1173.611572265625,
+            "y": 174.48724365234375,
+            "width": 31.293212890625,
+            "height": 31.293258666992188,
+            "top": 174.48724365234375,
+            "right": 1204.90478515625,
+            "bottom": 205.78050231933594,
+            "left": 1173.611572265625
+          }
+        }
+      ],
+      "horizontalOverflow": 0
+    },
+    {
+      "label": "completion-settled",
+      "screen": "complete",
+      "policyIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+      "motion": {
+        "implementation": "vela-web-motion-v1",
+        "events": [
+          {
+            "kind": "scene-start",
+            "screen": "today",
+            "reduced": false,
+            "at": 61.80000001192093,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "today",
+            "reduced": false,
+            "at": 907.1999999880791
+          },
+          {
+            "kind": "press",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089,
+            "label": "Open session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089.099999964237
+          },
+          {
+            "kind": "cleanup",
+            "screen": "today",
+            "reduced": false,
+            "at": 2091.899999976158
+          },
+          {
+            "kind": "scene-start",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2092.599999964237,
+            "entries": 1,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2773.800000011921
+          },
+          {
+            "kind": "press",
+            "screen": "detail",
+            "reduced": false,
+            "at": 4174.5,
+            "label": "Start session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "detail",
+            "reduced": false,
+            "at": 4292.399999976158
+          },
+          {
+            "kind": "press",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5101.800000011921,
+            "label": "Start session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5101.899999976158
+          },
+          {
+            "kind": "cleanup",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5104.699999988079
+          },
+          {
+            "kind": "scene-start",
+            "screen": "active",
+            "reduced": false,
+            "at": 5105.5,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "active",
+            "reduced": false,
+            "at": 5956.899999976158
+          },
+          {
+            "kind": "press",
+            "screen": "active",
+            "reduced": false,
+            "at": 6127.399999976158,
+            "label": "Finish session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "active",
+            "reduced": false,
+            "at": 6127.599999964237
+          },
+          {
+            "kind": "cleanup",
+            "screen": "active",
+            "reduced": false,
+            "at": 6130
+          },
+          {
+            "kind": "scene-start",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6131.099999964237,
+            "entries": 1,
+            "completion": true,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "completion-start",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6132.199999988079
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6973.599999964237
+          }
+        ],
+        "activeScenes": 0,
+        "activePresses": 0,
+        "driver": "GSAP timelines + Design Theory sampled/held-target spring dynamics"
+      },
+      "mainTransform": "matrix(1, 0, 0, 1, 0, -3.81016e-07)",
+      "elements": [
+        {
+          "name": "H1",
+          "transform": "none",
+          "opacity": 1,
+          "bounds": {
+            "x": 270,
+            "y": 107.59375,
+            "width": 830.875,
+            "height": 179.1875,
+            "top": 107.59375,
+            "right": 1100.875,
+            "bottom": 286.78125,
+            "left": 270
+          }
+        },
+        {
+          "name": "saved-session",
+          "transform": "none",
+          "opacity": 1,
+          "bounds": {
+            "x": 1140.46875,
+            "y": 107.59375,
+            "width": 249.53125,
+            "height": 288.40625,
+            "top": 107.59375,
+            "right": 1390,
+            "bottom": 396,
+            "left": 1140.46875
+          }
+        },
+        {
+          "name": "svg",
+          "transform": "none",
+          "opacity": 1,
+          "bounds": {
+            "x": 1160.46875,
+            "y": 127.59375,
+            "width": 48,
+            "height": 48,
+            "top": 127.59375,
+            "right": 1208.46875,
+            "bottom": 175.59375,
+            "left": 1160.46875
+          }
+        }
+      ],
+      "horizontalOverflow": 0
+    },
+    {
+      "label": "rapid-navigation-settled",
+      "screen": "today",
+      "policyIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+      "motion": {
+        "implementation": "vela-web-motion-v1",
+        "events": [
+          {
+            "kind": "scene-start",
+            "screen": "today",
+            "reduced": false,
+            "at": 61.80000001192093,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "today",
+            "reduced": false,
+            "at": 907.1999999880791
+          },
+          {
+            "kind": "press",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089,
+            "label": "Open session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089.099999964237
+          },
+          {
+            "kind": "cleanup",
+            "screen": "today",
+            "reduced": false,
+            "at": 2091.899999976158
+          },
+          {
+            "kind": "scene-start",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2092.599999964237,
+            "entries": 1,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2773.800000011921
+          },
+          {
+            "kind": "press",
+            "screen": "detail",
+            "reduced": false,
+            "at": 4174.5,
+            "label": "Start session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "detail",
+            "reduced": false,
+            "at": 4292.399999976158
+          },
+          {
+            "kind": "press",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5101.800000011921,
+            "label": "Start session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5101.899999976158
+          },
+          {
+            "kind": "cleanup",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5104.699999988079
+          },
+          {
+            "kind": "scene-start",
+            "screen": "active",
+            "reduced": false,
+            "at": 5105.5,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "active",
+            "reduced": false,
+            "at": 5956.899999976158
+          },
+          {
+            "kind": "press",
+            "screen": "active",
+            "reduced": false,
+            "at": 6127.399999976158,
+            "label": "Finish session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "active",
+            "reduced": false,
+            "at": 6127.599999964237
+          },
+          {
+            "kind": "cleanup",
+            "screen": "active",
+            "reduced": false,
+            "at": 6130
+          },
+          {
+            "kind": "scene-start",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6131.099999964237,
+            "entries": 1,
+            "completion": true,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "completion-start",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6132.199999988079
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6973.599999964237
+          },
+          {
+            "kind": "press",
+            "screen": "complete",
+            "reduced": false,
+            "at": 8201.099999964237,
+            "label": "View your journal",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "complete",
+            "reduced": false,
+            "at": 8201.199999988079
+          },
+          {
+            "kind": "cleanup",
+            "screen": "complete",
+            "reduced": false,
+            "at": 8209.5
+          },
+          {
+            "kind": "scene-start",
+            "screen": "insights",
+            "reduced": false,
+            "at": 8210.199999988079,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "press",
+            "screen": "insights",
+            "reduced": false,
+            "at": 8215.800000011921,
+            "label": "Profile",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "insights",
+            "reduced": false,
+            "at": 8215.899999976158
+          },
+          {
+            "kind": "cleanup",
+            "screen": "insights",
+            "reduced": false,
+            "at": 8217.699999988079
+          },
+          {
+            "kind": "scene-start",
+            "screen": "profile",
+            "reduced": false,
+            "at": 8218.399999976158,
+            "entries": 3,
+            "completion": false,
+            "durationSeconds": 0.865
+          },
+          {
+            "kind": "press",
+            "screen": "profile",
+            "reduced": false,
+            "at": 8222.099999964237,
+            "label": "Today",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "profile",
+            "reduced": false,
+            "at": 8222.199999988079
+          },
+          {
+            "kind": "cleanup",
+            "screen": "profile",
+            "reduced": false,
+            "at": 8223.800000011921
+          },
+          {
+            "kind": "scene-start",
+            "screen": "today",
+            "reduced": false,
+            "at": 8224.599999964237,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "today",
+            "reduced": false,
+            "at": 9073.699999988079
+          }
+        ],
+        "activeScenes": 0,
+        "activePresses": 0,
+        "driver": "GSAP timelines + Design Theory sampled/held-target spring dynamics"
+      },
+      "mainTransform": "matrix(1, 0, 0, 1, 0, -3.81016e-07)",
+      "elements": [
+        {
+          "name": "H1",
+          "transform": "none",
+          "opacity": 1,
+          "bounds": {
+            "x": 270,
+            "y": 107.59375,
+            "width": 540.203125,
+            "height": 179.1875,
+            "top": 107.59375,
+            "right": 810.203125,
+            "bottom": 286.78125,
+            "left": 270
+          }
+        },
+        {
+          "name": "session-card",
+          "transform": "none",
+          "opacity": 1,
+          "bounds": {
+            "x": 849.796875,
+            "y": 107.59375,
+            "width": 540.203125,
+            "height": 431.125,
+            "top": 107.59375,
+            "right": 1390,
+            "bottom": 538.71875,
+            "left": 849.796875
+          }
+        }
+      ],
+      "horizontalOverflow": 0
+    },
+    {
+      "label": "reduced-motion-interruption",
+      "screen": "detail",
+      "policyIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+      "motion": {
+        "implementation": "vela-web-motion-v1",
+        "events": [
+          {
+            "kind": "scene-start",
+            "screen": "today",
+            "reduced": false,
+            "at": 61.80000001192093,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "today",
+            "reduced": false,
+            "at": 907.1999999880791
+          },
+          {
+            "kind": "press",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089,
+            "label": "Open session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "today",
+            "reduced": false,
+            "at": 2089.099999964237
+          },
+          {
+            "kind": "cleanup",
+            "screen": "today",
+            "reduced": false,
+            "at": 2091.899999976158
+          },
+          {
+            "kind": "scene-start",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2092.599999964237,
+            "entries": 1,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "detail",
+            "reduced": false,
+            "at": 2773.800000011921
+          },
+          {
+            "kind": "press",
+            "screen": "detail",
+            "reduced": false,
+            "at": 4174.5,
+            "label": "Start session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "detail",
+            "reduced": false,
+            "at": 4292.399999976158
+          },
+          {
+            "kind": "press",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5101.800000011921,
+            "label": "Start session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5101.899999976158
+          },
+          {
+            "kind": "cleanup",
+            "screen": "detail",
+            "reduced": false,
+            "at": 5104.699999988079
+          },
+          {
+            "kind": "scene-start",
+            "screen": "active",
+            "reduced": false,
+            "at": 5105.5,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "active",
+            "reduced": false,
+            "at": 5956.899999976158
+          },
+          {
+            "kind": "press",
+            "screen": "active",
+            "reduced": false,
+            "at": 6127.399999976158,
+            "label": "Finish session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "active",
+            "reduced": false,
+            "at": 6127.599999964237
+          },
+          {
+            "kind": "cleanup",
+            "screen": "active",
+            "reduced": false,
+            "at": 6130
+          },
+          {
+            "kind": "scene-start",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6131.099999964237,
+            "entries": 1,
+            "completion": true,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "completion-start",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6132.199999988079
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "complete",
+            "reduced": false,
+            "at": 6973.599999964237
+          },
+          {
+            "kind": "press",
+            "screen": "complete",
+            "reduced": false,
+            "at": 8201.099999964237,
+            "label": "View your journal",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "complete",
+            "reduced": false,
+            "at": 8201.199999988079
+          },
+          {
+            "kind": "cleanup",
+            "screen": "complete",
+            "reduced": false,
+            "at": 8209.5
+          },
+          {
+            "kind": "scene-start",
+            "screen": "insights",
+            "reduced": false,
+            "at": 8210.199999988079,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "press",
+            "screen": "insights",
+            "reduced": false,
+            "at": 8215.800000011921,
+            "label": "Profile",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "insights",
+            "reduced": false,
+            "at": 8215.899999976158
+          },
+          {
+            "kind": "cleanup",
+            "screen": "insights",
+            "reduced": false,
+            "at": 8217.699999988079
+          },
+          {
+            "kind": "scene-start",
+            "screen": "profile",
+            "reduced": false,
+            "at": 8218.399999976158,
+            "entries": 3,
+            "completion": false,
+            "durationSeconds": 0.865
+          },
+          {
+            "kind": "press",
+            "screen": "profile",
+            "reduced": false,
+            "at": 8222.099999964237,
+            "label": "Today",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "profile",
+            "reduced": false,
+            "at": 8222.199999988079
+          },
+          {
+            "kind": "cleanup",
+            "screen": "profile",
+            "reduced": false,
+            "at": 8223.800000011921
+          },
+          {
+            "kind": "scene-start",
+            "screen": "today",
+            "reduced": false,
+            "at": 8224.599999964237,
+            "entries": 2,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "today",
+            "reduced": false,
+            "at": 9073.699999988079
+          },
+          {
+            "kind": "press",
+            "screen": "today",
+            "reduced": false,
+            "at": 10247.399999976158,
+            "label": "Open session",
+            "target": 0.965
+          },
+          {
+            "kind": "release",
+            "screen": "today",
+            "reduced": false,
+            "at": 10247.699999988079
+          },
+          {
+            "kind": "cleanup",
+            "screen": "today",
+            "reduced": false,
+            "at": 10249.399999976158
+          },
+          {
+            "kind": "scene-start",
+            "screen": "detail",
+            "reduced": false,
+            "at": 10251,
+            "entries": 1,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "cleanup",
+            "screen": "detail",
+            "reduced": false,
+            "at": 10258.599999964237
+          },
+          {
+            "kind": "scene-start",
+            "screen": "detail",
+            "reduced": true,
+            "at": 10259.399999976158,
+            "entries": 1,
+            "completion": false,
+            "durationSeconds": 0.12
+          }
+        ],
+        "activeScenes": 1,
+        "activePresses": 0,
+        "driver": "GSAP timelines + Design Theory sampled/held-target spring dynamics"
+      },
+      "mainTransform": "none",
+      "elements": [
+        {
+          "name": "H1",
+          "transform": "none",
+          "opacity": 0.8225,
+          "bounds": {
+            "x": 270,
+            "y": 107.59375,
+            "width": 1120,
+            "height": 93.625,
+            "top": 107.59375,
+            "right": 1390,
+            "bottom": 201.21875,
+            "left": 270
+          }
+        }
+      ],
+      "horizontalOverflow": 0
+    },
+    {
+      "label": "phone-settled",
+      "screen": "detail",
+      "policyIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+      "motion": {
+        "implementation": "vela-web-motion-v1",
+        "events": [
+          {
+            "kind": "scene-start",
+            "screen": "detail",
+            "reduced": false,
+            "at": 27,
+            "entries": 1,
+            "completion": false,
+            "durationSeconds": 0.8
+          },
+          {
+            "kind": "scene-complete",
+            "screen": "detail",
+            "reduced": false,
+            "at": 723.8000000119209
+          }
+        ],
+        "activeScenes": 0,
+        "activePresses": 0,
+        "driver": "GSAP timelines + Design Theory sampled/held-target spring dynamics"
+      },
+      "mainTransform": "matrix(1, 0, 0, 1, 0, -3.81016e-07)",
+      "elements": [
+        {
+          "name": "H1",
+          "transform": "none",
+          "opacity": 1,
+          "bounds": {
+            "x": 20,
+            "y": 107.59375,
+            "width": 350,
+            "height": 93.625,
+            "top": 107.59375,
+            "right": 370,
+            "bottom": 201.21875,
+            "left": 20
+          }
+        }
+      ],
+      "horizontalOverflow": 0
+    }
+  ],
+  "errors": [],
+  "scope": "Fresh Chromium evidence for additive GSAP entry stagger, held-target spring press response, completion receipt/check motion, interruption cleanup, system reduced motion and phone geometry. The existing handoff identity and historical browser/native evidence are not rewritten."
+}

@@ -1,0 +1,26 @@
+{
+  "wireframe": {
+    "version": 1,
+    "id": "editorial-hero",
+    "screen": { "width": 390, "height": 844, "unit": "css-px" },
+    "variables": {
+      "gutter": { "value": 24, "min": 16, "max": 48, "step": 4, "unit": "css-px" },
+      "headingHeight": { "value": 120, "min": 64, "max": 240, "step": 8, "unit": "css-px" },
+      "gap": { "value": 24, "min": 8, "max": 64, "step": 4, "unit": "css-px" }
+    },
+    "derived": [
+      { "id": "contentWidth", "unit": "css-px", "expression": { "op": "sub", "args": [ { "ref": "screen.width" }, { "op": "mul", "args": [ 2, { "ref": "gutter" } ] } ] } },
+      { "id": "bodyY", "unit": "css-px", "expression": { "op": "add", "args": [ 72, { "ref": "headingHeight" }, { "ref": "gap" } ] } }
+    ],
+    "nodes": [
+      { "id": "heading", "label": "Expressive heading", "role": "text", "evidence": "proposed", "box": { "x": { "ref": "gutter" }, "y": 72, "width": { "ref": "contentWidth" }, "height": { "ref": "headingHeight" } }, "baseline": 44 },
+      { "id": "body", "label": "Supporting prose", "role": "text", "evidence": "proposed", "box": { "x": { "ref": "gutter" }, "y": { "ref": "bodyY" }, "width": { "ref": "contentWidth" }, "height": 96 } },
+      { "id": "image", "label": "Authored image region", "role": "image", "evidence": "proposed", "box": { "x": { "ref": "gutter" }, "y": { "op": "add", "args": [ { "ref": "bodyY" }, 96, { "ref": "gap" } ] }, "width": { "ref": "contentWidth" }, "height": { "op": "mul", "args": [ { "ref": "contentWidth" }, 0.625 ] } } }
+    ],
+    "relations": [
+      { "id": "heading-prose", "kind": "gap", "from": "heading", "to": "body", "axis": "y", "band": { "min": 16, "max": 40 }, "source": "Editable editorial brief; heuristic band, not a universal optimum" },
+      { "id": "left-edge", "kind": "alignment", "from": "heading", "to": "image", "axis": "x", "edge": "start", "band": { "min": -0.5, "max": 0.5 }, "source": "Authored shared alignment contract" }
+    ]
+  },
+  "interactive": true
+}

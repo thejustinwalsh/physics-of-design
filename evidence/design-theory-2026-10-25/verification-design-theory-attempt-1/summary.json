@@ -1,0 +1,195 @@
+{
+  "verificationVersion": 2,
+  "scope": "headless",
+  "completedAt": "2026-10-25T11:02:22.074Z",
+  "complete": true,
+  "expectedStages": 19,
+  "results": [
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "code": 0,
+      "latencyMs": 2110
+    },
+    {
+      "name": "types",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "code": 0,
+      "latencyMs": 1581
+    },
+    {
+      "name": "native-types",
+      "command": [
+        "npm",
+        "run",
+        "typecheck",
+        "--prefix",
+        "native"
+      ],
+      "code": 0,
+      "latencyMs": 1072
+    },
+    {
+      "name": "unit",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "code": 0,
+      "latencyMs": 7101
+    },
+    {
+      "name": "browser",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/browser.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 7780
+    },
+    {
+      "name": "commands-and-app",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/commands.integration.ts",
+        "test/app.integration.ts",
+        "test/context.integration.ts",
+        "test/typography-editor.integration.ts",
+        "scripts/evidence-policy.test.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 32074
+    },
+    {
+      "name": "consumer",
+      "command": [
+        "node",
+        "scripts/consumer-check.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 516
+    },
+    {
+      "name": "fieldwork-build",
+      "command": [
+        "node",
+        "scripts/build-fieldwork.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 220
+    },
+    {
+      "name": "fieldwork-web",
+      "command": [
+        "node",
+        "scripts/prove-fieldwork-web.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 4845
+    },
+    {
+      "name": "vela-policy",
+      "command": [
+        "npx",
+        "tsx",
+        "scripts/vela-design.ts"
+      ],
+      "code": 0,
+      "latencyMs": 873
+    },
+    {
+      "name": "vela-build",
+      "command": [
+        "node",
+        "scripts/build-vela.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 249
+    },
+    {
+      "name": "vela-web",
+      "command": [
+        "node",
+        "scripts/prove-vela-web.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 40081
+    },
+    {
+      "name": "workflow-mathematical",
+      "command": [
+        "node",
+        "scripts/prove-decision-workflow.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 389
+    },
+    {
+      "name": "vela-motion",
+      "command": [
+        "node",
+        "scripts/prove-vela-motion.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 12958
+    },
+    {
+      "name": "gallery-build",
+      "command": [
+        "node",
+        "scripts/build-design-theory.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 415
+    },
+    {
+      "name": "gallery-web",
+      "command": [
+        "node",
+        "scripts/prove-design-theory.mjs"
+      ],
+      "code": 1,
+      "latencyMs": 35178
+    },
+    {
+      "name": "validation-phases",
+      "command": [
+        "node",
+        "scripts/prove-validation-machine.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 1268
+    },
+    {
+      "name": "typography",
+      "command": [
+        "node",
+        "scripts/prove-typography.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 30410
+    },
+    {
+      "name": "migrations",
+      "command": [
+        "node",
+        "codemods/2026-10-25-nullable-glyph-ink/test.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 605
+    }
+  ],
+  "passed": false
+}

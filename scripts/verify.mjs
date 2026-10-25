@@ -1,7 +1,9 @@
 import { spawn } from 'node:child_process';
 import { mkdir, writeFile, open } from 'node:fs/promises';
 const all = process.argv.includes('--all');
-await mkdir('artifacts/verification', { recursive: true });
+const directory =
+  process.env.DESIGN_VERIFICATION_DIRECTORY ?? 'artifacts/verification';
+await mkdir(directory, { recursive: true });
 const results = [];
 const steps = [
   ['build', ['npm', 'run', 'build']],
@@ -18,6 +20,7 @@ const steps = [
       'test/commands.integration.ts',
       'test/app.integration.ts',
       'test/context.integration.ts',
+      'test/typography-editor.integration.ts',
       'scripts/evidence-policy.test.mjs',
     ],
   ],
@@ -27,6 +30,17 @@ const steps = [
   ['vela-policy', ['npx', 'tsx', 'scripts/vela-design.ts']],
   ['vela-build', ['node', 'scripts/build-vela.mjs']],
   ['vela-web', ['node', 'scripts/prove-vela-web.mjs']],
+  [
+    'workflow-mathematical',
+    ['node', 'scripts/prove-decision-workflow.mjs'],
+    { DESIGN_WORKFLOW_OUTPUT: 'artifacts/workflow-mathematical' },
+  ],
+  ['vela-motion', ['node', 'scripts/prove-vela-motion.mjs']],
+  ['gallery-build', ['node', 'scripts/build-design-theory.mjs']],
+  ['gallery-web', ['node', 'scripts/prove-design-theory.mjs']],
+  ['validation-phases', ['node', 'scripts/prove-validation-machine.mjs']],
+  ['typography', ['node', 'scripts/prove-typography.mjs']],
+  ['migrations', ['node', 'codemods/2026-10-25-nullable-glyph-ink/test.mjs']],
 ];
 if (all) {
   if (!process.env.DESIGN_NATIVE_TOKEN)
@@ -56,7 +70,7 @@ if (all) {
     ]);
 }
 for (const [name, [command, ...args], overrides] of steps) {
-  const log = await open(`artifacts/verification/${name}.log`, 'w'),
+  const log = await open(`${directory}/${name}.log`, 'w'),
     start = Date.now();
   const child = spawn(command, args, {
     env: { ...process.env, ...overrides },
@@ -82,9 +96,11 @@ for (const [name, [command, ...args], overrides] of steps) {
     latencyMs: Date.now() - start,
   });
   await writeFile(
-    'artifacts/verification/summary.json',
+    `${directory}/summary.json`,
     JSON.stringify(
       {
+        verificationVersion: 2,
+        scope: all ? 'full' : 'headless',
         completedAt: new Date().toISOString(),
         complete: results.length === steps.length,
         expectedStages: steps.length,

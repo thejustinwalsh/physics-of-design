@@ -5,6 +5,7 @@ import {
   assertVelaFlow,
   assertFlowXml,
   verificationStages,
+  currentFullVerificationStages,
   velaFlowActions,
   curatedCurrentEvidenceFiles,
 } from './evidence-policy.mjs';
@@ -71,6 +72,30 @@ test('repeated or reordered successful stages cannot masquerade as a full lane',
   const reordered = verification();
   reordered.results.reverse();
   assert.throws(() => assertFullVerification(reordered));
+});
+
+test('version2 full receipts require every expanded stage and cannot use a headless lane', () => {
+  const full = {
+    verificationVersion: 2,
+    complete: true,
+    passed: true,
+    expectedStages: currentFullVerificationStages.length,
+    results: currentFullVerificationStages.map((name) => ({ name, code: 0 })),
+  };
+  assert.doesNotThrow(() => assertFullVerification(full));
+  assert.throws(() =>
+    assertFullVerification({
+      ...full,
+      results: full.results.slice(0, 17),
+      expectedStages: 17,
+    }),
+  );
+  assert.throws(() =>
+    assertFullVerification({ ...full, results: [...full.results].reverse() }),
+  );
+  assert.throws(() =>
+    assertFullVerification({ ...verification(), verificationVersion: 2 }),
+  );
 });
 
 test('real-flow shape passes; all-unavailable downgrade and action reorder fail', () => {

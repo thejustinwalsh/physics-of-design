@@ -1,0 +1,601 @@
+{
+  "media": {
+    "file": "/Volumes/Depot/Developer/design-theory/native/assets/fieldwork/headland.png",
+    "sha256": "8fee5f6272e740a888eb4212c52223758a7c94a2db4c234aa9b2ab389ce639a3",
+    "byteLength": 3091836,
+    "mime": "image/png",
+    "width": 1536,
+    "height": 1024,
+    "provenance": {
+      "origin": "original-generated",
+      "source": "research/fieldwork-asset-provenance.json",
+      "creator": "built-in imagegen; original imagined editorial landscape",
+      "license": null,
+      "licenseEvidence": null,
+      "expectedSha256": "8fee5f6272e740a888eb4212c52223758a7c94a2db4c234aa9b2ab389ce639a3",
+      "hashVerified": true,
+      "rightsStatus": "unknown"
+    },
+    "decoder": {
+      "engine": "chromium-canvas2d",
+      "version": "156.0.8078.4",
+      "colorSpace": "srgb",
+      "frame": "decoded-snapshot",
+      "orientation": "browser-decoded-orientation"
+    },
+    "metadataUnknown": [
+      "capture illuminant",
+      "camera response",
+      "physical scale",
+      "calibrated albedo",
+      "rights independently verified",
+      "animation timeline"
+    ],
+    "sampledDescriptors": {
+      "coverage": "systematic-pixel-sample",
+      "stride": 384,
+      "samples": 4096,
+      "opaqueSamples": 4096,
+      "meanAlpha": 1,
+      "meanEncodedSrgbOfOpaqueSamples": [
+        0.48439414828431543,
+        0.45775218290441166,
+        0.4139332490808836
+      ],
+      "meanRelativeLuminance": 0.24593024689539073,
+      "luminanceVariance": 0.05796200508643574,
+      "luminanceHistogram16": [
+        1015,
+        940,
+        496,
+        250,
+        144,
+        162,
+        145,
+        212,
+        188,
+        89,
+        115,
+        81,
+        95,
+        158,
+        6,
+        0
+      ],
+      "scope": "Descriptive statistics of opaque sampled pixels; no quality, entropy quality, subject, salience or material inference."
+    },
+    "contrastRegions": [
+      {
+        "id": "ocean-white-type",
+        "region": {
+          "x": 0.02,
+          "y": 0.45,
+          "width": 0.32,
+          "height": 0.25
+        },
+        "foreground": [
+          1,
+          1,
+          1
+        ],
+        "backdrop": null,
+        "coverage": "full-region-decoded-pixels",
+        "pixelsVisited": 126701,
+        "transparentPixels": 0,
+        "pixelBounds": {
+          "x0": 30,
+          "y0": 460,
+          "x1": 523,
+          "y1": 717
+        },
+        "decodedPixelRatioRange": {
+          "min": 3.1838794647845727,
+          "max": 18.04317442752352
+        },
+        "luminanceRange": {
+          "min": 0.008193751006380728,
+          "max": 0.27978635391621054
+        },
+        "conservativeRatioLowerBound": 3.1838794647845727,
+        "minimum": 4.5,
+        "status": "fail",
+        "compositing": "opaque decoded pixels",
+        "reason": null
+      },
+      {
+        "id": "sky-dark-type",
+        "region": {
+          "x": 0.03,
+          "y": 0.03,
+          "width": 0.5,
+          "height": 0.13
+        },
+        "foreground": [
+          0.03,
+          0.03,
+          0.03
+        ],
+        "backdrop": null,
+        "coverage": "full-region-decoded-pixels",
+        "pixelsVisited": 103046,
+        "transparentPixels": 0,
+        "pixelBounds": {
+          "x0": 46,
+          "y0": 30,
+          "x1": 815,
+          "y1": 164
+        },
+        "decodedPixelRatioRange": {
+          "min": 9.450303872034464,
+          "max": 19.11151642210243
+        },
+        "luminanceRange": {
+          "min": 0.4444586236451469,
+          "max": 0.9499524072245543
+        },
+        "conservativeRatioLowerBound": 9.450303872034464,
+        "minimum": 4.5,
+        "status": "pass",
+        "compositing": "opaque decoded pixels",
+        "reason": null
+      }
+    ],
+    "contrastScope": "All intersecting source pixels at decoded resolution. Bounds concern opaque sRGB foreground over this region, before overlays, filters, text antialiasing or display rendering. Alpha compositing is nominal; certify the final rendered composite separately.",
+    "source": "https://www.w3.org/TR/WCAG22/#dfn-relative-luminance",
+    "algorithm": "local-raster-srgb-pixels-v1"
+  },
+  "crops": {
+    "candidates": [
+      {
+        "id": "crop-4",
+        "scale": 0.5859375,
+        "drawWidth": 900,
+        "drawHeight": 600,
+        "offsetX": -90,
+        "offsetY": 0,
+        "objectPosition": "50% 50%",
+        "focal": {
+          "x": 648,
+          "y": 108
+        },
+        "scope": "Cover geometry preserves an authored focal point when possible. It does not detect salience or prove an attractive crop.",
+        "visibleSource": {
+          "x": 0.1,
+          "y": 0,
+          "width": 0.8,
+          "height": 1
+        },
+        "penalties": {
+          "subjectLoss": 1.1102230246251565e-16,
+          "focalDisplacement": 0.08631338250816031,
+          "negativeSpaceLoss": 0.2500000000000001,
+          "textSubjectOverlap": 0
+        },
+        "weightedPenalty": 0.3363133825081609
+      },
+      {
+        "id": "crop-0",
+        "scale": 0.5859375,
+        "drawWidth": 900,
+        "drawHeight": 600,
+        "offsetX": -162,
+        "offsetY": 0,
+        "objectPosition": "90% 50%",
+        "focal": {
+          "x": 576,
+          "y": 108
+        },
+        "scope": "Cover geometry preserves an authored focal point when possible. It does not detect salience or prove an attractive crop.",
+        "visibleSource": {
+          "x": 0.18,
+          "y": 0,
+          "width": 0.8,
+          "height": 1
+        },
+        "penalties": {
+          "subjectLoss": 1.1102230246251565e-16,
+          "focalDisplacement": 0.049497474683058325,
+          "negativeSpaceLoss": 0.5,
+          "textSubjectOverlap": 0
+        },
+        "weightedPenalty": 0.5494974746830588
+      },
+      {
+        "id": "crop-7",
+        "scale": 0.5859375,
+        "drawWidth": 900,
+        "drawHeight": 600,
+        "offsetX": -180,
+        "offsetY": 0,
+        "objectPosition": "100% 50%",
+        "focal": {
+          "x": 558,
+          "y": 108
+        },
+        "scope": "Cover geometry preserves an authored focal point when possible. It does not detect salience or prove an attractive crop.",
+        "visibleSource": {
+          "x": 0.2,
+          "y": 0,
+          "width": 0.8,
+          "height": 1
+        },
+        "penalties": {
+          "subjectLoss": 1.1102230246251565e-16,
+          "focalDisplacement": 0.052559490104071606,
+          "negativeSpaceLoss": 0.5625,
+          "textSubjectOverlap": 0
+        },
+        "weightedPenalty": 0.615059490104072
+      },
+      {
+        "id": "crop-1",
+        "scale": 0.5859375,
+        "drawWidth": 900,
+        "drawHeight": 600,
+        "offsetX": 0,
+        "offsetY": 0,
+        "objectPosition": "0% 50%",
+        "focal": {
+          "x": 738,
+          "y": 108
+        },
+        "scope": "Cover geometry preserves an authored focal point when possible. It does not detect salience or prove an attractive crop.",
+        "visibleSource": {
+          "x": 0,
+          "y": 0,
+          "width": 0.8,
+          "height": 1
+        },
+        "penalties": {
+          "subjectLoss": 0.7272727272727271,
+          "focalDisplacement": 0.16662082702951625,
+          "negativeSpaceLoss": 2.220446049250313e-16,
+          "textSubjectOverlap": 0
+        },
+        "weightedPenalty": 3.075711736120425
+      }
+    ],
+    "weights": {
+      "subjectLoss": 4,
+      "focalDisplacement": 1,
+      "negativeSpaceLoss": 1,
+      "textSubjectOverlap": 4
+    },
+    "authored": {
+      "focal": {
+        "x": 0.82,
+        "y": 0.18
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.25
+      },
+      "subjects": [
+        {
+          "x": 0.77,
+          "y": 0.13,
+          "width": 0.11,
+          "height": 0.1
+        }
+      ],
+      "negativeSpaces": [
+        {
+          "x": 0.02,
+          "y": 0.45,
+          "width": 0.32,
+          "height": 0.25
+        }
+      ],
+      "textRegion": {
+        "x": 0.04,
+        "y": 0.48,
+        "width": 0.4,
+        "height": 0.25
+      }
+    },
+    "algorithm": "authored-roi-cover-candidates-v1",
+    "scope": "Finite authored-target proposals; weighted penalties are editable policy, not quality or object-detection evidence. Null penalties mean the necessary annotation was not supplied. Overlap uses the largest individual subject, not a union."
+  },
+  "surfaces": [
+    {
+      "id": "quiet-mineral",
+      "probe": {
+        "radiance": [
+          0.1825428043741867,
+          0.1947659040036443,
+          0.20698900363310188
+        ],
+        "diffuseBrdf": [
+          0.17723494462713463,
+          0.1894580442565922,
+          0.2016811438860498
+        ],
+        "specularBrdf": [
+          0.0053078597470520815,
+          0.0053078597470520815,
+          0.0053078597470520815
+        ],
+        "terms": {
+          "nDotL": 1,
+          "nDotV": 1,
+          "nDotH": 1,
+          "vDotH": 1,
+          "alpha": 0.7744,
+          "distribution": 0.5307859747052082,
+          "geometry": 1,
+          "fresnel": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "f0": [
+            0.04,
+            0.04,
+            0.04
+          ]
+        },
+        "units": "relative-linear-rgb",
+        "algorithm": "lambert-ggx-schlick-separable-smith-v1",
+        "assumptions": [
+          "baseColor is linear sRGB reflectance; directions point away from the surface in one coordinate space.",
+          "irradiance is incident directional-light RGB before multiplication by N dot L, in relative units.",
+          "Isotropic GGX; alpha=max(roughness squared,0.0004); Schlick Fresnel; dielectric F0=0.04; separable exact Smith G1.",
+          "Diffuse uses (1-Fresnel)*(1-metalness)*baseColor/pi; no multiple scattering, environment, shadows, occlusion, transmission or emission.",
+          "The inexpensive diffuse/specular coupling is not an exact energy-conservation model (Khronos B.3.6.3).",
+          "No luminance calibration, perceptual quality score, display encoding or Three.js pixel-parity claim."
+        ],
+        "sources": [
+          "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#metal-brdf-and-dielectric-brdf",
+          "https://google.github.io/filament/main/filament.html#materialsystem/specularbrdf",
+          "https://threejs.org/docs/pages/MeshStandardMaterial.html",
+          "https://threejs.org/manual/pages/color-management.html"
+        ]
+      },
+      "mapping": {
+        "material": "MeshStandardMaterial",
+        "colorLinearSRGB": [
+          0.58,
+          0.62,
+          0.66
+        ],
+        "roughness": 0.88,
+        "metalness": 0,
+        "normalMapType": "TangentSpaceNormalMap",
+        "textureColorSpaces": {
+          "baseColor": "SRGBColorSpace",
+          "normal": "NoColorSpace",
+          "roughness": "NoColorSpace",
+          "metalness": "NoColorSpace"
+        },
+        "textureChannels": {
+          "roughness": "g",
+          "metalness": "b"
+        },
+        "warning": "A lit photograph is not a calibrated base-color map. Three lighting, environment, shader approximations and tone mapping require separate renderer verification.",
+        "sources": [
+          "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#metal-brdf-and-dielectric-brdf",
+          "https://google.github.io/filament/main/filament.html#materialsystem/specularbrdf",
+          "https://threejs.org/docs/pages/MeshStandardMaterial.html",
+          "https://threejs.org/manual/pages/color-management.html"
+        ]
+      },
+      "texture": {
+        "width": 128,
+        "height": 128,
+        "parameters": {
+          "seed": 29,
+          "size": 128,
+          "pattern": "cells",
+          "frequency": 24,
+          "directionDegrees": 0,
+          "normalStrength": 0.015,
+          "roughness": 0.88,
+          "roughnessVariation": 0.04
+        },
+        "algorithm": "periodic-seeded-height-central-difference-v1",
+        "encoding": "rgba8-linear-data",
+        "roughnessMapSemantics": "Absolute roughness in green; set material.roughness=1 when using this map."
+      }
+    },
+    {
+      "id": "blue-enamel",
+      "probe": {
+        "radiance": [
+          0.6026231379792777,
+          0.6264581822567199,
+          0.7578565032733886
+        ],
+        "diffuseBrdf": [
+          0.0036669298888372683,
+          0.027501974166279513,
+          0.1589002951829483
+        ],
+        "specularBrdf": [
+          0.5989562080904404,
+          0.5989562080904404,
+          0.5989562080904404
+        ],
+        "terms": {
+          "nDotL": 1,
+          "nDotV": 1,
+          "nDotH": 1,
+          "vDotH": 1,
+          "alpha": 0.0729,
+          "distribution": 59.89562080904404,
+          "geometry": 1,
+          "fresnel": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "f0": [
+            0.04,
+            0.04,
+            0.04
+          ]
+        },
+        "units": "relative-linear-rgb",
+        "algorithm": "lambert-ggx-schlick-separable-smith-v1",
+        "assumptions": [
+          "baseColor is linear sRGB reflectance; directions point away from the surface in one coordinate space.",
+          "irradiance is incident directional-light RGB before multiplication by N dot L, in relative units.",
+          "Isotropic GGX; alpha=max(roughness squared,0.0004); Schlick Fresnel; dielectric F0=0.04; separable exact Smith G1.",
+          "Diffuse uses (1-Fresnel)*(1-metalness)*baseColor/pi; no multiple scattering, environment, shadows, occlusion, transmission or emission.",
+          "The inexpensive diffuse/specular coupling is not an exact energy-conservation model (Khronos B.3.6.3).",
+          "No luminance calibration, perceptual quality score, display encoding or Three.js pixel-parity claim."
+        ],
+        "sources": [
+          "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#metal-brdf-and-dielectric-brdf",
+          "https://google.github.io/filament/main/filament.html#materialsystem/specularbrdf",
+          "https://threejs.org/docs/pages/MeshStandardMaterial.html",
+          "https://threejs.org/manual/pages/color-management.html"
+        ]
+      },
+      "mapping": {
+        "material": "MeshStandardMaterial",
+        "colorLinearSRGB": [
+          0.012,
+          0.09,
+          0.52
+        ],
+        "roughness": 0.27,
+        "metalness": 0,
+        "normalMapType": "TangentSpaceNormalMap",
+        "textureColorSpaces": {
+          "baseColor": "SRGBColorSpace",
+          "normal": "NoColorSpace",
+          "roughness": "NoColorSpace",
+          "metalness": "NoColorSpace"
+        },
+        "textureChannels": {
+          "roughness": "g",
+          "metalness": "b"
+        },
+        "warning": "A lit photograph is not a calibrated base-color map. Three lighting, environment, shader approximations and tone mapping require separate renderer verification.",
+        "sources": [
+          "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#metal-brdf-and-dielectric-brdf",
+          "https://google.github.io/filament/main/filament.html#materialsystem/specularbrdf",
+          "https://threejs.org/docs/pages/MeshStandardMaterial.html",
+          "https://threejs.org/manual/pages/color-management.html"
+        ]
+      },
+      "texture": {
+        "width": 128,
+        "height": 128,
+        "parameters": {
+          "seed": 47,
+          "size": 128,
+          "pattern": "noise",
+          "frequency": 8,
+          "directionDegrees": 0,
+          "normalStrength": 0.004,
+          "roughness": 0.27,
+          "roughnessVariation": 0.015
+        },
+        "algorithm": "periodic-seeded-height-central-difference-v1",
+        "encoding": "rgba8-linear-data",
+        "roughnessMapSemantics": "Absolute roughness in green; set material.roughness=1 when using this map."
+      }
+    },
+    {
+      "id": "warm-machined-metal",
+      "probe": {
+        "radiance": [
+          2.2381163872297676,
+          1.2123130430827906,
+          0.49735919716217053
+        ],
+        "diffuseBrdf": [
+          0,
+          0,
+          0
+        ],
+        "specularBrdf": [
+          2.2381163872297676,
+          1.2123130430827906,
+          0.49735919716217053
+        ],
+        "terms": {
+          "nDotL": 1,
+          "nDotV": 1,
+          "nDotH": 1,
+          "vDotH": 1,
+          "alpha": 0.16000000000000003,
+          "distribution": 12.433979929054264,
+          "geometry": 1,
+          "fresnel": [
+            0.72,
+            0.39,
+            0.16
+          ],
+          "f0": [
+            0.72,
+            0.39,
+            0.16
+          ]
+        },
+        "units": "relative-linear-rgb",
+        "algorithm": "lambert-ggx-schlick-separable-smith-v1",
+        "assumptions": [
+          "baseColor is linear sRGB reflectance; directions point away from the surface in one coordinate space.",
+          "irradiance is incident directional-light RGB before multiplication by N dot L, in relative units.",
+          "Isotropic GGX; alpha=max(roughness squared,0.0004); Schlick Fresnel; dielectric F0=0.04; separable exact Smith G1.",
+          "Diffuse uses (1-Fresnel)*(1-metalness)*baseColor/pi; no multiple scattering, environment, shadows, occlusion, transmission or emission.",
+          "The inexpensive diffuse/specular coupling is not an exact energy-conservation model (Khronos B.3.6.3).",
+          "No luminance calibration, perceptual quality score, display encoding or Three.js pixel-parity claim."
+        ],
+        "sources": [
+          "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#metal-brdf-and-dielectric-brdf",
+          "https://google.github.io/filament/main/filament.html#materialsystem/specularbrdf",
+          "https://threejs.org/docs/pages/MeshStandardMaterial.html",
+          "https://threejs.org/manual/pages/color-management.html"
+        ]
+      },
+      "mapping": {
+        "material": "MeshStandardMaterial",
+        "colorLinearSRGB": [
+          0.72,
+          0.39,
+          0.16
+        ],
+        "roughness": 0.4,
+        "metalness": 1,
+        "normalMapType": "TangentSpaceNormalMap",
+        "textureColorSpaces": {
+          "baseColor": "SRGBColorSpace",
+          "normal": "NoColorSpace",
+          "roughness": "NoColorSpace",
+          "metalness": "NoColorSpace"
+        },
+        "textureChannels": {
+          "roughness": "g",
+          "metalness": "b"
+        },
+        "warning": "A lit photograph is not a calibrated base-color map. Three lighting, environment, shader approximations and tone mapping require separate renderer verification.",
+        "sources": [
+          "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#metal-brdf-and-dielectric-brdf",
+          "https://google.github.io/filament/main/filament.html#materialsystem/specularbrdf",
+          "https://threejs.org/docs/pages/MeshStandardMaterial.html",
+          "https://threejs.org/manual/pages/color-management.html"
+        ]
+      },
+      "texture": {
+        "width": 128,
+        "height": 128,
+        "parameters": {
+          "seed": 71,
+          "size": 128,
+          "pattern": "ridges",
+          "frequency": 32,
+          "directionDegrees": 20,
+          "normalStrength": 0.008,
+          "roughness": 0.4,
+          "roughnessVariation": 0.09
+        },
+        "algorithm": "periodic-seeded-height-central-difference-v1",
+        "encoding": "rgba8-linear-data",
+        "roughnessMapSemantics": "Absolute roughness in green; set material.roughness=1 when using this map."
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "purpose": "routing",
+  "audience": "Editors who already know how to write and need the export command",
+  "outcome": "Reach the export reference without reading the publishing tutorial",
+  "locale": "en",
+  "sections": [
+    {
+      "id": "start",
+      "heading": "Choose a task",
+      "text": "Open a guide or look up a command.",
+      "links": ["tutorial"]
+    },
+    {
+      "id": "tutorial",
+      "heading": "Publish a first document",
+      "purpose": "tutorial",
+      "text": "Create a document. Add a title and a paragraph. Choose a destination. Review the document before publication.",
+      "links": ["export"],
+      "action": "Create a practice document."
+    },
+    {
+      "id": "export",
+      "heading": "Export command",
+      "purpose": "reference",
+      "text": "Launch the export command to save a local copy. The destination path is required.",
+      "links": ["start"]
+    },
+    {
+      "id": "example",
+      "heading": "Command example",
+      "purpose": "reference",
+      "format": "code",
+      "text": "launch --export ./document",
+      "links": ["export"]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "lookup",
+      "entry": "start",
+      "target": "export",
+      "probability": 0.8
+    },
+    {
+      "id": "learn",
+      "entry": "start",
+      "target": "tutorial",
+      "probability": 0.2
+    }
+  ],
+  "costs": { "readingWpm": 220, "clickSeconds": 1.5 },
+  "vocabulary": [{ "canonical": "run", "variants": ["launch"] }],
+  "policy": { "requireActionFor": ["tutorial", "how-to"] }
+}

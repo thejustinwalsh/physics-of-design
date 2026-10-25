@@ -1,8 +1,10 @@
 import type { DesignState } from './state.js';
 import type { FactorNode } from './graph.js';
 import { perturb, overlaps } from './graph.js';
+import { collectTypographyElement } from './typography-browser.js';
 type ProofWindow = Window & {
   __POD_STATE__: DesignState;
+  __DESIGN_FRAME_SESSION__?: string;
   __POD_GRAPH__: FactorNode[];
   __POD_APPLY_STATE__?: (state: DesignState) => void;
   __POD_FONTS__: {
@@ -59,7 +61,11 @@ function edited(pointer: string) {
   }
   status.textContent = `Edited; remeasure affected factors: ${dependencies(pointer).join(', ')}`;
   window.parent.postMessage(
-    { physicsDesignState: state, changed: pointer },
+    {
+      physicsDesignState: state,
+      changed: pointer,
+      session: context.__DESIGN_FRAME_SESSION__ ?? null,
+    },
     '*',
   );
   if (guides) drawBaselines();
@@ -100,36 +106,24 @@ function drawBaselines() {
   overlay.style.cssText = 'position:absolute;inset:0;pointer-events:none';
   for (const b of state.blocks) {
     const el = document.querySelector<HTMLElement>(`[data-block="${b.id}"]`)!;
-    const node = el.firstChild!;
-    const text = node.textContent ?? '';
-    const ends = new Map<number, number>();
-    for (const s of new Intl.Segmenter(b.language, {
-      granularity: 'grapheme',
-    }).segment(text)) {
-      if (/^\s+$/u.test(s.segment)) continue;
-      const r = document.createRange();
-      r.setStart(node, s.index);
-      r.setEnd(node, s.index + s.segment.length);
-      ends.set(
-        Math.round(r.getBoundingClientRect().y * 4),
-        s.index + s.segment.length,
-      );
+    if ((el.textContent?.length ?? 0) > 4096) {
+      el.dataset.baselineEvidence = 'unavailable: excerpt exceeds probe budget';
+      continue;
     }
-    // A zero-size inline-block exposes the renderer's actual baseline without estimating it from font size.
-    for (const end of [...ends.values()].reverse()) {
-      const range = document.createRange();
-      range.setStart(el.firstChild!, end);
-      range.collapse(true);
-      const marker = document.createElement('span');
-      marker.style.cssText =
-        'display:inline-block;width:0;height:0;line-height:0;padding:0;margin:0;vertical-align:baseline';
-      range.insertNode(marker);
-      const y = marker.getBoundingClientRect().top + window.scrollY;
-      marker.remove();
-      el.normalize();
+    const facts = collectTypographyElement(el, 64);
+    el.dataset.baselineEvidence = JSON.stringify({
+      measured: facts.lines.filter((l) => l.baseline !== null).length,
+      unavailable: facts.lines.filter((l) => l.baseline === null).length,
+      omitted: facts.omittedLines,
+    });
+    // Draw only coordinates whose probes preserved every original grapheme rectangle.
+    for (const measured of facts.lines) {
+      if (measured.baseline === null) continue;
       const box = el.getBoundingClientRect(),
         line = document.createElement('div');
-      line.style.cssText = `position:absolute;left:${box.x + window.scrollX}px;top:${y}px;width:${box.width}px;border-top:1px solid #ae3b6580`;
+      line.dataset.baselineBlock = b.id;
+      line.dataset.baseline = String(measured.baseline);
+      line.style.cssText = `position:absolute;left:${box.x + window.scrollX}px;top:${box.y + window.scrollY + measured.baseline}px;width:${box.width}px;border-top:1px solid #ae3b6580`;
       overlay.append(line);
     }
   }

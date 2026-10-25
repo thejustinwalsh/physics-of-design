@@ -1,0 +1,16 @@
+{
+  "id": "specimen",
+  "role": "prose",
+  "text": "Typography AV office Agjp: exacting craft, optical balance, and measured rhythm. Hamburgefontsiv 0123456789.",
+  "font": {
+    "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+    "family": "Roboto Flex",
+    "axes": {},
+    "opticalSizing": "none"
+  },
+  "size": 32,
+  "weight": 400,
+  "trackingEm": 0,
+  "leading": 1.4,
+  "measure": 380
+}

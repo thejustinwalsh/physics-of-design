@@ -12,6 +12,127 @@ export type Source = {
 };
 export const sources: Source[] = [
   {
+    id: 'css-variable-fonts',
+    title: 'CSS Fonts Level 4 (22 October 2026 working draft)',
+    url: 'https://www.w3.org/TR/2026/WD-css-fonts-4-20261022/',
+    kind: 'standard',
+    scope:
+      'Font variation declarations, optical sizing and high-level font property interactions.',
+    limitation:
+      'Computed declarations do not expose selected browser coordinates; the current WebKit optical-size probe diverges from Chromium. Fontkit policy is separately labeled.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'css-baseline-probe',
+    title: 'CSS2 inline-block baseline rule',
+    url: 'https://www.w3.org/TR/CSS2/visudet.html#line-height',
+    kind: 'standard',
+    scope:
+      'An empty baseline-aligned inline-block exposes its bottom margin edge as a candidate baseline.',
+    limitation:
+      'Inserting a marker can alter shaping and wrapping. Accept only geometry-preserving probes on the same line; unknown baselines remain null. Range rectangles are not CSS line boxes or ink.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'canvas-text-metrics',
+    title: 'HTML Canvas TextMetrics',
+    url: 'https://html.spec.whatwg.org/multipage/canvas.html#textmetrics',
+    kind: 'standard',
+    scope:
+      'Canvas advance and bounding-box/baseline measurements in the configured drawing state.',
+    limitation:
+      'Canvas font shorthand does not transfer every DOM axis/feature declaration. These values cannot substitute for DOM baselines or renderer parity.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'pbr-filament',
+    title: 'Physically Based Rendering in Filament',
+    url: 'https://google.github.io/filament/main/filament.html',
+    kind: 'measurement',
+    scope:
+      'Microfacet reflectance, dielectric/conductor behavior, roughness remapping and explicit lighting/color conventions.',
+    limitation:
+      'A renderer model is not a preference model. The toolkit probe omits multiple scattering and is not an exact energy-conservation or Three pixel-parity proof.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'disney-principled',
+    title: 'Burley2012: Physically Based Shading at Disney',
+    url: 'https://disneyanimation.com/publications/physically-based-shading-at-disney/',
+    kind: 'heuristic',
+    scope:
+      'Measured-material observations and robust artist-facing controls in a principled BRDF.',
+    limitation:
+      'Does not establish aesthetically optimal UI material pairings or license reuse of paper figures.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'material-perception',
+    title:
+      'Norman, Todd and Phillips2019: Effects of Illumination on the Categorization of Shiny Materials',
+    url: 'https://arxiv.org/abs/1908.00902',
+    kind: 'empirical',
+    scope:
+      'Experiments show illumination changes perceived material categories.',
+    limitation:
+      'Material identification, not pairing preference. Verify coupled shape, light and finish under actual rendering.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'material-fingerprint',
+    title: 'Filip et al.: Material Fingerprinting',
+    url: 'https://arxiv.org/abs/2410.13615',
+    kind: 'empirical',
+    scope:
+      'Psychophysical perceptual-attribute ratings for dynamic material stimuli.',
+    limitation:
+      'Attributes are not aesthetic desirability. No trained predictor or corpus is bundled here.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'gsap-runtime',
+    title: 'GSAP3.15 documentation',
+    url: 'https://gsap.com/docs/v3/',
+    kind: 'heuristic',
+    scope:
+      'Optional browser runtime for sampled motion fields, timeline control, cleanup and reduced-motion adapters.',
+    limitation:
+      'No universal speed ranking against anime.js or native animation; runtime license remains upstream.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'device-orientation',
+    title: 'W3C Device Orientation and Motion',
+    url: 'https://www.w3.org/TR/orientation-event/',
+    kind: 'standard',
+    scope: 'Permission-gated orientation inputs and coordinate conventions.',
+    limitation:
+      'Availability is not sensor receipt, calibration or a physical Safari frame-performance guarantee.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'diataxis',
+    title: 'Diataxis map and application',
+    url: 'https://diataxis.fr/map/',
+    kind: 'heuristic',
+    scope:
+      'Reader-purpose distinctions informing authored documentation structure and task journeys.',
+    limitation:
+      'No universal prose beauty, reading-speed or cognitive-load equation.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'attention-control',
+    title: 'Attention Control skill',
+    url: 'https://github.com/aaddrick/attention-control',
+    kind: 'heuristic',
+    scope:
+      'Attributed practices for action placement, controlled terms and navigable prose.',
+    limitation:
+      'Practitioner skill, not a clinical intervention or empirically validated aesthetic model; rules apply only when authored.',
+    checked: '2026-10-25',
+  },
+  {
     id: 'colorjs',
     title: 'Color.js 0.7.1 gamut mapping',
     url: 'https://colorjs.io/docs/gamut-mapping.html',
@@ -46,7 +167,7 @@ export const sources: Source[] = [
   },
   {
     id: 'brief-energy',
-    title: 'Physics of Design brief-conditioned mathematical search',
+    title: 'Design Theory brief-conditioned mathematical search',
     url: 'https://github.com/thejustinwalsh/physics-of-design/blob/main/docs/adr-002-fast-design-machine.md',
     kind: 'heuristic',
     scope:
@@ -242,6 +363,100 @@ export const sources: Source[] = [
 ];
 
 export const factorRegistry = [
+  {
+    id: 'typography-evidence',
+    variables: [
+      'fontFile',
+      'axes',
+      'size',
+      'weight',
+      'kerning',
+      'tracking',
+      'leading',
+      'measure',
+      'textScale',
+      'script',
+      'lineBreaks',
+      'baseline',
+    ],
+    sources: [
+      'css-variable-fonts',
+      'css-baseline-probe',
+      'canvas-text-metrics',
+    ],
+    kind: 'measurement',
+    uncertainty:
+      'Fontkit outlines/global tables, guarded DOM baselines, Range fragments and Canvas drawing metrics remain separate. Endpoint sampling is not exhaustive axis-combination coverage; native baselines and actual fallback face identity remain unsupported.',
+  },
+  {
+    id: 'driven-motion',
+    variables: [
+      'position',
+      'velocity',
+      'target',
+      'mass',
+      'stiffness',
+      'damping',
+      'elapsedTime',
+    ],
+    sources: ['spring-mechanics'],
+    kind: 'measurement',
+    uncertainty:
+      'Analytic abstract-coordinate mechanics; presentation projection and device frame pacing are separate.',
+  },
+  {
+    id: 'material-relations',
+    variables: [
+      'linearReflectance',
+      'roughness',
+      'metalness',
+      'textureScale',
+      'geometry',
+      'lighting',
+      'exposure',
+      'brief',
+    ],
+    sources: [
+      'pbr-filament',
+      'disney-principled',
+      'material-perception',
+      'material-fingerprint',
+      'oklab',
+    ],
+    kind: 'heuristic',
+    uncertainty:
+      'Physical/perceptual descriptors are separate from authored pairing bands; aesthetic preference is uncalibrated.',
+  },
+  {
+    id: 'prose-journeys',
+    variables: [
+      'sections',
+      'links',
+      'prerequisites',
+      'readerPurpose',
+      'explicitDemand',
+      'authoredCost',
+    ],
+    sources: ['diataxis', 'attention-control'],
+    kind: 'heuristic',
+    uncertainty:
+      'Reading/click costs are assumptions; entropy describes explicit journey demand only.',
+  },
+  {
+    id: 'whole-layout-dimensions',
+    variables: [
+      'screen',
+      'variables',
+      'derived',
+      'nodeBounds',
+      'relationships',
+      'rendererReceipt',
+    ],
+    sources: ['dimensional-contract'],
+    kind: 'measurement',
+    uncertainty:
+      'Proposals recompute; caller-supplied measured rectangles stay receipt-bound. No glyph ink or accessibility inference.',
+  },
   {
     id: 'color-contrast',
     variables: ['colors', 'fontSize', 'fontWeight', 'responsive'],

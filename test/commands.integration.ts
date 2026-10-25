@@ -68,7 +68,117 @@ const componentFixture = {
   },
   minHitSize: 44,
 };
+const validationFixture = {
+  version: 1,
+  id: 'public-contract',
+  designIdentity: 'a'.repeat(64),
+  scenarios: [
+    {
+      id: 'phone',
+      platform: 'web',
+      width: 390,
+      height: 844,
+      textScale: 1,
+      colorScheme: 'light',
+      reducedMotion: false,
+      contentId: 'original',
+      source: 'Contract fixture; no measurement',
+    },
+  ],
+  phases: [
+    {
+      id: 'geometry',
+      purpose: 'Report missing proof',
+      requirements: [
+        {
+          id: 'layout',
+          scenario: 'phone',
+          tool: 'layout measure',
+          inputIdentity: 'b'.repeat(64),
+          evidenceKind: 'deterministic',
+          rationale: 'Contract fixture',
+        },
+      ],
+    },
+  ],
+};
+const materialFixture = JSON.parse(
+  readFileSync('examples/materials/pairings.json', 'utf8'),
+);
 const inputs: Record<string, unknown> = {
+  'validation plan': validationFixture,
+  'validation check': { plan: validationFixture, receipts: [], advance: 1 },
+  'material candidates': {
+    anchor: materialFixture.materials.mineral,
+    alternatives: [
+      materialFixture.materials['mineral-inset'],
+      materialFixture.materials['metal-control'],
+    ],
+    profile: materialFixture.profiles.continuity,
+  },
+  'decision run': {
+    workflow: {
+      ...JSON.parse(readFileSync('examples/workflow/editorial.json', 'utf8'))
+        .workflow,
+      stages: JSON.parse(
+        readFileSync('examples/workflow/editorial.json', 'utf8'),
+      ).workflow.stages.map((s: Record<string, unknown>) => ({
+        ...s,
+        selection: 'mathematical',
+      })),
+    },
+  },
+  'wireframe inspect': JSON.parse(
+    readFileSync('examples/wireframe/hero.json', 'utf8'),
+  ),
+  'motion dynamics': {
+    position: 0,
+    target: 1,
+    steps: [{ dtSeconds: 0.1 }, { dtSeconds: 0.1, target: 2 }],
+  },
+  'motion timeline': {
+    motion: motionFixture,
+    min: 0,
+    max: 24,
+    sampleCount: 12,
+  },
+  'surface probe': {
+    surface: { baseColor: [0.2, 0.3, 0.4], roughness: 0.6, metalness: 0 },
+  },
+  'surface map': { baseColor: [0.2, 0.3, 0.4], roughness: 0.6, metalness: 0 },
+  'surface textures': { size: 8, seed: 1 },
+  'media analyze': {
+    file: 'test/fixtures/material-checker.png',
+    provenance: {
+      origin: 'original-generated',
+      creator: 'Design Theory',
+      license: 'MIT',
+      licenseEvidence: 'test/fixtures/README.md',
+    },
+  },
+  'media crops': {
+    sourceWidth: 600,
+    sourceHeight: 400,
+    width: 300,
+    height: 300,
+  },
+  'prose analyze': JSON.parse(
+    readFileSync('examples/prose/routing.json', 'utf8'),
+  ),
+  'material pair': {
+    first: {
+      id: 'paper',
+      surface: { baseColor: [0.8, 0.75, 0.6], roughness: 0.9, metalness: 0 },
+      composition: 'homogeneous-dielectric',
+      provenance: { kind: 'authored', source: 'Original protocol fixture' },
+    },
+    second: {
+      id: 'metal',
+      surface: { baseColor: [0.6, 0.3, 0.1], roughness: 0.3, metalness: 1 },
+      composition: 'homogeneous-conductor',
+      provenance: { kind: 'authored', source: 'Original protocol fixture' },
+    },
+  },
   'component solve': componentFixture,
   'component inspect': componentFixture,
   'motion proof': motionFixture,
@@ -211,6 +321,8 @@ const inputs: Record<string, unknown> = {
   'responsive resolve': { state },
   'font inspect': { file: state.blocks[0].font.file, text: 'AVATAR' },
   'text shape': { state, blockId: 'title', probes: false },
+  'typography inspect': { state, blockId: 'title', render: false },
+  'typography axes': { state, blockId: 'title', render: false, limit: 3 },
   'intervals candidates': { base: 20, min: 1, max: 4 },
   'relations score': { state },
   'layout measure': { state, probes: false },

@@ -1,0 +1,58 @@
+{
+  "capturedAt": "2026-10-25T10:11:22.565Z",
+  "implementation": {
+    "examples/design-theory/web.jsx": "6493f764c7ca1223a1efa3b53bf18af6b34d72f2169c3e4ee72d7e4b073b4cbd",
+    "examples/design-theory/profiles.js": "c2b4c1cdd6027e7b26c344163de7ed459aab5e6035cef776466b8e0d44f7a0d9",
+    "examples/design-theory/Surface.jsx": "b784128e478ebd5b065beff73f6a537f8a8e91be65ba120a8cac39cca9d6f2e7",
+    "examples/design-theory/surface-scene.js": "837e99d08a7509f473f2f552429fab5e3bd897f88fce22ce1e504677c4862a78",
+    "artifacts/vela/web/design-theory/app.js": "b612d2e1252a1636c9849f034c42f4e820b9abbd25039b85828d7fea56447f72"
+  },
+  "cases": [],
+  "errors": [],
+  "browser": "156.0.8078.4",
+  "dampingEdited": "35",
+  "download": {
+    "spring": {
+      "mass": 1,
+      "stiffness": 165,
+      "damping": 13
+    },
+    "coordinate": {
+      "unit": "px",
+      "from": 0,
+      "to": 120
+    },
+    "durationSeconds": 2,
+    "sampleCount": 121
+  },
+  "inspectorGeometry": {
+    "host": {
+      "top": 382.515625,
+      "height": 520,
+      "scrollHeight": 672,
+      "scrollTop": 0
+    },
+    "svg": {
+      "top": 242.515625,
+      "height": 800
+    }
+  },
+  "skip": {
+    "active": "<body><div id=\"root\"><div class=\"xsh0q14 x1lk8qxj x1d5m4yj xg6iff7\" data-profile=\"editorial\" style=\"--paper: #f3f1e8; --ink: #253d33; --muted: #5d685d; --accent",
+    "style": {
+      "top": "-100px",
+      "position": "fixed"
+    },
+    "rect": {
+      "x": 20,
+      "y": -100,
+      "width": 134.53125,
+      "height": 47,
+      "top": -100,
+      "right": 154.53125,
+      "bottom": -53,
+      "left": 20
+    }
+  },
+  "layoutInspector": "Navigation\n326 × 40\nStory + introduction\n326 × 190\nFocal image\n326 × 255\nRead the story\n160 × 44\nEdition + credits\n326 × 28\n390 × 760 css-px · dashed = proposal · solid = renderer-reported"
+}

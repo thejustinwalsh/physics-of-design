@@ -1,0 +1,1719 @@
+{
+  "capturedAt": "2026-10-25T10:10:24.950Z",
+  "implementation": {
+    "examples/design-theory/web.jsx": "6493f764c7ca1223a1efa3b53bf18af6b34d72f2169c3e4ee72d7e4b073b4cbd",
+    "examples/design-theory/profiles.js": "c2b4c1cdd6027e7b26c344163de7ed459aab5e6035cef776466b8e0d44f7a0d9",
+    "examples/design-theory/Surface.jsx": "b784128e478ebd5b065beff73f6a537f8a8e91be65ba120a8cac39cca9d6f2e7",
+    "examples/design-theory/surface-scene.js": "837e99d08a7509f473f2f552429fab5e3bd897f88fce22ce1e504677c4862a78",
+    "artifacts/vela/web/design-theory/app.js": "b612d2e1252a1636c9849f034c42f4e820b9abbd25039b85828d7fea56447f72"
+  },
+  "cases": [
+    {
+      "width": 320,
+      "profile": "editorial",
+      "scrollWidth": 320,
+      "surfaces": {
+        "hero": {
+          "renderer": "worker",
+          "frames": 1,
+          "initializationMilliseconds": 123.69999998807907,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 102.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.10000002384185791
+        },
+        "material": {
+          "renderer": "worker",
+          "frames": 1,
+          "initializationMilliseconds": 123.10000002384186,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 102.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.30000001192092896
+        }
+      },
+      "smallControls": [
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 302,
+          "font": "52px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 302,
+          "font": "38px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 302,
+          "font": "38px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 243.265625,
+          "font": "38px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 212.609375,
+          "font": "38px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 286.96875,
+          "font": "38px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 302,
+          "font": "38px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 302,
+          "font": "44px"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "profile": "studio",
+      "scrollWidth": 320,
+      "surfaces": {
+        "hero": {
+          "renderer": "worker",
+          "frames": 2,
+          "initializationMilliseconds": 123.69999998807907,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.57,
+                0.095,
+                0.17
+              ],
+              "roughness": 0.17,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.31,
+                0.2,
+                0.46
+              ],
+              "roughness": 0.58,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 102.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.19999998807907104
+        },
+        "material": {
+          "renderer": "worker",
+          "frames": 2,
+          "initializationMilliseconds": 123.10000002384186,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.57,
+                0.095,
+                0.17
+              ],
+              "roughness": 0.17,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.31,
+                0.2,
+                0.46
+              ],
+              "roughness": 0.58,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 102.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.30000001192092896
+        }
+      },
+      "smallControls": [
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 302,
+          "font": "52px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 302,
+          "font": "38px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 302,
+          "font": "38px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 232.421875,
+          "font": "38px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 208.109375,
+          "font": "38px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 273.734375,
+          "font": "38px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 302,
+          "font": "38px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 291.046875,
+          "font": "44px"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "profile": "utility",
+      "scrollWidth": 320,
+      "surfaces": {
+        "hero": {
+          "renderer": "worker",
+          "frames": 3,
+          "initializationMilliseconds": 123.69999998807907,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.34,
+                0.4,
+                0.34
+              ],
+              "roughness": 0.68,
+              "metalness": 1
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.48,
+                0.6,
+                0.39
+              ],
+              "roughness": 0.76,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 102.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.10000002384185791
+        },
+        "material": {
+          "renderer": "worker",
+          "frames": 3,
+          "initializationMilliseconds": 123.10000002384186,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.34,
+                0.4,
+                0.34
+              ],
+              "roughness": 0.68,
+              "metalness": 1
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.48,
+                0.6,
+                0.39
+              ],
+              "roughness": 0.76,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 102.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.30000001192092896
+        }
+      },
+      "smallControls": [
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 302,
+          "font": "52px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 302,
+          "font": "38px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 302,
+          "font": "38px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 245.34375,
+          "font": "38px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 217.984375,
+          "font": "38px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 288.921875,
+          "font": "38px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 302,
+          "font": "38px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 302,
+          "font": "44px"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "profile": "editorial",
+      "scrollWidth": 390,
+      "surfaces": {
+        "hero": {
+          "renderer": "worker",
+          "frames": 2,
+          "initializationMilliseconds": 135.19999998807907,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 111.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.3999999761581421
+        },
+        "material": {
+          "renderer": "worker",
+          "frames": 1,
+          "initializationMilliseconds": 2534.2000000476837,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 2502.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.30000001192092896
+        }
+      },
+      "smallControls": [
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 372,
+          "font": "53.43px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 336.53125,
+          "font": "38px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 372,
+          "font": "38px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 243.265625,
+          "font": "38px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 212.609375,
+          "font": "38px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 286.96875,
+          "font": "38px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 316.046875,
+          "font": "38px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 303.484375,
+          "font": "44px"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "profile": "studio",
+      "scrollWidth": 390,
+      "surfaces": {
+        "hero": {
+          "renderer": "worker",
+          "frames": 3,
+          "initializationMilliseconds": 135.19999998807907,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.57,
+                0.095,
+                0.17
+              ],
+              "roughness": 0.17,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.31,
+                0.2,
+                0.46
+              ],
+              "roughness": 0.58,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 111.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.5
+        },
+        "material": {
+          "renderer": "worker",
+          "frames": 2,
+          "initializationMilliseconds": 2534.2000000476837,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.57,
+                0.095,
+                0.17
+              ],
+              "roughness": 0.17,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.31,
+                0.2,
+                0.46
+              ],
+              "roughness": 0.58,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 2502.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.5
+        }
+      },
+      "smallControls": [
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 372,
+          "font": "53.43px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 326.390625,
+          "font": "38px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 372,
+          "font": "38px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 232.421875,
+          "font": "38px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 208.109375,
+          "font": "38px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 273.734375,
+          "font": "38px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 303.34375,
+          "font": "38px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 291.046875,
+          "font": "44px"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "profile": "utility",
+      "scrollWidth": 390,
+      "surfaces": {
+        "hero": {
+          "renderer": "worker",
+          "frames": 4,
+          "initializationMilliseconds": 135.19999998807907,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.34,
+                0.4,
+                0.34
+              ],
+              "roughness": 0.68,
+              "metalness": 1
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.48,
+                0.6,
+                0.39
+              ],
+              "roughness": 0.76,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 111.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.30000001192092896
+        },
+        "material": {
+          "renderer": "worker",
+          "frames": 3,
+          "initializationMilliseconds": 2534.2000000476837,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.34,
+                0.4,
+                0.34
+              ],
+              "roughness": 0.68,
+              "metalness": 1
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.48,
+                0.6,
+                0.39
+              ],
+              "roughness": 0.76,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 2502.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.30000001192092896
+        }
+      },
+      "smallControls": [
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 372,
+          "font": "53.43px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 342.359375,
+          "font": "38px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 372,
+          "font": "38px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 245.34375,
+          "font": "38px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 217.984375,
+          "font": "38px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 288.921875,
+          "font": "38px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 318.546875,
+          "font": "38px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 303.375,
+          "font": "44px"
+        }
+      ]
+    },
+    {
+      "width": 834,
+      "profile": "editorial",
+      "scrollWidth": 834,
+      "surfaces": {
+        "material": {
+          "renderer": "worker",
+          "frames": 1,
+          "initializationMilliseconds": 157.80000001192093,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 134.10000002384186,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.19999998807907104
+        },
+        "hero": {
+          "renderer": "worker",
+          "frames": 1,
+          "initializationMilliseconds": 158.10000002384186,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 135.80000001192093,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.10000002384185791
+        }
+      },
+      "smallControls": [
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 472.28125,
+          "font": "65px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 279.875,
+          "font": "38px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 352.671875,
+          "font": "50.04px"
+        }
+      ]
+    },
+    {
+      "width": 834,
+      "profile": "studio",
+      "scrollWidth": 834,
+      "surfaces": {
+        "material": {
+          "renderer": "worker",
+          "frames": 2,
+          "initializationMilliseconds": 157.80000001192093,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.57,
+                0.095,
+                0.17
+              ],
+              "roughness": 0.17,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.31,
+                0.2,
+                0.46
+              ],
+              "roughness": 0.58,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 134.10000002384186,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.19999998807907104
+        },
+        "hero": {
+          "renderer": "worker",
+          "frames": 2,
+          "initializationMilliseconds": 158.10000002384186,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.57,
+                0.095,
+                0.17
+              ],
+              "roughness": 0.17,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.31,
+                0.2,
+                0.46
+              ],
+              "roughness": 0.58,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 135.80000001192093,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.19999998807907104
+        }
+      },
+      "smallControls": [
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 472.28125,
+          "font": "65px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 279.875,
+          "font": "38px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 338.53125,
+          "font": "50.04px"
+        }
+      ]
+    },
+    {
+      "width": 834,
+      "profile": "utility",
+      "scrollWidth": 834,
+      "surfaces": {
+        "material": {
+          "renderer": "worker",
+          "frames": 3,
+          "initializationMilliseconds": 157.80000001192093,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.34,
+                0.4,
+                0.34
+              ],
+              "roughness": 0.68,
+              "metalness": 1
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.48,
+                0.6,
+                0.39
+              ],
+              "roughness": 0.76,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 134.10000002384186,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.10000002384185791
+        },
+        "hero": {
+          "renderer": "worker",
+          "frames": 3,
+          "initializationMilliseconds": 158.10000002384186,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.34,
+                0.4,
+                0.34
+              ],
+              "roughness": 0.68,
+              "metalness": 1
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.48,
+                0.6,
+                0.39
+              ],
+              "roughness": 0.76,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 135.80000001192093,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.10000002384185791
+        }
+      },
+      "smallControls": [
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 472.28125,
+          "font": "65px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 279.875,
+          "font": "38px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 514.671875,
+          "font": "38px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 352.546875,
+          "font": "50.04px"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "profile": "editorial",
+      "scrollWidth": 1440,
+      "surfaces": {
+        "hero": {
+          "renderer": "worker",
+          "frames": 1,
+          "initializationMilliseconds": 130.10000002384186,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 108.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0
+        },
+        "material": {
+          "renderer": "worker",
+          "frames": 1,
+          "initializationMilliseconds": 2214.699999988079,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 2187.900000035763,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.19999998807907104
+        }
+      },
+      "smallControls": [
+        {
+          "text": "The toolkit",
+          "width": 61.84375,
+          "height": 16
+        },
+        {
+          "text": "How it works",
+          "width": 75.578125,
+          "height": 16
+        },
+        {
+          "text": "In practice",
+          "width": 59.671875,
+          "height": 16
+        },
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 818.640625,
+          "font": "110.88px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 502.234375,
+          "font": "62px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 592.03125,
+          "font": "82px"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "profile": "studio",
+      "scrollWidth": 1440,
+      "surfaces": {
+        "hero": {
+          "renderer": "worker",
+          "frames": 2,
+          "initializationMilliseconds": 130.10000002384186,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.57,
+                0.095,
+                0.17
+              ],
+              "roughness": 0.17,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.31,
+                0.2,
+                0.46
+              ],
+              "roughness": 0.58,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 108.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.19999998807907104
+        },
+        "material": {
+          "renderer": "worker",
+          "frames": 2,
+          "initializationMilliseconds": 2214.699999988079,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.57,
+                0.095,
+                0.17
+              ],
+              "roughness": 0.17,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.31,
+                0.2,
+                0.46
+              ],
+              "roughness": 0.58,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 2187.900000035763,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.19999998807907104
+        }
+      },
+      "smallControls": [
+        {
+          "text": "The toolkit",
+          "width": 61.84375,
+          "height": 16
+        },
+        {
+          "text": "How it works",
+          "width": 75.578125,
+          "height": 16
+        },
+        {
+          "text": "In practice",
+          "width": 59.671875,
+          "height": 16
+        },
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 818.640625,
+          "font": "110.88px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 502.234375,
+          "font": "62px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 568.859375,
+          "font": "82px"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "profile": "utility",
+      "scrollWidth": 1440,
+      "surfaces": {
+        "hero": {
+          "renderer": "worker",
+          "frames": 3,
+          "initializationMilliseconds": 130.10000002384186,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.34,
+                0.4,
+                0.34
+              ],
+              "roughness": 0.68,
+              "metalness": 1
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.48,
+                0.6,
+                0.39
+              ],
+              "roughness": 0.76,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 108.5,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.30000001192092896
+        },
+        "material": {
+          "renderer": "worker",
+          "frames": 3,
+          "initializationMilliseconds": 2214.699999988079,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.34,
+                0.4,
+                0.34
+              ],
+              "roughness": 0.68,
+              "metalness": 1
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.48,
+                0.6,
+                0.39
+              ],
+              "roughness": 0.76,
+              "metalness": 0
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 2187.900000035763,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.19999998807907104
+        }
+      },
+      "smallControls": [
+        {
+          "text": "The toolkit",
+          "width": 61.84375,
+          "height": 16
+        },
+        {
+          "text": "How it works",
+          "width": 75.578125,
+          "height": 16
+        },
+        {
+          "text": "In practice",
+          "width": 59.671875,
+          "height": 16
+        },
+        {
+          "text": null,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "text": "Workflow",
+          "width": 52.234375,
+          "height": 15
+        },
+        {
+          "text": "About this demo",
+          "width": 87.578125,
+          "height": 15
+        },
+        {
+          "text": "Font licenses",
+          "width": 68.15625,
+          "height": 15
+        }
+      ],
+      "headings": [
+        {
+          "text": "Good designhas a pointof view.",
+          "right": 818.640625,
+          "font": "110.88px"
+        },
+        {
+          "text": "Your intent.Not another template.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "Feel thedifference.",
+          "right": 502.234375,
+          "font": "62px"
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "right": 970,
+          "font": "62px"
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "right": 591.8125,
+          "font": "82px"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4",
+  "dampingEdited": "35",
+  "download": {
+    "spring": {
+      "mass": 1,
+      "stiffness": 165,
+      "damping": 13
+    },
+    "coordinate": {
+      "unit": "px",
+      "from": 0,
+      "to": 120
+    },
+    "durationSeconds": 2,
+    "sampleCount": 121
+  },
+  "layoutInspector": "Navigation\n326 × 40\nStory + introduction\n326 × 190\nFocal image\n326 × 255\nRead the story\n160 × 44\nEdition + credits\n326 × 28\n390 × 760 css-px · dashed = proposal · solid = renderer-reported"
+}

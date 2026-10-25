@@ -13,6 +13,7 @@ import { evaluateExpression } from '../../src/math-expression.ts';
 import { emitMotion } from '../../src/motion.ts';
 import { glueAccentPunctuation } from '../../src/typography-flow.ts';
 import policy from './design.generated.json';
+import { installVelaMotion } from './web-motion.js';
 
 const c = policy.colors;
 const TOTAL = 22 * 60;
@@ -525,6 +526,7 @@ const Heading = ({ children }) => {
     React.useContext(Ui);
   return (
     <h1
+      data-motion-heading
       tabIndex="-1"
       {...sx(
         styles.headline(
@@ -592,6 +594,7 @@ const Card = ({ children, color = c.surface, ink = c.ink, ...rest }) => {
     React.useContext(Ui);
   return (
     <section
+      data-motion-card
       {...sx(
         styles.card(p.radius, p.pageGutter, p.gap),
         styles.surface(color, ink),
@@ -988,6 +991,21 @@ function Vela({ viewport }) {
     }
     return () => animation.current?.cancel();
   }, [screen, reduced]);
+  useLayoutEffect(() => {
+    if (!main.current) return;
+    return installVelaMotion({
+      root: main.current.closest('[data-screen]'),
+      main: main.current,
+      screen,
+      reduced,
+      spring: {
+        mass: resolved.motions.page.mass,
+        stiffness: resolved.motions.page.stiffness,
+        damping: resolved.motions.page.damping,
+      },
+      distance: p.pageDistance,
+    });
+  }, [screen, reduced, restore.status]);
   useEffect(() => {
     main.current?.querySelector('h1')?.focus({ preventScroll: true });
   }, [screen]);

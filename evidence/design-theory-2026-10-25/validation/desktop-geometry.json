@@ -1,0 +1,99 @@
+{
+  "inputHash": "2d3d52c5b2345b9fb32d361877521c7ce817e5c6a0c162b857dd17ef544ad233",
+  "platform": "web",
+  "engine": "chromium/react/stylex",
+  "runtime": {
+    "chromium": "156.0.8078.4",
+    "deviceScaleFactor": 1
+  },
+  "blocks": [
+    {
+      "id": "title",
+      "box": {
+        "x": 144,
+        "y": 64,
+        "width": 1000,
+        "height": 195.8125
+      },
+      "lines": [
+        {
+          "x": 144,
+          "y": 55,
+          "width": 853.265625,
+          "height": 115,
+          "start": 0,
+          "end": 19,
+          "text": "Make room for what "
+        },
+        {
+          "x": 144,
+          "y": 152.90625,
+          "width": 335.90625,
+          "height": 115,
+          "start": 19,
+          "end": 27,
+          "text": "matters."
+        }
+      ],
+      "inlineBounds": {
+        "x": 144,
+        "y": 55,
+        "width": 832.765625,
+        "height": 212.90625
+      },
+      "inkBounds": null,
+      "overflowX": 0,
+      "overflowY": 0
+    },
+    {
+      "id": "subtitle",
+      "box": {
+        "x": 144,
+        "y": 291.8125,
+        "width": 660,
+        "height": 69.59375
+      },
+      "lines": [
+        {
+          "x": 144,
+          "y": 293.8125,
+          "width": 662.171875,
+          "height": 29,
+          "start": 0,
+          "end": 66,
+          "text": "A quieter place to collect your ideas, find your focus, and begin "
+        },
+        {
+          "x": 144,
+          "y": 328.609375,
+          "width": 265.9375,
+          "height": 29,
+          "start": 66,
+          "end": 89,
+          "text": "something worth making."
+        }
+      ],
+      "inlineBounds": {
+        "x": 144,
+        "y": 293.8125,
+        "width": 656.015625,
+        "height": 63.796875
+      },
+      "inkBounds": null,
+      "overflowX": 0,
+      "overflowY": 0
+    }
+  ],
+  "issues": [],
+  "feasible": true,
+  "textSpacing": {
+    "tested": true,
+    "issues": []
+  },
+  "scope": [
+    "Only this specimen and viewport were verified.",
+    "Inline bounds are DOM range bounds, not glyph ink bounds.",
+    "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+    "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+  ]
+}

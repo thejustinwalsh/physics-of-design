@@ -1,0 +1,162 @@
+{
+  "inputHash": "c2f1d775d6493c5ec8f7e05f53d2cdc1150720ccf95d77bf01c05b779a5b4025",
+  "platform": "web",
+  "engine": "chromium/react/stylex",
+  "runtime": {
+    "chromium": "156.0.8078.4",
+    "deviceScaleFactor": 1
+  },
+  "blocks": [
+    {
+      "id": "title",
+      "box": {
+        "x": 40,
+        "y": 40,
+        "width": 754,
+        "height": 652.75
+      },
+      "lines": [
+        {
+          "x": 40,
+          "y": 25,
+          "width": 420.09375,
+          "height": 192,
+          "start": 0,
+          "end": 5,
+          "text": "Make "
+        },
+        {
+          "x": 40,
+          "y": 188.1875,
+          "width": 621.859375,
+          "height": 192,
+          "start": 5,
+          "end": 14,
+          "text": "room for "
+        },
+        {
+          "x": 40,
+          "y": 351.375,
+          "width": 380.171875,
+          "height": 192,
+          "start": 14,
+          "end": 19,
+          "text": "what "
+        },
+        {
+          "x": 40,
+          "y": 514.5625,
+          "width": 559.84375,
+          "height": 192,
+          "start": 19,
+          "end": 27,
+          "text": "matters."
+        }
+      ],
+      "inlineBounds": {
+        "x": 40,
+        "y": 25,
+        "width": 590.890625,
+        "height": 681.5625
+      },
+      "inkBounds": null,
+      "overflowX": 0,
+      "overflowY": 0
+    },
+    {
+      "id": "subtitle",
+      "box": {
+        "x": 40,
+        "y": 720.75,
+        "width": 660,
+        "height": 487.15625
+      },
+      "lines": [
+        {
+          "x": 40,
+          "y": 726.75,
+          "width": 639.234375,
+          "height": 57,
+          "start": 0,
+          "end": 32,
+          "text": "A quieter place to collect your "
+        },
+        {
+          "x": 40,
+          "y": 796.34375,
+          "width": 557.328125,
+          "height": 57,
+          "start": 32,
+          "end": 60,
+          "text": "ideas, find your focus, and "
+        },
+        {
+          "x": 40,
+          "y": 865.9375,
+          "width": 671.9375,
+          "height": 57,
+          "start": 60,
+          "end": 90,
+          "text": "begin something worth making. "
+        },
+        {
+          "x": 40,
+          "y": 935.53125,
+          "width": 663.046875,
+          "height": 57,
+          "start": 90,
+          "end": 121,
+          "text": "Build an approach that remains "
+        },
+        {
+          "x": 40,
+          "y": 1005.125,
+          "width": 531.609375,
+          "height": 57,
+          "start": 121,
+          "end": 146,
+          "text": "useful when real content "
+        },
+        {
+          "x": 40,
+          "y": 1074.71875,
+          "width": 607.90625,
+          "height": 57,
+          "start": 146,
+          "end": 174,
+          "text": "changes and readers enlarge "
+        },
+        {
+          "x": 40,
+          "y": 1144.3125,
+          "width": 176.1875,
+          "height": 57,
+          "start": 174,
+          "end": 183,
+          "text": "the text."
+        }
+      ],
+      "inlineBounds": {
+        "x": 40,
+        "y": 726.75,
+        "width": 659.640625,
+        "height": 474.5625
+      },
+      "inkBounds": null,
+      "overflowX": 0,
+      "overflowY": 0
+    }
+  ],
+  "issues": [],
+  "feasible": true,
+  "textSpacing": {
+    "tested": true,
+    "issues": []
+  },
+  "scope": [
+    "Only this specimen and viewport were verified.",
+    "Inline bounds are DOM range bounds, not glyph ink bounds.",
+    "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+    "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+  ]
+}

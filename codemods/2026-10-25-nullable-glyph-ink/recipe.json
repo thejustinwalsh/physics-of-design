@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-10-25-nullable-glyph-ink",
+  "created": "2026-10-25",
+  "package": "@design-theory/toolkit (previously @physics-of-design/toolkit)",
+  "from": "remote main at 035b02ce0c484cfe9f02f34f049e12780c94eccd",
+  "to": "the nullable per-glyph ink-bounds correction",
+  "summary": "Represent empty glyph outlines as null instead of nonfinite rectangle coordinates.",
+  "instructions": "./instructions.md",
+  "transform": "./transform.mjs",
+  "changes": [
+    { "kind": "manual", "from": "shape(block).glyphs[n].inkBounds: Rect", "to": "shape(block).glyphs[n].inkBounds: Rect | null", "automatic": false }
+  ],
+  "verification": ["npm ci --prefix codemods", "node codemods/2026-10-25-nullable-glyph-ink/test.mjs", "npm run typecheck", "npm test"]
+}

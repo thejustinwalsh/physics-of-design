@@ -1,0 +1,60 @@
+{
+  "scope": "Authored starting points for different briefs. Colors are linear sRGB; these are editable styling recipes, not measured material samples or quality rankings.",
+  "recipes": [
+    {
+      "id": "quiet-mineral",
+      "brief": "A calm editorial reading surface with little highlight motion",
+      "surface": {
+        "baseColor": [0.58, 0.62, 0.66],
+        "roughness": 0.88,
+        "metalness": 0
+      },
+      "texture": {
+        "seed": 29,
+        "size": 128,
+        "pattern": "cells",
+        "frequency": 24,
+        "normalStrength": 0.015,
+        "roughness": 0.88,
+        "roughnessVariation": 0.04
+      }
+    },
+    {
+      "id": "blue-enamel",
+      "brief": "A crisp, saturated product interface with a controlled moving highlight",
+      "surface": {
+        "baseColor": [0.012, 0.09, 0.52],
+        "roughness": 0.27,
+        "metalness": 0
+      },
+      "texture": {
+        "seed": 47,
+        "size": 128,
+        "pattern": "noise",
+        "frequency": 8,
+        "normalStrength": 0.004,
+        "roughness": 0.27,
+        "roughnessVariation": 0.015
+      }
+    },
+    {
+      "id": "warm-machined-metal",
+      "brief": "A warm industrial instrument with directional texture and strong highlights",
+      "surface": {
+        "baseColor": [0.72, 0.39, 0.16],
+        "roughness": 0.4,
+        "metalness": 1
+      },
+      "texture": {
+        "seed": 71,
+        "size": 128,
+        "pattern": "ridges",
+        "frequency": 32,
+        "directionDegrees": 20,
+        "normalStrength": 0.008,
+        "roughness": 0.4,
+        "roughnessVariation": 0.09
+      }
+    }
+  ]
+}

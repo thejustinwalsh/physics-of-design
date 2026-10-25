@@ -2,7 +2,14 @@ import { hash } from './identity.js';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { createReadStream } from 'node:fs';
-import { mkdtemp, readFile, writeFile, rm, mkdir } from 'node:fs/promises';
+import {
+  mkdtemp,
+  readFile,
+  writeFile,
+  rm,
+  mkdir,
+  stat,
+} from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -272,14 +279,45 @@ export interface LocalOptionsPayload {
   question: string;
   options: { id: string; description: string }[];
 }
-export async function selectLocalOptions(request: {
+export interface LocalOptionsRequest {
   payload: LocalOptionsPayload;
   gguf: string;
   profile: z.infer<typeof SelectorProfileSchema>;
   readout: 'single' | 'balanced';
   maxPromptTokens: number;
   auditDirectory?: string | undefined;
-}) {
+}
+export async function selectLocalOptions(request: LocalOptionsRequest) {
+  return selectPinnedLocalOptions(request);
+}
+
+/** One checkpoint digest per session; metadata and returned provenance guard every readout. */
+export async function prepareLocalOptionsSession(gguf: string) {
+  const file = path.resolve(gguf);
+  const signature = async () => {
+    const value = await stat(file, { bigint: true });
+    return `${value.dev}:${value.ino}:${value.size}:${value.mtimeNs}:${value.ctimeNs}`;
+  };
+  const before = await signature();
+  const checkpointHash = await checkpointDigest(file);
+  if (before !== (await signature()))
+    throw new Error('Checkpoint changed while hashing');
+  return {
+    checkpointHash,
+    async select(request: LocalOptionsRequest) {
+      if (path.resolve(request.gguf) !== file || before !== (await signature()))
+        throw new Error('Prepared selector checkpoint changed');
+      const result = await selectPinnedLocalOptions(request, checkpointHash);
+      if (before !== (await signature()))
+        throw new Error('Prepared selector checkpoint changed during readout');
+      return result;
+    },
+  };
+}
+async function selectPinnedLocalOptions(
+  request: LocalOptionsRequest,
+  pinnedCheckpointHash?: string,
+) {
   const profile = selectorProfiles[request.profile],
     readout = request.readout;
   if (
@@ -296,7 +334,8 @@ export async function selectLocalOptions(request: {
       ? [...request.payload.options].sort((a, b) => a.id.localeCompare(b.id))
       : request.payload.options;
   const payload = { ...request.payload, options: ordered };
-  const checkpointHash = await checkpointDigest(request.gguf);
+  const checkpointHash =
+    pinnedCheckpointHash ?? (await checkpointDigest(request.gguf));
   const id = hash({
     algorithm: 'physics-choice-v2',
     checkpointHash,

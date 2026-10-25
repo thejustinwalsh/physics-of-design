@@ -1,0 +1,136 @@
+{
+  "workflow": {
+    "version": 1,
+    "id": "editorial-design",
+    "context": {
+      "audience": "Developers reading a thoughtful technical essay"
+    },
+    "stages": [
+      {
+        "id": "composition",
+        "purpose": "Choose the reading column before conditioning typography",
+        "contextKeys": ["audience"],
+        "selection": "local-selector",
+        "question": "Choose a calm reading width for the supplied editorial brief.",
+        "provenance": {
+          "kind": "brief",
+          "source": "Editorial demonstration; render verification still required"
+        },
+        "options": { "maxEvaluations": 16, "limit": 3 },
+        "program": {
+          "version": 1,
+          "id": "reading-column",
+          "brief": {
+            "intent": "A spacious technical essay with a readable central column",
+            "source": "Demonstration brief"
+          },
+          "variables": [
+            { "id": "contentWidth", "unit": "px", "values": [560, 640, 720] }
+          ],
+          "scenarios": [{ "id": "desktop", "values": {} }],
+          "factors": [
+            {
+              "id": "column-target",
+              "expression": { "ref": "contentWidth" },
+              "bands": [{ "min": 600, "max": 680 }],
+              "scale": 80,
+              "mode": "preference",
+              "category": "composition",
+              "provenance": {
+                "kind": "brief",
+                "source": "Moderate editorial reading width"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "typography",
+        "purpose": "Choose text size using the selected reading column",
+        "dependsOn": ["composition"],
+        "bindings": [
+          {
+            "input": "columnWidth",
+            "stage": "composition",
+            "variable": "contentWidth"
+          }
+        ],
+        "contextKeys": ["audience"],
+        "selection": "local-selector",
+        "question": "Choose a comfortable reading size given the previously selected column width and separate size and line-length preferences.",
+        "provenance": {
+          "kind": "hypothesis",
+          "source": "Average glyph advance is an estimate; actual font shaping is required"
+        },
+        "options": { "maxEvaluations": 16, "limit": 3 },
+        "program": {
+          "version": 1,
+          "id": "reading-type",
+          "brief": {
+            "intent": "Legible continuous prose with restrained density",
+            "source": "Demonstration brief"
+          },
+          "variables": [
+            { "id": "bodySize", "unit": "px", "values": [16, 18, 20] }
+          ],
+          "scenarios": [{ "id": "desktop", "values": { "columnWidth": 640 } }],
+          "derived": [
+            {
+              "id": "estimatedCharacters",
+              "expression": {
+                "op": "div",
+                "args": [
+                  { "ref": "columnWidth" },
+                  { "op": "mul", "args": [{ "ref": "bodySize" }, 0.52] }
+                ]
+              },
+              "unit": "characters",
+              "provenance": {
+                "kind": "hypothesis",
+                "source": "Unshaped average advance estimate"
+              }
+            }
+          ],
+          "factors": [
+            {
+              "id": "size",
+              "expression": { "ref": "bodySize" },
+              "bands": [{ "min": 18, "max": 20 }],
+              "scale": 2,
+              "mode": "preference",
+              "category": "reading",
+              "provenance": {
+                "kind": "brief",
+                "source": "Comfortable reading size"
+              }
+            },
+            {
+              "id": "line-length",
+              "expression": { "ref": "estimatedCharacters" },
+              "bands": [{ "min": 55, "max": 70 }],
+              "scale": 10,
+              "mode": "preference",
+              "category": "reading",
+              "provenance": {
+                "kind": "heuristic",
+                "source": "Provisional line-length target"
+              }
+            },
+            {
+              "id": "line-envelope",
+              "expression": { "ref": "estimatedCharacters" },
+              "bands": [{ "min": 40, "max": 100 }],
+              "scale": 1,
+              "mode": "hard",
+              "category": "reading",
+              "provenance": {
+                "kind": "brief",
+                "source": "Mathematical envelope, not a renderer receipt"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

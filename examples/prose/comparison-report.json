@@ -1,0 +1,399 @@
+{
+  "runtime": {
+    "node": "26.9.0",
+    "icu": "78.3"
+  },
+  "change": "One explicit start-to-export link added; section text and authored probabilities are identical.",
+  "before": {
+    "purpose": "routing",
+    "audience": "Editors who already know how to write and need the export command",
+    "outcome": "Reach the export reference without reading the publishing tutorial",
+    "facts": [
+      {
+        "id": "start",
+        "heading": "Choose a task",
+        "format": "prose",
+        "purpose": "routing",
+        "words": 8,
+        "headingWords": 3,
+        "actionWords": 0,
+        "sentences": 1,
+        "sentenceWordCounts": [
+          8
+        ],
+        "authoredAction": null,
+        "vocabularyMatches": [],
+        "estimatedReadSeconds": 3
+      },
+      {
+        "id": "tutorial",
+        "heading": "Publish a first document",
+        "format": "prose",
+        "purpose": "tutorial",
+        "words": 17,
+        "headingWords": 4,
+        "actionWords": 4,
+        "sentences": 4,
+        "sentenceWordCounts": [
+          3,
+          6,
+          3,
+          5
+        ],
+        "authoredAction": "Create a practice document.",
+        "vocabularyMatches": [],
+        "estimatedReadSeconds": 6.818181818181818
+      },
+      {
+        "id": "export",
+        "heading": "Export command",
+        "format": "prose",
+        "purpose": "reference",
+        "words": 14,
+        "headingWords": 2,
+        "actionWords": 0,
+        "sentences": 2,
+        "sentenceWordCounts": [
+          9,
+          5
+        ],
+        "authoredAction": null,
+        "vocabularyMatches": [
+          {
+            "canonical": "run",
+            "variant": "launch",
+            "count": 1
+          }
+        ],
+        "estimatedReadSeconds": 4.363636363636363
+      },
+      {
+        "id": "example",
+        "heading": "Command example",
+        "format": "code",
+        "purpose": "reference",
+        "words": 3,
+        "headingWords": 2,
+        "actionWords": 0,
+        "sentences": 1,
+        "sentenceWordCounts": [
+          3
+        ],
+        "authoredAction": null,
+        "vocabularyMatches": [],
+        "estimatedReadSeconds": 1.3636363636363638
+      }
+    ],
+    "warnings": [],
+    "structure": {
+      "navigationCycles": [
+        [
+          "export",
+          "start",
+          "tutorial"
+        ]
+      ],
+      "prerequisiteCycles": [],
+      "sectionOrder": [
+        "start",
+        "tutorial",
+        "export",
+        "example"
+      ],
+      "note": "Navigation cycles are facts, not automatic errors. Prerequisites do not create navigation links. Tutorial ordering concerns only authored tutorial sections."
+    },
+    "journeys": [
+      {
+        "id": "lookup",
+        "entry": "start",
+        "target": "export",
+        "probability": 0.8,
+        "reachable": true,
+        "path": [
+          "start",
+          "tutorial",
+          "export"
+        ],
+        "clicks": 2,
+        "estimatedSeconds": 17.18181818181818,
+        "optimization": "estimated-read-through-seconds"
+      },
+      {
+        "id": "learn",
+        "entry": "start",
+        "target": "tutorial",
+        "probability": 0.2,
+        "reachable": true,
+        "path": [
+          "start",
+          "tutorial"
+        ],
+        "clicks": 1,
+        "estimatedSeconds": 11.318181818181818,
+        "optimization": "estimated-read-through-seconds"
+      }
+    ],
+    "aggregate": {
+      "probabilityStatus": "complete-explicit-distribution",
+      "suppliedProbabilitySum": 1,
+      "entropyBits": 0.7219280948873623,
+      "expectedSeconds": 16.009090909090908,
+      "unknownReason": null
+    },
+    "assumptions": {
+      "costs": {
+        "readingWpm": 220,
+        "clickSeconds": 1.5
+      },
+      "policy": {
+        "requireActionFor": [
+          "tutorial",
+          "how-to"
+        ]
+      },
+      "vocabulary": [
+        {
+          "canonical": "run",
+          "variants": [
+            "launch"
+          ]
+        }
+      ],
+      "readingModel": "Read each path section heading, text and separate action annotation once at one authored word rate, including code/quotes. Add one click cost per explicit link. Execution, comprehension, scanning, link discovery and prerequisites are not timed.",
+      "probabilities": "Authored mutually exclusive journey demand; not inferred from content or clicks. Zero-probability unreachable journeys do not contribute expected cost.",
+      "segmentation": {
+        "api": "Intl.Segmenter",
+        "requestedLocale": "en",
+        "resolvedLocale": "en"
+      }
+    },
+    "algorithm": "authored-prose-graph-dijkstra-v1",
+    "sources": [
+      {
+        "id": "diataxis-map",
+        "url": "https://diataxis.fr/map/",
+        "use": "Purpose distinctions; readers can enter documentation at different places."
+      },
+      {
+        "id": "diataxis-application",
+        "url": "https://diataxis.fr/application/",
+        "use": "Pragmatic iteration on actual documentation, not mandatory four-folder structure."
+      },
+      {
+        "id": "attention-control",
+        "url": "https://github.com/aaddrick/attention-control",
+        "use": "Authored action clarity and vocabulary consistency; code and quotations preserved. No reader diagnosis or universal style limits imported."
+      },
+      {
+        "id": "hale-2001",
+        "url": "https://aclanthology.org/N01-1021/",
+        "use": "Boundary: word surprisal requires a probabilistic language model. This tool does not compute it or infer cognitive load from route entropy."
+      }
+    ],
+    "limits": [
+      "Counts depend on runtime Unicode/ICU segmentation; compare within a recorded runtime.",
+      "Purpose, actions, vocabulary and probabilities are authored inputs, not semantic detection.",
+      "Route entropy describes the supplied journey distribution, not language surprisal, attention, cognitive load or prose quality.",
+      "No universal word limits, diagnosis, creative-writing rules, automatic edits or beauty score."
+    ]
+  },
+  "after": {
+    "purpose": "routing",
+    "audience": "Editors who already know how to write and need the export command",
+    "outcome": "Reach the export reference without reading the publishing tutorial",
+    "facts": [
+      {
+        "id": "start",
+        "heading": "Choose a task",
+        "format": "prose",
+        "purpose": "routing",
+        "words": 8,
+        "headingWords": 3,
+        "actionWords": 0,
+        "sentences": 1,
+        "sentenceWordCounts": [
+          8
+        ],
+        "authoredAction": null,
+        "vocabularyMatches": [],
+        "estimatedReadSeconds": 3
+      },
+      {
+        "id": "tutorial",
+        "heading": "Publish a first document",
+        "format": "prose",
+        "purpose": "tutorial",
+        "words": 17,
+        "headingWords": 4,
+        "actionWords": 4,
+        "sentences": 4,
+        "sentenceWordCounts": [
+          3,
+          6,
+          3,
+          5
+        ],
+        "authoredAction": "Create a practice document.",
+        "vocabularyMatches": [],
+        "estimatedReadSeconds": 6.818181818181818
+      },
+      {
+        "id": "export",
+        "heading": "Export command",
+        "format": "prose",
+        "purpose": "reference",
+        "words": 14,
+        "headingWords": 2,
+        "actionWords": 0,
+        "sentences": 2,
+        "sentenceWordCounts": [
+          9,
+          5
+        ],
+        "authoredAction": null,
+        "vocabularyMatches": [
+          {
+            "canonical": "run",
+            "variant": "launch",
+            "count": 1
+          }
+        ],
+        "estimatedReadSeconds": 4.363636363636363
+      },
+      {
+        "id": "example",
+        "heading": "Command example",
+        "format": "code",
+        "purpose": "reference",
+        "words": 3,
+        "headingWords": 2,
+        "actionWords": 0,
+        "sentences": 1,
+        "sentenceWordCounts": [
+          3
+        ],
+        "authoredAction": null,
+        "vocabularyMatches": [],
+        "estimatedReadSeconds": 1.3636363636363638
+      }
+    ],
+    "warnings": [],
+    "structure": {
+      "navigationCycles": [
+        [
+          "export",
+          "start",
+          "tutorial"
+        ]
+      ],
+      "prerequisiteCycles": [],
+      "sectionOrder": [
+        "start",
+        "tutorial",
+        "export",
+        "example"
+      ],
+      "note": "Navigation cycles are facts, not automatic errors. Prerequisites do not create navigation links. Tutorial ordering concerns only authored tutorial sections."
+    },
+    "journeys": [
+      {
+        "id": "lookup",
+        "entry": "start",
+        "target": "export",
+        "probability": 0.8,
+        "reachable": true,
+        "path": [
+          "start",
+          "export"
+        ],
+        "clicks": 1,
+        "estimatedSeconds": 8.863636363636363,
+        "optimization": "estimated-read-through-seconds"
+      },
+      {
+        "id": "learn",
+        "entry": "start",
+        "target": "tutorial",
+        "probability": 0.2,
+        "reachable": true,
+        "path": [
+          "start",
+          "tutorial"
+        ],
+        "clicks": 1,
+        "estimatedSeconds": 11.318181818181818,
+        "optimization": "estimated-read-through-seconds"
+      }
+    ],
+    "aggregate": {
+      "probabilityStatus": "complete-explicit-distribution",
+      "suppliedProbabilitySum": 1,
+      "entropyBits": 0.7219280948873623,
+      "expectedSeconds": 9.354545454545455,
+      "unknownReason": null
+    },
+    "assumptions": {
+      "costs": {
+        "readingWpm": 220,
+        "clickSeconds": 1.5
+      },
+      "policy": {
+        "requireActionFor": [
+          "tutorial",
+          "how-to"
+        ]
+      },
+      "vocabulary": [
+        {
+          "canonical": "run",
+          "variants": [
+            "launch"
+          ]
+        }
+      ],
+      "readingModel": "Read each path section heading, text and separate action annotation once at one authored word rate, including code/quotes. Add one click cost per explicit link. Execution, comprehension, scanning, link discovery and prerequisites are not timed.",
+      "probabilities": "Authored mutually exclusive journey demand; not inferred from content or clicks. Zero-probability unreachable journeys do not contribute expected cost.",
+      "segmentation": {
+        "api": "Intl.Segmenter",
+        "requestedLocale": "en",
+        "resolvedLocale": "en"
+      }
+    },
+    "algorithm": "authored-prose-graph-dijkstra-v1",
+    "sources": [
+      {
+        "id": "diataxis-map",
+        "url": "https://diataxis.fr/map/",
+        "use": "Purpose distinctions; readers can enter documentation at different places."
+      },
+      {
+        "id": "diataxis-application",
+        "url": "https://diataxis.fr/application/",
+        "use": "Pragmatic iteration on actual documentation, not mandatory four-folder structure."
+      },
+      {
+        "id": "attention-control",
+        "url": "https://github.com/aaddrick/attention-control",
+        "use": "Authored action clarity and vocabulary consistency; code and quotations preserved. No reader diagnosis or universal style limits imported."
+      },
+      {
+        "id": "hale-2001",
+        "url": "https://aclanthology.org/N01-1021/",
+        "use": "Boundary: word surprisal requires a probabilistic language model. This tool does not compute it or infer cognitive load from route entropy."
+      }
+    ],
+    "limits": [
+      "Counts depend on runtime Unicode/ICU segmentation; compare within a recorded runtime.",
+      "Purpose, actions, vocabulary and probabilities are authored inputs, not semantic detection.",
+      "Route entropy describes the supplied journey distribution, not language surprisal, attention, cognitive load or prose quality.",
+      "No universal word limits, diagnosis, creative-writing rules, automatic edits or beauty score."
+    ]
+  },
+  "unknownProbabilities": {
+    "probabilityStatus": "unknown",
+    "suppliedProbabilitySum": 0,
+    "entropyBits": null,
+    "expectedSeconds": null,
+    "unknownReason": "Supply every journey probability with sum one"
+  }
+}

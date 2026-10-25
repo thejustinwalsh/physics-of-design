@@ -75,6 +75,14 @@ const record = (value: unknown): Record<string, unknown> =>
     : {};
 const rows = (value: unknown): Record<string, unknown>[] =>
   Array.isArray(value) ? value.map(record) : [];
+const missingSummary = (value: unknown) => {
+  const entries = Array.isArray(value) ? value : [];
+  return {
+    missing: entries.slice(0, 16),
+    missingCount: entries.length,
+    omittedMissing: Math.max(0, entries.length - 16),
+  };
+};
 export function summarizeResult(
   command: string,
   result: unknown,
@@ -82,7 +90,195 @@ export function summarizeResult(
 ): { resultRef: string | null; summary: unknown; referenceScope: string } {
   const r = record(result);
   let summary: unknown = result;
-  if (command === 'component inspect')
+  if (command === 'validation plan')
+    summary = {
+      identity: r.identity,
+      designIdentity: record(r.plan).designIdentity,
+      scenarios: rows(record(r.plan).scenarios).map((s) => s.id),
+      phases: rows(record(r.plan).phases).map((p) => ({
+        id: p.id,
+        requirements: rows(p.requirements).length,
+      })),
+      scope: r.scope,
+    };
+  else if (command === 'validation check')
+    summary = {
+      planIdentity: r.planIdentity,
+      designIdentity: r.designIdentity,
+      state: r.state,
+      complete: r.complete,
+      phases: rows(r.phases).map((p) => ({
+        id: p.id,
+        ready: p.ready,
+        requirements: rows(p.requirements).length,
+      })),
+      outstandingCount: rows(r.next).length,
+      next: rows(r.next)
+        .slice(0, 12)
+        .map((x) => ({
+          id: x.id,
+          scenario: x.scenario,
+          tool: x.tool,
+          status: x.status,
+          resultRef: x.resultRef,
+        })),
+      recordedUnsupported: rows(r.recordedUnsupported).map((x) => x.id),
+      neuralCalls: r.neuralCalls,
+      scope: r.scope,
+    };
+  else if (command === 'material candidates')
+    summary = {
+      paretoIds: r.paretoIds,
+      selectedIds: r.selectedIds,
+      unresolvedIds: r.unresolvedIds,
+      dominatedIds: r.dominatedIds,
+      candidateCount: rows(r.candidates).length,
+      candidates: rows(r.candidates)
+        .slice(0, 8)
+        .map((c) => ({
+          id: c.id,
+          residuals: rows(c.residuals).map((x) => ({
+            metric: x.metric,
+            value: x.value,
+            residual: x.residual,
+          })),
+          comparisonStatus: c.comparisonStatus,
+        })),
+      selection: r.selection,
+      empiricalPreference: r.empiricalPreference,
+    };
+  else if (command === 'material pair')
+    summary = {
+      pair: r.pair,
+      descriptors: Object.fromEntries(
+        Object.entries(record(r.descriptors)).map(([id, v]) => [
+          id,
+          { value: record(v).value, units: record(v).units },
+        ]),
+      ),
+      physicalModelChecks: r.physicalModelChecks,
+      brief: r.brief
+        ? {
+            id: record(r.brief).id,
+            status: record(r.brief).status,
+            bands: rows(record(r.brief).bands).map((b) => ({
+              metric: b.metric,
+              value: b.value,
+              min: b.min,
+              max: b.max,
+              status: b.status,
+            })),
+          }
+        : null,
+      textOverlayLegibility: r.textOverlayLegibility,
+      empiricalPreference: r.empiricalPreference,
+      limits: r.limits,
+    };
+  else if (command === 'wireframe inspect')
+    summary = {
+      id: record(r.wireframe).id,
+      screen: record(r.wireframe).screen,
+      variables: record(r.wireframe).variables,
+      nodes: rows(r.nodes).length,
+      relations: rows(r.relations).length,
+      issues: rows(r.relations)
+        .filter(
+          (x) => x.status === 'unknown' || x.status === 'outside-authored-band',
+        )
+        .slice(0, 12),
+      scope: r.scope,
+    };
+  else if (command === 'decision run')
+    summary = {
+      state: r.state,
+      status: r.status,
+      nextStage: r.nextStage,
+      order: r.order,
+      statistics: r.statistics,
+      stages: Object.fromEntries(
+        Object.entries(record(r.stages)).map(([id, v]) => {
+          const s = record(v);
+          return [
+            id,
+            {
+              status: s.status,
+              assignment: s.assignment,
+              reason: s.reason,
+              alternatives: rows(s.alternatives).length,
+              rendererVerification: s.rendererVerification,
+            },
+          ];
+        }),
+      ),
+      recipe: resultRef ? { $designRef: resultRef, pointer: '/recipe' } : null,
+      scope: r.scope,
+    };
+  else if (command === 'motion dynamics')
+    summary = {
+      initial: r.initial,
+      final: r.final,
+      balanceResidual: r.balanceResidual,
+      sampleCount: rows(r.samples).length,
+      provenance: r.provenance,
+    };
+  else if (command === 'motion timeline')
+    summary = {
+      min: r.min,
+      max: r.max,
+      durationSeconds: r.durationSeconds,
+      sampleCount: Array.isArray(r.values) ? r.values.length : 0,
+      provenance: r.provenance,
+    };
+  else if (command === 'surface textures')
+    summary = {
+      width: r.width,
+      height: r.height,
+      parameters: r.parameters,
+      encoding: r.encoding,
+      algorithm: r.algorithm,
+      roughnessMapSemantics: r.roughnessMapSemantics,
+      orientation: r.orientation,
+      note: 'Texture bytes remain in the exact result reference; request only the needed channel.',
+    };
+  else if (command === 'prose analyze')
+    summary = {
+      purpose: r.purpose,
+      sections: rows(r.facts).length,
+      warningCount: rows(r.warnings).length,
+      warnings: rows(r.warnings).slice(0, 12),
+      journeys: rows(r.journeys).map((j) => ({
+        id: j.id,
+        reachable: j.reachable,
+        clicks: j.clicks,
+        estimatedSeconds: j.estimatedSeconds,
+      })),
+      aggregate: r.aggregate,
+      limits: r.limits,
+    };
+  else if (command === 'media analyze')
+    summary = {
+      file: r.file,
+      sha256: r.sha256,
+      width: r.width,
+      height: r.height,
+      decoder: r.decoder,
+      provenance: r.provenance,
+      sampledDescriptors: r.sampledDescriptors,
+      contrastRegions: r.contrastRegions,
+      contrastScope: r.contrastScope,
+    };
+  else if (command === 'media crops')
+    summary = {
+      candidates: rows(r.candidates).map((c) => ({
+        id: c.id,
+        visibleSource: c.visibleSource,
+        penalties: c.penalties,
+        weightedPenalty: c.weightedPenalty,
+      })),
+      weights: r.weights,
+      scope: r.scope,
+    };
+  else if (command === 'component inspect')
     summary = {
       contract: r.contract,
       scope:
@@ -119,18 +315,45 @@ export function summarizeResult(
       verification: r.verification,
       scope: r.scope,
     };
-  else if(command==='energy analyze') summary={programIdentity:r.programIdentity,baseline:{energy:record(r.baseline).energy,status:record(r.baseline).status},effects:rows(r.effects).map(e=>({variable:e.variable,unit:e.unit,locked:e.locked,negativeEnergySlope:e.negativeEnergySlope})),scope:r.scope};
-  else if(command==='palette analyze') summary={summary:r.summary,measurementRef:r.measurementRef,checks:rows(r.checks).map(c=>({id:c.id,status:c.status,ratio:c.ratio,required:c.required})),capabilities:r.capabilities};
+  else if (command === 'energy analyze')
+    summary = {
+      programIdentity: r.programIdentity,
+      baseline: {
+        energy: record(r.baseline).energy,
+        status: record(r.baseline).status,
+      },
+      effects: rows(r.effects).map((e) => ({
+        variable: e.variable,
+        unit: e.unit,
+        locked: e.locked,
+        negativeEnergySlope: e.negativeEnergySlope,
+      })),
+      scope: r.scope,
+    };
+  else if (command === 'palette analyze')
+    summary = {
+      summary: r.summary,
+      measurementRef: r.measurementRef,
+      checks: rows(r.checks).map((c) => ({
+        id: c.id,
+        status: c.status,
+        ratio: c.ratio,
+        required: c.required,
+      })),
+      capabilities: r.capabilities,
+    };
   else if (command.startsWith('motion '))
     summary = {
       supported: r.supported,
-      reason:r.reason,
-      plan:r.plan?{kind:record(r.plan).kind,config:record(r.plan).config}:null,
-      metrics: r.metrics??record(r.analysis).metrics,
-      constraints: r.constraints??record(r.analysis).constraints,
+      reason: r.reason,
+      plan: r.plan
+        ? { kind: record(r.plan).kind, config: record(r.plan).config }
+        : null,
+      metrics: r.metrics ?? record(r.analysis).metrics,
+      constraints: r.constraints ?? record(r.analysis).constraints,
       candidates: rows(r.candidates).map((c) => ({
         id: c.id,
-        spring: c.spring??record(c.motion).spring,
+        spring: c.spring ?? record(c.motion).spring,
         factors: c.factors,
       })),
       scope: r.scope,
@@ -253,13 +476,97 @@ export function summarizeResult(
         alternatives: f.alternatives,
       })),
     };
+  else if (command === 'font inspect')
+    summary = {
+      ...r,
+      glyphCoverage: {
+        ...record(r.glyphCoverage),
+        ...missingSummary(record(r.glyphCoverage).missing),
+      },
+    };
+  else if (command === 'typography inspect')
+    summary = {
+      inputHash: r.inputHash,
+      targetPlatform: r.targetPlatform,
+      resolution: r.resolution,
+      font: { sha256: record(r.font).sha256, family: record(r.font).family },
+      axes: r.axes,
+      metrics: r.metrics,
+      referenceGlyphs: r.referenceGlyphs,
+      shaping: {
+        advance: record(r.shaping).advance,
+        outlineBounds: record(r.shaping).outlineBounds,
+        kerning: record(r.shaping).kerning,
+        tracking: record(r.shaping).tracking,
+        glyphCount: record(r.shaping).glyphCount,
+        ...missingSummary(record(r.shaping).missing),
+      },
+      renderer: r.renderer
+        ? {
+            runtime: record(r.renderer).runtime,
+            box: record(r.renderer).box,
+            totalLines: record(r.renderer).totalLines,
+            omittedLines: record(r.renderer).omittedLines,
+            baselines: rows(record(r.renderer).lines)
+              .slice(0, 8)
+              .map((l) => ({
+                start: l.start,
+                end: l.end,
+                baseline: l.baseline,
+                source: l.baselineSource,
+              })),
+            summarizedLines: Math.min(8, rows(record(r.renderer).lines).length),
+            layoutOverflow: record(r.renderer).layoutOverflow,
+            fontLoading: record(r.renderer).fontLoading,
+            lineGrouping: record(r.renderer).lineGrouping,
+            probeBudget: record(r.renderer).probeBudget,
+          }
+        : null,
+      coverage: {
+        ...record(r.coverage),
+        ...missingSummary(record(r.coverage).missing),
+      },
+      limits: r.limits,
+    };
+  else if (command === 'typography axes')
+    summary = {
+      fontHash: r.fontHash,
+      targetPlatform: r.targetPlatform,
+      resolution: r.resolution,
+      axes: r.axes,
+      totalCandidates: r.totalCandidates,
+      omittedCandidates: r.omittedCandidates,
+      resultCount: rows(r.results).length,
+      summarizedResults: Math.min(8, rows(r.results).length),
+      results: rows(r.results)
+        .slice(0, 8)
+        .map((c) => ({
+          id: c.id,
+          axis: c.axis,
+          point: c.point,
+          value: c.value,
+          advance: c.advance,
+          effect: c.effect,
+          renderer: c.renderer
+            ? {
+                runtime: record(c.renderer).runtime,
+                totalLines: record(c.renderer).totalLines,
+                box: record(c.renderer).box,
+              }
+            : null,
+        })),
+      method: r.method,
+      limits: r.limits,
+    };
   else if (command === 'text shape')
     summary = {
       ...Object.fromEntries(
         Object.entries(r).filter(
-          ([key]) => !['measurement', 'glyphs', 'lineBreaks'].includes(key),
+          ([key]) =>
+            !['measurement', 'glyphs', 'lineBreaks', 'missing'].includes(key),
         ),
       ),
+      ...missingSummary(r.missing),
       lineEnds: rows(r.lineBreaks).map((l) => l.end),
       measurement: summarizeResult('layout measure', r.measurement, null)
         .summary,

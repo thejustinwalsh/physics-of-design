@@ -1,0 +1,348 @@
+{
+  "createdAt": "2026-10-25T11:06:10.994Z",
+  "verificationVersion": 2,
+  "scope": "Current headless tooling/browser extension, plus actual two-stage local selector protocol proof. Existing native app source matches its earlier receipt; no new native tilt/PBR or physical Safari certification.",
+  "nativeImplementationIdentity": "54a5fd6cf374ea679a96425a20c4a6b730a12bd5085a0e5e867a081976fc619c",
+  "files": [
+    {
+      "file": "verification-design-theory/summary.json",
+      "sha256": "651725bd860ee45dd60a44ab6a9e30c4880acabe3e32360cb3d403104c593e1f",
+      "bytes": 3595
+    },
+    {
+      "file": "verification-design-theory-attempt-1/summary.json",
+      "sha256": "3acfb330a85732afd1898a98905918536f62ce8b4c93c6a20af0b72f7f7e701d",
+      "bytes": 3596
+    },
+    {
+      "file": "verification-design-theory-attempt-1/gallery-web.log",
+      "sha256": "6f539b007274afaaf5534612bf8a92d7b714a757b0630ae0c644ca4c4a219699",
+      "bytes": 2415
+    },
+    {
+      "file": "verification-design-theory/build.log",
+      "sha256": "5652d5522d0d747ea8144f52cba078e940b290630f824ac216f6011e35b48181",
+      "bytes": 69
+    },
+    {
+      "file": "verification-design-theory/types.log",
+      "sha256": "d097d1623e2c58eb50d42d5f7f4401d2e66a6023404e0b0f48f267b868b1e615",
+      "bytes": 58
+    },
+    {
+      "file": "verification-design-theory/native-types.log",
+      "sha256": "6679293f34eaacf488f82600e44ea811d1cb6b1514979004f41999537e059b87",
+      "bytes": 72
+    },
+    {
+      "file": "verification-design-theory/unit.log",
+      "sha256": "9ff536659d275248b659201136e9bfc915ee90aa85148484e099d7bfdf788380",
+      "bytes": 33879
+    },
+    {
+      "file": "verification-design-theory/browser.log",
+      "sha256": "dc0aa3ada7aa578c4e21fd90a5ae300269cf8777473ecaaf869b93288fb31ea3",
+      "bytes": 1025
+    },
+    {
+      "file": "verification-design-theory/commands-and-app.log",
+      "sha256": "5eb72ca0581507664d5223107220b4d3685dec2f40efc666756cc664d9e72b36",
+      "bytes": 2924
+    },
+    {
+      "file": "verification-design-theory/consumer.log",
+      "sha256": "3b222533128938d98807124aa94aed358204562c0c453f7ecd9b6cb98e554e7f",
+      "bytes": 90
+    },
+    {
+      "file": "verification-design-theory/fieldwork-build.log",
+      "sha256": "94029fede5a7c946d01bda75585b06395c4b1f17d5515dd2f2857831352efae6",
+      "bytes": 24
+    },
+    {
+      "file": "verification-design-theory/fieldwork-web.log",
+      "sha256": "ec2de3d5b27435e512184cb50e8a4627139af31ff121373960b1fc09f581d4d2",
+      "bytes": 72
+    },
+    {
+      "file": "verification-design-theory/vela-policy.log",
+      "sha256": "9b5e4239de51eb737f129dd74c0798e1e372932e46011062db7449c08e904948",
+      "bytes": 16061
+    },
+    {
+      "file": "verification-design-theory/vela-build.log",
+      "sha256": "90984ce90a81cac39bf6fdb4c0d19be0165cf3af4c074bf6134506db9831df35",
+      "bytes": 19
+    },
+    {
+      "file": "verification-design-theory/vela-web.log",
+      "sha256": "702757ec1af12c5635d7b7057bd823adf04d59c8301a182c8d70d88ee4e9a44f",
+      "bytes": 2646
+    },
+    {
+      "file": "verification-design-theory/workflow-mathematical.log",
+      "sha256": "bda746e8de014244936f3292f897f5c3b2cb7f4cad4cc259810d46b5ac2b1f7a",
+      "bytes": 2260
+    },
+    {
+      "file": "verification-design-theory/vela-motion.log",
+      "sha256": "af717d71279111a3e873981e7507c3423646dc560128b2ad13bcb86fe11e4ef1",
+      "bytes": 121
+    },
+    {
+      "file": "verification-design-theory/gallery-build.log",
+      "sha256": "8c1865f63a7a6c947b53694cb0641f49cfe72381c6435210a3c34188a7e6fc07",
+      "bytes": 33
+    },
+    {
+      "file": "verification-design-theory/gallery-web.log",
+      "sha256": "51e77022139f11c76804cd6b27b9c03bea6a5e8fa8e63a774ab8634ac52e2632",
+      "bytes": 88
+    },
+    {
+      "file": "verification-design-theory/validation-phases.log",
+      "sha256": "c5158016537d7ffccbe4f81648b392fa194d4e9ca420911900e53036776d3648",
+      "bytes": 99
+    },
+    {
+      "file": "verification-design-theory/typography.log",
+      "sha256": "aa3564c5c2e6d650a7bfd757b362f44120fec4378787a3f00dbc18a284448a47",
+      "bytes": 277
+    },
+    {
+      "file": "verification-design-theory/migrations.log",
+      "sha256": "1769a0b031a188ccc946630e3ba86c290316755e49721829e123df6ed73b7d21",
+      "bytes": 69
+    },
+    {
+      "file": "design-theory/proof/report.json",
+      "sha256": "7409849044ad9920ea945dcf453014d0d71411b1b848b40aa48d6bcd833de46f",
+      "bytes": 139118
+    },
+    {
+      "file": "design-theory/public/report.json",
+      "sha256": "f888cb475073e8d2a22dea258380eb39e3b25c215f903e4c751dcd5960c40cc1",
+      "bytes": 994
+    },
+    {
+      "file": "vela/proof-motion/report.json",
+      "sha256": "095d51a0db299dbd002f5efde3276eac083b4ceab0c0c4a0460c0c632ae3ec46",
+      "bytes": 33708
+    },
+    {
+      "file": "vela/proof-web/report.json",
+      "sha256": "a438375e44eba8a1907dacceeaadb25c73c524101bd0b9fa551257f79c00bc31",
+      "bytes": 838317
+    },
+    {
+      "file": "workflow/proof.json",
+      "sha256": "e34dc7b571e9b81037bc8eb922f368cbd420e78cf062d137808f46ed1b268108",
+      "bytes": 5141
+    },
+    {
+      "file": "workflow/attempt-1-metal-unavailable.json",
+      "sha256": "81f8fdf1485c52f956c8dc3649808ada1ca202458b9432ac6753a66ab58e4ff6",
+      "bytes": 93496
+    },
+    {
+      "file": "workflow-mathematical/proof.json",
+      "sha256": "bda746e8de014244936f3292f897f5c3b2cb7f4cad4cc259810d46b5ac2b1f7a",
+      "bytes": 2260
+    },
+    {
+      "file": "validation/plan.json",
+      "sha256": "b6d8f9835657b7f47b01baf5d45c8aa3d6303d57d2e5e328484107fb71462cd9",
+      "bytes": 3415
+    },
+    {
+      "file": "validation/check.json",
+      "sha256": "684cc7aca8781e1178f44231151bb0bd0438092a0cc2ef9b47db1b25e309ea71",
+      "bytes": 7883
+    },
+    {
+      "file": "validation/report.json",
+      "sha256": "76d8045b015ff0f0565e510e7451ef6841e4a6425de79cac476c33a7dcf159d5",
+      "bytes": 17591
+    },
+    {
+      "file": "validation/phone-geometry.json",
+      "sha256": "093af600b6e50cdd182bc9783eadabebd7e97897c7b80b79ef061db0f2a1d9d1",
+      "bytes": 2638
+    },
+    {
+      "file": "validation/phone-contrast.json",
+      "sha256": "0b67d04876c5cb13f15ff7f371fc7cccd9a7cdc7b2f7654c1c39d52be0c08e68",
+      "bytes": 4926
+    },
+    {
+      "file": "validation/ipad-large-text-geometry.json",
+      "sha256": "91eaafe9929f96915e23046cfe8acae0040f7855a3fb81152bb1b3db4cd86d87",
+      "bytes": 3655
+    },
+    {
+      "file": "validation/ipad-large-text-contrast.json",
+      "sha256": "f14f76d53703dc0becb26bd2c15f1d89a8e063cb4d0c835853bff6860f43b9aa",
+      "bytes": 4921
+    },
+    {
+      "file": "validation/desktop-geometry.json",
+      "sha256": "14d708f989661476b39b38567cb45faabcf5eb23c3d278fef3c2edd4de919055",
+      "bytes": 2280
+    },
+    {
+      "file": "validation/desktop-contrast.json",
+      "sha256": "0b67d04876c5cb13f15ff7f371fc7cccd9a7cdc7b2f7654c1c39d52be0c08e68",
+      "bytes": 4926
+    },
+    {
+      "file": "context/budget.json",
+      "sha256": "5093c3bc626bde139f4b854c5bfb776a65d9af34c982a4db86b70731593f3846",
+      "bytes": 339
+    },
+    {
+      "file": "review/extension-integration-probes.json",
+      "sha256": "85c43bf5c825467c950220a2d65bb39af7687eec1d1cf4981a48d30653b23cf9",
+      "bytes": 6009
+    },
+    {
+      "file": "typography/summary.json",
+      "sha256": "ce405f3df3a6363a65140c86ce3a6469b31fd166914f356655bc781ef6a82e8c",
+      "bytes": 12236
+    },
+    {
+      "file": "typography/proof.json",
+      "sha256": "3b910f68a425481818dbe3f1ae3d9a63d83efe944fd42d4861d7266b1263f1ce",
+      "bytes": 1119700
+    },
+    {
+      "file": "typography/chromium.json",
+      "sha256": "69f832a7dd61e158233ba319a1bb92ec256c441ecdc8d4d755c3fd71f7f18238",
+      "bytes": 482093
+    },
+    {
+      "file": "typography/webkit.json",
+      "sha256": "2c75ac74c50b6d92272d71daef153075e9d094016ea80e61408239fe9c9260d7",
+      "bytes": 488925
+    },
+    {
+      "file": "design-theory/astra-review/postfix-verified/report.json",
+      "sha256": "8a0b8153f37b995d97c82b3e2a31e49bc2178162ec5964760d8cbbad14be90ce",
+      "bytes": 34734
+    },
+    {
+      "file": "design-theory/astra-review/report.json",
+      "sha256": "9779e9453eaf97d269b2848a1c9d60f9f1beb6783b3d3d62989e3a5b06174728",
+      "bytes": 42489
+    },
+    {
+      "file": "design-theory/astra-review/interactions.json",
+      "sha256": "94194f725588388b23b4151ce737f6ffc95891dc1e7db7121b49df380036fb68",
+      "bytes": 1842
+    },
+    {
+      "file": "design-theory/astra-review/hero-return.mjs",
+      "sha256": "583a37fdabedf3ad05cb6d0252a14da1fe7adffb62d99617ab87d3eb37a41edb",
+      "bytes": 2429
+    },
+    {
+      "file": "design-theory/astra-review/hero-return.json",
+      "sha256": "5b0b150c922dd382f44d338cd1426a648a75247bf96cf399f2d2ce4eb52c8a59",
+      "bytes": 4247
+    },
+    {
+      "file": "design-theory/astra-review/hero-initial-320.png",
+      "sha256": "e4ef43b96523c2676d4d035fe8bad9d5837e994627dad1fcb5adcef9112381d7",
+      "bytes": 44580
+    },
+    {
+      "file": "design-theory/astra-review/hero-return-320.png",
+      "sha256": "1c22ec867e948bd72f5e48402b882320702b99e66f8940c290f4b5c80ff6552b",
+      "bytes": 70088
+    },
+    {
+      "file": "design-theory/astra-review/hero-initial-834.png",
+      "sha256": "e55b4296880673994c2a73803b943d9f0336d656ae497c50622cc9d38c2fb50d",
+      "bytes": 67772
+    },
+    {
+      "file": "design-theory/astra-review/edited-motion.png",
+      "sha256": "778fb3d02a5930a27a9c76bcc7b27c4f3f7dc70368a4febff53f8df1417889e2",
+      "bytes": 47092
+    },
+    {
+      "file": "design-theory/astra-review/phone-layout-design.png",
+      "sha256": "994236737f11ff26ed1a67c19e33f6d3c884dfbd722a8b3bacf7b86fff9aec87",
+      "bytes": 107462
+    },
+    {
+      "file": "design-theory/astra-review/phone-layout-inspect.png",
+      "sha256": "5c50fb4b7630d9e70dd5f4f519acac0f9c7bfee85d7e69970cfe01cee45460ca",
+      "bytes": 85010
+    },
+    {
+      "file": "design-theory/astra-review/postfix-final/report.json",
+      "sha256": "13542ad78169dc6c5d88bd993593a28c5e0bebf138cc994568eb7539fc2c2159",
+      "bytes": 34758
+    },
+    {
+      "file": "design-theory/astra-review/postfix-final/phone-design.png",
+      "sha256": "dbb7990caa72f8a326db1e5b06bef17956d329dd04cea020c7c7e3c8c4cce06d",
+      "bytes": 118706
+    },
+    {
+      "file": "design-theory/astra-review/postfix-verified/initial-320.png",
+      "sha256": "25ee1381410718a5fa4b269f033bdca4c16c106ac341caaad327115961524f4c",
+      "bytes": 70151
+    },
+    {
+      "file": "design-theory/astra-review/postfix-verified/initial-834.png",
+      "sha256": "53af42ad0df8db9e879c632a9c349211517176fba70bf1fd31b807c0230f34c1",
+      "bytes": 116759
+    },
+    {
+      "file": "design-theory/astra-review/postfix-verified/edited-materials.png",
+      "sha256": "080a4eabaa06630598684bfc897699eea0b9d039f7aba7be9188ceb7cd0dbd30",
+      "bytes": 138944
+    },
+    {
+      "file": "design-theory/proof/chromium-320-viewport.png",
+      "sha256": "7208f903ecaa2455884438e1f1eff63aa12cadf839103c2fd2628727f99b4ab5",
+      "bytes": 70210
+    },
+    {
+      "file": "design-theory/proof/chromium-390-viewport.png",
+      "sha256": "326e160bdceda6e11f9c2cbdc822397728401e90539376cd774157d3ad1b8b65",
+      "bytes": 76663
+    },
+    {
+      "file": "design-theory/proof/chromium-834-viewport.png",
+      "sha256": "d552f3d0e33872474346450156895d7ad88bd3011c4ef0872c7e759748beb86e",
+      "bytes": 139935
+    },
+    {
+      "file": "design-theory/proof/chromium-1440-viewport.png",
+      "sha256": "6b82dde8bbae1f6f905454cd2a38087126dba7da5218eae935d1c9ef34403c3e",
+      "bytes": 169278
+    },
+    {
+      "file": "design-theory/proof/webkit-320-viewport.png",
+      "sha256": "606e99040634e8c66e4452789d974634d91822e15c561c135737a0abbcc10717",
+      "bytes": 88603
+    },
+    {
+      "file": "design-theory/proof/webkit-390-viewport.png",
+      "sha256": "c66d7e65f220d3de44ab25ac866e0fc8ad67b25e7b03c3bd621b2edd8d7fc78d",
+      "bytes": 96982
+    },
+    {
+      "file": "design-theory/proof/webkit-834-viewport.png",
+      "sha256": "a2e555176c5de6543536dea6d135777807cccdf61ef99fdb8a5498b6f7e3ea94",
+      "bytes": 178413
+    },
+    {
+      "file": "design-theory/proof/webkit-1440-viewport.png",
+      "sha256": "fc7b32a926bd7645e65663166b16e9f9a8f1be8fed1a71c05926bfc76fb3fb0b",
+      "bytes": 224357
+    }
+  ]
+}

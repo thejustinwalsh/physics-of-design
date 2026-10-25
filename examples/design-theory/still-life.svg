@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Original illustrated still life with terracotta vessels and a green sphere">
+<defs><linearGradient id="wall" x2="0" y2="1"><stop stop-color="#e6d4bb"/><stop offset="1" stop-color="#f6ead4"/></linearGradient><linearGradient id="clay"><stop stop-color="#8b321d"/><stop offset=".5" stop-color="#cb6543"/><stop offset="1" stop-color="#e6976b"/></linearGradient><radialGradient id="green" cx=".3" cy=".2"><stop stop-color="#8eaa75"/><stop offset=".6" stop-color="#496a41"/><stop offset="1" stop-color="#263b2a"/></radialGradient><linearGradient id="arch"><stop stop-color="#dbb487"/><stop offset="1" stop-color="#a97349"/></linearGradient><filter id="blur"><feGaussianBlur stdDeviation="17"/></filter></defs>
+<path fill="url(#wall)" d="M0 0h1200v800H0z"/><path fill="#dbc4a2" d="M0 542h1200v258H0z"/><path fill="#c5a17c" opacity=".38" d="m0 542 1200-65v65z"/>
+<ellipse cx="804" cy="672" rx="260" ry="38" fill="#5e432d" opacity=".25" filter="url(#blur)"/>
+<path d="M560 600V350a155 155 0 0 1 310 0v250h-90V355a65 65 0 0 0-130 0v245z" fill="url(#arch)"/><path d="M560 600h90l-15 24h-90z" fill="#aa754e"/>
+<path d="M790 430h182l-16 203q-75 32-150 0z" fill="url(#clay)"/><ellipse cx="881" cy="430" rx="91" ry="25" fill="#e08c60"/><ellipse cx="881" cy="430" rx="70" ry="15" fill="#773b29"/>
+<circle cx="654" cy="609" r="88" fill="url(#green)"/><path d="M1020 616h110v60h-110z" fill="#bb6542"/><ellipse cx="1075" cy="616" rx="55" ry="17" fill="#dd9470"/>
+<path d="M0 0h210v800H0z" fill="#eadcc8" opacity=".3"/>
+</svg>

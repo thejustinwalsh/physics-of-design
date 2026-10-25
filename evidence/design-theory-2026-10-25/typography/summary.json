@@ -1,0 +1,495 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-25T11:05:30.992Z",
+  "runtimes": [
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "playwright": "1.64.1"
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "playwright": "1.64.1"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/typography-inspection.ts",
+      "sha256": "468270608d21ec30bf02524a6eb7bc0999a218a1d2adca066fa8e82a7297de4e"
+    },
+    {
+      "path": "src/typography-browser.ts",
+      "sha256": "b33c497d5a7836990782d184f440d8a591ea92d3fb1b8bfcbf7b602298473857"
+    },
+    {
+      "path": "src/fonts.ts",
+      "sha256": "0553158be10eea31ced0bfde887f32fdff6beb704fbf22b80d1ae602345ac33f"
+    },
+    {
+      "path": "scripts/prove-typography.mjs",
+      "sha256": "644c370064ac283a6338315df541d669bc572f338fc097703dda19117a15e13f"
+    },
+    {
+      "path": "examples/typography/variable-block.json",
+      "sha256": "73ad21be2977b20eaf4bdf09598f8ad8dec321559f1aaf3665dffa2f502173d0"
+    }
+  ],
+  "checks": [
+    {
+      "engine": "chromium",
+      "name": "all 13 licensed variable-font axes sampled independently",
+      "passed": true,
+      "detail": {
+        "candidates": 40,
+        "fontHash": "9b523f7d82593df0107173849ebb8c817471a1df4b4fb2c3cbf40cfd810c8281",
+        "geometryChanges": 11,
+        "breakChanges": 8
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "per-line baselines have geometry-preserving DOM probes",
+      "passed": true,
+      "detail": {
+        "baselines": [
+          33,
+          77.796875,
+          122.59375,
+          167.390625,
+          212.1875
+        ],
+        "rejectedAttempts": 0
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "line-height changes actual baseline while font ascent stays constant",
+      "passed": true,
+      "detail": {
+        "actualShift": 13,
+        "expectedHalfLeadingShift": 12.8,
+        "halfLeadingRoundingTolerance": 0.51
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "CSS axis precedence is observed independently for weight and optical sizing",
+      "passed": true,
+      "detail": {
+        "weight": 900,
+        "explicitWeightGeometryEqual": true,
+        "opticalSize": 14,
+        "opticalGeometryEqual": true,
+        "opticalNoneWidth": 196.734375,
+        "opticalAutoWidth": 196.734375,
+        "interpretation": "No geometric difference at explicit opsz14 for this engine and text."
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "clipping reports scroll and Range evidence separately from paint",
+      "passed": true,
+      "detail": {
+        "scrollWidth": 380,
+        "scrollHeight": 224,
+        "clientWidth": 380,
+        "clientHeight": 40,
+        "scrollOverflowX": 0,
+        "scrollOverflowY": 184,
+        "rangeBeyondRight": 5.703125,
+        "rangeBeyondBottom": 180.1875,
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "source": "integer CSSOM scroll/client dimensions plus subpixel Range union; not raster paint clipping"
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "combining marks and ligatures",
+      "passed": true,
+      "detail": {
+        "groups": 2,
+        "baselines": [
+          33,
+          77.796875
+        ],
+        "missing": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "Arabic RTL joining",
+      "passed": true,
+      "detail": {
+        "groups": 2,
+        "baselines": [
+          32,
+          76.796875
+        ],
+        "missing": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "mixed bidi with declared primary font gaps",
+      "passed": true,
+      "detail": {
+        "groups": 2,
+        "baselines": [
+          33,
+          77.796875
+        ],
+        "missing": [
+          {
+            "codepoint": "U+645",
+            "character": "م"
+          },
+          {
+            "codepoint": "U+631",
+            "character": "ر"
+          },
+          {
+            "codepoint": "U+62D",
+            "character": "ح"
+          },
+          {
+            "codepoint": "U+628",
+            "character": "ب"
+          },
+          {
+            "codepoint": "U+627",
+            "character": "ا"
+          },
+          {
+            "codepoint": "U+644",
+            "character": "ل"
+          },
+          {
+            "codepoint": "U+639",
+            "character": "ع"
+          },
+          {
+            "codepoint": "U+64A",
+            "character": "ي"
+          },
+          {
+            "codepoint": "U+629",
+            "character": "ة"
+          }
+        ]
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "explicit empty line",
+      "passed": true,
+      "detail": {
+        "groups": 4,
+        "baselines": [
+          33,
+          null,
+          122.59375,
+          167.390625
+        ],
+        "missing": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "forced inside-word wrap",
+      "passed": true,
+      "detail": {
+        "groups": 6,
+        "baselines": [
+          33,
+          77.796875,
+          122.59375,
+          167.390625,
+          212.1875,
+          256.984375
+        ],
+        "missing": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "loaded primary font does not falsely certify fallback identity",
+      "passed": true,
+      "detail": {
+        "faceStatus": "loaded",
+        "missing": [
+          {
+            "codepoint": "U+1F984",
+            "character": "🦄"
+          }
+        ],
+        "fallbackFaces": null
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "tight Arabic baseline ownership matches independently measured wide reference",
+      "passed": true,
+      "detail": {
+        "text": "العربيةالعربيةالعربيةالعربية",
+        "referenceOffset": 44,
+        "acceptedOffsets": [
+          44,
+          44,
+          44,
+          44,
+          44,
+          44
+        ],
+        "unavailable": 8
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "tight Arabic baseline ownership matches independently measured wide reference",
+      "passed": true,
+      "detail": {
+        "text": "العَرَبِيَّة لَا مرحبًا بكم في العالم",
+        "referenceOffset": 44,
+        "acceptedOffsets": [
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44,
+          44
+        ],
+        "unavailable": 6
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "all 13 licensed variable-font axes sampled independently",
+      "passed": true,
+      "detail": {
+        "candidates": 40,
+        "fontHash": "9b523f7d82593df0107173849ebb8c817471a1df4b4fb2c3cbf40cfd810c8281",
+        "geometryChanges": 11,
+        "breakChanges": 8
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "per-line baselines have geometry-preserving DOM probes",
+      "passed": true,
+      "detail": {
+        "baselines": [
+          33.328125,
+          78.125,
+          122.921875,
+          167.71875,
+          212.515625
+        ],
+        "rejectedAttempts": 8
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "line-height changes actual baseline while font ascent stays constant",
+      "passed": true,
+      "detail": {
+        "actualShift": 12.8125,
+        "expectedHalfLeadingShift": 12.8,
+        "halfLeadingRoundingTolerance": 0.51
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "CSS axis precedence is observed independently for weight and optical sizing",
+      "passed": true,
+      "detail": {
+        "weight": 900,
+        "explicitWeightGeometryEqual": true,
+        "opticalSize": 14,
+        "opticalGeometryEqual": false,
+        "opticalNoneWidth": 196.734375,
+        "opticalAutoWidth": 179.21875,
+        "interpretation": "Engine geometry differs when auto is enabled despite unchanged explicit opsz14; do not claim CSS/fontkit optical-axis parity."
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "clipping reports scroll and Range evidence separately from paint",
+      "passed": true,
+      "detail": {
+        "scrollWidth": 380,
+        "scrollHeight": 224,
+        "clientWidth": 380,
+        "clientHeight": 40,
+        "scrollOverflowX": 0,
+        "scrollOverflowY": 184,
+        "rangeBeyondRight": 5.703125,
+        "rangeBeyondBottom": 180.328125,
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "source": "integer CSSOM scroll/client dimensions plus subpixel Range union; not raster paint clipping"
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "combining marks and ligatures",
+      "passed": true,
+      "detail": {
+        "groups": 2,
+        "baselines": [
+          33.328125,
+          78.125
+        ],
+        "missing": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "Arabic RTL joining",
+      "passed": true,
+      "detail": {
+        "groups": 2,
+        "baselines": [
+          32.5625,
+          77.359375
+        ],
+        "missing": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "mixed bidi with declared primary font gaps",
+      "passed": true,
+      "detail": {
+        "groups": 2,
+        "baselines": [
+          33.328125,
+          78.125
+        ],
+        "missing": [
+          {
+            "codepoint": "U+645",
+            "character": "م"
+          },
+          {
+            "codepoint": "U+631",
+            "character": "ر"
+          },
+          {
+            "codepoint": "U+62D",
+            "character": "ح"
+          },
+          {
+            "codepoint": "U+628",
+            "character": "ب"
+          },
+          {
+            "codepoint": "U+627",
+            "character": "ا"
+          },
+          {
+            "codepoint": "U+644",
+            "character": "ل"
+          },
+          {
+            "codepoint": "U+639",
+            "character": "ع"
+          },
+          {
+            "codepoint": "U+64A",
+            "character": "ي"
+          },
+          {
+            "codepoint": "U+629",
+            "character": "ة"
+          }
+        ]
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "explicit empty line",
+      "passed": true,
+      "detail": {
+        "groups": 4,
+        "baselines": [
+          33.328125,
+          null,
+          122.921875,
+          167.71875
+        ],
+        "missing": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "forced inside-word wrap",
+      "passed": true,
+      "detail": {
+        "groups": 6,
+        "baselines": [
+          33.328125,
+          78.125,
+          122.921875,
+          167.71875,
+          212.515625,
+          257.3125
+        ],
+        "missing": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "loaded primary font does not falsely certify fallback identity",
+      "passed": true,
+      "detail": {
+        "faceStatus": "loaded",
+        "missing": [
+          {
+            "codepoint": "U+1F984",
+            "character": "🦄"
+          }
+        ],
+        "fallbackFaces": null
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "tight Arabic baseline ownership matches independently measured wide reference",
+      "passed": true,
+      "detail": {
+        "text": "العربيةالعربيةالعربيةالعربية",
+        "referenceOffset": 43.953125,
+        "acceptedOffsets": [
+          43.96875
+        ],
+        "unavailable": 11
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "tight Arabic baseline ownership matches independently measured wide reference",
+      "passed": true,
+      "detail": {
+        "text": "العَرَبِيَّة لَا مرحبًا بكم في العالم",
+        "referenceOffset": 43.953125,
+        "acceptedOffsets": [
+          43.96875,
+          43.96875,
+          43.9638671875,
+          43.96875
+        ],
+        "unavailable": 10
+      }
+    }
+  ],
+  "limits": [
+    "No raster paint bounds or native-baseline extraction.",
+    "Single-font uniform horizontal runs; fallback and mixed-font physical line counts remain uncertain.",
+    "Endpoint samples are independent, not coverage of every combination or intermediate axis value."
+  ]
+}

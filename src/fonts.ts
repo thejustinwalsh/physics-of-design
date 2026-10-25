@@ -100,16 +100,31 @@ export function shape(block: TextBlock) {
   let x = 0,
     y = 0;
   let bounds: Rect | null = null;
-  const glyphs = run.glyphs.map((glyph, i) => {
+  const glyphs: {
+    id: number;
+    codepoints: number[];
+    x: number;
+    y: number;
+    advance: number;
+    inkBounds: Rect | null;
+  }[] = [];
+  for (const [i, glyph] of run.glyphs.entries()) {
     const pos = run.positions[i]!;
     const box = glyph.bbox;
-    const rect = {
+    const candidate = {
       x: (x + pos.xOffset + box.minX) * scale,
       y: -(y + pos.yOffset + box.maxY) * scale,
       width: (box.maxX - box.minX) * scale,
       height: (box.maxY - box.minY) * scale,
     };
-    if (rect.width > 0 && rect.height > 0) {
+    // Empty paths (spaces, format glyphs) have Fontkit bounds of ±Infinity.
+    // Their advance is still real; they simply contribute no outline rectangle.
+    const empty = glyph.path.commands.length === 0;
+    if (!empty && !Object.values(candidate).every(Number.isFinite))
+      throw new Error(`Nonfinite outline bounds for glyph ${glyph.id}`);
+    const rect: Rect | null =
+      empty || candidate.width <= 0 || candidate.height <= 0 ? null : candidate;
+    if (rect) {
       if (!bounds) bounds = rect;
       else {
         const right = Math.max(bounds.x + bounds.width, rect.x + rect.width),
@@ -134,8 +149,8 @@ export function shape(block: TextBlock) {
     };
     x += pos.xAdvance;
     y += pos.yAdvance;
-    return result;
-  });
+    glyphs.push(result);
+  }
   const missing = Array.from(block.text).filter(
     (c) => !/[\s\p{Cf}]/u.test(c) && !f.hasGlyphForCodePoint(c.codePointAt(0)!),
   );

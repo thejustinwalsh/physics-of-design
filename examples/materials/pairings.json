@@ -1,0 +1,188 @@
+{
+  "scope": "Authored material pairings for different briefs; numerical bands are local art direction, not empirically fitted preference rules.",
+  "materials": {
+    "mineral": {
+      "id": "mineral",
+      "surface": {
+        "baseColor": [0.58, 0.62, 0.66],
+        "roughness": 0.88,
+        "metalness": 0
+      },
+      "composition": "homogeneous-dielectric",
+      "texture": {
+        "cyclesPerTile": 24,
+        "heightAmplitudeFraction": 0.0001,
+        "tileWidthMm": 100,
+        "projectedTilePixels": 256,
+        "textureResolution": 128,
+        "pattern": "other"
+      },
+      "lighting": {
+        "rigId": "shared-studio",
+        "coordinateFrame": "world",
+        "environmentId": "neutral-room",
+        "exposureEv": 0,
+        "lightDirection": [0.5, 0.5, 1]
+      },
+      "provenance": {
+        "kind": "authored",
+        "source": "examples/materials/recipes.json#quiet-mineral",
+        "note": "An imagined styling recipe, not a measured mineral sample. Physical and projected scale are example assumptions."
+      }
+    },
+    "mineral-inset": {
+      "id": "mineral-inset",
+      "surface": {
+        "baseColor": [0.5, 0.54, 0.58],
+        "roughness": 0.82,
+        "metalness": 0
+      },
+      "composition": "homogeneous-dielectric",
+      "texture": {
+        "cyclesPerTile": 20,
+        "heightAmplitudeFraction": 0.00012,
+        "tileWidthMm": 100,
+        "projectedTilePixels": 256,
+        "textureResolution": 128,
+        "pattern": "other"
+      },
+      "lighting": {
+        "rigId": "shared-studio",
+        "coordinateFrame": "world",
+        "environmentId": "neutral-room",
+        "exposureEv": 0,
+        "lightDirection": [0.5, 0.5, 1]
+      },
+      "provenance": {
+        "kind": "authored",
+        "source": "examples/materials/pairings.json#mineral-inset",
+        "note": "A related finish for the continuity brief. No image or physical sample measurement."
+      }
+    },
+    "metal-control": {
+      "id": "metal-control",
+      "surface": {
+        "baseColor": [0.72, 0.39, 0.16],
+        "roughness": 0.4,
+        "metalness": 1
+      },
+      "composition": "homogeneous-conductor",
+      "texture": {
+        "cyclesPerTile": 32,
+        "heightAmplitudeFraction": 4e-5,
+        "tileWidthMm": 50,
+        "projectedTilePixels": 256,
+        "textureResolution": 128,
+        "pattern": "sinusoidal"
+      },
+      "lighting": {
+        "rigId": "shared-studio",
+        "coordinateFrame": "world",
+        "environmentId": "neutral-room",
+        "exposureEv": 0,
+        "lightDirection": [0.5, 0.5, 1]
+      },
+      "provenance": {
+        "kind": "authored",
+        "source": "examples/materials/recipes.json#warm-machined-metal",
+        "note": "Generic conductor art direction; not a measured copper or brass reflectance spectrum."
+      }
+    }
+  },
+  "profiles": {
+    "continuity": {
+      "id": "continuity",
+      "intent": "Group neighboring reading surfaces with related colors and finishes",
+      "roleRelation": "shared-group",
+      "source": "authored editorial continuity brief, 2026-10-25",
+      "bands": [
+        {
+          "metric": "deltaEOK",
+          "min": 0,
+          "max": 0.12,
+          "rationale": "Keep parameter swatches close in this particular palette",
+          "source": "authored palette band; OKLab defines distance, not this threshold"
+        },
+        {
+          "metric": "roughnessDifference",
+          "min": 0,
+          "max": 0.12,
+          "rationale": "Retain a similar finish between adjacent reading surfaces",
+          "source": "authored finish band; not an observer-study result"
+        },
+        {
+          "metric": "metalnessDifference",
+          "min": 0,
+          "max": 0,
+          "rationale": "Use the same dielectric/conductor model family in this group",
+          "source": "authored continuity decision"
+        }
+      ]
+    },
+    "counterpoint": {
+      "id": "counterpoint",
+      "intent": "Distinguish an instrument control from its calm reading surface",
+      "roleRelation": "counterpoint",
+      "source": "authored instrument brief, 2026-10-25",
+      "bands": [
+        {
+          "metric": "roughnessDifference",
+          "min": 0.3,
+          "max": 0.7,
+          "rationale": "Create a distinct finish response for the control",
+          "source": "authored contrast band; no universal finish preference claim"
+        },
+        {
+          "metric": "metalnessDifference",
+          "min": 1,
+          "max": 1,
+          "rationale": "Pair a dielectric field with a conductor control in this brief",
+          "source": "authored contrast decision"
+        },
+        {
+          "metric": "exposureEvDifference",
+          "min": 0,
+          "max": 0,
+          "rationale": "Compare the materials under the same declared exposure",
+          "source": "experimental-control assumption; actual rendered lighting remains unverified"
+        }
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "first": "mineral",
+      "second": "mineral-inset",
+      "profile": "continuity"
+    },
+    {
+      "first": "mineral",
+      "second": "mineral-inset",
+      "profile": "counterpoint"
+    },
+    {
+      "first": "mineral",
+      "second": "metal-control",
+      "profile": "counterpoint"
+    },
+    {
+      "first": "mineral",
+      "second": "metal-control",
+      "profile": "continuity"
+    }
+  ],
+  "selections": [
+    {
+      "anchor": "mineral",
+      "alternatives": ["mineral-inset", "metal-control"],
+      "profile": "continuity",
+      "limit": 4
+    },
+    {
+      "anchor": "mineral",
+      "alternatives": ["mineral-inset", "metal-control"],
+      "profile": "counterpoint",
+      "limit": 4
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "createdAt": "2026-10-25T09:59:31.195Z",
+  "probes": {
+    "summaries": {
+      "wireframe inspect": {
+        "isError": false,
+        "structuredBytes": 712,
+        "summaryKeys": [
+          "id",
+          "screen",
+          "variables",
+          "nodes",
+          "relations",
+          "issues",
+          "scope"
+        ],
+        "containsHtml": false,
+        "containsBase64": false
+      },
+      "motion dynamics": {
+        "isError": false,
+        "structuredBytes": 1068,
+        "summaryKeys": [
+          "initial",
+          "final",
+          "balanceResidual",
+          "sampleCount",
+          "provenance"
+        ],
+        "containsHtml": false,
+        "containsBase64": false,
+        "summary": {
+          "initial": {
+            "position": 0,
+            "velocity": 0,
+            "target": 1,
+            "energy": 50,
+            "initialEnergy": 50,
+            "targetWork": 0,
+            "dissipated": 0,
+            "elapsedSeconds": 0
+          },
+          "final": {
+            "position": 0.26424111765711533,
+            "velocity": 3.6787944117144233,
+            "target": 1,
+            "energy": 33.833820809153174,
+            "initialEnergy": 50,
+            "targetWork": 0,
+            "dissipated": 16.166179190846826,
+            "elapsedSeconds": 0.1
+          },
+          "balanceResidual": 0,
+          "sampleCount": 1,
+          "provenance": {
+            "kind": "analytic-held-target-segments",
+            "model": "m*x″+c*x′+k*(x-target)=0 between target changes",
+            "targetWork": "k/2*((x-newTarget)^2-(x-oldTarget)^2); x and velocity continuous",
+            "dissipation": "sum of before-minus-after segment energy; signed floating-point roundoff retained",
+            "assumptions": "No collision, clamp or external force; target is held within each step. UI energy units are abstract.",
+            "limitation": "Partition invariance holds only for the same timed target schedule; sampled scroll retarget schedules can differ with frame cadence."
+          }
+        }
+      },
+      "motion timeline": {
+        "isError": false,
+        "structuredBytes": 631,
+        "summaryKeys": [
+          "min",
+          "max",
+          "durationSeconds",
+          "sampleCount",
+          "provenance"
+        ],
+        "containsHtml": false,
+        "containsBase64": false,
+        "summary": {
+          "min": 0,
+          "max": 1,
+          "durationSeconds": 2,
+          "sampleCount": 121,
+          "provenance": {
+            "kind": "sampled-bounded-motion",
+            "model": "sampleMotion analytic stationary spring",
+            "interpolation": "piecewise-linear",
+            "projection": "clamp sampled positions to caller bounds",
+            "projectedSamples": 0,
+            "sampleCount": 121,
+            "endpointPolicy": "retain sampled endpoint; no forced snap to target",
+            "limitation": "Presentation samples only: projection/interpolation do not preserve spring energy or certify continuous source extrema."
+          }
+        }
+      },
+      "surface textures": {
+        "isError": false,
+        "structuredBytes": 725,
+        "summaryKeys": [
+          "width",
+          "height",
+          "parameters",
+          "encoding",
+          "algorithm",
+          "roughnessMapSemantics",
+          "orientation",
+          "note"
+        ],
+        "containsHtml": false,
+        "containsBase64": true
+      },
+      "decision run": {
+        "isError": false,
+        "structuredBytes": 931,
+        "summaryKeys": [
+          "state",
+          "status",
+          "nextStage",
+          "order",
+          "statistics",
+          "stages",
+          "recipe",
+          "scope"
+        ],
+        "containsHtml": false,
+        "containsBase64": false
+      }
+    },
+    "finiteSvg": {
+      "accepted": true,
+      "containsInfinity": true,
+      "sample": "\"button\" aria-label=\"Expressive heading Infinity by 10 css-px, proposed\"><rect x=\"1e+308"
+    },
+    "selectionCancelsRedraw": {
+      "bodyY": "216",
+      "headingValue": "200",
+      "label": "editorial-hero technical drawing in css-px",
+      "status": "Selected image; identity shared with the agent."
+    },
+    "staleModeOverwrite": {
+      "before": {
+        "bodyY": "160",
+        "headingValue": "64",
+        "label": "replacement-layout technical drawing in css-px",
+        "status": "Layout equations are editable. Dashed boxes are proposals; solid boxes retain their original renderer receipts."
+      },
+      "after": {
+        "bodyY": "296",
+        "headingValue": "200",
+        "label": "editorial-hero technical drawing in css-px",
+        "status": "Layout equations are editable. Dashed boxes are proposals; solid boxes retain their original renderer receipts."
+      }
+    },
+    "manualRecomputeOutOfOrder": {
+      "latest": {
+        "bodyY": "296",
+        "headingValue": "200",
+        "label": "editorial-hero technical drawing in css-px",
+        "status": "Layout equations are editable. Dashed boxes are proposals; solid boxes retain their original renderer receipts."
+      },
+      "afterOldResponse": {
+        "bodyY": "216",
+        "headingValue": "120",
+        "label": "editorial-hero technical drawing in css-px",
+        "status": "Layout equations are editable. Dashed boxes are proposals; solid boxes retain their original renderer receipts."
+      }
+    },
+    "receiptMutation": {
+      "reportedWidth": "999",
+      "sameReceipt": {
+        "renderer": "Chromium",
+        "inputIdentity": "fixture-input",
+        "receiptId": "fixture-receipt"
+      },
+      "context": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"kind\":\"human-wireframe-direction\",\"wireframe\":\"editorial-hero\",\"changes\":[{\"variable\":\"gutter\",\"value\":28}],\"selectedNode\":\"reported\",\"validation\":\"pending; proposal edits do not validate rendering\"}"
+          }
+        ]
+      }
+    }
+  },
+  "errors": []
+}

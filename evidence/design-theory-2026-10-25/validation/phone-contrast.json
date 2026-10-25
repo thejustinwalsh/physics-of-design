@@ -1,0 +1,193 @@
+{
+  "system": {
+    "tokens": {
+      "canvas": "#faf6e9",
+      "ink": "#17291f",
+      "accent": "#345e48"
+    },
+    "roles": [
+      {
+        "id": "prose",
+        "foreground": "ink",
+        "background": "canvas",
+        "use": "text",
+        "source": [
+          "Authored proof fixture"
+        ],
+        "adjacentBackgrounds": [],
+        "backdrop": null,
+        "state": "default",
+        "theme": "default"
+      }
+    ],
+    "harmony": "free"
+  },
+  "tokens": {
+    "canvas": {
+      "source": "#faf6e9",
+      "intended": {
+        "space": "srgb",
+        "coordinates": [
+          0.9803921568627451,
+          0.9647058823529412,
+          0.9137254901960784
+        ],
+        "alpha": 1,
+        "oklch": {
+          "L": 0.9727134684138631,
+          "C": 0.017662852156917486,
+          "h": 92.68031798545132
+        }
+      },
+      "emitted": {
+        "css": "#faf6e9",
+        "hex": "#faf6e9",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": false,
+        "deltaEOK": 0,
+        "oklab": [
+          0.9727134684138631,
+          -0.0008259734896341464,
+          0.01764352895856003
+        ]
+      }
+    },
+    "ink": {
+      "source": "#17291f",
+      "intended": {
+        "space": "srgb",
+        "coordinates": [
+          0.09019607843137255,
+          0.1607843137254902,
+          0.12156862745098039
+        ],
+        "alpha": 1,
+        "oklch": {
+          "L": 0.26159922140548697,
+          "C": 0.03050955882828501,
+          "h": 159.04268266103145
+        }
+      },
+      "emitted": {
+        "css": "#17291f",
+        "hex": "#17291f",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": false,
+        "deltaEOK": 0,
+        "oklab": [
+          0.26159922140548697,
+          -0.028491264092536175,
+          0.010912426416977233
+        ]
+      }
+    },
+    "accent": {
+      "source": "#345e48",
+      "intended": {
+        "space": "srgb",
+        "coordinates": [
+          0.20392156862745098,
+          0.3686274509803922,
+          0.2823529411764706
+        ],
+        "alpha": 1,
+        "oklch": {
+          "L": 0.44423194567435814,
+          "C": 0.06002896558326164,
+          "h": 159.7565685595007
+        }
+      },
+      "emitted": {
+        "css": "#345e48",
+        "hex": "#345e48",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": false,
+        "deltaEOK": 0,
+        "oklab": [
+          0.44423194567435814,
+          -0.05632103698751978,
+          0.020770592231490137
+        ]
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "prose/canvas",
+      "role": "prose",
+      "foreground": "ink",
+      "foregroundBackdrop": "canvas",
+      "background": "canvas",
+      "backdrop": null,
+      "state": "default",
+      "theme": "default",
+      "use": "text",
+      "minimum": 4.5,
+      "ratio": 14.142891287314436,
+      "ratioInterval": {
+        "min": 14.142891287314436,
+        "max": 14.142891287314436
+      },
+      "compositingUncertainty": {
+        "foregroundCodeValues": 0,
+        "backgroundCodeValues": 0
+      },
+      "effectiveForeground": "#17291f",
+      "effectiveBackground": "#faf6e9",
+      "status": "pass",
+      "reason": null
+    }
+  ],
+  "summary": {
+    "pass": 1,
+    "fail": 0,
+    "unknown": 0,
+    "notApplicable": 0,
+    "status": "pass"
+  },
+  "compatibleSystem": {
+    "tokens": {
+      "canvas": "#faf6e9",
+      "ink": "#17291f",
+      "accent": "#345e48"
+    },
+    "roles": [
+      {
+        "id": "prose-0",
+        "foreground": "ink",
+        "background": "canvas",
+        "use": "text",
+        "source": [
+          "Authored proof fixture; palette-context:theme=default;state=default"
+        ]
+      }
+    ],
+    "harmony": "free"
+  },
+  "measurementRef": "palette:a0124450d219cf7eabfb58ef8769b085993e3148cfe45cff0f7bc8959730d080",
+  "algorithm": "colorjs.io@0.7.1:css-gamut-map/srgb-rgba8/encoded-srgb-source-over-interval-v2",
+  "contrastLevel": "AA",
+  "standard": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+  "capabilities": {
+    "target": "srgb-8bit",
+    "compositing": "encoded-srgb-source-over",
+    "compositingUncertainty": "Conditional bound: ±1 sRGB code value at each alpha-compositing stage, propagated to foreground; pass uses interval lower bound. This rounding envelope is not a universal compositor guarantee. Threshold overlaps require actual-render verification or opaque resolved emission.",
+    "legacyHexSystem": true,
+    "legacyReason": null,
+    "stateCoverage": "Only declared theme/state/adjacency relations are checked.",
+    "unverified": [
+      "actual backdrop/large-text applicability",
+      "color-only meaning and CVD",
+      "focus area/obscuration and keyboard behavior",
+      "ARIA/name/role/state semantics",
+      "wide-gamut rendering",
+      "aesthetic preference"
+    ]
+  }
+}

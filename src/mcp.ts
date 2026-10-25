@@ -8,7 +8,7 @@ import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { commandSchemas, execute, type Command } from './commands.js';
 
-const uiUri = 'ui://physics-of-design/specimens.html';
+const uiUri = 'ui://design-theory/specimens.html';
 export async function appHtml() {
   const js = fileURLToPath(new URL('./app-client.js', import.meta.url));
   const bundle = await build({
@@ -26,7 +26,7 @@ export async function appHtml() {
   return `<!doctype html><html lang="en"><meta charset="utf-8"><style>body{margin:0;background:#f6f4ed;font:13px system-ui;color:#171918}nav{padding:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}iframe{border:0;width:100%;height:760px}button,select{font:inherit;padding:7px}#status{padding:12px}</style><nav><select id="choices" aria-label="Compare viable candidates"></select><button id="recompute">Recompute coupled alternatives</button><button id="choose" disabled>Choose this direction</button></nav><div id="status">Call design_specimen to load a local specimen.</div><iframe title="Editable typography specimen" sandbox="allow-scripts allow-same-origin allow-downloads"></iframe><script>${bundle.outputFiles[0]!.text.replaceAll('</script', '<\\/script')}</script></html>`;
 }
 export async function serveMcp() {
-  const server = new McpServer({ name: 'physics-of-design', version: '0.1.0' });
+  const server = new McpServer({ name: 'design-theory', version: '0.1.0' });
   const store = new ResultStore();
   const profile = process.env.DESIGN_MCP_PROFILE ?? 'compact';
   if (!['compact', 'full'].includes(profile))
@@ -47,6 +47,7 @@ export async function serveMcp() {
         'system relax',
         'component inspect',
         'motion proof',
+        'wireframe inspect',
       ].includes(command);
       const view =
         command === 'proof' || response === 'summary'
@@ -55,11 +56,18 @@ export async function serveMcp() {
       let meta: Record<string, unknown> = {};
       if (isUi)
         meta = { result, state: (resolved as { state?: unknown }).state };
-      if (command === 'component inspect' || command === 'motion proof')
+      if (
+        ['component inspect', 'motion proof', 'wireframe inspect'].includes(
+          command,
+        )
+      )
         meta = {
           ...meta,
           proofHtml: (result as { html: string }).html,
           inspection: command,
+          ...(command === 'wireframe inspect'
+            ? { wireframe: (result as { wireframe: unknown }).wireframe }
+            : {}),
         };
       if (command === 'proof') {
         const proof = result as { html?: string; files?: { html: string } };
@@ -151,7 +159,7 @@ export async function serveMcp() {
     'design_specimen',
     {
       description:
-        'Inspect typography, exact component drawings or motion fields; recompute coupled alternatives in the optional MCP App.',
+        'Inspect typography, component or layout drawings and motion; edit coupled variables in the optional MCP App.',
       inputSchema: z
         .object({
           command: z
@@ -160,6 +168,7 @@ export async function serveMcp() {
               'system relax',
               'component inspect',
               'motion proof',
+              'wireframe inspect',
             ])
             .default('proof'),
           input: z.record(z.string(), z.unknown()),
@@ -181,6 +190,7 @@ export async function serveMcp() {
         'system relax',
         'component inspect',
         'motion proof',
+        'wireframe inspect',
       ].includes(command);
       server.registerTool(
         `design_${command.replaceAll(' ', '_')}`,
@@ -188,9 +198,13 @@ export async function serveMcp() {
           description: `design ${command}`,
           inputSchema: commandSchemas[command],
           annotations: {
-            readOnlyHint: !['proof', 'choice select', 'system relax'].includes(
-              command,
-            ),
+            readOnlyHint: ![
+              'proof',
+              'choice select',
+              'system relax',
+              'composition solve',
+              'decision run',
+            ].includes(command),
             destructiveHint: false,
             openWorldHint: false,
           },
@@ -199,24 +213,28 @@ export async function serveMcp() {
         async (input: unknown) => run(command, input, 'full'),
       );
     }
-  server.registerResource(
-    'specimens',
-    uiUri,
-    {
-      mimeType: 'text/html;profile=mcp-app',
-      _meta: {
-        ui: { csp: { connectDomains: [], resourceDomains: ['data:'] } },
-      },
-    },
-    async () => ({
-      contents: [
-        {
-          uri: uiUri,
-          mimeType: 'text/html;profile=mcp-app',
-          text: await appHtml(),
+  for (const [name, uri] of [
+    ['specimens', uiUri],
+    ['legacy-specimens', 'ui://physics-of-design/specimens.html'],
+  ] as const)
+    server.registerResource(
+      name,
+      uri,
+      {
+        mimeType: 'text/html;profile=mcp-app',
+        _meta: {
+          ui: { csp: { connectDomains: [], resourceDomains: ['data:'] } },
         },
-      ],
-    }),
-  );
+      },
+      async () => ({
+        contents: [
+          {
+            uri,
+            mimeType: 'text/html;profile=mcp-app',
+            text: await appHtml(),
+          },
+        ],
+      }),
+    );
   await server.connect(new StdioServerTransport());
 }

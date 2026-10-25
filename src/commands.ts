@@ -1,5 +1,39 @@
 import { EnergyAnalyzeSchema, analyzeEnergy } from './energy-analysis.js';
 import {
+  MotionDynamicsSchema,
+  MotionTimelineSchema,
+  analyzeMotionDynamics,
+  sampleMotionTimeline,
+} from './motion-dynamics.js';
+import {
+  RunDecisionWorkflowSchema,
+  runDecisionWorkflow,
+} from './decision-workflow.js';
+import { WireframeInspectSchema, inspectWireframe } from './wireframe.js';
+import {
+  SurfaceProbeSchema,
+  SurfaceSchema,
+  SurfaceTextureSchema,
+  probeSurface,
+  mapSurfaceToThree,
+  generateSurfaceTextures,
+} from './surface.js';
+import { MediaAnalyzeSchema, analyzeMediaFile } from './media.js';
+import { MediaCropSchema, mediaCropCandidates } from './media-geometry.js';
+import { ProseAnalyzeSchema, analyzeProse } from './prose.js';
+import {
+  MaterialPairSchema,
+  MaterialCandidatesSchema,
+  analyzeMaterialPair,
+  materialPairCandidates,
+} from './material-relations.js';
+import {
+  ValidationPlanSchema,
+  ValidationCheckSchema,
+  describeValidationPlan,
+  checkValidation,
+} from './validation-machine.js';
+import {
   ComponentInspectSchema,
   inspectComponent,
   MotionProofSchema,
@@ -45,6 +79,11 @@ import path from 'node:path';
 import { z } from 'zod';
 import { parseState, StateSchema } from './state.js';
 import { inspectFont, shape } from './fonts.js';
+import {
+  inspectTypography,
+  inspectTypographyBrowser,
+  probeTypographyAxes,
+} from './typography-inspection.js';
 import { registry } from './registry.js';
 import { resolveLayout, responsivePatterns } from './responsive.js';
 import { intervalCandidates, rhythm, CurveSchema } from './intervals.js';
@@ -77,8 +116,46 @@ import {
 } from './corpus.js';
 
 const StateInput = z.object({ state: StateSchema });
+const TypographyInput = StateInput.extend({
+  blockId: z.string(),
+  render: z.boolean().default(true),
+  engine: z.enum(['chromium', 'webkit']).default('chromium'),
+  lineLimit: z.number().int().min(1).max(256).default(64),
+});
+
+/** Match the responsive renderer's effective font size and available text width. */
+function effectiveText(state: z.infer<typeof StateSchema>, blockId: string) {
+  const resolved = resolveLayout(state);
+  const block = resolved.state.blocks.find((b) => b.id === blockId);
+  if (!block) throw new Error(`unknown block ${blockId}`);
+  return {
+    block: { ...block, size: block.size * state.viewport.textScale },
+    resolution: {
+      pattern: resolved.pattern,
+      textScale: state.viewport.textScale,
+      authoredSize: state.blocks.find((b) => b.id === blockId)!.size,
+      effectiveSize: block.size * state.viewport.textScale,
+      effectiveMeasure: block.measure,
+      notes: resolved.notes,
+    },
+  };
+}
 export const commandSchemas = {
   registry: z.object({}).strict(),
+  'decision run': RunDecisionWorkflowSchema,
+  'wireframe inspect': WireframeInspectSchema,
+  'motion dynamics': MotionDynamicsSchema,
+  'motion timeline': MotionTimelineSchema,
+  'surface probe': SurfaceProbeSchema,
+  'surface map': SurfaceSchema,
+  'surface textures': SurfaceTextureSchema,
+  'media analyze': MediaAnalyzeSchema,
+  'media crops': MediaCropSchema,
+  'prose analyze': ProseAnalyzeSchema,
+  'material pair': MaterialPairSchema,
+  'material candidates': MaterialCandidatesSchema,
+  'validation plan': ValidationPlanSchema,
+  'validation check': ValidationCheckSchema,
   'component solve': ComponentContractSchema,
   'component inspect': ComponentInspectSchema,
   'motion proof': MotionProofSchema,
@@ -120,6 +197,17 @@ export const commandSchemas = {
   'text shape': StateInput.extend({
     blockId: z.string(),
     probes: z.boolean().default(false),
+  }).strict(),
+  'typography inspect': TypographyInput.extend({
+    detail: z.enum(['summary', 'glyphs']).default('summary'),
+    glyphLimit: z.number().int().min(0).max(512).default(128),
+  }).strict(),
+  'typography axes': TypographyInput.extend({
+    tags: z
+      .array(z.string().regex(/^[A-Za-z0-9]{4}$/))
+      .max(32)
+      .optional(),
+    limit: z.number().int().min(1).max(64).default(64),
   }).strict(),
   'intervals candidates': z
     .object({
@@ -200,6 +288,43 @@ export async function execute(
   let renderer: Renderer | undefined;
   try {
     switch (command) {
+      case 'decision run':
+        return runDecisionWorkflow(
+          input as Parameters<typeof runDecisionWorkflow>[0],
+        );
+      case 'wireframe inspect':
+        return inspectWireframe(input);
+      case 'motion dynamics':
+        return analyzeMotionDynamics(commandSchemas[command].parse(input));
+      case 'motion timeline':
+        return sampleMotionTimeline(commandSchemas[command].parse(input));
+      case 'surface probe':
+        return probeSurface(input);
+      case 'surface map':
+        return mapSurfaceToThree(input);
+      case 'surface textures': {
+        const textures = generateSurfaceTextures(input);
+        return {
+          ...textures,
+          encoding: 'base64-rgba8',
+          normal: Buffer.from(textures.normal).toString('base64'),
+          roughness: Buffer.from(textures.roughness).toString('base64'),
+        };
+      }
+      case 'media analyze':
+        return analyzeMediaFile(input);
+      case 'media crops':
+        return mediaCropCandidates(input);
+      case 'prose analyze':
+        return analyzeProse(input);
+      case 'material pair':
+        return analyzeMaterialPair(input);
+      case 'material candidates':
+        return materialPairCandidates(input);
+      case 'validation plan':
+        return describeValidationPlan(input);
+      case 'validation check':
+        return checkValidation(input);
       case 'component solve':
         return solveComponentContract(input);
       case 'component inspect':
@@ -262,15 +387,48 @@ export async function execute(
       }
       case 'text shape': {
         const r = commandSchemas[command].parse(input);
-        const b = r.state.blocks.find((b) => b.id === r.blockId);
-        if (!b) throw new Error(`unknown block ${r.blockId}`);
+        const { block: b, resolution } = effectiveText(r.state, r.blockId);
         renderer = rendererFor(r.state.platform);
         const measured = await renderer.measure(r.state, { probes: r.probes });
         return {
           ...shape(b),
+          resolution,
           lineBreaks: measured.blocks.find((m) => m.id === b.id)!.lines,
           renderer: measured.engine,
           measurement: measured,
+        };
+      }
+      case 'typography inspect': {
+        const r = commandSchemas[command].parse(input);
+        const { block, resolution } = effectiveText(r.state, r.blockId);
+        if (r.state.platform !== 'web' && r.render)
+          throw new Error(
+            'Typography browser inspection cannot certify native baselines or axes. Use layout measure for actual native Text/Yoga receipts, or render:false for explicitly fontkit-only facts.',
+          );
+        return {
+          ...inspectTypography(block, r),
+          resolution,
+          renderer: r.render ? await inspectTypographyBrowser(block, r) : null,
+          targetPlatform: r.state.platform,
+        };
+      }
+      case 'typography axes': {
+        const r = commandSchemas[command].parse(input);
+        const { block, resolution } = effectiveText(r.state, r.blockId);
+        if (r.state.platform !== 'web' && r.render)
+          throw new Error(
+            'Typography browser axis probes cannot certify native axes. Use render:false for fontkit-only probes; native axis application remains unsupported.',
+          );
+        return {
+          ...(await probeTypographyAxes(block, {
+            render: r.render,
+            engine: r.engine,
+            lineLimit: r.lineLimit,
+            limit: r.limit,
+            ...(r.tags ? { tags: r.tags } : {}),
+          })),
+          resolution,
+          targetPlatform: r.state.platform,
         };
       }
       case 'intervals candidates': {

@@ -1,0 +1,154 @@
+{
+  "capturedAt": "2026-10-25T10:12:27.469Z",
+  "implementation": {
+    "examples/design-theory/web.jsx": "6493f764c7ca1223a1efa3b53bf18af6b34d72f2169c3e4ee72d7e4b073b4cbd",
+    "examples/design-theory/profiles.js": "c2b4c1cdd6027e7b26c344163de7ed459aab5e6035cef776466b8e0d44f7a0d9",
+    "examples/design-theory/Surface.jsx": "b784128e478ebd5b065beff73f6a537f8a8e91be65ba120a8cac39cca9d6f2e7",
+    "examples/design-theory/surface-scene.js": "837e99d08a7509f473f2f552429fab5e3bd897f88fce22ce1e504677c4862a78",
+    "artifacts/vela/web/design-theory/app.js": "b612d2e1252a1636c9849f034c42f4e820b9abbd25039b85828d7fea56447f72"
+  },
+  "cases": [
+    {
+      "width": 320,
+      "surfaces": {
+        "material": {
+          "renderer": "worker",
+          "frames": 0,
+          "initializationMilliseconds": 168.80000001192093,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 135,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          }
+        },
+        "hero": {
+          "renderer": "worker",
+          "frames": 2,
+          "initializationMilliseconds": 175.60000002384186,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 135.10000002384186,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.40000003576278687
+        }
+      }
+    },
+    {
+      "width": 834,
+      "surfaces": {
+        "hero": {
+          "renderer": "worker",
+          "frames": 1,
+          "initializationMilliseconds": 131.30000001192093,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 108.80000001192093,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          },
+          "lastRenderMilliseconds": 0.2999999523162842
+        },
+        "material": {
+          "renderer": "worker",
+          "frames": 0,
+          "initializationMilliseconds": 2828.399999976158,
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          },
+          "workerInitializationMilliseconds": 2801.300000011921,
+          "draw": {
+            "drawCalls": 3,
+            "triangles": 9152
+          }
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4"
+}

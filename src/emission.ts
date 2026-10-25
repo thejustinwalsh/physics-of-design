@@ -247,5 +247,5 @@ export async function proofHtml(
     }).replaceAll('<', '\\u003c');
     editor = `<script>const pod=${payload};window.__POD_STATE__=pod.state;window.__POD_GRAPH__=pod.graph;window.__POD_FONTS__=pod.fonts;</script><script>${built.outputFiles[0]!.text.replaceAll('</script', '<\\/script')}</script>`;
   }
-  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Physics of Design specimen</title><style>${shell}\n${fonts}</style><body>${controls}<div id="root"></div><script>${script}</script>${editor}</body></html>`;
+  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Design Theory specimen</title><style>${shell}\n${fonts}</style><body>${controls}<div id="root"></div><script>${script}</script>${editor}</body></html>`;
 }

@@ -1,0 +1,5 @@
+chromium: 13 axes × min/default/max plus requested state
+chromium: passed 13 checks
+webkit: 13 axes × min/default/max plus requested state
+webkit: passed 13 checks
+Typography proof: 26 passed; evidence /Volumes/Depot/Developer/design-theory/artifacts/typography/summary.json

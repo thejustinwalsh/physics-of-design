@@ -1,9 +1,9 @@
 {
-  "name": "@physics-of-design/toolkit",
+  "name": "@design-theory/toolkit",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Local tools for coupled typography, layout, color and motion decisions, bounded mathematical search and reusable design machines.",
+  "description": "Local-first tools for brief-driven typography, color, composition, motion and material relationships.",
   "bin": {
     "design": "./dist/cli.js"
   },
@@ -42,7 +42,15 @@
     "vela:web:proof": "node scripts/prove-vela-web.mjs",
     "vela:native": "node scripts/native-session.mjs --vela",
     "vela:native:flows": "node scripts/vela-native-flows.mjs",
-    "design:machine:proof": "node scripts/prove-design-machine.mjs"
+    "design:machine:proof": "node scripts/prove-design-machine.mjs",
+    "workflow:proof": "node scripts/prove-decision-workflow.mjs",
+    "gallery:build": "npm run build && node scripts/build-design-theory.mjs",
+    "gallery:proof": "node scripts/prove-design-theory.mjs",
+    "vela:motion:proof": "node scripts/prove-vela-motion.mjs",
+    "validation:proof": "npm run build && node scripts/prove-validation-machine.mjs",
+    "evidence:extension": "node scripts/export-design-theory-evidence.mjs",
+    "typography:proof": "npm run build && node scripts/prove-typography.mjs",
+    "test:migrations": "node codemods/2026-10-25-nullable-glyph-ink/test.mjs"
   },
   "engines": {
     "node": ">=22"
@@ -56,9 +64,12 @@
     "colorjs.io": "0.7.1",
     "esbuild": "0.25.12",
     "fontkit": "2.0.4",
+    "gsap": "3.15.0",
+    "lenis": "1.3.27",
     "playwright": "1.64.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "three": "0.186.1",
     "xstate": "5.33.3",
     "zod": "4.6.7"
   },
