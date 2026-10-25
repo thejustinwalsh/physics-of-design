@@ -38,5 +38,38 @@
   ],
   "analysis": "Project-cluster bootstrap or hierarchical preference model for final inference; supplied CLI offers a transparent project-level screening summary. Declare exclusions before unblinding.",
   "note": "Thresholds are prospective engineering/research decisions, not empirical constants. No benchmark comparing multiple models. Tools can remain useful after discarding the musical prior.",
-  "executionRecord": "evidence/evaluation-v2/analysis.json; zero human ratings; thresholds unchanged"
+  "executionRecord": "evidence/evaluation-v2/analysis.json; zero human ratings; thresholds unchanged",
+  "repeatedSystemOneFollowup": {
+    "id": "brief-driven-system-one-tree-v1",
+    "status": "prospective; controller unimplemented; no results",
+    "motivation": "Reduce main-agent reasoning tokens through repeated local choices over measured tool actions, preserving final design quality.",
+    "input": "An actual interview, approved product/visual brief, real content/assets, constraints and review policy shared by both conditions.",
+    "conditions": [
+      "same main agent with design guidance",
+      "same main agent with guidance plus repeated calls to one local selector and deterministic tools"
+    ],
+    "feedback": "Clarifications and art-direction feedback are allowed, logged and supplied under a comparable policy; no zero-interview/no-direction gate.",
+    "decisionTrace": [
+      "parent/branch identity",
+      "brief and state references",
+      "typed action/option identity",
+      "actual tool observations",
+      "invalidated dependencies and factor effects",
+      "remaining budget",
+      "backtracking and escalation"
+    ],
+    "metrics": [
+      "main-agent tokens and calls",
+      "local-selector tokens and calls separately",
+      "selector startup/residency and latency",
+      "measurement/tool latency",
+      "branch depth/width/backtracking",
+      "repeated and invalid decisions",
+      "human interactions and attempts to accepted quality",
+      "hard and responsive failures",
+      "blinded full-product preference"
+    ],
+    "music": "Optional secondary prior ablation; not the core architecture or acceptance gate.",
+    "historicalBoundary": "The twelve earlier trials evaluated flat candidate generation plus end selection, not this repeated tool-guided tree. Historical results and thresholds above are unchanged."
+  }
 }

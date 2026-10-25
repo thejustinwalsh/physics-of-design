@@ -3,7 +3,7 @@ name: physics-of-design
 description: Use the Physics of Design toolkit for measured, revisable typography, color and responsive composition decisions when this CLI/MCP is available.
 ---
 
-Use actual content and licensed font files. Preserve the caller's framework and art direction. The toolkit emits React + StyleX and React Native flex layouts; it is not a component catalog.
+Start from the existing interview, product/visual brief and approved direction; ask only about material gaps. Human art direction is an input, not an autonomy failure. Use actual content and licensed font files. Preserve the caller's framework and art direction. The toolkit emits React + StyleX and React Native flex layouts; it is not a component catalog.
 
 Discover only what is needed: CLI `design --help`, or MCP `design_catalog` followed by one command schema. Use `design_execute` summaries and session result references to avoid repeating content, states and renderer receipts. Request full JSON only for implementation or diagnosis. The CLI retains full composable JSON.
 
@@ -16,3 +16,5 @@ Compare rendered alternatives at phone, iPad/narrow-window and desktop widths. I
 Read the repository README for execution, docs/factor-engine.md for equations, and docs/system-report.md for measured outcomes and gaps. Follow AGENT-PLEDGE.md within the operator's publishing permissions.
 
 For complete product surfaces, load [the composition workflow](references/composition.md). Use `composition plan`, authored alignment contracts and `platform audit`; require real task transitions and actual native app proof. Keep the main context small by discovering one schema and reading one reference at a time.
+
+The intended efficiency mechanism is repeated local System 1 choices over measured tool actions; music is an optional prior. Physics/energy means coupled tool-exposed effects. Current `system relax` plus `choice select` provides a flat batch and end selection, not a persistent decision-tree controller; do not claim that loop or token savings exist yet. Read [the architecture contract](../../../docs/adr-001.md#brief-driven-system-1-tool-decision-tree) when extending orchestration.
