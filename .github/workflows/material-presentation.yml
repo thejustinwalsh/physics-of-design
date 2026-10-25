@@ -1,0 +1,42 @@
+name: material-presentation
+on:
+  workflow_dispatch:
+  push:
+    branches: [diagnose/linux-webkit-presentation]
+permissions:
+  contents: read
+jobs:
+  linux-diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit --only-shell
+      - name: Strict uninstrumented control
+        id: control
+        continue-on-error: true
+        env:
+          DESIGN_DOM_GPU_OUTPUT: artifacts/material-presentation/control
+          DESIGN_DOM_GPU_READBACK_DIAGNOSTIC: '0'
+        run: node scripts/prove-dom-surface-gpu.mjs
+      - name: Separate instrumented browser run
+        id: instrumented
+        if: ${{ !cancelled() && steps.control.outcome != 'skipped' }}
+        continue-on-error: true
+        env:
+          DESIGN_DOM_GPU_OUTPUT: artifacts/material-presentation/instrumented
+          DESIGN_DOM_GPU_READBACK_DIAGNOSTIC: '1'
+        run: node scripts/prove-dom-surface-gpu.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: material-presentation
+          path: artifacts/material-presentation
+          if-no-files-found: warn
+      - name: Preserve strict failure status
+        if: ${{ !cancelled() && (steps.control.outcome != 'success' || steps.instrumented.outcome != 'success') }}
+        run: exit 1

@@ -12,6 +12,8 @@ import {
 } from './dom-surface-observation.mjs';
 const output =
   process.env.DESIGN_DOM_GPU_OUTPUT ?? 'artifacts/dom-surfaces-gpu';
+const readbackDiagnostic =
+  process.env.DESIGN_DOM_GPU_READBACK_DIAGNOSTIC === '1';
 await mkdir(output, { recursive: true });
 const files = [
   'scripts/dom-surface-observation.mjs',
@@ -45,6 +47,108 @@ const report = {
     'Contrast covers the recorded real DOM copy at sampled poses/exposures. It cannot certify every supplied color, backdrop or motion path.',
   ],
 };
+if (readbackDiagnostic)
+  report.diagnostic = {
+    kind: 'same-stack-readback',
+    outputUniformValues: ['lit', 'diffuse', 'specular', 'normal', 'roughness'],
+    caveat:
+      'Diagnostic-only synchronous readPixels/uniform queries perturb execution and can hide the timing failure. Compare with the separately executed uninstrumented control; this is not a production fix or GPU timing benchmark.',
+    engines: [],
+  };
+async function installReadbackDiagnostic(page) {
+  await page.evaluate(() => {
+    const trace = (window.__dtReadback = {
+      current: null,
+      sequence: 0,
+      records: [],
+      dropped: 0,
+      runtime: null,
+    });
+    const original = WebGL2RenderingContext.prototype.drawArrays;
+    const counts = new WeakMap();
+    WebGL2RenderingContext.prototype.drawArrays = function (...args) {
+      const result = original.apply(this, args);
+      const sequence = ++trace.sequence;
+      const canvasDraw = (counts.get(this) ?? 0) + 1;
+      counts.set(this, canvasDraw);
+      const canvas = this.canvas;
+      if (
+        !trace.current ||
+        canvas.closest?.('.proof-card')?.dataset.index !== '1'
+      )
+        return result;
+      if (trace.records.length >= 32) {
+        trace.dropped++;
+        return result;
+      }
+      const record = {
+        sequence,
+        canvasDraw,
+        canvasIndex: 1,
+        probeId: trace.current.id,
+        requested: { ...trace.current },
+      };
+      const start = performance.now();
+      try {
+        const program = this.getParameter(this.CURRENT_PROGRAM);
+        const uniform = (name) =>
+          this.getUniform(program, this.getUniformLocation(program, name));
+        record.uniforms = {
+          output: uniform('uOutput'),
+          roughness: uniform('uRoughness'),
+          metalness: uniform('uMetalness'),
+        };
+        const rect = canvas.getBoundingClientRect();
+        const x = Math.floor(rect.x + rect.width / 2);
+        const y = Math.floor(rect.y + rect.height / 2);
+        const width = this.drawingBufferWidth,
+          height = this.drawingBufferHeight;
+        const px = Math.min(
+          width - 1,
+          Math.max(0, Math.floor(((x + 0.5 - rect.x) * width) / rect.width)),
+        );
+        const py =
+          height -
+          1 -
+          Math.min(
+            height - 1,
+            Math.max(
+              0,
+              Math.floor(((y + 0.5 - rect.y) * height) / rect.height),
+            ),
+          );
+        record.screenshotPoint = { x: x + scrollX, y: y + scrollY };
+        record.buffer = { width, height, x: px, y: py };
+        record.defaultDrawFramebuffer =
+          this.getParameter(this.DRAW_FRAMEBUFFER_BINDING) === null;
+        record.defaultReadFramebuffer =
+          this.getParameter(this.READ_FRAMEBUFFER_BINDING) === null;
+        const rgba = new Uint8Array(4);
+        this.readPixels(px, py, 1, 1, this.RGBA, this.UNSIGNED_BYTE, rgba);
+        record.rawRgba = [...rgba];
+        record.readError = this.getError();
+        if (!trace.runtime) {
+          const debug = this.getExtension('WEBGL_debug_renderer_info');
+          trace.runtime = {
+            contextAttributes: this.getContextAttributes(),
+            vendor: this.getParameter(this.VENDOR),
+            renderer: this.getParameter(this.RENDERER),
+            unmaskedRenderer: debug
+              ? this.getParameter(debug.UNMASKED_RENDERER_WEBGL)
+              : null,
+            userAgent: navigator.userAgent,
+            devicePixelRatio,
+          };
+        }
+      } catch (error) {
+        record.error = String(error);
+      }
+      record.synchronousProbeMs = performance.now() - start;
+      trace.records.push(record);
+      return result;
+    };
+  });
+}
 const check = (engine, name, passed, detail) =>
   report.checks.push({ engine, name, passed, detail });
 const bundle = (
@@ -207,8 +311,9 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     headless: true,
     ...(executablePath ? { executablePath } : {}),
   });
+  let page;
   try {
-    const page = await browser.newPage({
+    page = await browser.newPage({
       viewport: { width: 1100, height: 1250 },
       deviceScaleFactor: 1,
     });
@@ -217,6 +322,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     await page.setContent(
       '<!doctype html><html><head><meta charset="utf-8"></head><body></body></html>',
     );
+    if (readbackDiagnostic) await installReadbackDiagnostic(page);
     await page.addScriptTag({ content: bundle });
     await page.evaluate(
       (inputs) => (window.proof = DomProof.mount(inputs)),
@@ -415,8 +521,16 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     for (const metalness of [0, 1])
       for (const roughness of [0.3, 0.7])
         for (const pass of ['diffuse', 'specular']) {
+          const probeId = `ggx-${parity.length}`;
           await page.evaluate(
-            ({ metalness, roughness, pass }) => {
+            ({ metalness, roughness, pass, probeId }) => {
+              if (window.__dtReadback)
+                window.__dtReadback.current = {
+                  id: probeId,
+                  metalness,
+                  roughness,
+                  pass,
+                };
               proof.change(1, {
                 metalness,
                 roughness,
@@ -435,7 +549,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
               proof.controllers[1].setOutput(pass);
               proof.hideText(true);
             },
-            { metalness, roughness, pass },
+            { metalness, roughness, pass, probeId },
           );
           const oracle = await page.evaluate(
             (pass) => proof.oracle(1, pass),
@@ -460,6 +574,18 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
             { png, ...oracle },
           );
           await page.evaluate(() => proof.hideText(false));
+          const diagnosticTrace = readbackDiagnostic
+            ? await page.evaluate((probeId) => {
+                const trace = window.__dtReadback;
+                trace.current = null;
+                return {
+                  probeId,
+                  drawSequences: trace.records
+                    .filter((r) => r.probeId === probeId)
+                    .map((r) => r.sequence),
+                };
+              }, probeId)
+            : null;
           parity.push({
             metalness,
             roughness,
@@ -467,6 +593,12 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
             expected: oracle.expected,
             observed,
             captureSha256,
+            ...(diagnosticTrace
+              ? {
+                  diagnosticTrace,
+                  screenshotPoint: { x: oracle.x, y: oracle.y },
+                }
+              : {}),
             maxChannelError: Math.max(
               ...observed.map((v, i) => Math.abs(v - oracle.expected[i])),
             ),
@@ -478,6 +610,31 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       parity.every((p) => p.maxChannelError < 3),
       parity,
     );
+    if (readbackDiagnostic) {
+      const trace = await page.evaluate(() => window.__dtReadback);
+      check(
+        engine,
+        'diagnostic trace covers each selected screenshot probe at the same pixel',
+        trace.dropped === 0 &&
+          parity.every(
+            (p) =>
+              p.diagnosticTrace.drawSequences.length > 0 &&
+              p.diagnosticTrace.drawSequences.every((sequence) => {
+                const r = trace.records.find((r) => r.sequence === sequence);
+                return (
+                  !r.error &&
+                  r.readError === 0 &&
+                  r.rawRgba?.length === 4 &&
+                  r.defaultReadFramebuffer &&
+                  r.defaultDrawFramebuffer &&
+                  r.screenshotPoint.x === p.screenshotPoint.x &&
+                  r.screenshotPoint.y === p.screenshotPoint.y
+                );
+              }),
+          ),
+        { records: trace.records.length, dropped: trace.dropped },
+      );
+    }
     await page.evaluate(() => {
       proof.change(0, { textureAmount: 0 });
       proof.controllers[0].setOutput('normal');
@@ -848,6 +1005,17 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
   } catch (error) {
     check(engine, 'proof completed without interruption', false, String(error));
   } finally {
+    if (readbackDiagnostic && page && !page.isClosed()) {
+      try {
+        report.diagnostic.engines.push({
+          engine,
+          version: browser.version(),
+          trace: await page.evaluate(() => window.__dtReadback),
+        });
+      } catch (error) {
+        report.diagnostic.engines.push({ engine, error: String(error) });
+      }
+    }
     await writeFile(`${output}/proof.json`, JSON.stringify(report, null, 2));
     await browser.close();
   }
