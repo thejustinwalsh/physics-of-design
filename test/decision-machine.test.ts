@@ -8,7 +8,7 @@ import {
   type DesignHandoffInput,
 } from '../src/decision-machine.js';
 import { resolveDesignRuntime } from '../src/decision-runtime.js';
-import type { Expression } from '../src/energy.js';
+import { compileEnergy, type Expression } from '../src/energy.js';
 
 const ref = (name: string): Expression => ({ ref: name });
 const op = (
@@ -107,6 +107,207 @@ function fixture(): DesignHandoffInput {
     },
   };
 }
+
+function scenarioBandFixture(): DesignHandoffInput {
+  const input = fixture();
+  input.program.factors[0]!.bands = [{ min: 358, max: 358 }];
+  input.program.factors[0]!.scenarioBands = {
+    tablet: [{ min: 802, max: 802 }],
+  };
+  return input;
+}
+
+test('scenario bands agree across compiler, portable/trusted runtime, actor reflow and zero-search replay', () => {
+  const input = scenarioBandFixture();
+  assert.equal(
+    compileEnergy(input.program).evaluate(input.assignment).hardFailures,
+    0,
+  );
+  const handoff = createDesignHandoff(input);
+  for (const scenario of input.program.scenarios) {
+    const portable = resolveDesignRuntime(handoff, scenario.values);
+    assert.equal(portable.admissible, true);
+    assert.equal(portable.scenarioResolution.scenarioId, scenario.id);
+    assert.deepEqual(resolveHandoff(handoff, scenario.values), portable);
+    const replay = replayDesignHandoff({
+      program: input.program,
+      machine: input.machine,
+      recipe: handoff,
+      scenario: scenario.values,
+    });
+    assert.equal(replay.status, 'replayed');
+    assert.equal(replay.selectorCalls, 0);
+    assert.ok('energySearches' in replay && replay.energySearches === 0);
+  }
+  const actor = createDesignActor(handoff, { width: 390 }).start();
+  actor.send({
+    type: 'REFLOW',
+    scenario: { width: 834 },
+    scenarioId: 'tablet',
+  });
+  assert.equal(actor.getSnapshot().context.facts.admissible, true);
+  assert.equal(actor.getSnapshot().context.facts.values.width, 834);
+  actor.send({
+    type: 'REFLOW',
+    scenario: { width: 390 },
+    scenarioId: 'tablet',
+  });
+  assert.equal(actor.getSnapshot().context.reflow.status, 'rejected');
+  assert.equal(actor.getSnapshot().context.facts.values.width, 834);
+  actor.stop();
+  assert.throws(
+    () => resolveHandoff(handoff, { width: 390 }, { scenarioId: 'tablet' }),
+    /exactly/,
+  );
+  assert.throws(
+    () =>
+      resolveDesignRuntime(handoff, { width: 390 }, { scenarioId: 'missing' }),
+    /exactly/,
+  );
+});
+
+test('restrictive named bands cannot falsely pass a permissive base band', () => {
+  const input = scenarioBandFixture();
+  input.program.factors[0]!.bands = [{ min: 100, max: 2000 }];
+  delete input.program.variables[0]!.locked;
+  const handoff = createDesignHandoff(input);
+  const invalid = { ...handoff, assignment: { gutter: 24 } };
+  assert.equal(
+    compileEnergy(input.program).evaluate(invalid.assignment).hardFailures,
+    1,
+  );
+  const facts = resolveDesignRuntime(invalid, { width: 834 });
+  assert.equal(facts.admissible, false);
+  assert.deepEqual(facts.failures, ['content-minimum']);
+  assert.throws(
+    () => createDesignHandoff({ ...input, assignment: invalid.assignment }),
+    /rejected/,
+  );
+});
+
+test('duplicate vectors with divergent bands require an explicit matching scenario ID', () => {
+  const input = fixture();
+  input.program.scenarios.push({
+    id: 'phone-alternate',
+    values: { width: 390 },
+  });
+  input.program.factors[0]!.scenarioBands = {
+    'phone-alternate': [{ min: 350, max: 400 }],
+  };
+  const handoff = createDesignHandoff(input);
+  const ambiguous = resolveHandoff(handoff, { width: 390 });
+  assert.equal(ambiguous.admissible, false);
+  assert.equal(ambiguous.applicability, 'scenario-bands-unresolved');
+  assert.deepEqual(ambiguous.scenarioResolution.unresolvedFactors, [
+    'content-minimum',
+  ]);
+  assert.throws(
+    () => createDesignActor(handoff, { width: 390 }),
+    /applicability/,
+  );
+  const actor = createDesignActor(
+    handoff,
+    { width: 390 },
+    { scenarioId: 'phone-alternate' },
+  ).start();
+  actor.send({ type: 'REFLOW', scenario: { width: 390 } });
+  assert.equal(actor.getSnapshot().context.reflow.status, 'requires-search');
+  assert.equal(
+    actor.getSnapshot().context.facts.scenarioResolution.scenarioId,
+    'phone-alternate',
+  );
+  actor.send({ type: 'REFLOW', scenario: { width: 390 }, scenarioId: 'phone' });
+  assert.equal(actor.getSnapshot().context.reflow.status, 'resolved');
+  actor.stop();
+  const replay = replayDesignHandoff({
+    program: input.program,
+    machine: input.machine,
+    recipe: handoff,
+    scenario: { width: 390 },
+    scenarioId: 'phone-alternate',
+  });
+  assert.equal(replay.status, 'replayed');
+  input.program.factors[0]!.scenarioBands!['phone-alternate'] =
+    input.program.factors[0]!.bands;
+  assert.equal(
+    resolveHandoff(createDesignHandoff(input), { width: 390 }).admissible,
+    true,
+  );
+});
+
+test('unsampled hard overrides fail closed unless an identity-bound base-band policy is declared', () => {
+  const input = scenarioBandFixture();
+  input.program.factors[0]!.bands = [{ min: 300, max: 900 }];
+  const handoff = createDesignHandoff(input);
+  const unresolved = resolveHandoff(handoff, { width: 600 });
+  assert.equal(unresolved.admissible, false);
+  assert.equal(unresolved.applicability, 'scenario-bands-unresolved');
+  assert.equal(unresolved.scenarioResolution.status, 'unresolved');
+  assert.equal(
+    resolveHandoff(createDesignHandoff(fixture()), { width: 600 }).admissible,
+    true,
+  );
+  input.runtimePolicy = { unsampledScenarioBands: 'base' };
+  const permitted = createDesignHandoff(input);
+  assert.notEqual(permitted.identity, handoff.identity);
+  const resolved = resolveHandoff(permitted, { width: 600 });
+  assert.equal(resolved.admissible, true);
+  assert.equal(resolved.scenarioResolution.status, 'explicit-base-policy');
+  assert.deepEqual(resolveDesignRuntime(permitted, { width: 600 }), resolved);
+  assert.equal(
+    resolveHandoff(permitted, { width: 1000 }).admissible,
+    false,
+    'Explicit base policy does not expand the input envelope',
+  );
+  const replayInput = {
+    program: input.program,
+    machine: input.machine,
+    runtimePolicy: input.runtimePolicy,
+    recipe: permitted,
+    scenario: { width: 600 },
+  };
+  assert.equal(replayDesignHandoff(replayInput).status, 'replayed');
+  const { runtimePolicy, ...withoutPolicy } = replayInput;
+  assert.equal(replayDesignHandoff(withoutPolicy).status, 'invalidated');
+  const old = structuredClone(handoff) as any;
+  delete old.runtimeSemantics;
+  assert.equal(
+    replayDesignHandoff({ ...withoutPolicy, recipe: old }).status,
+    'invalidated',
+  );
+});
+
+test('unsampled preference overrides remain unresolved without inventing a hard layout failure', () => {
+  const input = fixture();
+  input.program.factors.push({
+    id: 'soft-scale',
+    expression: ref('contentWidth'),
+    bands: [{ min: 350, max: 400 }],
+    scenarioBands: { tablet: [{ min: 790, max: 810 }] },
+    scale: 1,
+    mode: 'preference',
+    category: 'test',
+    provenance: { kind: 'brief', source: 'Synthetic responsive preference' },
+  });
+  const handoff = createDesignHandoff(input);
+  const facts = resolveHandoff(handoff, { width: 600 });
+  assert.equal(facts.admissible, true);
+  assert.deepEqual(facts.failures, []);
+  assert.equal(facts.scenarioResolution.status, 'unresolved');
+  assert.deepEqual(facts.scenarioResolution.unresolvedFactors, ['soft-scale']);
+  input.program.scenarios.push({
+    id: 'phone-alternate',
+    values: { width: 390 },
+  });
+  input.program.factors[1]!.scenarioBands!['phone-alternate'] = [
+    { min: 358, max: 358 },
+  ];
+  assert.equal(
+    resolveHandoff(createDesignHandoff(input), { width: 390 }).admissible,
+    false,
+    'Divergent named meanings require explicit scenario selection even for preference bands',
+  );
+});
 
 test('handoff resolves numeric design decisions and keeps renderer verification pending', () => {
   const handoff = createDesignHandoff(fixture());

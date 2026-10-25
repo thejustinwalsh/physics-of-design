@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "recordedAt": "2026-10-25T11:22:19.734721+00:00",
+  "respondent": {
+    "kind": "synthetic-Astra",
+    "role": "delegated art director and implementation reviewer",
+    "humanApproval": false
+  },
+  "context": "User explicitly requested a simulated brief interview because they cannot answer now; these are revisable authored hypotheses, not human preferences.",
+  "direction": "DELIBERATE FRICTION",
+  "answers": [
+    {
+      "question": 1,
+      "topic": "audience_task_conversion",
+      "answer": "Design-minded developers and art directors who distrust disconnected math demos. Main action: open the executable design field, compare a real alternative, inspect its constraint evidence, then export or replay the chosen inputs.",
+      "evidence": "authored synthetic design judgment"
+    },
+    {
+      "question": 2,
+      "topic": "emotion_risk",
+      "answer": "Restless, exacting, inventive, physical. High compositional risk: oversized type, abrupt scale shifts, deliberate asymmetry, one electric signal color and hard chapter cuts. Low usability risk: stable controls, clear names, no scroll traps or essential motion.",
+      "evidence": "authored synthetic design judgment"
+    },
+    {
+      "question": 3,
+      "topic": "narrative_copy",
+      "answer": "Make the rules. Then bend them. / A design field for deliberate friction. / Pull a value. Watch the whole composition answer. Keep the reasoning with the result. Chapter sequence: Set the intent \u2192 Feel the response \u2192 Inspect the consequence \u2192 Keep a direction.",
+      "evidence": "authored synthetic design judgment"
+    },
+    {
+      "question": 4,
+      "topic": "color_material_light",
+      "answer": "Primary direction: near-black ink, warm off-white substrate, acidic yellow signal and vermilion annotations. Counterdirection: cobalt enamel against cool silver with warm content panels. DOM light must cross the actual editorial panel and change a specular edge; content remains on its stable shield. No claim that CSS glass is transmitted physical glass.",
+      "evidence": "authored synthetic design judgment"
+    },
+    {
+      "question": 5,
+      "topic": "choreography",
+      "answer": "Scroll advances one bounded visual phase line and translates a decorative registration strip, never paragraphs or slider rails. Pointer moves light on an actual content card. Spring retarget demonstrates continuity. Range controls publish latest values once per frame, with final value flushed. No obligatory reveals hiding evidence or surprise pinned scroll.",
+      "evidence": "authored synthetic design judgment"
+    },
+    {
+      "question": 6,
+      "topic": "responsive_topology",
+      "answer": "Phone: decisive title/action, compact material demonstration, controls before preview, selectable inspector below. iPad: split controls and preview when each retains useful width, never desktop squeezed into two narrow columns. Desktop: large editorial title with asymmetric visual and adjacent operative inspector. Persist edits across scenario switches.",
+      "evidence": "authored synthetic design judgment"
+    },
+    {
+      "question": 7,
+      "topic": "inspector_decisions",
+      "answer": "Select a real region, see its current browser rectangle beside its proposed rectangle, read the equation and its authored source, identify gap/alignment consequences, change scenario and see evidence update. Export current equation inputs and measured receipt. No disconnected miniature wireframe presented as verification.",
+      "evidence": "authored synthetic design judgment"
+    },
+    {
+      "question": 8,
+      "topic": "clarity_accessibility",
+      "answer": "All copy and task actions remain present at reduced motion; lighting falls back to a static finish. Keyboard operation and focus labels remain native. Opaque readable content shield, 320px reflow, nonmoving slider rails and explicit unknown geometry. Device tilt optional and unsupported state honest.",
+      "evidence": "authored synthetic design judgment"
+    },
+    {
+      "question": 9,
+      "topic": "anti_goals",
+      "answer": "No beige generic card wall; no endless torus showcase detached from UI; no universal beauty scalar; no synthetic testimonials; no hardcoded choice presented as solver output; no model inference on drag; no cross-engine or physical-device claims from a local capture.",
+      "evidence": "authored synthetic design judgment"
+    },
+    {
+      "question": 10,
+      "topic": "falsification",
+      "answer": "Real pointer drags must retain contact and move values monotonically without rail drift. Current preview boxes must match the resolver at supported scenarios. Material edits must alter actual rendered UI. Trace every token to authored input or tool result; stage choices must come from retained candidates. Record failures, synthetic critique and unknowns separately. Test reduced motion, save/replay, downloads, all tabs and every visible action.",
+      "evidence": "authored synthetic design judgment"
+    }
+  ],
+  "activation": {
+    "skill": "design-theory",
+    "read": [
+      {
+        "path": ".agents/skills/design-theory/SKILL.md",
+        "sha256": "00bbeff1a9ac3155d66f3a797c8135a79764fa0be4adea47d6947a84800c9ec5"
+      },
+      {
+        "path": ".agents/skills/design-theory/references/composition.md",
+        "sha256": "1d85703fa983939e7d3c01836161a5061cbedc4f91ac71429c0e43b6bdbea894"
+      },
+      {
+        "path": ".agents/skills/design-theory/references/motion-materials.md",
+        "sha256": "21a4142cf5331d59f10f7456572fc1be158c463015c1d8a87423f78292c9cb9f"
+      },
+      {
+        "path": ".agents/skills/design-theory/references/inspection-prose.md",
+        "sha256": "91552572d7145c1c9cf5b957dff62105ec7a84426dcd6ae61ee281ddc1a6b895"
+      },
+      {
+        "path": ".agents/skills/design-theory/references/design-machine.md",
+        "sha256": "b9fd4672080b75a8f696ab91abe738331f88fe632c9aab062b91b6031b3c3963"
+      },
+      {
+        "path": "docs/skill-comparison.md",
+        "sha256": "4b36146106a9c270678e05b25221066a2de3c8d2c52a86c9e7514949817a832f"
+      },
+      {
+        "path": "research/impeccable-provenance.json",
+        "sha256": "37bba9479ef5a939e42fd2f86bfbb290c070bb461e35e50760050a0e1920f4e0"
+      }
+    ],
+    "externalGuidance": "Pinned Impeccable/Elaya comparison reread; qualitative practices, not empirical aesthetic coefficients."
+  },
+  "reusableRules": [
+    "Direct-manipulation controls must not move their own rail through dependent content height changes.",
+    "A natural-text measurement may update a proposal before paint; discard-to-zero transitions are not measurements.",
+    "Measured overlays belong to current DOM and must carry scenario/input identity.",
+    "Keep live perceptual response separate from expensive derivations, using one frame clock and bounded latest-only updates.",
+    "Material and motion demonstrations must serve actual content, with reversible edits and honest evidence provenance."
+  ]
+}

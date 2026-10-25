@@ -1,0 +1,4389 @@
+{
+  "checkedAt": "2026-10-25T15:24:25.459Z",
+  "scope": "This explanatory artifact only. Browser interaction, geometry and reference checks do not rerun historical product proofs or establish full accessibility.",
+  "checks": [
+    {
+      "name": "chromium/320/energy/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "cap",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "weight",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/320/dependency/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "changed-path",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/320/workflow/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "First run",
+            "x": 18,
+            "right": 108.453125,
+            "width": 90.453125
+          },
+          {
+            "id": "Matching replay",
+            "x": 117.453125,
+            "right": 266.9375,
+            "width": 149.484375
+          },
+          {
+            "id": "Change target",
+            "x": 18,
+            "right": 154.75,
+            "width": 136.75
+          },
+          {
+            "id": "Recompute",
+            "x": 163.75,
+            "right": 278.84375,
+            "width": 115.09375
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/320/scenario/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "scenario-mode",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/320/gate/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "gate-mode",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/320/binding/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "binding-mode",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/320/specialists/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "motion-time",
+            "x": 36,
+            "right": 288,
+            "width": 252
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/390/energy/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "cap",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "weight",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/390/dependency/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "changed-path",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/390/workflow/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "First run",
+            "x": 18,
+            "right": 108.453125,
+            "width": 90.453125
+          },
+          {
+            "id": "Matching replay",
+            "x": 117.453125,
+            "right": 266.9375,
+            "width": 149.484375
+          },
+          {
+            "id": "Change target",
+            "x": 18,
+            "right": 154.75,
+            "width": 136.75
+          },
+          {
+            "id": "Recompute",
+            "x": 163.75,
+            "right": 278.84375,
+            "width": 115.09375
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/390/scenario/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "scenario-mode",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/390/gate/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "gate-mode",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/390/binding/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "binding-mode",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/390/specialists/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "motion-time",
+            "x": 36,
+            "right": 358,
+            "width": 322
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/834/energy/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "cap",
+            "x": 36,
+            "right": 412.5,
+            "width": 376.5
+          },
+          {
+            "id": "weight",
+            "x": 421.5,
+            "right": 798,
+            "width": 376.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/834/dependency/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "changed-path",
+            "x": 36,
+            "right": 798,
+            "width": 762
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/834/workflow/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "First run",
+            "x": 36,
+            "right": 126.453125,
+            "width": 90.453125
+          },
+          {
+            "id": "Matching replay",
+            "x": 135.453125,
+            "right": 284.9375,
+            "width": 149.484375
+          },
+          {
+            "id": "Change target",
+            "x": 293.9375,
+            "right": 430.6875,
+            "width": 136.75
+          },
+          {
+            "id": "Recompute",
+            "x": 439.6875,
+            "right": 554.78125,
+            "width": 115.09375
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/834/scenario/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "scenario-mode",
+            "x": 36,
+            "right": 798,
+            "width": 762
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/834/gate/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "gate-mode",
+            "x": 36,
+            "right": 798,
+            "width": 762
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/834/binding/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "binding-mode",
+            "x": 36,
+            "right": 798,
+            "width": 762
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/834/specialists/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "motion-time",
+            "x": 62,
+            "right": 776,
+            "width": 714
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/1440/energy/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "cap",
+            "x": 181,
+            "right": 715.5,
+            "width": 534.5
+          },
+          {
+            "id": "weight",
+            "x": 724.5,
+            "right": 1259,
+            "width": 534.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/1440/dependency/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "changed-path",
+            "x": 181,
+            "right": 1259,
+            "width": 1078
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/1440/workflow/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "First run",
+            "x": 181,
+            "right": 271.453125,
+            "width": 90.453125
+          },
+          {
+            "id": "Matching replay",
+            "x": 280.453125,
+            "right": 429.9375,
+            "width": 149.484375
+          },
+          {
+            "id": "Change target",
+            "x": 438.9375,
+            "right": 575.6875,
+            "width": 136.75
+          },
+          {
+            "id": "Recompute",
+            "x": 584.6875,
+            "right": 699.78125,
+            "width": 115.09375
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/1440/scenario/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "scenario-mode",
+            "x": 181,
+            "right": 1259,
+            "width": 1078
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/1440/gate/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "gate-mode",
+            "x": 181,
+            "right": 1259,
+            "width": 1078
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/1440/binding/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "binding-mode",
+            "x": 181,
+            "right": 1259,
+            "width": 1078
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/1440/specialists/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "motion-time",
+            "x": 207,
+            "right": 1237,
+            "width": 1030
+          }
+        ]
+      }
+    },
+    {
+      "name": "chromium/preference-and-hard-cap",
+      "passed": true,
+      "detail": "Lowest weighted loss 8: 48px. 7 assignments evaluated; exhaustive coverage complete. No renderer measurements."
+    },
+    {
+      "name": "chromium/dependency-color-path",
+      "passed": true,
+      "detail": "3 of 20 nodes invalidated by /colors. Orange nodes require fresh dependent evidence."
+    },
+    {
+      "name": "chromium/workflow-replay",
+      "passed": true,
+      "detail": "The inputs match. Both stages reevaluate saved assignments, then reuse their selected values without new numeric search or inference."
+    },
+    {
+      "name": "chromium/workflow-stale",
+      "passed": true,
+      "detail": "The preferred column target changed from 600–680px to 700–740px. The first recipe entry is stale; its dependent typography stage has no current assignment and is blocked."
+    },
+    {
+      "name": "chromium/workflow-recompute",
+      "passed": true,
+      "detail": "Searching the changed program chooses a 720px column. That predecessor value changes the typography problem, which now selects 20px. Renderer verification is still pending."
+    },
+    {
+      "name": "chromium/scenario-rejects-false-name",
+      "passed": true,
+      "detail": "Rejected inputError: Runtime scenarioId must name a scenario with exactly these inputs"
+    },
+    {
+      "name": "chromium/actual-recorded-measurement",
+      "passed": true,
+      "detail": "RuntimeChromium 156.0.8078.4Viewport390 × 844; text scale 2titlex 20, y 20, width 350, height 657 CSS pxbodyx 20, y 709, width 350, height 475.17 CSS pxactionx 20, y 1216.17, width 165.41, height 44 CSS pximagex 20, y 1292.17, width 224, height 112 CSS pxHorizontal overflow0Recorded checks passedtrue"
+    },
+    {
+      "name": "chromium/gate-matching",
+      "passed": true,
+      "detail": "Phase: complete. The authored declarations satisfy the gate. No real measurement is implied."
+    },
+    {
+      "name": "chromium/gate-stale",
+      "passed": true,
+      "detail": "Phase: measure. 1 obligation blocks advancement."
+    },
+    {
+      "name": "chromium/binding-provider",
+      "passed": true,
+      "detail": "Bindingbody.fontSizeExpected18 css-pxObserved declaration18 css-pxChecker statuswrong-evidenceAll properties verifiedfalse"
+    },
+    {
+      "name": "chromium/continuous-drag-stable-rail",
+      "passed": true,
+      "detail": {
+        "before": {
+          "x": 62,
+          "y": 875.375,
+          "width": 714,
+          "height": 44
+        },
+        "after": {
+          "x": 62,
+          "y": 875.375,
+          "width": 714,
+          "height": 44
+        },
+        "value": "120"
+      }
+    },
+    {
+      "name": "chromium/keyboard-range",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "chromium/changed-text-enlargement-reduced-motion",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "reduced": true
+      }
+    },
+    {
+      "name": "chromium/report-content",
+      "passed": true,
+      "detail": "How Design Theory works — report"
+    },
+    {
+      "name": "webkit/320/energy/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "cap",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "weight",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/320/dependency/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "changed-path",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/320/workflow/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "First run",
+            "x": 18,
+            "right": 108.453125,
+            "width": 90.453125
+          },
+          {
+            "id": "Matching replay",
+            "x": 117.453125,
+            "right": 266.9375,
+            "width": 149.484375
+          },
+          {
+            "id": "Change target",
+            "x": 18,
+            "right": 154.75,
+            "width": 136.75
+          },
+          {
+            "id": "Recompute",
+            "x": 163.75,
+            "right": 278.84375,
+            "width": 115.09375
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/320/scenario/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "scenario-mode",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/320/gate/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "gate-mode",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/320/binding/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "binding-mode",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/320/specialists/containment",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "body": 320,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 156.5,
+            "width": 138.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 163.5,
+            "right": 302,
+            "width": 138.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 302,
+            "width": 284
+          },
+          {
+            "id": "motion-time",
+            "x": 36,
+            "right": 288,
+            "width": 252
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/390/energy/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "cap",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "weight",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/390/dependency/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "changed-path",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/390/workflow/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "First run",
+            "x": 18,
+            "right": 108.453125,
+            "width": 90.453125
+          },
+          {
+            "id": "Matching replay",
+            "x": 117.453125,
+            "right": 266.9375,
+            "width": 149.484375
+          },
+          {
+            "id": "Change target",
+            "x": 18,
+            "right": 154.75,
+            "width": 136.75
+          },
+          {
+            "id": "Recompute",
+            "x": 163.75,
+            "right": 278.84375,
+            "width": 115.09375
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/390/scenario/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "scenario-mode",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/390/gate/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "gate-mode",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/390/binding/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "binding-mode",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/390/specialists/containment",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "body": 390,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 18,
+            "right": 191.5,
+            "width": 173.5
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 198.5,
+            "right": 372,
+            "width": 173.5
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 18,
+            "right": 372,
+            "width": 354
+          },
+          {
+            "id": "motion-time",
+            "x": 36,
+            "right": 358,
+            "width": 322
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/834/energy/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "cap",
+            "x": 36,
+            "right": 412.5,
+            "width": 376.5
+          },
+          {
+            "id": "weight",
+            "x": 421.5,
+            "right": 798,
+            "width": 376.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/834/dependency/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "changed-path",
+            "x": 36,
+            "right": 798,
+            "width": 762
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/834/workflow/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "First run",
+            "x": 36,
+            "right": 126.453125,
+            "width": 90.453125
+          },
+          {
+            "id": "Matching replay",
+            "x": 135.453125,
+            "right": 284.9375,
+            "width": 149.484375
+          },
+          {
+            "id": "Change target",
+            "x": 293.9375,
+            "right": 430.6875,
+            "width": 136.75
+          },
+          {
+            "id": "Recompute",
+            "x": 439.6875,
+            "right": 554.78125,
+            "width": 115.09375
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/834/scenario/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "scenario-mode",
+            "x": 36,
+            "right": 798,
+            "width": 762
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/834/gate/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "gate-mode",
+            "x": 36,
+            "right": 798,
+            "width": 762
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/834/binding/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "binding-mode",
+            "x": 36,
+            "right": 798,
+            "width": 762
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/834/specialists/containment",
+      "passed": true,
+      "detail": {
+        "width": 834,
+        "scroll": 834,
+        "body": 834,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 36,
+            "right": 233.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 242.96875,
+            "right": 364.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 373.046875,
+            "right": 522.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 531.953125,
+            "right": 688.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 36,
+            "right": 163.125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 172.125,
+            "right": 360.125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 369.125,
+            "right": 559.515625,
+            "width": 190.390625
+          },
+          {
+            "id": "motion-time",
+            "x": 62,
+            "right": 776,
+            "width": 714
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/1440/energy/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "cap",
+            "x": 181,
+            "right": 715.5,
+            "width": 534.5
+          },
+          {
+            "id": "weight",
+            "x": 724.5,
+            "right": 1259,
+            "width": 534.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/1440/dependency/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "changed-path",
+            "x": 181,
+            "right": 1259,
+            "width": 1078
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/1440/workflow/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "First run",
+            "x": 181,
+            "right": 271.453125,
+            "width": 90.453125
+          },
+          {
+            "id": "Matching replay",
+            "x": 280.453125,
+            "right": 429.9375,
+            "width": 149.484375
+          },
+          {
+            "id": "Change target",
+            "x": 438.9375,
+            "right": 575.6875,
+            "width": 136.75
+          },
+          {
+            "id": "Recompute",
+            "x": 584.6875,
+            "right": 699.78125,
+            "width": 115.09375
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/1440/scenario/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "scenario-mode",
+            "x": 181,
+            "right": 1259,
+            "width": 1078
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/1440/gate/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "gate-mode",
+            "x": 181,
+            "right": 1259,
+            "width": 1078
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/1440/binding/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "binding-mode",
+            "x": 181,
+            "right": 1259,
+            "width": 1078
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/1440/specialists/containment",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "body": 1440,
+        "controls": [
+          {
+            "id": "1 · Feasibility & preference",
+            "x": 181,
+            "right": 378.96875,
+            "width": 197.96875
+          },
+          {
+            "id": "2 · Invalidation",
+            "x": 387.96875,
+            "right": 509.046875,
+            "width": 121.078125
+          },
+          {
+            "id": "3 · Search & replay",
+            "x": 518.046875,
+            "right": 667.953125,
+            "width": 149.90625
+          },
+          {
+            "id": "4 · Scenario identity",
+            "x": 676.953125,
+            "right": 833.953125,
+            "width": 157
+          },
+          {
+            "id": "5 · Phase gates",
+            "x": 842.953125,
+            "right": 970.078125,
+            "width": 127.125
+          },
+          {
+            "id": "6 · Consumed properties",
+            "x": 979.078125,
+            "right": 1167.078125,
+            "width": 188
+          },
+          {
+            "id": "7 · Specialist calculations",
+            "x": 181,
+            "right": 371.390625,
+            "width": 190.390625
+          },
+          {
+            "id": "motion-time",
+            "x": 207,
+            "right": 1237,
+            "width": 1030
+          }
+        ]
+      }
+    },
+    {
+      "name": "webkit/preference-and-hard-cap",
+      "passed": true,
+      "detail": "Lowest weighted loss 8: 48px. 7 assignments evaluated; exhaustive coverage complete. No renderer measurements."
+    },
+    {
+      "name": "webkit/dependency-color-path",
+      "passed": true,
+      "detail": "3 of 20 nodes invalidated by /colors. Orange nodes require fresh dependent evidence."
+    },
+    {
+      "name": "webkit/workflow-replay",
+      "passed": true,
+      "detail": "The inputs match. Both stages reevaluate saved assignments, then reuse their selected values without new numeric search or inference."
+    },
+    {
+      "name": "webkit/workflow-stale",
+      "passed": true,
+      "detail": "The preferred column target changed from 600–680px to 700–740px. The first recipe entry is stale; its dependent typography stage has no current assignment and is blocked."
+    },
+    {
+      "name": "webkit/workflow-recompute",
+      "passed": true,
+      "detail": "Searching the changed program chooses a 720px column. That predecessor value changes the typography problem, which now selects 20px. Renderer verification is still pending."
+    },
+    {
+      "name": "webkit/scenario-rejects-false-name",
+      "passed": true,
+      "detail": "Rejected inputError: Runtime scenarioId must name a scenario with exactly these inputs"
+    },
+    {
+      "name": "webkit/actual-recorded-measurement",
+      "passed": true,
+      "detail": "RuntimeChromium 156.0.8078.4Viewport390 × 844; text scale 2titlex 20, y 20, width 350, height 657 CSS pxbodyx 20, y 709, width 350, height 475.17 CSS pxactionx 20, y 1216.17, width 165.41, height 44 CSS pximagex 20, y 1292.17, width 224, height 112 CSS pxHorizontal overflow0Recorded checks passedtrue"
+    },
+    {
+      "name": "webkit/gate-matching",
+      "passed": true,
+      "detail": "Phase: complete. The authored declarations satisfy the gate. No real measurement is implied."
+    },
+    {
+      "name": "webkit/gate-stale",
+      "passed": true,
+      "detail": "Phase: measure. 1 obligation blocks advancement."
+    },
+    {
+      "name": "webkit/binding-provider",
+      "passed": true,
+      "detail": "Bindingbody.fontSizeExpected18 css-pxObserved declaration18 css-pxChecker statuswrong-evidenceAll properties verifiedfalse"
+    },
+    {
+      "name": "webkit/continuous-drag-stable-rail",
+      "passed": true,
+      "detail": {
+        "before": {
+          "x": 62,
+          "y": 875.34375,
+          "width": 714,
+          "height": 44
+        },
+        "after": {
+          "x": 62,
+          "y": 875.34375,
+          "width": 714,
+          "height": 44
+        },
+        "value": "120"
+      }
+    },
+    {
+      "name": "webkit/keyboard-range",
+      "passed": true,
+      "detail": "1"
+    },
+    {
+      "name": "webkit/changed-text-enlargement-reduced-motion",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "reduced": true
+      }
+    },
+    {
+      "name": "webkit/report-content",
+      "passed": true,
+      "detail": "How Design Theory works — report"
+    },
+    {
+      "name": "no-uncaught-browser-errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "link/index.html/report.html",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/manifest.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/engine-results.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#energy-310",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/teaching-energy-input.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#graph-103",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/engine-results.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--design-field-streaming-selector--gallery-session.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#decision-workflow-884",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#decision-workflow-949",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--design-field-streaming-selector--gallery-session.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#decision-runtime-54",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#decision-runtime-175",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#validation-machine-134",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/teaching-gate-input.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#output-bindings-229",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--relational-kernels-final--bindings.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#color-120",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#surface-63",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html#motion-dynamics-37",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--design-field-streaming-selector--gallery-session.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--relational-kernels-final--receipt.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--dom-surfaces-gpu--summary.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--design-theory--material-integration--report.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--expo-design-theory--proof.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--expo-template-smoke--proof.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--verification-design-theory-final--summary-recovery-snapshot.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/artifacts--verification-design-theory-android-interruption--summary-recovery-snapshot.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/receipts/evidence--workflow-comparison-2026-10-25--evaluation--adjudication.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/generate.ts",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/browser-verification.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/LICENSE.txt",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/report.html",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/source.html",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/manifest.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/index.html/engine-results.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/index.html",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/index.html",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/manifest.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/engine-results.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/generate.ts",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/execution.log",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#design-context-22",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--design-field-streaming-selector--gallery-session.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/DESIGN.md",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#typography-inspection-65",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#typography-browser-2",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#relational-kernels-192",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#relational-kernels-733",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#commands-1",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#mcp-context-3",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#mcp-context-227",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#energy-60",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#energy-235",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#energy-310",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#energy-567",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#energy-730",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--choice-effectiveness--report.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#graph-4",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#graph-103",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#decision-workflow-45",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#decision-workflow-884",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#decision-workflow-1210",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/engine-results.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#decision-workflow-949",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#decision-workflow-579",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#decision-workflow-807",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--design-field-streaming-selector--gallery-session.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#decision-runtime-54",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#decision-machine-178",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#validation-machine-134",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#validation-machine-270",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#output-bindings-43",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#output-bindings-229",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#color-120",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#motion-dynamics-37",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/source.html#surface-63",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--dom-surfaces-gpu--summary.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--design-theory--material-integration--report.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--relational-kernels-final--receipt.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--expo-design-theory--proof.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--expo-template-smoke--proof.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--verification-design-theory-final--summary.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--verification-design-theory-android-interruption--summary-recovery-snapshot.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/artifacts--verification-design-theory-final--summary-recovery-snapshot.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/android-interruption-diagnostic-excerpt.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/receipts/evidence--workflow-comparison-2026-10-25--evaluation--adjudication.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    },
+    {
+      "name": "link/report.html/browser-verification.json",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "anchorExists": true
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

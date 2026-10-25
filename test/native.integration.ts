@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { parseState } from '../dist/state.js';
 import { NativeRenderer } from '../dist/native.js';
+import { nativeSourceIdentity } from '../scripts/native-source-identity.mjs';
 
 test(
   'actual native Text/Yoga wrapping thresholds, scaled reflow and clipping rejection',
@@ -23,6 +24,11 @@ test(
       assert.equal(measured.engine, 'react-native/Text+Yoga');
       assert.ok(measured.feasible, JSON.stringify(measured.issues));
       assert.ok(measured.runtime.reactNative);
+      assert.equal(
+        measured.runtime.implementationIdentity,
+        await nativeSourceIdentity(),
+        'native receipt must come from the current source-bound harness',
+      );
       const threshold = measured.blocks[0]!.thresholds!.narrower;
       assert.ok(threshold.bracket);
       assert.ok(threshold.bracket[1] - threshold.bracket[0] <= 0.25);

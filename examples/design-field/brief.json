@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "id": "deliberate-friction",
+  "intent": "An energetic design field for developers and art directors: strong type contrast, asymmetric imagery, tactile counterpoint, deliberate nonzero tension, and readable controls before spectacle.",
+  "source": "research/bold-brief-interview.json",
+  "sourceKind": "synthetic-Astra-interview",
+  "title": "Make the rules. Then bend them.",
+  "body": "Pull a value. Watch the whole composition answer. Keep the reasoning with the result. Compare a retained direction, inspect its constraints, and replay the choices that made it.",
+  "action": "Inspect a direction",
+  "titleFont": {
+    "file": "assets/fonts/Lato-Black.ttf",
+    "family": "Lato",
+    "weight": 900
+  },
+  "bodyFont": {
+    "file": "assets/fonts/Lato-Regular.ttf",
+    "family": "Lato",
+    "weight": 400
+  },
+  "image": {
+    "file": "examples/design-theory/still-life.svg",
+    "source": "Original gallery illustration; repository authored",
+    "focalX": 0.62,
+    "focalY": 0.5
+  },
+  "targets": {
+    "hierarchy": [3.2, 4.6],
+    "gapRatio": [1.3, 2.3],
+    "tension": [0.25, 0.55],
+    "imageShare": [0.64, 0.8],
+    "roughnessContrast": [0.2, 0.42],
+    "motionRole": [1, 2],
+    "imageToTextHeight": [0.65, 1.25],
+    "imageToTextHeightByScenario": {
+      "phone": [0.35, 0.75],
+      "phone-large": [0.08, 0.25],
+      "ipad": [0.65, 1.5],
+      "ipad-large": [0.25, 0.75],
+      "desktop": [1, 2],
+      "desktop-large": [0.4, 1.2]
+    }
+  },
+  "weights": {
+    "hierarchy": 2,
+    "reading": 1.3,
+    "density": 0.8,
+    "tension": 2,
+    "image": 1.5,
+    "material": 1.2,
+    "motion": 0.8
+  },
+  "typography": {
+    "titleLeading": 1.04,
+    "titleTrackingEm": -0.04,
+    "bodyTrackingEm": 0
+  },
+  "designContext": "DESIGN.md"
+}

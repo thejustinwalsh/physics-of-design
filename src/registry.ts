@@ -12,6 +12,40 @@ export type Source = {
 };
 export const sources: Source[] = [
   {
+    id: 'css-surface-layers',
+    title: 'CSS Backgrounds and Borders Level 3',
+    url: 'https://www.w3.org/TR/css-backgrounds-3/#box-shadow',
+    kind: 'standard',
+    scope:
+      'Layered backgrounds, rounded clipping and projected box-shadow presentation.',
+    limitation:
+      'CSS geometry and blur are not a physically calibrated material or light transport model.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'css-compositing',
+    title: 'Compositing and Blending Level 1',
+    url: 'https://www.w3.org/TR/compositing-1/#simplealphacompositing',
+    kind: 'standard',
+    scope:
+      'Source-over alpha composition and isolated groups informing DOM surface shielding.',
+    limitation:
+      'Nominal foreground/base-color contrast does not establish final contrast over an arbitrary backdrop.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'pbrt-microfacets',
+    title:
+      'Physically Based Rendering, 4th ed., Roughness Using Microfacet Theory',
+    url: 'https://www.pbr-book.org/4ed/Reflection_Models/Roughness_Using_Microfacet_Theory',
+    kind: 'measurement',
+    scope:
+      'Surface normals, roughness distributions and scattering inform separate physical and appearance descriptors.',
+    limitation:
+      'Our DOM power-lobe and gradients are authored approximations, not this BRDF, refraction or radiometric energy conservation.',
+    checked: '2026-10-25',
+  },
+  {
     id: 'css-variable-fonts',
     title: 'CSS Fonts Level 4 (22 October 2026 working draft)',
     url: 'https://www.w3.org/TR/2026/WD-css-fonts-4-20261022/',
@@ -363,6 +397,47 @@ export const sources: Source[] = [
 ];
 
 export const factorRegistry = [
+  {
+    id: 'dom-surface-light',
+    variables: [
+      'lightDirection',
+      'normal',
+      'roughness',
+      'elevation',
+      'texture',
+      'contentShield',
+      'backdrop',
+      'elapsedTime',
+    ],
+    sources: [
+      'css-surface-layers',
+      'css-compositing',
+      'pbrt-microfacets',
+      'local-policy',
+    ],
+    kind: 'heuristic',
+    uncertainty:
+      'Bounded CSS appearance recipe. Actual composite contrast, frame pacing and hardware behavior require separate renderer observations.',
+  },
+  {
+    id: 'design-field-preferences',
+    variables: [
+      'titleSize',
+      'bodySize',
+      'measure',
+      'leading',
+      'gap',
+      'imageShare',
+      'imageAspect',
+      'roughnessContrast',
+      'motionRole',
+      'designContext',
+    ],
+    sources: ['local-policy', 'uswds', 'wcag-spacing'],
+    kind: 'hypothesis',
+    uncertainty:
+      'Separate measured text containment and authored hierarchy/asymmetry/counterpoint bands. No calibrated tension, aesthetic validity or musical superiority is inferred.',
+  },
   {
     id: 'typography-evidence',
     variables: [

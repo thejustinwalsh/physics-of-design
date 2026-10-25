@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   compileEnergy,
+  EnergySearchOptionsSchema,
   searchEnergy,
   type EnergyProgram,
   type Expression,
@@ -44,6 +45,229 @@ function program(): EnergyProgram {
     factors: [factor('x-target', ref('x'), 1)],
   };
 }
+
+test('bounded variable labels and complete value aliases are semantic identity, not energy', () => {
+  const p = program();
+  const old = compileEnergy(p);
+  p.variables[0]!.label = 'Authored direction';
+  p.variables[0]!.valueAliases = [
+    { value: 2, label: 'Rebound' },
+    { value: 0, label: 'Quiet' },
+    { value: 1, label: 'Settle' },
+  ];
+  const labelled = compileEnergy(p);
+  assert.notEqual(labelled.identity, old.identity);
+  assert.equal(
+    labelled.evaluate({ x: 1 }).energy,
+    old.evaluate({ x: 1 }).energy,
+  );
+  assert.deepEqual(
+    labelled.program.variables[0]!.valueAliases!.map((v) => v.value),
+    [0, 1, 2],
+  );
+  p.variables[0]!.valueAliases!.reverse();
+  assert.equal(compileEnergy(p).identity, labelled.identity);
+  for (const mutate of [
+    (v: EnergyProgram['variables'][number]) => {
+      v.label = 'Changed meaning';
+    },
+    (v: EnergyProgram['variables'][number]) => {
+      v.unit = 'other-unit';
+    },
+    (v: EnergyProgram['variables'][number]) => {
+      v.valueAliases![0]!.label = 'Changed value';
+    },
+  ]) {
+    const changed = structuredClone(p);
+    mutate(changed.variables[0]!);
+    assert.notEqual(compileEnergy(changed).identity, labelled.identity);
+  }
+  for (const aliases of [
+    [{ value: 0, label: 'Missing others' }],
+    [
+      { value: 0, label: 'A' },
+      { value: 1, label: 'B' },
+      { value: 3, label: 'Unknown' },
+    ],
+    [
+      { value: 0, label: 'A' },
+      { value: 1, label: 'B' },
+      { value: 1, label: 'Duplicate' },
+    ],
+    [
+      { value: 0, label: 'Same' },
+      { value: 1, label: 'Same' },
+      { value: 2, label: 'Other' },
+    ],
+  ]) {
+    const invalid = structuredClone(p);
+    invalid.variables[0]!.valueAliases = aliases;
+    assert.throws(() => compileEnergy(invalid), /aliases/);
+  }
+  p.variables[0]!.label = 'x'.repeat(121);
+  assert.throws(() => compileEnergy(p));
+});
+
+test('opt-in retention covers competing cost profiles before filling tied assignments', () => {
+  const p = program();
+  p.variables.push({ id: 'finish', unit: 'index', values: [0, 1, 2] });
+  p.factors = [factor('low', ref('x'), 0), factor('high', ref('x'), 2)];
+  const legacy = searchEnergy({ program: p, options: { limit: 3 } });
+  const diverse = searchEnergy({
+    program: p,
+    options: { limit: 3, retention: 'pareto-diverse' },
+  });
+  assert.deepEqual(
+    legacy.candidates.map((a) => a.assignment.x),
+    [1, 1, 1],
+  );
+  assert.deepEqual(
+    diverse.candidates.map((a) => a.assignment.x),
+    [1, 0, 2],
+  );
+  assert.equal(diverse.candidates[0]!.id, legacy.candidates[0]!.id);
+  assert.equal(diverse.retention!.preferenceProfiles, 3);
+  assert.equal(diverse.retention!.paretoProfiles, 3);
+  assert.equal(diverse.retention!.retainedPreferenceProfiles, 3);
+  assert.equal(diverse.pareto.length, 3);
+  // No new defaults enter old workflow recipe identities or legacy ranking.
+  assert.equal(
+    Object.hasOwn(EnergySearchOptionsSchema.parse({}), 'retention'),
+    false,
+  );
+  assert.equal(
+    Object.hasOwn(
+      EnergySearchOptionsSchema.parse({}),
+      'maxRetentionComparisons',
+    ),
+    false,
+  );
+  assert.deepEqual(
+    searchEnergy({ program: p, options: { limit: 3, retention: 'ranked' } })
+      .candidates,
+    legacy.candidates,
+  );
+});
+
+test('cost plateaus spread across authored domains without manufacturing preference energy', () => {
+  const p = program();
+  p.variables.push({ id: 'y', unit: 'px', values: [0, 10, 20] });
+  p.factors = [factor('wide-band', ref('x'), 0, 2)];
+  const options = { limit: 3, retention: 'pareto-diverse' as const };
+  const run = searchEnergy({ program: p, options });
+  assert.deepEqual(
+    run.candidates.slice(0, 2).map((a) => a.assignment),
+    [
+      { x: 0, y: 0 },
+      { x: 2, y: 20 },
+    ],
+  );
+  assert.ok(run.candidates.every((a) => a.energy === 0));
+  assert.equal(run.retention!.minimumEnergyAssignments, 9);
+  assert.equal(run.retention!.paretoProfiles, 1);
+  assert.equal(run.retention!.jointlySatisfiedAssignments, 9);
+  p.variables.reverse();
+  p.variables.forEach((v) => v.values.reverse());
+  assert.deepEqual(
+    searchEnergy({ program: p, options }).candidates,
+    run.candidates,
+  );
+});
+
+test('retained Pareto profiles agree with an independent full-domain dominance oracle', () => {
+  const p = program();
+  p.variables.push({ id: 'y', unit: 'ratio', values: [0, 1, 2] });
+  p.factors = [
+    factor('low-x', ref('x'), 0),
+    factor('high-sum', op('add', ref('x'), ref('y')), 4),
+    factor('low-y', ref('y'), 0),
+    factor('hard', ref('x'), 0, 1, 'hard'),
+  ];
+  const oracle = [0, 1].flatMap((x) =>
+    [0, 1, 2].map((y) => ({ x, y, vector: [x * x, (x + y - 4) ** 2, y * y] })),
+  );
+  const frontier = oracle.filter(
+    (a) =>
+      !oracle.some(
+        (b) =>
+          b.vector.every((n, i) => n <= a.vector[i]!) &&
+          b.vector.some((n, i) => n < a.vector[i]!),
+      ),
+  );
+  const run = searchEnergy({
+    program: p,
+    options: { limit: 24, retention: 'pareto-diverse' },
+  });
+  assert.equal(run.retention!.paretoComplete, true);
+  assert.deepEqual(
+    run.candidates.map((a) => JSON.stringify(a.assignment)).sort(),
+    frontier.map(({ x, y }) => JSON.stringify({ x, y })).sort(),
+  );
+  assert.ok(run.candidates.every((a) => !a.hardFailures));
+});
+
+test('retention comparison exhaustion is bounded and never claims a partial skyline is Pareto', () => {
+  const p = program();
+  p.factors = [factor('low', ref('x'), 0), factor('high', ref('x'), 2)];
+  const run = searchEnergy({
+    program: p,
+    options: { retention: 'pareto-diverse', maxRetentionComparisons: 1 },
+  });
+  assert.equal(run.statistics.evaluated, 3);
+  assert.equal(run.retention!.comparisons, 1);
+  assert.equal(run.retention!.paretoComplete, false);
+  assert.equal(run.retention!.paretoProfiles, null);
+  assert.deepEqual(run.pareto, []);
+  assert.match(run.retention!.fallback!, /membership unknown/);
+  assert.deepEqual(run.candidates, searchEnergy({ program: p }).candidates);
+});
+
+test('preference reachability distinguishes conflicts, unreachable bands, and no feasible evidence', () => {
+  const p = program();
+  p.factors = [
+    factor('low', ref('x'), 0),
+    factor('high', ref('x'), 2),
+    factor('unreachable', ref('x'), 3),
+  ];
+  const options = { retention: 'pareto-diverse' as const };
+  const run = searchEnergy({ program: p, options });
+  assert.equal(run.retention!.jointlySatisfiedAssignments, 0);
+  for (const id of ['low', 'high'])
+    assert.equal(
+      run.retention!.preferences.find((f) => f.id === id)!.satisfiedAssignments,
+      1,
+    );
+  assert.equal(
+    run.retention!.preferences.find((f) => f.id === 'unreachable')!
+      .minimumResidual,
+    1,
+  );
+  p.factors.push(factor('impossible-hard', ref('x'), 4, 5, 'hard'));
+  const empty = searchEnergy({ program: p, options });
+  assert.equal(empty.retention!.admissibleAssignments, 0);
+  assert.deepEqual(empty.retention!.preferences, []);
+});
+
+test('scenario-specific bands preserve observed values, fallback bands, identity and hard constraints', () => {
+  const p = program();
+  p.scenarios.push({ id: 'enlarged', values: {} });
+  const original = compileEnergy(p);
+  p.factors[0]!.scenarioBands = { enlarged: [{ min: 2, max: 2 }] };
+  const compiled = compileEnergy(p),
+    result = compiled.evaluate({ x: 2 });
+  assert.notEqual(compiled.identity, original.identity);
+  assert.deepEqual(
+    result.factors.map((f) => [f.scenario, f.value, f.energy]),
+    [
+      ['base', 2, 1],
+      ['enlarged', 2, 0],
+    ],
+  );
+  p.factors[0]!.mode = 'hard';
+  assert.equal(compileEnergy(p).evaluate({ x: 2 }).hardFailures, 1);
+  p.factors[0]!.scenarioBands = { misspelled: [{ min: 0, max: 0 }] };
+  assert.throws(() => compileEnergy(p), /Unknown factor scenario/);
+});
 
 test('exhaustive search agrees with an independent coupled three-variable oracle', () => {
   const p = program();

@@ -12,6 +12,7 @@
   "handoff": {
     "version": 1,
     "engine": "design-handoff-v1",
+    "runtimeSemantics": "scenario-bands-v2",
     "program": {
       "version": 1,
       "id": "vela",
@@ -2452,7 +2453,7 @@
       ]
     },
     "scope": "Resolved design choice machine. Energy expresses this brief; it does not certify quality, renderer feasibility or an optimum.",
-    "identity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff"
+    "identity": "29b7b7ea28ec2882ea1268bc88b3231e31a315bf6d6af37e6ca0817ec8c39eaf"
   },
   "palette": {
     "system": {

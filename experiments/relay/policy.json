@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "cliVersion": "0.164.0",
+  "experiment": "relay-three-builders-20261025",
+  "models": {
+    "luna": "gpt-6-luna",
+    "sol": "gpt-6.1-sol",
+    "astra": "gpt-6-astra"
+  },
+  "order": [
+    "luna",
+    "sol",
+    "astra"
+  ],
+  "effort": "high",
+  "serviceTier": "default",
+  "timeoutMs": null,
+  "concurrency": 1,
+  "webTuningRounds": 2,
+  "approvalPolicy": "on-request",
+  "approvalsReviewer": "auto_review",
+  "sandbox": "workspace-write",
+  "sharedManifest": "experiments/relay/shared/input-manifest.json",
+  "toolkitRoots": [
+    "src",
+    "scripts",
+    "test",
+    "codemods",
+    ".agents/skills/design-theory",
+    "examples/kernels"
+  ],
+  "toolkitFiles": [
+    "package.json",
+    "package-lock.json",
+    "tsconfig.json",
+    "physics_of_design_white_paper.md",
+    "docs/relational-kernels.md",
+    "docs/relay-experiment.md",
+    "docs/cli-context.md",
+    "docs/design-field.md",
+    "docs/decision-workflow.md"
+  ],
+  "templateRoot": "experiments/expo-design-theory",
+  "templateFiles": [
+    "package.json",
+    "package-lock.json",
+    "app.json",
+    "babel.config.js",
+    "metro.config.js",
+    "postcss.config.js",
+    "strict.css",
+    "index.js",
+    "src/Scroll.jsx",
+    "src/Scroll.native.jsx",
+    "tsconfig.json",
+    "src/assets.d.ts",
+    "src/useObservations.jsx"
+  ],
+  "pinnedPackages": [
+    "expo",
+    "expo-font",
+    "react",
+    "react-dom",
+    "react-native",
+    "react-native-safe-area-context",
+    "react-native-web",
+    "react-strict-dom",
+    "@expo/metro-runtime",
+    "postcss",
+    "autoprefixer"
+  ],
+  "pinnedTransitivePrefixes": [
+    "@stylexjs/",
+    "lightningcss"
+  ],
+  "requiredSharedFiles": [
+    "experiments/relay/shared/BRIEF.md",
+    "experiments/relay/shared/DESIGN.md",
+    "experiments/relay/shared/TOOL-COVERAGE.md",
+    "experiments/relay/shared/REPORTING.md",
+    "examples/kernels/relay-compact.json",
+    "examples/kernels/relay-measurements.json",
+    "experiments/relay/shared/PLATFORM-RUNTIME.md"
+  ],
+  "requiredSurfaces": [
+    "relay-navigation",
+    "relay-context-toolbar",
+    "relay-overview-summary",
+    "relay-latency-chart",
+    "relay-comparison-charts",
+    "relay-service-table",
+    "relay-service-detail",
+    "relay-incident-queue",
+    "relay-incident-detail",
+    "relay-trace-waterfall",
+    "relay-alert-editor",
+    "relay-command-settings"
+  ],
+  "platforms": [
+    "web",
+    "native-ios",
+    "native-android"
+  ],
+  "runtime": {
+    "luna": {
+      "metro": 8610,
+      "proxy": 8611,
+      "observer": 8612,
+      "bundleId": "local.designtheory.relay.luna"
+    },
+    "sol": {
+      "metro": 8620,
+      "proxy": 8621,
+      "observer": 8622,
+      "bundleId": "local.designtheory.relay.sol"
+    },
+    "astra": {
+      "metro": 8630,
+      "proxy": 8631,
+      "observer": 8632,
+      "bundleId": "local.designtheory.relay.astra"
+    }
+  },
+  "resourcePolicy": "One exclusive host lease covers the coding model, local 4B selector and iOS/Android runtime access. Do not run peer builders or other model workers concurrently. Host simulator/device IDs are supplied in the launch gate, never guessed. No automatic stale-lease takeover.",
+  "evidencePolicy": "Actual events and executable bindings establish recorded calls and consistency, not authenticity, causal design quality, human preference or complete billing. Missing renderer/native evidence stays missing. Self-critique is synthetic."
+}

@@ -1,0 +1,10 @@
+✔ frozen fixture matches deterministic source and contains the complete diagnostic graph (29.822ms)
+✔ fixture validation rejects broken relationships, impossible timing and invalid metrics (10.302542ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 83.507584

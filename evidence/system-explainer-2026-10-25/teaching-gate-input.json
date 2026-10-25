@@ -1,0 +1,112 @@
+{
+  "plan": {
+    "version": 1,
+    "id": "teaching-gate",
+    "designIdentity": "08bbb1a32c98d4ddd701ba6aa53c38e4c2b4fc349d2982cf3f5946016c933bf5",
+    "scenarios": [
+      {
+        "id": "phone",
+        "platform": "web",
+        "width": 390,
+        "height": 1000,
+        "textScale": 1,
+        "colorScheme": "light",
+        "reducedMotion": false,
+        "contentId": "teaching-copy",
+        "source": "Authored gate teaching inputs"
+      },
+      {
+        "id": "ipad",
+        "platform": "web",
+        "width": 834,
+        "height": 1000,
+        "textScale": 1,
+        "colorScheme": "light",
+        "reducedMotion": false,
+        "contentId": "teaching-copy",
+        "source": "Authored gate teaching inputs"
+      },
+      {
+        "id": "desktop",
+        "platform": "web",
+        "width": 1440,
+        "height": 1000,
+        "textScale": 1,
+        "colorScheme": "light",
+        "reducedMotion": false,
+        "contentId": "teaching-copy",
+        "source": "Authored gate teaching inputs"
+      }
+    ],
+    "phases": [
+      {
+        "id": "measure",
+        "purpose": "Demonstrate receipt identity guards",
+        "requirements": [
+          {
+            "id": "geometry-phone",
+            "scenario": "phone",
+            "tool": "illustrative-observation",
+            "inputIdentity": "d5511d58ae89a5136544686b7e471128789e3309c2ec9b520c217067f6abb75d",
+            "evidenceKind": "deterministic",
+            "rationale": "Teaching declaration; not a renderer observation"
+          },
+          {
+            "id": "geometry-ipad",
+            "scenario": "ipad",
+            "tool": "illustrative-observation",
+            "inputIdentity": "36b5f42ae0dbd5b55e70cd9ddfcd1fed4742aafde24c08e18c3b35e2382a6468",
+            "evidenceKind": "deterministic",
+            "rationale": "Teaching declaration; not a renderer observation"
+          },
+          {
+            "id": "geometry-desktop",
+            "scenario": "desktop",
+            "tool": "illustrative-observation",
+            "inputIdentity": "155771e141c440126f45b1c7f3f02b465bca4c413888309ff3c73b4d152b794b",
+            "evidenceKind": "deterministic",
+            "rationale": "Teaching declaration; not a renderer observation"
+          }
+        ]
+      }
+    ]
+  },
+  "declarations": [
+    {
+      "requirement": "geometry-phone",
+      "planIdentity": "6e0f1c3849df93fecce3546dce38d323f72710d8adf4312c86522d59dfb0fe7f",
+      "designIdentity": "08bbb1a32c98d4ddd701ba6aa53c38e4c2b4fc349d2982cf3f5946016c933bf5",
+      "inputIdentity": "d5511d58ae89a5136544686b7e471128789e3309c2ec9b520c217067f6abb75d",
+      "tool": "illustrative-observation",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "teaching-declaration-only",
+      "observedAt": "2026-10-25T15:12:53.476Z",
+      "detail": "Authored declaration to exercise gate mechanics, not real renderer evidence"
+    },
+    {
+      "requirement": "geometry-ipad",
+      "planIdentity": "6e0f1c3849df93fecce3546dce38d323f72710d8adf4312c86522d59dfb0fe7f",
+      "designIdentity": "08bbb1a32c98d4ddd701ba6aa53c38e4c2b4fc349d2982cf3f5946016c933bf5",
+      "inputIdentity": "36b5f42ae0dbd5b55e70cd9ddfcd1fed4742aafde24c08e18c3b35e2382a6468",
+      "tool": "illustrative-observation",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "teaching-declaration-only",
+      "observedAt": "2026-10-25T15:12:53.476Z",
+      "detail": "Authored declaration to exercise gate mechanics, not real renderer evidence"
+    },
+    {
+      "requirement": "geometry-desktop",
+      "planIdentity": "6e0f1c3849df93fecce3546dce38d323f72710d8adf4312c86522d59dfb0fe7f",
+      "designIdentity": "08bbb1a32c98d4ddd701ba6aa53c38e4c2b4fc349d2982cf3f5946016c933bf5",
+      "inputIdentity": "155771e141c440126f45b1c7f3f02b465bca4c413888309ff3c73b4d152b794b",
+      "tool": "illustrative-observation",
+      "evidenceKind": "deterministic",
+      "outcome": "pass",
+      "resultRef": "teaching-declaration-only",
+      "observedAt": "2026-10-25T15:12:53.476Z",
+      "detail": "Authored declaration to exercise gate mechanics, not real renderer evidence"
+    }
+  ]
+}

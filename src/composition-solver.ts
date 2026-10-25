@@ -14,6 +14,7 @@ import {
 import {
   SelectorProfileSchema,
   selectLocalOptions,
+  type SelectorExecutionOptions,
   checkpointDigest,
 } from './selector.js';
 export const CompositionSolveSchema = z
@@ -37,6 +38,7 @@ export const CompositionSolveSchema = z
 /** Fast search supplies the numeric field; the optional neural readout selects a local proposal only. */
 export async function solveComposition(
   input: z.input<typeof CompositionSolveSchema>,
+  execution: SelectorExecutionOptions = {},
 ) {
   const r = CompositionSolveSchema.parse(input);
   const policyIdentity = hash({
@@ -104,43 +106,46 @@ export async function solveComposition(
       0,
       r.selector.readout === 'balanced' ? 6 : 16,
     );
-    const readout = await selectLocalOptions({
-      ...r.selector,
-      payload: {
-        state: {
-          brief: r.program.brief,
-          scope:
-            'These are mathematically admissible proposals, not rendered/verified UI. Choose a local design direction; do not assert validity.',
-          programIdentity: search.programIdentity,
-        },
-        question:
-          'Which candidate best expresses the supplied brief, considering separate preference tensions and keeping expressive tension intentional?',
-        options: candidates.map((c, i) => ({
-          id: `path-${i}`,
-          description: JSON.stringify({
-            assignment: c.assignment,
-            energy: c.energy,
-            factors: [
-              ...new Set(
-                c.factors
-                  .filter((f) => f.mode === 'preference')
-                  .map((f) => f.id),
-              ),
-            ].map((id) => {
-              const rows = c.factors.filter((f) => f.id === id);
-              return {
-                id,
-                valueRange: [
-                  Math.min(...rows.map((f) => f.value)),
-                  Math.max(...rows.map((f) => f.value)),
-                ],
-                maxResidual: Math.max(...rows.map((f) => f.residual)),
-              };
+    const readout = await selectLocalOptions(
+      {
+        ...r.selector,
+        payload: {
+          state: {
+            brief: r.program.brief,
+            scope:
+              'These are mathematically admissible proposals, not rendered/verified UI. Choose a local design direction; do not assert validity.',
+            programIdentity: search.programIdentity,
+          },
+          question:
+            'Which candidate best expresses the supplied brief, considering separate preference tensions and keeping expressive tension intentional?',
+          options: candidates.map((c, i) => ({
+            id: `path-${i}`,
+            description: JSON.stringify({
+              assignment: c.assignment,
+              energy: c.energy,
+              factors: [
+                ...new Set(
+                  c.factors
+                    .filter((f) => f.mode === 'preference')
+                    .map((f) => f.id),
+                ),
+              ].map((id) => {
+                const rows = c.factors.filter((f) => f.id === id);
+                return {
+                  id,
+                  valueRange: [
+                    Math.min(...rows.map((f) => f.value)),
+                    Math.max(...rows.map((f) => f.value)),
+                  ],
+                  maxResidual: Math.max(...rows.map((f) => f.residual)),
+                };
+              }),
             }),
-          }),
-        })),
+          })),
+        },
       },
-    });
+      execution,
+    );
     const index = Number(readout.selected.replace('path-', ''));
     if (!Number.isInteger(index) || !candidates[index])
       throw new Error('Selector returned unknown mathematical path');

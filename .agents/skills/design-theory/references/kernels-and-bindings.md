@@ -1,0 +1,13 @@
+# Measured app kernels and consumed properties
+
+For a substantial app, begin with small semantic problems instead of manually authoring thousands of energy expressions. `kernel compile` reuses the existing decision engine for three bounded families: measured typography/row density, responsive region allocation, and finite appearance alternatives from actual palette/material/motion tools. It does not build a component tree or impose an aesthetic. `field run` is a specific title/prose case, not a generic dashboard compiler.
+
+Use the product brief, scoped DESIGN.md, actual copy/fonts and current platform observations. Preserve named candidates and multiple viable alternatives. For native, actual Text/Yoga facts and usable safe roots are required; browser cells cannot be relabeled native. Bind complete font state, axes, features, kerning and optical-sizing policy. Verify feature availability rather than blindly requesting tabular numerals.
+
+A compact path is: `context inspect` -> relevant specialist measurements -> `kernel compile` -> `decision run` -> `resolveRelationalKernelOutputs` -> property bindings -> actual renderer and functional validation. Use exact references/files, not full measurement matrices in model context. The frozen examples/kernels/relay-compact.json demonstrates file references; replace context/copy/observations with current product inputs. Its Chromium facts are not a native receipt.
+
+System1 chooses among consequential viable options; deterministic repairs and single remaining options do not need inference. Broad scoped choices may cover many properties. A matching recipe revalidates with zero new neural calls. More calls are not evidence of better taste. Count numeric assignments, attempted/completed neural readouts, renderer attempts and coding-model tokens separately.
+
+Generate/import named selected values in React + StyleX/RSD/RN flex components. `bindings check` resolves exact source pointers into typed expected-property manifests, then compares current browser/native observations. It exposes stale, unbound, manual override, wrong units/provider, unknown and unsupported cases. A matching value proves consistency only; functional flow, contrast, text preservation and accessibility checks remain separate. Preserve twelve-surface coverage or another brief-scoped representative set, without ritual calls to every tool.
+
+Record wins, misses, remaining unsupported behavior and reproducible tool improvements in BUILD-REPORT.md. When running a comparison, include bootstrap, discovery, implementation, tests and self-critique in actual usage. An unbounded coding run still has finite numeric/readout budgets and concrete completion checks. See docs/relational-kernels.md and docs/cli-context.md.

@@ -9,3 +9,5 @@ native/android/
 *.tsbuildinfo
 .DS_Store
 .impeccable/
+__pycache__/
+*.pyc

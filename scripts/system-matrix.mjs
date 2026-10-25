@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile, appendFile } from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import { nativeSourceIdentity } from './native-source-identity.mjs';
 import {
   BrowserRenderer,
   NativeRenderer,
@@ -11,6 +12,8 @@ import {
   hash,
 } from '../dist/index.js';
 const platform = process.argv[2] ?? 'web';
+const implementationIdentity =
+  platform === 'web' ? null : await nativeSourceIdentity();
 const renderer =
   platform === 'web' ? new BrowserRenderer() : new NativeRenderer();
 if (platform !== 'web') {
@@ -96,6 +99,12 @@ try {
           let observation;
           try {
             const m = await renderer.measure(state, { spacing: true });
+            if (implementationIdentity)
+              assert.equal(
+                m.runtime.implementationIdentity,
+                implementationIdentity,
+                'stale native measurement implementation',
+              );
             runtimes.set(hash(m.runtime), m.runtime);
             let checked = m;
             if (!m.feasible) {
@@ -223,6 +232,10 @@ try {
     searches: 4,
     searchCandidateBudget: 9,
     runtimes: [...runtimes.values()],
+    implementationIdentity,
+    sourceStable:
+      implementationIdentity === null ||
+      implementationIdentity === (await nativeSourceIdentity()),
     rawInfeasibleInputs: recoveries.length,
     recoveries,
     failures,
@@ -232,7 +245,7 @@ try {
     JSON.stringify(summary, null, 2) + '\n',
   );
   console.log(JSON.stringify(summary));
-  if (failures.length) process.exitCode = 1;
+  if (failures.length || !summary.sourceStable) process.exitCode = 1;
 } finally {
   await renderer.close();
 }

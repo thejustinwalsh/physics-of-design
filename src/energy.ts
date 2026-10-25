@@ -73,11 +73,49 @@ export const EnergyProgramSchema = z
         z
           .object({
             id: Identifier,
-            unit: z.string().min(1),
+            unit: z.string().min(1).max(80),
+            label: z.string().min(1).max(120).optional(),
+            valueAliases: z
+              .array(
+                z
+                  .object({
+                    value: z.number().finite(),
+                    label: z.string().min(1).max(120),
+                  })
+                  .strict(),
+              )
+              .min(1)
+              .max(128)
+              .optional(),
             values: z.array(z.number().finite()).min(1).max(128),
             locked: z.number().finite().optional(),
           })
-          .strict(),
+          .strict()
+          .superRefine((v, ctx) => {
+            if (!v.valueAliases) return;
+            const values = new Set(v.values);
+            if (
+              v.valueAliases.length !== values.size ||
+              new Set(v.valueAliases.map((a) => a.value)).size !==
+                values.size ||
+              v.valueAliases.some((a) => !values.has(a.value))
+            )
+              ctx.addIssue({
+                code: 'custom',
+                path: ['valueAliases'],
+                message:
+                  'Value aliases must cover each declared domain value exactly once',
+              });
+            if (
+              new Set(v.valueAliases.map((a) => a.label)).size !==
+              v.valueAliases.length
+            )
+              ctx.addIssue({
+                code: 'custom',
+                path: ['valueAliases'],
+                message: 'Value aliases must have distinct labels',
+              });
+          }),
       )
       .min(1)
       .max(40),
@@ -112,6 +150,9 @@ export const EnergyProgramSchema = z
             id: Identifier,
             expression: ExpressionSchema,
             bands: z.array(Band).min(1).max(16),
+            scenarioBands: z
+              .record(Identifier, z.array(Band).min(1).max(16))
+              .optional(),
             scale: z.number().finite().positive(),
             mode: z.enum(['hard', 'preference']),
             weight: z.number().finite().nonnegative().max(1e6).default(1),
@@ -138,6 +179,9 @@ export const EnergySearchOptionsSchema = z
     beamWidth: z.number().int().min(1).max(64).default(16),
     rounds: z.number().int().min(1).max(100).default(12),
     limit: z.number().int().min(1).max(24).default(6),
+    // Omitted preserves the historical ranked prefix and its recipe identity.
+    retention: z.enum(['ranked', 'pareto-diverse']).optional(),
+    maxRetentionComparisons: z.number().int().min(1).max(10000000).optional(),
   })
   .strict();
 export const EnergySearchSchema = z
@@ -202,6 +246,7 @@ export function compileEnergy(input: unknown) {
     if (ids.has(v.id)) throw new Error(`Duplicate variable ${v.id}`);
     ids.add(v.id);
     v.values = [...new Set(v.values)].sort((a, b) => a - b);
+    v.valueAliases?.sort((a, b) => a.value - b.value);
     if (v.locked !== undefined && !v.values.includes(v.locked))
       throw new Error(`Locked ${v.id} outside domain`);
   }
@@ -234,6 +279,9 @@ export function compileEnergy(input: unknown) {
     if (factorIds.has(f.id)) throw new Error(`Duplicate factor ${f.id}`);
     factorIds.add(f.id);
     validateExpression(f.expression);
+    for (const scenario of Object.keys(f.scenarioBands ?? {}))
+      if (!p.scenarios.some((s) => s.id === scenario))
+        throw new Error(`Unknown factor scenario ${f.id}.${scenario}`);
     for (const r of expressionRefs(f.expression))
       if (!ids.has(r)) throw new Error(`Unknown factor input ${r}`);
   }
@@ -277,7 +325,9 @@ export function compileEnergy(input: unknown) {
         factorEvaluations++;
         const value = evaluateExpression(f.expression, values);
         const distance = Math.min(
-          ...f.bands.map((b) => Math.max(b.min - value, 0, value - b.max)),
+          ...(f.scenarioBands?.[s.id] ?? f.bands).map((b) =>
+            Math.max(b.min - value, 0, value - b.max),
+          ),
         );
         const residual = distance / f.scale;
         const contribution =
@@ -335,6 +385,184 @@ function compare(a: EnergyEvaluation, b: EnergyEvaluation) {
     a.energy - b.energy ||
     canonical(a.assignment).localeCompare(canonical(b.assignment))
   );
+}
+
+/** A cost profile is the per-scenario preference vector, not its sum. Equal
+ * vectors can still have different geometry or unmodelled visual consequences.
+ */
+function preferenceProfile(candidate: EnergyEvaluation) {
+  return candidate.factors
+    .filter((factor) => factor.mode === 'preference')
+    .map((factor) => factor.energy);
+}
+
+function retainDiverse(
+  admissible: EnergyEvaluation[],
+  program: EnergyProgram,
+  limit: number,
+  maxComparisons: number,
+) {
+  const groups = new Map<
+    string,
+    { costs: number[]; members: EnergyEvaluation[] }
+  >();
+  for (const candidate of admissible) {
+    const costs = preferenceProfile(candidate),
+      key = canonical(costs);
+    const group = groups.get(key);
+    if (group) group.members.push(candidate);
+    else groups.set(key, { costs, members: [candidate] });
+  }
+  const profiles = [...groups.values()];
+  let comparisons = 0,
+    exhausted = false;
+  const consume = () => {
+    if (comparisons === maxComparisons) {
+      exhausted = true;
+      return false;
+    }
+    comparisons++;
+    return true;
+  };
+  const dominates = (a: number[], b: number[]) => {
+    let strict = false;
+    for (let i = 0; i < a.length; i++) {
+      if (!consume()) return false;
+      if (a[i]! > b[i]!) return false;
+      strict ||= a[i]! < b[i]!;
+    }
+    return strict;
+  };
+  // Compress plateaus before skyline comparisons. Each scalar comparison is
+  // budgeted: 100k evaluated assignments must not imply unbounded all-pairs work.
+  let frontier: typeof profiles = [];
+  for (const profile of profiles) {
+    if (frontier.some((other) => dominates(other.costs, profile.costs))) {
+      if (exhausted) break;
+      continue;
+    }
+    if (exhausted) break;
+    frontier = frontier.filter(
+      (other) => !dominates(profile.costs, other.costs),
+    );
+    if (exhausted) break;
+    frontier.push(profile);
+  }
+  const paretoComplete = !exhausted;
+  // A partial skyline is not a Pareto proof. On exhaustion use the familiar
+  // ranked prefix, and explicitly report that no frontier was established.
+  let candidates = paretoComplete
+    ? frontier.slice(0, limit).map((profile) => profile.members[0]!)
+    : admissible.slice(0, limit);
+  const paretoIds = paretoComplete
+    ? new Set(frontier.flatMap((profile) => profile.members.map((a) => a.id)))
+    : new Set<string>();
+  // First represent different factor-cost vectors. Only spare slots represent
+  // equally ranked geometry, by farthest-first normalized numeric domain distance.
+  // This is coverage of authored values; it is not perceptual distance or merit.
+  if (paretoComplete && candidates.length < limit) {
+    const pool = frontier.flatMap((profile) => profile.members).sort(compare);
+    const selected = new Set(candidates.map((a) => a.id));
+    while (candidates.length < limit && candidates.length < pool.length) {
+      let best: EnergyEvaluation | undefined,
+        bestDistance = -1;
+      for (const candidate of pool) {
+        if (selected.has(candidate.id)) continue;
+        let nearest = Infinity;
+        for (const other of candidates) {
+          let distance = 0;
+          for (const variable of program.variables) {
+            if (!consume()) break;
+            const span = variable.values.at(-1)! - variable.values[0]!;
+            if (span > 0)
+              distance +=
+                ((candidate.assignment[variable.id]! -
+                  other.assignment[variable.id]!) /
+                  span) **
+                2;
+          }
+          if (exhausted) break;
+          nearest = Math.min(nearest, distance);
+        }
+        if (exhausted) break;
+        if (nearest > bestDistance) {
+          best = candidate;
+          bestDistance = nearest;
+        }
+      }
+      if (exhausted || !best) {
+        candidates.push(
+          ...pool
+            .filter((a) => !selected.has(a.id))
+            .slice(0, limit - candidates.length),
+        );
+        break;
+      }
+      candidates.push(best);
+      selected.add(best.id);
+    }
+  }
+  const first = admissible[0];
+  const preferences =
+    first?.factors.flatMap((factor, index) => {
+      if (factor.mode !== 'preference') return [];
+      const observations = admissible.map((a) => a.factors[index]!);
+      const definition = program.factors.find((f) => f.id === factor.id)!;
+      let minimum = Infinity,
+        maximum = -Infinity,
+        minimumResidual = Infinity,
+        satisfiedAssignments = 0;
+      for (const observation of observations) {
+        minimum = Math.min(minimum, observation.value);
+        maximum = Math.max(maximum, observation.value);
+        minimumResidual = Math.min(minimumResidual, observation.residual);
+        if (observation.residual === 0) satisfiedAssignments++;
+      }
+      return [
+        {
+          id: factor.id,
+          scenario: factor.scenario,
+          targetBands:
+            definition.scenarioBands?.[factor.scenario] ?? definition.bands,
+          observedRange: [minimum, maximum],
+          minimumResidual,
+          satisfiedAssignments,
+        },
+      ];
+    }) ?? [];
+  return {
+    candidates,
+    pareto: candidates.filter((a) => paretoIds.has(a.id)).map((a) => a.id),
+    diagnostics: {
+      policy: 'pareto-diverse' as const,
+      scope:
+        'Evaluated mathematically admissible assignments only; numeric profiles do not establish visual equivalence or quality.',
+      admissibleAssignments: admissible.length,
+      preferenceProfiles: profiles.length,
+      paretoProfiles: paretoComplete ? frontier.length : null,
+      paretoComplete,
+      diversityComplete: !exhausted,
+      comparisons,
+      maxComparisons,
+      retainedPreferenceProfiles: new Set(
+        candidates.map((a) => canonical(preferenceProfile(a))),
+      ).size,
+      minimumEnergyAssignments: first
+        ? admissible.filter((a) => a.energy === first.energy).length
+        : 0,
+      jointlySatisfiedAssignments: admissible.filter((a) =>
+        a.factors.every((f) => f.mode === 'hard' || f.residual === 0),
+      ).length,
+      preferences,
+      distance:
+        'Squared numeric differences divided by each authored domain span; categorical indices have no perceptual interpretation.',
+      fallback: exhausted
+        ? paretoComplete
+          ? 'ranked remaining Pareto assignments'
+          : 'ranked admissible prefix; Pareto membership unknown'
+        : null,
+    },
+  };
 }
 export function searchEnergy(
   input: z.input<typeof EnergySearchSchema>,
@@ -497,24 +725,35 @@ export function searchEnergy(
   }
   const ranked = [...seen.values()].sort(compare),
     admissible = ranked.filter((x) => x.hardFailures === 0),
-    candidates = admissible.slice(0, options.limit);
+    diversity =
+      options.retention === 'pareto-diverse'
+        ? retainDiverse(
+            admissible,
+            p,
+            options.limit,
+            options.maxRetentionComparisons ?? 1000000,
+          )
+        : null,
+    candidates = diversity?.candidates ?? admissible.slice(0, options.limit);
   // Strict dominance is evaluated on individual preference factors, not the weighted aggregate.
-  const pareto = candidates
-    .filter(
-      (a) =>
-        !admissible.some(
-          (b) =>
-            b !== a &&
-            b.factors.every(
-              (f, i) => f.mode === 'hard' || f.energy <= a.factors[i]!.energy,
-            ) &&
-            b.factors.some(
-              (f, i) =>
-                f.mode === 'preference' && f.energy < a.factors[i]!.energy,
-            ),
-        ),
-    )
-    .map((c) => c.id);
+  const pareto =
+    diversity?.pareto ??
+    candidates
+      .filter(
+        (a) =>
+          !admissible.some(
+            (b) =>
+              b !== a &&
+              b.factors.every(
+                (f, i) => f.mode === 'hard' || f.energy <= a.factors[i]!.energy,
+              ) &&
+              b.factors.some(
+                (f, i) =>
+                  f.mode === 'preference' && f.energy < a.factors[i]!.energy,
+              ),
+          ),
+      )
+      .map((c) => c.id);
   return {
     version: 1 as const,
     programIdentity: compiled.identity,
@@ -524,6 +763,7 @@ export function searchEnergy(
       : ('no-admissible-candidate' as const),
     candidates,
     pareto,
+    ...(diversity ? { retention: diversity.diagnostics } : {}),
     rejected: ranked
       .filter((x) => x.hardFailures > 0)
       .slice(0, 3)

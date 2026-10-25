@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "inputs": {
+    "headline": "Make room for a longer thought. Let the whole composition answer without losing a word.",
+    "fontSize": 105,
+    "measure": 22.5,
+    "roughness": 0.24,
+    "material": "enamel"
+  },
+  "designIdentity": "DESIGN.md:sha256:3bc9b66ae3b4d059197c9156412ba7d2a682b93c55883d44c4cab8d367eee511",
+  "measurement": {
+    "inputIdentity": "inputs-20888b84",
+    "observed": {
+      "x": 423.4375,
+      "y": -1066.046875,
+      "width": 879.125,
+      "height": 655.125,
+      "lineFragmentCount": 11
+    },
+    "method": "Element.getBoundingClientRect() in viewport CSS pixels; Range.selectNodeContents().getClientRects(), counting non-zero fragments. Selection fragments are not ink bounds or guaranteed physical lines; blank lines are excluded."
+  }
+}

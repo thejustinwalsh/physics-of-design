@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "id": "teaching-choice",
+  "brief": {
+    "intent": "Expose incompatible preference targets and an independent hard cap",
+    "source": "Explainer authored teaching input"
+  },
+  "variables": [
+    {
+      "id": "titleSize",
+      "unit": "css-px",
+      "values": [
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "teaching",
+      "values": {}
+    }
+  ],
+  "factors": [
+    {
+      "id": "size-cap",
+      "expression": {
+        "ref": "titleSize"
+      },
+      "bands": [
+        {
+          "min": 24,
+          "max": 64
+        }
+      ],
+      "scale": 8,
+      "mode": "hard",
+      "category": "feasibility",
+      "provenance": {
+        "kind": "brief",
+        "source": "Authored teaching problem; no human preference evidence"
+      }
+    },
+    {
+      "id": "quiet",
+      "expression": {
+        "ref": "titleSize"
+      },
+      "bands": [
+        {
+          "min": 24,
+          "max": 32
+        }
+      ],
+      "scale": 8,
+      "mode": "preference",
+      "weight": 1,
+      "category": "direction",
+      "provenance": {
+        "kind": "brief",
+        "source": "Authored teaching problem; no human preference evidence"
+      }
+    },
+    {
+      "id": "bold",
+      "expression": {
+        "ref": "titleSize"
+      },
+      "bands": [
+        {
+          "min": 56,
+          "max": 64
+        }
+      ],
+      "scale": 8,
+      "mode": "preference",
+      "weight": 1,
+      "category": "direction",
+      "provenance": {
+        "kind": "brief",
+        "source": "Authored teaching problem; no human preference evidence"
+      }
+    }
+  ]
+}

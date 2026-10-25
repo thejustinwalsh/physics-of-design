@@ -1,0 +1,10 @@
+{
+  "recordedAt": "2026-10-25T12:15:35.542Z",
+  "reason": "CLI automatically inserted a trusted-project block when launching the first arm. Removing exactly that block reconstructs the original byte SHA256.",
+  "priorSha256": "52eb476b228d8ed80e14eeca043e209386cf78acc716ac7e878699c5b70857cd",
+  "currentSha256": "9b53a348e69948f1089bc91fd3e69bd5a7884f0b8ef2b19590a177ccfa3f1028",
+  "originalByteHashReconstructed": true,
+  "modelReasoningServiceChanged": false,
+  "operatorChangedGlobalConfig": false,
+  "affectedArm": "Study-f82b38"
+}

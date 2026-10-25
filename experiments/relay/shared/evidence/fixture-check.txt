@@ -1,0 +1,1 @@
+{"schemaVersion":1,"seed":20261024,"now":"2026-10-24T18:00:00.000Z","algorithm":"xorshift32-v1","fixtureSha256":"107f4315ec2589aaa4ed2328b767e54b4c7a12b3be2b34d56eb20c5638f61d62","counts":{"services":120,"incidents":36,"activeIncidents":22,"traces":1000,"alertRules":24,"teams":6,"buckets":48},"valid":true,"mode":"checked"}

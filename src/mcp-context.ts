@@ -1,3 +1,4 @@
+import { JsonExpansionBudget } from './json-expansion-budget.js';
 /** Bounded session references avoid repeating content and renderer receipts in model context. */
 export class ResultStore {
   private results = new Map<string, { value: unknown; bytes: number }>();
@@ -26,8 +27,21 @@ export class ResultStore {
     return id;
   }
   resolve(value: unknown): unknown {
-    if (Array.isArray(value)) return value.map((item) => this.resolve(item));
-    if (!value || typeof value !== 'object') return value;
+    return this.resolveValue(value, new JsonExpansionBudget(), 0);
+  }
+  private resolveValue(
+    value: unknown,
+    budget: JsonExpansionBudget,
+    depth: number,
+  ): unknown {
+    if (Array.isArray(value)) {
+      budget.add(value, depth);
+      return value.map((item) => this.resolveValue(item, budget, depth + 1));
+    }
+    if (!value || typeof value !== 'object') {
+      budget.add(value, depth);
+      return value;
+    }
     const object = value as Record<string, unknown>;
     if (Object.hasOwn(object, '$designRef')) {
       if (
@@ -62,10 +76,14 @@ export class ResultStore {
             throw new Error(`Result pointer does not exist: ${pointer}`);
           selected = (selected as Record<string, unknown>)[key];
         }
-      return structuredClone(selected);
+      return budget.clone(selected, depth);
     }
+    budget.add(value, depth);
     return Object.fromEntries(
-      Object.entries(object).map(([key, item]) => [key, this.resolve(item)]),
+      Object.entries(object).map(([key, item]) => [
+        key,
+        this.resolveValue(item, budget, depth + 1),
+      ]),
     );
   }
 }
@@ -75,12 +93,135 @@ const record = (value: unknown): Record<string, unknown> =>
     : {};
 const rows = (value: unknown): Record<string, unknown>[] =>
   Array.isArray(value) ? value.map(record) : [];
+const compactText = (value: unknown, max = 160) =>
+  typeof value === 'string' ? value.slice(0, max) : undefined;
+const finiteNumber = (value: unknown) =>
+  typeof value === 'number' && Number.isFinite(value) ? value : undefined;
+const boolean = (value: unknown) =>
+  typeof value === 'boolean' ? value : undefined;
 const missingSummary = (value: unknown) => {
   const entries = Array.isArray(value) ? value : [];
   return {
     missing: entries.slice(0, 16),
     missingCount: entries.length,
     omittedMissing: Math.max(0, entries.length - 16),
+  };
+};
+const retentionSummary = (value: unknown) => {
+  const r = record(value);
+  if (!Object.keys(r).length) return null;
+  const preferences = rows(r.preferences);
+  return {
+    policy: compactText(r.policy),
+    admissibleAssignments: finiteNumber(r.admissibleAssignments),
+    preferenceProfiles: finiteNumber(r.preferenceProfiles),
+    retainedPreferenceProfiles: finiteNumber(r.retainedPreferenceProfiles),
+    paretoProfiles:
+      r.paretoProfiles === null ? null : finiteNumber(r.paretoProfiles),
+    paretoComplete: boolean(r.paretoComplete),
+    diversityComplete: boolean(r.diversityComplete),
+    comparisons: finiteNumber(r.comparisons),
+    maxComparisons: finiteNumber(r.maxComparisons),
+    minimumEnergyAssignments: finiteNumber(r.minimumEnergyAssignments),
+    jointlySatisfiedAssignments: finiteNumber(r.jointlySatisfiedAssignments),
+    fallback: compactText(r.fallback),
+    individuallyUnreachable: preferences
+      .filter((p) => p.satisfiedAssignments === 0)
+      .slice(0, 8)
+      .map((p) => ({
+        id: compactText(p.id),
+        scenario: compactText(p.scenario),
+        observedRange: Array.isArray(p.observedRange)
+          ? p.observedRange.slice(0, 2).map(finiteNumber)
+          : [],
+        minimumResidual: finiteNumber(p.minimumResidual),
+      })),
+    individuallyUnreachableCount: preferences.filter(
+      (p) => p.satisfiedAssignments === 0,
+    ).length,
+    scope: compactText(r.scope, 400),
+  };
+};
+const stageEvidenceSummary = (value: unknown) => {
+  const evidence = record(value),
+    search = record(evidence.search),
+    lookahead = record(evidence.lookahead);
+  return {
+    retention: retentionSummary(search.retention),
+    reusedLookaheadSearch: boolean(evidence.reusedLookaheadSearch) ?? false,
+    lookahead: Object.keys(lookahead).length
+      ? {
+          engine: compactText(lookahead.engine),
+          policy: {
+            completion: compactText(record(lookahead.policy).completion),
+            parentTies: compactText(record(lookahead.policy).parentTies),
+            maxBranches: finiteNumber(record(lookahead.policy).maxBranches),
+            maxEvaluations: finiteNumber(
+              record(lookahead.policy).maxEvaluations,
+            ),
+          },
+          uncoveredParents: Array.isArray(lookahead.uncoveredParents)
+            ? lookahead.uncoveredParents.slice(0, 8).map((v) => compactText(v))
+            : [],
+          branches: rows(lookahead.branches)
+            .slice(0, 8)
+            .map((b) => ({
+              parent: compactText(record(b.parent).id),
+              completion: compactText(b.completion),
+              jointlySatisfied: boolean(b.jointlySatisfied),
+              successors: rows(b.successors)
+                .slice(0, 8)
+                .map((s) => ({
+                  stage: compactText(s.stage),
+                  outcome: compactText(s.outcome),
+                  complete: boolean(
+                    record(record(s.search).statistics).complete,
+                  ),
+                  witness:
+                    compactText(record(record(s.search).witness).id) ?? null,
+                  preferenceTargetsSatisfied:
+                    boolean(
+                      record(record(s.search).witness)
+                        .preferenceTargetsSatisfied,
+                    ) ?? null,
+                })),
+            })),
+          scope: compactText(lookahead.scope, 400),
+        }
+      : null,
+  };
+};
+// Recipes are caller supplied and integrity hashes do not authenticate metadata.
+// Keep arbitrary notes/prompts in the exact receipt, never in compact context.
+const selectionSummary = (value: unknown) => {
+  if (value === null || value === undefined) return null;
+  const s = record(value),
+    p = record(s.provenance),
+    m = record(p.model);
+  const text = (v: unknown, max = 160) =>
+    typeof v === 'string' ? v.slice(0, max) : undefined;
+  const number = (v: unknown) =>
+    typeof v === 'number' && Number.isFinite(v) ? v : undefined;
+  const bool = (v: unknown) => (typeof v === 'boolean' ? v : undefined);
+  return {
+    selected: text(s.selected),
+    policy: text(s.policy, 240),
+    modelCalled: bool(s.modelCalled),
+    testInjected: bool(s.testInjected),
+    requestedReadoutPasses: number(s.requestedReadoutPasses),
+    provenance: {
+      profile: text(p.profile),
+      readoutMode: text(p.readoutMode),
+      readoutPasses: number(p.readoutPasses),
+      promptHash: text(p.promptHash, 64),
+      model: {
+        source: text(m.source),
+        revision: text(m.revision),
+        backend: text(m.backend),
+        ggufSha256: text(record(m.gguf).sha256, 64),
+      },
+      latencyMs: number(p.latencyMs),
+    },
   };
 };
 export function summarizeResult(
@@ -90,7 +231,131 @@ export function summarizeResult(
 ): { resultRef: string | null; summary: unknown; referenceScope: string } {
   const r = record(result);
   let summary: unknown = result;
-  if (command === 'validation plan')
+  if (command === 'context inspect')
+    summary = {
+      status: r.status,
+      file: r.file,
+      sha256: r.sha256,
+      byteLength: r.byteLength,
+      sections: rows(r.sections)
+        .slice(0, 32)
+        .map((s) => ({
+          title: String(s.title).slice(0, 160),
+          titleCharacters: String(s.title).length,
+          level: s.level,
+          line: s.line,
+        })),
+      summarizedSections: Math.min(32, rows(r.sections).length),
+      totalSections: r.totalSections,
+      omittedSections: r.omittedSections,
+      missingSections: r.missingSections,
+      scope: r.scope,
+    };
+  else if (command === 'field measure')
+    summary = {
+      identity: r.identity,
+      sourceIdentity: r.sourceIdentity,
+      provider: r.provider,
+      runtime: r.runtime,
+      sources: r.sources,
+      cells: rows(r.rows).length,
+      image: r.image,
+      policy: r.policy,
+    };
+  else if (command === 'kernel compile')
+    summary = {
+      identity: r.identity,
+      inputIdentity: r.inputIdentity,
+      stages: rows(record(r.workflow).stages).map((s) => ({
+        id: s.id,
+        dependsOn: s.dependsOn,
+        selection: s.selection,
+      })),
+      outputs: rows(r.outputs).map((o) => ({
+        stage: o.stage,
+        name: o.name,
+        unit: o.unit,
+      })),
+      obligationCount: rows(r.obligations).length,
+      scope: r.scope,
+      workflow: resultRef
+        ? { $designRef: resultRef, pointer: '/workflow' }
+        : null,
+    };
+  else if (command === 'bindings check')
+    summary = {
+      identity: r.identity ?? r.manifestIdentity,
+      current: r.current,
+      complete: r.complete ?? false,
+      verified: r.verified ?? false,
+      entries: rows(r.entries)
+        .slice(0, 24)
+        .map((e) => ({
+          id: e.id,
+          status: e.status ?? 'expected-only',
+          unit: e.unit,
+          target: e.target,
+        })),
+      entryCount: rows(r.entries).length,
+      omittedEntries: Math.max(0, rows(r.entries).length - 24),
+      scope: r.scope,
+    };
+  else if (command === 'field run')
+    summary = {
+      identity: r.identity,
+      tokens: r.tokens,
+      rendererVerification: r.rendererVerification,
+      scope: r.scope,
+      measurement: {
+        identity: record(r.measurements).identity,
+        provider: record(r.measurements).provider,
+        cells: rows(record(r.measurements).rows).length,
+      },
+      workflow: {
+        status: record(r.workflow).status,
+        statistics: record(r.workflow).statistics,
+        stages: Object.fromEntries(
+          Object.entries(record(record(r.workflow).stages)).map(([id, v]) => {
+            const s = record(v);
+            return [
+              id,
+              {
+                status: s.status,
+                assignment: s.assignment,
+                alternatives: rows(s.alternatives).length,
+                selection: selectionSummary(s.selection),
+                evidence: stageEvidenceSummary(s.evidence),
+              },
+            ];
+          }),
+        ),
+      },
+      ledger: rows(r.ledger)
+        .slice(0, 16)
+        .map((l) => ({
+          command: l.command,
+          inputHash: l.inputHash,
+          resultHash: l.resultHash,
+          evidenceKind: l.evidenceKind,
+          elapsedMs: l.elapsedMs,
+        })),
+      recipe: resultRef
+        ? { $designRef: resultRef, pointer: '/workflow/recipe' }
+        : null,
+    };
+  else if (command === 'field validate')
+    summary = {
+      identity: r.identity,
+      runtime: r.runtime,
+      status: r.status,
+      scenarios: rows(r.scenarios).map((s) => ({
+        scenario: s.scenario,
+        checks: s.checks,
+        passed: s.passed,
+      })),
+      scope: r.scope,
+    };
+  else if (command === 'validation plan')
     summary = {
       identity: r.identity,
       designIdentity: record(r.plan).designIdentity,
@@ -203,9 +468,11 @@ export function summarizeResult(
             {
               status: s.status,
               assignment: s.assignment,
-              reason: s.reason,
+              reason: compactText(s.reason, 500),
               alternatives: rows(s.alternatives).length,
               rendererVerification: s.rendererVerification,
+              selection: selectionSummary(s.selection),
+              evidence: stageEvidenceSummary(s.evidence),
             },
           ];
         }),
@@ -228,6 +495,25 @@ export function summarizeResult(
       durationSeconds: r.durationSeconds,
       sampleCount: Array.isArray(r.values) ? r.values.length : 0,
       provenance: r.provenance,
+    };
+  else if (command === 'surface css')
+    summary = {
+      version: r.version,
+      input: r.input,
+      material: r.material,
+      descriptors: r.descriptors,
+      contrast: r.contrast,
+      limits: r.limits,
+      recipe: resultRef ? { $designRef: resultRef } : null,
+      note: 'Full CSS and variables remain in the result reference or CLI output.',
+    };
+  else if (command === 'surface light')
+    summary = {
+      normal: r.normal,
+      lightDirection: r.lightDirection,
+      descriptors: r.descriptors,
+      cssVariables: r.cssVariables,
+      model: r.model,
     };
   else if (command === 'surface textures')
     summary = {
@@ -295,6 +581,7 @@ export function summarizeResult(
     summary = {
       status: r.status,
       statistics: r.statistics,
+      retention: retentionSummary(r.retention),
       selected: r.selected,
       handoff:
         r.handoff && resultRef

@@ -1,0 +1,56 @@
+{
+  "binding": {
+    "version": 1,
+    "engine": "output-bindings-v1",
+    "current": {
+      "designIdentity": "528784b364a2e4712426a6f229951542b9b669eaceebda59a4ce7ec426064e08",
+      "sourceIdentity": "073171f7f5e1438ae632cb252bda87d19e1bfab1a0ba309e91bdd645886f24ea",
+      "inputIdentity": "48aed2374cea5f3bbbee1c8742439be758dcc1e999e0e3f0e03c1ee80e3565a0",
+      "resultIdentity": "6d1effb4f687dea704a71247b9d98e1996038272a1361dec5655ef974a576657"
+    },
+    "sourceValueIdentity": "6d1effb4f687dea704a71247b9d98e1996038272a1361dec5655ef974a576657",
+    "entries": [
+      {
+        "id": "body-size",
+        "scenario": "phone",
+        "scenarioIdentity": "d5511d58ae89a5136544686b7e471128789e3309c2ec9b520c217067f6abb75d",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/fontSize",
+        "target": {
+          "surface": "body",
+          "property": "fontSize",
+          "sourceLocation": "teaching-component"
+        },
+        "tolerance": 0,
+        "unsupportedPolicy": "block",
+        "expected": 18
+      }
+    ],
+    "scope": "Expected values projected from exact source pointers. No renderer ran; hashes detect payload changes, not authenticity or causal consumption.",
+    "identity": "4fcdd8ac3b37ca80005b5dad788bf3986f5988445f42215145d1349fa5b45790"
+  },
+  "observation": {
+    "binding": "body-size",
+    "current": {
+      "designIdentity": "528784b364a2e4712426a6f229951542b9b669eaceebda59a4ce7ec426064e08",
+      "sourceIdentity": "073171f7f5e1438ae632cb252bda87d19e1bfab1a0ba309e91bdd645886f24ea",
+      "inputIdentity": "48aed2374cea5f3bbbee1c8742439be758dcc1e999e0e3f0e03c1ee80e3565a0",
+      "resultIdentity": "6d1effb4f687dea704a71247b9d98e1996038272a1361dec5655ef974a576657"
+    },
+    "scenario": "phone",
+    "scenarioIdentity": "d5511d58ae89a5136544686b7e471128789e3309c2ec9b520c217067f6abb75d",
+    "platform": "web",
+    "unit": "css-px",
+    "surface": "body",
+    "property": "fontSize",
+    "sourceLocation": "teaching-component",
+    "status": "observed",
+    "value": 18,
+    "provider": "browser",
+    "runtime": "Authored teaching declaration",
+    "resultRef": "teaching-declaration-only",
+    "observedAt": "2026-10-25T15:12:53.476Z",
+    "detail": "Exercises binding checker; not a measured browser property"
+  }
+}

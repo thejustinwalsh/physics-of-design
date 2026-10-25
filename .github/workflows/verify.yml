@@ -12,6 +12,7 @@ jobs:
       - run: npm ci
       - run: npm ci --prefix native
       - run: npm ci --prefix codemods
+      - run: npm ci --prefix experiments/expo-design-theory
       - run: npx playwright install --with-deps chromium webkit --only-shell
       - run: npm run verify
       - uses: actions/upload-artifact@v4

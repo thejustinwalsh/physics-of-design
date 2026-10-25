@@ -1,0 +1,43 @@
+[
+  {
+    "material": "paper",
+    "baseColor": "#f1e7ca",
+    "ink": "#171712",
+    "contentShieldOpacity": 0,
+    "roughness": 0.92,
+    "textureAmount": 0.7,
+    "elevation": 8,
+    "radius": 4
+  },
+  {
+    "material": "enamel",
+    "baseColor": "#ed8c56",
+    "ink": "#080604",
+    "contentShieldOpacity": 0,
+    "roughness": 0.24,
+    "textureAmount": 0.24,
+    "elevation": 18,
+    "radius": 26,
+    "light": { "ambient": 0.7 }
+  },
+  {
+    "material": "brushed-metal",
+    "baseColor": "#bcc7cb",
+    "ink": "#070a0b",
+    "contentShieldOpacity": 0,
+    "roughness": 0.36,
+    "textureAmount": 0.45,
+    "elevation": 12,
+    "radius": 9,
+    "light": { "ambient": 0.65 }
+  },
+  {
+    "material": "soft-glass",
+    "baseColor": "#d9eee6",
+    "ink": "#091b17",
+    "contentShieldOpacity": 0.2,
+    "translucency": 0.18,
+    "elevation": 22,
+    "radius": 30
+  }
+]

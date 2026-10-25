@@ -5,8 +5,18 @@ import {
   type Expression,
 } from './math-expression.js';
 type Values = Record<string, number>;
+export const DESIGN_RUNTIME_SEMANTICS = 'scenario-bands-v2' as const;
+export interface DesignRuntimePolicy {
+  /** Authored permission to apply the default bands at unsampled inputs. */
+  unsampledScenarioBands: 'base';
+}
+export interface DesignRuntimeOptions {
+  /** Disambiguates equal input vectors; it cannot override the supplied inputs. */
+  scenarioId?: string;
+}
 export interface PortableDesign {
   assignment: Values;
+  runtimePolicy?: DesignRuntimePolicy;
   program: {
     scenarios: { id: string; values: Values }[];
     derived: { id: string; expression: Expression }[];
@@ -15,6 +25,8 @@ export interface PortableDesign {
       expression: Expression;
       mode: string;
       bands: { min: number; max: number }[];
+      scenarioBands?:
+        Record<string, { min: number; max: number }[]> | undefined;
     }[];
   };
   machine: {
@@ -42,6 +54,7 @@ export interface PortableDesign {
 export function resolveDesignRuntime(
   handoff: PortableDesign,
   scenario: Values,
+  options: DesignRuntimeOptions = {},
 ) {
   const keys = Object.keys(handoff.program.scenarios[0]!.values);
   if (
@@ -51,6 +64,40 @@ export function resolveDesignRuntime(
     throw new Error('Runtime scenario keys differ from design program');
   if (Object.values(scenario).some((v) => !Number.isFinite(v)))
     throw new Error('Runtime scenario inputs must be finite');
+  const matches = handoff.program.scenarios.filter((s) =>
+    keys.every((key) => s.values[key] === scenario[key]),
+  );
+  const explicit = options.scenarioId;
+  if (explicit !== undefined && !matches.some((s) => s.id === explicit))
+    throw new Error(
+      'Runtime scenarioId must name a scenario with exactly these inputs',
+    );
+  const selected = explicit === undefined ? matches[0]?.id : explicit;
+  const effectiveBands = (
+    f: PortableDesign['program']['factors'][number],
+    id?: string,
+  ) => (id === undefined ? undefined : f.scenarioBands?.[id]) ?? f.bands;
+  const bandKey = (bands: { min: number; max: number }[]) =>
+    JSON.stringify([...bands].sort((a, b) => a.min - b.min || a.max - b.max));
+  const useBase =
+    !matches.length && handoff.runtimePolicy?.unsampledScenarioBands === 'base';
+  const unresolvedFactors = handoff.program.factors.filter((f) =>
+    explicit !== undefined || useBase
+      ? false
+      : matches.length
+        ? matches.some(
+            (s) =>
+              bandKey(effectiveBands(f, s.id)) !==
+              bandKey(effectiveBands(f, selected)),
+          )
+        : Object.keys(f.scenarioBands ?? {}).length > 0,
+  );
+  const unresolved = new Set(unresolvedFactors.map((f) => f.id));
+  // Ambiguous named scenarios fail closed, including divergent preference meaning.
+  // At unsampled inputs only unresolved hard guards prevent geometry admission.
+  const unresolvedApplicability =
+    unresolved.size > 0 &&
+    (matches.length > 1 || unresolvedFactors.some((f) => f.mode === 'hard'));
   const values = { ...handoff.assignment, ...scenario };
   for (const d of handoff.program.derived)
     values[d.id] = evaluateExpression(d.expression, values);
@@ -62,7 +109,8 @@ export function resolveDesignRuntime(
     .filter(
       (f) =>
         f.mode === 'hard' &&
-        !f.bands.some((b) => {
+        !unresolved.has(f.id) &&
+        !effectiveBands(f, selected).some((b) => {
           const v = evaluateExpression(f.expression, values);
           return v >= b.min && v <= b.max;
         }),
@@ -126,10 +174,28 @@ export function resolveDesignRuntime(
   );
   return {
     ...result,
-    admissible: result.admissible && outside.length === 0,
-    applicability: outside.length
-      ? 'outside-declared-envelope'
-      : 'within-declared-envelope',
+    runtimeSemantics: DESIGN_RUNTIME_SEMANTICS,
+    scenarioResolution: {
+      status: unresolved.size
+        ? 'unresolved'
+        : explicit !== undefined
+          ? 'explicit'
+          : matches.length
+            ? 'exact'
+            : useBase
+              ? 'explicit-base-policy'
+              : 'continuous-base',
+      scenarioId: explicit ?? (matches.length === 1 ? selected! : null),
+      matchingScenarioIds: matches.map((s) => s.id),
+      unresolvedFactors: [...unresolved],
+    },
+    admissible:
+      result.admissible && outside.length === 0 && !unresolvedApplicability,
+    applicability: unresolvedApplicability
+      ? 'scenario-bands-unresolved'
+      : outside.length
+        ? 'outside-declared-envelope'
+        : 'within-declared-envelope',
     outsideEnvelope: outside,
     verification: 'pending-renderer-verification' as const,
   };

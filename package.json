@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsc && chmod +x dist/cli.js",
     "design": "node dist/cli.js",
-    "test": "tsx --test test/*.test.ts",
+    "test": "tsx --test test/*.test.ts test/*.test.mjs",
     "test:browser": "npm run build && tsx --test test/browser.integration.ts",
     "test:native": "npm run build && tsx --test test/native.integration.ts",
     "typecheck": "tsc --noEmit",
@@ -50,7 +50,11 @@
     "validation:proof": "npm run build && node scripts/prove-validation-machine.mjs",
     "evidence:extension": "node scripts/export-design-theory-evidence.mjs",
     "typography:proof": "npm run build && node scripts/prove-typography.mjs",
-    "test:migrations": "node codemods/2026-10-25-nullable-glyph-ink/test.mjs"
+    "test:migrations": "node codemods/2026-10-25-nullable-glyph-ink/test.mjs",
+    "field:proof": "npm run build && node scripts/prove-design-field.mjs",
+    "dom:proof": "node scripts/prove-dom-surfaces.mjs",
+    "gallery:interactions": "GALLERY_CAPTURE=0 node scripts/prove-gallery-interactions.mjs",
+    "compare:workflows": "node scripts/compare-design-workflows.mjs"
   },
   "engines": {
     "node": ">=22"

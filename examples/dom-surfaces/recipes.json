@@ -1,0 +1,34 @@
+[
+  {
+    "material": "paper",
+    "baseColor": "#f4d16c",
+    "ink": "#2e2518",
+    "contentShieldOpacity": 0.88,
+    "elevation": 8,
+    "radius": 7
+  },
+  {
+    "material": "enamel",
+    "baseColor": "#e98259",
+    "ink": "#241d1a",
+    "contentShieldOpacity": 0.9,
+    "elevation": 18,
+    "radius": 30
+  },
+  {
+    "material": "brushed-metal",
+    "baseColor": "#c5ccd6",
+    "ink": "#17232d",
+    "contentShieldOpacity": 0.9,
+    "elevation": 12,
+    "radius": 10
+  },
+  {
+    "material": "soft-glass",
+    "baseColor": "#d9eee6",
+    "ink": "#18342c",
+    "contentShieldOpacity": 0.92,
+    "elevation": 22,
+    "radius": 30
+  }
+]

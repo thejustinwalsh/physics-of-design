@@ -1,0 +1,1 @@
+{"expo":{"name":"Design Theory · Review","slug":"design-theory-review-spike","version":"0.0.1","ios":{"bundleIdentifier":"local.designtheory.review","infoPlist":{"NSAppTransportSecurity":{"NSAllowsLocalNetworking":true}}},"android":{"package":"local.designtheory.review"},"web":{"bundler":"metro"},"plugins":["expo-font"]}}

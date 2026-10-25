@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-25",
+  "scope": "Equal common inputs for Luna/Sol/Astra Relay builds; excludes execution evidence and app outputs.",
+  "canonicalInputIdentity": "028691690cdbce7903154f5690273cabeb928aa81ec2b77590673db39d63a360",
+  "hashAlgorithm": "sha256",
+  "files": [
+    {
+      "path": "assets/fonts/Lato-Black.ttf",
+      "byteLength": 664748,
+      "sha256": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337"
+    },
+    {
+      "path": "assets/fonts/Lato-Regular.ttf",
+      "byteLength": 656568,
+      "sha256": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
+    },
+    {
+      "path": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+      "byteLength": 1787292,
+      "sha256": "9b523f7d82593df0107173849ebb8c817471a1df4b4fb2c3cbf40cfd810c8281"
+    },
+    {
+      "path": "assets/fonts/Spectral-Regular.ttf",
+      "byteLength": 261088,
+      "sha256": "c89021dc20720c8d0dcf40b0b2f6e00c13665fa8041717f581396f51b8c78f5d"
+    },
+    {
+      "path": "assets/fonts/lato-OFL.txt",
+      "byteLength": 4407,
+      "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
+    },
+    {
+      "path": "assets/fonts/robotoflex-OFL.txt",
+      "byteLength": 4488,
+      "sha256": "9cbaed04b20c853f99840efe5dc96956f6f6120ed83a0ade35f9281a2b63e5d0"
+    },
+    {
+      "path": "assets/fonts/spectral-OFL.txt",
+      "byteLength": 4392,
+      "sha256": "501d6ceca8e552630fe3aa9442b9a818565680a1a2f79f3fb8c13d6f309a9e98"
+    },
+    {
+      "path": "docs/relay-inspiration.md",
+      "byteLength": 4259,
+      "sha256": "207cf7cb6e552cf6447b6baf796f1a4077f0733a4cb885f851a149a6a78c5ece"
+    },
+    {
+      "path": "examples/kernels/relay-compact.json",
+      "byteLength": 13178,
+      "sha256": "2ed7d961b524a0798f8001551351b21883e06d53eb2921ed8b45ff036002609c"
+    },
+    {
+      "path": "examples/kernels/relay-measurements.json",
+      "byteLength": 11070,
+      "sha256": "1d6e2f971d6a75fad6a89de85828efa7f2e03cde876599273ea33bd1b62c2e3f"
+    },
+    {
+      "path": "experiments/relay/shared/BRIEF.md",
+      "byteLength": 14767,
+      "sha256": "d4c53d10887ce115d8bbcbd60449f0bff7c264440b25a83b8a58ab6adb368c03"
+    },
+    {
+      "path": "experiments/relay/shared/DESIGN.md",
+      "byteLength": 9220,
+      "sha256": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2"
+    },
+    {
+      "path": "experiments/relay/shared/PLATFORM-RUNTIME.md",
+      "byteLength": 2068,
+      "sha256": "b8eab77d52fff37762f0fab99374b401a6b4a426f1bf3bb5d00563e97440aa38"
+    },
+    {
+      "path": "experiments/relay/shared/README.md",
+      "byteLength": 1961,
+      "sha256": "374ab07bd5f4d4f7de74715e8ab45317df7cdd9df08dc2d1782b71529b81a539"
+    },
+    {
+      "path": "experiments/relay/shared/REPORTING.md",
+      "byteLength": 3055,
+      "sha256": "fbd2a85f07dca22037374380dac74f367c5b4e97ac668779a432617b63e6288d"
+    },
+    {
+      "path": "experiments/relay/shared/TOOL-COVERAGE.md",
+      "byteLength": 9439,
+      "sha256": "1b29dedf621c18f08a0f58318272d3d9045208417bfb59e38419a1be777df013"
+    },
+    {
+      "path": "experiments/relay/shared/assets/LICENSE.txt",
+      "byteLength": 1100,
+      "sha256": "6e7d0c208fe3e884349e6c2111bafbbc98d99d8d0f5fa583b327f3d87c0ed3f2"
+    },
+    {
+      "path": "experiments/relay/shared/assets/diagnostic-trace.svg",
+      "byteLength": 1789,
+      "sha256": "7c052e9efc25261033251e5b991e53f82b6b4b9dd02b720aac3e20e1673b1060"
+    },
+    {
+      "path": "experiments/relay/shared/assets/provenance.json",
+      "byteLength": 2521,
+      "sha256": "2743c711227a8c339323099a6cd0203835a7174ee9a6ed38c2a10168a6976472"
+    },
+    {
+      "path": "experiments/relay/shared/assets/service-topology.svg",
+      "byteLength": 1717,
+      "sha256": "a93df55335751842af9b1f1757f098c1cc7b9f247c6423ba3ca2e9c78295f620"
+    },
+    {
+      "path": "experiments/relay/shared/fixture-integrity.json",
+      "byteLength": 382,
+      "sha256": "7076067e8817139b2a249de4cdd3a4db6f9082ba398100c10f79c2abf649ad2d"
+    },
+    {
+      "path": "experiments/relay/shared/fixtures.json",
+      "byteLength": 2635913,
+      "sha256": "107f4315ec2589aaa4ed2328b767e54b4c7a12b3be2b34d56eb20c5638f61d62"
+    },
+    {
+      "path": "experiments/relay/shared/fixtures.test.mjs",
+      "byteLength": 2233,
+      "sha256": "985d4b2a6d17ca5b51992eb33bf7f19fc1c974d598a6d02bf3c90cff7634b409"
+    },
+    {
+      "path": "experiments/relay/shared/generate-fixtures.mjs",
+      "byteLength": 15661,
+      "sha256": "1c0c7c07037664d94dbd75f3b05d0aa886796ba379fe016bd83e6546d8773a12"
+    },
+    {
+      "path": "experiments/relay/shared/types.ts",
+      "byteLength": 4331,
+      "sha256": "f1f00bb719f0578bf44845e301ed8e56829fec70163122515edd85bd36d2b882"
+    },
+    {
+      "path": "research/relay-inspiration.json",
+      "byteLength": 8676,
+      "sha256": "6aef97bdeba88dd8abaae699b3bddc38e6f806cf4d1386a55532dcfa40378e39"
+    }
+  ],
+  "revision": 2
+}

@@ -1,0 +1,452 @@
+{
+  "version": 1,
+  "id": "relay-relational-kernels",
+  "brief": "Operational precision with material character; current task information, readable rows and preserved list/detail access.",
+  "identities": {
+    "design": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+    "content": "107f4315ec2589aaa4ed2328b767e54b4c7a12b3be2b34d56eb20c5638f61d62",
+    "source": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9"
+  },
+  "scenarios": [
+    {
+      "id": "small-phone",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 320,
+      "height": 740,
+      "textScale": 1
+    },
+    {
+      "id": "phone",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 390,
+      "height": 844,
+      "textScale": 1
+    },
+    {
+      "id": "phone-large",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 390,
+      "height": 844,
+      "textScale": 1.5
+    },
+    {
+      "id": "narrow",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 768,
+      "height": 900,
+      "textScale": 1
+    },
+    {
+      "id": "ipad",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 834,
+      "height": 1194,
+      "textScale": 1.5
+    },
+    {
+      "id": "desktop",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 1440,
+      "height": 1000,
+      "textScale": 1
+    }
+  ],
+  "kernels": [
+    {
+      "id": "service-row",
+      "kind": "type-row",
+      "purpose": "Readable operational label and editable row density",
+      "source": "Relay BRIEF.md and DESIGN.md",
+      "text": "checkout-api · production · us-east-1",
+      "fontIdentity": "3e94f0454333cdb4d5d94662a022ef7e91d0befabc348c7bb26c6ac5a4d28fea",
+      "minHitSize": 44,
+      "maxRowHeight": 150,
+      "preferredRowHeight": 72,
+      "paddingBlock": [
+        4,
+        8,
+        12
+      ],
+      "candidates": [
+        {
+          "id": "type-14",
+          "label": "14px operational labels",
+          "fontSize": 14,
+          "lineHeight": 1.4,
+          "trackingEm": 0,
+          "cells": {
+            "$designFile": "examples/kernels/relay-measurements.json",
+            "sha256": "1d6e2f971d6a75fad6a89de85828efa7f2e03cde876599273ea33bd1b62c2e3f",
+            "pointer": "/service-row-type-14"
+          }
+        },
+        {
+          "id": "type-15",
+          "label": "15px operational labels",
+          "fontSize": 15,
+          "lineHeight": 1.4,
+          "trackingEm": 0,
+          "cells": {
+            "$designFile": "examples/kernels/relay-measurements.json",
+            "sha256": "1d6e2f971d6a75fad6a89de85828efa7f2e03cde876599273ea33bd1b62c2e3f",
+            "pointer": "/service-row-type-15"
+          }
+        },
+        {
+          "id": "type-16",
+          "label": "16px operational labels",
+          "fontSize": 16,
+          "lineHeight": 1.4,
+          "trackingEm": 0,
+          "cells": {
+            "$designFile": "examples/kernels/relay-measurements.json",
+            "sha256": "1d6e2f971d6a75fad6a89de85828efa7f2e03cde876599273ea33bd1b62c2e3f",
+            "pointer": "/service-row-type-16"
+          }
+        }
+      ]
+    },
+    {
+      "id": "workspace",
+      "kind": "regions",
+      "purpose": "Preserve service list and inspector at measured minimum widths",
+      "source": "Relay DESIGN.md; authored minimum measures",
+      "regions": [
+        {
+          "id": "list",
+          "minInline": 180,
+          "share": 1
+        },
+        {
+          "id": "inspector",
+          "minInline": 180,
+          "share": 1.4
+        }
+      ],
+      "roleLink": {
+        "kernel": "service-row",
+        "region": "list"
+      },
+      "candidates": [
+        {
+          "id": "compact",
+          "label": "Compact paired workspace",
+          "gap": 16,
+          "inlinePadding": 12,
+          "splitMinimum": 680
+        },
+        {
+          "id": "open",
+          "label": "Open investigation workspace",
+          "gap": 24,
+          "inlinePadding": 16,
+          "splitMinimum": 780
+        }
+      ]
+    },
+    {
+      "id": "appearance",
+      "kind": "appearance",
+      "purpose": "Compare Night and Day instrument directions",
+      "source": "Relay DESIGN.md; equal authored direction preference",
+      "candidates": [
+        {
+          "id": "night",
+          "label": "Night instrument",
+          "palette": {
+            "system": {
+              "tokens": {
+                "canvas": "#0e1720",
+                "ink": "#eaf2f7",
+                "accent": "#66d9ed",
+                "dark-canvas": "#0e1720",
+                "dark-ink": "#eaf2f7",
+                "light-canvas": "#edf0eb",
+                "light-ink": "#182b35"
+              },
+              "roles": [
+                {
+                  "id": "primary",
+                  "foreground": "ink",
+                  "background": "canvas",
+                  "use": "text",
+                  "source": [
+                    "Relay operational labels"
+                  ]
+                },
+                {
+                  "id": "accent",
+                  "foreground": "accent",
+                  "background": "canvas",
+                  "use": "non-text",
+                  "source": [
+                    "Relay selected data and focused controls"
+                  ]
+                },
+                {
+                  "id": "light",
+                  "foreground": "light-ink",
+                  "background": "light-canvas",
+                  "theme": "light",
+                  "use": "text",
+                  "source": [
+                    "Relay light fallback"
+                  ]
+                },
+                {
+                  "id": "dark",
+                  "foreground": "dark-ink",
+                  "background": "dark-canvas",
+                  "theme": "dark",
+                  "use": "text",
+                  "source": [
+                    "Relay dark fallback"
+                  ]
+                }
+              ]
+            }
+          },
+          "material": {
+            "first": {
+              "id": "substrate",
+              "surface": {
+                "baseColor": [
+                  0.18,
+                  0.2,
+                  0.22
+                ],
+                "roughness": 0.88,
+                "metalness": 0
+              },
+              "composition": "homogeneous-dielectric",
+              "lighting": {
+                "rigId": "relay-room",
+                "coordinateFrame": "surface",
+                "environmentId": "neutral-room",
+                "exposureEv": 0,
+                "lightDirection": [
+                  0.4,
+                  0.3,
+                  1
+                ]
+              },
+              "provenance": {
+                "kind": "authored",
+                "source": "Relay DESIGN.md; illustrative material parameters, not calibrated samples"
+              }
+            },
+            "second": {
+              "id": "panel",
+              "surface": {
+                "baseColor": [
+                  0.04,
+                  0.12,
+                  0.18
+                ],
+                "roughness": 0.3,
+                "metalness": 0
+              },
+              "composition": "homogeneous-dielectric",
+              "lighting": {
+                "rigId": "relay-room",
+                "coordinateFrame": "surface",
+                "environmentId": "neutral-room",
+                "exposureEv": 0,
+                "lightDirection": [
+                  0.4,
+                  0.3,
+                  1
+                ]
+              },
+              "provenance": {
+                "kind": "authored",
+                "source": "Relay DESIGN.md; illustrative material parameters, not calibrated samples"
+              }
+            },
+            "profile": {
+              "id": "counterpoint",
+              "intent": "Quiet substrate and restrained active panel",
+              "roleRelation": "counterpoint",
+              "source": "Relay DESIGN.md",
+              "bands": [
+                {
+                  "metric": "roughnessDifference",
+                  "min": 0.3,
+                  "max": 0.65,
+                  "rationale": "Authored finish distinction under one rig",
+                  "source": "Relay DESIGN.md"
+                }
+              ]
+            }
+          },
+          "motion": {
+            "spring": {
+              "mass": 1,
+              "stiffness": 200,
+              "damping": 28
+            },
+            "coordinate": {
+              "unit": "normalized",
+              "from": 0,
+              "to": 1
+            },
+            "durationSeconds": 2
+          },
+          "preference": 0,
+          "nativeFinish": "static"
+        },
+        {
+          "id": "day",
+          "label": "Day instrument",
+          "palette": {
+            "system": {
+              "tokens": {
+                "canvas": "#edf0eb",
+                "ink": "#182b35",
+                "accent": "#00667a",
+                "dark-canvas": "#0e1720",
+                "dark-ink": "#eaf2f7",
+                "light-canvas": "#edf0eb",
+                "light-ink": "#182b35"
+              },
+              "roles": [
+                {
+                  "id": "primary",
+                  "foreground": "ink",
+                  "background": "canvas",
+                  "use": "text",
+                  "source": [
+                    "Relay operational labels"
+                  ]
+                },
+                {
+                  "id": "accent",
+                  "foreground": "accent",
+                  "background": "canvas",
+                  "use": "non-text",
+                  "source": [
+                    "Relay selected data and focused controls"
+                  ]
+                },
+                {
+                  "id": "light",
+                  "foreground": "light-ink",
+                  "background": "light-canvas",
+                  "theme": "light",
+                  "use": "text",
+                  "source": [
+                    "Relay light fallback"
+                  ]
+                },
+                {
+                  "id": "dark",
+                  "foreground": "dark-ink",
+                  "background": "dark-canvas",
+                  "theme": "dark",
+                  "use": "text",
+                  "source": [
+                    "Relay dark fallback"
+                  ]
+                }
+              ]
+            }
+          },
+          "material": {
+            "first": {
+              "id": "substrate",
+              "surface": {
+                "baseColor": [
+                  0.18,
+                  0.2,
+                  0.22
+                ],
+                "roughness": 0.88,
+                "metalness": 0
+              },
+              "composition": "homogeneous-dielectric",
+              "lighting": {
+                "rigId": "relay-room",
+                "coordinateFrame": "surface",
+                "environmentId": "neutral-room",
+                "exposureEv": 0,
+                "lightDirection": [
+                  0.4,
+                  0.3,
+                  1
+                ]
+              },
+              "provenance": {
+                "kind": "authored",
+                "source": "Relay DESIGN.md; illustrative material parameters, not calibrated samples"
+              }
+            },
+            "second": {
+              "id": "panel",
+              "surface": {
+                "baseColor": [
+                  0.04,
+                  0.12,
+                  0.18
+                ],
+                "roughness": 0.5,
+                "metalness": 0
+              },
+              "composition": "homogeneous-dielectric",
+              "lighting": {
+                "rigId": "relay-room",
+                "coordinateFrame": "surface",
+                "environmentId": "neutral-room",
+                "exposureEv": 0,
+                "lightDirection": [
+                  0.4,
+                  0.3,
+                  1
+                ]
+              },
+              "provenance": {
+                "kind": "authored",
+                "source": "Relay DESIGN.md; illustrative material parameters, not calibrated samples"
+              }
+            },
+            "profile": {
+              "id": "counterpoint",
+              "intent": "Quiet substrate and restrained active panel",
+              "roleRelation": "counterpoint",
+              "source": "Relay DESIGN.md",
+              "bands": [
+                {
+                  "metric": "roughnessDifference",
+                  "min": 0.3,
+                  "max": 0.65,
+                  "rationale": "Authored finish distinction under one rig",
+                  "source": "Relay DESIGN.md"
+                }
+              ]
+            }
+          },
+          "motion": {
+            "spring": {
+              "mass": 1,
+              "stiffness": 160,
+              "damping": 26
+            },
+            "coordinate": {
+              "unit": "normalized",
+              "from": 0,
+              "to": 1
+            },
+            "durationSeconds": 2
+          },
+          "preference": 0,
+          "nativeFinish": "static"
+        }
+      ]
+    }
+  ]
+}

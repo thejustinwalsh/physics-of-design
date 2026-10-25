@@ -1,0 +1,185 @@
+{
+  "capturedAt": "2026-10-25T15:12:53.476Z",
+  "sources": [
+    {
+      "path": "src/energy.ts",
+      "copy": "sources/src--energy.ts",
+      "sha256": "2a08f830d8055b69d303a71fc76a5a7b1c45bf47ab0a64f7eb8bbfa2f0901db1"
+    },
+    {
+      "path": "src/graph.ts",
+      "copy": "sources/src--graph.ts",
+      "sha256": "59be00a476bf0acdc8bfb6f8aecdffc890e68322aadcc62a332ab0a41dd60f79"
+    },
+    {
+      "path": "src/decision-workflow.ts",
+      "copy": "sources/src--decision-workflow.ts",
+      "sha256": "8f5ecef8a2fae27c3222e6968b383701d3b536f615ba6484ee2d49038e302506"
+    },
+    {
+      "path": "src/decision-runtime.ts",
+      "copy": "sources/src--decision-runtime.ts",
+      "sha256": "9d91369c47458df9302e0af4a8a7cf3fd9f88f25dcd7e75d334cda83d40544a7"
+    },
+    {
+      "path": "src/decision-machine.ts",
+      "copy": "sources/src--decision-machine.ts",
+      "sha256": "d4c8c0b76a26324effcbeea18c32d76b9d64151343f627af16ef874a8287a8a6"
+    },
+    {
+      "path": "src/validation-machine.ts",
+      "copy": "sources/src--validation-machine.ts",
+      "sha256": "5be3411dfddbee049e7d0a67f98548d771871fad69aa56e1a1fac8d67ed7adcf"
+    },
+    {
+      "path": "src/output-bindings.ts",
+      "copy": "sources/src--output-bindings.ts",
+      "sha256": "1b52eae8ab933d34fb9550300df4dc333122f8ba3ffd4dd6e579a6b73c9efe3f"
+    },
+    {
+      "path": "src/relational-kernels.ts",
+      "copy": "sources/src--relational-kernels.ts",
+      "sha256": "75c33979c0b4fbec0e21687b76ba9f5af2406361c72839161a6c3b5c62f3c3db"
+    },
+    {
+      "path": "src/design-field.ts",
+      "copy": "sources/src--design-field.ts",
+      "sha256": "376d7b22a9d3c2185cd4e9a8e94aa0f7f4da2111b0a7ed6d54ee9c386c1846a6"
+    },
+    {
+      "path": "src/design-context.ts",
+      "copy": "sources/src--design-context.ts",
+      "sha256": "1b53a8d5166722d46176ff1ac688647900d8966e341a4d69dd7736d4043a04d1"
+    },
+    {
+      "path": "src/selector.ts",
+      "copy": "sources/src--selector.ts",
+      "sha256": "dc686b35f739461e2d54e571eb0c4efb93176d4a58d94c936d5f48835a40db6f"
+    },
+    {
+      "path": "src/mcp-context.ts",
+      "copy": "sources/src--mcp-context.ts",
+      "sha256": "03a185e64b89d90fa401e8ddefa741d8a19fcf18a5d06fe71a8eb78a5aa9de01"
+    },
+    {
+      "path": "src/commands.ts",
+      "copy": "sources/src--commands.ts",
+      "sha256": "9bb26e68a02d3767bf2c2f0f9b1251fd304ae889191a82433a58263484d6e411"
+    },
+    {
+      "path": "src/color.ts",
+      "copy": "sources/src--color.ts",
+      "sha256": "ac7529b50b9940f2ff31492163d47c29c5efecaeca8f14fe27c9cf72acf3ff51"
+    },
+    {
+      "path": "src/palette.ts",
+      "copy": "sources/src--palette.ts",
+      "sha256": "957dae501a57bc1fa3b8dd4b0fda0831df90a7cb5eab3caeebb7afd9fb888f6a"
+    },
+    {
+      "path": "src/typography-inspection.ts",
+      "copy": "sources/src--typography-inspection.ts",
+      "sha256": "468270608d21ec30bf02524a6eb7bc0999a218a1d2adca066fa8e82a7297de4e"
+    },
+    {
+      "path": "src/typography-browser.ts",
+      "copy": "sources/src--typography-browser.ts",
+      "sha256": "b33c497d5a7836990782d184f440d8a591ea92d3fb1b8bfcbf7b602298473857"
+    },
+    {
+      "path": "src/motion-dynamics.ts",
+      "copy": "sources/src--motion-dynamics.ts",
+      "sha256": "a1d4b5c49631f3b9fa50ac8e6def7e9091530dc95898459cf3f0cbdc27db3093"
+    },
+    {
+      "path": "src/surface.ts",
+      "copy": "sources/src--surface.ts",
+      "sha256": "fd0a89a64c42e59c8738ffd7bb87f36d49d384f9753a3d318253209f5310220c"
+    },
+    {
+      "path": "src/dom-surface-gpu.ts",
+      "copy": "sources/src--dom-surface-gpu.ts",
+      "sha256": "2c363138bae85c0fd4053f35b2de8fcb1e0591f07fcfcbeb943011a9e85d3001"
+    },
+    {
+      "path": "src/browser-dom-light.ts",
+      "copy": "sources/src--browser-dom-light.ts",
+      "sha256": "2e69e318efbe6d80fa6859d2f6272e8ba91e6affa86195a60e7702e8e32b3807"
+    }
+  ],
+  "receipts": [
+    {
+      "path": "artifacts/verification-design-theory-final/summary.json",
+      "copy": "receipts/artifacts--verification-design-theory-final--summary.json",
+      "sha256": "3a39c79d309556399b6439a051210fec4cae56bc49a67c220fa6f9bfeebf45c4"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/gallery-session.json",
+      "copy": "receipts/artifacts--design-field-streaming-selector--gallery-session.json",
+      "sha256": "16ff9929469e82fde32b4b3786d304dccee12b24455cdcd6d98e8e32e335253a"
+    },
+    {
+      "path": "artifacts/relational-kernels-final/receipt.json",
+      "copy": "receipts/artifacts--relational-kernels-final--receipt.json",
+      "sha256": "1ff484c0c57a44c3ad4829b8731feaa987e109240699fbae2d008792754ea3cd"
+    },
+    {
+      "path": "artifacts/relational-kernels-final/bindings.json",
+      "copy": "receipts/artifacts--relational-kernels-final--bindings.json",
+      "sha256": "ecae54c99a70b1b136bc3ff117bfcb3a5198be132fa891b5a40a04f80e137966"
+    },
+    {
+      "path": "artifacts/choice-effectiveness/report.json",
+      "copy": "receipts/artifacts--choice-effectiveness--report.json",
+      "sha256": "73c9f1ac286df72bcb813162944602c6bdd07579989b551a8cc22e3b2c832699"
+    },
+    {
+      "path": "artifacts/dom-surfaces-gpu/summary.json",
+      "copy": "receipts/artifacts--dom-surfaces-gpu--summary.json",
+      "sha256": "aacf6e10734a3080ab967a7e23e01c49070c49af1c8ce9c73655c59285b42b23"
+    },
+    {
+      "path": "artifacts/design-theory/material-integration/report.json",
+      "copy": "receipts/artifacts--design-theory--material-integration--report.json",
+      "sha256": "e0ef0e234ae22f515eee0721328b470b106b98f8b4ef68670a556fc94bd648a7"
+    },
+    {
+      "path": "artifacts/expo-design-theory/proof.json",
+      "copy": "receipts/artifacts--expo-design-theory--proof.json",
+      "sha256": "d85f65339c433637ced6bf4927a4af01adb987de301a451cede92fe8da7f372e"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/proof.json",
+      "copy": "receipts/artifacts--expo-template-smoke--proof.json",
+      "sha256": "5745b17801f2824118f58be0c56d7c2126ef2d0ede93a2223d658a64a73409a9"
+    },
+    {
+      "path": "evidence/workflow-comparison-2026-10-25/evaluation/adjudication.json",
+      "copy": "receipts/evidence--workflow-comparison-2026-10-25--evaluation--adjudication.json",
+      "sha256": "934adfd67665580ab4ed6e2d8848e70af67eb733b77baa1c37dba0da6678deec"
+    }
+  ],
+  "updates": [
+    {
+      "capturedAt": "2026-10-25T15:21:31.239184+00:00",
+      "kind": "verification-interruption-and-recovery",
+      "receipts": [
+        {
+          "path": "artifacts/verification-design-theory-android-interruption/summary.json",
+          "copy": "receipts/artifacts--verification-design-theory-android-interruption--summary-recovery-snapshot.json",
+          "sha256": "4199768d739e477670716630224be5dddeedadc2f0e6a06ce1bdc068ef89b7bd"
+        },
+        {
+          "path": "artifacts/verification-design-theory-final/summary.json",
+          "copy": "receipts/artifacts--verification-design-theory-final--summary-recovery-snapshot.json",
+          "sha256": "171042749226f6e351ec2589ee2c5f733464f817e5936faa3d5467c153369f4b"
+        },
+        {
+          "path": "artifacts/verification-android-interruption/diagnostic-excerpt.json",
+          "copy": "receipts/android-interruption-diagnostic-excerpt.json",
+          "sha256": "f418a823a46563849dd3daa3552bae0070093ae4999baa060f7448c93dd43b6c"
+        }
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@ Local-first TypeScript CLI/MCP tools for **brief-driven mathematical design deci
 
 Vela is a complete six-screen app built from a generated policy. Fieldwork and the typography specimens remain executable proofs. This is a relational tool stack, not a component catalog or UI composer. Brief preference energy is not universal beauty, and musical ratios remain an optional hypothesis.
 
-[Current extension and measured limits](docs/design-theory-extension.md) · [Previous app milestone](docs/design-machine-report.md) · [Full landscape](docs/landscape.md) · [Architecture](docs/adr-002-fast-design-machine.md)
+[Current design field and integration limits](docs/bold-design-report.md) · [Previous extension](docs/design-theory-extension.md) · [Previous app milestone](docs/design-machine-report.md) · [Full landscape](docs/landscape.md) · [Architecture](docs/adr-002-fast-design-machine.md)
 
 ```sh
 npm ci && npm run build
@@ -46,44 +46,48 @@ node scripts/request.mjs examples/editorial.json '{"directory":"artifacts/editor
 
 Every command reads one JSON object, writes JSON to stdout, and sends errors to stderr with exit1. Use `--input FILE`, `--output FILE`, or `--jsonl` for Unix composition. Valid but infeasible designs return explicit issues and `feasible:false`. Font paths resolve from the working directory. `./dist/cli.js --help` lists the complete command set; `commandSchemas` exports the actual typed schemas.
 
-| Command                                                                     | Purpose                                                                                     |
-| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `energy search` / `energy analyze`                                          | Bounded weighted search, evaluated choice graph and local finite-difference pressures       |
-| `composition solve`                                                         | Brief-conditioned search, optional local frontier selection and guarded solver recipes      |
-| `decision handoff` / `decision replay`                                      | Resolved content/region/transition machine and zero-inference replay                        |
-| `color convert` / `palette ramp` / `palette analyze` / `palette candidates` | CSS4/OKLCH, role contrast and joint repair with alpha uncertainty                           |
-| `motion analyze` / `motion candidates` / `motion emit` / `motion proof`     | Analytic spring fields, bounded alternatives, platform plans and inspection                 |
-| `component solve` / `component inspect`                                     | Source-bound dimension equations and technical drawings                                     |
-| `decision run`                                                              | Conditional staged choice DAG, per-stage recipes and zero-inference replay                  |
-| `wireframe inspect`                                                         | Whole-layout dimensional overlays and editable MCP App equations                            |
-| `motion dynamics` / `motion timeline`                                       | Retarget work/dissipation and bounded runtime sample tables                                 |
-| `surface probe` / `surface map` / `surface textures`                        | Linear PBR response, explicit Three mapping and reproducible normal/roughness data          |
-| `media analyze` / `media crops`                                             | Decoded raster descriptors, source-region contrast and authored crop alternatives           |
-| `prose analyze`                                                             | Section facts, task journeys, conditional cost and explicit probability entropy             |
-| `material pair` / `material candidates`                                     | Separate finish/color/texture/light relationships and brief-conditioned Pareto pairings     |
-| `validation plan` / `validation check`                                      | XState phase gates carrying current scenario and tool-evidence obligations                  |
-| `registry`                                                                  | Evidence, heuristics, hypotheses, standards, sources and limits                             |
-| `font inspect`                                                              | Real metrics, axes, features, coverage and font checksum                                    |
-| `typography inspect` / `typography axes`                                    | Guarded browser baselines, outline/Canvas facts and bounded variable-axis endpoint wizard   |
-| `text shape`                                                                | Glyph positioning/kerning plus actual renderer line breaks                                  |
-| `intervals candidates`                                                      | Log-ratio alternatives and configurable multi-peak curves                                   |
-| `relations score`                                                           | Separate conditional factors, alternatives and uncertainty                                  |
-| `layout measure`                                                            | Actual rendered geometry, wrap brackets, content/spacing failures                           |
-| `system graph`                                                              | Variable/factor dependencies                                                                |
-| `system perturb`                                                            | Safe editable-state changes, locks and transitive invalidation                              |
-| `system relax`                                                              | Bounded discrete search/refinement, responsive feasibility, Pareto alternatives             |
-| `responsive patterns` / `responsive resolve`                                | Flex-only relational patterns and effective variables at a width                            |
-| `rhythm analyze`                                                            | Ordered motifs, global/local entropy, attributed empirical surprise                         |
-| `emit`                                                                      | React + StyleX source or React Native mapping with capability reports                       |
-| `proof`                                                                     | Offline editable specimen, baseline guides, font comparison, source and state               |
-| `choice select`                                                             | Fresh deterministic validation followed by the one optional local selector                  |
-| `corpus validate` / `corpus analyze`                                        | Rights/attribution/project-split checks and rendered feature extraction                     |
-| `color analyze` / `color candidates`                                        | Opaque sRGB contrast constraints, OKLCH descriptors and editable bounded alternatives       |
-| `composition plan`                                                          | Shared editable flex topology, type/spacing roles and conditional measures                  |
-| `platform audit`                                                            | Source-pinned Apple target, safe-area, scaling and navigation checks with explicit unknowns |
-| `composition analyze`                                                       | Rectangle alignment constraints, grouping, overlap, balance and whitespace descriptors      |
-| `training export`                                                           | Validated project-split preference records with synthetic/human provenance                  |
-| `evaluate`                                                                  | Matched task/seed metrics, project-level preferences and hypothesis screening               |
+| Command                                                                     | Purpose                                                                                          |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `context inspect`                                                           | Bounded `DESIGN.md` identity and requested section checks; no prose-to-rule inference            |
+| `field measure` / `field run` / `field validate`                            | Actual text matrix, coupled staged alternatives, optional selector and exact finalist validation |
+| `kernel compile` / `bindings check`                                        | Measured app relationships, named property handoffs and current renderer consistency checks       |
+| `surface css` / `surface light`                                             | Four CSS material recipes, bounded light/normal descriptors and retained DOM adapter             |
+| `energy search` / `energy analyze`                                          | Bounded weighted search, evaluated choice graph and local finite-difference pressures            |
+| `composition solve`                                                         | Brief-conditioned search, optional local frontier selection and guarded solver recipes           |
+| `decision handoff` / `decision replay`                                      | Resolved content/region/transition machine and zero-inference replay                             |
+| `color convert` / `palette ramp` / `palette analyze` / `palette candidates` | CSS4/OKLCH, role contrast and joint repair with alpha uncertainty                                |
+| `motion analyze` / `motion candidates` / `motion emit` / `motion proof`     | Analytic spring fields, bounded alternatives, platform plans and inspection                      |
+| `component solve` / `component inspect`                                     | Source-bound dimension equations and technical drawings                                          |
+| `decision run`                                                              | Conditional staged choice DAG, per-stage recipes and zero-inference replay                       |
+| `wireframe inspect`                                                         | Whole-layout dimensional overlays and editable MCP App equations                                 |
+| `motion dynamics` / `motion timeline`                                       | Retarget work/dissipation and bounded runtime sample tables                                      |
+| `surface probe` / `surface map` / `surface textures`                        | Linear PBR response, explicit Three mapping and reproducible normal/roughness data               |
+| `media analyze` / `media crops`                                             | Decoded raster descriptors, source-region contrast and authored crop alternatives                |
+| `prose analyze`                                                             | Section facts, task journeys, conditional cost and explicit probability entropy                  |
+| `material pair` / `material candidates`                                     | Separate finish/color/texture/light relationships and brief-conditioned Pareto pairings          |
+| `validation plan` / `validation check`                                      | XState phase gates carrying current scenario and tool-evidence obligations                       |
+| `registry`                                                                  | Evidence, heuristics, hypotheses, standards, sources and limits                                  |
+| `font inspect`                                                              | Real metrics, axes, features, coverage and font checksum                                         |
+| `typography inspect` / `typography axes`                                    | Guarded browser baselines, outline/Canvas facts and bounded variable-axis endpoint wizard        |
+| `text shape`                                                                | Glyph positioning/kerning plus actual renderer line breaks                                       |
+| `intervals candidates`                                                      | Log-ratio alternatives and configurable multi-peak curves                                        |
+| `relations score`                                                           | Separate conditional factors, alternatives and uncertainty                                       |
+| `layout measure`                                                            | Actual rendered geometry, wrap brackets, content/spacing failures                                |
+| `system graph`                                                              | Variable/factor dependencies                                                                     |
+| `system perturb`                                                            | Safe editable-state changes, locks and transitive invalidation                                   |
+| `system relax`                                                              | Bounded discrete search/refinement, responsive feasibility, Pareto alternatives                  |
+| `responsive patterns` / `responsive resolve`                                | Flex-only relational patterns and effective variables at a width                                 |
+| `rhythm analyze`                                                            | Ordered motifs, global/local entropy, attributed empirical surprise                              |
+| `emit`                                                                      | React + StyleX source or React Native mapping with capability reports                            |
+| `proof`                                                                     | Offline editable specimen, baseline guides, font comparison, source and state                    |
+| `choice select`                                                             | Fresh deterministic validation followed by the one optional local selector                       |
+| `corpus validate` / `corpus analyze`                                        | Rights/attribution/project-split checks and rendered feature extraction                          |
+| `color analyze` / `color candidates`                                        | Opaque sRGB contrast constraints, OKLCH descriptors and editable bounded alternatives            |
+| `composition plan`                                                          | Shared editable flex topology, type/spacing roles and conditional measures                       |
+| `platform audit`                                                            | Source-pinned Apple target, safe-area, scaling and navigation checks with explicit unknowns      |
+| `composition analyze`                                                       | Rectangle alignment constraints, grouping, overlap, balance and whitespace descriptors           |
+| `training export`                                                           | Validated project-split preference records with synthetic/human provenance                       |
+| `evaluate`                                                                  | Matched task/seed metrics, project-level preferences and hypothesis screening                    |
 
 State commands take `{state:...}`. See [examples/hero.json](examples/hero.json), [examples/editorial.json](examples/editorial.json), [the architecture decision](docs/adr-001.md), and [the research ledger](docs/research-ledger.md).
 
@@ -130,6 +134,8 @@ DESIGN_NATIVE_TOKEN=local-spike DESIGN_NATIVE_PLATFORM=native-android npm run te
 
 The session helper uses isolated simulator/AVD storage and a loopback bridge. It owns its bridge/Metro/proxy/emulator processes and stops those children on exit. Start with ports4319/8087/8088 available. The explicit IPv4→IPv6 Metro proxy avoids an emulator/localhost binding failure observed on this Mac. Native custom axes/optical sizing, disabled kerning and arbitrary OpenType toggles return explicit unsupported reports; use licensed static faces when appropriate. Native user text scaling is additional to requested stress textScale.
 
+The [Expo/React Strict DOM spike](docs/expo-design-theory.md) separately exercises shared StyleX-backed primitives, measured relational outputs and real input on production web and Expo Go iOS/Android. Its blank integration shell is independently tested. This establishes the exercised subset, with native material and OS text-scaling limits recorded explicitly. [Relay's matched builder protocol](docs/relay-experiment.md) uses this shell with the same brief, skill and tools for GPT-6 Luna, GPT-6.1 Sol and GPT-6 Astra.
+
 ## Local selector
 
 ```sh
@@ -143,7 +149,7 @@ Add `select:{criterion,gguf,auditDirectory?}` to `system relax`, or call `choice
 
 ## MCP and optional App
 
-Configure stdio with command `node`, args `[/absolute/path/dist/cli.js,mcp]`, and this repository as working directory. The default profile exposes three tools: `design_catalog` discovers a command/schema, `design_execute` invokes it, and `design_specimen` opens the optional App. Use exact session references such as `{"$designRef":"pod:1","pointer":"/state"}` to reuse returned values. Summary responses retain a full result reference; request `response:"full"` when needed. `DESIGN_MCP_PROFILE=full` enables named wrappers for all 55 commands. No SaaS account is needed for the toolkit. Measured default discovery is the recorded compact wire size; see `npm run context:budget`; host framing varies.
+Configure stdio with command `node`, args `[/absolute/path/dist/cli.js,mcp]`, and this repository as working directory. The default profile exposes three tools: `design_catalog` discovers a command/schema, `design_execute` invokes it, and `design_specimen` opens the optional App. Use exact session references such as `{"$designRef":"pod:1","pointer":"/state"}` to reuse returned values. Summary responses retain a full result reference; request `response:"full"` when needed. `DESIGN_MCP_PROFILE=full` enables named wrappers for all 63 commands. No SaaS account is needed for the toolkit. Measured default discovery is the recorded compact wire size; see `npm run context:budget`; host framing varies.
 
 MCP Apps hosts can use `ui://design-theory/specimens.html`. The App supports live edits, font comparison, actual browser baseline guides, dependency effects, recomputation, alternatives and an explicit human art-direction tie-break. Headless CLI operation is independent of the UI. The actual MCP SDK host bridge is integration-tested; a host's own UI policies may differ. HTML proof always previews the web renderer; native proof requires its native receipt.
 
@@ -188,3 +194,5 @@ DESIGN_NATIVE_TOKEN=local-spike npm run fieldwork:native
 The shared `composition plan` controls type, density, measures and topology. `cropMedia` computes matching focal-point cover geometry for DOM and native images. `composition analyze` checks authored peer-edge/size contracts. The [skill comparison](docs/skill-comparison.md) extracts 18 conditional practices from Elaya and Impeccable. [Apple policy](docs/apple-hig-mathematics.md) explains what is executable and what still needs rendered/task review. [Full composition review](docs/fieldwork-design-review.md) records Astra's initial findings and accepted evidence; it is not a universal aesthetic calibration.
 
 The native product session launches real iPhone/Android apps and the optional observation collector with owned-service cleanup. It uses Metro8087/proxy8088 and collector4321. While it is running, `npm run fieldwork:native:flows` exercises Android gestures and persistence; `scripts/prove-fieldwork-native.mjs PLATFORM DEVICE LABEL` captures a named device. Product mode and measurement-harness mode are separate sessions because their active native screens serve different tasks.
+
+The app-facing [relational kernels](docs/relational-kernels.md) compile measured row density, responsive regions and finite appearance choices through the existing workflow. [CLI compact receipts](docs/cli-context.md) provide one-schema discovery and hash-bound local JSON references; property bindings expose stale or unused selected outputs. The [Relay report contract](experiments/relay/shared/REPORTING.md) requires each builder to critique toolkit wins, misses and improvements with actual usage receipts.

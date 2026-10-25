@@ -75,7 +75,15 @@ for (const file of [
     'prose',
     'math-expression',
     'media-geometry',
+    'design-field',
+    'design-context',
+    'dom-surface',
+    'browser-dom-light',
   ].map((name) => `src/${name}.ts`),
+  'DESIGN.md',
+  'examples/design-field/brief.json',
+  'examples/design-field/measurements.json',
+  'examples/design-field/gallery-session.json',
   'scripts/build-design-theory.mjs',
   'scripts/prove-design-theory.mjs',
   'package-lock.json',
@@ -86,6 +94,9 @@ for (const file of [
 const check = (ok, label) => {
   if (!ok) report.failures.push(label);
 };
+// Default DOM visibility checks reject a blank/uniform paint, not a particular
+// palette complexity. Actual light response and composite contrast have separate
+// endpoint/pose proofs. The previous >60-color oracle belonged to the 3D hero.
 // Decode the screenshot in an isolated browser canvas. This observes the
 // composited pixels, not a draw-call counter or a WebGL readback.
 async function visibleColors(page, screenshot, box) {
@@ -182,10 +193,7 @@ try {
           {},
           { timeout: 15000 },
         );
-        await page.waitForFunction(
-          () =>
-            window.__DESIGN_THEORY__.runtime.stats.surfaces.hero?.frames > 0,
-        );
+        await page.locator('[data-hero-material][data-dom-surface]').waitFor();
         await page.waitForTimeout(500);
         const initialScreenshot = await page.screenshot({
           path: `${output}/${name}-${width}-initial.png`,
@@ -193,12 +201,12 @@ try {
         const initialHeroPixels = await visibleColors(
           page,
           initialScreenshot,
-          await page.locator('[data-surface="hero"]').boundingBox(),
+          await page.locator('[data-hero-material]').boundingBox(),
         );
         check(
-          initialHeroPixels.quantizedColors > 60 &&
+          initialHeroPixels.quantizedColors > 8 &&
             initialHeroPixels.changedFraction > 0.04,
-          `${name}/${width}: initial reduced-motion sculpture not visible (${JSON.stringify(initialHeroPixels)})`,
+          `${name}/${width}: initial reduced-motion DOM material not visible (${JSON.stringify(initialHeroPixels)})`,
         );
         const geometry = await page.evaluate(() => ({
           width: innerWidth,
@@ -232,9 +240,9 @@ try {
         );
         check(
           Object.values(geometry.surfaces).every(
-            (s) => s.renderer === 'worker' || s.renderer === 'main',
+            (s) => s.renderer === 'static' && s.frames === 0,
           ),
-          `${name}/${width}: live material renderer unavailable`,
+          `${name}/${width}: 3D initialized without explicit activation`,
         );
         check(
           geometry.borders.header === '1px' &&
@@ -242,8 +250,8 @@ try {
           `${name}/${width}: intended borders were not emitted`,
         );
         check(
-          Object.values(geometry.surfaces).every((s) => s.draw?.drawCalls > 0),
-          `${name}/${width}: no observed material draw calls`,
+          (await page.locator('[data-surface] canvas').count()) === 0,
+          `${name}/${width}: unexpected eager GPU canvas`,
         );
         await page.screenshot({
           path: `${output}/${name}-${width}-full.png`,
@@ -272,18 +280,8 @@ try {
         fresh.on('pageerror', (e) => errors.push(String(e)));
         await fresh.goto(base);
         await fresh.evaluate(() => document.fonts.ready);
-        await fresh.waitForFunction(
-          () => {
-            const s = window.__DESIGN_THEORY__?.runtime.stats.surfaces.hero;
-            return (
-              s &&
-              (s.renderer === 'main' ||
-                (s.renderer === 'worker' && s.lastAcknowledgedFrameId >= 1))
-            );
-          },
-          null,
-          { timeout: 25000 },
-        );
+        await fresh.waitForFunction(() => window.__DESIGN_THEORY__?.ready);
+        await fresh.locator('[data-hero-material][data-dom-surface]').waitFor();
         await fresh.waitForTimeout(200);
         const bytes = await fresh.screenshot({
           path: `${output}/${name}-first-frame-${initialFrameRegressions.length}-${width}.png`,
@@ -291,13 +289,13 @@ try {
         const pixels = await visibleColors(
           fresh,
           bytes,
-          await fresh.locator('[data-surface="hero"]').boundingBox(),
+          await fresh.locator('[data-hero-material]').boundingBox(),
         );
         const stats = await fresh.evaluate(
-          () => window.__DESIGN_THEORY__.runtime.stats.surfaces.hero,
+          () => window.__DESIGN_THEORY__.runtime.stats.surfaces,
         );
         check(
-          pixels.quantizedColors > 60 && pixels.changedFraction > 0.04,
+          pixels.quantizedColors > 8 && pixels.changedFraction > 0.04,
           `${name}/${width}: fresh-page initial pixels missing ${JSON.stringify(pixels)}`,
         );
         initialFrameRegressions.push({ width, pixels, stats });
@@ -309,11 +307,13 @@ try {
       );
       const studio = await page.locator('h1').evaluate((el) => ({
         font: getComputedStyle(el).fontFamily,
+        tracking: getComputedStyle(el).letterSpacing,
         color: getComputedStyle(el).color,
       }));
       await page.locator('[data-profile-choice="utility"]').click();
       const utility = await page.locator('h1').evaluate((el) => ({
         font: getComputedStyle(el).fontFamily,
+        tracking: getComputedStyle(el).letterSpacing,
         color: getComputedStyle(el).color,
       }));
       check(
@@ -323,10 +323,11 @@ try {
       await page.locator('[data-profile-choice="editorial"]').click();
       const editorial = await page.locator('h1').evaluate((el) => ({
         font: getComputedStyle(el).fontFamily,
+        tracking: getComputedStyle(el).letterSpacing,
         color: getComputedStyle(el).color,
       }));
       check(
-        studio.font !== editorial.font,
+        studio.tracking !== editorial.tracking,
         `${name}: profile typography did not change`,
       );
       await page.getByRole('slider', { name: 'Motion damping' }).focus();
@@ -353,7 +354,10 @@ try {
         .click();
       await page.locator('[data-profile-choice="studio"]').click();
       await page
-        .getByRole('button', { name: 'Replay Editorial', exact: true })
+        .getByRole('button', {
+          name: `Replay ${profileList.find((p) => p.id === 'editorial').name}`,
+          exact: true,
+        })
         .click();
       check(
         (await page
@@ -407,7 +411,7 @@ try {
       );
       const origin = await page.locator('[data-wireframe]').evaluate((el) => ({
         hostTop: el.getBoundingClientRect().top,
-        svgTop: el.querySelector('svg').getBoundingClientRect().top,
+        svgTop: el.getBoundingClientRect().top,
         scrollTop: el.scrollTop,
       }));
       check(
@@ -434,9 +438,20 @@ try {
               .getByRole('combobox', { name: 'Layout viewport' })
               .selectOption(viewport);
             await page.waitForFunction(
-              () =>
-                document.querySelector('#gallery').dataset.layoutMeasured ===
-                'true',
+              ({ width, gutter, gap }) => {
+                const observed = JSON.parse(
+                  document.querySelector('[data-layout-receipt]').dataset
+                    .layoutInputs || 'null',
+                );
+                return (
+                  document.querySelector('#gallery').dataset.layoutMeasured ===
+                    'true' &&
+                  observed?.width === width &&
+                  observed.gutter === gutter &&
+                  observed.gap === gap
+                );
+              },
+              { width: Number(viewport), ...spacing },
             );
             if (
               !clippingFixture &&
@@ -622,19 +637,61 @@ try {
       await page.waitForFunction(() => window.__DESIGN_THEORY__?.ready);
       await page.locator('#motion').scrollIntoViewIfNeeded();
       await page.waitForTimeout(700);
+      await page.locator('[data-motion-ball]').evaluate((el) => {
+        const before = Number(el.getAttribute('data-position'));
+        const trace = [{ time: performance.now(), position: before }];
+        const observer = new MutationObserver(() => {
+          const position = Number(el.getAttribute('data-position'));
+          if (Number.isFinite(position) && trace.at(-1).position !== position)
+            trace.push({ time: performance.now(), position });
+        });
+        observer.observe(el, {
+          attributes: true,
+          attributeFilter: ['data-position'],
+        });
+        window.__GALLERY_MOTION_TRACE__ = {
+          before,
+          trace,
+          stop: () => observer.disconnect(),
+        };
+      });
       await page.locator('[data-retarget]').click();
-      await page.waitForTimeout(40);
-      const movingA = Number(
-        await page.locator('[data-motion-ball]').getAttribute('data-position'),
-      );
-      await page.waitForTimeout(130);
-      const movingB = Number(
-        await page.locator('[data-motion-ball]').getAttribute('data-position'),
-      );
-      check(
-        Math.abs(movingA - movingB) > 0.02,
-        `${name}: normal spring motion not visible`,
-      );
+      let moving = true;
+      try {
+        await page.waitForFunction(
+          () => {
+            const t = window.__GALLERY_MOTION_TRACE__;
+            return t.trace.some(
+              (p) =>
+                Math.abs(p.position - t.before) > 0.02 &&
+                p.position > 0.02 &&
+                p.position < 0.98,
+            );
+          },
+          {},
+          { timeout: 5000 },
+        );
+      } catch {
+        moving = false;
+      }
+      const motionTrace = await page.evaluate(() => {
+        const t = window.__GALLERY_MOTION_TRACE__;
+        t.stop();
+        return {
+          before: t.before,
+          samples: t.trace,
+          maxSampleGapMs: Math.max(
+            0,
+            ...t.trace.slice(1).map((p, i) => p.time - t.trace[i].time),
+          ),
+        };
+      });
+      report.observations.push({
+        engine: name,
+        kind: 'normal-motion-event-trace',
+        ...motionTrace,
+      });
+      check(moving, `${name}: normal spring motion not visible`);
       const button = page.locator('[data-retarget]');
       await button.hover();
       await page.mouse.down();
@@ -668,7 +725,7 @@ try {
         layoutComparisons,
         inspectorOrigin: origin,
         reducedPositions: [reducedA, reducedB],
-        movingPositions: [movingA, movingB],
+        movingPositions: motionTrace.samples.map((s) => s.position),
         pressed,
         stats: await page.evaluate(
           () => window.__DESIGN_THEORY__.runtime.stats,
@@ -679,7 +736,7 @@ try {
       await page.goto(base + '/?mainRenderer=1');
       await page.waitForFunction(
         () =>
-          [...document.querySelectorAll('[data-surface]')].length === 2 &&
+          [...document.querySelectorAll('[data-surface]')].length === 1 &&
           [...document.querySelectorAll('[data-surface]')].every(
             (el) => el.dataset.renderer === 'main',
           ),

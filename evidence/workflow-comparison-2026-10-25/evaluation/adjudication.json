@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "adjudicatedAt": "2026-10-25",
+  "rawResultsUnchanged": true,
+  "artifactEditsAfterEvaluation": false,
+  "finding": "The two toolkit required-hooks failures concern inspection-overlay absent in initial Compose mode. The brief requires it visible in Inspect, and both later current-overlay checks passed. The evaluator's initial unconditional presence assumption is stricter than the requested visible state.",
+  "classification": "Harness assumption discrepancy; keep both raw failures, no retrospective replacement pass or winner.",
+  "primaryTokenComparison": "Unavailable: guidance timeout emitted no final usage; never estimate it.",
+  "limits": ["One matched task", "No human preference", "Guidance-only Impeccable", "Instruction/trace isolation without OS read denial", "Toolkit snapshot predates subsequent candidate-retention correction"]
+}

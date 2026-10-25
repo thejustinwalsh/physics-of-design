@@ -193,6 +193,8 @@ function MeasurementApp() {
         engine: 'react-native/Text+Yoga',
         runtime: {
           reactNative: `${v.major}.${v.minor}.${v.patch}`,
+          implementationIdentity:
+            process.env.EXPO_PUBLIC_DESIGN_SOURCE_HASH ?? 'unbound',
           os: String(Platform.Version),
           fontScale: PixelRatio.getFontScale(),
           pixelRatio: PixelRatio.get(),

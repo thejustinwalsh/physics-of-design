@@ -1,0 +1,9 @@
+# Durable direction and matched trials
+
+A scoped `DESIGN.md` records intent, typography and composition relationships, color/material roles, responsive topology, motion/light/scroll policy, deliberate exceptions and unresolved questions. Preserve source provenance: user instructions, synthetic interview assumptions, measured constraints and hypotheses are different evidence. The document is a revisable contract, not proof of aesthetic quality or a prescribed global style.
+
+Use `context inspect` for its SHA-256, headings and explicitly requested completeness checks. It does not infer executable rules from prose. Compile the chosen numeric relationships explicitly, carrying the design-document identity into search and replay. A changed direction invalidates affected choices; unchanged font/text geometry can retain its separately bound measurement evidence.
+
+For a skills-only versus toolkit comparison, predeclare the same task, brief, content/assets, model/settings, output framework, supported windows, time/iteration budget and feedback policy. The control arm uses its named guidance and ordinary implementation/renderer tools; the treatment can use Design Theory tools. Keep agent instructions and source/output hashes, actual usage receipts, tool/selector calls, attempts and latency. Do not compare an iteratively polished treatment against an untouched baseline and call it first-pass evidence.
+
+Judge complete rendered tasks and real interactions at the same scenarios, with blinded condition names when feasible. Separate hard failures, synthetic criteria and human preference. One project can demonstrate a protocol and reveal failures; it cannot establish general superiority or token savings. Missing usage, unavailable skill runtime or omitted hardware must be reported, not estimated or silently counted as zero.

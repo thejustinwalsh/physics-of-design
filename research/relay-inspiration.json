@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-25",
+  "scope": "Primary award and creator references for Relay art-direction exploration. No reference assets are redistributed.",
+  "evidencePolicy": {
+    "awardDoesNotProve": ["causal design rules", "universal preference", "accessibility", "native/web parity", "asset reuse rights", "Relay quality"],
+    "directionsAre": "Authored product hypotheses; neither synthetic critique nor local model choice is human preference evidence.",
+    "assetPolicy": "Links and short paraphrases only in repository. Two primary press/case images inspected in temporary local reference-only storage. No copied images, fonts, meshes, brands or code are supplied to builders."
+  },
+  "directions": [
+    { "id": "night-instrument", "authoredIntent": "Calm dark instrument housing with precise dense plotting fields and small functional light accents.", "references": ["flighty-2023", "watch-duty-2025", "tide-guide-2026", "igloo-2024"] },
+    { "id": "day-instrument", "authoredIntent": "Mineral light substrate, strong technical ink, restrained industrial diagrams and glazed active controls.", "references": ["flighty-2023", "watch-duty-2025", "terminal-2025", "igloo-2024"] }
+  ],
+  "references": [
+    {
+      "id": "flighty-2023", "work": "Flighty", "creator": "Flighty LLC",
+      "award": "Apple Design Award — Interaction", "awardAnnouncedAt": "2023-06-05",
+      "primarySources": [{ "url": "https://www.apple.com/newsroom/2023/06/apple-announces-winners-of-the-2023-apple-design-awards/", "kind": "award-organizer", "publishedAt": "2023-06-05", "evidence": "Names Flighty the Interaction app winner; describes maps, delay forecasting and timely key information." }],
+      "visualEvidence": { "url": "https://www.apple.com/newsroom/images/live-action/wwdc-2023/standard/ada/Apple-WWDC23-Design-Awards-Flighty-230605_inline.jpg.large.jpg", "kind": "official-press-image-link", "inspection": "Link verified; screenshot not independently measured in this task.", "rights": "Reference only; no reuse license inferred." },
+      "authoredTransfer": ["Keep operational context and the next useful action adjacent to the changing metric.", "Let the selected entity persist through summary, detail and diagnostic views."],
+      "explicitNonTransfer": ["No copied flight map, route card, brand assets or exact layout.", "Travel utility and an award do not validate observability usability or motion costs."]
+    },
+    {
+      "id": "watch-duty-2025", "work": "Watch Duty", "creator": "Sherwood Forestry Service",
+      "award": "Apple Design Award — Social Impact", "awardAnnouncedAt": "2025-06-03",
+      "primarySources": [{ "url": "https://www.apple.com/newsroom/2025/06/apple-unveils-winners-and-finalists-of-the-2025-apple-design-awards/", "kind": "award-organizer", "publishedAt": "2025-06-03", "evidence": "Names Watch Duty the Social Impact app winner; describes clear wildfire updates and emergency context." }],
+      "visualEvidence": { "inspection": "Award source read; no live app or screenshot measurement claimed.", "rights": "Reference only." },
+      "authoredTransfer": ["Distinguish event status, update time, affected area/service and operator responsibility.", "Never let atmosphere compete with urgent labels or recovery instructions."],
+      "explicitNonTransfer": ["No emergency authority, wildfire data or safety reliability is inherited.", "Do not borrow maps, icons, alerts or notification claims."]
+    },
+    {
+      "id": "tide-guide-2026", "work": "Tide Guide: Charts & Tables", "creator": "Condor Digital",
+      "award": "Apple Design Award — Visuals and Graphics; Interaction finalist", "awardAnnouncedAt": "2026-06-02",
+      "primarySources": [
+        { "url": "https://www.apple.com/newsroom/2026/06/apple-reveals-winners-of-the-2026-apple-design-awards/", "kind": "award-organizer", "publishedAt": "2026-06-02", "evidence": "Names the Visuals and Graphics winner and Interaction finalist; describes charts, custom animation and theme coherence." },
+        { "url": "https://developer.apple.com/design/awards/", "kind": "award-organizer-current-page", "evidence": "Current 2026 winner page corroborates dense weather-data presentation and material/palette integration." }
+      ],
+      "visualEvidence": { "url": "https://www.apple.com/newsroom/images/2026/06/apple-reveals-winners-of-the-2026-apple-design-awards/article/Apple-WWDC26-Apple-Design-Awards-Tide-Guide_inline.jpg.large.jpg", "kind": "official-press-image", "inspection": "Visually inspected in temporary local reference-only storage; image shows repeated charts, compact annotated values and a clearly selected navigation control. No geometry/color/composite measurements claimed.", "rights": "No redistribution or reuse license inferred." },
+      "authoredTransfer": ["Use material and plot color as one product-specific system.", "Keep data marks and units legible inside subdued panels; reserve a stronger glazed cue for current controls."],
+      "explicitNonTransfer": ["No copied aquatic palette, wave line, Apple Liquid Glass implementation or proprietary assets.", "A press screenshot cannot establish actual motion, contrast, accessibility or renderer parity."]
+    },
+    {
+      "id": "igloo-2024", "work": "Igloo Inc", "creator": "abeto and Bureaux",
+      "award": "Awwwards Site of the Day and Developer Award", "awardAnnouncedAt": "2024-07-23",
+      "primarySources": [
+        { "url": "https://www.awwwards.com/sites/igloo-inc", "kind": "award-organizer", "evidence": "SOTD date and both creators credited; Developer Award also listed." },
+        { "url": "https://www.awwwards.com/igloo-inc-case-study.html", "kind": "creator-case-study", "author": "abeto", "publishedAt": "2024-10-31", "evidence": "Documents previs, browser iteration, low-end performance checks and a coherent frost/displacement transition treatment." }
+      ],
+      "visualEvidence": { "url": "https://assets.awwwards.com/awards/images/2024/09/igloo-coverB.jpg", "kind": "creator-case-image", "inspection": "Visually inspected in temporary local reference-only storage. A broad cool light regime, distinct foreground/background depth and luminous material edges are visible; no live performance or optical measurement claimed.", "rights": "Source image itself states all rights reserved. Not redistributed." },
+      "authoredTransfer": ["Give multiple finishes a shared light direction and world scale.", "Prototype the whole task in the actual renderer and revise expensive details using measured performance."],
+      "explicitNonTransfer": ["No ice geometry, characters, audio, textures, shaders, logo or scene reconstruction.", "Do not import scroll-gated content, canvas-only text or an immersive landing-page journey into incident operations."]
+    },
+    {
+      "id": "terminal-2025", "work": "Terminal Industries", "creator": "REJOUICE and PROPAGANDE (Awwwards credits)",
+      "award": "Awwwards Site of the Day and Developer Award", "awardAnnouncedAt": "2025-09-03",
+      "primarySources": [
+        { "url": "https://www.awwwards.com/sites/terminal-industries", "kind": "award-organizer", "evidence": "SOTD date, creator credits and Developer Award listed." },
+        { "url": "https://www.rejouice.com/work/terminal-industries", "kind": "creator-case-study", "publishedAt": null, "evidence": "Rejouice documents brand/art direction, motion/3D visualization and web work around yard-data operations; case page also lists SOTD, Developer and monthly recognition." }
+      ],
+      "visualEvidence": { "inspection": "Award and creator case read. No independent live DOM, motion or performance inspection claimed.", "rights": "Reference links only; no media reused." },
+      "authoredTransfer": ["Use precise technical diagrams and strong information grouping to make a complex system inspectable.", "Tie expressive motion to a meaningful service/dependency relationship rather than a generic entrance effect."],
+      "explicitNonTransfer": ["No logistics claims, brand copy, yard imagery, models, typefaces or exact industrial page layout.", "A marketing case study does not prove dense operational app behavior or native performance."]
+    }
+  ],
+  "limitations": [
+    "No controlled human preference study or quantitative extraction from these references was performed.",
+    "Award facts and creator process claims are attributed, not converted into universal design equations.",
+    "Lusion/Shopify/Siena Awwwards pages timed out during this research; secondary claims were excluded from the selected reference set.",
+    "The 2026 current award page can change; dated Newsroom pages anchor award history."
+  ]
+}

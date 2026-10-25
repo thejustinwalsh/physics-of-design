@@ -1,0 +1,33 @@
+{
+  "scope": "Exact compact diagnostic values captured before restart, not the full original partial matrix",
+  "androidDevices": [],
+  "bridgeClients": [
+    "native-ios"
+  ],
+  "partialRowsAtProbe": 130,
+  "observedFailures": [
+    {
+      "id": "editorial-0-390-1.3",
+      "latencyMs": 45036.094417,
+      "error": "Error: No native receipt. Start native/ in an iOS simulator or Android emulator with the matching token; browser/Yoga approximations are never substituted."
+    },
+    {
+      "id": "editorial-0-390-2",
+      "latencyMs": 45015.56137499999,
+      "error": "Error: No native receipt. Start native/ in an iOS simulator or Android emulator with the matching token; browser/Yoga approximations are never substituted."
+    },
+    {
+      "id": "editorial-0-767-1",
+      "latencyMs": 45058.724625,
+      "error": "Error: No native receipt. Start native/ in an iOS simulator or Android emulator with the matching token; browser/Yoga approximations are never substituted."
+    }
+  ],
+  "limits": [
+    "Original failed full-run summary and stage logs are retained.",
+    "The retry producer truncated the shared partial observations file before a separate full copy was made; only this already-captured diagnostic excerpt remains.",
+    "Cause of the emulator process exit is unknown."
+  ],
+  "deviceProbeAt": "2026-10-25T15:12:23.519Z",
+  "partialProbeAt": null,
+  "partialProbeTimeReason": "The compact row probe returned no UTC timestamp; it followed the device probe."
+}

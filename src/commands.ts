@@ -19,6 +19,28 @@ import {
   generateSurfaceTextures,
 } from './surface.js';
 import { MediaAnalyzeSchema, analyzeMediaFile } from './media.js';
+import { DesignContextSchema, inspectDesignContext } from './design-context.js';
+import {
+  RelationalKernelCompileSchema,
+  compileRelationalKernels,
+} from './relational-kernels.js';
+import {
+  OutputBindingsCheckSchema,
+  checkOutputBindings,
+} from './output-bindings.js';
+import {
+  DesignFieldBriefSchema,
+  DesignFieldRunSchema,
+  DesignFieldValidateSchema,
+  collectDesignFieldMeasurements,
+  runDesignField,
+  validateDesignFieldFinalist,
+} from './design-field.js';
+import {
+  DomSurfaceSchema,
+  createDomSurfaceRecipe,
+  sampleDomSurfaceLight,
+} from './dom-surface.js';
 import { MediaCropSchema, mediaCropCandidates } from './media-geometry.js';
 import { ProseAnalyzeSchema, analyzeProse } from './prose.js';
 import {
@@ -97,6 +119,7 @@ import {
   ChoiceRequestSchema,
   SelectorProfileSchema,
   selectChoice,
+  type SelectorExecutionOptions,
 } from './selector.js';
 import { EvaluationSchema, evaluate } from './evaluation.js';
 import {
@@ -142,6 +165,12 @@ function effectiveText(state: z.infer<typeof StateSchema>, blockId: string) {
 }
 export const commandSchemas = {
   registry: z.object({}).strict(),
+  'context inspect': DesignContextSchema,
+  'kernel compile': RelationalKernelCompileSchema,
+  'bindings check': OutputBindingsCheckSchema,
+  'field measure': z.object({ brief: DesignFieldBriefSchema }).strict(),
+  'field run': DesignFieldRunSchema,
+  'field validate': DesignFieldValidateSchema,
   'decision run': RunDecisionWorkflowSchema,
   'wireframe inspect': WireframeInspectSchema,
   'motion dynamics': MotionDynamicsSchema,
@@ -149,6 +178,19 @@ export const commandSchemas = {
   'surface probe': SurfaceProbeSchema,
   'surface map': SurfaceSchema,
   'surface textures': SurfaceTextureSchema,
+  'surface css': DomSurfaceSchema,
+  'surface light': z
+    .object({
+      surface: DomSurfaceSchema,
+      motion: z
+        .object({
+          x: z.number().finite().min(-1).max(1),
+          y: z.number().finite().min(-1).max(1),
+          tiltDegrees: z.number().finite().min(0).max(12).optional(),
+        })
+        .strict(),
+    })
+    .strict(),
   'media analyze': MediaAnalyzeSchema,
   'media crops': MediaCropSchema,
   'prose analyze': ProseAnalyzeSchema,
@@ -284,13 +326,32 @@ export function rendererFor(platform: string): Renderer {
 export async function execute(
   command: Command,
   input: unknown,
+  execution: SelectorExecutionOptions = {},
 ): Promise<unknown> {
   let renderer: Renderer | undefined;
   try {
     switch (command) {
+      case 'context inspect':
+        return inspectDesignContext(input);
+      case 'kernel compile':
+        return compileRelationalKernels(commandSchemas[command].parse(input));
+      case 'bindings check':
+        return checkOutputBindings(commandSchemas[command].parse(input));
+      case 'field measure':
+        return collectDesignFieldMeasurements(
+          commandSchemas[command].parse(input).brief,
+        );
+      case 'field run':
+        return runDesignField(commandSchemas[command].parse(input), execution);
+      case 'field validate':
+        return validateDesignFieldFinalist(
+          commandSchemas[command].parse(input),
+        );
       case 'decision run':
         return runDecisionWorkflow(
           input as Parameters<typeof runDecisionWorkflow>[0],
+          undefined,
+          execution,
         );
       case 'wireframe inspect':
         return inspectWireframe(input);
@@ -302,6 +363,18 @@ export async function execute(
         return probeSurface(input);
       case 'surface map':
         return mapSurfaceToThree(input);
+      case 'surface css':
+        return createDomSurfaceRecipe(input);
+      case 'surface light': {
+        const r = commandSchemas[command].parse(input);
+        return sampleDomSurfaceLight(createDomSurfaceRecipe(r.surface), {
+          x: r.motion.x,
+          y: r.motion.y,
+          ...(r.motion.tiltDegrees !== undefined
+            ? { tiltDegrees: r.motion.tiltDegrees }
+            : {}),
+        });
+      }
       case 'surface textures': {
         const textures = generateSurfaceTextures(input);
         return {
@@ -336,7 +409,10 @@ export async function execute(
       case 'energy search':
         return searchEnergy(commandSchemas[command].parse(input));
       case 'composition solve':
-        return solveComposition(commandSchemas[command].parse(input));
+        return solveComposition(
+          commandSchemas[command].parse(input),
+          execution,
+        );
       case 'decision handoff':
         return createDesignHandoff(commandSchemas[command].parse(input));
       case 'decision replay':
@@ -494,6 +570,7 @@ export async function execute(
                     : {}),
                 },
                 renderer,
+                execution,
               )
             : null;
         return { ...result, selection };
@@ -548,7 +625,7 @@ export async function execute(
         if (new Set(r.candidates.map((c) => c.state.platform)).size !== 1)
           throw new Error('select within one target platform');
         renderer = rendererFor(r.candidates[0]!.state.platform);
-        return await selectChoice(r, renderer);
+        return await selectChoice(r, renderer, execution);
       }
       case 'corpus validate':
         return validateCorpus(commandSchemas[command].parse(input));

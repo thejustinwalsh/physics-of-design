@@ -10,9 +10,19 @@ import {
   type Assignment,
   type EnergyProgram,
 } from './energy.js';
-import { resolveDesignRuntime } from './decision-runtime.js';
+import {
+  resolveDesignRuntime,
+  DESIGN_RUNTIME_SEMANTICS,
+  type DesignRuntimeOptions,
+  type DesignRuntimePolicy,
+} from './decision-runtime.js';
 import { hash } from './identity.js';
 const Id = z.string().regex(/^[A-Za-z][A-Za-z0-9_.-]{0,79}$/);
+const RuntimePolicySchema = z
+  .object({
+    unsampledScenarioBands: z.literal('base'),
+  })
+  .strict();
 export const DesignMachineSpecSchema = z
   .object({
     id: Id,
@@ -92,6 +102,7 @@ export const DesignHandoffSchema = z
     program: EnergyProgramSchema,
     assignment: z.record(Id, z.number().finite()),
     machine: DesignMachineSpecSchema,
+    runtimePolicy: RuntimePolicySchema.optional(),
   })
   .strict();
 export type DesignHandoffInput = z.input<typeof DesignHandoffSchema>;
@@ -138,8 +149,19 @@ function resolveValidated(
   assignment: Assignment,
   machine: Machine,
   scenario: Assignment,
+  options?: DesignRuntimeOptions,
+  runtimePolicy?: DesignRuntimePolicy,
 ) {
-  return resolveDesignRuntime({ program, assignment, machine }, scenario);
+  return resolveDesignRuntime(
+    {
+      program,
+      assignment,
+      machine,
+      ...(runtimePolicy ? { runtimePolicy } : {}),
+    },
+    scenario,
+    options,
+  );
 }
 export function compileDesignBindings(
   program: EnergyProgram,
@@ -150,7 +172,7 @@ export function compileDesignBindings(
   validateMachine(spec, p);
   return (assignment: Assignment) => {
     for (const s of p.scenarios)
-      resolveValidated(p, assignment, spec, s.values);
+      resolveValidated(p, assignment, spec, s.values, { scenarioId: s.id });
   };
 }
 export function createDesignHandoff(input: DesignHandoffInput) {
@@ -167,6 +189,8 @@ export function createDesignHandoff(input: DesignHandoffInput) {
       r.assignment,
       spec,
       s.values,
+      { scenarioId: s.id },
+      r.runtimePolicy,
     );
     for (const state of spec.states)
       for (const t of state.on)
@@ -175,10 +199,12 @@ export function createDesignHandoff(input: DesignHandoffInput) {
   const body = {
     version: 1 as const,
     engine: 'design-handoff-v1' as const,
+    runtimeSemantics: DESIGN_RUNTIME_SEMANTICS,
     program: compiled.program,
     programIdentity: compiled.identity,
     machine: spec,
     assignment: r.assignment,
+    ...(r.runtimePolicy ? { runtimePolicy: r.runtimePolicy } : {}),
     decisions: compiled.program.variables.map((v) => ({
       variable: v.id,
       chosen: r.assignment[v.id]!,
@@ -205,6 +231,8 @@ export const ReplayHandoffSchema = z
     machine: DesignMachineSpecSchema,
     recipe: z.unknown(),
     scenario: z.record(Id, z.number().finite()),
+    scenarioId: Id.optional(),
+    runtimePolicy: RuntimePolicySchema.optional(),
   })
   .strict();
 export function replayDesignHandoff(
@@ -231,6 +259,7 @@ export function replayDesignHandoff(
     program: r.program,
     machine: r.machine,
     assignment: recipe.assignment,
+    ...(r.runtimePolicy ? { runtimePolicy: r.runtimePolicy } : {}),
   });
   if (
     expected.identity !== recipe.identity ||
@@ -246,6 +275,8 @@ export function replayDesignHandoff(
     expected.assignment,
     expected.machine,
     r.scenario,
+    r.scenarioId === undefined ? {} : { scenarioId: r.scenarioId },
+    expected.runtimePolicy,
   );
   return {
     status: resolved.admissible
@@ -258,11 +289,16 @@ export function replayDesignHandoff(
     rendererVerification: 'pending' as const,
   };
 }
-export function resolveHandoff(handoff: DesignHandoff, scenario: Assignment) {
+export function resolveHandoff(
+  handoff: DesignHandoff,
+  scenario: Assignment,
+  options?: DesignRuntimeOptions,
+) {
   const verified = createDesignHandoff({
     program: handoff.program,
     assignment: handoff.assignment,
     machine: handoff.machine,
+    ...(handoff.runtimePolicy ? { runtimePolicy: handoff.runtimePolicy } : {}),
   });
   if (verified.identity !== handoff.identity)
     throw new Error('Handoff identity mismatch');
@@ -271,18 +307,24 @@ export function resolveHandoff(handoff: DesignHandoff, scenario: Assignment) {
     verified.assignment,
     verified.machine,
     scenario,
+    options,
+    verified.runtimePolicy,
   );
 }
 /** Runtime navigation uses actual XState v5, with branch guards on fresh facts. */
 export function createDesignActor(
   handoff: DesignHandoff,
   scenario: Assignment,
+  options?: DesignRuntimeOptions,
 ) {
   const verified = structuredClone(
     createDesignHandoff({
       program: handoff.program,
       assignment: handoff.assignment,
       machine: handoff.machine,
+      ...(handoff.runtimePolicy
+        ? { runtimePolicy: handoff.runtimePolicy }
+        : {}),
     }),
   );
   if (verified.identity !== handoff.identity)
@@ -292,6 +334,8 @@ export function createDesignActor(
     verified.assignment,
     verified.machine,
     scenario,
+    options,
+    verified.runtimePolicy,
   );
   if (!initial.admissible)
     throw new Error(
@@ -318,7 +362,11 @@ export function createDesignActor(
                     facts: typeof initial;
                     reflow: { status: string; reason: string | null };
                   };
-                  event: { type: string; scenario?: Assignment };
+                  event: {
+                    type: string;
+                    scenario?: Assignment;
+                    scenarioId?: string;
+                  };
                 }) => {
                   try {
                     if (!event.scenario)
@@ -328,6 +376,10 @@ export function createDesignActor(
                       verified.assignment,
                       verified.machine,
                       event.scenario,
+                      event.scenarioId === undefined
+                        ? {}
+                        : { scenarioId: event.scenarioId },
+                      verified.runtimePolicy,
                     );
                     if (!next.admissible)
                       return {
@@ -335,6 +387,9 @@ export function createDesignActor(
                           status: 'requires-search',
                           reason:
                             next.failures.join(',') ||
+                            next.scenarioResolution.unresolvedFactors.join(
+                              ',',
+                            ) ||
                             next.outsideEnvelope.join(','),
                         },
                       };

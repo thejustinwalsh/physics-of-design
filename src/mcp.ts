@@ -7,6 +7,13 @@ import { readFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { commandSchemas, execute, type Command } from './commands.js';
+import { designCatalog } from './catalog.js';
+import type { SelectorExecutionOptions } from './selector.js';
+import type { RequestHandlerExtra } from '@modelcontextprotocol/sdk/shared/protocol.js';
+import type {
+  ServerRequest,
+  ServerNotification,
+} from '@modelcontextprotocol/sdk/types.js';
 
 const uiUri = 'ui://design-theory/specimens.html';
 export async function appHtml() {
@@ -33,14 +40,40 @@ export async function serveMcp() {
     throw new Error('DESIGN_MCP_PROFILE must be compact or full');
   const isCommand = (value: string): value is Command =>
     Object.hasOwn(commandSchemas, value);
+  function execution(
+    extra: RequestHandlerExtra<ServerRequest, ServerNotification>,
+  ): SelectorExecutionOptions {
+    let sequence = 0;
+    const token = extra._meta?.progressToken;
+    return {
+      signal: extra.signal,
+      ...(token !== undefined
+        ? {
+            onProgress: (progress) => {
+              void extra
+                .sendNotification({
+                  method: 'notifications/progress',
+                  params: {
+                    progressToken: token,
+                    progress: ++sequence,
+                    message: JSON.stringify(progress),
+                  },
+                })
+                .catch(() => {});
+            },
+          }
+        : {}),
+    };
+  }
   async function run(
     command: Command,
     input: unknown,
     response: 'summary' | 'full',
+    options: SelectorExecutionOptions = {},
   ) {
     try {
       const resolved = store.resolve(input);
-      const result = await execute(command, resolved);
+      const result = await execute(command, resolved, options);
       const ref = store.put(result);
       const isUi = [
         'proof',
@@ -109,19 +142,7 @@ export async function serveMcp() {
           isError: true,
           content: [{ type: 'text', text: 'Unknown design command' }],
         };
-      const result =
-        command && isCommand(command)
-          ? {
-              command,
-              inputSchema: z.toJSONSchema(commandSchemas[command], {
-                io: 'input',
-              }),
-            }
-          : {
-              commands: Object.keys(commandSchemas),
-              workflow:
-                'Fetch one schema, then design_execute. Summary responses keep session references to full results. All scores are conditional; none establish overall beauty.',
-            };
+      const result = designCatalog(command as Command | undefined);
       return {
         content: [{ type: 'text', text: JSON.stringify(result) }],
         structuredContent: result,
@@ -147,9 +168,9 @@ export async function serveMcp() {
         openWorldHint: false,
       },
     },
-    async ({ command, input, response }) =>
+    async ({ command, input, response }, extra) =>
       isCommand(command)
-        ? run(command, input, response)
+        ? run(command, input, response, execution(extra))
         : {
             isError: true,
             content: [{ type: 'text', text: 'Unknown design command' }],
@@ -181,7 +202,8 @@ export async function serveMcp() {
       },
       _meta: { ui: { resourceUri: uiUri } },
     },
-    async ({ command, input }) => run(command, input, 'summary'),
+    async ({ command, input }, extra) =>
+      run(command, input, 'summary', execution(extra)),
   );
   if (profile === 'full')
     for (const command of Object.keys(commandSchemas) as Command[]) {
@@ -204,13 +226,17 @@ export async function serveMcp() {
               'system relax',
               'composition solve',
               'decision run',
+              'field run',
             ].includes(command),
             destructiveHint: false,
             openWorldHint: false,
           },
           ...(isUi ? { _meta: { ui: { resourceUri: uiUri } } } : {}),
         },
-        async (input: unknown) => run(command, input, 'full'),
+        async (
+          input: unknown,
+          extra: RequestHandlerExtra<ServerRequest, ServerNotification>,
+        ) => run(command, input, 'full', execution(extra)),
       );
     }
   for (const [name, uri] of [

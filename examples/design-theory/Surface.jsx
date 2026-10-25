@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { memo, useEffect, useRef, useState } from 'react';
 import { createDeviceTiltController } from '../../src/browser-tilt.ts';
 import { dampMotionValue } from '../../src/motion-dynamics.ts';
 import { getRuntime } from './runtime.js';
 
-export function Surface({
+export const Surface = memo(function Surface({
   surface,
   accentSurface,
   normalScale = 1,
@@ -16,9 +16,17 @@ export function Surface({
 }) {
   const host = useRef(null),
     bridge = useRef(null),
+    fallbackRequest = useRef(null),
     current = useRef({ surface, accentSurface, normalScale, normalStrength });
+  const [needsFallback, setNeedsFallback] = useState(false),
+    [renderMode, setRenderMode] = useState('static'),
+    [activated, setActivated] = useState(() =>
+      new URLSearchParams(location.search).has('mainRenderer'),
+    );
   current.current = { surface, accentSurface, normalScale, normalStrength };
   useEffect(() => {
+    const stats = getRuntime().stats.surfaces[id];
+    if (stats) stats.settings = current.current;
     bridge.current?.update({
       surface,
       accentSurface,
@@ -29,6 +37,17 @@ export function Surface({
   useEffect(() => {
     const element = host.current,
       runtime = getRuntime();
+    if (!activated) {
+      element.dataset.renderer = 'static';
+      runtime.stats.surfaces[id] = {
+        frames: 0,
+        renderer: 'static',
+        activation: 'not-requested',
+        settings: current.current,
+      };
+      onStatus?.('static');
+      return;
+    }
     const tilt = createDeviceTiltController();
     if (controllerRef) controllerRef.current = tilt;
     const initStart = performance.now();
@@ -42,7 +61,8 @@ export function Surface({
       timeout = null,
       inFlight = false,
       frameId = 0,
-      lastRender = -Infinity;
+      lastRender = -Infinity,
+      dirty = true;
     let pointerX = 0,
       pointerY = 0,
       x = 0,
@@ -51,8 +71,11 @@ export function Surface({
       mode = 'initializing';
     let width = 1,
       height = 1;
+    let pendingConfig = {},
+      appliedConfig = {};
     const report = (value) => {
       mode = value;
+      setRenderMode(value);
       element.dataset.renderer = value;
       runtime.stats.surfaces[id] = {
         frames: 0,
@@ -84,24 +107,50 @@ export function Surface({
           worker?.terminate();
           worker = null;
           scene?.dispose();
+          scene = null;
           canvas?.remove();
+          setNeedsFallback(true);
         }
       });
       return canvas;
     };
-    const fallback = async () => {
-      if (disposed || fallbackBusy || mode === 'main' || mode === 'static')
-        return;
-      fallbackBusy = true;
+    const forcedMain = new URLSearchParams(location.search).has('mainRenderer');
+    const fallback = async (
+      requested = false,
+      reason = 'worker-unavailable',
+    ) => {
+      if (disposed || fallbackBusy || mode === 'main') return;
       clearTimeout(timeout);
       worker?.terminate();
       worker = null;
       inFlight = false;
+      ready = false;
+      if (!requested && !forcedMain) {
+        canvas?.remove();
+        report('static');
+        runtime.stats.surfaces[id].fallbackReason = reason;
+        setNeedsFallback(true);
+        return;
+      }
+      if (requested) {
+        const box = element.getBoundingClientRect();
+        if (document.hidden || box.bottom <= 0 || box.top >= innerHeight)
+          return;
+      }
+      fallbackBusy = true;
+      setNeedsFallback(false);
+      report('initializing');
       try {
+        // Let the explicit loading state paint before an indivisible GPU compile.
+        await new Promise((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(resolve)),
+        );
         const { createSurfaceScene } = await import('./surface-scene.js');
         if (disposed) return;
         const started = performance.now();
         scene = createSurfaceScene(replaceCanvas(), settings());
+        appliedConfig = settings();
+        pendingConfig = {};
         const draw = scene.render({ reduced: true });
         const initializationMilliseconds = performance.now() - started;
         ready = true;
@@ -114,21 +163,32 @@ export function Surface({
         ready = false;
         canvas?.remove();
         report('static');
+        setNeedsFallback(true);
       } finally {
         fallbackBusy = false;
       }
     };
+    fallbackRequest.current = () => fallback(true, 'explicit-load');
     const update = (next) => {
       if (disposed) return;
       if (runtime.stats.surfaces[id])
         runtime.stats.surfaces[id].settings = current.current;
-      if (worker && ready)
-        worker.postMessage({ type: 'config', settings: next });
-      else {
-        scene?.update(next);
-        scene?.render({ reduced: true });
+      for (const [key, value] of Object.entries(next)) {
+        if (JSON.stringify(value) !== JSON.stringify(appliedConfig[key]))
+          pendingConfig[key] = value;
+        else delete pendingConfig[key];
       }
-      lastRender = -Infinity;
+      dirty = true;
+    };
+    const flushConfig = () => {
+      if (!Object.keys(pendingConfig).length) return;
+      const next = pendingConfig;
+      pendingConfig = {};
+      appliedConfig = { ...appliedConfig, ...next };
+      if (worker) worker.postMessage({ type: 'config', settings: next });
+      else scene?.update(next);
+      const stats = runtime.stats.surfaces[id];
+      if (stats) stats.configUpdates = (stats.configUpdates ?? 0) + 1;
     };
     bridge.current = { update };
     const resize = new ResizeObserver(([entry]) => {
@@ -143,7 +203,7 @@ export function Surface({
     const visibility = new IntersectionObserver(
       ([entry]) => {
         active = entry.isIntersecting;
-        if (active) lastRender = -Infinity;
+        if (active) dirty = true;
       },
       { rootMargin: '100px' },
     );
@@ -168,11 +228,12 @@ export function Surface({
     element.addEventListener('pointerenter', pointerEnter);
     element.addEventListener('pointermove', pointerMove, { passive: true });
     element.addEventListener('pointerleave', pointerLeave);
+    report('initializing');
     const c = replaceCanvas();
     if (
       typeof Worker !== 'undefined' &&
       typeof c.transferControlToOffscreen === 'function' &&
-      !new URLSearchParams(location.search).has('mainRenderer')
+      !forcedMain
     ) {
       try {
         worker = new Worker(new URL('./surface-worker.js', document.baseURI), {
@@ -191,6 +252,7 @@ export function Surface({
               draw: data.draw,
             });
             update(settings());
+            flushConfig();
             inFlight = true;
             worker.postMessage({
               type: 'frame',
@@ -209,15 +271,15 @@ export function Surface({
               draw: data.draw,
               lastRenderMilliseconds: data.renderMilliseconds,
             });
-          } else if (data.type === 'error') fallback();
+          } else if (data.type === 'error') fallback(false, 'worker-error');
         };
-        worker.onerror = fallback;
+        worker.onerror = () => fallback(false, 'worker-error');
         const offscreen = c.transferControlToOffscreen();
         worker.postMessage(
           { type: 'init', canvas: offscreen, settings: settings() },
           [offscreen],
         );
-        timeout = setTimeout(fallback, 4000);
+        timeout = setTimeout(() => fallback(false, 'worker-timeout'), 4000);
       } catch {
         fallback();
       }
@@ -242,14 +304,11 @@ export function Surface({
             dt,
           );
       // Decorative surface is capped to 30fps; one frame in flight, no sensor queue.
-      if (
-        (reduced && lastRender !== -Infinity) ||
-        time - lastRender < 1 / 30 ||
-        inFlight
-      )
-        return;
+      if ((reduced && !dirty) || time - lastRender < 1 / 30 || inFlight) return;
       const frame = { time, x, y, reduced };
       lastRender = time;
+      dirty = false;
+      flushConfig();
       if (worker) {
         inFlight = true;
         worker.postMessage({ type: 'frame', id: ++frameId, frame });
@@ -257,7 +316,7 @@ export function Surface({
       if (runtime.stats.surfaces[id]) runtime.stats.surfaces[id].frames++;
     });
     const motionChanged = () => {
-      lastRender = -Infinity;
+      dirty = true;
     };
     const media = matchMedia('(prefers-reduced-motion: reduce)');
     media.addEventListener('change', motionChanged);
@@ -278,16 +337,17 @@ export function Surface({
       scene?.dispose();
       canvas?.remove();
       bridge.current = null;
+      fallbackRequest.current = null;
     };
-  }, []);
+  }, [activated]);
   return (
     <div
       ref={host}
       className={className}
-      role="img"
+      role="group"
       aria-label={label}
       data-surface={id}
-      data-renderer="initializing"
+      data-renderer="static"
     >
       <svg
         viewBox="0 0 400 400"
@@ -312,6 +372,71 @@ export function Surface({
         />
         <circle cx="310" cy="100" r="18" fill="currentColor" />
       </svg>
+      {!activated && (
+        <button
+          type="button"
+          onClick={() => setActivated(true)}
+          data-activate-3d={id}
+          style={{
+            position: 'absolute',
+            left: '50%',
+            bottom: 34,
+            transform: 'translateX(-50%)',
+            zIndex: 2,
+            minHeight: 44,
+            padding: '12px 18px',
+            border: '1px solid currentColor',
+            background: 'var(--paper,#f2f0e6)',
+            color: 'var(--ink,#171b18)',
+            cursor: 'pointer',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          Activate 3D study ↗
+        </button>
+      )}
+      <span
+        data-surface-status
+        style={{
+          position: 'absolute',
+          right: 14,
+          bottom: 4,
+          fontFamily: 'monospace',
+          fontSize: 10,
+          zIndex: 1,
+        }}
+      >
+        {renderMode === 'initializing'
+          ? 'Preparing 3D…'
+          : renderMode === 'static'
+            ? 'Static illustration'
+            : renderMode === 'worker'
+              ? 'Live 3D · worker'
+              : 'Live 3D · main thread'}
+      </span>
+      {needsFallback && (
+        <button
+          type="button"
+          onClick={() => fallbackRequest.current?.()}
+          data-load-3d={id}
+          style={{
+            position: 'absolute',
+            left: '50%',
+            bottom: 22,
+            transform: 'translateX(-50%)',
+            zIndex: 2,
+            minHeight: 44,
+            padding: '12px 18px',
+            border: '1px solid currentColor',
+            background: 'var(--paper,#f2f0e6)',
+            color: 'var(--ink,#171b18)',
+            cursor: 'pointer',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          Load 3D preview ↗
+        </button>
+      )}
     </div>
   );
-}
+});

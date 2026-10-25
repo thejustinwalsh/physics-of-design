@@ -6,6 +6,8 @@ import {
   assertFlowXml,
   verificationStages,
   currentFullVerificationStages,
+  version2FullVerificationStages,
+  version3FullVerificationStages,
   velaFlowActions,
   curatedCurrentEvidenceFiles,
 } from './evidence-policy.mjs';
@@ -74,28 +76,37 @@ test('repeated or reordered successful stages cannot masquerade as a full lane',
   assert.throws(() => assertFullVerification(reordered));
 });
 
-test('version2 full receipts require every expanded stage and cannot use a headless lane', () => {
-  const full = {
-    verificationVersion: 2,
-    complete: true,
-    passed: true,
-    expectedStages: currentFullVerificationStages.length,
-    results: currentFullVerificationStages.map((name) => ({ name, code: 0 })),
-  };
-  assert.doesNotThrow(() => assertFullVerification(full));
-  assert.throws(() =>
-    assertFullVerification({
-      ...full,
-      results: full.results.slice(0, 17),
-      expectedStages: 17,
-    }),
-  );
-  assert.throws(() =>
-    assertFullVerification({ ...full, results: [...full.results].reverse() }),
-  );
-  assert.throws(() =>
-    assertFullVerification({ ...verification(), verificationVersion: 2 }),
-  );
+test('versioned full receipts require exact expanded stages and cannot use a headless lane', () => {
+  for (const [version, stages] of [
+    [2, version2FullVerificationStages],
+    [3, version3FullVerificationStages],
+    [4, currentFullVerificationStages],
+  ]) {
+    const full = {
+      verificationVersion: version,
+      complete: true,
+      passed: true,
+      expectedStages: stages.length,
+      results: stages.map((name) => ({ name, code: 0 })),
+    };
+    assert.doesNotThrow(() => assertFullVerification(full));
+    assert.throws(() =>
+      assertFullVerification({
+        ...full,
+        results: full.results.slice(0, 17),
+        expectedStages: 17,
+      }),
+    );
+    assert.throws(() =>
+      assertFullVerification({ ...full, results: [...full.results].reverse() }),
+    );
+    assert.throws(() =>
+      assertFullVerification({
+        ...verification(),
+        verificationVersion: version,
+      }),
+    );
+  }
 });
 
 test('real-flow shape passes; all-unavailable downgrade and action reorder fail', () => {

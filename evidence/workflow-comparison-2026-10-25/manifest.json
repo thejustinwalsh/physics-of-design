@@ -1,0 +1,570 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-25T14:52:55.381894+00:00",
+  "historical": true,
+  "sourceTrial": "design-workflows-20261025-astra",
+  "conditionScope": "Pinned Impeccable text guidance only versus frozen Design Theory skill/toolkit; not full Impeccable runtime comparison",
+  "privacyReview": {
+    "selection": "Explicit authored allowlist, no recursive copy",
+    "reviewedTextFiles": 33,
+    "thirdPartyGuidanceFilesCompared": 46,
+    "minimumConsecutiveWordsChecked": 30,
+    "generatedAppGuidancePassageMatches": 0,
+    "rawHostEventsPublished": false,
+    "privatePromptsPublished": false,
+    "authOrConfigPublished": false,
+    "copiedSkillsPublished": false,
+    "separateRuntimeOrDependencyBundlesPublished": false,
+    "exactEvaluatedAppBundlesPublished": true
+  },
+  "files": [
+    {
+      "file": "protocol.json",
+      "source": "protocol.json",
+      "kind": "exact-copy",
+      "bytes": 5682,
+      "sha256": "0c1861f7965bce00e659a94fb6b80453222ef12ed4a32ff970e60ebfa3dfd67b"
+    },
+    {
+      "file": "evaluation/results.json",
+      "source": "evaluation/results.json",
+      "kind": "exact-copy",
+      "bytes": 74918,
+      "sha256": "9f2ad251ef6c1218b1891a6e26073b8e1429d24003dd32afafba8a14b4425582"
+    },
+    {
+      "file": "evaluation/adjudication.json",
+      "source": "evaluation/adjudication.json",
+      "kind": "exact-copy",
+      "bytes": 869,
+      "sha256": "934adfd67665580ab4ed6e2d8848e70af67eb733b77baa1c37dba0da6678deec"
+    },
+    {
+      "file": "apps/Study-f82b38/BRIEF.md",
+      "source": "Study-f82b38/BRIEF.md",
+      "kind": "exact-copy",
+      "bytes": 4878,
+      "sha256": "b82975606d21d6d4050761b066948d9f91b1b963b1ad73f5d4181a7b18f8a5aa"
+    },
+    {
+      "file": "apps/Study-f82b38/PRODUCT.md",
+      "source": "Study-f82b38/PRODUCT.md",
+      "kind": "exact-copy",
+      "bytes": 215,
+      "sha256": "7e07ce5323a101d938e074eb86c3ae7c4b985a7c04188275a3c2d33d32e7abb1"
+    },
+    {
+      "file": "apps/Study-f82b38/DESIGN.md",
+      "source": "Study-f82b38/DESIGN.md",
+      "kind": "exact-copy",
+      "bytes": 4273,
+      "sha256": "3bc9b66ae3b4d059197c9156412ba7d2a682b93c55883d44c4cab8d367eee511"
+    },
+    {
+      "file": "apps/Study-f82b38/synthetic-interview.json",
+      "source": "Study-f82b38/synthetic-interview.json",
+      "kind": "exact-copy",
+      "bytes": 7029,
+      "sha256": "e8414616b85e1b75064f6cc4ae9cf7b9d17133d7e756dfe94da01fa767f0cd55"
+    },
+    {
+      "file": "apps/Study-f82b38/package.json",
+      "source": "Study-f82b38/package.json",
+      "kind": "exact-copy",
+      "bytes": 356,
+      "sha256": "285f990748f521016c364f0179417b173a48548b8db7cbd11a153b9540c3cd53"
+    },
+    {
+      "file": "apps/Study-f82b38/build.mjs",
+      "source": "Study-f82b38/build.mjs",
+      "kind": "exact-copy",
+      "bytes": 1148,
+      "sha256": "8011ce35b0792783628d84be858e304a62962a5b6637ffc91894d233e83bfa3d"
+    },
+    {
+      "file": "apps/Study-f82b38/src/app.jsx",
+      "source": "Study-f82b38/src/app.jsx",
+      "kind": "exact-copy",
+      "bytes": 28671,
+      "sha256": "cbf9250730d3a06e9dfcc28f0c3017ed63b8884f61ee04193f7d8896ab307a55"
+    },
+    {
+      "file": "apps/Study-f82b38/public/app.js",
+      "source": "Study-f82b38/public/app.js",
+      "kind": "exact-copy",
+      "bytes": 636458,
+      "sha256": "9206d7252d38edd73b4016fe86a6b9d2d0a31936d4654ee34a639ab05b582276"
+    },
+    {
+      "file": "apps/Study-f82b38/public/base.css",
+      "source": "Study-f82b38/public/base.css",
+      "kind": "exact-copy",
+      "bytes": 24166,
+      "sha256": "e93db28eeb0756a9c8d59c73e08caaf28f5431105e6611063dfa11f25e2109ab"
+    },
+    {
+      "file": "apps/Study-f82b38/public/index.html",
+      "source": "Study-f82b38/public/index.html",
+      "kind": "exact-copy",
+      "bytes": 291,
+      "sha256": "6aea8272a71e140dc8513f8d045be7fa31db846939e07ed6774233723ec0560f"
+    },
+    {
+      "file": "apps/Study-f82b38/assets/Lato-Black.ttf",
+      "source": "Study-f82b38/assets/Lato-Black.ttf",
+      "kind": "exact-copy",
+      "bytes": 664748,
+      "sha256": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337"
+    },
+    {
+      "file": "apps/Study-f82b38/assets/Lato-Regular.ttf",
+      "source": "Study-f82b38/assets/Lato-Regular.ttf",
+      "kind": "exact-copy",
+      "bytes": 656568,
+      "sha256": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
+    },
+    {
+      "file": "apps/Study-f82b38/assets/Spectral-Regular.ttf",
+      "source": "Study-f82b38/assets/Spectral-Regular.ttf",
+      "kind": "exact-copy",
+      "bytes": 261088,
+      "sha256": "c89021dc20720c8d0dcf40b0b2f6e00c13665fa8041717f581396f51b8c78f5d"
+    },
+    {
+      "file": "apps/Study-f82b38/assets/lato-OFL.txt",
+      "source": "Study-f82b38/assets/lato-OFL.txt",
+      "kind": "exact-copy",
+      "bytes": 4407,
+      "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
+    },
+    {
+      "file": "apps/Study-f82b38/assets/spectral-OFL.txt",
+      "source": "Study-f82b38/assets/spectral-OFL.txt",
+      "kind": "exact-copy",
+      "bytes": 4392,
+      "sha256": "501d6ceca8e552630fe3aa9442b9a818565680a1a2f79f3fb8c13d6f309a9e98"
+    },
+    {
+      "file": "apps/Study-f82b38/assets/registration.svg",
+      "source": "Study-f82b38/assets/registration.svg",
+      "kind": "exact-copy",
+      "bytes": 465,
+      "sha256": "7c682bda5e80e00cc0b24cf1b475748c50956a1801ccdd80f84c312a434b2543"
+    },
+    {
+      "file": "apps/Study-f82b38/public/assets/Lato-Black.ttf",
+      "source": "Study-f82b38/public/assets/Lato-Black.ttf",
+      "kind": "exact-copy",
+      "bytes": 664748,
+      "sha256": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337"
+    },
+    {
+      "file": "apps/Study-f82b38/public/assets/Lato-Regular.ttf",
+      "source": "Study-f82b38/public/assets/Lato-Regular.ttf",
+      "kind": "exact-copy",
+      "bytes": 656568,
+      "sha256": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
+    },
+    {
+      "file": "apps/Study-f82b38/public/assets/Spectral-Regular.ttf",
+      "source": "Study-f82b38/public/assets/Spectral-Regular.ttf",
+      "kind": "exact-copy",
+      "bytes": 261088,
+      "sha256": "c89021dc20720c8d0dcf40b0b2f6e00c13665fa8041717f581396f51b8c78f5d"
+    },
+    {
+      "file": "apps/Study-f82b38/public/assets/lato-OFL.txt",
+      "source": "Study-f82b38/public/assets/lato-OFL.txt",
+      "kind": "exact-copy",
+      "bytes": 4407,
+      "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
+    },
+    {
+      "file": "apps/Study-f82b38/public/assets/spectral-OFL.txt",
+      "source": "Study-f82b38/public/assets/spectral-OFL.txt",
+      "kind": "exact-copy",
+      "bytes": 4392,
+      "sha256": "501d6ceca8e552630fe3aa9442b9a818565680a1a2f79f3fb8c13d6f309a9e98"
+    },
+    {
+      "file": "apps/Study-f82b38/public/assets/registration.svg",
+      "source": "Study-f82b38/public/assets/registration.svg",
+      "kind": "exact-copy",
+      "bytes": 465,
+      "sha256": "7c682bda5e80e00cc0b24cf1b475748c50956a1801ccdd80f84c312a434b2543"
+    },
+    {
+      "file": "evaluation/Study-f82b38-chromium-phone.png",
+      "source": "evaluation/Study-f82b38-chromium-phone.png",
+      "kind": "exact-copy",
+      "bytes": 377727,
+      "sha256": "98b04fed27407e9e3bd529b09f4ac5f01488857d7af8debb7fda0d2396bd5beb"
+    },
+    {
+      "file": "evaluation/Study-f82b38-chromium-ipad-portrait.png",
+      "source": "evaluation/Study-f82b38-chromium-ipad-portrait.png",
+      "kind": "exact-copy",
+      "bytes": 441265,
+      "sha256": "9a8693871dd27feef9684f761d854f4dda760b040cfabd68dfe04d193c70e3e0"
+    },
+    {
+      "file": "evaluation/Study-f82b38-chromium-desktop.png",
+      "source": "evaluation/Study-f82b38-chromium-desktop.png",
+      "kind": "exact-copy",
+      "bytes": 554477,
+      "sha256": "1cdb09f1287a0279fab7bdd4d3bb2d8ca38d9bd6b4fcf5eb7f40a821fe771f94"
+    },
+    {
+      "file": "evaluation/Study-f82b38-chromium-export.json",
+      "source": "evaluation/Study-f82b38-chromium-export.json",
+      "kind": "exact-copy",
+      "bytes": 802,
+      "sha256": "f43fbdaf858e04e6b388d962778e779db6f264c0aa04dd4add8534d903017cf1"
+    },
+    {
+      "file": "evaluation/Study-f82b38-webkit-phone.png",
+      "source": "evaluation/Study-f82b38-webkit-phone.png",
+      "kind": "exact-copy",
+      "bytes": 442438,
+      "sha256": "60298d4d7a406a1b047e05dc5aee27ca7b06310326c875762b2650bf0fda7684"
+    },
+    {
+      "file": "evaluation/Study-f82b38-webkit-ipad-portrait.png",
+      "source": "evaluation/Study-f82b38-webkit-ipad-portrait.png",
+      "kind": "exact-copy",
+      "bytes": 510367,
+      "sha256": "a0fda7cb66c7e5b7bc51daa68273af7999cf3cc1871aacb6dd5df726ae483ae4"
+    },
+    {
+      "file": "evaluation/Study-f82b38-webkit-desktop.png",
+      "source": "evaluation/Study-f82b38-webkit-desktop.png",
+      "kind": "exact-copy",
+      "bytes": 649215,
+      "sha256": "ab054618319e89a03f86f5780ffd9c06bde8964edda9511bcb6c0cb5ac94a4c4"
+    },
+    {
+      "file": "evaluation/Study-f82b38-webkit-export.json",
+      "source": "evaluation/Study-f82b38-webkit-export.json",
+      "kind": "exact-copy",
+      "bytes": 796,
+      "sha256": "37927801c9bbf2f5c99e11db0c4137065f1223e1fab19e5cf24cd4588d1ec660"
+    },
+    {
+      "file": "runs/Study-f82b38/completion.json",
+      "source": "Study-f82b38-run/completion.json",
+      "kind": "exact-copy",
+      "bytes": 137,
+      "sha256": "ed21527e6e2402a5b3a824417b0e1f1d3c12f7bea085161ea42d3c9650329569"
+    },
+    {
+      "file": "apps/Study-4a898c/BRIEF.md",
+      "source": "Study-4a898c/BRIEF.md",
+      "kind": "exact-copy",
+      "bytes": 4878,
+      "sha256": "b82975606d21d6d4050761b066948d9f91b1b963b1ad73f5d4181a7b18f8a5aa"
+    },
+    {
+      "file": "apps/Study-4a898c/PRODUCT.md",
+      "source": "Study-4a898c/PRODUCT.md",
+      "kind": "exact-copy",
+      "bytes": 215,
+      "sha256": "7e07ce5323a101d938e074eb86c3ae7c4b985a7c04188275a3c2d33d32e7abb1"
+    },
+    {
+      "file": "apps/Study-4a898c/DESIGN.md",
+      "source": "Study-4a898c/DESIGN.md",
+      "kind": "exact-copy",
+      "bytes": 4273,
+      "sha256": "3bc9b66ae3b4d059197c9156412ba7d2a682b93c55883d44c4cab8d367eee511"
+    },
+    {
+      "file": "apps/Study-4a898c/synthetic-interview.json",
+      "source": "Study-4a898c/synthetic-interview.json",
+      "kind": "exact-copy",
+      "bytes": 7029,
+      "sha256": "e8414616b85e1b75064f6cc4ae9cf7b9d17133d7e756dfe94da01fa767f0cd55"
+    },
+    {
+      "file": "apps/Study-4a898c/package.json",
+      "source": "Study-4a898c/package.json",
+      "kind": "exact-copy",
+      "bytes": 356,
+      "sha256": "285f990748f521016c364f0179417b173a48548b8db7cbd11a153b9540c3cd53"
+    },
+    {
+      "file": "apps/Study-4a898c/build.mjs",
+      "source": "Study-4a898c/build.mjs",
+      "kind": "exact-copy",
+      "bytes": 1148,
+      "sha256": "8011ce35b0792783628d84be858e304a62962a5b6637ffc91894d233e83bfa3d"
+    },
+    {
+      "file": "apps/Study-4a898c/src/app.jsx",
+      "source": "Study-4a898c/src/app.jsx",
+      "kind": "exact-copy",
+      "bytes": 20664,
+      "sha256": "9ff82bd29690e044385712c986844bc86686def51f5428840db2bb4d27720468"
+    },
+    {
+      "file": "apps/Study-4a898c/public/app.js",
+      "source": "Study-4a898c/public/app.js",
+      "kind": "exact-copy",
+      "bytes": 1396606,
+      "sha256": "c83121bb01bb558475d25e35107ab3e8321227d8154f943f3cff49d03c8d9d7d"
+    },
+    {
+      "file": "apps/Study-4a898c/public/base.css",
+      "source": "Study-4a898c/public/base.css",
+      "kind": "exact-copy",
+      "bytes": 21389,
+      "sha256": "c2a53018da038124b220a83c668946ecc099835b42bc3529dd254ddd038c451d"
+    },
+    {
+      "file": "apps/Study-4a898c/public/index.html",
+      "source": "Study-4a898c/public/index.html",
+      "kind": "exact-copy",
+      "bytes": 291,
+      "sha256": "6aea8272a71e140dc8513f8d045be7fa31db846939e07ed6774233723ec0560f"
+    },
+    {
+      "file": "apps/Study-4a898c/assets/Lato-Black.ttf",
+      "source": "Study-4a898c/assets/Lato-Black.ttf",
+      "kind": "exact-copy",
+      "bytes": 664748,
+      "sha256": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337"
+    },
+    {
+      "file": "apps/Study-4a898c/assets/Lato-Regular.ttf",
+      "source": "Study-4a898c/assets/Lato-Regular.ttf",
+      "kind": "exact-copy",
+      "bytes": 656568,
+      "sha256": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
+    },
+    {
+      "file": "apps/Study-4a898c/assets/Spectral-Regular.ttf",
+      "source": "Study-4a898c/assets/Spectral-Regular.ttf",
+      "kind": "exact-copy",
+      "bytes": 261088,
+      "sha256": "c89021dc20720c8d0dcf40b0b2f6e00c13665fa8041717f581396f51b8c78f5d"
+    },
+    {
+      "file": "apps/Study-4a898c/assets/lato-OFL.txt",
+      "source": "Study-4a898c/assets/lato-OFL.txt",
+      "kind": "exact-copy",
+      "bytes": 4407,
+      "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
+    },
+    {
+      "file": "apps/Study-4a898c/assets/spectral-OFL.txt",
+      "source": "Study-4a898c/assets/spectral-OFL.txt",
+      "kind": "exact-copy",
+      "bytes": 4392,
+      "sha256": "501d6ceca8e552630fe3aa9442b9a818565680a1a2f79f3fb8c13d6f309a9e98"
+    },
+    {
+      "file": "apps/Study-4a898c/assets/registration.svg",
+      "source": "Study-4a898c/assets/registration.svg",
+      "kind": "exact-copy",
+      "bytes": 465,
+      "sha256": "7c682bda5e80e00cc0b24cf1b475748c50956a1801ccdd80f84c312a434b2543"
+    },
+    {
+      "file": "apps/Study-4a898c/public/assets/Lato-Black.ttf",
+      "source": "Study-4a898c/public/assets/Lato-Black.ttf",
+      "kind": "exact-copy",
+      "bytes": 664748,
+      "sha256": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337"
+    },
+    {
+      "file": "apps/Study-4a898c/public/assets/Lato-Regular.ttf",
+      "source": "Study-4a898c/public/assets/Lato-Regular.ttf",
+      "kind": "exact-copy",
+      "bytes": 656568,
+      "sha256": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
+    },
+    {
+      "file": "apps/Study-4a898c/public/assets/Spectral-Regular.ttf",
+      "source": "Study-4a898c/public/assets/Spectral-Regular.ttf",
+      "kind": "exact-copy",
+      "bytes": 261088,
+      "sha256": "c89021dc20720c8d0dcf40b0b2f6e00c13665fa8041717f581396f51b8c78f5d"
+    },
+    {
+      "file": "apps/Study-4a898c/public/assets/lato-OFL.txt",
+      "source": "Study-4a898c/public/assets/lato-OFL.txt",
+      "kind": "exact-copy",
+      "bytes": 4407,
+      "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
+    },
+    {
+      "file": "apps/Study-4a898c/public/assets/spectral-OFL.txt",
+      "source": "Study-4a898c/public/assets/spectral-OFL.txt",
+      "kind": "exact-copy",
+      "bytes": 4392,
+      "sha256": "501d6ceca8e552630fe3aa9442b9a818565680a1a2f79f3fb8c13d6f309a9e98"
+    },
+    {
+      "file": "apps/Study-4a898c/public/assets/registration.svg",
+      "source": "Study-4a898c/public/assets/registration.svg",
+      "kind": "exact-copy",
+      "bytes": 465,
+      "sha256": "7c682bda5e80e00cc0b24cf1b475748c50956a1801ccdd80f84c312a434b2543"
+    },
+    {
+      "file": "evaluation/Study-4a898c-chromium-phone.png",
+      "source": "evaluation/Study-4a898c-chromium-phone.png",
+      "kind": "exact-copy",
+      "bytes": 320926,
+      "sha256": "747cfedc0582effd556e582d7078e9232f66b50017f92f129014a7a4f9eafca9"
+    },
+    {
+      "file": "evaluation/Study-4a898c-chromium-ipad-portrait.png",
+      "source": "evaluation/Study-4a898c-chromium-ipad-portrait.png",
+      "kind": "exact-copy",
+      "bytes": 387829,
+      "sha256": "5329c1b127cc9e13442b53cad8ff5745fb0596d601c43c41a1805c30cdb96947"
+    },
+    {
+      "file": "evaluation/Study-4a898c-chromium-desktop.png",
+      "source": "evaluation/Study-4a898c-chromium-desktop.png",
+      "kind": "exact-copy",
+      "bytes": 500326,
+      "sha256": "5077b05be4d373260a9d4b0be0c21b7498f41f74ca671043c05dc6ecf32e33a0"
+    },
+    {
+      "file": "evaluation/Study-4a898c-chromium-export.json",
+      "source": "evaluation/Study-4a898c-chromium-export.json",
+      "kind": "exact-copy",
+      "bytes": 794,
+      "sha256": "15a41c025f1e44d741042a7f32e4c180278521e4c9f48663a8a1a7375ae4f366"
+    },
+    {
+      "file": "evaluation/Study-4a898c-webkit-phone.png",
+      "source": "evaluation/Study-4a898c-webkit-phone.png",
+      "kind": "exact-copy",
+      "bytes": 386265,
+      "sha256": "6aaa0d5f8d9def5c489e8caca53259b552b6e89b84bd5c2ed7e0a7f224ac078b"
+    },
+    {
+      "file": "evaluation/Study-4a898c-webkit-ipad-portrait.png",
+      "source": "evaluation/Study-4a898c-webkit-ipad-portrait.png",
+      "kind": "exact-copy",
+      "bytes": 490579,
+      "sha256": "d3b2063aef912c0934afc9273789493d78de4dc838df57e96c714010620ca819"
+    },
+    {
+      "file": "evaluation/Study-4a898c-webkit-desktop.png",
+      "source": "evaluation/Study-4a898c-webkit-desktop.png",
+      "kind": "exact-copy",
+      "bytes": 638986,
+      "sha256": "fa00706e64a41968373af1c60e29e2efb2cf402514cf1544cbeef56a76d31ddf"
+    },
+    {
+      "file": "evaluation/Study-4a898c-webkit-export.json",
+      "source": "evaluation/Study-4a898c-webkit-export.json",
+      "kind": "exact-copy",
+      "bytes": 794,
+      "sha256": "bb53d6071745aae5c665e72b1764521e65d78eff9a5e62825042c03befce10be"
+    },
+    {
+      "file": "runs/Study-4a898c/completion.json",
+      "source": "Study-4a898c-run/completion.json",
+      "kind": "exact-copy",
+      "bytes": 126,
+      "sha256": "073579eab0bf152da8ab076a8ace039cb107ee4f5ea16dbed09e70b8cbbbe986"
+    },
+    {
+      "file": "apps/Study-4a898c/BUILD-REPORT.md",
+      "source": "Study-4a898c/BUILD-REPORT.md",
+      "kind": "exact-copy",
+      "bytes": 8015,
+      "sha256": "af9cedabb708709cf2df19ba7087cb429f412c1d9823ab3c9e2f813f78c2c65f"
+    },
+    {
+      "file": "apps/Study-4a898c/evidence/design-context.json",
+      "source": "Study-4a898c/evidence/design-context.json",
+      "kind": "exact-copy",
+      "bytes": 906,
+      "sha256": "5b275ab1eba448c18be3ab8f6f961a8974a142659d0852e7b48722e7c7aba7ae"
+    },
+    {
+      "file": "frozen/runner.mjs",
+      "source": "repository:scripts/compare-design-workflows.mjs",
+      "kind": "exact-copy",
+      "bytes": 19543,
+      "sha256": "95782f321fad4a48916b24fb006914a77c5605724a8555716f23d11f98abba4a"
+    },
+    {
+      "file": "frozen/evaluate.mjs",
+      "source": "repository:research/comparison/evaluate.mjs",
+      "kind": "exact-copy",
+      "bytes": 8813,
+      "sha256": "d5fe40a3f5db5115a18f5e9bca1d77ce84544d790949c3d9cc3af092cb9a632a"
+    },
+    {
+      "file": "licenses/Meta-MIT.txt",
+      "source": "Study-f82b38/node_modules/react/LICENSE",
+      "kind": "exact-copy",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "licenses/styleq-MIT.txt",
+      "source": "Study-f82b38/node_modules/styleq/LICENSE",
+      "kind": "exact-copy",
+      "bytes": 1069,
+      "sha256": "b00770e3c5d6a029cb104f7ac0d328c88ec684d31e8188c61ca91fcc17743cdc"
+    },
+    {
+      "file": "licenses/zod-MIT.txt",
+      "source": "Study-4a898c/node_modules/zod/LICENSE",
+      "kind": "exact-copy",
+      "bytes": 1072,
+      "sha256": "3f1189b28e3866e0d979968d466b78f813f76827cfdca1fbb124cc0a5c8841f8"
+    },
+    {
+      "file": "licenses/toolkit-MIT.txt",
+      "source": "repository:LICENSE",
+      "kind": "exact-copy",
+      "bytes": 1088,
+      "sha256": "74f11de88095f3a7f3e8df8841ac56fbb1000fe1d2e3fd5ec5fb283b228e516d"
+    },
+    {
+      "file": "runs/summary.json",
+      "source": null,
+      "kind": "sanitized-derived",
+      "bytes": 11640,
+      "sha256": "f14bd099650fcf7ee897c21bc8df0da6044b1a32858c54572e8a691304b2eaa1"
+    },
+    {
+      "file": "runs/config-trust-amendment.json",
+      "source": null,
+      "kind": "sanitized-derived",
+      "bytes": 537,
+      "sha256": "fec99bb75bdb9dbd759c48badf06dd85bc280e11291eb5f753c7154b3c046394"
+    },
+    {
+      "file": "licenses/provenance.json",
+      "source": null,
+      "kind": "sanitized-derived",
+      "bytes": 1053,
+      "sha256": "40943452b461905504f7f255eb9a0661a5be4ade013f024cc983d5178dacfaa3"
+    },
+    {
+      "file": "README.md",
+      "source": null,
+      "kind": "sanitized-derived",
+      "bytes": 2619,
+      "sha256": "b6110190b958ca16198a426db32ce6433acead181a68def7d281bd2bc6f1263e"
+    },
+    {
+      "file": "index.html",
+      "source": null,
+      "kind": "sanitized-derived",
+      "bytes": 2254,
+      "sha256": "51d394e2456d677c68db3c6b3b050055c9a87c3180913dc1786f8bb6947223d0"
+    }
+  ],
+  "totalFiles": 78,
+  "totalBytes": 14376021
+}

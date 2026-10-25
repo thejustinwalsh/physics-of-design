@@ -1,0 +1,44 @@
+{
+  "packages": [
+    {
+      "name": "react",
+      "version": "19.2.0",
+      "license": "MIT",
+      "notice": "Meta-MIT.txt"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.0",
+      "license": "MIT",
+      "notice": "Meta-MIT.txt"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "license": "MIT",
+      "notice": "Meta-MIT.txt"
+    },
+    {
+      "name": "@stylexjs/stylex",
+      "version": "0.19.1",
+      "license": "MIT",
+      "notice": "Meta-MIT.txt"
+    },
+    {
+      "name": "styleq",
+      "version": "0.2.1",
+      "license": "MIT",
+      "notice": "styleq-MIT.txt"
+    },
+    {
+      "name": "zod",
+      "version": "4.6.7",
+      "license": "MIT",
+      "notice": "zod-MIT.txt"
+    }
+  ],
+  "toolkit": "toolkit-MIT.txt",
+  "fonts": "Exact supplied font/OFL bytes retained beside each app.",
+  "artwork": "Original registration.svg from repository comparison scaffold; repository MIT license.",
+  "bundleScope": "Only evaluated application outputs; no separate dependency/runtime directories."
+}

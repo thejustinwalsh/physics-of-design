@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-25",
+  "originalAssets": [
+    { "path": "service-topology.svg", "creator": "Codex, authored for the Design Theory Relay experiment", "license": "MIT", "licensePath": "LICENSE.txt", "method": "Original SVG primitives and technical labels derived only from the synthetic fixture.", "sourceIds": ["service-001", "service-002", "service-003", "service-004", "trace-000001"], "rights": "No reference-site visual asset, icon, mesh, font or code was copied.", "use": "Technical media/accessible dependency reference, not generated application UI." },
+    { "path": "diagnostic-trace.svg", "creator": "Codex, authored for the Design Theory Relay experiment", "license": "MIT", "licensePath": "LICENSE.txt", "method": "Original SVG timing diagram from synthetic span offsets/durations.", "sourceIds": ["trace-000001"], "rights": "No third-party artwork.", "use": "Static timing reference and media-tool input; actual interactive waterfall still must use fixture span data." }
+  ],
+  "fonts": [
+    { "repositoryPath": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf", "license": "SIL Open Font License 1.1", "licenseRepositoryPath": "assets/fonts/robotoflex-OFL.txt", "role": "Available variable UI face; inspect actual axes/features/coverage before use. Reference only; no duplicate file." },
+    { "repositoryPath": "assets/fonts/Lato-Regular.ttf", "license": "SIL Open Font License 1.1", "licenseRepositoryPath": "assets/fonts/lato-OFL.txt", "role": "Optional alternate UI/heading face; reference only." },
+    { "repositoryPath": "assets/fonts/Lato-Black.ttf", "license": "SIL Open Font License 1.1", "licenseRepositoryPath": "assets/fonts/lato-OFL.txt", "role": "Optional stronger heading face; reference only." },
+    { "repositoryPath": "assets/fonts/Spectral-Regular.ttf", "license": "SIL Open Font License 1.1", "licenseRepositoryPath": "assets/fonts/spectral-OFL.txt", "role": "Optional reading role only if justified; reference only." }
+  ],
+  "referenceRights": { "ledger": "research/relay-inspiration.json", "includedReferenceAssets": [], "policy": "Award/case screenshots remain protected reference material; no reference media redistributed." },
+  "dataset": { "path": "../fixtures.json", "creator": "Design Theory Relay experiment", "license": "MIT", "source": "../generate-fixtures.mjs", "privacy": "All records and names are synthetic, generated locally from a stable seed; no real telemetry or personal data." }
+}

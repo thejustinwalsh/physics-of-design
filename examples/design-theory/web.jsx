@@ -1,5 +1,7 @@
 import React, {
   useCallback,
+  useImperativeHandle,
+  memo,
   useEffect,
   useMemo,
   useRef,
@@ -21,7 +23,17 @@ import { resolveWireframe, wireframeSvg } from '../../src/wireframe.ts';
 import { profiles, profileList } from './profiles.js';
 import { getRuntime } from './runtime.js';
 import { Surface } from './Surface.jsx';
-import { LayoutPreview, LayoutTitleMeasure } from './LayoutPreview.jsx';
+import {
+  LayoutPreview,
+  LayoutTitleMeasure,
+  layoutRegionNumber,
+} from './LayoutPreview.jsx';
+import { InteractionRange } from './InteractionRange.jsx';
+import { RegistrationBand } from './RegistrationBand.jsx';
+import { DomMaterialStudy } from './DomMaterialStudy.jsx';
+import { HeroMaterial } from './HeroMaterial.jsx';
+
+const fieldEvidence = __DESIGN_FIELD_SUMMARY__;
 
 const s = stylex.create({
   app: {
@@ -138,18 +150,24 @@ const s = stylex.create({
   heroCopy: { flex: '1 1 58%', minWidth: 0, position: 'relative', zIndex: 2 },
   title: {
     fontFamily: 'var(--display)',
-    fontWeight: 400,
-    fontSize: 'clamp(65px, 7.7vw, 112px)',
+    fontWeight: 700,
+    fontSize: 'clamp(66px, 8.1vw, 126px)',
     letterSpacing: 'var(--tracking)',
     lineHeight: 0.98,
     margin: 0,
     maxWidth: 800,
     '@media (max-width: 540px)': {
-      fontSize: 'clamp(52px, 13.7vw, 74px)',
+      fontSize: 'clamp(52px, 14.2vw, 76px)',
       lineHeight: 1.03,
     },
   },
-  titleAccent: { color: 'var(--accent)', fontStyle: 'italic' },
+  titleAccent: {
+    color: 'var(--ink)',
+    backgroundColor: 'var(--signal)',
+    fontStyle: 'normal',
+    boxDecorationBreak: 'clone',
+    paddingInline: '0.04em',
+  },
   heroDescription: {
     fontSize: 16,
     lineHeight: 1.65,
@@ -302,7 +320,7 @@ const s = stylex.create({
   headingGroup: { flex: '1 1 55%', minWidth: 0 },
   sectionTitle: {
     fontFamily: 'var(--display)',
-    fontWeight: 400,
+    fontWeight: 700,
     fontSize: 'clamp(38px, 4.4vw, 62px)',
     lineHeight: 1.06,
     letterSpacing: 'var(--tracking)',
@@ -596,7 +614,7 @@ const s = stylex.create({
   note: { fontSize: 11, lineHeight: 1.65, color: 'var(--muted)', margin: 0 },
   miniTitle: {
     fontFamily: 'var(--display)',
-    fontWeight: 400,
+    fontWeight: 700,
     fontSize: 30,
     letterSpacing: '-.04em',
     margin: '0 0 12px',
@@ -726,8 +744,13 @@ const s = stylex.create({
     padding: 12,
     backgroundColor: '#efede3',
   },
+  layoutWorkspace: {
+    alignItems: 'flex-start',
+    '@media (max-width: 800px)': { flexDirection: 'column-reverse' },
+  },
   wireframePanel: {
     flex: '1 1 68%',
+    width: '100%',
     minWidth: 0,
     borderWidth: 1,
     borderStyle: 'solid',
@@ -748,13 +771,16 @@ const s = stylex.create({
   },
   inspector: {
     flex: '1 1 32%',
+    width: '100%',
     minWidth: 0,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    alignSelf: 'flex-start',
     gap: 22,
   },
   metrics: { display: 'flex', gap: 20, flexWrap: 'wrap' },
+  layoutMetrics: { '@media (max-width: 800px)': { display: 'none' } },
   metric: {
     flex: 1,
     paddingBlock: 18,
@@ -858,7 +884,7 @@ const s = stylex.create({
   },
   endTitle: {
     fontFamily: 'var(--display)',
-    fontWeight: 400,
+    fontWeight: 700,
     fontSize: 'clamp(44px, 6vw, 82px)',
     letterSpacing: 'var(--tracking)',
     lineHeight: 1.05,
@@ -939,7 +965,7 @@ function SectionHeading({ number, eyebrow, title, children }) {
   );
 }
 
-function MotionDemo({ spring, onChange }) {
+const MotionDemo = memo(function MotionDemo({ spring, onChange }) {
   const damping = spring.damping;
   const setDamping = (damping) => onChange({ ...spring, damping });
   const track = useRef(null),
@@ -1011,8 +1037,8 @@ function MotionDemo({ spring, onChange }) {
             difference.
           </h2>
           <p {...stylex.props(s.sectionIntro, s.lightMuted)}>
-            A little tension. A satisfying release. Shape the movement, then
-            change its destination without losing momentum.
+            Give a gesture a consequence. Shape the movement, then change its
+            destination without losing momentum.
           </p>
           <div {...stylex.props(s.badges)}>
             <span {...stylex.props(s.badge)}>Retargetable springs</span>
@@ -1047,7 +1073,7 @@ function MotionDemo({ spring, onChange }) {
           <div {...stylex.props(s.controlLine)}>
             <label {...stylex.props(s.rangeLabel)}>
               Damping · {damping}
-              <input
+              <InteractionRange
                 aria-label="Motion damping"
                 type="range"
                 min="5"
@@ -1073,9 +1099,9 @@ function MotionDemo({ spring, onChange }) {
       </div>
     </section>
   );
-}
+});
 
-function Materials({ profile, parameters, onChange }) {
+const Materials = memo(function Materials({ profile, parameters, onChange }) {
   const { roughness, metalness, normalScale, normalStrength } = parameters;
   const update = (key, value) => onChange({ ...parameters, [key]: value });
   const setRoughness = (value) => update('roughness', value),
@@ -1144,9 +1170,10 @@ function Materials({ profile, parameters, onChange }) {
   const enableTilt = async () => {
     if (controller.current)
       setPermission(await controller.current.requestFromUserGesture());
+    else setPermission('inactive');
   };
   return (
-    <section id="materials" {...stylex.props(s.section, s.shell)} data-reveal>
+    <section id="materials" {...stylex.props(s.section, s.shell)}>
       <SectionHeading
         number="03"
         eyebrow="Materials & light"
@@ -1177,7 +1204,11 @@ function Materials({ profile, parameters, onChange }) {
             className={stylex.props(s.surface).className}
           />
           <div {...stylex.props(s.surfaceFoot)}>
-            <span>Move your pointer to shift the light</span>
+            <span>
+              {status === 'worker' || status === 'main'
+                ? 'Move your pointer to shift the light'
+                : 'Activate 3D to light this form'}
+            </span>
             <span aria-label="Renderer status">
               {status === 'worker'
                 ? 'Live · worker'
@@ -1193,8 +1224,9 @@ function Materials({ profile, parameters, onChange }) {
           <div>
             <h3 {...stylex.props(s.miniTitle)}>Make it feel like you.</h3>
             <p {...stylex.props(s.note)}>
-              Two surfaces, one light. The surface response is modeled; the
-              pairing is your choice.
+              {status === 'worker' || status === 'main'
+                ? 'Two live surfaces, one light. Changes update the rendered form.'
+                : '3D edits are retained for activation. Roughness also updates the live DOM material study below; the static illustration does not relight.'}
             </p>
           </div>
           <label {...stylex.props(s.sliderControl)}>
@@ -1204,7 +1236,7 @@ function Materials({ profile, parameters, onChange }) {
                 {roughness.toFixed(2)}
               </output>
             </span>
-            <input
+            <InteractionRange
               {...stylex.props(s.range)}
               aria-label="Material roughness"
               type="range"
@@ -1226,7 +1258,7 @@ function Materials({ profile, parameters, onChange }) {
                 {metalness > 0 && metalness < 1 ? ' · blend' : ''}
               </output>
             </span>
-            <input
+            <InteractionRange
               {...stylex.props(s.range)}
               aria-label="Material metalness"
               type="range"
@@ -1248,7 +1280,7 @@ function Materials({ profile, parameters, onChange }) {
                   {normalScale.toFixed(1)}×
                 </output>
               </span>
-              <input
+              <InteractionRange
                 {...stylex.props(s.range)}
                 aria-label="Normal texture scale"
                 type="range"
@@ -1266,7 +1298,7 @@ function Materials({ profile, parameters, onChange }) {
                   {normalStrength.toFixed(2)}
                 </output>
               </span>
-              <input
+              <InteractionRange
                 {...stylex.props(s.range)}
                 aria-label="Normal texture amplitude"
                 type="range"
@@ -1292,13 +1324,15 @@ function Materials({ profile, parameters, onChange }) {
             <p {...stylex.props(s.statline)} role="status">
               {permission === 'active'
                 ? 'Tilt your device gently. Your starting pose is neutral.'
-                : permission === 'denied'
-                  ? 'Motion permission was not granted. Pointer controls still work.'
-                  : permission === 'unsupported'
-                    ? 'Device orientation is unavailable here. Try moving your pointer.'
-                    : permission === 'paused'
-                      ? 'Tilt is paused while reduced motion is on or the page is hidden.'
-                      : 'Optional on supported mobile devices. Permission is requested only when you choose.'}
+                : permission === 'inactive'
+                  ? 'Activate the 3D study first; device tilt is optional.'
+                  : permission === 'denied'
+                    ? 'Motion permission was not granted. Pointer controls still work.'
+                    : permission === 'unsupported'
+                      ? 'Device orientation is unavailable here. Try moving your pointer.'
+                      : permission === 'paused'
+                        ? 'Tilt is paused while reduced motion is on or the page is hidden.'
+                        : 'Optional on supported mobile devices. Permission is requested only when you choose.'}
             </p>
           </div>
           <details>
@@ -1321,11 +1355,20 @@ function Materials({ profile, parameters, onChange }) {
           </details>
         </div>
       </div>
+      <DomMaterialStudy
+        roughness={roughness}
+        materialName={profile.name}
+        onRoughnessChange={setRoughness}
+        material={parameters.domMaterial ?? 'enamel'}
+        onMaterialChange={(domMaterial, roughness) =>
+          onChange({ ...parameters, domMaterial, roughness })
+        }
+      />
     </section>
   );
-}
+});
 
-function CropDemo() {
+const CropDemo = memo(function CropDemo() {
   const [format, setFormat] = useState('landscape'),
     [focus, setFocus] = useState(68),
     [annotation, setAnnotation] = useState(true);
@@ -1355,7 +1398,7 @@ function CropDemo() {
   );
   const crop = result.candidates[0];
   return (
-    <section id="images" {...stylex.props(s.section, s.shell)} data-reveal>
+    <section id="images" {...stylex.props(s.section, s.shell)}>
       <SectionHeading
         number="04"
         eyebrow="Images, composed"
@@ -1435,7 +1478,7 @@ function CropDemo() {
               Focal point{' '}
               <output {...stylex.props(s.controlValue)}>{focus}%</output>
             </span>
-            <input
+            <InteractionRange
               {...stylex.props(s.range)}
               aria-label="Image focal point"
               type="range"
@@ -1465,14 +1508,14 @@ function CropDemo() {
       </div>
     </section>
   );
-}
+});
 
 function wireframeFor(width, gutter, gap, naturalTextHeight = 0) {
   const stacked = width < 620,
     height = stacked ? 760 : 510;
   const ref = (name) => ({ ref: name }),
     op = (name, ...args) => ({ op: name, args });
-  return resolveWireframe({
+  const resolved = resolveWireframe({
     version: 1,
     id: 'field-notes',
     screen: { width, height, unit: 'css-px' },
@@ -1546,7 +1589,6 @@ function wireframeFor(width, gutter, gap, naturalTextHeight = 0) {
           width: ref('column'),
           height: ref('titleHeight'),
         },
-        baseline: 46,
       },
       {
         id: 'image',
@@ -1608,8 +1650,18 @@ function wireframeFor(width, gutter, gap, naturalTextHeight = 0) {
       },
     ],
   });
+  const requiredHeight = Math.ceil(
+    Math.max(...resolved.nodes.map((node) => node.box.y + node.box.height)) +
+      32,
+  );
+  return requiredHeight > height
+    ? resolveWireframe({
+        ...resolved.wireframe,
+        screen: { ...resolved.wireframe.screen, height: requiredHeight },
+      })
+    : resolved;
 }
-function LayoutGallery() {
+const LayoutGallery = memo(function LayoutGallery({ sessionRef }) {
   const [view, setView] = useState('design'),
     [width, setWidth] = useState(() =>
       innerWidth < 620 ? 390 : innerWidth < 950 ? 834 : 960,
@@ -1617,8 +1669,24 @@ function LayoutGallery() {
     [gutter, setGutter] = useState(32),
     [gap, setGap] = useState(28),
     [selected, setSelected] = useState('title'),
+    [titleContent, setTitleContent] = useState(
+      'The beauty\nof ordinary\nthings.',
+    ),
     [measurement, setMeasurement] = useState({ key: '', height: 0 });
-  const measurementKey = `${width}/${gutter}/${gap}`;
+  const [desktopInspector, setDesktopInspector] = useState(
+    () => innerWidth > 800,
+  );
+  useEffect(() => {
+    const media = matchMedia('(min-width: 801px)');
+    const update = () => setDesktopInspector(media.matches);
+    media.addEventListener('change', update);
+    return () => media.removeEventListener('change', update);
+  }, []);
+  const titleWidth =
+    width < 620 ? width - gutter * 2 : (width - gutter * 2 - gap) / 2;
+  const measurementKey = `${titleWidth}/${width < 620}/${titleContent}`;
+  const [receipt, setReceipt] = useState(null);
+  const onReceipt = useCallback((value) => setReceipt(value), []);
   const onMeasure = useCallback(
     (key, height) =>
       setMeasurement((previous) =>
@@ -1628,29 +1696,207 @@ function LayoutGallery() {
       ),
     [],
   );
-  const measuredHeight =
-    measurement.key === measurementKey ? measurement.height : 0;
+  const measuredHeight = measurement.height;
   const frame = useMemo(
     () => wireframeFor(width, gutter, gap, measuredHeight),
     [width, gutter, gap, measuredHeight],
   );
   const selectedNode = frame.nodes.find((x) => x.id === selected);
-  const select = (event) => {
-    const node = event.target.closest('[data-wireframe-node]');
-    if (node) setSelected(node.getAttribute('data-wireframe-node'));
+  useImperativeHandle(
+    sessionRef,
+    () => ({
+      capture: () => ({ width, gutter, gap, selected, titleContent }),
+      replay: (next) => {
+        if (
+          !next ||
+          ![390, 834, 960].includes(next.width) ||
+          !Number.isFinite(next.gutter) ||
+          next.gutter < 16 ||
+          next.gutter > 64 ||
+          !Number.isFinite(next.gap) ||
+          next.gap < 12 ||
+          next.gap > 48
+        )
+          return;
+        setWidth(next.width);
+        setGutter(next.gutter);
+        setGap(next.gap);
+        if (
+          typeof next.titleContent === 'string' &&
+          next.titleContent.length <= 160
+        )
+          setTitleContent(next.titleContent);
+        if (
+          ['nav', 'title', 'image', 'action', 'footer'].includes(next.selected)
+        )
+          setSelected(next.selected);
+      },
+    }),
+    [width, gutter, gap, selected, titleContent],
+  );
+  const download = (kind) => {
+    const content =
+      kind === 'svg'
+        ? wireframeSvg(frame, selected)
+        : JSON.stringify(
+            {
+              version: 1,
+              kind: 'current-layout-inspection',
+              content: { title: titleContent },
+              proposal: frame.wireframe,
+              receipt,
+              selection: selected,
+            },
+            null,
+            2,
+          );
+    const url = URL.createObjectURL(
+      new Blob([content], {
+        type: kind === 'svg' ? 'image/svg+xml' : 'application/json',
+      }),
+    );
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `layout-${width}.${kind}`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
+  const inspectorDetails = (
+    <div
+      data-layout-details
+      style={{ borderTop: '1px solid var(--line)', paddingTop: 16 }}
+    >
+      <label style={{ display: 'block', fontSize: 11, marginBottom: 8 }}>
+        Region
+        <select
+          aria-label="Inspect layout region"
+          value={selected}
+          onChange={(e) => {
+            setSelected(e.target.value);
+            setView('inspect');
+          }}
+          style={{
+            display: 'block',
+            width: '100%',
+            marginTop: 8,
+            padding: 10,
+            background: 'var(--paper)',
+            color: 'var(--ink)',
+            border: '1px solid var(--line)',
+          }}
+        >
+          {frame.nodes.map((node) => (
+            <option key={node.id} value={node.id}>
+              {layoutRegionNumber(node.id)} · {node.label}
+            </option>
+          ))}
+        </select>
+      </label>
+      <p {...stylex.props(s.note)}>
+        <strong>{selectedNode.label}</strong> · proposal{' '}
+        {Math.round(selectedNode.box.width)} ×{' '}
+        {Math.round(selectedNode.box.height)}px.
+        <br />
+        {receipt?.nodes.find((n) => n.id === selected)?.box && (
+          <>
+            Browser:{' '}
+            {receipt.nodes.find((n) => n.id === selected).box.width.toFixed(1)}{' '}
+            ×{' '}
+            {receipt.nodes.find((n) => n.id === selected).box.height.toFixed(1)}
+            px.
+          </>
+        )}
+      </p>
+      <details style={{ marginBlock: 16 }}>
+        <summary {...stylex.props(s.caption)}>Edit the real headline</summary>
+        <label style={{ display: 'block', fontSize: 12, marginTop: 12 }}>
+          Story headline
+          <textarea
+            aria-label="Story headline"
+            value={titleContent}
+            maxLength={160}
+            rows={3}
+            onChange={(event) => setTitleContent(event.target.value)}
+            style={{
+              display: 'block',
+              width: '100%',
+              maxWidth: 640,
+              marginTop: 8,
+              padding: 12,
+              background: 'var(--paper)',
+              color: 'var(--ink)',
+              border: '1px solid var(--line)',
+              resize: 'vertical',
+            }}
+          />
+        </label>
+        <p {...stylex.props(s.caption)}>
+          Natural text height updates the title, image, action and footer
+          equations. Content edits are included in Save/Replay and the exported
+          inputs.
+        </p>
+      </details>
+      <details open={view === 'inspect'}>
+        <summary {...stylex.props(s.caption)}>Equation & source</summary>
+        <pre
+          style={{
+            whiteSpace: 'pre-wrap',
+            overflowWrap: 'anywhere',
+            fontSize: 11,
+            lineHeight: 1.7,
+            margin: '10px 0',
+          }}
+        >
+          {selected === 'title'
+            ? `width = ${width < 620 ? 'screen − 2 × gutter' : '(screen − 2 × gutter − gap) / 2'}
+height = max(${width < 620 ? 190 : 230}, measured text ${measuredHeight}px)`
+            : selected === 'image'
+              ? `x = ${width < 620 ? 'gutter' : 'gutter + column + gap'}
+y = ${width < 620 ? 'title.bottom + gap' : '104'}
+width = column`
+              : JSON.stringify(
+                  frame.wireframe.nodes.find((n) => n.id === selected).box,
+                  null,
+                  2,
+                )}
+        </pre>
+        <p {...stylex.props(s.caption)}>
+          Authored Field Notes composition · resolveWireframe. Solid overlay:
+          current DOM rectangles. Title fit: loaded-font natural text
+          measurement. No inferred baseline or beauty score.
+        </p>
+      </details>
+      <div
+        style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginTop: 12 }}
+      >
+        <button
+          {...stylex.props(s.plainButton)}
+          onClick={() => download('json')}
+        >
+          Export inputs + receipt ↓
+        </button>
+        <button
+          {...stylex.props(s.plainButton)}
+          onClick={() => download('svg')}
+        >
+          Drawing.svg ↓
+        </button>
+      </div>
+    </div>
+  );
   return (
     <section
       id="gallery"
       {...stylex.props(s.section, s.shell)}
-      data-reveal
-      data-layout-measured={measuredHeight > 0}
+
+      data-layout-measured={measurement.key === measurementKey && measuredHeight > 0}
     >
       <LayoutTitleMeasure
         width={frame.nodes.find((node) => node.id === 'title').box.width}
         mobile={width < 620}
         measurementKey={measurementKey}
         onMeasure={onMeasure}
+        title={titleContent}
       />
       <SectionHeading
         number="05"
@@ -1666,7 +1912,7 @@ function LayoutGallery() {
         Move between the finished idea and the relationships underneath it.
         Width, spacing and proportion stay editable—and understandable.
       </SectionHeading>
-      <div {...stylex.props(s.split)}>
+      <div {...stylex.props(s.split, s.layoutWorkspace)}>
         <div {...stylex.props(s.wireframePanel)}>
           <div {...stylex.props(s.panelToolbar)}>
             <div {...stylex.props(s.tabs)}>
@@ -1698,38 +1944,38 @@ function LayoutGallery() {
               <option value={960}>Desktop · 960</option>
             </select>
           </div>
-          {view === 'inspect' ? (
-            <div
-              {...stylex.props(s.wireframeHost)}
-              data-wireframe
-              style={{ display: 'block' }}
-              onClick={select}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  select(e);
-                }
-              }}
-              dangerouslySetInnerHTML={{
-                __html: wireframeSvg(frame, selected),
-              }}
-            />
-          ) : (
-            <LayoutPreview frame={frame} />
-          )}
+          <LayoutPreview
+            frame={frame}
+            inspect={view === 'inspect'}
+            selected={selected}
+            onSelect={setSelected}
+            onReceipt={onReceipt}
+            title={titleContent}
+          />
+          <div
+            style={{
+              padding: '12px 16px',
+              borderTop: '1px solid var(--line)',
+              fontSize: 11,
+              lineHeight: 1.5,
+            }}
+            data-layout-receipt
+            data-layout-inputs={receipt ? JSON.stringify({ width: receipt.screen.width, gutter: receipt.inputs.gutter.value, gap: receipt.inputs.gap.value }) : ''}
+          >
+            {width < 620 ? 'STACK' : 'SPLIT'} · {width} authored px ·{' '}
+            {receipt
+              ? `${Math.round(receipt.scale * 100)}% preview · maximum rectangle delta ${receipt.maxError.toFixed(2)}px`
+              : 'Measuring current preview…'}
+          </div>
         </div>
         <div {...stylex.props(s.inspector)}>
-          <h3 {...stylex.props(s.miniTitle)}>
-            A system you can
-            <br />
-            put your hands on.
-          </h3>
+          <p {...stylex.props(s.eyebrow)}>LIVE INPUTS / RECOMPUTED GEOMETRY</p>
           <label>
             <span {...stylex.props(s.label)}>
               Page gutter{' '}
               <output {...stylex.props(s.controlValue)}>{gutter}px</output>
             </span>
-            <input
+            <InteractionRange
               {...stylex.props(s.range)}
               aria-label="Layout gutter"
               type="range"
@@ -1744,7 +1990,7 @@ function LayoutGallery() {
               Content gap{' '}
               <output {...stylex.props(s.controlValue)}>{gap}px</output>
             </span>
-            <input
+            <InteractionRange
               {...stylex.props(s.range)}
               aria-label="Layout content gap"
               type="range"
@@ -1754,7 +2000,8 @@ function LayoutGallery() {
               onChange={(e) => setGap(Number(e.target.value))}
             />
           </label>
-          <div {...stylex.props(s.metrics)}>
+          {desktopInspector && inspectorDetails}
+          <div {...stylex.props(s.metrics, s.layoutMetrics)}>
             <div {...stylex.props(s.metric)}>
               <span {...stylex.props(s.metricValue)}>
                 {Math.round(frame.values.column)}
@@ -1766,18 +2013,12 @@ function LayoutGallery() {
               <span {...stylex.props(s.caption)}>column ratio</span>
             </div>
           </div>
-          <p {...stylex.props(s.note)}>
-            {view === 'inspect'
-              ? `${selectedNode.label}: ${Math.round(selectedNode.box.width)} × ${Math.round(selectedNode.box.height)} px. Select a region to inspect it.`
-              : 'Choose Inspect relationships to see the whole layout as an editable technical drawing.'}{' '}
-            Geometry is authored. The title height expands to fit this browser’s
-            measured font and text wrapping.
-          </p>
         </div>
       </div>
+      {!desktopInspector && inspectorDetails}
     </section>
   );
-}
+});
 
 const stages = [
   {
@@ -1811,7 +2052,7 @@ const stages = [
 ];
 function Workflow({ profile, onReplay, saved, onSave }) {
   const [stage, setStage] = useState(0),
-    [copied, setCopied] = useState(false);
+    [copied, setCopied] = useState('idle');
   const download = () => {
     const payload = {
       spring: profile.motion,
@@ -1835,13 +2076,13 @@ function Workflow({ profile, onReplay, saved, onSave }) {
       await navigator.clipboard.writeText(
         'design motion analyze --input motion.json',
       );
-      setCopied(true);
+      setCopied('copied');
     } catch {
-      setCopied(false);
+      setCopied('unavailable');
     }
   };
   return (
-    <section id="workflow" {...stylex.props(s.section, s.shell)} data-reveal>
+    <section id="workflow" {...stylex.props(s.section, s.shell)}>
       <SectionHeading
         number="06"
         eyebrow="A thoughtful workflow"
@@ -1907,10 +2148,21 @@ function Workflow({ profile, onReplay, saved, onSave }) {
               Download motion.json ↓
             </button>
             <button onClick={copy} {...stylex.props(s.plainButton)}>
-              {copied ? 'Command copied ✓' : 'Copy CLI command ↗'}
+              {copied === 'copied' ? 'Command copied ✓' : 'Copy CLI command ↗'}
             </button>
           </div>
-          <code {...stylex.props(s.caption)} style={{ fontSize: 10 }}>
+          {copied === 'unavailable' && (
+            <p role="status" {...stylex.props(s.note)}>
+              Clipboard access is unavailable. Select and copy the command
+              below.
+            </p>
+          )}
+          <code
+            tabIndex={0}
+            aria-label="CLI command"
+            {...stylex.props(s.caption)}
+            style={{ fontSize: 10, userSelect: 'all' }}
+          >
             design motion analyze --input motion.json
           </code>
         </div>
@@ -1924,6 +2176,7 @@ const materialDefaults = (profile) => ({
   metalness: profile.material.metalness,
   normalScale: 1,
   normalStrength: 0.11,
+  domMaterial: 'enamel',
 });
 const validMaterialParameters = (value) =>
   value &&
@@ -1937,7 +2190,11 @@ const validMaterialParameters = (value) =>
   value.normalScale >= 0.5 &&
   value.normalScale <= 4 &&
   value.normalStrength >= 0 &&
-  value.normalStrength <= 0.6;
+  value.normalStrength <= 0.6 &&
+  (value.domMaterial === undefined ||
+    ['paper', 'enamel', 'brushed-metal', 'soft-glass'].includes(
+      value.domMaterial,
+    ));
 function App() {
   const [profileId, setProfileId] = useState('editorial'),
     [brief, setBrief] = useState(profiles.editorial.brief),
@@ -1949,30 +2206,26 @@ function App() {
     [materialParameters, setMaterialParameters] = useState(
       materialDefaults(profiles.editorial),
     ),
-    [message, setMessage] = useState(''),
-    [heroStatus, setHeroStatus] = useState('initializing');
+    [message, setMessage] = useState('');
   const profile = profiles[profileId];
-  const heroSurface = useMemo(
-    () => ({
-      ...profile.material,
-      roughness: materialParameters.roughness,
-      metalness: materialParameters.metalness,
-    }),
-    [profile, materialParameters],
-  );
   const root = useRef(null),
-    hero = useRef(null);
+    hero = useRef(null),
+    layoutSession = useRef(null);
   useEffect(() => {
     const runtime = getRuntime();
     window.__DESIGN_THEORY__ = { runtime, ready: true, profile: profileId };
     const media = matchMedia('(prefers-reduced-motion: reduce)');
+    let pressedButton = null;
     const animatePress = (event) => {
       const button = event.target.closest('button');
-      if (button && !media.matches)
+      if (button && !media.matches) {
+        pressedButton = button;
         gsap.to(button, { scale: 0.97, duration: 0.12, overwrite: true });
+      }
     };
-    const release = (event) => {
-      const button = event.target.closest('button');
+    const release = () => {
+      const button = pressedButton;
+      pressedButton = null;
       if (button)
         gsap.to(button, {
           scale: 1,
@@ -1997,6 +2250,7 @@ function App() {
     document.addEventListener('pointerdown', animatePress);
     document.addEventListener('pointerup', release);
     document.addEventListener('pointercancel', release);
+    window.addEventListener('blur', release);
     const reveals = [...document.querySelectorAll('[data-reveal]')];
     const observer = new IntersectionObserver(
       (entries) => {
@@ -2044,6 +2298,7 @@ function App() {
         setSaved({
           ...profiles[stored.id],
           brief: stored.brief,
+          layout: stored.layout,
           motion: MotionSpringSchema.safeParse(stored.motion).success
             ? MotionSpringSchema.parse(stored.motion)
             : profiles[stored.id].motion,
@@ -2060,6 +2315,7 @@ function App() {
       document.removeEventListener('pointerdown', animatePress);
       document.removeEventListener('pointerup', release);
       document.removeEventListener('pointercancel', release);
+      window.removeEventListener('blur', release);
       runtime.dispose();
     };
   }, []);
@@ -2086,12 +2342,24 @@ function App() {
       );
   };
   const save = () => {
-    const next = { ...profile, brief, motion, materialParameters };
+    const next = {
+      ...profile,
+      brief,
+      motion,
+      materialParameters,
+      layout: layoutSession.current?.capture(),
+    };
     setSaved(next);
     try {
       localStorage.setItem(
         'design-theory-direction',
-        JSON.stringify({ id: profileId, brief, motion, materialParameters }),
+        JSON.stringify({
+          id: profileId,
+          brief,
+          motion,
+          materialParameters,
+          layout: next.layout,
+        }),
       );
       setMessage('Direction saved in this browser.');
     } catch {
@@ -2105,6 +2373,7 @@ function App() {
     setMotion(saved.motion);
     setMaterialParameters(saved.materialParameters);
     setBrief(saved.brief);
+    layoutSession.current?.replay(saved.layout);
     setMessage(`${saved.name} direction replayed.`);
     if (!getRuntime().reduced)
       gsap.fromTo(
@@ -2115,6 +2384,7 @@ function App() {
   };
   const vars = {
     '--paper': profile.paper,
+    '--signal': profile.signal,
     '--ink': profile.ink,
     '--muted': profile.muted,
     '--accent': profile.accent,
@@ -2164,7 +2434,8 @@ function App() {
         <section {...stylex.props(s.shell, s.hero)} id="top">
           <div {...stylex.props(s.heroTop)}>
             <span {...stylex.props(s.eyebrow)}>
-              <i {...stylex.props(s.dot)} /> A toolkit for deliberate design
+              <i {...stylex.props(s.dot)} /> DESIGN THEORY / AN OPEN DESIGN
+              FIELD
             </span>
             <span {...stylex.props(s.edition)}>
               INDEPENDENT TOOLS. SHARED INTENT.
@@ -2173,22 +2444,21 @@ function App() {
           <div {...stylex.props(s.heroBody)}>
             <div ref={hero} {...stylex.props(s.heroCopy)}>
               <h1 {...stylex.props(s.title)}>
-                Good design
+                Make the
                 <br />
-                has a{' '}
-                <span {...stylex.props(s.titleAccent)}>
-                  point
-                  <br />
-                  of view.
-                </span>
+                rules.
+                <br />
+                <span {...stylex.props(s.titleAccent)}>Then bend</span>
+                <br />
+                them.
               </h1>
               <p {...stylex.props(s.heroDescription)}>
-                Bring yours. A hands-on toolkit for typography, composition,
-                color, motion and materials—made to work together.
+                Pull a value. Watch the composition answer. Keep the reasoning
+                with the result. A working field for deliberate friction.
               </p>
               <div {...stylex.props(s.heroActions)}>
-                <a href="#explore" {...stylex.props(s.primary)}>
-                  Explore the possibilities <Arrow />
+                <a href="field/" {...stylex.props(s.primary)}>
+                  Open the design field <Arrow />
                 </a>
                 <a href="#workflow" {...stylex.props(s.plainButton)}>
                   See how it works <span aria-hidden="true">↓</span>
@@ -2196,19 +2466,14 @@ function App() {
               </div>
             </div>
             <div {...stylex.props(s.heroArt)}>
-              <div {...stylex.props(s.artCircle)} />
               <span {...stylex.props(s.artIndex)}>FIG. 01</span>
-              <Surface
-                id="hero"
-                surface={heroSurface}
-                normalScale={materialParameters.normalScale}
-                normalStrength={materialParameters.normalStrength}
-                accentSurface={profile.materialPair}
-                onStatus={setHeroStatus}
-                className={stylex.props(s.surface).className}
+              <HeroMaterial
+                profile={profile}
+                roughness={materialParameters.roughness}
+                damping={motion.damping}
               />
               <div {...stylex.props(s.artCaption)}>
-                <span>A study in form, light & movement</span>
+                <span>LIVE MATERIAL PLANE / AUTHORED STUDY</span>
                 <span aria-hidden="true">↖ INTERACT</span>
               </div>
             </div>
@@ -2228,16 +2493,16 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="explore" {...stylex.props(s.section, s.shell)} data-reveal>
+        <section id="explore" {...stylex.props(s.section, s.shell)}>
           <div id="brief" style={{ scrollMarginTop: 24 }} />
           <SectionHeading
             number="01"
             eyebrow="Begin with a brief"
             title={
               <>
-                Your intent.
+                Start somewhere.
                 <br />
-                Not another template.
+                Make it yours.
               </>
             }
           >
@@ -2320,6 +2585,52 @@ function App() {
             </div>
           </div>
         </section>
+        <section
+          id="field-proof"
+          data-field-summary
+          data-field-identity={fieldEvidence.identity}
+          {...stylex.props(s.section, s.shell)}
+        >
+          <div {...stylex.props(s.split)}>
+            <div style={{ flex: '1 1 60%', minWidth: 0 }}>
+              <p {...stylex.props(s.eyebrow)}>
+                ONE SAVED EXPLORATION / OPEN TO INSPECTION
+              </p>
+              <h2 {...stylex.props(s.miniTitle)}>
+                Compare the choices behind a direction.
+              </h2>
+              <p {...stylex.props(s.note)}>
+                {fieldEvidence.evaluated} numeric alternatives,{' '}
+                {fieldEvidence.neuralCalls} saved local selector calls. The
+                saved finalist passed {fieldEvidence.passedScenarios}/
+                {fieldEvidence.scenarios} standalone layout scenarios. These
+                receipts cover that fixture; editing a comparison needs fresh
+                validation.
+              </p>
+            </div>
+            <div style={{ flex: '1 1 30%', minWidth: 0 }}>
+              <a href="field/" {...stylex.props(s.primary)}>
+                Open the design field <Arrow />
+              </a>
+              <p {...stylex.props(s.caption)}>
+                A separate workspace for retained alternatives and their
+                evidence. Opening or comparing runs no model.
+              </p>
+              <details>
+                <summary {...stylex.props(s.caption)}>
+                  Saved evidence identity
+                </summary>
+                <p
+                  {...stylex.props(s.caption)}
+                  style={{ overflowWrap: 'anywhere' }}
+                >
+                  {fieldEvidence.identity}
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+        <RegistrationBand />
         <MotionDemo spring={motion} onChange={setMotion} />
         <Materials
           profile={profile}
@@ -2327,7 +2638,7 @@ function App() {
           onChange={setMaterialParameters}
         />
         <CropDemo />
-        <LayoutGallery />
+        <LayoutGallery sessionRef={layoutSession} />
         <Workflow
           profile={{ ...profile, motion }}
           saved={saved}

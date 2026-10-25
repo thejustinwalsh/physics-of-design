@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "status": "predeclared; builders not launched",
+  "question": "What can two fresh builds accomplish on this one fixed task under equal model, time and feedback conditions?",
+  "arms": {
+    "guidance": {
+      "guidance": "Impeccable",
+      "revision": "936867543ac2576920d663cc9803597f6044f3ac",
+      "scope": "Pinned text guidance only; no launcher, detector, hooks or Impeccable model agents; ordinary tools allowed"
+    },
+    "toolkit": {
+      "guidance": "Design Theory",
+      "scope": "Pinned local skill/reference copies plus isolated compiled CLI/core implementation; no current gallery source or prior evidence"
+    }
+  },
+  "modelPolicy": "Use installed codex CLI with identical model/reasoning/service tier in both arms; hash original configuration before every run. The configured gpt-6.1-sol was rejected before task execution in the preserved initial launch. A new predeclared trial uses per-run DESIGN_COMPARISON_MODEL=gpt-6-astra, present in the CLI availability cache, preserving xhigh/default and all other settings. No global config, HOME, CODEX_HOME or auth changes. This is one-model workflow comparison, not a model benchmark.",
+  "budget": {
+    "wallSecondsPerArm": 900,
+    "attemptsPerArm": 1,
+    "humanFeedback": "none",
+    "selfTestingAndCorrectionsWithinBudget": true,
+    "childAgents": false,
+    "postEvaluationRepairs": false,
+    "interpretation": "First pass means one fresh uninterrupted builder session; not one source edit."
+  },
+  "framework": [
+    "React 19.2.0",
+    "StyleX 0.19.1",
+    "esbuild 0.25.12",
+    "flex/flex-wrap; no grid"
+  ],
+  "sharedInputs": [
+    "brief.md",
+    "DESIGN.md",
+    "synthetic-interview.json",
+    "original registration.svg",
+    "Lato Regular/Black and Spectral Regular with OFL licenses",
+    "neutral React/StyleX build template",
+    "same local dependency files"
+  ],
+  "scenarios": [
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "id": "phone",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "narrow",
+      "width": 320,
+      "height": 800
+    },
+    {
+      "id": "ipad-portrait",
+      "width": 834,
+      "height": 1112
+    },
+    {
+      "id": "ipad-landscape",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "id": "text-200",
+      "width": 834,
+      "height": 1112,
+      "textScale": 2
+    },
+    {
+      "id": "reduced",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": "reduce"
+    }
+  ],
+  "engines": [
+    "Chromium",
+    "WebKit when executable available; missing engine is unavailable, not pass"
+  ],
+  "actions": [
+    "open workbench",
+    "switch Compose/Inspect preserving edits",
+    "edit long headline",
+    "continuous font-size/measure/roughness drags",
+    "keyboard range input",
+    "paper/enamel switch",
+    "pointer left/right light response",
+    "scroll registration response",
+    "inspect actual current rectangle",
+    "save/change/replay",
+    "reset",
+    "download and parse current editable JSON"
+  ],
+  "metrics": {
+    "hardFailures": [
+      "missing required action or section",
+      "page errors",
+      "horizontal document overflow >1CSSpx",
+      "lost edits on mode change",
+      "slider rail drift >1CSSpx during its own drag",
+      "inspection rectangle mismatch >2CSSpx after settling",
+      "stale export input identity",
+      "missing output or build failure"
+    ],
+    "usage": "Actual turn.completed usage events from CLI JSONL only. Preserve input, cached-input and output fields separately as supplied. No estimates; missing usage is null. Do not add cached input to input totals.",
+    "latency": "Monotonic wall time start through process exit/timeout, including builder self-tests. Setup and evaluator excluded and reported separately.",
+    "qualitative": "Blinded complete artifacts: hierarchy, distinct character, readability, task clarity, coherent material/light use, responsive composition. No scalar beauty score. Any synthetic review must remain labeled synthetic; human preference unmeasured until collected.",
+    "performance": "Optional measured browser frame samples with hardware/version/method; no general frame-rate, thermal or physical-device claim."
+  },
+  "compliance": "Immutable common/guidance/toolkit/dependency input hashes before and after; actual JSONL command/read trace screened for forbidden paths/packages/models. This is instruction-and-audit isolation, not OS read-denial. Unknown or suspicious trace requires review before validity claim.",
+  "blinding": "Random neutral artifact IDs and random sequential run order stored in private mapping before launch. Reviewer index shows IDs only. Source/visible toolkit references can unblind; record that limitation.",
+  "limitations": [
+    "N=1 task and one build per condition cannot establish general superiority or token savings",
+    "Different guidance sizes are part of the treatment and measured in actual usage",
+    "Guidance-only baseline does not evaluate the full Impeccable runtime",
+    "Shared authored direction includes synthetic assumptions, not human preference",
+    "Sequential runs can differ in server/cache/load; report actual run order and latency",
+    "Browser-port evidence is not physical Safari or iPad hardware evidence"
+  ],
+  "launchAmendment": {
+    "reason": "Initial CLI launch rejected gpt-6.1-sol before any task execution",
+    "preservedTrial": "/private/tmp/design-workflows-20261025-final",
+    "freshModel": "gpt-6-astra",
+    "freshTrial": "/private/tmp/design-workflows-20261025-astra",
+    "outcomeKnownBeforeAmendment": "No implementation, usage or rendered comparison outcome existed"
+  }
+}

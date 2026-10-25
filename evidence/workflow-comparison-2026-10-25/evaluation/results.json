@@ -1,0 +1,3254 @@
+{
+  "version": 1,
+  "startedAt": "2026-10-25T12:31:32.967Z",
+  "engines": [
+    {
+      "engine": "chromium",
+      "status": "available",
+      "version": "156.0.8078.4"
+    },
+    {
+      "engine": "webkit",
+      "status": "available",
+      "version": "27.2"
+    }
+  ],
+  "checks": [
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "required-hooks",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "reflow-desktop",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "reflow-phone",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "reflow-narrow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "reflow-ipad-portrait",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 834,
+        "clientWidth": 834
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "reflow-ipad-landscape",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "reflow-text-200",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 834,
+        "clientWidth": 834
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "reflow-reduced",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "mode-preserves-edit",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "font-size-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "72",
+        "after": "113",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "43"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "46"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "50"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "54"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "57"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "61"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "65"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "69"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "72"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "76"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "80"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "83"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "87"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "91"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "95"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "98"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "102"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "106"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "109"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.984375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "113"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "font-size-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "measure-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "94",
+        "after": "95",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "43"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "46"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "48"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "51"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "54"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "57"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "59"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "62"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "65"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "68"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "70"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "73"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "76"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "78"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "81"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "84"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "87"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "89"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "92"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 704.140625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "95"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "measure-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "roughness-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "65",
+        "after": "92",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "12"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "16"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "20"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "25"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "29"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "33"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "37"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "42"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "46"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "50"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "54"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "58"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "63"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "67"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "71"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "75"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "80"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "84"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "88"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 822.296875,
+              "width": 304,
+              "height": 28
+            },
+            "value": "92"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "roughness-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "save-replay",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "current-observed-rectangle",
+      "ok": true,
+      "detail": {
+        "receipt": {
+          "inputIdentity": "inputs-2b78d52a",
+          "observed": {
+            "x": 467.90625,
+            "y": 307.828125,
+            "width": 804.8125,
+            "height": 692.15625,
+            "lineFragmentCount": 11
+          },
+          "method": "Headline.getBoundingClientRect() in viewport CSS pixels; lineFragmentCount counts nonzero Range.getClientRects() for its text. Blank lines are excluded; browser text fragments are not guaranteed semantic lines. No aesthetic score."
+        },
+        "rect": {
+          "x": 467.90625,
+          "y": 307.828125,
+          "width": 804.8125,
+          "height": 692.15625
+        }
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "current-overlay",
+      "ok": true,
+      "detail": {
+        "overlay": {
+          "x": 467.90625,
+          "y": 307.828125,
+          "width": 804.8125,
+          "height": 692.15625
+        },
+        "rect": {
+          "x": 467.90625,
+          "y": 307.828125,
+          "width": 804.8125,
+          "height": 692.15625
+        }
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "editable-current-export",
+      "ok": true,
+      "detail": {
+        "exported": {
+          "version": 1,
+          "inputs": {
+            "headline": "Make room for a longer thought. Let the whole composition answer without losing a word.",
+            "fontSize": 112,
+            "measure": 94,
+            "roughness": 91,
+            "material": "enamel"
+          },
+          "designIdentity": "DESIGN.md · sha256:3bc9b66ae3b4d059197c9156412ba7d2a682b93c55883d44c4cab8d367eee511",
+          "measurement": {
+            "inputIdentity": "inputs-2b78d52a",
+            "observed": {
+              "x": 467.90625,
+              "y": -964.171875,
+              "width": 804.8125,
+              "height": 692.15625,
+              "lineFragmentCount": 11
+            },
+            "method": "Headline.getBoundingClientRect() in viewport CSS pixels; lineFragmentCount counts nonzero Range.getClientRects() for its text. Blank lines are excluded; browser text fragments are not guaranteed semantic lines. No aesthetic score."
+          }
+        }
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "reset",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "reduced-motion-task",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "name": "page-errors",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "required-hooks",
+      "ok": false,
+      "detail": [
+        "inspection-overlay"
+      ]
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "reflow-desktop",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "reflow-phone",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "reflow-narrow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "reflow-ipad-portrait",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 834,
+        "clientWidth": 834
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "reflow-ipad-landscape",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "reflow-text-200",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 834,
+        "clientWidth": 834
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "reflow-reduced",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "mode-preserves-edit",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "font-size-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "72",
+        "after": "106",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "38"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "41"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "45"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "48"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "52"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "56"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "59"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "63"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "66"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "70"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "74"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "77"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "81"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "84"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "88"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "92"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "95"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "99"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "102"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 671.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "106"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "font-size-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "measure-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "15",
+        "after": "23",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "10"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "10.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "11"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "12"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "12.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "13.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "14"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "14.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "15.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "16"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "16.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "17.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "18"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "18.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "19.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "20"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "21"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "21.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "22"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 763.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "23"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "measure-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "roughness-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "0.76",
+        "after": "0.93",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.11"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.16"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.2"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.24"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.29"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.33"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.37"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.41"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.46"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.54"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.59"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.63"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.67"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.71"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.76"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.8"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.84"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.89"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 855.953125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.93"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "roughness-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "save-replay",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "current-observed-rectangle",
+      "ok": true,
+      "detail": {
+        "receipt": {
+          "inputIdentity": "inputs-20888b84",
+          "observed": {
+            "x": 423.4375,
+            "y": 344.953125,
+            "width": 879.125,
+            "height": 655.125,
+            "lineFragmentCount": 11
+          },
+          "method": "Element.getBoundingClientRect() in viewport CSS pixels; Range.selectNodeContents().getClientRects(), counting non-zero fragments. Selection fragments are not ink bounds or guaranteed physical lines; blank lines are excluded."
+        },
+        "rect": {
+          "x": 423.4375,
+          "y": 344.953125,
+          "width": 879.125,
+          "height": 655.125
+        }
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "current-overlay",
+      "ok": true,
+      "detail": {
+        "overlay": {
+          "x": 423.4375,
+          "y": 344.953125,
+          "width": 879.125,
+          "height": 655.125
+        },
+        "rect": {
+          "x": 423.4375,
+          "y": 344.953125,
+          "width": 879.125,
+          "height": 655.125
+        }
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "editable-current-export",
+      "ok": true,
+      "detail": {
+        "exported": {
+          "version": 1,
+          "inputs": {
+            "headline": "Make room for a longer thought. Let the whole composition answer without losing a word.",
+            "fontSize": 105,
+            "measure": 22.5,
+            "roughness": 0.24,
+            "material": "enamel"
+          },
+          "designIdentity": "DESIGN.md:sha256:3bc9b66ae3b4d059197c9156412ba7d2a682b93c55883d44c4cab8d367eee511",
+          "measurement": {
+            "inputIdentity": "inputs-20888b84",
+            "observed": {
+              "x": 423.4375,
+              "y": -1066.046875,
+              "width": 879.125,
+              "height": 655.125,
+              "lineFragmentCount": 11
+            },
+            "method": "Element.getBoundingClientRect() in viewport CSS pixels; Range.selectNodeContents().getClientRects(), counting non-zero fragments. Selection fragments are not ink bounds or guaranteed physical lines; blank lines are excluded."
+          }
+        }
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "reset",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "reduced-motion-task",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "name": "page-errors",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "required-hooks",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "reflow-desktop",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "reflow-phone",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "reflow-narrow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "reflow-ipad-portrait",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 834,
+        "clientWidth": 834
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "reflow-ipad-landscape",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "reflow-text-200",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 834,
+        "clientWidth": 834
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "reflow-reduced",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "mode-preserves-edit",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "font-size-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "72",
+        "after": "114",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "41"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "45"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "49"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "53"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "57"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "61"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "64"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "68"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "72"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "76"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "80"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "84"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "87"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "91"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "95"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "99"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "103"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "107"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "110"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 585.59375,
+              "width": 304,
+              "height": 28
+            },
+            "value": "114"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "font-size-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "measure-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "94",
+        "after": "96",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "42"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "45"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "48"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "50"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "53"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "56"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "59"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "62"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "65"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "67"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "70"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "73"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "76"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "79"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "81"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "84"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "87"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "90"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "93"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 703.75,
+              "width": 304,
+              "height": 28
+            },
+            "value": "96"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "measure-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "roughness-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "65",
+        "after": "93",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "11"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "15"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "19"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "24"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "28"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "33"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "37"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "41"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "45"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "50"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "54"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "59"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "63"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "67"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "71"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "76"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "80"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "85"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "89"
+          },
+          {
+            "rect": {
+              "x": 79.90625,
+              "y": 821.90625,
+              "width": 304,
+              "height": 28
+            },
+            "value": "93"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "roughness-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "save-replay",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "current-observed-rectangle",
+      "ok": true,
+      "detail": {
+        "receipt": {
+          "inputIdentity": "inputs-88b28caf",
+          "observed": {
+            "x": 467.90625,
+            "y": 301.65625,
+            "width": 813.375,
+            "height": 698.25,
+            "lineFragmentCount": 6
+          },
+          "method": "Headline.getBoundingClientRect() in viewport CSS pixels; lineFragmentCount counts nonzero Range.getClientRects() for its text. Blank lines are excluded; browser text fragments are not guaranteed semantic lines. No aesthetic score."
+        },
+        "rect": {
+          "x": 467.90625,
+          "y": 301.65625,
+          "width": 813.375,
+          "height": 698.25
+        }
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "current-overlay",
+      "ok": true,
+      "detail": {
+        "overlay": {
+          "x": 467.90625,
+          "y": 301.65625,
+          "width": 813.375,
+          "height": 698.25
+        },
+        "rect": {
+          "x": 467.90625,
+          "y": 301.65625,
+          "width": 813.375,
+          "height": 698.25
+        }
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "editable-current-export",
+      "ok": true,
+      "detail": {
+        "exported": {
+          "version": 1,
+          "inputs": {
+            "headline": "Make room for a longer thought. Let the whole composition answer without losing a word.",
+            "fontSize": 113,
+            "measure": 95,
+            "roughness": 92,
+            "material": "enamel"
+          },
+          "designIdentity": "DESIGN.md · sha256:3bc9b66ae3b4d059197c9156412ba7d2a682b93c55883d44c4cab8d367eee511",
+          "measurement": {
+            "inputIdentity": "inputs-88b28caf",
+            "observed": {
+              "x": 467.90625,
+              "y": -970.34375,
+              "width": 813.375,
+              "height": 698.25,
+              "lineFragmentCount": 6
+            },
+            "method": "Headline.getBoundingClientRect() in viewport CSS pixels; lineFragmentCount counts nonzero Range.getClientRects() for its text. Blank lines are excluded; browser text fragments are not guaranteed semantic lines. No aesthetic score."
+          }
+        }
+      }
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "reset",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "reduced-motion-task",
+      "ok": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "name": "page-errors",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "required-hooks",
+      "ok": false,
+      "detail": [
+        "inspection-overlay"
+      ]
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "reflow-desktop",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "reflow-phone",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "reflow-narrow",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "reflow-ipad-portrait",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 834,
+        "clientWidth": 834
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "reflow-ipad-landscape",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "reflow-text-200",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 834,
+        "clientWidth": 834
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "reflow-reduced",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "mode-preserves-edit",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "font-size-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "72",
+        "after": "107",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "36"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "40"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "44"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "48"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "51"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "55"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "59"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "62"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "66"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "70"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "74"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "77"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "81"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "85"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "89"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "92"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "96"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "100"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "104"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 672.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "107"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "font-size-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "measure-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "15",
+        "after": "23",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "9.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "10.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "11"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "11.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "12.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "13"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "14"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "14.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "15.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "16"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "16.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "17.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "18"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "19"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "19.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "20"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "21"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "21.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "22.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 764.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "23"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "measure-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "roughness-continuous-drag",
+      "ok": true,
+      "detail": {
+        "before": "0.76",
+        "after": "0.94",
+        "drift": 0,
+        "frames": [
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.1"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.14"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.19"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.23"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.27"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.32"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.36"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.41"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.45"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.5"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.54"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.58"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.63"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.67"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.72"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.76"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.81"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.85"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.9"
+          },
+          {
+            "rect": {
+              "x": 98.4375,
+              "y": 856.328125,
+              "width": 237,
+              "height": 28
+            },
+            "value": "0.94"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "roughness-keyboard",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "save-replay",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "current-observed-rectangle",
+      "ok": true,
+      "detail": {
+        "receipt": {
+          "inputIdentity": "inputs-11ce609b",
+          "observed": {
+            "x": 423.4375,
+            "y": 338.03125,
+            "width": 879.125,
+            "height": 661.40625,
+            "lineFragmentCount": 6
+          },
+          "method": "Element.getBoundingClientRect() in viewport CSS pixels; Range.selectNodeContents().getClientRects(), counting non-zero fragments. Selection fragments are not ink bounds or guaranteed physical lines; blank lines are excluded."
+        },
+        "rect": {
+          "x": 423.4375,
+          "y": 338.03125,
+          "width": 879.125,
+          "height": 661.40625
+        }
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "current-overlay",
+      "ok": true,
+      "detail": {
+        "overlay": {
+          "x": 423.4375,
+          "y": 338.03125,
+          "width": 879.125,
+          "height": 661.40625
+        },
+        "rect": {
+          "x": 423.4375,
+          "y": 338.03125,
+          "width": 879.125,
+          "height": 661.40625
+        }
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "editable-current-export",
+      "ok": true,
+      "detail": {
+        "exported": {
+          "version": 1,
+          "inputs": {
+            "headline": "Make room for a longer thought. Let the whole composition answer without losing a word.",
+            "fontSize": 106,
+            "measure": 22.5,
+            "roughness": 0.24,
+            "material": "enamel"
+          },
+          "designIdentity": "DESIGN.md:sha256:3bc9b66ae3b4d059197c9156412ba7d2a682b93c55883d44c4cab8d367eee511",
+          "measurement": {
+            "inputIdentity": "inputs-11ce609b",
+            "observed": {
+              "x": 423.4375,
+              "y": -1070.96875,
+              "width": 879.125,
+              "height": 661.40625,
+              "lineFragmentCount": 6
+            },
+            "method": "Element.getBoundingClientRect() in viewport CSS pixels; Range.selectNodeContents().getClientRects(), counting non-zero fragments. Selection fragments are not ink bounds or guaranteed physical lines; blank lines are excluded."
+          }
+        }
+      }
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "reset",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "reduced-motion-task",
+      "ok": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "name": "page-errors",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "observations": [
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "material": "paper",
+      "kind": "pointer-light-captures; visual adjudication pending"
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "material": "enamel",
+      "kind": "pointer-light-captures; visual adjudication pending"
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "chromium",
+      "kind": "scroll-registration",
+      "before": {
+        "transform": "matrix(1, 0, 0, 1, -34.2278, 0)",
+        "style": "transform: translateX(-34.2278px);"
+      },
+      "after": {
+        "transform": "matrix(1, 0, 0, 1, 5.19186, 0)",
+        "style": "transform: translateX(5.19186px);"
+      },
+      "changed": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "material": "paper",
+      "kind": "pointer-light-captures; visual adjudication pending"
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "material": "enamel",
+      "kind": "pointer-light-captures; visual adjudication pending"
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "chromium",
+      "kind": "scroll-registration",
+      "before": {
+        "transform": "matrix(1, 0, 0, 1, -3.78436, 0)",
+        "style": "transform: translateX(-3.78436px);"
+      },
+      "after": {
+        "transform": "matrix(1, 0, 0, 1, -35.9123, 0)",
+        "style": "transform: translateX(-35.9123px);"
+      },
+      "changed": true
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "material": "paper",
+      "kind": "pointer-light-captures; visual adjudication pending"
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "material": "enamel",
+      "kind": "pointer-light-captures; visual adjudication pending"
+    },
+    {
+      "id": "Study-f82b38",
+      "engine": "webkit",
+      "kind": "scroll-registration",
+      "before": {
+        "transform": "matrix(1, 0, 0, 1, -34.218956, 0)",
+        "style": "transform: translateX(-34.218955px);"
+      },
+      "after": {
+        "transform": "matrix(1, 0, 0, 1, 5.200662, 0)",
+        "style": "transform: translateX(5.200662px);"
+      },
+      "changed": true
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "material": "paper",
+      "kind": "pointer-light-captures; visual adjudication pending"
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "material": "enamel",
+      "kind": "pointer-light-captures; visual adjudication pending"
+    },
+    {
+      "id": "Study-4a898c",
+      "engine": "webkit",
+      "kind": "scroll-registration",
+      "before": {
+        "transform": "matrix(1, 0, 0, 1, -3.784423, 0)",
+        "style": "transform: translateX(-3.784423px);"
+      },
+      "after": {
+        "transform": "matrix(1, 0, 0, 1, -35.912937, 0)",
+        "style": "transform: translateX(-35.912937px);"
+      },
+      "changed": true
+    }
+  ],
+  "limitations": [
+    "Automated checks are scoped behavioral/geometry probes, not aesthetic or full accessibility certification.",
+    "200% probe doubles computed text sizes once; this is text-enlargement stress, not a claim of browser zoom equivalence.",
+    "CSS light response and rendered composite readability require visual review of retained captures; changing a variable alone does not prove visible response."
+  ],
+  "finishedAt": "2026-10-25T12:32:27.298Z"
+}

@@ -1,6 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 
-export function LayoutTitle({ mobile, scale = 1 }) {
+const regionNumbers = Object.freeze({
+  nav: '01',
+  title: '02',
+  image: '03',
+  action: '04',
+  footer: '05',
+});
+export const layoutRegionNumber = (id) => regionNumbers[id] ?? id;
+
+export function LayoutTitle({
+  mobile,
+  scale = 1,
+  title = 'The beauty\nof ordinary\nthings.',
+}) {
   return (
     <>
       {' '}
@@ -23,13 +36,11 @@ export function LayoutTitle({ mobile, scale = 1 }) {
           letterSpacing: '-.055em',
           fontWeight: 400,
           margin: `${12 * scale}px 0 ${10 * scale}px`,
+          whiteSpace: 'pre-wrap',
+          overflowWrap: 'anywhere',
         }}
       >
-        The beauty
-        <br />
-        of ordinary
-        <br />
-        things.
+        {title}
       </h3>
       <p
         style={{
@@ -53,9 +64,10 @@ export function LayoutTitleMeasure({
   mobile,
   measurementKey,
   onMeasure,
+  title,
 }) {
   const element = useRef(null);
-  useEffect(() => {
+  useLayoutEffect(() => {
     let disposed = false;
     const measure = () => {
       if (!disposed)
@@ -72,7 +84,7 @@ export function LayoutTitleMeasure({
       disposed = true;
       observer.disconnect();
     };
-  }, [width, mobile, measurementKey, onMeasure]);
+  }, [width, mobile, measurementKey, onMeasure, title]);
   return (
     <div
       ref={element}
@@ -90,7 +102,7 @@ export function LayoutTitleMeasure({
         alignItems: 'start',
       }}
     >
-      <LayoutTitle mobile={mobile} />
+      <LayoutTitle mobile={mobile} title={title} />
     </div>
   );
 }
@@ -98,9 +110,18 @@ export function LayoutTitleMeasure({
 /** Flex rendering of the SAME resolved nodes shown by the technical diagram.
  * Authored screen pixels are uniformly scaled to the available preview width.
  * No separate gutter/gap multipliers or alternate mobile reading order. */
-export function LayoutPreview({ frame }) {
+export function LayoutPreview({
+  frame,
+  inspect = false,
+  selected = 'title',
+  onSelect,
+  onReceipt,
+  title: titleContent,
+}) {
   const host = useRef(null),
-    [available, setAvailable] = useState(600);
+    preview = useRef(null),
+    [available, setAvailable] = useState(600),
+    [observed, setObserved] = useState([]);
   useEffect(() => {
     const observer = new ResizeObserver(([entry]) =>
       setAvailable(entry.contentRect.width),
@@ -110,6 +131,49 @@ export function LayoutPreview({ frame }) {
   }, []);
   const { width, height } = frame.wireframe.screen;
   const scale = Math.min(1, available / width);
+  useLayoutEffect(() => {
+    const root = preview.current;
+    const origin = root.getBoundingClientRect();
+    const nodes = [...root.querySelectorAll('[data-design-node]')].map((el) => {
+      const rect = el.getBoundingClientRect();
+      return {
+        id: el.dataset.designNode,
+        box: {
+          x: (rect.x - origin.x) / scale,
+          y: (rect.y - origin.y) / scale,
+          width: rect.width / scale,
+          height: rect.height / scale,
+        },
+      };
+    });
+    const maxError = Math.max(
+      0,
+      ...nodes.flatMap((node) =>
+        ['x', 'y', 'width', 'height'].map((key) =>
+          Math.abs(
+            node.box[key] - frame.nodes.find((n) => n.id === node.id).box[key],
+          ),
+        ),
+      ),
+    );
+    const receipt = {
+      kind: 'browser-observed',
+      coordinateSpace:
+        'authored CSS pixels after dividing actual uniform preview scale',
+      scale,
+      screen: frame.wireframe.screen,
+      inputs: frame.wireframe.variables,
+      content: { title: titleContent },
+      nodes,
+      maxError,
+      observedAt: new Date().toISOString(),
+      limits: [
+        'Rectangle measurements do not establish raster text bounds or aesthetic quality.',
+      ],
+    };
+    setObserved(nodes);
+    onReceipt?.(receipt);
+  }, [frame, scale, onReceipt, titleContent]);
   const box = (id) => frame.nodes.find((node) => node.id === id).box;
   const nav = box('nav'),
     title = box('title'),
@@ -136,7 +200,7 @@ export function LayoutPreview({ frame }) {
         alignItems: 'start',
       }}
     >
-      <LayoutTitle mobile={mobile} scale={scale} />
+      <LayoutTitle mobile={mobile} scale={scale} title={titleContent} />
     </div>
   );
   const artwork = (
@@ -181,13 +245,17 @@ export function LayoutPreview({ frame }) {
         display: 'flex',
         justifyContent: 'center',
         background: '#e8e9db',
+        paddingInline: 28,
+        boxSizing: 'border-box',
       }}
     >
       <div
+        ref={preview}
         data-layout-preview
         data-preview-scale={scale}
         style={{
           display: 'flex',
+          position: 'relative',
           flexDirection: 'column',
           alignItems: 'start',
           width: width * scale,
@@ -260,6 +328,63 @@ export function LayoutPreview({ frame }) {
           <span>Made with intention.</span>
           <span>01 — 03</span>
         </div>
+        {inspect && (
+          <svg
+            data-wireframe
+            role="group"
+            aria-label="Current preview geometry. Select a region."
+            viewBox={`0 0 ${width} ${height}`}
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              overflow: 'visible',
+            }}
+          >
+            {observed.map((node) => (
+              <g
+                key={node.id}
+                data-wireframe-node={node.id}
+                role="button"
+                tabIndex={0}
+                aria-label={`Inspect ${frame.nodes.find((n) => n.id === node.id).label}`}
+                aria-pressed={selected === node.id}
+                onClick={() => onSelect?.(node.id)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    onSelect?.(node.id);
+                  }
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                <rect
+                  {...node.box}
+                  fill={
+                    selected === node.id ? 'rgba(223,77,28,.12)' : 'transparent'
+                  }
+                  stroke={selected === node.id ? '#a82f16' : '#315947'}
+                  strokeWidth={(selected === node.id ? 2 : 1) / scale}
+                />
+                <path
+                  data-wireframe-badge={node.id}
+                  d={`M${node.box.x - 28 / scale} ${node.box.y}h${22 / scale}v${18 / scale}h${-22 / scale}z`}
+                  fill={selected === node.id ? '#a82f16' : '#315947'}
+                />
+                <text
+                  x={node.box.x - 24 / scale}
+                  y={node.box.y + 12 / scale}
+                  fontSize={10 / scale}
+                  fontFamily="monospace"
+                  fill="white"
+                >
+                  {layoutRegionNumber(node.id)}
+                </text>
+              </g>
+            ))}
+          </svg>
+        )}
       </div>
     </div>
   );

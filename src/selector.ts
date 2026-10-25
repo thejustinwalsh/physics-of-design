@@ -1,6 +1,4 @@
 import { hash } from './identity.js';
-import { execFile } from 'node:child_process';
-import { promisify } from 'node:util';
 import { createReadStream } from 'node:fs';
 import {
   mkdtemp,
@@ -9,6 +7,7 @@ import {
   rm,
   mkdir,
   stat,
+  copyFile,
 } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -18,6 +17,15 @@ import { StateSchema, type DesignState } from './state.js';
 import { resolveLayout } from './responsive.js';
 import { measurementKey, type Renderer } from './measurement.js';
 import { stateColors } from './design-color.js';
+import {
+  streamSelectorProcess,
+  notifySelector,
+  type SelectorExecutionOptions,
+} from './selector-process.js';
+export type {
+  SelectorExecutionOptions,
+  SelectorProgress,
+} from './selector-process.js';
 
 export const QWEN_REVISION = '851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a';
 export const SelectorProfileSchema = z.enum(['qwen3.5-4b', 'qwen3.5-0.8b']);
@@ -80,7 +88,9 @@ const SemifResult = z
 export async function selectChoice(
   input: z.input<typeof ChoiceRequestSchema>,
   renderer: Renderer,
+  execution: SelectorExecutionOptions = {},
 ) {
+  execution.signal?.throwIfAborted();
   const request = ChoiceRequestSchema.parse(input);
   const profile = selectorProfiles[request.profile];
   if (
@@ -117,6 +127,7 @@ export async function selectChoice(
   const geometry = new Map<string, unknown>();
   // Never accept a caller's feasible flag or a model assertion in place of a fresh renderer receipt.
   for (const candidate of request.candidates) {
+    execution.signal?.throwIfAborted();
     const reasons: unknown[] = [];
     const base = await renderer.measure(candidate.state, { spacing: true });
     const observations = [base];
@@ -246,16 +257,19 @@ export async function selectChoice(
       }),
     })),
   };
-  const selected = await selectLocalOptions({
-    payload,
-    gguf: request.gguf,
-    profile: request.profile,
-    readout,
-    maxPromptTokens: request.maxPromptTokens,
-    ...(request.auditDirectory
-      ? { auditDirectory: request.auditDirectory }
-      : {}),
-  });
+  const selected = await selectLocalOptions(
+    {
+      payload,
+      gguf: request.gguf,
+      profile: request.profile,
+      readout,
+      maxPromptTokens: request.maxPromptTokens,
+      ...(request.auditDirectory
+        ? { auditDirectory: request.auditDirectory }
+        : {}),
+    },
+    execution,
+  );
   for (const candidate of viable) {
     if (
       measurementKey(candidate.state) !==
@@ -268,9 +282,10 @@ export async function selectChoice(
   return { ...selected, modelCalled: true, verified, rejected };
 }
 
-export async function checkpointDigest(file: string) {
+export async function checkpointDigest(file: string, signal?: AbortSignal) {
   const digest = createHash('sha256');
-  for await (const chunk of createReadStream(file)) digest.update(chunk);
+  for await (const chunk of createReadStream(file, { signal }))
+    digest.update(chunk);
   return digest.digest('hex');
 }
 
@@ -287,29 +302,49 @@ export interface LocalOptionsRequest {
   maxPromptTokens: number;
   auditDirectory?: string | undefined;
 }
-export async function selectLocalOptions(request: LocalOptionsRequest) {
-  return selectPinnedLocalOptions(request);
+export async function selectLocalOptions(
+  request: LocalOptionsRequest,
+  execution: SelectorExecutionOptions = {},
+) {
+  const result = await selectPinnedLocalOptions(request, undefined, execution);
+  notifySelector(execution, { phase: 'completed', origin: 'process' });
+  return result;
 }
 
 /** One checkpoint digest per session; metadata and returned provenance guard every readout. */
-export async function prepareLocalOptionsSession(gguf: string) {
+export async function prepareLocalOptionsSession(
+  gguf: string,
+  execution: SelectorExecutionOptions = {},
+) {
+  execution.signal?.throwIfAborted();
   const file = path.resolve(gguf);
   const signature = async () => {
     const value = await stat(file, { bigint: true });
     return `${value.dev}:${value.ino}:${value.size}:${value.mtimeNs}:${value.ctimeNs}`;
   };
   const before = await signature();
-  const checkpointHash = await checkpointDigest(file);
+  notifySelector(execution, { phase: 'checkpoint-hash', origin: 'process' });
+  const checkpointHash = await checkpointDigest(file, execution.signal);
   if (before !== (await signature()))
     throw new Error('Checkpoint changed while hashing');
   return {
     checkpointHash,
-    async select(request: LocalOptionsRequest) {
+    async select(
+      request: LocalOptionsRequest,
+      options?: SelectorExecutionOptions,
+    ) {
       if (path.resolve(request.gguf) !== file || before !== (await signature()))
         throw new Error('Prepared selector checkpoint changed');
-      const result = await selectPinnedLocalOptions(request, checkpointHash);
+      const result = await selectPinnedLocalOptions(request, checkpointHash, {
+        ...execution,
+        ...options,
+      });
       if (before !== (await signature()))
         throw new Error('Prepared selector checkpoint changed during readout');
+      notifySelector(
+        { ...execution, ...options },
+        { phase: 'completed', origin: 'process' },
+      );
       return result;
     },
   };
@@ -317,7 +352,9 @@ export async function prepareLocalOptionsSession(gguf: string) {
 async function selectPinnedLocalOptions(
   request: LocalOptionsRequest,
   pinnedCheckpointHash?: string,
+  execution: SelectorExecutionOptions = {},
 ) {
+  execution.signal?.throwIfAborted();
   const profile = selectorProfiles[request.profile],
     readout = request.readout;
   if (
@@ -334,8 +371,11 @@ async function selectPinnedLocalOptions(
       ? [...request.payload.options].sort((a, b) => a.id.localeCompare(b.id))
       : request.payload.options;
   const payload = { ...request.payload, options: ordered };
+  if (!pinnedCheckpointHash)
+    notifySelector(execution, { phase: 'checkpoint-hash', origin: 'process' });
   const checkpointHash =
-    pinnedCheckpointHash ?? (await checkpointDigest(request.gguf));
+    pinnedCheckpointHash ??
+    (await checkpointDigest(request.gguf, execution.signal));
   const id = hash({
     algorithm: 'physics-choice-v2',
     checkpointHash,
@@ -357,17 +397,23 @@ async function selectPinnedLocalOptions(
           ],
         }));
   const dir = await mkdtemp(path.join(tmpdir(), 'physics-semif-'));
+  const auditDirectory = request.auditDirectory ?? dir;
+  const diagnostic = (suffix: string) =>
+    path.join(auditDirectory, `${id}.${suffix}`);
+  let validatingOutput = false,
+    retainFailure = false;
   try {
     const inputFile = path.join(dir, 'input.jsonl'),
       outputFile = path.join(dir, 'output.jsonl');
-    await writeFile(
-      inputFile,
-      rows.map((value) => JSON.stringify(value)).join('\n') + '\n',
-    );
+    const inputRows =
+      rows.map((value) => JSON.stringify(value)).join('\n') + '\n';
+    await mkdir(auditDirectory, { recursive: true });
+    await writeFile(inputFile, inputRows);
+    await writeFile(diagnostic('input.jsonl'), inputRows);
     const start = performance.now();
-    await promisify(execFile)(
-      process.env.DESIGN_SEMIF_BIN ?? 'semif-score',
-      [
+    const processResult = await streamSelectorProcess({
+      executable: process.env.DESIGN_SEMIF_BIN ?? 'semif-score',
+      args: [
         '--mode',
         'direct',
         '--backend',
@@ -387,12 +433,48 @@ async function selectPinnedLocalOptions(
         '--llama-threads',
         '8',
       ],
-      {
-        timeout: 120_000 * Math.max(1, Math.ceil(rows.length / 2)),
-        maxBuffer: 2_000_000,
-        env: { ...process.env, HF_HUB_OFFLINE: '1', TRANSFORMERS_OFFLINE: '1' },
-      },
+      stdoutFile: diagnostic('stdout.txt'),
+      stderrFile: diagnostic('stderr.txt'),
+      rowIds: rows.map((row) => row.id),
+      maxPromptTokens: request.maxPromptTokens,
+      options: execution,
+    });
+    await writeFile(
+      diagnostic('process.json'),
+      JSON.stringify(processResult) + '\n',
     );
+    // Preserve partial provider output even when it exits or is cancelled mid-readout.
+    try {
+      await copyFile(outputFile, diagnostic('output.jsonl'));
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+    }
+    if (
+      processResult.cancelled ||
+      processResult.code !== 0 ||
+      processResult.processError
+    ) {
+      const phase = processResult.cancelled ? 'cancelled' : 'process';
+      await writeFile(
+        diagnostic('failure.json'),
+        JSON.stringify({
+          phase,
+          ...processResult,
+          note: 'No completed selection; raw pipes and any partial readout are preserved.',
+        }) + '\n',
+      );
+      const error = new Error(
+        `Local selector ${processResult.cancelled ? 'cancelled' : 'process failed'} (code=${processResult.code ?? 'none'}, signal=${processResult.signal ?? 'none'}). Diagnostics: ${diagnostic('failure.json')}`,
+      );
+      if (processResult.cancelled) error.name = 'AbortError';
+      throw error;
+    }
+    validatingOutput = true;
+    notifySelector(execution, { phase: 'validating', origin: 'process' });
+    execution.signal?.throwIfAborted();
+    // Preserve the raw file, but never load an unbounded provider result into memory.
+    if ((await stat(outputFile)).size > 16 * 1024 * 1024)
+      throw new Error('Selector readout exceeds the 16 MiB JSON result limit');
     const raw = await readFile(outputFile, 'utf8');
     const lines = raw.trim().split('\n');
     if (lines.length !== rows.length)
@@ -448,6 +530,7 @@ async function selectPinnedLocalOptions(
       scores.get(candidate.id)! > scores.get(best.id)! ? candidate : best,
     ).id;
     const result = results[0]!;
+    execution.signal?.throwIfAborted();
     if (request.auditDirectory) {
       await mkdir(request.auditDirectory, { recursive: true });
       await writeFile(
@@ -477,11 +560,42 @@ async function selectPinnedLocalOptions(
         promptHash: result.prompt_sha256,
         readout: result.readout,
         latencyMs: performance.now() - start,
+        execution: processResult,
       },
       caveat:
         'Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed.',
     };
+  } catch (error) {
+    retainFailure = true;
+    const cancelled =
+      execution.signal?.aborted ||
+      (error instanceof Error && error.name === 'AbortError');
+    notifySelector(execution, {
+      phase: cancelled ? 'cancelled' : 'failed',
+      origin: 'process',
+    });
+    if (validatingOutput) {
+      const reason =
+        error instanceof Error
+          ? error.message.slice(0, 500)
+          : String(error).slice(0, 500);
+      await writeFile(
+        diagnostic('failure.json'),
+        JSON.stringify({
+          phase: cancelled ? 'cancelled' : 'output-validation',
+          reason,
+          note: 'No candidate was selected. Raw process output remains separate from compact context.',
+        }) + '\n',
+      );
+      const failure = new Error(
+        `Local selector ${cancelled ? 'cancelled' : 'output validation failed'}: ${reason} Diagnostics: ${diagnostic('failure.json')}`,
+      );
+      if (cancelled) failure.name = 'AbortError';
+      throw failure;
+    }
+    throw error;
   } finally {
-    await rm(dir, { recursive: true, force: true });
+    if (!retainFailure || request.auditDirectory)
+      await rm(dir, { recursive: true, force: true });
   }
 }

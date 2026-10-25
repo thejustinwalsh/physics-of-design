@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import { ResultStore, summarizeResult } from '../src/mcp-context.js';
 
 test('bounded result references preserve exact values, clone on read and reject prototype/malformed paths', () => {
@@ -184,4 +185,191 @@ test('missing font coverage stays bounded in summaries and exact behind the resu
   ).summary;
   assert.equal(font.glyphCoverage.missing.length, 16);
   assert.equal(font.glyphCoverage.omittedMissing, 4080);
+});
+
+test('design contract and DOM recipe summaries omit large authored payloads while preserving exact references', () => {
+  const store = new ResultStore();
+  const large = 'unabridged authored content '.repeat(2500);
+  const value = {
+    status: 'found',
+    file: 'DESIGN.md',
+    sha256: 'a'.repeat(64),
+    content: large,
+    sections: Array.from({ length: 64 }, (_, i) => ({
+      title: large,
+      line: i + 1,
+      level: 2,
+    })),
+    totalSections: 80,
+    omittedSections: 16,
+  };
+  const ref = store.put(value)!;
+  const summary: any = summarizeResult('context inspect', value, ref).summary;
+  assert.equal(summary.sha256, value.sha256);
+  assert.equal(summary.sections.length, 32);
+  assert.equal(summary.sections[0].title.length, 160);
+  assert.equal(summary.sections[0].titleCharacters, large.length);
+  assert.ok(!JSON.stringify(summary).includes(large));
+  assert.deepEqual(store.resolve({ $designRef: ref }), value);
+  const surface = {
+    css: large,
+    cssVariables: { payload: large },
+    material: 'paper',
+    descriptors: { roughness: 0.8 },
+  };
+  const surfaceRef = store.put(surface)!;
+  const surfaceSummary: any = summarizeResult(
+    'surface css',
+    surface,
+    surfaceRef,
+  ).summary;
+  assert.equal(surfaceSummary.material, 'paper');
+  assert.ok(!JSON.stringify(surfaceSummary).includes(large));
+  assert.deepEqual(store.resolve(surfaceSummary.recipe), surface);
+});
+
+test('real field summaries retain identities, selector counts and exact recipe without measurement grids or graphs', async () => {
+  const artifact = JSON.parse(
+    await readFile('examples/design-field/gallery-session.json', 'utf8'),
+  );
+  const measurements = JSON.parse(
+    await readFile('examples/design-field/measurements.json', 'utf8'),
+  );
+  const measureSummary: any = summarizeResult(
+    'field measure',
+    measurements,
+    null,
+  ).summary;
+  assert.equal(measureSummary.identity, measurements.identity);
+  assert.equal(measureSummary.cells, 252);
+  assert.equal(measureSummary.rows, undefined);
+  const value = {
+    identity: artifact.identity,
+    tokens: artifact.tokens,
+    measurements,
+    rendererVerification: 'pending',
+    workflow: {
+      status: 'proposed',
+      statistics: artifact.statistics,
+      stages: {
+        reading: {
+          status: 'chosen',
+          assignment: { titleSize: 80 },
+          alternatives: Array(6).fill({ graph: 'unbounded-graph' }),
+        },
+      },
+      recipe: { identity: artifact.identity, graph: 'unbounded-graph' },
+    },
+    ledger: artifact.ledger,
+  };
+  const store = new ResultStore();
+  const ref = store.put(value)!;
+  const summary: any = summarizeResult('field run', value, ref).summary;
+  assert.equal(summary.rendererVerification, 'pending');
+  assert.equal(summary.measurement.identity, measurements.identity);
+  assert.equal(summary.workflow.statistics.neuralCalls, 2);
+  assert.equal(summary.workflow.stages.reading.alternatives, 6);
+  assert.ok(!JSON.stringify(summary).includes('unbounded-graph'));
+  assert.ok(Buffer.byteLength(JSON.stringify(summary)) < 10000);
+  assert.deepEqual(store.resolve(summary.recipe), value.workflow.recipe);
+});
+
+test('caller supplied selection metadata cannot expand a compact field replay summary', () => {
+  const payload = 'arbitrary recipe notes'.repeat(20000);
+  const selection = {
+    selected: 'alternative-0',
+    notes: payload,
+    policy: payload,
+    modelCalled: false,
+    provenance: {
+      profile: payload,
+      model: { source: payload, unknown: payload },
+    },
+  };
+  const value = { workflow: { stages: { reading: { selection } } } };
+  const summary: any = summarizeResult('field run', value, 'pod:1').summary;
+  assert.equal(
+    summary.workflow.stages.reading.selection.selected,
+    'alternative-0',
+  );
+  assert.equal(summary.workflow.stages.reading.selection.modelCalled, false);
+  assert.equal(summary.workflow.stages.reading.selection.notes, undefined);
+  assert.ok(JSON.stringify(summary).length < 2000);
+});
+
+test('compact diagnostics retain unreachable targets and lookahead outcomes without caller graphs', () => {
+  const huge = 'untrusted-evidence'.repeat(20000);
+  const evidence = {
+    search: {
+      retention: {
+        policy: 'pareto-diverse',
+        admissibleAssignments: 100,
+        preferenceProfiles: 10,
+        jointlySatisfiedAssignments: 0,
+        paretoComplete: false,
+        fallback: huge,
+        scope: huge,
+        preferences: Array(20).fill({
+          id: huge,
+          scenario: 'phone',
+          satisfiedAssignments: 0,
+          observedRange: [1, 2],
+          minimumResidual: 1,
+          arbitrary: huge,
+        }),
+      },
+    },
+    lookahead: {
+      engine: 'direct-successor-lookahead-v1',
+      scope: huge,
+      policy: { completion: 'require', arbitrary: huge },
+      uncoveredParents: [huge],
+      branches: [
+        {
+          parent: { id: 'candidate-0', graph: huge },
+          completion: 'unknown',
+          jointlySatisfied: false,
+          successors: [
+            {
+              stage: 'appearance',
+              outcome: 'unknown',
+              search: {
+                statistics: { complete: false },
+                witness: { id: 'child-0', factors: huge },
+              },
+            },
+          ],
+        },
+      ],
+    },
+  };
+  const summary: any = summarizeResult(
+    'decision run',
+    { stages: { type: { evidence } } },
+    null,
+  ).summary;
+  const compact = summary.stages.type.evidence;
+  assert.equal(compact.retention.individuallyUnreachableCount, 20);
+  assert.equal(compact.retention.individuallyUnreachable.length, 8);
+  assert.equal(compact.retention.paretoComplete, false);
+  assert.equal(compact.lookahead.branches[0].completion, 'unknown');
+  assert.equal(compact.lookahead.branches[0].successors[0].complete, false);
+  assert.ok(JSON.stringify(summary).length < 6000);
+  assert.ok(!JSON.stringify(summary).includes(huge));
+});
+
+test('session references bound expanded clones as well as stored bytes', () => {
+  const store = new ResultStore(),
+    reference = store.put({ data: 'x'.repeat(2 * 1024 * 1024) })!;
+  assert.throws(
+    () => store.resolve(Array(20).fill({ $designRef: reference })),
+    /Expanded request exceeds 32 MiB/,
+  );
+  let deep: unknown = null;
+  for (let i = 0; i < 66; i++) deep = [deep];
+  const deepReference = store.put(deep)!;
+  assert.throws(
+    () => store.resolve({ $designRef: deepReference }),
+    /64 nesting/,
+  );
 });

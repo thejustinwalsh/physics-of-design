@@ -35,6 +35,10 @@ export const NativeReceiptSchema = z
     platform: z.enum(['native-ios', 'native-android']),
     runtime: z.object({
       reactNative: z.string(),
+      implementationIdentity: z
+        .string()
+        .regex(/^(?:[a-f0-9]{64}|unbound)$/)
+        .optional(),
       os: z.string(),
       fontScale: n.positive(),
       pixelRatio: n.positive(),

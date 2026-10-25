@@ -22,7 +22,7 @@ export const verificationStages = Object.freeze([
 ]);
 // Preserve the frozen eighteen-stage milestone while requiring the expanded
 // ordered lane for newly versioned full-verification receipts.
-export const currentFullVerificationStages = Object.freeze([
+export const version2FullVerificationStages = Object.freeze([
   ...verificationStages.slice(0, 12),
   'workflow-mathematical',
   'vela-motion',
@@ -33,12 +33,39 @@ export const currentFullVerificationStages = Object.freeze([
   'migrations',
   ...verificationStages.slice(12),
 ]);
+export const version3FullVerificationStages = Object.freeze([
+  ...version2FullVerificationStages.slice(0, 16),
+  'dom-surfaces',
+  'design-field',
+  'gallery-interactions',
+  'gallery-interactions-webkit',
+  ...version2FullVerificationStages.slice(16),
+]);
+export const currentFullVerificationStages = Object.freeze(
+  version3FullVerificationStages.flatMap((name) =>
+    name === 'dom-surfaces'
+      ? [name, 'dom-surface-gpu']
+      : name === 'design-field'
+        ? [
+            name,
+            'choice-effectiveness',
+            'relational-kernels',
+            'expo-web',
+            'gallery-materials',
+          ]
+        : [name],
+  ),
+);
 
 export function assertFullVerification(summary) {
   const stages =
-    summary?.verificationVersion === 2
+    summary?.verificationVersion === 4
       ? currentFullVerificationStages
-      : verificationStages;
+      : summary?.verificationVersion === 3
+        ? version3FullVerificationStages
+        : summary?.verificationVersion === 2
+          ? version2FullVerificationStages
+          : verificationStages;
   assert.equal(summary?.complete, true, 'Verification is incomplete');
   assert.equal(summary?.passed, true, 'Verification did not pass');
   assert.equal(summary?.expectedStages, stages.length);

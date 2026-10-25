@@ -14,6 +14,8 @@ export function getRuntime() {
     respectReducedMotion: true,
   });
   let lastTime = null;
+  let interactions = 0,
+    previousAnchor = '';
   const stats = {
     ticks: 0,
     frameCallbacks: 0,
@@ -53,6 +55,19 @@ export function getRuntime() {
     subscribe(listener) {
       listeners.add(listener);
       return () => listeners.delete(listener);
+    },
+    beginInteraction() {
+      if (interactions++ === 0) {
+        // Cancel an unfinished anchor/wheel interpolation before direct manipulation.
+        lenis.scrollTo(window.scrollY, { immediate: true, force: true });
+        previousAnchor = document.documentElement.style.overflowAnchor;
+        document.documentElement.style.overflowAnchor = 'none';
+      }
+    },
+    endInteraction() {
+      interactions = Math.max(0, interactions - 1);
+      if (!interactions)
+        document.documentElement.style.overflowAnchor = previousAnchor;
     },
     scrollTo(target) {
       lenis.scrollTo(target, { immediate: media.matches, duration: 1.1 });

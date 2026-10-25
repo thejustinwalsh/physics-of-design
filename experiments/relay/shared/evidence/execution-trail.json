@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-25",
+  "scope": "Shared authored inputs, primary-source research and deterministic fixtures only; no application implemented.",
+  "sourceResearch": {
+    "ledger": "research/relay-inspiration.json",
+    "browserTool": "web.run",
+    "temporaryReferenceImages": [
+      "/private/tmp/relay-reference-only/tide-guide.jpg",
+      "/private/tmp/relay-reference-only/igloo.jpg"
+    ],
+    "redistributedReferenceAssets": []
+  },
+  "authoredInputs": [
+    "BRIEF.md",
+    "DESIGN.md",
+    "TOOL-COVERAGE.md",
+    "types.ts",
+    "generate-fixtures.mjs",
+    "assets/service-topology.svg",
+    "assets/diagnostic-trace.svg"
+  ],
+  "failedChecks": [
+    {
+      "command": "node --test experiments/relay/shared/fixtures.test.mjs",
+      "outcome": "failed",
+      "observation": "Service-name uniqueness assertion reported 118 unique names for 120 services.",
+      "originatingFixtureSha256": "c804b8b329393c633d70db6ad6afedb4189ff9196ccc4a7177ab4317158363dd",
+      "correction": "Generated names gained stable shard suffixes and generator validation now rejects duplicate names; counts and primary anchor names are unchanged.",
+      "status": "corrected and rechecked"
+    }
+  ],
+  "calls": [
+    {
+      "command": "context inspect",
+      "input": "experiments/relay/shared/evidence/context-design-input.json",
+      "inputSha256": "153d6545cf0898c6311f393a21930e338231e3fc4d0aebbebefb1c231823b5b9",
+      "result": "experiments/relay/shared/evidence/context-design.json",
+      "resultSha256": "06dcbb115f6396acd4155adf76153ebab10257801259183a26a5e410949f6f4f",
+      "evidenceClass": "authored-document-inspection",
+      "designIdentity": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+      "rendererVerified": false
+    },
+    {
+      "command": "context inspect",
+      "input": "experiments/relay/shared/evidence/context-brief-input.json",
+      "inputSha256": "8ce93235230ea8454eec016191920449d275cb04923dc29dee192dfaad3e42b5",
+      "result": "experiments/relay/shared/evidence/context-brief.json",
+      "resultSha256": "e2fb54b3c236061a7bba879e1bf036c13fb425fcf5bd9025c08e494a1d27373a",
+      "evidenceClass": "authored-document-inspection",
+      "designIdentity": "d4c53d10887ce115d8bbcbd60449f0bff7c264440b25a83b8a58ab6adb368c03",
+      "rendererVerified": false
+    },
+    {
+      "command": "font inspect",
+      "input": "experiments/relay/shared/evidence/font-roboto-flex-input.json",
+      "inputSha256": "fd9cf604714b42d422b247b1dc50cfe363c0cb51be42ced18501ba50644c7545",
+      "result": "experiments/relay/shared/evidence/font-roboto-flex.json",
+      "resultSha256": "aff582c69e37f4d73ad5004d918b494bef2c872b10539a5ff2d6bdf1b6c40ffb",
+      "evidenceClass": "font-file-observation",
+      "fontSha256": "9b523f7d82593df0107173849ebb8c817471a1df4b4fb2c3cbf40cfd810c8281",
+      "rendererVerified": false
+    },
+    {
+      "command": "node experiments/relay/shared/generate-fixtures.mjs --check",
+      "result": "experiments/relay/shared/evidence/fixture-check.txt",
+      "evidenceClass": "fixture-integrity-or-typecheck",
+      "outcome": "passed",
+      "rendererVerified": false
+    },
+    {
+      "command": "node --test experiments/relay/shared/fixtures.test.mjs",
+      "result": "experiments/relay/shared/evidence/fixture-tests.txt",
+      "evidenceClass": "fixture-integrity-or-typecheck",
+      "outcome": "passed",
+      "rendererVerified": false
+    },
+    {
+      "command": "npx tsc --noEmit --strict --target es2022 --module nodenext --moduleResolution nodenext --skipLibCheck experiments/relay/shared/types.ts",
+      "result": "experiments/relay/shared/evidence/types-check.txt",
+      "evidenceClass": "fixture-integrity-or-typecheck",
+      "outcome": "passed",
+      "rendererVerified": false
+    }
+  ],
+  "pending": [
+    "Common exact-version Expo/RSD/style web/native smoke before builders",
+    "Numeric design exploration and conditional selection",
+    "Neural selector calls",
+    "Recipe replay",
+    "Actual browser/native UI implementation and current renderer measurement",
+    "Independent synthetic review and ordered publication verification",
+    "Human preference and comparative usage conclusions"
+  ],
+  "counts": {
+    "designChoicesMade": 0,
+    "numericSearches": 0,
+    "neuralCalls": 0,
+    "recipeReplays": 0,
+    "appRendererMeasurements": 0
+  }
+}

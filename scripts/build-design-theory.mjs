@@ -5,6 +5,18 @@ import { build } from 'esbuild';
 import path from 'node:path';
 
 const directory = 'artifacts/vela/web/design-theory';
+const fieldSession = JSON.parse(
+  await readFile('examples/design-field/gallery-session.json', 'utf8'),
+);
+const fieldSummary = {
+  identity: fieldSession.identity,
+  evaluated: fieldSession.statistics.evaluated,
+  neuralCalls: fieldSession.selection.neuralCalls,
+  scenarios: fieldSession.validation.scenarios.length,
+  passedScenarios: fieldSession.validation.scenarios.filter((s) => s.passed)
+    .length,
+};
+
 await mkdir(`${directory}/assets`, { recursive: true });
 const source = await readFile('examples/design-theory/web.jsx', 'utf8');
 const compiled = await transformAsync(source, {
@@ -28,6 +40,18 @@ await build({
   entryNames: 'app',
   chunkNames: 'chunks/[name]-[hash]',
   splitting: true,
+  minify: true,
+  format: 'esm',
+  define: {
+    'process.env.NODE_ENV': '"production"',
+    __DESIGN_FIELD_SUMMARY__: JSON.stringify(fieldSummary),
+  },
+});
+await build({
+  entryPoints: ['examples/design-theory/field-entry.jsx'],
+  bundle: true,
+  write: true,
+  outfile: `${directory}/field/app.js`,
   minify: true,
   format: 'esm',
   define: { 'process.env.NODE_ENV': '"production"' },
@@ -60,7 +84,11 @@ await writeFile(
   `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f3f1e8"><meta name="description" content="A hands-on toolkit for typography, composition, color, motion and materials. Bring your point of view. Keep control of the decisions."><title>Design Theory — A point of view, made tangible</title><style>${css}</style></head><body><div id="root"></div><script type="module" src="app.js"></script></body></html>`,
 );
 await writeFile(
+  `${directory}/field/index.html`,
+  `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Compare retained design alternatives and inspect their saved evidence."><title>Design field — Design Theory</title><style>${css.replaceAll('url(assets/', 'url(../assets/')}html{background:#171b18}</style></head><body><div id="root"></div><script type="module" src="app.js"></script></body></html>`,
+);
+await writeFile(
   `${directory}/about.html`,
-  `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About this demo — Design Theory</title><style>${css}body{font-family:TheorySans,Arial,sans-serif;color:#253d33;max-width:760px;padding:50px 24px;margin:auto;line-height:1.7}h1{font-family:TheorySerif,Georgia,serif;font-size:56px;line-height:1.1;font-weight:400;letter-spacing:-.05em}h2{font-size:21px;margin-top:36px}a{text-underline-offset:4px}</style><a href="./">← Back to Design Theory</a><h1>Small tools.<br>Honest boundaries.</h1><p>This interactive gallery demonstrates the local Design Theory toolkit. The three visual profiles are authored alternatives. Editing a brief saves your words with its selected profile; it does not silently run an AI design model.</p><h2>What is live</h2><p>Spring motion uses analytic propagation with continuous position and velocity on retarget. Cropping uses an authored focal point. Layout inspection recomputes proposed rectangles. The material sculpture uses Three.js standard physically based materials, a procedural environment and one lighting rig.</p><h2>Rendering and motion</h2><p>The site shares one GSAP clock with Lenis. Decorative surface rendering is capped to 30 frames per second with bounded pixel resolution. A tested worker initialization enables OffscreenCanvas rendering; otherwise the page uses a bounded main-thread renderer or static illustration. Device tilt is optional and asks permission only after you choose it. Reduced motion disables decorative movement and smooth scrolling. Browser support and physical-device performance vary.</p><h2>Original content and licenses</h2><p>The sculpture, still-life illustration, copy and example composition were created for this gallery. The Field Notes publication is fictional demonstration content. Lato and Spectral are distributed under the SIL Open Font License. <a href="assets/lato-OFL.txt">Lato license</a> · <a href="assets/spectral-OFL.txt">Spectral license</a>.</p><p>Built with React, StyleX, GSAP, Lenis and Three.js. Material calculations describe response under stated assumptions; the pairing and artistic direction remain authored choices, not universal quality scores.</p><a href="./#brief">Make a direction your own ↗</a></html>`,
+  `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About this demo — Design Theory</title><style>${css}body{font-family:TheorySans,Arial,sans-serif;color:#253d33;max-width:760px;padding:50px 24px;margin:auto;line-height:1.7}h1{font-family:TheorySerif,Georgia,serif;font-size:56px;line-height:1.1;font-weight:400;letter-spacing:-.05em}h2{font-size:21px;margin-top:36px}a{text-underline-offset:4px}</style><a href="./">← Back to Design Theory</a><h1>Small tools.<br>Honest boundaries.</h1><p>This interactive gallery demonstrates the local Design Theory toolkit. The three visual profiles are authored alternatives. Editing a brief saves your words with its selected profile; it does not silently run an AI design model.</p><h2>What is live</h2><p>Spring motion uses analytic propagation with continuous position and velocity on retarget. Cropping uses an authored focal point. Layout inspection overlays observed rectangles on the mounted composition and reports proposal differences. The separate <a href="field/">design field</a> explores ${fieldSummary.evaluated} coupled alternatives using actual text measurements, with ${fieldSummary.neuralCalls} saved local selector choices; edited previews need fresh validation. DOM content uses bounded CSS lighting approximations. The optional material sculpture uses Three.js standard physically based materials, a procedural environment and one lighting rig.</p><h2>Rendering and motion</h2><p>The site shares one GSAP clock with Lenis. Decorative surface rendering is capped to 30 frames per second with bounded pixel resolution. 3D starts only after explicit activation. A worker path uses OffscreenCanvas; when unavailable, a static original illustration remains until you explicitly load the main-thread renderer. The default hero uses live DOM lighting without creating a GPU context. Device tilt is optional and asks permission only after you choose it. Reduced motion disables decorative movement and smooth scrolling. Browser support and physical-device performance vary.</p><h2>Original content and licenses</h2><p>The sculpture, still-life illustration, copy and example composition were created for this gallery. The Field Notes publication is fictional demonstration content. Lato and Spectral are distributed under the SIL Open Font License. <a href="assets/lato-OFL.txt">Lato license</a> · <a href="assets/spectral-OFL.txt">Spectral license</a>.</p><p>Built with React, StyleX, GSAP, Lenis and Three.js. Material calculations describe response under stated assumptions; the pairing and artistic direction remain authored choices, not universal quality scores.</p><a href="./#brief">Make a direction your own ↗</a></html>`,
 );
 console.log(directory);

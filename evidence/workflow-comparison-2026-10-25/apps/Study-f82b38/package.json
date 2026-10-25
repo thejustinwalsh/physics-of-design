@@ -1,0 +1,17 @@
+{
+  "name": "paired-design-study",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "@stylexjs/stylex": "0.19.1",
+    "@stylexjs/babel-plugin": "0.19.1",
+    "@babel/core": "7.29.7",
+    "esbuild": "0.25.12",
+    "playwright": "1.64.1"
+  }
+}

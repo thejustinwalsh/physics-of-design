@@ -14,6 +14,15 @@ import {
   measurementKey,
 } from '../dist/index.js';
 const state = JSON.parse(readFileSync('examples/hero.json', 'utf8'));
+const fieldBrief = JSON.parse(
+  readFileSync('examples/design-field/brief.json', 'utf8'),
+);
+const fieldMeasurements = JSON.parse(
+  readFileSync('examples/design-field/measurements.json', 'utf8'),
+);
+const fieldSession = JSON.parse(
+  readFileSync('examples/design-field/gallery-session.json', 'utf8'),
+);
 const corpus = JSON.parse(readFileSync('research/pilot-corpus.json', 'utf8'));
 const trainingState = parseState(state);
 const trainingPair = {
@@ -106,6 +115,79 @@ const materialFixture = JSON.parse(
   readFileSync('examples/materials/pairings.json', 'utf8'),
 );
 const inputs: Record<string, unknown> = {
+  'kernel compile': {
+    version: 1,
+    id: 'contract-regions',
+    brief: 'Authored contract fixture; no renderer evidence',
+    identities: {
+      design: 'a'.repeat(64),
+      source: 'b'.repeat(64),
+      content: 'c'.repeat(64),
+    },
+    scenarios: [
+      {
+        id: 'phone',
+        platform: 'web',
+        unit: 'css-px',
+        width: 390,
+        height: 844,
+        textScale: 1,
+      },
+    ],
+    kernels: [
+      {
+        id: 'regions',
+        kind: 'regions',
+        purpose: 'Fit authored region minima',
+        source: 'Contract fixture',
+        regions: [
+          { id: 'list', minInline: 140, share: 1 },
+          { id: 'detail', minInline: 180, share: 2 },
+        ],
+        candidates: [
+          {
+            id: 'compact',
+            label: 'Compact',
+            gap: 8,
+            inlinePadding: 12,
+            splitMinimum: 360,
+          },
+          {
+            id: 'open',
+            label: 'Open',
+            gap: 16,
+            inlinePadding: 20,
+            splitMinimum: 760,
+          },
+        ],
+      },
+    ],
+  },
+  'bindings check': {
+    operation: 'resolve',
+    current: {
+      designIdentity: 'a'.repeat(64),
+      sourceIdentity: 'b'.repeat(64),
+      inputIdentity: 'c'.repeat(64),
+      resultIdentity: hash({ size: 16 }),
+    },
+    source: { value: { size: 16 }, identity: hash({ size: 16 }) },
+    bindings: [
+      {
+        id: 'size',
+        scenario: 'phone',
+        scenarioIdentity: 'd'.repeat(64),
+        platform: 'web',
+        unit: 'css-px',
+        pointer: '/size',
+        target: {
+          surface: 'contract-title',
+          property: 'fontSize',
+          sourceLocation: 'contract-only',
+        },
+      },
+    ],
+  },
   'validation plan': validationFixture,
   'validation check': { plan: validationFixture, receipts: [], advance: 1 },
   'material candidates': {
@@ -147,6 +229,11 @@ const inputs: Record<string, unknown> = {
   },
   'surface map': { baseColor: [0.2, 0.3, 0.4], roughness: 0.6, metalness: 0 },
   'surface textures': { size: 8, seed: 1 },
+  'surface css': { material: 'enamel' },
+  'surface light': {
+    surface: { material: 'paper' },
+    motion: { x: 0.5, y: -0.5 },
+  },
   'media analyze': {
     file: 'test/fixtures/material-checker.png',
     provenance: {
@@ -242,6 +329,14 @@ const inputs: Record<string, unknown> = {
     reducedMotion: false,
   },
   registry: {},
+  'context inspect': { file: 'DESIGN.md' },
+  'field measure': { brief: fieldBrief },
+  'field run': { brief: fieldBrief, measurements: fieldMeasurements },
+  'field validate': {
+    brief: fieldBrief,
+    measurements: fieldMeasurements,
+    tokens: fieldSession.tokens,
+  },
   'composition plan': { mode: 'app', width: 834 },
   'platform audit': {
     platform: 'ios',
@@ -457,3 +552,58 @@ test(
     }
   },
 );
+
+test('CLI schema and compact receipts compose through explicit hash-bound file pointers', async () => {
+  const schema = await cli('rhythm analyze', 'invalid input is never read', [
+    '--schema',
+  ]);
+  assert.equal(schema.code, 0);
+  assert.equal(JSON.parse(schema.out).inputSchema.type, 'object');
+  const dir = await mkdtemp(path.join(tmpdir(), 'design-cli-receipt-'));
+  try {
+    const output = path.join(dir, 'rhythm.json');
+    const compact = await cli('rhythm analyze', '{"gaps":[8,16,8,16]}', [
+      '--output',
+      output,
+      '--summary',
+    ]);
+    assert.equal(compact.code, 0);
+    const receipt = JSON.parse(compact.out);
+    const data = await readFile(output);
+    const { createHash } = await import('node:crypto');
+    assert.equal(
+      receipt.fullResult.sha256,
+      createHash('sha256').update(data).digest('hex'),
+    );
+    const source = path.join(dir, 'source.json'),
+      bytes = Buffer.from('{"gaps":[12,24,12]}\n');
+    await writeFile(source, bytes);
+    const reference = {
+      $designFile: source,
+      sha256: createHash('sha256').update(bytes).digest('hex'),
+      pointer: '/gaps',
+    };
+    const input = JSON.stringify({ gaps: reference });
+    const unresolved = await cli('rhythm analyze', input);
+    assert.equal(unresolved.code, 1);
+    const resolved = await cli('rhythm analyze', input, [
+      '--resolve-file-refs',
+    ]);
+    assert.equal(resolved.code, 0);
+    assert.equal(JSON.parse(resolved.out).bins.length, 3);
+    await writeFile(source, '{"gaps":[99]}\n');
+    const stale = await cli('rhythm analyze', input, ['--resolve-file-refs']);
+    assert.equal(stale.code, 1);
+    assert.equal(stale.out, '');
+    assert.match(JSON.parse(stale.err).error, /changed/);
+    const invalidMode = await cli('rhythm analyze', '{}', [
+      '--summary',
+      '--jsonl',
+      '--output',
+      output,
+    ]);
+    assert.equal(invalidMode.code, 1);
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
