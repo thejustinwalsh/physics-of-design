@@ -1,0 +1,519 @@
+{
+  "passed": true,
+  "engine": "react-native/Text+Yoga",
+  "platform": "android",
+  "label": "android-default-current",
+  "results": [
+    {
+      "screen": "today",
+      "viewport": {
+        "width": 411.4285583496094,
+        "height": 914.2857666015625,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "tabs",
+      "targets": 4,
+      "texts": 22,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "not-applicable",
+        "screen": "today"
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": -51.809539794921875,
+          "width": 411.4285583496094,
+          "height": 914.2857666015625
+        },
+        "nominalWindow": {
+          "width": 411.42857142857144,
+          "height": 814.4761904761905,
+          "scale": 2.625,
+          "fontScale": 1
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": -0.0000152587890625
+          },
+          "screen": {
+            "width": 411.42857142857144,
+            "height": 914.2857142857143,
+            "scale": 2.625,
+            "fontScale": 1
+          }
+        },
+        "projectedSafeArea": {
+          "top": 51.809539794921875,
+          "left": 0,
+          "right": 0,
+          "bottom": 48.0000370570591
+        },
+        "expectedDesignViewport": {
+          "width": 411.4285583496094,
+          "height": 814.4761897495815,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "androidRoute": {
+        "launchedAt": 1792908098319,
+        "bridgeReadyAt": 1792908106259,
+        "heartbeats": 2,
+        "baseLaunchAttempts": 2,
+        "routeAttempts": 2,
+        "expectedFontScale": 1
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "detail",
+      "viewport": {
+        "width": 411.4285583496094,
+        "height": 914.2857666015625,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "focused",
+      "targets": 2,
+      "texts": 18,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "verified",
+        "screen": "detail",
+        "label": "Start session",
+        "targetId": "control-25",
+        "clipId": "clip-24",
+        "box": {
+          "x": 20.190475463867188,
+          "y": 794.6667175292969,
+          "width": 371.4285888671875,
+          "height": 51.8094482421875
+        },
+        "screenBox": {
+          "x": 20.190475463867188,
+          "y": 794.6667022705078,
+          "width": 371.4285888671875,
+          "height": 51.8094482421875
+        },
+        "tolerance": 1
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": -51.809539794921875,
+          "width": 411.4285583496094,
+          "height": 914.2857666015625
+        },
+        "nominalWindow": {
+          "width": 411.42857142857144,
+          "height": 814.4761904761905,
+          "scale": 2.625,
+          "fontScale": 1
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": -0.0000152587890625
+          },
+          "screen": {
+            "width": 411.42857142857144,
+            "height": 914.2857142857143,
+            "scale": 2.625,
+            "fontScale": 1
+          }
+        },
+        "projectedSafeArea": {
+          "top": 51.809539794921875,
+          "left": 0,
+          "right": 0,
+          "bottom": 48.0000370570591
+        },
+        "expectedDesignViewport": {
+          "width": 411.4285583496094,
+          "height": 814.4761897495815,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "androidRoute": {
+        "launchedAt": 1792908110304,
+        "bridgeReadyAt": 1792908116607,
+        "heartbeats": 2,
+        "baseLaunchAttempts": 2,
+        "routeAttempts": 1,
+        "expectedFontScale": 1
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "active",
+      "viewport": {
+        "width": 411.4285583496094,
+        "height": 914.2857666015625,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "focused",
+      "targets": 3,
+      "texts": 11,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "verified",
+        "screen": "active",
+        "label": "Resume session",
+        "targetId": "control-17",
+        "clipId": "clip-16",
+        "box": {
+          "x": 20.190475463867188,
+          "y": 721.1429138183594,
+          "width": 371.4285888671875,
+          "height": 51.8094482421875
+        },
+        "screenBox": {
+          "x": 20.190475463867188,
+          "y": 721.1428985595703,
+          "width": 371.4285888671875,
+          "height": 51.8094482421875
+        },
+        "tolerance": 1
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": -51.809539794921875,
+          "width": 411.4285583496094,
+          "height": 914.2857666015625
+        },
+        "nominalWindow": {
+          "width": 411.42857142857144,
+          "height": 814.4761904761905,
+          "scale": 2.625,
+          "fontScale": 1
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": -0.0000152587890625
+          },
+          "screen": {
+            "width": 411.42857142857144,
+            "height": 914.2857142857143,
+            "scale": 2.625,
+            "fontScale": 1
+          }
+        },
+        "projectedSafeArea": {
+          "top": 51.809539794921875,
+          "left": 0,
+          "right": 0,
+          "bottom": 48.0000370570591
+        },
+        "expectedDesignViewport": {
+          "width": 411.4285583496094,
+          "height": 814.4761897495815,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "androidRoute": {
+        "launchedAt": 1792908119599,
+        "bridgeReadyAt": 1792908126155,
+        "heartbeats": 2,
+        "baseLaunchAttempts": 2,
+        "routeAttempts": 2,
+        "expectedFontScale": 1
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "complete",
+      "viewport": {
+        "width": 411.4285583496094,
+        "height": 914.2857666015625,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "focused",
+      "targets": 3,
+      "texts": 6,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "verified",
+        "screen": "complete",
+        "label": "Back to Today",
+        "targetId": "control-12",
+        "clipId": "clip-11",
+        "box": {
+          "x": 20.190475463867188,
+          "y": 721.1429138183594,
+          "width": 371.4285888671875,
+          "height": 51.8094482421875
+        },
+        "screenBox": {
+          "x": 20.190475463867188,
+          "y": 721.1428985595703,
+          "width": 371.4285888671875,
+          "height": 51.8094482421875
+        },
+        "tolerance": 1
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": -51.809539794921875,
+          "width": 411.4285583496094,
+          "height": 914.2857666015625
+        },
+        "nominalWindow": {
+          "width": 411.42857142857144,
+          "height": 814.4761904761905,
+          "scale": 2.625,
+          "fontScale": 1
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": -0.0000152587890625
+          },
+          "screen": {
+            "width": 411.42857142857144,
+            "height": 914.2857142857143,
+            "scale": 2.625,
+            "fontScale": 1
+          }
+        },
+        "projectedSafeArea": {
+          "top": 51.809539794921875,
+          "left": 0,
+          "right": 0,
+          "bottom": 48.0000370570591
+        },
+        "expectedDesignViewport": {
+          "width": 411.4285583496094,
+          "height": 814.4761897495815,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "androidRoute": {
+        "launchedAt": 1792908130548,
+        "bridgeReadyAt": 1792908133388,
+        "heartbeats": 2,
+        "baseLaunchAttempts": 1,
+        "routeAttempts": 1,
+        "expectedFontScale": 1
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "insights",
+      "viewport": {
+        "width": 411.4285583496094,
+        "height": 914.2857666015625,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "tabs",
+      "targets": 4,
+      "texts": 26,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "not-applicable",
+        "screen": "insights"
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": -51.809539794921875,
+          "width": 411.4285583496094,
+          "height": 914.2857666015625
+        },
+        "nominalWindow": {
+          "width": 411.42857142857144,
+          "height": 814.4761904761905,
+          "scale": 2.625,
+          "fontScale": 1
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": -0.0000152587890625
+          },
+          "screen": {
+            "width": 411.42857142857144,
+            "height": 914.2857142857143,
+            "scale": 2.625,
+            "fontScale": 1
+          }
+        },
+        "projectedSafeArea": {
+          "top": 51.809539794921875,
+          "left": 0,
+          "right": 0,
+          "bottom": 48.0000370570591
+        },
+        "expectedDesignViewport": {
+          "width": 411.4285583496094,
+          "height": 814.4761897495815,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "androidRoute": {
+        "launchedAt": 1792908136250,
+        "bridgeReadyAt": 1792908141721,
+        "heartbeats": 2,
+        "baseLaunchAttempts": 2,
+        "routeAttempts": 1,
+        "expectedFontScale": 1
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "profile",
+      "viewport": {
+        "width": 411.4285583496094,
+        "height": 914.2857666015625,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "tabs",
+      "targets": 7,
+      "texts": 17,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "not-applicable",
+        "screen": "profile"
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": -51.809539794921875,
+          "width": 411.4285583496094,
+          "height": 914.2857666015625
+        },
+        "nominalWindow": {
+          "width": 411.42857142857144,
+          "height": 814.4761904761905,
+          "scale": 2.625,
+          "fontScale": 1
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": -0.0000152587890625
+          },
+          "screen": {
+            "width": 411.42857142857144,
+            "height": 914.2857142857143,
+            "scale": 2.625,
+            "fontScale": 1
+          }
+        },
+        "projectedSafeArea": {
+          "top": 51.809539794921875,
+          "left": 0,
+          "right": 0,
+          "bottom": 48.0000370570591
+        },
+        "expectedDesignViewport": {
+          "width": 411.4285583496094,
+          "height": 814.4761897495815,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "androidRoute": {
+        "launchedAt": 1792908144116,
+        "bridgeReadyAt": 1792908149138,
+        "heartbeats": 2,
+        "baseLaunchAttempts": 2,
+        "routeAttempts": 1,
+        "expectedFontScale": 1
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    }
+  ],
+  "scope": "Actual default viewport/scaling text and target observations; task flows and visual critique are separate."
+}

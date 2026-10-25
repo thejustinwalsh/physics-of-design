@@ -1,0 +1,1618 @@
+{
+  "receipt": {
+    "version": 1,
+    "capturedAt": "2026-10-25T06:01:48.774Z",
+    "engine": "react-native/Text+Yoga",
+    "platform": "android",
+    "snapshot": {
+      "app": "vela",
+      "designHandoffIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+      "implementationIdentity": "54a5fd6cf374ea679a96425a20c4a6b730a12bd5085a0e5e867a081976fc619c",
+      "proofId": "vela-android-default-current-today-1792908097525",
+      "screen": "today",
+      "elapsedSeconds": 0,
+      "sessionOutcome": "idle",
+      "persistence": "saved",
+      "restoreState": "ready",
+      "navigationMenuOpen": false,
+      "copyMode": "default",
+      "coordinateSpace": {
+        "units": "dp",
+        "origin": "measured root",
+        "screenOffset": {
+          "x": 0,
+          "y": -0.0000152587890625
+        },
+        "screen": {
+          "width": 411.42857142857144,
+          "height": 914.2857142857143,
+          "scale": 2.625,
+          "fontScale": 1
+        }
+      },
+      "windowSafeArea": {
+        "top": 51.809539794921875,
+        "left": 0,
+        "right": 0,
+        "bottom": 48.0000370570591
+      },
+      "designViewport": {
+        "width": 411.4285583496094,
+        "height": 814.4761897495815,
+        "textScale": 1,
+        "reducedMotion": 0
+      },
+      "running": false,
+      "completedSessions": 1,
+      "preferences": {
+        "motion": "system",
+        "accent": "lime",
+        "checkIn": null
+      },
+      "reducedMotion": false,
+      "systemReducedMotion": false,
+      "motionPhase": "held",
+      "hydrated": true,
+      "window": {
+        "width": 411.4285583496094,
+        "height": 914.2857666015625,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "viewportGuard": {
+        "status": "current",
+        "rejectedCount": 0,
+        "lastRejection": null
+      },
+      "safeArea": {
+        "left": 0,
+        "bottom": 48,
+        "right": 0,
+        "top": 51.80952453613281
+      },
+      "nominalWindow": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "measuredRootFrame": {
+        "x": 0,
+        "y": -51.809539794921875,
+        "width": 411.4285583496094,
+        "height": 914.2857666015625
+      },
+      "palette": {
+        "canvas": "#111310",
+        "surface": "#232621",
+        "ink": "#f5f6ed",
+        "muted": "#b4b9ac",
+        "lime": "#d5ff3f",
+        "cobalt": "#3d44e8",
+        "on-lime": "#152000",
+        "on-cobalt": "#ffffff"
+      },
+      "plan": {
+        "titleSize": 72.92312640142309,
+        "bodySize": 19,
+        "pageGutter": 20,
+        "gap": 19.8,
+        "sectionGap": 39.6,
+        "cardWidth": 371.4285583496094,
+        "contentWidth": 371.4285583496094,
+        "paired": 0,
+        "navRail": 0,
+        "navRailWidth": 0,
+        "paneWidth": 411.4285583496094,
+        "pageDistance": 29.700000000000003,
+        "titleLeading": 1.12,
+        "bodyLeading": 1.5,
+        "timerSize": 80.2154390415654,
+        "timerStacked": 0,
+        "timerInnerWidth": 331.4285583496094,
+        "compactHierarchy": 0,
+        "heroActionFirst": 0,
+        "navCompact": 0,
+        "navLabelSize": 11.97,
+        "railLabelSize": 16.15,
+        "sessionNumeralSize": 109.38468960213464,
+        "phaseStacked": 0,
+        "operatingHeadingSize": 26.599999999999998,
+        "sectionHeadingSize": 41.800000000000004,
+        "radius": 24,
+        "tracking": -0.04,
+        "headingSize": 72.92312640142309,
+        "persistentActions": 0,
+        "actionDockMaxHeight": 366.5142853873117
+      },
+      "resolvedAdmissible": true,
+      "resolvedFailures": [],
+      "navigation": "tabs",
+      "designPolicy": {
+        "policy": "vela-v1",
+        "font": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
+        "math": "energy-v1",
+        "motion": "stationary spring; RN 0.88 underdamped mapping"
+      },
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      },
+      "storageError": "",
+      "keyboard": {
+        "visible": false,
+        "screenCoordinates": null
+      }
+    },
+    "observations": [
+      {
+        "id": "text-5",
+        "name": "VELA",
+        "kind": "text",
+        "clipId": null,
+        "text": "VELA",
+        "lines": [
+          {
+            "text": "VELA",
+            "x": 0,
+            "y": 0,
+            "width": 77.13273620605469,
+            "height": 33.14285659790039,
+            "descender": 4.952381134033203,
+            "capHeight": 21.82476234436035,
+            "ascender": 28.190475463867188,
+            "xHeight": 15.321905136108398
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"VELA\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":29.45,\\\"letterSpacing\\\":0.9500000000000001,\\\"lineHeight\\\":32.984},\\\"fontScale\\\":1}\",\"width\":371.4285888671875,\"lines\":[{\"text\":\"VELA\",\"x\":0,\"y\":0,\"width\":77.13273620605469,\"height\":33.14285659790039}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 19.809524536132812,
+          "y": 62.4761962890625,
+          "width": 371.4285888671875,
+          "height": 33.14288330078125
+        },
+        "visibleBox": {
+          "x": 19.809524536132812,
+          "y": 62.4761962890625,
+          "width": 371.4285888671875,
+          "height": 33.14288330078125
+        }
+      },
+      {
+        "id": "text-8",
+        "name": "⁠.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "⁠.",
+        "lines": [],
+        "textLayoutIdentity": "{\"text\":\"⁠.\",\"styleIdentity\":\"{\\\"style\\\":{},\\\"fontScale\\\":1}\",\"width\":0,\"lines\":[]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 0,
+          "y": 51.809539794921875,
+          "width": 0,
+          "height": 0
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 106.66668701171875,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-7",
+        "name": "Build\nmomentum⁠.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "Build\nmomentum⁠.",
+        "lines": [
+          {
+            "text": "Build\n",
+            "x": 0,
+            "y": 0,
+            "width": 157.03170776367188,
+            "height": 81.9047622680664,
+            "descender": 12.571428298950195,
+            "capHeight": 53.71428680419922,
+            "ascender": 69.33333587646484,
+            "xHeight": 37.71428680419922
+          },
+          {
+            "text": "momentum⁠.",
+            "x": 0,
+            "y": 81.9047622680664,
+            "width": 370.6050720214844,
+            "height": 81.9047622680664,
+            "descender": 12.571428298950195,
+            "capHeight": 53.71428680419922,
+            "ascender": 69.33333587646484,
+            "xHeight": 37.71428680419922
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Build\\nmomentum⁠.\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":72.92312640142309,\\\"letterSpacing\\\":-2.9169250560569235,\\\"lineHeight\\\":81.67390156959387},\\\"fontScale\\\":1}\",\"width\":371.4285888671875,\"lines\":[{\"text\":\"Build\\n\",\"x\":0,\"y\":0,\"width\":157.03170776367188,\"height\":81.9047622680664},{\"text\":\"momentum⁠.\",\"x\":0,\"y\":81.9047622680664,\"width\":370.6050720214844,\"height\":81.9047622680664}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 126.4761962890625,
+          "width": 371.4285888671875,
+          "height": 163.8094940185547
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 126.4761962890625,
+          "width": 371.4285888671875,
+          "height": 163.8094940185547
+        }
+      },
+      {
+        "id": "text-10",
+        "name": "Open session",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "Open session",
+        "lines": [
+          {
+            "text": "Open session",
+            "x": 0,
+            "y": 0,
+            "width": 105.58642578125,
+            "height": 21.33333396911621,
+            "descender": 3.4285714626312256,
+            "capHeight": 13.988572120666504,
+            "ascender": 17.904762268066406,
+            "xHeight": 9.824762344360352
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Open session\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":19,\\\"letterSpacing\\\":-0.76,\\\"lineHeight\\\":21.28},\\\"fontScale\\\":1}\",\"width\":288,\"lines\":[{\"text\":\"Open session\",\"x\":0,\"y\":0,\"width\":105.58642578125,\"height\":21.33333396911621}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 345.1428527832031,
+          "width": 288,
+          "height": 21.3333740234375
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 345.1428527832031,
+          "width": 288,
+          "height": 21.3333740234375
+        }
+      },
+      {
+        "id": "control-9",
+        "name": "Open session",
+        "kind": "target",
+        "clipId": "clip-6",
+        "box": {
+          "x": 20.190475463867188,
+          "y": 329.9047546386719,
+          "width": 371.4285888671875,
+          "height": 52.19049072265625
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 329.9047546386719,
+          "width": 371.4285888671875,
+          "height": 52.19049072265625
+        }
+      },
+      {
+        "id": "text-11",
+        "name": "TODAY’S SESSION",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "TODAY’S SESSION",
+        "lines": [
+          {
+            "text": "TODAY’S SESSION",
+            "x": 0,
+            "y": 0,
+            "width": 120.86216735839844,
+            "height": 13.714285850524902,
+            "descender": 1.9047619104385376,
+            "capHeight": 8.952381134033203,
+            "ascender": 11.809523582458496,
+            "xHeight": 6.285714149475098
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"TODAY’S SESSION\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":11.97,\\\"letterSpacing\\\":1.197,\\\"lineHeight\\\":13.406400000000001},\\\"fontScale\\\":1}\",\"width\":331.4285583496094,\"lines\":[{\"text\":\"TODAY’S SESSION\",\"x\":0,\"y\":0,\"width\":120.86216735839844,\"height\":13.714285850524902}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 441.1428527832031,
+          "width": 331.4285888671875,
+          "height": 13.71429443359375
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 441.1428527832031,
+          "width": 331.4285888671875,
+          "height": 13.71429443359375
+        }
+      },
+      {
+        "id": "text-12",
+        "name": "The steady\nbuild.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "The steady\nbuild.",
+        "lines": [
+          {
+            "text": "The steady\n",
+            "x": 0,
+            "y": 0,
+            "width": 173.0550994873047,
+            "height": 42.66666793823242,
+            "descender": 6.476190567016602,
+            "capHeight": 27.977144241333008,
+            "ascender": 36.19047546386719,
+            "xHeight": 19.645713806152344
+          },
+          {
+            "text": "build.",
+            "x": 0,
+            "y": 42.66666793823242,
+            "width": 86.12767028808594,
+            "height": 42.66666793823242,
+            "descender": 6.476190567016602,
+            "capHeight": 27.977144241333008,
+            "ascender": 36.19047546386719,
+            "xHeight": 19.645713806152344
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"The steady\\nbuild.\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":38,\\\"letterSpacing\\\":-1.52,\\\"lineHeight\\\":42.56},\\\"fontScale\\\":1}\",\"width\":188.95237731933594,\"lines\":[{\"text\":\"The steady\\n\",\"x\":0,\"y\":0,\"width\":173.0550994873047,\"height\":42.66666793823242},{\"text\":\"build.\",\"x\":0,\"y\":42.66666793823242,\"width\":86.12767028808594,\"height\":42.66666793823242}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40.380950927734375,
+          "y": 474.6666564941406,
+          "width": 188.95237731933594,
+          "height": 85.3333740234375
+        },
+        "visibleBox": {
+          "x": 40.380950927734375,
+          "y": 474.6666564941406,
+          "width": 188.95237731933594,
+          "height": 85.3333740234375
+        }
+      },
+      {
+        "id": "text-13",
+        "name": "22",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "22",
+        "lines": [
+          {
+            "text": "22",
+            "x": 0,
+            "y": 0,
+            "width": 122.89247131347656,
+            "height": 122.66666412353516,
+            "descender": 18.66666603088379,
+            "capHeight": 80.57142639160156,
+            "ascender": 104,
+            "xHeight": 56.57143020629883
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"22\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":109.38468960213464,\\\"letterSpacing\\\":-4.375387584085386,\\\"lineHeight\\\":122.5108523543908},\\\"fontScale\\\":1}\",\"width\":123.047607421875,\"lines\":[{\"text\":\"22\",\"x\":0,\"y\":0,\"width\":122.89247131347656,\"height\":122.66666412353516}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 248.76190185546875,
+          "y": 474.6666564941406,
+          "width": 123.047607421875,
+          "height": 122.666748046875
+        },
+        "visibleBox": {
+          "x": 248.76190185546875,
+          "y": 474.6666564941406,
+          "width": 123.047607421875,
+          "height": 122.666748046875
+        }
+      },
+      {
+        "id": "text-14",
+        "name": "MINUTES",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "MINUTES",
+        "lines": [
+          {
+            "text": "MINUTES",
+            "x": 0,
+            "y": 0,
+            "width": 62.06444549560547,
+            "height": 13.714285850524902,
+            "descender": 1.9047619104385376,
+            "capHeight": 8.952381134033203,
+            "ascender": 11.809523582458496,
+            "xHeight": 6.285714149475098
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"MINUTES\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":11.97,\\\"letterSpacing\\\":1.197,\\\"lineHeight\\\":13.406400000000001},\\\"fontScale\\\":1}\",\"width\":123.047607421875,\"lines\":[{\"text\":\"MINUTES\",\"x\":0,\"y\":0,\"width\":62.06444549560547,\"height\":13.714285850524902}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 248.76190185546875,
+          "y": 597.3334045410156,
+          "width": 123.047607421875,
+          "height": 13.71429443359375
+        },
+        "visibleBox": {
+          "x": 248.76190185546875,
+          "y": 597.3334045410156,
+          "width": 123.047607421875,
+          "height": 13.71429443359375
+        }
+      },
+      {
+        "id": "text-15",
+        "name": "Find your rhythm. Hold it.\nMake room to ease back.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "Find your rhythm. Hold it.\nMake room to ease back.",
+        "lines": [
+          {
+            "text": "Find your rhythm. Hold it.\n",
+            "x": 0,
+            "y": 0,
+            "width": 184.77232360839844,
+            "height": 24.380952835083008,
+            "descender": 5.714285850524902,
+            "capHeight": 11.775238037109375,
+            "ascender": 18.66666603088379,
+            "xHeight": 8.44952392578125
+          },
+          {
+            "text": "Make room to ease back.",
+            "x": 0,
+            "y": 24.380952835083008,
+            "width": 179.0238037109375,
+            "height": 24.380952835083008,
+            "descender": 5.714285850524902,
+            "capHeight": 11.775238037109375,
+            "ascender": 18.66666603088379,
+            "xHeight": 8.44952392578125
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Find your rhythm. Hold it.\\nMake room to ease back.\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaRegular\\\",\\\"fontSize\\\":16.15,\\\"lineHeight\\\":24.224999999999998},\\\"fontScale\\\":1}\",\"width\":331.4285583496094,\"lines\":[{\"text\":\"Find your rhythm. Hold it.\\n\",\"x\":0,\"y\":0,\"width\":184.77232360839844,\"height\":24.380952835083008},{\"text\":\"Make room to ease back.\",\"x\":0,\"y\":24.380952835083008,\"width\":179.0238037109375,\"height\":24.380952835083008}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 733.7143249511719,
+          "width": 331.4285888671875,
+          "height": 48.7618408203125
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 733.7143249511719,
+          "width": 331.4285888671875,
+          "height": 48.7618408203125
+        }
+      },
+      {
+        "id": "text-16",
+        "name": "A MOMENT FOR YOU",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "A MOMENT FOR YOU",
+        "lines": [
+          {
+            "text": "A MOMENT FOR YOU",
+            "x": 0,
+            "y": 0,
+            "width": 143.1439666748047,
+            "height": 13.714285850524902,
+            "descender": 1.9047619104385376,
+            "capHeight": 8.952381134033203,
+            "ascender": 11.809523582458496,
+            "xHeight": 6.285714149475098
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"A MOMENT FOR YOU\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":11.97,\\\"letterSpacing\\\":1.197,\\\"lineHeight\\\":13.406400000000001},\\\"fontScale\\\":1}\",\"width\":331.4285583496094,\"lines\":[{\"text\":\"A MOMENT FOR YOU\",\"x\":0,\"y\":0,\"width\":143.1439666748047,\"height\":13.714285850524902}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 842.2857360839844,
+          "width": 331.4285888671875,
+          "height": 13.71435546875
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 842.2857360839844,
+          "width": 331.4285888671875,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-17",
+        "name": "How are you\narriving today?",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "How are you\narriving today?",
+        "lines": [
+          {
+            "text": "How are you\n",
+            "x": 0,
+            "y": 0,
+            "width": 161.0275115966797,
+            "height": 34.28571319580078,
+            "descender": 5.333333492279053,
+            "capHeight": 22.380952835083008,
+            "ascender": 28.952381134033203,
+            "xHeight": 15.714285850524902
+          },
+          {
+            "text": "arriving today?",
+            "x": 0,
+            "y": 34.28571319580078,
+            "width": 186.2408905029297,
+            "height": 34.28571319580078,
+            "descender": 5.333333492279053,
+            "capHeight": 22.380952835083008,
+            "ascender": 28.952381134033203,
+            "xHeight": 15.714285850524902
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"How are you\\narriving today?\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":30.400000000000002,\\\"letterSpacing\\\":-1.2160000000000002,\\\"lineHeight\\\":34.04800000000001},\\\"fontScale\\\":1}\",\"width\":331.4285583496094,\"lines\":[{\"text\":\"How are you\\n\",\"x\":0,\"y\":0,\"width\":161.0275115966797,\"height\":34.28571319580078},{\"text\":\"arriving today?\",\"x\":0,\"y\":34.28571319580078,\"width\":186.2408905029297,\"height\":34.28571319580078}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 875.8095397949219,
+          "width": 331.4285888671875,
+          "height": 68.571533203125
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 875.8095397949219,
+          "width": 331.4285888671875,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-18",
+        "name": "A personal check-in, at your own pace.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "A personal check-in, at your own pace.",
+        "lines": [
+          {
+            "text": "A personal check-in, at your own pace.",
+            "x": 0,
+            "y": 0,
+            "width": 276.9464416503906,
+            "height": 24.380952835083008,
+            "descender": 5.714285850524902,
+            "capHeight": 11.775238037109375,
+            "ascender": 18.66666603088379,
+            "xHeight": 8.44952392578125
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"A personal check-in, at your own pace.\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaRegular\\\",\\\"fontSize\\\":16.15,\\\"lineHeight\\\":24.224999999999998},\\\"fontScale\\\":1}\",\"width\":331.4285583496094,\"lines\":[{\"text\":\"A personal check-in, at your own pace.\",\"x\":0,\"y\":0,\"width\":276.9464416503906,\"height\":24.380952835083008}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 964.1903991699219,
+          "width": 331.4285888671875,
+          "height": 24.381103515625
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 964.1903991699219,
+          "width": 331.4285888671875,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-20",
+        "name": "Easy",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "Easy",
+        "lines": [
+          {
+            "text": "Easy",
+            "x": 0,
+            "y": 0,
+            "width": 25.720964431762695,
+            "height": 15.2380952835083,
+            "descender": 2.2857143878936768,
+            "capHeight": 9.794285774230957,
+            "ascender": 12.952381134033203,
+            "xHeight": 6.876190185546875
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Easy\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":13.299999999999999,\\\"letterSpacing\\\":-0.5319999999999999,\\\"lineHeight\\\":14.896},\\\"fontScale\\\":1}\",\"width\":25.904762268066406,\"lines\":[{\"text\":\"Easy\",\"x\":0,\"y\":0,\"width\":25.720964431762695,\"height\":15.2380952835083}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 54.09523010253906,
+          "y": 1019.0476989746094,
+          "width": 25.904769897460938,
+          "height": 15.238037109375
+        },
+        "visibleBox": {
+          "x": 54.09523010253906,
+          "y": 1019.0476989746094,
+          "width": 25.904769897460938,
+          "height": 0
+        }
+      },
+      {
+        "id": "control-19",
+        "name": "Easy",
+        "kind": "target",
+        "clipId": "clip-6",
+        "box": {
+          "x": 40.380950927734375,
+          "y": 1008.3810729980469,
+          "width": 53.71428680419922,
+          "height": 48.0001220703125
+        },
+        "visibleBox": {
+          "x": 40.380950927734375,
+          "y": 1008.3810729980469,
+          "width": 53.71428680419922,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-22",
+        "name": "Steady",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "Steady",
+        "lines": [
+          {
+            "text": "Steady",
+            "x": 0,
+            "y": 0,
+            "width": 38.042381286621094,
+            "height": 15.2380952835083,
+            "descender": 2.2857143878936768,
+            "capHeight": 9.794285774230957,
+            "ascender": 12.952381134033203,
+            "xHeight": 6.876190185546875
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Steady\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":13.299999999999999,\\\"letterSpacing\\\":-0.5319999999999999,\\\"lineHeight\\\":14.896},\\\"fontScale\\\":1}\",\"width\":38.095245361328125,\"lines\":[{\"text\":\"Steady\",\"x\":0,\"y\":0,\"width\":38.042381286621094,\"height\":15.2380952835083}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 116.57142639160156,
+          "y": 1019.0476989746094,
+          "width": 38.095245361328125,
+          "height": 15.238037109375
+        },
+        "visibleBox": {
+          "x": 116.57142639160156,
+          "y": 1019.0476989746094,
+          "width": 38.095245361328125,
+          "height": 0
+        }
+      },
+      {
+        "id": "control-21",
+        "name": "Steady",
+        "kind": "target",
+        "clipId": "clip-6",
+        "box": {
+          "x": 102.85713958740234,
+          "y": 1008.3810729980469,
+          "width": 65.9047622680664,
+          "height": 48.0001220703125
+        },
+        "visibleBox": {
+          "x": 102.85713958740234,
+          "y": 1008.3810729980469,
+          "width": 65.9047622680664,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-24",
+        "name": "Energized",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "Energized",
+        "lines": [
+          {
+            "text": "Energized",
+            "x": 0,
+            "y": 0,
+            "width": 54.324363708496094,
+            "height": 15.2380952835083,
+            "descender": 2.2857143878936768,
+            "capHeight": 9.794285774230957,
+            "ascender": 12.952381134033203,
+            "xHeight": 6.876190185546875
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Energized\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":13.299999999999999,\\\"letterSpacing\\\":-0.5319999999999999,\\\"lineHeight\\\":14.896},\\\"fontScale\\\":1}\",\"width\":54.47618103027344,\"lines\":[{\"text\":\"Energized\",\"x\":0,\"y\":0,\"width\":54.324363708496094,\"height\":15.2380952835083}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 191.23809814453125,
+          "y": 1019.0476989746094,
+          "width": 54.47618103027344,
+          "height": 15.238037109375
+        },
+        "visibleBox": {
+          "x": 191.23809814453125,
+          "y": 1019.0476989746094,
+          "width": 54.47618103027344,
+          "height": 0
+        }
+      },
+      {
+        "id": "control-23",
+        "name": "Energized",
+        "kind": "target",
+        "clipId": "clip-6",
+        "box": {
+          "x": 177.5238037109375,
+          "y": 1008.3810729980469,
+          "width": 82.28570556640625,
+          "height": 48.0001220703125
+        },
+        "visibleBox": {
+          "x": 177.5238037109375,
+          "y": 1008.3810729980469,
+          "width": 82.28570556640625,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-25",
+        "name": "SHOWING UP COUNTS",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "SHOWING UP COUNTS",
+        "lines": [
+          {
+            "text": "SHOWING UP COUNTS",
+            "x": 0,
+            "y": 0,
+            "width": 152.65646362304688,
+            "height": 13.714285850524902,
+            "descender": 1.9047619104385376,
+            "capHeight": 8.952381134033203,
+            "ascender": 11.809523582458496,
+            "xHeight": 6.285714149475098
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"SHOWING UP COUNTS\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":11.97,\\\"letterSpacing\\\":1.197,\\\"lineHeight\\\":13.406400000000001},\\\"fontScale\\\":1}\",\"width\":331.4285583496094,\"lines\":[{\"text\":\"SHOWING UP COUNTS\",\"x\":0,\"y\":0,\"width\":152.65646362304688,\"height\":13.714285850524902}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 1116.1906433105469,
+          "width": 331.4285888671875,
+          "height": 13.71435546875
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 1116.1906433105469,
+          "width": 331.4285888671875,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-26",
+        "name": "01",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "01",
+        "lines": [
+          {
+            "text": "01",
+            "x": 0,
+            "y": 0,
+            "width": 57.17244338989258,
+            "height": 57.52381134033203,
+            "descender": 9.142857551574707,
+            "capHeight": 37.489524841308594,
+            "ascender": 48.380950927734375,
+            "xHeight": 26.323808670043945
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"01\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":51.04618848099616,\\\"letterSpacing\\\":-2.0418475392398463,\\\"lineHeight\\\":57.1717310987157},\\\"fontScale\\\":1}\",\"width\":331.4285583496094,\"lines\":[{\"text\":\"01\",\"x\":0,\"y\":0,\"width\":57.17244338989258,\"height\":57.52381134033203}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 1149.7144470214844,
+          "width": 331.4285888671875,
+          "height": 57.5238037109375
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 1149.7144470214844,
+          "width": 331.4285888671875,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-27",
+        "name": "sessions logged on this device",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "sessions logged on this device",
+        "lines": [
+          {
+            "text": "sessions logged on this device",
+            "x": 0,
+            "y": 0,
+            "width": 214.7604217529297,
+            "height": 24.380952835083008,
+            "descender": 5.714285850524902,
+            "capHeight": 11.775238037109375,
+            "ascender": 18.66666603088379,
+            "xHeight": 8.44952392578125
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"sessions logged on this device\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaRegular\\\",\\\"fontSize\\\":16.15,\\\"lineHeight\\\":24.224999999999998},\\\"fontScale\\\":1}\",\"width\":331.4285583496094,\"lines\":[{\"text\":\"sessions logged on this device\",\"x\":0,\"y\":0,\"width\":214.7604217529297,\"height\":24.380952835083008}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 1227.0476989746094,
+          "width": 331.4285888671875,
+          "height": 24.3809814453125
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 1227.0476989746094,
+          "width": 331.4285888671875,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-28",
+        "name": "An original Vela concept. A sample session and your own local journal.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "An original Vela concept. A sample session and your own local journal.",
+        "lines": [
+          {
+            "text": "An original Vela concept. A sample session and your own local ",
+            "x": 0,
+            "y": 0,
+            "width": 343.6458435058594,
+            "height": 18.66666603088379,
+            "descender": 4.190476417541504,
+            "capHeight": 9.036190032958984,
+            "ascender": 14.476190567016602,
+            "xHeight": 6.483809471130371
+          },
+          {
+            "text": "journal.",
+            "x": 0,
+            "y": 18.66666603088379,
+            "width": 40.91964340209961,
+            "height": 18.66666603088379,
+            "descender": 4.190476417541504,
+            "capHeight": 9.036190032958984,
+            "ascender": 14.476190567016602,
+            "xHeight": 6.483809471130371
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"An original Vela concept. A sample session and your own local journal.\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaRegular\\\",\\\"fontSize\\\":12.35,\\\"lineHeight\\\":18.525},\\\"fontScale\\\":1}\",\"width\":371.4285888671875,\"lines\":[{\"text\":\"An original Vela concept. A sample session and your own local \",\"x\":0,\"y\":0,\"width\":343.6458435058594,\"height\":18.66666603088379},{\"text\":\"journal.\",\"x\":0,\"y\":18.66666603088379,\"width\":40.91964340209961,\"height\":18.66666603088379}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 1310.8572692871094,
+          "width": 371.4285888671875,
+          "height": 37.3333740234375
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 1310.8572692871094,
+          "width": 371.4285888671875,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-30",
+        "name": "Today",
+        "kind": "text",
+        "clipId": null,
+        "text": "Today",
+        "lines": [
+          {
+            "text": "Today",
+            "x": 0,
+            "y": 0,
+            "width": 30.5252742767334,
+            "height": 13.714285850524902,
+            "descender": 1.9047619104385376,
+            "capHeight": 8.952381134033203,
+            "ascender": 11.809523582458496,
+            "xHeight": 6.285714149475098
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Today\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":11.97,\\\"letterSpacing\\\":-0.47880000000000006,\\\"lineHeight\\\":13.406400000000001},\\\"fontScale\\\":1}\",\"width\":30.857139587402344,\"lines\":[{\"text\":\"Today\",\"x\":0,\"y\":0,\"width\":30.5252742767334,\"height\":13.714285850524902}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 57.52381896972656,
+          "y": 839.6191101074219,
+          "width": 30.857131958007812,
+          "height": 13.7142333984375
+        },
+        "visibleBox": {
+          "x": 57.52381896972656,
+          "y": 839.6191101074219,
+          "width": 30.857131958007812,
+          "height": 13.7142333984375
+        }
+      },
+      {
+        "id": "control-29",
+        "name": "Today",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 9.904769897460938,
+          "y": 796.1905212402344,
+          "width": 126.47618103027344,
+          "height": 70.4761962890625
+        },
+        "visibleBox": {
+          "x": 9.904769897460938,
+          "y": 796.1905212402344,
+          "width": 126.47618103027344,
+          "height": 70.4761962890625
+        }
+      },
+      {
+        "id": "text-32",
+        "name": "Insights",
+        "kind": "text",
+        "clipId": null,
+        "text": "Insights",
+        "lines": [
+          {
+            "text": "Insights",
+            "x": 0,
+            "y": 0,
+            "width": 39.02191162109375,
+            "height": 13.714285850524902,
+            "descender": 1.9047619104385376,
+            "capHeight": 8.952381134033203,
+            "ascender": 11.809523582458496,
+            "xHeight": 6.285714149475098
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Insights\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":11.97,\\\"letterSpacing\\\":-0.47880000000000006,\\\"lineHeight\\\":13.406400000000001},\\\"fontScale\\\":1}\",\"width\":39.23809814453125,\"lines\":[{\"text\":\"Insights\",\"x\":0,\"y\":0,\"width\":39.02191162109375,\"height\":13.714285850524902}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 185.90476989746094,
+          "y": 839.6191101074219,
+          "width": 39.23809814453125,
+          "height": 13.7142333984375
+        },
+        "visibleBox": {
+          "x": 185.90476989746094,
+          "y": 839.6191101074219,
+          "width": 39.23809814453125,
+          "height": 13.7142333984375
+        }
+      },
+      {
+        "id": "control-31",
+        "name": "Insights",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 142.4761962890625,
+          "y": 796.1905212402344,
+          "width": 126.4761962890625,
+          "height": 70.4761962890625
+        },
+        "visibleBox": {
+          "x": 142.4761962890625,
+          "y": 796.1905212402344,
+          "width": 126.4761962890625,
+          "height": 70.4761962890625
+        }
+      },
+      {
+        "id": "text-34",
+        "name": "Profile",
+        "kind": "text",
+        "clipId": null,
+        "text": "Profile",
+        "lines": [
+          {
+            "text": "Profile",
+            "x": 0,
+            "y": 0,
+            "width": 33.21648406982422,
+            "height": 13.714285850524902,
+            "descender": 1.9047619104385376,
+            "capHeight": 8.952381134033203,
+            "ascender": 11.809523582458496,
+            "xHeight": 6.285714149475098
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Profile\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":11.97,\\\"letterSpacing\\\":-0.47880000000000006,\\\"lineHeight\\\":13.406400000000001},\\\"fontScale\\\":1}\",\"width\":33.5238037109375,\"lines\":[{\"text\":\"Profile\",\"x\":0,\"y\":0,\"width\":33.21648406982422,\"height\":13.714285850524902}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 321.5238037109375,
+          "y": 839.6191101074219,
+          "width": 33.5238037109375,
+          "height": 13.7142333984375
+        },
+        "visibleBox": {
+          "x": 321.5238037109375,
+          "y": 839.6191101074219,
+          "width": 33.5238037109375,
+          "height": 13.7142333984375
+        }
+      },
+      {
+        "id": "control-33",
+        "name": "Profile",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 275.047607421875,
+          "y": 796.1905212402344,
+          "width": 126.4761962890625,
+          "height": 70.4761962890625
+        },
+        "visibleBox": {
+          "x": 275.047607421875,
+          "y": 796.1905212402344,
+          "width": 126.4761962890625,
+          "height": 70.4761962890625
+        }
+      },
+      {
+        "id": "clip-6",
+        "name": "scroll viewport",
+        "kind": "clip",
+        "clipId": null,
+        "box": {
+          "x": 0,
+          "y": 106.66668701171875,
+          "width": 411.4285583496094,
+          "height": 678.47607421875
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 106.66668701171875,
+          "width": 411.4285583496094,
+          "height": 678.47607421875
+        }
+      }
+    ],
+    "incomplete": false,
+    "scope": "Actual native view frames and Text.onTextLayout observations from the product. Declared props are identified separately. Screenshots and task review remain required."
+  },
+  "audit": null,
+  "plan": {
+    "values": {
+      "body": 19,
+      "bodyLeading": 1.5,
+      "damping": 18,
+      "density": 0.9,
+      "display": 80,
+      "gutter": 20,
+      "radius": 24,
+      "space": 22,
+      "stiffness": 200,
+      "titleLeading": 1.12,
+      "tracking": -0.04,
+      "width": 411.4285583496094,
+      "height": 814.4761897495815,
+      "textScale": 1,
+      "reducedMotion": 0,
+      "bodySize": 19,
+      "dampingRatio": 0.6363961030678927,
+      "gap": 19.8,
+      "groupRatio": 1.0421052631578949,
+      "navLabelSize": 11.97,
+      "navRail": 0,
+      "navRailWidth": 0,
+      "operatingHeadingSize": 26.599999999999998,
+      "overshoot": 0.07487734250910066,
+      "pageDistance": 29.700000000000003,
+      "pageGutter": 20,
+      "paneWidth": 411.4285583496094,
+      "contentWidth": 371.4285583496094,
+      "leadingTarget": 1.428195485968339,
+      "leadingResidual": 0.071804514031661,
+      "navCompact": 0,
+      "paired": 0,
+      "cardWidth": 371.4285583496094,
+      "phaseStacked": 0,
+      "railLabelSize": 16.15,
+      "sectionGap": 39.6,
+      "timerInnerWidth": 331.4285583496094,
+      "titleSize": 72.92312640142309,
+      "displayLeadingResidual": -0.007076873598576672,
+      "hierarchy": 1.9403769961825958,
+      "predictedHeadlineLines": 2,
+      "predictedHeadlineHeight": 163.34780313918773,
+      "compactHierarchy": 0,
+      "expressiveHeadingSize": 72.92312640142309,
+      "heroActionFirst": 0,
+      "sectionHeadingSize": 41.800000000000004,
+      "sessionNumeralSize": 109.38468960213464,
+      "timerSize": 80.2154390415654,
+      "timerStacked": 0,
+      "titleFill": 0.9946153844257783,
+      "trackingTarget": -0.0401077195207827,
+      "trackingResidual": 0.00010771952078270086
+    },
+    "admissible": true,
+    "failures": [],
+    "regions": {
+      "today": {
+        "screen": {
+          "role": "dashboard",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38468960213464,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 72.92312640142309,
+          "persistentActions": 0,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      },
+      "detail": {
+        "screen": {
+          "role": "detail",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38468960213464,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 41.800000000000004,
+          "persistentActions": 1,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      },
+      "active": {
+        "screen": {
+          "role": "session",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38468960213464,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 26.599999999999998,
+          "persistentActions": 1,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      },
+      "complete": {
+        "screen": {
+          "role": "completion",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38468960213464,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 72.92312640142309,
+          "persistentActions": 1,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      },
+      "insights": {
+        "screen": {
+          "role": "insights",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38468960213464,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 41.800000000000004,
+          "persistentActions": 0,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      },
+      "profile": {
+        "screen": {
+          "role": "settings",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38468960213464,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 41.800000000000004,
+          "persistentActions": 0,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      }
+    },
+    "motions": {
+      "page": {
+        "mass": 1,
+        "stiffness": 200,
+        "damping": 18,
+        "channel": "translateY",
+        "reducedMotion": "opacity-fade"
+      }
+    },
+    "applicability": "within-declared-envelope",
+    "outsideEnvelope": [],
+    "verification": "pending-renderer-verification"
+  },
+  "textWidthFailures": [],
+  "textWidthUnknown": [],
+  "textWidthDiagnostics": [
+    {
+      "id": "text-5",
+      "name": "VELA",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-7",
+      "name": "Build\nmomentum⁠.",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        },
+        {
+          "lineIndex": 1,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-10",
+      "name": "Open session",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-11",
+      "name": "TODAY’S SESSION",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-12",
+      "name": "The steady\nbuild.",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        },
+        {
+          "lineIndex": 1,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-13",
+      "name": "22",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-14",
+      "name": "MINUTES",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-15",
+      "name": "Find your rhythm. Hold it.\nMake room to ease back.",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        },
+        {
+          "lineIndex": 1,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-30",
+      "name": "Today",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-32",
+      "name": "Insights",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-34",
+      "name": "Profile",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    }
+  ],
+  "primaryCheck": {
+    "status": "not-applicable",
+    "screen": "today"
+  },
+  "geometryCheck": {
+    "source": "measured-root-physical-safe-area-projection",
+    "measuredRootFrame": {
+      "x": 0,
+      "y": -51.809539794921875,
+      "width": 411.4285583496094,
+      "height": 914.2857666015625
+    },
+    "nominalWindow": {
+      "width": 411.42857142857144,
+      "height": 814.4761904761905,
+      "scale": 2.625,
+      "fontScale": 1
+    },
+    "coordinateSpace": {
+      "units": "dp",
+      "origin": "measured root",
+      "screenOffset": {
+        "x": 0,
+        "y": -0.0000152587890625
+      },
+      "screen": {
+        "width": 411.42857142857144,
+        "height": 914.2857142857143,
+        "scale": 2.625,
+        "fontScale": 1
+      }
+    },
+    "projectedSafeArea": {
+      "top": 51.809539794921875,
+      "left": 0,
+      "right": 0,
+      "bottom": 48.0000370570591
+    },
+    "expectedDesignViewport": {
+      "width": 411.4285583496094,
+      "height": 814.4761897495815,
+      "textScale": 1,
+      "reducedMotion": 0
+    }
+  },
+  "androidRoute": {
+    "launchedAt": 1792908098319,
+    "bridgeReadyAt": 1792908106259,
+    "heartbeats": 2,
+    "baseLaunchAttempts": 2,
+    "routeAttempts": 2,
+    "expectedFontScale": 1
+  }
+}

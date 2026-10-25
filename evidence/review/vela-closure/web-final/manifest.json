@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "handoff": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+  "files": [
+    {
+      "path": "artifacts/review/vela-closure/web-final/report.json",
+      "sha256": "6507ba5cdbf44eb0d4c44045718130b7073b58916192a8be3da6fd5408dd4d37"
+    },
+    {
+      "path": "artifacts/review/vela-closure/web-final/detail-390-3.6.png",
+      "sha256": "a3107e5ee5a8d1d4e3d790e4c7e6366f7911f3413ab03fdc24b6af3028ae8dbf"
+    },
+    {
+      "path": "artifacts/review/vela-closure/web-final/active-390-3.6.png",
+      "sha256": "2f4d410cf4373f00964a4d0d471e7992c5e057bd6523f20ff600c53a89f3dc8b"
+    },
+    {
+      "path": "artifacts/review/vela-closure/web-final/insights-390-2.png",
+      "sha256": "66373367bd62c1b6f8f60a854cf12727e2672afe5c8a54a8ca0f5016041b8bb4"
+    },
+    {
+      "path": "examples/vela/web.jsx",
+      "sha256": "3502f1e92b65e15f3d0f211df067789bd5fe3914bd7626d6b70f631ab5e3cfbf"
+    },
+    {
+      "path": "artifacts/vela/web/app.js",
+      "sha256": "7046792365451683c80ae93052f4e37854f73bffec6be2cc657d0d927c000b03"
+    }
+  ]
+}

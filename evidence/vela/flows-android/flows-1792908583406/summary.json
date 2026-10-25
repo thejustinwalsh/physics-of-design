@@ -1,0 +1,258 @@
+{
+  "passed": true,
+  "events": [
+    {
+      "action": "tap",
+      "name": "Open session",
+      "started": 1792908587133,
+      "receipt": "2026-10-25T06:09:47.922Z",
+      "receiptObservedAt": 1792908588455.063,
+      "tapBoundsPx": [
+        53,
+        866,
+        1028,
+        1003
+      ],
+      "accessibilityOracle": {
+        "status": "verified",
+        "file": "0-accessibility.xml",
+        "bounds": [
+          53,
+          866,
+          1028,
+          1003
+        ],
+        "nativeBoundsErrorPx": 0.0000591278076171875
+      },
+      "measurementCapturedAt": "2026-10-25T06:09:44.441Z",
+      "nativeBoundsErrorPx": 0.0000591278076171875
+    },
+    {
+      "action": "tap",
+      "name": "Start session",
+      "started": 1792908590670,
+      "receipt": "2026-10-25T06:09:51.671Z",
+      "receiptObservedAt": 1792908592201.1191,
+      "tapBoundsPx": [
+        53,
+        2086,
+        1028,
+        2222
+      ],
+      "accessibilityOracle": {
+        "status": "verified",
+        "file": "1-accessibility.xml",
+        "bounds": [
+          53,
+          2086,
+          1028,
+          2222
+        ],
+        "nativeBoundsErrorPx": 0.0001049041748046875
+      },
+      "measurementCapturedAt": "2026-10-25T06:09:47.922Z",
+      "nativeBoundsErrorPx": 0.0001049041748046875
+    },
+    {
+      "action": "tap",
+      "name": "Pause session",
+      "started": 1792908592358,
+      "receipt": "2026-10-25T06:09:51.939Z",
+      "receiptObservedAt": 1792908592467.063,
+      "tapBoundsPx": [
+        52.99999809265137,
+        1893.000108718872,
+        1028.0000438690186,
+        2028.9999103546143
+      ],
+      "accessibilityOracle": {
+        "status": "unavailable",
+        "reason": "Live clock continuously changes accessibility state; idle-dependent UIAutomator dump is not used."
+      },
+      "measurementCapturedAt": "2026-10-25T06:09:51.671Z",
+      "nativeBoundsErrorPx": null
+    },
+    {
+      "action": "tap",
+      "name": "Resume session",
+      "started": 1792908596159,
+      "receipt": "2026-10-25T06:09:55.806Z",
+      "receiptObservedAt": 1792908596335.8054,
+      "tapBoundsPx": [
+        53,
+        1893,
+        1028,
+        2029
+      ],
+      "accessibilityOracle": {
+        "status": "verified",
+        "file": "3-accessibility.xml",
+        "bounds": [
+          53,
+          1893,
+          1028,
+          2029
+        ],
+        "nativeBoundsErrorPx": 0.0001087188720703125
+      },
+      "measurementCapturedAt": "2026-10-25T06:09:51.939Z",
+      "nativeBoundsErrorPx": 0.0001087188720703125
+    },
+    {
+      "action": "tap",
+      "name": "Finish session",
+      "started": 1792908596786,
+      "receipt": "2026-10-25T06:09:57.604Z",
+      "receiptObservedAt": 1792908598132.3308,
+      "tapBoundsPx": [
+        52.99999809265137,
+        2081.0000324249268,
+        1028.0000438690186,
+        2221.999895095825
+      ],
+      "accessibilityOracle": {
+        "status": "unavailable",
+        "reason": "Live clock continuously changes accessibility state; idle-dependent UIAutomator dump is not used."
+      },
+      "measurementCapturedAt": "2026-10-25T06:09:56.071Z",
+      "nativeBoundsErrorPx": null
+    },
+    {
+      "action": "tap",
+      "name": "View insights",
+      "started": 1792908600611,
+      "receipt": "2026-10-25T06:10:01.721Z",
+      "receiptObservedAt": 1792908602253.02,
+      "tapBoundsPx": [
+        53,
+        2081,
+        1028,
+        2222
+      ],
+      "accessibilityOracle": {
+        "status": "verified",
+        "file": "5-accessibility.xml",
+        "bounds": [
+          53,
+          2081,
+          1028,
+          2222
+        ],
+        "nativeBoundsErrorPx": 0.0001049041748046875
+      },
+      "measurementCapturedAt": "2026-10-25T06:09:57.604Z",
+      "nativeBoundsErrorPx": 0.0001049041748046875
+    },
+    {
+      "action": "tap",
+      "name": "Profile",
+      "started": 1792908604640,
+      "receipt": "2026-10-25T06:10:05.704Z",
+      "receiptObservedAt": 1792908606231.1746,
+      "tapBoundsPx": [
+        722,
+        2090,
+        1054,
+        2275
+      ],
+      "accessibilityOracle": {
+        "status": "verified",
+        "file": "6-accessibility.xml",
+        "bounds": [
+          722,
+          2090,
+          1054,
+          2275
+        ],
+        "nativeBoundsErrorPx": 0.0000934600830078125
+      },
+      "measurementCapturedAt": "2026-10-25T06:10:01.721Z",
+      "nativeBoundsErrorPx": 0.0000934600830078125
+    },
+    {
+      "action": "tap",
+      "name": "Reduce motion",
+      "started": 1792908608469,
+      "receipt": "2026-10-25T06:10:08.271Z",
+      "receiptObservedAt": 1792908608801.1174,
+      "tapBoundsPx": [
+        567,
+        1045,
+        976,
+        1181
+      ],
+      "accessibilityOracle": {
+        "status": "verified",
+        "file": "7-accessibility.xml",
+        "bounds": [
+          567,
+          1045,
+          976,
+          1181
+        ],
+        "nativeBoundsErrorPx": 0.0000591278076171875
+      },
+      "measurementCapturedAt": "2026-10-25T06:10:05.704Z",
+      "nativeBoundsErrorPx": 0.0000591278076171875
+    },
+    {
+      "action": "tap",
+      "name": "Today",
+      "started": 1792908611184,
+      "receipt": "2026-10-25T06:10:10.988Z",
+      "receiptObservedAt": 1792908611515.3306,
+      "tapBoundsPx": [
+        26,
+        2090,
+        358,
+        2275
+      ],
+      "accessibilityOracle": {
+        "status": "verified",
+        "file": "8-accessibility.xml",
+        "bounds": [
+          26,
+          2090,
+          358,
+          2275
+        ],
+        "nativeBoundsErrorPx": 0.0000934600830078125
+      },
+      "measurementCapturedAt": "2026-10-25T06:10:08.271Z",
+      "nativeBoundsErrorPx": 0.0000934600830078125
+    },
+    {
+      "action": "tap",
+      "name": "Follow system motion",
+      "started": 1792908614582,
+      "receipt": "2026-10-25T06:10:15.437Z",
+      "receiptObservedAt": 1792908615974.2925,
+      "tapBoundsPx": [
+        106,
+        1045,
+        515,
+        1181
+      ],
+      "accessibilityOracle": {
+        "status": "verified",
+        "file": "9-accessibility.xml",
+        "bounds": [
+          106,
+          1045,
+          515,
+          1181
+        ],
+        "nativeBoundsErrorPx": 0.0000591278076171875
+      },
+      "measurementCapturedAt": "2026-10-25T06:10:11.921Z",
+      "nativeBoundsErrorPx": 0.0000591278076171875
+    }
+  ],
+  "initialCount": 1,
+  "completedCount": 2,
+  "accessibilityCoverage": {
+    "verified": 8,
+    "unavailable": 2
+  },
+  "scope": "Actual Android gestures and fresh measured state transitions, elapsed timer pause/resume, completion persistence, and reduced-motion substitution. Idle actions independently cross-check fresh accessibility XML bounds. Live-clock taps use measured visible bounds with fresh transition evidence; their accessibility oracle is explicitly unavailable. iOS static/scale proofs separate."
+}

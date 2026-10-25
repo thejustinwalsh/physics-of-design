@@ -722,15 +722,17 @@ function Vela({ viewport }) {
     matchMedia('(prefers-reduced-motion: reduce)').matches,
   );
   const reduced = systemReduced || preferences.motion === 'reduced';
-  const resolved = useMemo(
-    () =>
-      resolveDesignRuntime(policy.handoff, {
-        ...viewport,
-        textScale,
-        reducedMotion: Number(reduced),
-      }),
-    [viewport.width, viewport.height, reduced],
-  );
+  const resolved = useMemo(() => {
+    const input = {
+      ...viewport,
+      textScale,
+      reducedMotion: Number(reduced),
+    };
+    // Synchronous input provenance: a pageerror handler may run after another
+    // navigation or resize and observe a different, already valid viewport.
+    window.__VELA_LAST_RUNTIME_INPUT__ = { ...input };
+    return resolveDesignRuntime(policy.handoff, input);
+  }, [viewport.width, viewport.height, reduced]);
   const actor = useMemo(() => {
     const states = Object.fromEntries(
       policy.handoff.machine.states.map((s) => [
@@ -1657,44 +1659,110 @@ function Vela({ viewport }) {
   );
 }
 
+const viewportEnvelope = Object.fromEntries(
+  ['width', 'height'].map((key) => {
+    const values = policy.handoff.program.scenarios.map((s) => s.values[key]);
+    return [key, { min: Math.min(...values), max: Math.max(...values) }];
+  }),
+);
 function readAvailableViewport() {
   const value = { width: innerWidth, height: innerHeight };
-  if (
+  const available =
     Number.isFinite(value.width) &&
     Number.isFinite(value.height) &&
     value.width > 0 &&
-    value.height > 0
-  )
-    return value;
+    value.height > 0;
+  // Positive dimensions alone do not establish the policy's mathematical
+  // domain: e.g. a one-pixel transient gives a nonpositive fitted title size.
+  // Admit the handoff's declared dimensional envelope before evaluation.
+  const supported =
+    available &&
+    Object.entries(viewportEnvelope).every(
+      ([key, { min, max }]) => value[key] >= min && value[key] <= max,
+    );
+  if (supported) return { value, reason: null };
+  const reason = available
+    ? 'outside-declared-viewport-envelope'
+    : 'unavailable-geometry';
   const rejected = window.__VELA_VIEWPORT_REJECTIONS__ ?? [];
   window.__VELA_VIEWPORT_REJECTIONS__ = [
     ...rejected.slice(-49),
-    { ...value, reason: 'unavailable-geometry', at: performance.now() },
+    {
+      ...value,
+      reason,
+      envelope: viewportEnvelope,
+      at: performance.now(),
+    },
   ];
-  return null;
+  return { value, reason };
 }
 function ViewportBoundary() {
-  const [viewport, setViewport] = useState(readAvailableViewport);
+  const [boundary, setBoundary] = useState(() => {
+    const observed = readAvailableViewport();
+    return { ...observed, accepted: observed.reason ? null : observed.value };
+  });
   useEffect(() => {
     const resize = () => {
       const next = readAvailableViewport();
-      if (next)
-        setViewport((current) =>
-          current?.width === next.width && current?.height === next.height
-            ? current
-            : next,
-        );
+      setBoundary((current) =>
+        Object.is(current.value.width, next.value.width) &&
+        Object.is(current.value.height, next.value.height) &&
+        current.reason === next.reason
+          ? current
+          : { ...next, accepted: next.reason ? current.accepted : next.value },
+      );
     };
     addEventListener('resize', resize);
     resize();
     return () => removeEventListener('resize', resize);
   }, []);
-  return viewport ? (
-    <Vela viewport={viewport} />
-  ) : (
-    <p role="status" data-waiting-viewport>
-      Waiting for available window space.
-    </p>
+  const status = !boundary.reason
+    ? 'current'
+    : boundary.accepted
+      ? 'held'
+      : boundary.reason === 'unavailable-geometry'
+        ? 'unavailable'
+        : 'unsupported';
+  window.__VELA_VIEWPORT_BOUNDARY__ = {
+    status,
+    reason: boundary.reason,
+    current: boundary.value,
+    accepted: boundary.accepted,
+    envelope: viewportEnvelope,
+  };
+  return (
+    <>
+      {boundary.reason && (
+        <p
+          role="status"
+          data-waiting-viewport
+          data-viewport-status={status}
+          style={
+            boundary.accepted
+              ? {
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  zIndex: 100,
+                  margin: 0,
+                  padding: 12,
+                  background: c.canvas,
+                  color: c.ink,
+                }
+              : undefined
+          }
+        >
+          {boundary.reason === 'unavailable-geometry'
+            ? 'Window dimensions are unavailable. '
+            : `This window is outside this design’s validated range (${viewportEnvelope.width.min}–${viewportEnvelope.width.max} pixels wide, ${viewportEnvelope.height.min}–${viewportEnvelope.height.max} pixels high). `}
+          {boundary.accepted
+            ? 'Showing the last validated layout; resize to continue.'
+            : 'Resize to continue.'}
+        </p>
+      )}
+      {boundary.accepted && <Vela viewport={boundary.accepted} />}
+    </>
   );
 }
 createRoot(document.getElementById('root')).render(<ViewportBoundary />);

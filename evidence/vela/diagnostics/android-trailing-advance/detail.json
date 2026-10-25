@@ -1,0 +1,1157 @@
+{
+  "receipt": {
+    "version": 1,
+    "capturedAt": "2026-10-25T05:03:48.464Z",
+    "engine": "react-native/Text+Yoga",
+    "platform": "android",
+    "snapshot": {
+      "app": "vela",
+      "designHandoffIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+      "implementationIdentity": "172c8037e86e65a4f34be00b39ab3e18f7793c4efd6413f47abcf51dbdebc4df",
+      "proofId": "vela-android-default-current-detail-1792904627238",
+      "screen": "detail",
+      "elapsedSeconds": 0,
+      "sessionOutcome": "idle",
+      "persistence": "saved",
+      "navigationMenuOpen": false,
+      "copyMode": "default",
+      "coordinateSpace": {
+        "units": "dp",
+        "origin": "window excluding status bar",
+        "screenOffset": {
+          "x": 0,
+          "y": 51.80952453613281
+        },
+        "screen": {
+          "width": 411.42857142857144,
+          "height": 914.2857142857143,
+          "scale": 2.625,
+          "fontScale": 1
+        }
+      },
+      "running": false,
+      "completedSessions": 1,
+      "preferences": {
+        "motion": "system",
+        "accent": "lime",
+        "checkIn": null
+      },
+      "reducedMotion": false,
+      "systemReducedMotion": false,
+      "motionPhase": "held",
+      "hydrated": true,
+      "window": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "safeArea": {
+        "left": 0,
+        "bottom": 48,
+        "right": 0,
+        "top": 51.80952453613281
+      },
+      "palette": {
+        "canvas": "#111310",
+        "surface": "#232621",
+        "ink": "#f5f6ed",
+        "muted": "#b4b9ac",
+        "lime": "#d5ff3f",
+        "cobalt": "#3d44e8",
+        "on-lime": "#152000",
+        "on-cobalt": "#ffffff"
+      },
+      "plan": {
+        "titleSize": 72.92312898313689,
+        "bodySize": 19,
+        "pageGutter": 20,
+        "gap": 19.8,
+        "sectionGap": 39.6,
+        "cardWidth": 371.42857142857144,
+        "contentWidth": 371.42857142857144,
+        "paired": 0,
+        "navRail": 0,
+        "navRailWidth": 0,
+        "paneWidth": 411.42857142857144,
+        "pageDistance": 29.700000000000003,
+        "titleLeading": 1.12,
+        "bodyLeading": 1.5,
+        "timerSize": 80.21544188145059,
+        "timerStacked": 0,
+        "timerInnerWidth": 331.42857142857144,
+        "compactHierarchy": 0,
+        "heroActionFirst": 0,
+        "navCompact": 0,
+        "navLabelSize": 11.97,
+        "railLabelSize": 16.15,
+        "sessionNumeralSize": 109.38469347470533,
+        "phaseStacked": 0,
+        "operatingHeadingSize": 26.599999999999998,
+        "sectionHeadingSize": 41.800000000000004,
+        "radius": 24,
+        "tracking": -0.04,
+        "headingSize": 41.800000000000004,
+        "persistentActions": 1,
+        "actionDockMaxHeight": 366.51428571428573
+      },
+      "resolvedAdmissible": true,
+      "resolvedFailures": [],
+      "navigation": "focused",
+      "designPolicy": {
+        "policy": "vela-v1",
+        "font": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
+        "math": "energy-v1",
+        "motion": "stationary spring; RN 0.88 underdamped mapping"
+      },
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      },
+      "storageError": "",
+      "keyboard": {
+        "visible": false,
+        "screenCoordinates": null
+      }
+    },
+    "observations": [
+      {
+        "id": "text-248",
+        "name": "SESSION DETAILS",
+        "kind": "text",
+        "clipId": null,
+        "text": "SESSION DETAILS",
+        "lines": [
+          {
+            "text": "SESSION DETAILS",
+            "x": 0,
+            "y": 0,
+            "width": 130.2538604736328,
+            "height": 16,
+            "descender": 2.2857143878936768,
+            "capHeight": 10.354286193847656,
+            "ascender": 13.714285850524902,
+            "xHeight": 7.268571376800537
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 87.61904907226562,
+          "y": 26.666656494140625,
+          "width": 304,
+          "height": 16
+        },
+        "visibleBox": {
+          "x": 87.61904907226562,
+          "y": 26.666656494140625,
+          "width": 304,
+          "height": 16
+        }
+      },
+      {
+        "id": "text-250",
+        "name": "Steady\nbuild⁠.",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "Steady\nbuild⁠.",
+        "lines": [
+          {
+            "text": "Steady\n",
+            "x": 0,
+            "y": 0,
+            "width": 119.5700454711914,
+            "height": 46.85714340209961,
+            "descender": 6.857142925262451,
+            "capHeight": 30.777143478393555,
+            "ascender": 40,
+            "xHeight": 21.607620239257812
+          },
+          {
+            "text": "build⁠.",
+            "x": 0,
+            "y": 46.85714340209961,
+            "width": 94.74266815185547,
+            "height": 46.85714340209961,
+            "descender": 6.857142925262451,
+            "capHeight": 30.777143478393555,
+            "ascender": 40,
+            "xHeight": 21.607620239257812
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 89.52377319335938,
+          "width": 371.4285888671875,
+          "height": 93.71429443359375
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 89.52377319335938,
+          "width": 371.4285888671875,
+          "height": 93.71429443359375
+        }
+      },
+      {
+        "id": "text-252",
+        "name": "A simple structure for purposeful movement. You choose the activity and effort.",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "A simple structure for purposeful movement. You choose the activity and effort.",
+        "lines": [
+          {
+            "text": "A simple structure for purposeful ",
+            "x": 0,
+            "y": 0,
+            "width": 280.5416564941406,
+            "height": 28.571428298950195,
+            "descender": 6.857142925262451,
+            "capHeight": 13.691428184509277,
+            "ascender": 21.714284896850586,
+            "xHeight": 9.824762344360352
+          },
+          {
+            "text": "movement. You choose the activity and ",
+            "x": 0,
+            "y": 28.571428298950195,
+            "width": 333.05804443359375,
+            "height": 28.571428298950195,
+            "descender": 6.857142925262451,
+            "capHeight": 13.691428184509277,
+            "ascender": 21.714284896850586,
+            "xHeight": 9.824762344360352
+          },
+          {
+            "text": "effort.",
+            "x": 0,
+            "y": 57.14285659790039,
+            "width": 51.376487731933594,
+            "height": 28.571428298950195,
+            "descender": 6.857142925262451,
+            "capHeight": 13.691428184509277,
+            "ascender": 21.714284896850586,
+            "xHeight": 9.824762344360352
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 378.28570556640625,
+          "width": 331.4285888671875,
+          "height": 85.71429443359375
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 378.28570556640625,
+          "width": 331.4285888671875,
+          "height": 85.71429443359375
+        }
+      },
+      {
+        "id": "text-253",
+        "name": "01",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "01",
+        "lines": [
+          {
+            "text": "01",
+            "x": 0,
+            "y": 0,
+            "width": 16.221664428710938,
+            "height": 16,
+            "descender": 2.2857143878936768,
+            "capHeight": 10.632380485534668,
+            "ascender": 13.714285850524902,
+            "xHeight": 7.4666666984558105
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 544.3809814453125,
+          "width": 16.380950927734375,
+          "height": 56.3809814453125
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 544.3809814453125,
+          "width": 16.380950927734375,
+          "height": 56.3809814453125
+        }
+      },
+      {
+        "id": "text-254",
+        "name": "Find your rhythm",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "Find your rhythm",
+        "lines": [
+          {
+            "text": "Find your rhythm",
+            "x": 0,
+            "y": 0,
+            "width": 162.855712890625,
+            "height": 25.904762268066406,
+            "descender": 4.190476417541504,
+            "capHeight": 16.788570404052734,
+            "ascender": 21.714284896850586,
+            "xHeight": 11.786666870117188
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 56.380950927734375,
+          "y": 544.7619018554688,
+          "width": 264.38092041015625,
+          "height": 25.90478515625
+        },
+        "visibleBox": {
+          "x": 56.380950927734375,
+          "y": 544.7619018554688,
+          "width": 264.38092041015625,
+          "height": 25.90478515625
+        }
+      },
+      {
+        "id": "text-255",
+        "name": "Start at your own pace.",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "Start at your own pace.",
+        "lines": [
+          {
+            "text": "Start at your own pace.",
+            "x": 0,
+            "y": 0,
+            "width": 166.3169708251953,
+            "height": 24.380952835083008,
+            "descender": 5.714285850524902,
+            "capHeight": 11.775238037109375,
+            "ascender": 18.66666603088379,
+            "xHeight": 8.44952392578125
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 56.380950927734375,
+          "y": 576.3809204101562,
+          "width": 264.38092041015625,
+          "height": 24.38092041015625
+        },
+        "visibleBox": {
+          "x": 56.380950927734375,
+          "y": 576.3809204101562,
+          "width": 264.38092041015625,
+          "height": 24.38092041015625
+        }
+      },
+      {
+        "id": "text-256",
+        "name": "4 MIN",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "4 MIN",
+        "lines": [
+          {
+            "text": "4 MIN",
+            "x": 0,
+            "y": 0,
+            "width": 51.15791320800781,
+            "height": 21.33333396911621,
+            "descender": 3.4285714626312256,
+            "capHeight": 13.988572120666504,
+            "ascender": 17.904762268066406,
+            "xHeight": 9.824762344360352
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 340.19049072265625,
+          "y": 544.3809814453125,
+          "width": 51.4285888671875,
+          "height": 56.3809814453125
+        },
+        "visibleBox": {
+          "x": 340.19049072265625,
+          "y": 544.3809814453125,
+          "width": 51.4285888671875,
+          "height": 56.3809814453125
+        }
+      },
+      {
+        "id": "text-257",
+        "name": "02",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "02",
+        "lines": [
+          {
+            "text": "02",
+            "x": 0,
+            "y": 0,
+            "width": 16.221664428710938,
+            "height": 16,
+            "descender": 2.2857143878936768,
+            "capHeight": 10.632380485534668,
+            "ascender": 13.714285850524902,
+            "xHeight": 7.4666666984558105
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 641.142822265625,
+          "width": 16.380950927734375,
+          "height": 56.3809814453125
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 641.142822265625,
+          "width": 16.380950927734375,
+          "height": 56.3809814453125
+        }
+      },
+      {
+        "id": "text-258",
+        "name": "Steady build",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "Steady build",
+        "lines": [
+          {
+            "text": "Steady build",
+            "x": 0,
+            "y": 0,
+            "width": 115.969482421875,
+            "height": 25.904762268066406,
+            "descender": 4.190476417541504,
+            "capHeight": 16.788570404052734,
+            "ascender": 21.714284896850586,
+            "xHeight": 11.786666870117188
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 56.380950927734375,
+          "y": 641.5238037109375,
+          "width": 254.09524536132812,
+          "height": 25.90478515625
+        },
+        "visibleBox": {
+          "x": 56.380950927734375,
+          "y": 641.5238037109375,
+          "width": 254.09524536132812,
+          "height": 25.90478515625
+        }
+      },
+      {
+        "id": "text-259",
+        "name": "Choose a pace you can sustain.",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "Choose a pace you can sustain.",
+        "lines": [
+          {
+            "text": "Choose a pace you can sustain.",
+            "x": 0,
+            "y": 0,
+            "width": 223.15029907226562,
+            "height": 24.380952835083008,
+            "descender": 5.714285850524902,
+            "capHeight": 11.775238037109375,
+            "ascender": 18.66666603088379,
+            "xHeight": 8.44952392578125
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 56.380950927734375,
+          "y": 673.142822265625,
+          "width": 254.09524536132812,
+          "height": 24.38092041015625
+        },
+        "visibleBox": {
+          "x": 56.380950927734375,
+          "y": 673.142822265625,
+          "width": 254.09524536132812,
+          "height": 24.38092041015625
+        }
+      },
+      {
+        "id": "text-260",
+        "name": "12 MIN",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "12 MIN",
+        "lines": [
+          {
+            "text": "12 MIN",
+            "x": 0,
+            "y": 0,
+            "width": 61.445533752441406,
+            "height": 21.33333396911621,
+            "descender": 3.4285714626312256,
+            "capHeight": 13.988572120666504,
+            "ascender": 17.904762268066406,
+            "xHeight": 9.824762344360352
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 329.90478515625,
+          "y": 641.142822265625,
+          "width": 61.71429443359375,
+          "height": 56.3809814453125
+        },
+        "visibleBox": {
+          "x": 329.90478515625,
+          "y": 641.142822265625,
+          "width": 61.71429443359375,
+          "height": 56.3809814453125
+        }
+      },
+      {
+        "id": "text-261",
+        "name": "03",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "03",
+        "lines": [
+          {
+            "text": "03",
+            "x": 0,
+            "y": 0,
+            "width": 16.221664428710938,
+            "height": 16,
+            "descender": 2.2857143878936768,
+            "capHeight": 10.632380485534668,
+            "ascender": 13.714285850524902,
+            "xHeight": 7.4666666984558105
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 737.9046630859375,
+          "width": 16.380950927734375,
+          "height": 56.761962890625
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 737.9046630859375,
+          "width": 16.380950927734375,
+          "height": 3.809600830078125
+        }
+      },
+      {
+        "id": "text-262",
+        "name": "Downshift",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "Downshift",
+        "lines": [
+          {
+            "text": "Downshift",
+            "x": 0,
+            "y": 0,
+            "width": 100.33197021484375,
+            "height": 25.904762268066406,
+            "descender": 4.190476417541504,
+            "capHeight": 16.788570404052734,
+            "ascender": 21.714284896850586,
+            "xHeight": 11.786666870117188
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 56.380950927734375,
+          "y": 738.28564453125,
+          "width": 264.38092041015625,
+          "height": 25.90478515625
+        },
+        "visibleBox": {
+          "x": 56.380950927734375,
+          "y": 738.28564453125,
+          "width": 264.38092041015625,
+          "height": 3.428619384765625
+        }
+      },
+      {
+        "id": "text-263",
+        "name": "Make room to ease back.",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "Make room to ease back.",
+        "lines": [
+          {
+            "text": "Make room to ease back.",
+            "x": 0,
+            "y": 0,
+            "width": 179.0238037109375,
+            "height": 24.380952835083008,
+            "descender": 5.714285850524902,
+            "capHeight": 11.775238037109375,
+            "ascender": 18.66666603088379,
+            "xHeight": 8.44952392578125
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 56.380950927734375,
+          "y": 769.9046630859375,
+          "width": 264.38092041015625,
+          "height": 24.3809814453125
+        },
+        "visibleBox": {
+          "x": 56.380950927734375,
+          "y": 769.9046630859375,
+          "width": 264.38092041015625,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-264",
+        "name": "6 MIN",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "6 MIN",
+        "lines": [
+          {
+            "text": "6 MIN",
+            "x": 0,
+            "y": 0,
+            "width": 51.15791320800781,
+            "height": 21.33333396911621,
+            "descender": 3.4285714626312256,
+            "capHeight": 13.988572120666504,
+            "ascender": 17.904762268066406,
+            "xHeight": 9.824762344360352
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 340.19049072265625,
+          "y": 737.9046630859375,
+          "width": 51.4285888671875,
+          "height": 56.761962890625
+        },
+        "visibleBox": {
+          "x": 340.19049072265625,
+          "y": 737.9046630859375,
+          "width": 51.4285888671875,
+          "height": 3.809600830078125
+        }
+      },
+      {
+        "id": "text-265",
+        "name": "Choose your effort. Pause or finish whenever you choose.",
+        "kind": "text",
+        "clipId": "clip-249",
+        "text": "Choose your effort. Pause or finish whenever you choose.",
+        "lines": [
+          {
+            "text": "Choose your effort. Pause or finish whenever you choose.",
+            "x": 0,
+            "y": 0,
+            "width": 337.0491027832031,
+            "height": 20.190475463867188,
+            "descender": 4.5714287757873535,
+            "capHeight": 9.584761619567871,
+            "ascender": 15.619047164916992,
+            "xHeight": 6.876190185546875
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 833.90478515625,
+          "width": 371.4285888671875,
+          "height": 20.1904296875
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 833.90478515625,
+          "width": 371.4285888671875,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-268",
+        "name": "Start session",
+        "kind": "text",
+        "clipId": "clip-266",
+        "text": "Start session",
+        "lines": [
+          {
+            "text": "Start session",
+            "x": 0,
+            "y": 0,
+            "width": 99.03624725341797,
+            "height": 21.33333396911621,
+            "descender": 3.4285714626312256,
+            "capHeight": 13.988572120666504,
+            "ascender": 17.904762268066406,
+            "xHeight": 9.824762344360352
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 777.90478515625,
+          "width": 288,
+          "height": 21.3333740234375
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 777.90478515625,
+          "width": 288,
+          "height": 21.3333740234375
+        }
+      },
+      {
+        "id": "control-247",
+        "name": "Back to Today",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 11.047637939453125,
+          "width": 48,
+          "height": 48
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 11.047637939453125,
+          "width": 48,
+          "height": 48
+        }
+      },
+      {
+        "id": "clip-249",
+        "name": "scroll viewport",
+        "kind": "clip",
+        "clipId": null,
+        "box": {
+          "x": 0,
+          "y": 69.71426391601562,
+          "width": 411.4285583496094,
+          "height": 672
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 69.71426391601562,
+          "width": 411.4285583496094,
+          "height": 672
+        }
+      },
+      {
+        "id": "clip-266",
+        "name": "scroll viewport",
+        "kind": "clip",
+        "clipId": null,
+        "box": {
+          "x": 0,
+          "y": 741.7142333984375,
+          "width": 411.4285583496094,
+          "height": 120.761962890625
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 741.7142333984375,
+          "width": 411.4285583496094,
+          "height": 120.761962890625
+        }
+      },
+      {
+        "id": "control-267",
+        "name": "Start session",
+        "kind": "target",
+        "clipId": "clip-266",
+        "box": {
+          "x": 20.190475463867188,
+          "y": 762.6666259765625,
+          "width": 371.4285888671875,
+          "height": 51.8095703125
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 762.6666259765625,
+          "width": 371.4285888671875,
+          "height": 51.8095703125
+        }
+      }
+    ],
+    "incomplete": false,
+    "scope": "Actual native view frames and Text.onTextLayout observations from the product. Declared props are identified separately. Screenshots and task review remain required."
+  },
+  "audit": null,
+  "plan": {
+    "values": {
+      "body": 19,
+      "bodyLeading": 1.5,
+      "damping": 18,
+      "density": 0.9,
+      "display": 80,
+      "gutter": 20,
+      "radius": 24,
+      "space": 22,
+      "stiffness": 200,
+      "titleLeading": 1.12,
+      "tracking": -0.04,
+      "width": 411.42857142857144,
+      "height": 814.4761904761905,
+      "textScale": 1,
+      "reducedMotion": 0,
+      "bodySize": 19,
+      "dampingRatio": 0.6363961030678927,
+      "gap": 19.8,
+      "groupRatio": 1.0421052631578949,
+      "navLabelSize": 11.97,
+      "navRail": 0,
+      "navRailWidth": 0,
+      "operatingHeadingSize": 26.599999999999998,
+      "overshoot": 0.07487734250910066,
+      "pageDistance": 29.700000000000003,
+      "pageGutter": 20,
+      "paneWidth": 411.42857142857144,
+      "contentWidth": 371.42857142857144,
+      "leadingTarget": 1.4281954887218047,
+      "leadingResidual": 0.07180451127819532,
+      "navCompact": 0,
+      "paired": 0,
+      "cardWidth": 371.42857142857144,
+      "phaseStacked": 0,
+      "railLabelSize": 16.15,
+      "sectionGap": 39.6,
+      "timerInnerWidth": 331.42857142857144,
+      "titleSize": 72.92312898313689,
+      "displayLeadingResidual": -0.00707687101686294,
+      "hierarchy": 1.940377047258651,
+      "predictedHeadlineLines": 2,
+      "predictedHeadlineHeight": 163.34780892222665,
+      "compactHierarchy": 0,
+      "expressiveHeadingSize": 72.92312898313689,
+      "heroActionFirst": 0,
+      "sectionHeadingSize": 41.800000000000004,
+      "sessionNumeralSize": 109.38469347470533,
+      "timerSize": 80.21544188145059,
+      "timerStacked": 0,
+      "titleFill": 0.9946153846153848,
+      "trackingTarget": -0.040107720940725296,
+      "trackingResidual": 0.00010772094072529492
+    },
+    "admissible": true,
+    "failures": [],
+    "regions": {
+      "today": {
+        "screen": {
+          "role": "dashboard",
+          "titleSize": 72.92312898313689,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.42857142857144,
+          "contentWidth": 371.42857142857144,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.42857142857144,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.21544188145059,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.42857142857144,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38469347470533,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 72.92312898313689,
+          "persistentActions": 0,
+          "actionDockMaxHeight": 366.51428571428573
+        }
+      },
+      "detail": {
+        "screen": {
+          "role": "detail",
+          "titleSize": 72.92312898313689,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.42857142857144,
+          "contentWidth": 371.42857142857144,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.42857142857144,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.21544188145059,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.42857142857144,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38469347470533,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 41.800000000000004,
+          "persistentActions": 1,
+          "actionDockMaxHeight": 366.51428571428573
+        }
+      },
+      "active": {
+        "screen": {
+          "role": "session",
+          "titleSize": 72.92312898313689,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.42857142857144,
+          "contentWidth": 371.42857142857144,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.42857142857144,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.21544188145059,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.42857142857144,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38469347470533,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 26.599999999999998,
+          "persistentActions": 1,
+          "actionDockMaxHeight": 366.51428571428573
+        }
+      },
+      "complete": {
+        "screen": {
+          "role": "completion",
+          "titleSize": 72.92312898313689,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.42857142857144,
+          "contentWidth": 371.42857142857144,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.42857142857144,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.21544188145059,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.42857142857144,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38469347470533,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 72.92312898313689,
+          "persistentActions": 1,
+          "actionDockMaxHeight": 366.51428571428573
+        }
+      },
+      "insights": {
+        "screen": {
+          "role": "insights",
+          "titleSize": 72.92312898313689,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.42857142857144,
+          "contentWidth": 371.42857142857144,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.42857142857144,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.21544188145059,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.42857142857144,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38469347470533,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 41.800000000000004,
+          "persistentActions": 0,
+          "actionDockMaxHeight": 366.51428571428573
+        }
+      },
+      "profile": {
+        "screen": {
+          "role": "settings",
+          "titleSize": 72.92312898313689,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.42857142857144,
+          "contentWidth": 371.42857142857144,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.42857142857144,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.21544188145059,
+          "timerStacked": 0,
+          "timerInnerWidth": 331.42857142857144,
+          "compactHierarchy": 0,
+          "heroActionFirst": 0,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 109.38469347470533,
+          "phaseStacked": 0,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 41.800000000000004,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 41.800000000000004,
+          "persistentActions": 0,
+          "actionDockMaxHeight": 366.51428571428573
+        }
+      }
+    },
+    "motions": {
+      "page": {
+        "mass": 1,
+        "stiffness": 200,
+        "damping": 18,
+        "channel": "translateY",
+        "reducedMotion": "opacity-fade"
+      }
+    },
+    "applicability": "within-declared-envelope",
+    "outsideEnvelope": [],
+    "verification": "pending-renderer-verification"
+  },
+  "textWidthFailures": [
+    {
+      "id": "text-252",
+      "name": "A simple structure for purposeful movement. You choose the activity and effort.",
+      "kind": "text",
+      "clipId": "clip-249",
+      "text": "A simple structure for purposeful movement. You choose the activity and effort.",
+      "lines": [
+        {
+          "text": "A simple structure for purposeful ",
+          "x": 0,
+          "y": 0,
+          "width": 280.5416564941406,
+          "height": 28.571428298950195,
+          "descender": 6.857142925262451,
+          "capHeight": 13.691428184509277,
+          "ascender": 21.714284896850586,
+          "xHeight": 9.824762344360352
+        },
+        {
+          "text": "movement. You choose the activity and ",
+          "x": 0,
+          "y": 28.571428298950195,
+          "width": 333.05804443359375,
+          "height": 28.571428298950195,
+          "descender": 6.857142925262451,
+          "capHeight": 13.691428184509277,
+          "ascender": 21.714284896850586,
+          "xHeight": 9.824762344360352
+        },
+        {
+          "text": "effort.",
+          "x": 0,
+          "y": 57.14285659790039,
+          "width": 51.376487731933594,
+          "height": 28.571428298950195,
+          "descender": 6.857142925262451,
+          "capHeight": 13.691428184509277,
+          "ascender": 21.714284896850586,
+          "xHeight": 9.824762344360352
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 40,
+        "y": 378.28570556640625,
+        "width": 331.4285888671875,
+        "height": 85.71429443359375
+      },
+      "visibleBox": {
+        "x": 40,
+        "y": 378.28570556640625,
+        "width": 331.4285888671875,
+        "height": 85.71429443359375
+      }
+    }
+  ]
+}

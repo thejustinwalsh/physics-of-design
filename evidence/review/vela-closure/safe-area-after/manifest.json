@@ -1,0 +1,33 @@
+{
+  "implementationIdentity": "46371400055a38ecec5c6b5ef50564e0d81908b1a7c99871821b726588bd53e8",
+  "files": [
+    {
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/active.json",
+      "frozen": "artifacts/review/vela-closure/safe-area-after/active.json",
+      "sha256": "7631927e6d8ab2108171ff5481bf7db7d53b039d4790c983303a1e0692181909"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/active.png",
+      "frozen": "artifacts/review/vela-closure/safe-area-after/active.png",
+      "sha256": "9f9d729e2d9de8c9e16087a2790793e53abe68c0a9ce02c73d5101b3442e02e0"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/detail.json",
+      "frozen": "artifacts/review/vela-closure/safe-area-after/detail.json",
+      "sha256": "885c2d8f47f1326809360f7f6106437a3ed5b1b934fb52df65a1b74d981ce073"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/detail.png",
+      "frozen": "artifacts/review/vela-closure/safe-area-after/detail.png",
+      "sha256": "6cef9d21a2a2a3e26c4a913d849135b1e31fed9474cb6bd48bd1ecd5fc3f7ce1"
+    },
+    {
+      "source": "native/VelaApp.tsx",
+      "sha256": "baba9692be08cba9ca73e1c289432932713db9798b05d6a751044db5786080b3"
+    },
+    {
+      "source": "src/native-safe-area.ts",
+      "sha256": "9ed40e9ad2a827a833474550410dd9163835eb653bb937adfd7fc5fa2f69a806"
+    }
+  ]
+}

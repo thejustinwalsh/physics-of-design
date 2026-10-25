@@ -3,12 +3,12 @@
     {
       "profile": "compact",
       "tools": 3,
-      "jsonBytes": 1735
+      "jsonBytes": 1793
     },
     {
       "profile": "full",
-      "tools": 27,
-      "jsonBytes": 93999
+      "tools": 42,
+      "jsonBytes": 148772
     }
   ],
   "note": "Bytes are measured wire JSON, not a token estimate. Fetch one command schema only when needed; session references preserve exact values."

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 const exec = promisify(execFile),
   adb = path.resolve('artifacts/runtime/android-sdk/platform-tools/adb'),
@@ -16,18 +16,22 @@ await mkdir(directory, { recursive: true });
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const quote = (value) => "'" + value.replaceAll("'", "'\\''") + "'";
 let proofId = runId,
-  receipt;
+  receipt,
+  receiptObservedAt;
 const events = [];
 async function latest(predicate = () => true, after = 0) {
   const file = `artifacts/fieldwork/native-observations/request-${createHash('sha256').update(proofId).digest('hex')}.json`;
   for (let i = 0; i < 100; i++) {
     try {
+      // File delivery and action timestamps share the host clock. Device
+      // capturedAt is retained as evidence, but device/host clocks can differ.
+      const deliveredAt = (await stat(file)).mtimeMs;
       const value = JSON.parse(await readFile(file, 'utf8'));
       if (
         value.incomplete === false &&
         value.snapshot.motionPhase === 'held' &&
         value.snapshot.viewportGuard?.status === 'current' &&
-        Date.parse(value.capturedAt) > after &&
+        deliveredAt > after &&
         predicate(value)
       ) {
         assert.equal(
@@ -36,6 +40,7 @@ async function latest(predicate = () => true, after = 0) {
           'Native flow source must be fresh',
         );
         receipt = value;
+        receiptObservedAt = deliveredAt;
         return value;
       }
     } catch {}
@@ -55,10 +60,12 @@ async function open(screen = 'today', story = '') {
   return latest((value) => value.snapshot.screen === screen, started);
 }
 async function tap(name, predicate) {
-  const current = await latest(),
-    target = current.observations.find(
-      (item) => item.kind === 'target' && item.name === name,
-    );
+  let current = await latest();
+  if (current.snapshot.running)
+    current = await latest((v) => v.snapshot.running, Date.now() - 1500);
+  const target = current.observations.find(
+    (item) => item.kind === 'target' && item.name === name,
+  );
   assert.ok(target, `Missing native target: ${name}`);
   const { box } = target,
     window = current.snapshot.window,
@@ -67,57 +74,94 @@ async function tap(name, predicate) {
     box.y + box.height / 2 >= 0 && box.y + box.height / 2 <= window.height,
     `Target offscreen: ${name}`,
   );
-  // UIAutomator waits for native accessibility idle and provides an independent
-  // physical-pixel oracle. This prevents a momentum-stopping tap from being
-  // mistaken for a product transition and cross-checks our coordinate adapter.
-  await exec(adb, [
-    '-s',
-    device,
-    'shell',
-    'uiautomator',
-    'dump',
-    '/sdcard/fieldwork-flow.xml',
-  ]);
-  const xml = (
-    await exec(adb, [
-      '-s',
-      device,
-      'exec-out',
-      'cat',
-      '/sdcard/fieldwork-flow.xml',
-    ])
-  ).stdout;
-  const escaped = name
-    .replaceAll('&', '&amp;')
-    .replaceAll('"', '&quot;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;');
-  const node = xml
-    .match(/<node\b[^>]*>/g)
-    ?.find(
-      (node) =>
-        node.includes(`content-desc="${escaped}"`) &&
-        node.includes('clickable="true"'),
-    );
-  assert.ok(node, `Missing accessible native action: ${name}`);
-  const bounds = node
-    .match(/bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"/)
-    .slice(1)
-    .map(Number);
   const measured = target.visibleBox ?? box;
+  assert.ok(
+    measured.width > 0 && measured.height > 0,
+    `Invisible target: ${name}`,
+  );
+  for (const key of ['x', 'y', 'width', 'height'])
+    assert.ok(
+      Number.isFinite(measured[key]) && Math.abs(measured[key] - box[key]) <= 1,
+      `Target must be fully visible: ${name}/${key}`,
+    );
   const expected = [
     (measured.x + origin.x) * window.scale,
     (measured.y + origin.y) * window.scale,
     (measured.x + measured.width + origin.x) * window.scale,
     (measured.y + measured.height + origin.y) * window.scale,
   ];
-  const error = Math.max(
-    ...bounds.map((value, index) => Math.abs(value - expected[index])),
-  );
-  assert.ok(
-    error <= 2,
-    `Native/accessibility bounds disagree for ${name}: ${JSON.stringify({ bounds, expected, error })}`,
-  );
+  let bounds = expected,
+    error = null;
+  let accessibilityOracle = {
+    status: 'unavailable',
+    reason:
+      'Live clock continuously changes accessibility state; idle-dependent UIAutomator dump is not used.',
+  };
+  // A running clock prevents UIAutomator's idle wait from completing. The
+  // command can exit zero with an ERROR and leave an older XML file intact.
+  // Keep that oracle explicitly unavailable; prove the measured tap's fresh
+  // product transition below without freezing or slowing the product clock.
+  if (!current.snapshot.running) {
+    const remote = `/sdcard/vela-${runId}-${events.length}.xml`;
+    await exec(adb, ['-s', device, 'shell', 'rm', '-f', remote], {
+      timeout: 5000,
+    });
+    const dumped = await exec(
+      adb,
+      ['-s', device, 'shell', 'uiautomator', 'dump', remote],
+      { timeout: 15000 },
+    );
+    assert.ok(
+      /dumped to:/i.test(dumped.stdout) &&
+        dumped.stdout.includes(remote) &&
+        !/ERROR:/i.test(dumped.stdout + dumped.stderr),
+      `Accessibility oracle unavailable for idle action ${name}: ${dumped.stdout} ${dumped.stderr}`,
+    );
+    const xml = (
+      await exec(adb, ['-s', device, 'exec-out', 'cat', remote], {
+        timeout: 5000,
+      })
+    ).stdout;
+    assert.ok(
+      xml.includes('<hierarchy') && xml.includes('</hierarchy>'),
+      'Incomplete fresh accessibility XML',
+    );
+    const xmlFile = `${events.length}-accessibility.xml`;
+    await writeFile(`${directory}/${xmlFile}`, xml);
+    await exec(adb, ['-s', device, 'shell', 'rm', '-f', remote], {
+      timeout: 5000,
+    });
+    const escaped = name
+      .replaceAll('&', '&amp;')
+      .replaceAll('"', '&quot;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;');
+    const node = xml
+      .match(/<node\b[^>]*>/g)
+      ?.find(
+        (node) =>
+          node.includes(`content-desc="${escaped}"`) &&
+          node.includes('clickable="true"'),
+      );
+    assert.ok(node, `Missing accessible native action: ${name}`);
+    bounds = node
+      .match(/bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"/)
+      .slice(1)
+      .map(Number);
+    error = Math.max(
+      ...bounds.map((value, index) => Math.abs(value - expected[index])),
+    );
+    assert.ok(
+      error <= 2,
+      `Native/accessibility bounds disagree for ${name}: ${JSON.stringify({ bounds, expected, error })}`,
+    );
+    accessibilityOracle = {
+      status: 'verified',
+      file: xmlFile,
+      bounds,
+      nativeBoundsErrorPx: error,
+    };
+  }
   const started = Date.now();
   await exec(adb, [
     '-s',
@@ -134,7 +178,10 @@ async function tap(name, predicate) {
     name,
     started,
     receipt: result.capturedAt,
-    accessibilityBounds: bounds,
+    receiptObservedAt,
+    tapBoundsPx: bounds,
+    accessibilityOracle,
+    measurementCapturedAt: current.capturedAt,
     nativeBoundsErrorPx: error,
   });
   return result;
@@ -242,8 +289,16 @@ try {
         events,
         initialCount,
         completedCount: initialCount + 1,
+        accessibilityCoverage: {
+          verified: events.filter(
+            (e) => e.accessibilityOracle?.status === 'verified',
+          ).length,
+          unavailable: events.filter(
+            (e) => e.accessibilityOracle?.status === 'unavailable',
+          ).length,
+        },
         scope:
-          'Actual Android gestures/accessibility bounds, elapsed timer pause/resume, completion persistence, and reduced-motion substitution. iOS static/scale proofs separate.',
+          'Actual Android gestures and fresh measured state transitions, elapsed timer pause/resume, completion persistence, and reduced-motion substitution. Idle actions independently cross-check fresh accessibility XML bounds. Live-clock taps use measured visible bounds with fresh transition evidence; their accessibility oracle is explicitly unavailable. iOS static/scale proofs separate.',
       },
       null,
       2,

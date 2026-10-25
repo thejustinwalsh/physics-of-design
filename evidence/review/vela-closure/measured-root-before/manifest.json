@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "source": "artifacts/vela/proof-native/android-enlarged-current/detail.png",
+      "frozen": "artifacts/review/vela-closure/measured-root-before/detail.png",
+      "sha256": "0e1feaa5db0d6cb1bf9432cd0cebcaab16e225a2ebf8b8a17b92bf4181dff645"
+    },
+    {
+      "source": "artifacts/fieldwork/native-observations/request-64f9ef669a293cb48fcaa6391c36594609220f07ad52e9ae989a6caa4f1e8184.json",
+      "frozen": "artifacts/review/vela-closure/measured-root-before/detail-receipt.json",
+      "sha256": "a471edd065756a7485c0ee4fa3dfbdcc4afb935e447ce1dd0b8e4bb32625fa3f"
+    }
+  ]
+}

@@ -1,12 +1,12 @@
-(node:98103) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(node:99101) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-✔ real StyleX/React rendering, thresholds, spacing tolerance and stale measurements (1332.575334ms)
-✔ search keeps multiple viable alternatives at unseen widths and text scaling (3831.494083ms)
-✔ editable proof exposes real baseline guides, font comparisons and dependency effects (414.791875ms)
-✔ unseen localized content reflows; missing-script fallback is explicitly rejected (467.806459ms)
-✔ one emitted flex specimen responds to actual container resizing across phone, iPad and desktop (509.33975ms)
-✔ variable-font axes and Arabic shaping are verified in the actual browser (258.821959ms)
-✔ palette choices reach actual StyleX colors and rendered text cannot evade contrast constraints (735.478875ms)
+✔ real StyleX/React rendering, thresholds, spacing tolerance and stale measurements (1296.794125ms)
+✔ search keeps multiple viable alternatives at unseen widths and text scaling (3810.156666ms)
+✔ editable proof exposes real baseline guides, font comparisons and dependency effects (395.661542ms)
+✔ unseen localized content reflows; missing-script fallback is explicitly rejected (435.879125ms)
+✔ one emitted flex specimen responds to actual container resizing across phone, iPad and desktop (473.616417ms)
+✔ variable-font axes and Arabic shaping are verified in the actual browser (228.918875ms)
+✔ palette choices reach actual StyleX colors and rendered text cannot evade contrast constraints (609.9125ms)
 ℹ tests 7
 ℹ suites 0
 ℹ pass 7
@@ -14,4 +14,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 8066.042334
+ℹ duration_ms 7692.858625

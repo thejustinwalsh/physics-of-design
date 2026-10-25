@@ -1,18 +1,19 @@
-(node:98282) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(node:99224) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-✔ real MCP App SDK host bridge renders, edits, recomputes, compares and records a human tie-break (5371.036ms)
-(node:98283) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+✔ real MCP App SDK host bridge renders, edits, recomputes, compares and records a human tie-break (4648.231583ms)
+✔ MCP App projects exact component dimensions and analytic motion samples through the real host bridge (953.600959ms)
+(node:99225) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-✔ every public command executes through CLI and MCP with matching result contracts (33852.106458ms)
-✔ Unix streams handle files, JSONL, invalid commands and caller errors without polluting stdout (3989.86775ms)
-(node:98284) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+✔ every public command executes through CLI and MCP with matching result contracts (18492.480416ms)
+✔ Unix streams handle files, JSONL, invalid commands and caller errors without polluting stdout (1668.423917ms)
+(node:99226) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-✔ compact MCP discovers one schema and reuses exact states without repeated input context (459.190292ms)
-ℹ tests 4
+✔ compact MCP discovers one schema and reuses exact states without repeated input context (484.894333ms)
+ℹ tests 5
 ℹ suites 0
-ℹ pass 4
+ℹ pass 5
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 38660.390458
+ℹ duration_ms 20843.307458

@@ -1,0 +1,64 @@
+{
+  "createdAt": "2026-10-25T04:57:09.168Z",
+  "explorationMs": 44020.403167,
+  "cachedMs": 1442.276334000002,
+  "pureMs": 7.8770000000004075,
+  "statistics": {
+    "evaluated": 1795,
+    "factorEvaluations": 236940,
+    "uniqueStateBudget": 4096,
+    "effectiveStateBudget": 1795,
+    "expressionOperationUpperBound": 4997280,
+    "observationBudget": 500000,
+    "cardinality": 2721600,
+    "method": "beam",
+    "complete": false,
+    "latencyMs": 1686.1280000000002,
+    "selectorCalls": 1,
+    "mainAgentCalls": 0
+  },
+  "selection": {
+    "selected": "path-0",
+    "provenance": {
+      "profile": "qwen3.5-4b",
+      "readoutMode": "single",
+      "readoutPasses": 1,
+      "aggregation": "single restricted-option readout",
+      "promptHashes": [
+        "073fd3aeb541cbfd6a844f3843eda5dd4009a264a406dd25887fe13f62930ae4"
+      ],
+      "experimental": false,
+      "model": {
+        "source": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "dtype": "gguf-quantized",
+        "backend": "llamacpp",
+        "serving_config": "llamacpp-direct-v1",
+        "gguf": {
+          "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4"
+        },
+        "vocab_size": 248320,
+        "threads": 8,
+        "n_gpu_layers": 0,
+        "max_prompt_tokens": 4096,
+        "context_tokens": 4352,
+        "decode_chunk": 512,
+        "llama_cpp_python_version": "0.3.35",
+        "transformers_version": "5.17.0"
+      },
+      "promptHash": "073fd3aeb541cbfd6a844f3843eda5dd4009a264a406dd25887fe13f62930ae4",
+      "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+      "latencyMs": 39140.628291999994
+    },
+    "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed.",
+    "modelCalled": true
+  },
+  "handoffIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+  "replay": {
+    "selectorCalls": 0,
+    "evaluated": 0,
+    "pureStatus": "replayed"
+  },
+  "changedPolicy": "invalidated",
+  "scope": "One authored product problem, deterministic mathematical search plus optional single local neural readout. Not a controlled design-quality or token-savings benchmark."
+}

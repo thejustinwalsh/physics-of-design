@@ -1,0 +1,36 @@
+{
+  "scope": "Preserved failing verifier evidence; no original failing viewport input was synchronously captured.",
+  "failure": {
+    "phase": "today-834-3.6",
+    "error": "Nonfinite log2 result",
+    "asynchronousContext": {
+      "width": 834,
+      "height": 1000
+    },
+    "reportSha256": "ec4c182b6fc5a41c0802b47a956d82bc81f6748c42d19a710b07aed46806c45f",
+    "compiledBundleSha256": "7046792365451683c80ae93052f4e37854f73bffec6be2cc657d0d927c000b03"
+  },
+  "reproduction": {
+    "method": "Pure replay of unchanged handoff with width1,height1000,textScale3.6,reducedMotion1",
+    "error": "Nonfinite log2 result",
+    "reason": "Positive-only boundary admits width1; contentWidth=.84, fitted titleSize=(.84-2)/5.066 is negative; hierarchy=log2(titleSize/19).",
+    "inference": "This demonstrates an admitted mathematical-domain failure consistent with the stack. It does not establish the exact transient input of the original browser exception."
+  },
+  "fix": {
+    "scope": "Web viewport admission only; shared math, native implementation and handoff unchanged.",
+    "envelope": {
+      "width": [
+        390,
+        1440
+      ],
+      "height": [
+        700,
+        1210
+      ]
+    },
+    "behavior": "Reject unsupported/unavailable inputs before runtime; preserve previous accepted layout with visible held notice; expose current/accepted geometry and synchronous runtime input.",
+    "webSourceSha256": "868c9fa24ebd2d4b5e72a89646e4a67305a1feba00f488e79a2e3a2d12649b9d",
+    "proofSourceSha256": "6056694780713b4f0046fe67c9f908631a725c8aa55d85ecd335c7b5005e3885"
+  },
+  "publicExport": "Export report/log/screenshot/assessment only; compiled diagnostic bundle stays local."
+}

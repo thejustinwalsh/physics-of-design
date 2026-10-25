@@ -1,0 +1,448 @@
+{
+  "capturedAt": "2026-10-25T06:08:34.680Z",
+  "implementationIdentity": "54a5fd6cf374ea679a96425a20c4a6b730a12bd5085a0e5e867a081976fc619c",
+  "scope": "Posthoc intrinsic-fit recheck of all nonzero mounted Text boxes, including wholly offscreen scroll children. Original receipts and their historical script flags are unchanged. Not an ink-bounds or scroll-reachability audit.",
+  "diagnosticSourceSha256": "921c8688212e485c394dff7056428fa38ad0bc405982aaf1800175e4bc8c8dff",
+  "receipts": 42,
+  "textBoxes": 665,
+  "whollyOffscreen": 189,
+  "passed": true,
+  "checks": [
+    {
+      "file": "artifacts/vela/proof-native/android-default-current/today.json",
+      "sha256": "615942739ad20aec0e23271bbd5e8c40ab0cceaa49a9707249482917392fa064",
+      "group": "android-default-current",
+      "fontScale": 1,
+      "textBoxes": 21,
+      "whollyOffscreen": 10,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-default-current/detail.json",
+      "sha256": "8ae6898a53d14441b674d7549dc7556fe6d6a957888d7e8f175acff624b9f6da",
+      "group": "android-default-current",
+      "fontScale": 1,
+      "textBoxes": 17,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-default-current/active.json",
+      "sha256": "87c758ff4633f08555b93701fb13f8a5315d7609a8d88aaec8f4d2e1dc65e393",
+      "group": "android-default-current",
+      "fontScale": 1,
+      "textBoxes": 10,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-default-current/complete.json",
+      "sha256": "f1a7c7e8bd53acb2f56f9468e7c38545818af6fe05ee0225f13ebd96f91d4493",
+      "group": "android-default-current",
+      "fontScale": 1,
+      "textBoxes": 5,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-default-current/insights.json",
+      "sha256": "fb5d5813047d29f70eed5f57ddee6331015901e8add63e81a98ad2379e9c04e6",
+      "group": "android-default-current",
+      "fontScale": 1,
+      "textBoxes": 24,
+      "whollyOffscreen": 7,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-default-current/profile.json",
+      "sha256": "08791df3ce57e4d9da93ea0cf194f9fa163c9a31d0f49ed2dd61f2aea5feaefe",
+      "group": "android-default-current",
+      "fontScale": 1,
+      "textBoxes": 16,
+      "whollyOffscreen": 1,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-enlarged-current/today.json",
+      "sha256": "bcf2094c3ba93fc720554d2f246d4de621478033d95601b897685e3e3160e7c6",
+      "group": "android-enlarged-current",
+      "fontScale": 2,
+      "textBoxes": 21,
+      "whollyOffscreen": 10,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-enlarged-current/detail.json",
+      "sha256": "5ef8334fbbb591cd5d3f701dfd5cf65e682a3c8ba6809c7776f914e284c25056",
+      "group": "android-enlarged-current",
+      "fontScale": 2,
+      "textBoxes": 17,
+      "whollyOffscreen": 5,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-enlarged-current/active.json",
+      "sha256": "d9a7e3a56a8a43f94c3428de977b3bfb7ab62b5fb261cd74ba58e6be76268315",
+      "group": "android-enlarged-current",
+      "fontScale": 2,
+      "textBoxes": 13,
+      "whollyOffscreen": 1,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-enlarged-current/complete.json",
+      "sha256": "0f2d5f31adb75ca064f25bae6e683ef3d4ef6625df8875d6d38ccd89d2af4468",
+      "group": "android-enlarged-current",
+      "fontScale": 2,
+      "textBoxes": 5,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-enlarged-current/insights.json",
+      "sha256": "d278b034ecd090a5b7448ba3e0fed6ba4c671393ea126be183f4418f8df6762e",
+      "group": "android-enlarged-current",
+      "fontScale": 2,
+      "textBoxes": 24,
+      "whollyOffscreen": 8,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/android-enlarged-current/profile.json",
+      "sha256": "04c26b45a6116ad97bd9514ed3a71981711e0f4106f6d2b4f1aeca16cdc029ef",
+      "group": "android-enlarged-current",
+      "fontScale": 2,
+      "textBoxes": 16,
+      "whollyOffscreen": 5,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-default-current/today.json",
+      "sha256": "f5e6b59a7ac08f9e10bf1c1934355ae8df6d51e6b513a825ec3a27074f67ef99",
+      "group": "ipad-default-current",
+      "fontScale": 1,
+      "textBoxes": 23,
+      "whollyOffscreen": 2,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-default-current/detail.json",
+      "sha256": "85c3d4b49ee03f4448423267052f7cf7176a2618ab30db20dcfb7e2a79835c51",
+      "group": "ipad-default-current",
+      "fontScale": 1,
+      "textBoxes": 22,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-default-current/active.json",
+      "sha256": "423bf97307097176b5ad0d9dfb95e8f0a6c56ce06e923d0871cc151b39b74d59",
+      "group": "ipad-default-current",
+      "fontScale": 1,
+      "textBoxes": 15,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-default-current/complete.json",
+      "sha256": "84088b6c6a13bb0df83df5f9081d4926c7f1ccf6370d32057c0378e9be04b99d",
+      "group": "ipad-default-current",
+      "fontScale": 1,
+      "textBoxes": 10,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-default-current/insights.json",
+      "sha256": "7670a7041da7183f996780bf9d8a2898172097e7b0db3eb12f34e68adcb4d717",
+      "group": "ipad-default-current",
+      "fontScale": 1,
+      "textBoxes": 24,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-default-current/profile.json",
+      "sha256": "bc5eff1294eeccd571f8b6604efca1ed52784e30f3244bdf211c7924d5b59838",
+      "group": "ipad-default-current",
+      "fontScale": 1,
+      "textBoxes": 18,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-enlarged-current/today.json",
+      "sha256": "f67ed8e2646fd341d041dc32a8216981518fda543bb1dab0856d98ccda081b61",
+      "group": "ipad-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 21,
+      "whollyOffscreen": 8,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-enlarged-current/detail.json",
+      "sha256": "b1d26414230fd3b271312694aa8e9e2652d9ab512c2bc76b531f3cbf35805063",
+      "group": "ipad-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 17,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-enlarged-current/active.json",
+      "sha256": "0789a773ffe6d9bb084fe559facbe7d5b129227af74e95c121199ed4341bf766",
+      "group": "ipad-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 10,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-enlarged-current/complete.json",
+      "sha256": "3019947a072d45384a4e24a340616340a092494a8cca3f614d2b2190fe87b621",
+      "group": "ipad-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 5,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-enlarged-current/insights.json",
+      "sha256": "1ca31428701bd4317df3d2d05049201bf4d1b43e1a20e418d21b3d1118c7500f",
+      "group": "ipad-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 22,
+      "whollyOffscreen": 7,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/ipad-enlarged-current/profile.json",
+      "sha256": "ea94662fd051b8e50e3bf4627be9b5e0790e2794b235517aa1ec5a912204bc00",
+      "group": "ipad-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 16,
+      "whollyOffscreen": 1,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-default-current/today.json",
+      "sha256": "adcf4cf6ecd8c7b647a23eb0fe0db75c0449406f8b267730550d17713c6f293c",
+      "group": "iphone-default-current",
+      "fontScale": 1,
+      "textBoxes": 21,
+      "whollyOffscreen": 10,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-default-current/detail.json",
+      "sha256": "51725c59cfdd1192cd6f4d2b3d7cc781e3b607b8be89f0591d29a6d7378affb2",
+      "group": "iphone-default-current",
+      "fontScale": 1,
+      "textBoxes": 17,
+      "whollyOffscreen": 1,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-default-current/active.json",
+      "sha256": "60e8fc2bab74b87d567d1fca815718ac8093da5b0baf3e3afbb9d098a193a356",
+      "group": "iphone-default-current",
+      "fontScale": 1,
+      "textBoxes": 10,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-default-current/complete.json",
+      "sha256": "5809e3d8e018c6339534841e99553cbd82d12375ab1bbd3ef2b3365b752cd06b",
+      "group": "iphone-default-current",
+      "fontScale": 1,
+      "textBoxes": 5,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-default-current/insights.json",
+      "sha256": "6e640aab61c17facb417e6d2ef5983e97ae48fdcaa105135e0aff36306202464",
+      "group": "iphone-default-current",
+      "fontScale": 1,
+      "textBoxes": 22,
+      "whollyOffscreen": 7,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-default-current/profile.json",
+      "sha256": "40b7bfe5d5946260e28b6c56a30cbb97ecb1520e11547b3e46aebfc75519364b",
+      "group": "iphone-default-current",
+      "fontScale": 1,
+      "textBoxes": 16,
+      "whollyOffscreen": 2,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-enlarged-current/today.json",
+      "sha256": "81889bbbac8d0ae34ad29f1d221c1110eb28b9849fb3f054214b2b06cc86194d",
+      "group": "iphone-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 21,
+      "whollyOffscreen": 13,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-enlarged-current/detail.json",
+      "sha256": "6539a3e35f4d37e638074582fa094f542363e0faf23acf9a358ac26fa96515d9",
+      "group": "iphone-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 17,
+      "whollyOffscreen": 8,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-enlarged-current/active.json",
+      "sha256": "fe08584458898644af0895483022875b6ecdb008b7be9c73365aa6564ec66b80",
+      "group": "iphone-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 13,
+      "whollyOffscreen": 3,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-enlarged-current/complete.json",
+      "sha256": "d03e89015506c6cbfd3cfc75039f49012cbb2002f76225c75059556df8498f54",
+      "group": "iphone-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 5,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-enlarged-current/insights.json",
+      "sha256": "194c109aa5e9481b5c57d6b054eb18e4044cded6a9ca874ac59a8751a7c0b6de",
+      "group": "iphone-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 22,
+      "whollyOffscreen": 12,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-enlarged-current/profile.json",
+      "sha256": "dfe780f24510a5b4c6c93ca253d2cc3761b636e24e58adc3193e79a5415fc97b",
+      "group": "iphone-enlarged-current",
+      "fontScale": 2.143,
+      "textBoxes": 16,
+      "whollyOffscreen": 9,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-maximum-current/today.json",
+      "sha256": "86c098f44fa7c9f0d6b4f0705df2708686954b03635841b8469862134739b666",
+      "group": "iphone-maximum-current",
+      "fontScale": 3.571,
+      "textBoxes": 19,
+      "whollyOffscreen": 15,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-maximum-current/detail.json",
+      "sha256": "ce3113563d26192817f8574cc3c06146bb2a2d83e9516d6bb586d72204c68328",
+      "group": "iphone-maximum-current",
+      "fontScale": 3.571,
+      "textBoxes": 17,
+      "whollyOffscreen": 12,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-maximum-current/active.json",
+      "sha256": "24239158238fb04d4dfded61cc89167935e845e75300d0a2da6365f6f493fd61",
+      "group": "iphone-maximum-current",
+      "fontScale": 3.571,
+      "textBoxes": 13,
+      "whollyOffscreen": 7,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-maximum-current/complete.json",
+      "sha256": "d93b547a942782412ab4a635abb4ed654a046876087b0c895a7334156282a0a3",
+      "group": "iphone-maximum-current",
+      "fontScale": 3.571,
+      "textBoxes": 5,
+      "whollyOffscreen": 0,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-maximum-current/insights.json",
+      "sha256": "a6dc16989fb02bc716a9dc88ed57695eef667150e3f52056be1591429088014b",
+      "group": "iphone-maximum-current",
+      "fontScale": 3.571,
+      "textBoxes": 20,
+      "whollyOffscreen": 15,
+      "findings": []
+    },
+    {
+      "file": "artifacts/vela/proof-native/iphone-maximum-current/profile.json",
+      "sha256": "e71740629aa4d30c7cf7037901f554809ee19f1cd6732d38db528387780d6875",
+      "group": "iphone-maximum-current",
+      "fontScale": 3.571,
+      "textBoxes": 14,
+      "whollyOffscreen": 10,
+      "findings": []
+    }
+  ],
+  "groups": [
+    {
+      "group": "android-default-current",
+      "receipts": 6,
+      "actualFontScales": [
+        1
+      ],
+      "consistent": true
+    },
+    {
+      "group": "android-enlarged-current",
+      "receipts": 6,
+      "actualFontScales": [
+        2
+      ],
+      "consistent": true
+    },
+    {
+      "group": "ipad-default-current",
+      "receipts": 6,
+      "actualFontScales": [
+        1
+      ],
+      "consistent": true
+    },
+    {
+      "group": "ipad-enlarged-current",
+      "receipts": 6,
+      "actualFontScales": [
+        2.143
+      ],
+      "consistent": true
+    },
+    {
+      "group": "iphone-default-current",
+      "receipts": 6,
+      "actualFontScales": [
+        1
+      ],
+      "consistent": true
+    },
+    {
+      "group": "iphone-enlarged-current",
+      "receipts": 6,
+      "actualFontScales": [
+        2.143
+      ],
+      "consistent": true
+    },
+    {
+      "group": "iphone-maximum-current",
+      "receipts": 6,
+      "actualFontScales": [
+        3.571
+      ],
+      "consistent": true
+    }
+  ]
+}

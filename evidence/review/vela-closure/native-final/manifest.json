@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "handoffIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+  "implementationIdentity": "f8cda49f7403262d4924a8dd2e34f71069d1728e6b5cfd269d57532f0cf759ad",
+  "files": [
+    {
+      "source": "artifacts/vela/proof-native/iphone-default-current/detail.json",
+      "frozen": "artifacts/review/vela-closure/native-final/iphone-default-current/detail.json",
+      "sha256": "656d844b64793c38b11cb091924b4e7ee54be66b462adfd9e580dd21c3b698ed"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-default-current/detail.png",
+      "frozen": "artifacts/review/vela-closure/native-final/iphone-default-current/detail.png",
+      "sha256": "bcb6c85d85c81fa3baa85cd378e1c10dd1d6acc6ab3c1e9fc2c2024a626c011b"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/detail.json",
+      "frozen": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/detail.json",
+      "sha256": "c12bf0f966da571da163beea34b0ca8fb4402a9835733d890e544691738e0588"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/detail.png",
+      "frozen": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/detail.png",
+      "sha256": "b7e5ead9c117220547fc40ef4e61aae2c6818c96c6626691c2520d4c3fe0d3c4"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/active.json",
+      "frozen": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/active.json",
+      "sha256": "b06e14669534da37f72aa7ef1a4bdfc69d7a2d2af592dfed6cb2bd8fba2c3af3"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/active.png",
+      "frozen": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/active.png",
+      "sha256": "0cffd655d9f5f81bb07f58359b8cbddbcd7f1e27fe8acb1426b7991b9a9d2598"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/complete.json",
+      "frozen": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/complete.json",
+      "sha256": "67629ccfbedac2c2fb048f283b78b518dd20dc5c1d46fe21760e15f8615788b2"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/complete.png",
+      "frozen": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/complete.png",
+      "sha256": "2c96d58c6aa2da81b14110721b779349567063a3cfb83b22c04be5b05d4b3126"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/insights.json",
+      "frozen": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/insights.json",
+      "sha256": "24d587606e4b2de44b7c3ef9e6e27a79c75df42cf5d03d7c70a328c9351bcc89"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/insights.png",
+      "frozen": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/insights.png",
+      "sha256": "1af73e131350502b4d0127913f791fe485d654bc3ca7568f60b39a50258b2427"
+    },
+    {
+      "source": "artifacts/vela/proof-native/ipad-default-current/detail.json",
+      "frozen": "artifacts/review/vela-closure/native-final/ipad-default-current/detail.json",
+      "sha256": "b91dfd61b0d5c76f0e506a6db13d4f89048cac0e094c1287b298146cac2a481b"
+    },
+    {
+      "source": "artifacts/vela/proof-native/ipad-default-current/detail.png",
+      "frozen": "artifacts/review/vela-closure/native-final/ipad-default-current/detail.png",
+      "sha256": "2dda49d26edcc723304e5c5f6958f8283c6dc8f26e966f400cf938aee1bb70a4"
+    },
+    {
+      "source": "artifacts/vela/proof-native/android-default-current/detail.json",
+      "frozen": "artifacts/review/vela-closure/native-final/android-default-current/detail.json",
+      "sha256": "7f7bf7831103b2413d7572c28da513b3f53bbac6751c895665853b27da0187b3"
+    },
+    {
+      "source": "artifacts/vela/proof-native/android-default-current/detail.png",
+      "frozen": "artifacts/review/vela-closure/native-final/android-default-current/detail.png",
+      "sha256": "8fa0099dd6c654c83e9f77ca4ae3629c6b6176ec440afc06045716c694ded183"
+    }
+  ]
+}

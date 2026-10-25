@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "engine": "react-native/Text+Yoga",
+  "platform": "android",
+  "label": "android-default-current",
+  "results": [
+    {
+      "screen": "today",
+      "viewport": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "tabs",
+      "targets": 4,
+      "texts": 22,
+      "textWidthFailures": 0,
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "detail",
+      "viewport": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "focused",
+      "targets": 2,
+      "texts": 18,
+      "textWidthFailures": 0,
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "active",
+      "viewport": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "focused",
+      "targets": 3,
+      "texts": 11,
+      "textWidthFailures": 0,
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "complete",
+      "viewport": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "focused",
+      "targets": 3,
+      "texts": 6,
+      "textWidthFailures": 0,
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "insights",
+      "viewport": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "tabs",
+      "targets": 4,
+      "texts": 26,
+      "textWidthFailures": 0,
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "profile",
+      "viewport": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "navigation": "tabs",
+      "targets": 7,
+      "texts": 17,
+      "textWidthFailures": 0,
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    }
+  ],
+  "scope": "Actual default viewport/scaling text and target observations; task flows and visual critique are separate."
+}

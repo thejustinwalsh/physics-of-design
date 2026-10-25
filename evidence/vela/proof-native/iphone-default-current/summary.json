@@ -1,0 +1,517 @@
+{
+  "passed": true,
+  "engine": "react-native/Text+Yoga",
+  "platform": "ios",
+  "label": "iphone-default-current",
+  "results": [
+    {
+      "screen": "today",
+      "viewport": {
+        "fontScale": 1,
+        "width": 402,
+        "height": 874,
+        "scale": 3
+      },
+      "navigation": "tabs",
+      "targets": 4,
+      "texts": 22,
+      "textWidthFailures": 0,
+      "textWidthUnknown": 0,
+      "textCoverage": {
+        "scope": "all-nonzero-measured-text-boxes",
+        "measured": 21,
+        "whollyOffscreen": 10,
+        "zeroAreaExcluded": 1
+      },
+      "primaryCheck": {
+        "status": "not-applicable",
+        "screen": "today"
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 402,
+          "height": 874
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 402,
+          "height": 874,
+          "scale": 3
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 402,
+            "height": 874,
+            "scale": 3
+          }
+        },
+        "projectedSafeArea": {
+          "top": 62,
+          "left": 0,
+          "right": 0,
+          "bottom": 34
+        },
+        "expectedDesignViewport": {
+          "width": 402,
+          "height": 778,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "detail",
+      "viewport": {
+        "fontScale": 1,
+        "width": 402,
+        "height": 874,
+        "scale": 3
+      },
+      "navigation": "focused",
+      "targets": 2,
+      "texts": 18,
+      "textWidthFailures": 0,
+      "textWidthUnknown": 0,
+      "textCoverage": {
+        "scope": "all-nonzero-measured-text-boxes",
+        "measured": 17,
+        "whollyOffscreen": 1,
+        "zeroAreaExcluded": 1
+      },
+      "primaryCheck": {
+        "status": "verified",
+        "screen": "detail",
+        "label": "Start session",
+        "targetId": "control-26",
+        "clipId": "clip-25",
+        "box": {
+          "x": 20,
+          "y": 767.999979019165,
+          "width": 362,
+          "height": 52
+        },
+        "screenBox": {
+          "x": 20,
+          "y": 767.999979019165,
+          "width": 362,
+          "height": 52
+        },
+        "tolerance": 1
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 402,
+          "height": 874
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 402,
+          "height": 874,
+          "scale": 3
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 402,
+            "height": 874,
+            "scale": 3
+          }
+        },
+        "projectedSafeArea": {
+          "top": 62,
+          "left": 0,
+          "right": 0,
+          "bottom": 34
+        },
+        "expectedDesignViewport": {
+          "width": 402,
+          "height": 778,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "active",
+      "viewport": {
+        "fontScale": 1,
+        "width": 402,
+        "height": 874,
+        "scale": 3
+      },
+      "navigation": "focused",
+      "targets": 3,
+      "texts": 11,
+      "textWidthFailures": 0,
+      "textWidthUnknown": 0,
+      "textCoverage": {
+        "scope": "all-nonzero-measured-text-boxes",
+        "measured": 10,
+        "whollyOffscreen": 0,
+        "zeroAreaExcluded": 1
+      },
+      "primaryCheck": {
+        "status": "verified",
+        "screen": "active",
+        "label": "Resume session",
+        "targetId": "control-17",
+        "clipId": "clip-16",
+        "box": {
+          "x": 20,
+          "y": 694.6666660308838,
+          "width": 362,
+          "height": 52
+        },
+        "screenBox": {
+          "x": 20,
+          "y": 694.6666660308838,
+          "width": 362,
+          "height": 52
+        },
+        "tolerance": 1
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 402,
+          "height": 874
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 402,
+          "height": 874,
+          "scale": 3
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 402,
+            "height": 874,
+            "scale": 3
+          }
+        },
+        "projectedSafeArea": {
+          "top": 62,
+          "left": 0,
+          "right": 0,
+          "bottom": 34
+        },
+        "expectedDesignViewport": {
+          "width": 402,
+          "height": 778,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "complete",
+      "viewport": {
+        "fontScale": 1,
+        "width": 402,
+        "height": 874,
+        "scale": 3
+      },
+      "navigation": "focused",
+      "targets": 3,
+      "texts": 6,
+      "textWidthFailures": 0,
+      "textWidthUnknown": 0,
+      "textCoverage": {
+        "scope": "all-nonzero-measured-text-boxes",
+        "measured": 5,
+        "whollyOffscreen": 0,
+        "zeroAreaExcluded": 1
+      },
+      "primaryCheck": {
+        "status": "verified",
+        "screen": "complete",
+        "label": "Back to Today",
+        "targetId": "control-13",
+        "clipId": "clip-12",
+        "box": {
+          "x": 20,
+          "y": 694.6666660308838,
+          "width": 362,
+          "height": 52
+        },
+        "screenBox": {
+          "x": 20,
+          "y": 694.6666660308838,
+          "width": 362,
+          "height": 52
+        },
+        "tolerance": 1
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 402,
+          "height": 874
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 402,
+          "height": 874,
+          "scale": 3
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 402,
+            "height": 874,
+            "scale": 3
+          }
+        },
+        "projectedSafeArea": {
+          "top": 62,
+          "left": 0,
+          "right": 0,
+          "bottom": 34
+        },
+        "expectedDesignViewport": {
+          "width": 402,
+          "height": 778,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "insights",
+      "viewport": {
+        "fontScale": 1,
+        "width": 402,
+        "height": 874,
+        "scale": 3
+      },
+      "navigation": "tabs",
+      "targets": 4,
+      "texts": 24,
+      "textWidthFailures": 0,
+      "textWidthUnknown": 0,
+      "textCoverage": {
+        "scope": "all-nonzero-measured-text-boxes",
+        "measured": 22,
+        "whollyOffscreen": 7,
+        "zeroAreaExcluded": 2
+      },
+      "primaryCheck": {
+        "status": "not-applicable",
+        "screen": "insights"
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 402,
+          "height": 874
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 402,
+          "height": 874,
+          "scale": 3
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 402,
+            "height": 874,
+            "scale": 3
+          }
+        },
+        "projectedSafeArea": {
+          "top": 62,
+          "left": 0,
+          "right": 0,
+          "bottom": 34
+        },
+        "expectedDesignViewport": {
+          "width": 402,
+          "height": 778,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "profile",
+      "viewport": {
+        "fontScale": 1,
+        "width": 402,
+        "height": 874,
+        "scale": 3
+      },
+      "navigation": "tabs",
+      "targets": 7,
+      "texts": 17,
+      "textWidthFailures": 0,
+      "textWidthUnknown": 0,
+      "textCoverage": {
+        "scope": "all-nonzero-measured-text-boxes",
+        "measured": 16,
+        "whollyOffscreen": 2,
+        "zeroAreaExcluded": 1
+      },
+      "primaryCheck": {
+        "status": "not-applicable",
+        "screen": "profile"
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 402,
+          "height": 874
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 402,
+          "height": 874,
+          "scale": 3
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 402,
+            "height": 874,
+            "scale": 3
+          }
+        },
+        "projectedSafeArea": {
+          "top": 62,
+          "left": 0,
+          "right": 0,
+          "bottom": 34
+        },
+        "expectedDesignViewport": {
+          "width": 402,
+          "height": 778,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    }
+  ],
+  "observedFontScaleBaseline": 1,
+  "observedFontScales": [
+    1
+  ],
+  "scope": "Actual declared viewport/scaling. Intrinsic text fit checks every nonzero measured text box, including mounted offscreen scroll content; scroll clipping is separate. Visible target checks, task flows and visual critique have separate scopes."
+}

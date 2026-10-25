@@ -11,6 +11,14 @@ import { createHash } from 'node:crypto';
 import { assertNativePrimary } from './native-primary.mjs';
 import path from 'node:path';
 import { nativeSourceIdentity } from './native-source-identity.mjs';
+import { diagnoseNativeTextWidths } from '../dist/native-text-diagnostics.js';
+import {
+  assertFullVerification,
+  assertVelaFlow,
+  assertFlowXml,
+  curatedCurrentEvidenceFiles,
+  verificationStages,
+} from './evidence-policy.mjs';
 
 const files = new Set();
 const coreOnly = process.argv.includes('--core-only');
@@ -58,7 +66,6 @@ if (!coreOnly) {
     'review/astra/after-frozen-hashes.json',
     'review/astra/after-detector.json',
     'review/astra/measure-after.mjs',
-    'verification',
     'verification-interrupted',
     'system/android-longword-failure.json',
     'system/android-longword-recovery.json',
@@ -90,6 +97,11 @@ if (!coreOnly) {
   for (const platform of ['web', 'native-ios', 'native-android'])
     for (const name of ['summary.json', 'observations.jsonl'])
       await include(`system/${platform}/${name}`);
+  for (const name of [
+    'summary.json',
+    ...verificationStages.map((stage) => `${stage}.log`),
+  ])
+    await include(`verification-web-domain-failure/${name}`);
   for (const label of [
     'web',
     'ipad',
@@ -115,6 +127,9 @@ async function includeCore() {
   const require = (condition, message) => {
     if (!condition) throw new Error(message);
   };
+  const verification = await read('verification/summary.json');
+  assertFullVerification(verification);
+  for (const name of curatedCurrentEvidenceFiles) await include(name);
   const machine = await read('vela/machine-proof.json');
   const identity = machine.handoffIdentity;
   const implementationIdentity = await nativeSourceIdentity();
@@ -122,6 +137,21 @@ async function includeCore() {
     /^[a-f0-9]{64}$/.test(identity), 'Missing current machine identity');
   await include('vela/machine-proof.json');
   const web = await read('vela/proof-web/report.json');
+  require(web.implementationProvenance?.algorithm === 'sha256' &&
+    web.implementationProvenance.sharedNativeSourceIdentity ===
+      implementationIdentity, 'Web proof does not bind the current shared runtime/font source identity');
+  for (const file of [
+    'examples/vela/web.jsx',
+    'artifacts/vela/web/app.js',
+    'scripts/build-vela.mjs',
+    'package-lock.json',
+  ]) {
+    const hash = createHash('sha256')
+      .update(await readFile(file))
+      .digest('hex');
+    require(web.implementationProvenance.files?.[file] ===
+      hash, `Web proof is stale for ${file}`);
+  }
   require(web.scenarios === 72 &&
     web.observations?.length === 72 &&
     web.failures?.length === 0 &&
@@ -144,12 +174,38 @@ async function includeCore() {
       for (const scale of [1, 2, 2.143, 3.6])
         await include(`vela/proof-web/${screen}-${width}-${scale}.png`);
   await include('vela/proof-web/menu-390-3.6.png');
+  for (const name of [
+    'save-error',
+    'restore-error-throw',
+    'restore-error-corrupt-json',
+    'restore-error-invalid-schema',
+  ])
+    await include(`vela/proof-web/${name}.png`);
   await include('vela/diagnostics/android-trailing-advance/detail.json');
   await include('vela/diagnostics/android-trailing-advance/detail.png');
+  await include('vela/diagnostics/android-root-bounds/detail-receipt.json');
+  await include('vela/diagnostics/android-root-bounds/detail.png');
+  for (const name of [
+    'report.json',
+    'vela-web.log',
+    'today-834-3.6.png',
+    'assessment.json',
+  ])
+    await include(`vela/diagnostics/web-transient/${name}`);
+
+  const textCoverage = await read('vela/native-text-coverage-posthoc.json');
+  const diagnosticSourceSha256 = createHash('sha256')
+    .update(await readFile('src/native-text-diagnostics.ts'))
+    .digest('hex');
+  require(textCoverage.passed === true &&
+    textCoverage.implementationIdentity === implementationIdentity &&
+    textCoverage.diagnosticSourceSha256 ===
+      diagnosticSourceSha256, 'Native text recheck does not match the current implementation/diagnostics');
+  const nativeTextTotals = { receipts: 0, textBoxes: 0, whollyOffscreen: 0 };
 
   const labels = (
     process.env.EVIDENCE_VELA_NATIVE_LABELS ??
-    'iphone-enlarged-current,iphone-default-current,ipad-default-current,android-default-current,android-enlarged-current'
+    'iphone-enlarged-current,iphone-default-current,ipad-default-current,ipad-enlarged-current,android-default-current,android-enlarged-current'
   ).split(',');
   if (!process.env.EVIDENCE_VELA_NATIVE_LABELS) {
     try {
@@ -174,6 +230,7 @@ async function includeCore() {
         summary.results.some((result) => result.screen === screen),
       ), `Incomplete native summary: ${label}`);
     await include(`${base}/summary.json`);
+    let fontScale;
     for (const screen of screens) {
       const proof = await read(`${base}/${screen}.json`);
       assertNativePrimary(proof.receipt);
@@ -189,10 +246,54 @@ async function includeCore() {
         proof.textWidthUnknown?.length === 0 &&
         (proof.audit?.failures?.length ?? 0) ===
           0, `Stale, incomplete or failed native receipt: ${label}/${screen}`);
+      fontScale ??= proof.receipt.snapshot.window.fontScale;
+      require(Number.isFinite(fontScale) &&
+        fontScale > 0 &&
+        Math.abs(fontScale - proof.receipt.snapshot.window.fontScale) <
+          0.0001, `Native font scale changed within ${label}`);
+      const file = `artifacts/${base}/${screen}.json`;
+      const hash = createHash('sha256')
+        .update(await readFile(file))
+        .digest('hex');
+      const recheck = textCoverage.checks?.find((row) => row.file === file);
+      const text = proof.receipt.observations.filter(
+        (o) => o.kind === 'text' && o.box.width > 0 && o.box.height > 0,
+      );
+      const offscreen = text.filter(
+        (o) => o.visibleBox.width <= 0 || o.visibleBox.height <= 0,
+      ).length;
+      require(recheck?.sha256 === hash &&
+        recheck.findings.length === 0 &&
+        recheck.textBoxes === text.length &&
+        recheck.whollyOffscreen === offscreen &&
+        recheck.fontScale ===
+          proof.receipt.snapshot.window
+            .fontScale, `Native text recheck is missing/stale: ${label}/${screen}`);
+      for (const item of text) {
+        require(item.lines?.length >
+          0, `Native Text callback missing: ${label}/${screen}/${item.id}`);
+        const checks = diagnoseNativeTextWidths({
+          platform: label.startsWith('android-') ? 'android' : 'ios',
+          box: item.box,
+          lines: item.lines,
+          textLayoutIdentity: item.textLayoutIdentity,
+        });
+        require(checks.every(
+          (check) => check.status === 'pass',
+        ), `Native intrinsic text fit failed/unknown: ${label}/${screen}/${item.id}`);
+      }
+      nativeTextTotals.receipts++;
+      nativeTextTotals.textBoxes += text.length;
+      nativeTextTotals.whollyOffscreen += offscreen;
       await include(`${base}/${screen}.json`);
       await include(`${base}/${screen}.png`);
     }
   }
+  require(textCoverage.receipts === nativeTextTotals.receipts &&
+    textCoverage.textBoxes === nativeTextTotals.textBoxes &&
+    textCoverage.whollyOffscreen ===
+      nativeTextTotals.whollyOffscreen, 'Native text recheck totals differ from the selected evidence');
+  await include('vela/native-text-coverage-posthoc.json');
 
   // An explicit successful run prevents accidental publication of diagnostic
   // failures or selection of an older run merely because it exists.
@@ -202,9 +303,22 @@ async function includeCore() {
       flowId,
     ), 'Set EVIDENCE_VELA_ANDROID_FLOW to the final successful flows-<timestamp> run');
   const base = `vela/flows-android/${flowId}`;
-  require((await read(`${base}/summary.json`)).passed ===
-    true, 'Android flow did not pass');
+  const flow = await read(`${base}/summary.json`);
+  assertVelaFlow(flow);
   await include(`${base}/summary.json`);
+  for (const event of flow.events) {
+    if (event.accessibilityOracle?.status === 'verified') {
+      const xml = event.accessibilityOracle.file;
+      assertFlowXml(
+        event,
+        await readFile(path.join('artifacts', base, xml), 'utf8'),
+      );
+      await include(`${base}/${xml}`);
+    } else
+      require(event.accessibilityOracle?.status === 'unavailable' &&
+        typeof event.accessibilityOracle.reason ===
+          'string', 'Unverified flow action must identify its unavailable oracle');
+  }
   for (const name of [
     'running',
     'paused',
@@ -225,6 +339,7 @@ async function includeCore() {
     identity,
     implementationIdentity,
     nativeLabels: labels,
+    nativeTextTotals,
     androidFlow: flowId,
   };
 }

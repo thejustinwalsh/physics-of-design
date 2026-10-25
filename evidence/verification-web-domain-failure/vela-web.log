@@ -1,0 +1,122 @@
+Captured 72 browser scenarios.
+{
+  "scenarios": 72,
+  "screenshots": "artifacts/vela/proof-web",
+  "palette": [
+    {
+      "input": "color(display-p3 1 0 0)",
+      "emitted": {
+        "css": "#ff0b0c",
+        "hex": "#ff0b0c",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": true,
+        "deltaEOK": 0.047761307526658664,
+        "oklab": [
+          0.6301652091442145,
+          0.22359747808311436,
+          0.12345443896260727
+        ]
+      },
+      "observed": "#ff0b0c",
+      "measurementRef": "color:78d4c3bd5df0ff8d641d11f43791d7100a8a3b066cc89feb2be6983a001e7462"
+    },
+    {
+      "input": "oklch(0.7 0.2 220)",
+      "emitted": {
+        "css": "#00b2dd",
+        "hex": "#00b2dd",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": true,
+        "deltaEOK": 0.0689254734497465,
+        "oklab": [
+          0.7088048197123072,
+          -0.09637325284688131,
+          -0.09057191221547489
+        ]
+      },
+      "observed": "#00b2dd",
+      "measurementRef": "color:28424e919092878cb03c236356c820532576b51fd10ecbc4698464684d55fdd3"
+    },
+    {
+      "input": "lab(55% 65 -40)",
+      "emitted": {
+        "css": "#d24acb",
+        "hex": "#d24acb",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": false,
+        "deltaEOK": 0.0007921775554076717,
+        "oklab": [
+          0.640917292784127,
+          0.1926600428687545,
+          -0.11150438132185714
+        ]
+      },
+      "observed": "#d24acb",
+      "measurementRef": "color:e9097d0b9c8918a44d526dcf11d2a311759f4ac2953d196a4567f09a4cb6dd01"
+    },
+    {
+      "input": "hsl(245 80% 55%)",
+      "emitted": {
+        "css": "#4030e8",
+        "hex": "#4030e8",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": false,
+        "deltaEOK": 0.0006485729661859679,
+        "oklab": [
+          0.47570631205056113,
+          0.019556549882558116,
+          -0.2561511591507945
+        ]
+      },
+      "observed": "#4030e8",
+      "measurementRef": "color:e2c452cd985f0d3293aaa699b68cd8aa61fd295745c13d81024b630a5654b120"
+    },
+    {
+      "input": "red 0.5 over white",
+      "expected": "#ff7f7f",
+      "observed": "#ff7f7f"
+    },
+    {
+      "input": "white 0.5 over black 0.5 over white",
+      "expected": "#bfbfbf",
+      "observed": "#bfbfbf"
+    },
+    {
+      "input": "black 0.5 over white compared with black neighbor",
+      "expected": [
+        "#7f7f7f",
+        "#7f7f7f"
+      ],
+      "observed": "#7f7f7f"
+    }
+  ],
+  "failures": [
+    "Browser errors: [{\"message\":\"Error: Nonfinite log2 result\",\"stack\":\"Error: Nonfinite log2 result\\n    at At (http://127.0.0.1:64846/app.js:13:4607)\\n    at tz (http://127.0.0.1:64846/app.js:13:5112)\\n    at http://127.0.0.1:64846/app.js:87:3072\\n    at Object.HS [as useMemo] (http://127.0.0.1:64846/app.js:8:56800)\\n    at H.useMemo (http://127.0.0.1:64846/app.js:1:7832)\\n    at GU (http://127.0.0.1:64846/app.js:87:3067)\\n    at Jp (http://127.0.0.1:64846/app.js:8:47917)\\n    at ap (http://127.0.0.1:64846/app.js:8:70686)\\n    at f1 (http://127.0.0.1:64846/app.js:8:81027)\\n    at L1 (http://127.0.0.1:64846/app.js:8:116748)\",\"phase\":\"today-834-3.6\",\"url\":\"http://127.0.0.1:64846/?view=today&textScale=3.6\",\"context\":{\"width\":834,\"height\":1000,\"screen\":\"today\",\"lastResolved\":{\"body\":19,\"bodyLeading\":1.5,\"damping\":18,\"density\":0.9,\"display\":80,\"gutter\":20,\"radius\":24,\"space\":22,\"stiffness\":200,\"titleLeading\":1.12,\"tracking\":-0.04,\"width\":834,\"height\":1000,\"textScale\":3.6,\"reducedMotion\":1,\"bodySize\":19,\"dampingRatio\":0.6363961030678927,\"gap\":19.8,\"groupRatio\":1.0421052631578949,\"navLabelSize\":11.97,\"navRail\":0,\"navRailWidth\":0,\"operatingHeadingSize\":26.599999999999998,\"overshoot\":0.07487734250910066,\"pageDistance\":29.700000000000003,\"pageGutter\":20,\"paneWidth\":834,\"contentWidth\":794,\"leadingTarget\":1.5171578947368423,\"leadingResidual\":-0.01715789473684226,\"navCompact\":0,\"paired\":0,\"cardWidth\":794,\"phaseStacked\":1,\"railLabelSize\":16.15,\"sectionGap\":39.6,\"timerInnerWidth\":754,\"titleSize\":80,\"displayLeadingResidual\":2.220446049250313e-16,\"hierarchy\":2.074000581443777,\"predictedHeadlineLines\":3,\"predictedHeadlineHeight\":967.6800000000001,\"compactHierarchy\":1,\"expressiveHeadingSize\":26.599999999999998,\"heroActionFirst\":1,\"sectionHeadingSize\":26.599999999999998,\"sessionNumeralSize\":31.349999999999998,\"timerSize\":88,\"timerStacked\":1,\"titleFill\":0.5104282115869018,\"trackingTarget\":-0.044000000000000004,\"trackingResidual\":0.0040000000000000036}}}]"
+  ]
+}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Browser errors: [{"message":"Error: Nonfinite log2 result","stack":"Error: Nonfinite log2 result\n    at At (http://127.0.0.1:64846/app.js:13:4607)\n    at tz (http://127.0.0.1:64846/app.js:13:5112)\n    at http://127.0.0.1:64846/app.js:87:3072\n    at Object.HS [as useMemo] (http://127.0.0.1:64846/app.js:8:56800)\n    at H.useMemo (http://127.0.0.1:64846/app.js:1:7832)\n    at GU (http://127.0.0.1:64846/app.js:87:3067)\n    at Jp (http://127.0.0.1:64846/app.js:8:47917)\n    at ap (http://127.0.0.1:64846/app.js:8:70686)\n    at f1 (http://127.0.0.1:64846/app.js:8:81027)\n    at L1 (http://127.0.0.1:64846/app.js:8:116748)","phase":"today-834-3.6","url":"http://127.0.0.1:64846/?view=today&textScale=3.6","context":{"width":834,"height":1000,"screen":"today","lastResolved":{"body":19,"bodyLeading":1.5,"damping":18,"density":0.9,"display":80,"gutter":20,"radius":24,"space":22,"stiffness":200,"titleLeading":1.12,"tracking":-0.04,"width":834,"height":1000,"textScale":3.6,"reducedMotion":1,"bodySize":19,"dampingRatio":0.6363961030678927,"gap":19.8,"groupRatio":1.0421052631578949,"navLabelSize":11.97,"navRail":0,"navRailWidth":0,"operatingHeadingSize":26.599999999999998,"overshoot":0.07487734250910066,"pageDistance":29.700000000000003,"pageGutter":20,"paneWidth":834,"contentWidth":794,"leadingTarget":1.5171578947368423,"leadingResidual":-0.01715789473684226,"navCompact":0,"paired":0,"cardWidth":794,"phaseStacked":1,"railLabelSize":16.15,"sectionGap":39.6,"timerInnerWidth":754,"titleSize":80,"displayLeadingResidual":2.220446049250313e-16,"hierarchy":2.074000581443777,"predictedHeadlineLines":3,"predictedHeadlineHeight":967.6800000000001,"compactHierarchy":1,"expressiveHeadingSize":26.599999999999998,"heroActionFirst":1,"sectionHeadingSize":26.599999999999998,"sessionNumeralSize":31.349999999999998,"timerSize":88,"timerStacked":1,"titleFill":0.5104282115869018,"trackingTarget":-0.044000000000000004,"trackingResidual":0.0040000000000000036}}}]
+
+1 !== 0
+
+    at file:///Volumes/Depot/Developer/design-theory/scripts/prove-vela-web.mjs:893:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.9.0

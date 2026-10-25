@@ -1,0 +1,17 @@
+(node:91795) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ real StyleX/React rendering, thresholds, spacing tolerance and stale measurements (1117.884334ms)
+✔ search keeps multiple viable alternatives at unseen widths and text scaling (3447.934292ms)
+✔ editable proof exposes real baseline guides, font comparisons and dependency effects (377.186792ms)
+✔ unseen localized content reflows; missing-script fallback is explicitly rejected (413.709583ms)
+✔ one emitted flex specimen responds to actual container resizing across phone, iPad and desktop (458.764167ms)
+✔ variable-font axes and Arabic shaping are verified in the actual browser (238.39775ms)
+✔ palette choices reach actual StyleX colors and rendered text cannot evade contrast constraints (626.205875ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7126.665833

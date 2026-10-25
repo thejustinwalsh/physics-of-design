@@ -1,18 +1,37 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-25T03:25:24.411Z",
+  "generatedAt": "2026-10-25T06:37:36.803Z",
+  "core": {
+    "identity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+    "implementationIdentity": "54a5fd6cf374ea679a96425a20c4a6b730a12bd5085a0e5e867a081976fc619c",
+    "nativeLabels": [
+      "iphone-enlarged-current",
+      "iphone-default-current",
+      "ipad-default-current",
+      "ipad-enlarged-current",
+      "android-default-current",
+      "android-enlarged-current",
+      "iphone-maximum-current"
+    ],
+    "nativeTextTotals": {
+      "receipts": 42,
+      "textBoxes": 665,
+      "whollyOffscreen": 189
+    },
+    "androidFlow": "flows-1792908583406"
+  },
   "files": [
     {
       "path": "context/budget.json",
       "source": "artifacts/context/budget.json",
-      "bytes": 338,
-      "sha256": "475bd3bb01eafefd5b6907ba0f4dfcdfb1b731cc1fa5b63eeb4b10b84b986595"
+      "bytes": 339,
+      "sha256": "d365f58e7b4d8ed4039167680adfee7dd65690595859ad1a78741b372827b5e2"
     },
     {
       "path": "context/token-counts.json",
       "source": "artifacts/context/token-counts.json",
-      "bytes": 488,
-      "sha256": "b7956823b1f445c6f1f0d36fa5b7d8a7942962277afa8a928079462bdd5920b1"
+      "bytes": 460,
+      "sha256": "0196c78186be0ed0dd730970888bc5a5c54e86bd67eb49afb78c98f20f7f7e3b"
     },
     {
       "path": "evaluation-v2/analysis.json",
@@ -2028,7 +2047,7 @@
       "path": "review/root-audit.json",
       "source": "artifacts/review/root-audit.json",
       "bytes": 364,
-      "sha256": "3dab187d5787f90b12e94fd3c693eddc70d9b32c37a3cd204a7cd284eea6d963"
+      "sha256": "1dc328a4a57532b2518df43c1f81f25cb8a0f852d7868b79cb09570952b1aeec"
     },
     {
       "path": "review/selector-review-regressions.log",
@@ -2037,16 +2056,442 @@
       "sha256": "c0b51e3e749e89fda7a5ee1e30d413c5a18ca5b82d478708efc220a737c10961"
     },
     {
+      "path": "review/vela-closure/measured-root-after/android-enlarged-current/active.json",
+      "source": "artifacts/review/vela-closure/measured-root-after/android-enlarged-current/active.json",
+      "bytes": 39870,
+      "sha256": "d9a7e3a56a8a43f94c3428de977b3bfb7ab62b5fb261cd74ba58e6be76268315"
+    },
+    {
+      "path": "review/vela-closure/measured-root-after/android-enlarged-current/active.png",
+      "source": "artifacts/review/vela-closure/measured-root-after/android-enlarged-current/active.png",
+      "bytes": 149536,
+      "sha256": "c7465846c26d2e0716e49ef362522cebabb11de00d278675a9901562adcaf51c"
+    },
+    {
+      "path": "review/vela-closure/measured-root-after/android-enlarged-current/detail.json",
+      "source": "artifacts/review/vela-closure/measured-root-after/android-enlarged-current/detail.json",
+      "bytes": 48061,
+      "sha256": "5ef8334fbbb591cd5d3f701dfd5cf65e682a3c8ba6809c7776f914e284c25056"
+    },
+    {
+      "path": "review/vela-closure/measured-root-after/android-enlarged-current/detail.png",
+      "source": "artifacts/review/vela-closure/measured-root-after/android-enlarged-current/detail.png",
+      "bytes": 162226,
+      "sha256": "05b17761fa8f499a0f256017a7f46147898e4e2379629d6e39138079187623c5"
+    },
+    {
+      "path": "review/vela-closure/measured-root-after/iphone-maximum-current/active.json",
+      "source": "artifacts/review/vela-closure/measured-root-after/iphone-maximum-current/active.json",
+      "bytes": 49006,
+      "sha256": "24239158238fb04d4dfded61cc89167935e845e75300d0a2da6365f6f493fd61"
+    },
+    {
+      "path": "review/vela-closure/measured-root-after/iphone-maximum-current/active.png",
+      "source": "artifacts/review/vela-closure/measured-root-after/iphone-maximum-current/active.png",
+      "bytes": 224348,
+      "sha256": "b21c3480cc0e99acfd64d200b94a7bfd0f666fa357b440143eba9e4190efe4d3"
+    },
+    {
+      "path": "review/vela-closure/measured-root-after/iphone-maximum-current/detail.json",
+      "source": "artifacts/review/vela-closure/measured-root-after/iphone-maximum-current/detail.json",
+      "bytes": 56165,
+      "sha256": "ce3113563d26192817f8574cc3c06146bb2a2d83e9516d6bb586d72204c68328"
+    },
+    {
+      "path": "review/vela-closure/measured-root-after/iphone-maximum-current/detail.png",
+      "source": "artifacts/review/vela-closure/measured-root-after/iphone-maximum-current/detail.png",
+      "bytes": 217158,
+      "sha256": "9caf1b3cc3686524ee93e1ff4ed53533df47a02d4b641b5d446acdb66858969d"
+    },
+    {
+      "path": "review/vela-closure/measured-root-after/manifest.json",
+      "source": "artifacts/review/vela-closure/measured-root-after/manifest.json",
+      "bytes": 3024,
+      "sha256": "57dc2a2af6eaea40c87ba8dccf9bbfee9d8bd8f381a6144afcdf2b0cac7e6c43"
+    },
+    {
+      "path": "review/vela-closure/measured-root-before/detail-receipt.json",
+      "source": "artifacts/review/vela-closure/measured-root-before/detail-receipt.json",
+      "bytes": 31898,
+      "sha256": "a471edd065756a7485c0ee4fa3dfbdcc4afb935e447ce1dd0b8e4bb32625fa3f"
+    },
+    {
+      "path": "review/vela-closure/measured-root-before/detail.png",
+      "source": "artifacts/review/vela-closure/measured-root-before/detail.png",
+      "bytes": 163308,
+      "sha256": "0e1feaa5db0d6cb1bf9432cd0cebcaab16e225a2ebf8b8a17b92bf4181dff645"
+    },
+    {
+      "path": "review/vela-closure/measured-root-before/manifest.json",
+      "source": "artifacts/review/vela-closure/measured-root-before/manifest.json",
+      "bytes": 603,
+      "sha256": "0266e248b22e0970e79d2f4768d4e046234250f3237da9e6cebcd9d3ff63d692"
+    },
+    {
+      "path": "review/vela-closure/native-final/android-default-current/detail.json",
+      "source": "artifacts/review/vela-closure/native-final/android-default-current/detail.json",
+      "bytes": 46345,
+      "sha256": "7f7bf7831103b2413d7572c28da513b3f53bbac6751c895665853b27da0187b3"
+    },
+    {
+      "path": "review/vela-closure/native-final/android-default-current/detail.png",
+      "source": "artifacts/review/vela-closure/native-final/android-default-current/detail.png",
+      "bytes": 180928,
+      "sha256": "8fa0099dd6c654c83e9f77ca4ae3629c6b6176ec440afc06045716c694ded183"
+    },
+    {
+      "path": "review/vela-closure/native-final/ipad-default-current/detail.json",
+      "source": "artifacts/review/vela-closure/native-final/ipad-default-current/detail.json",
+      "bytes": 57780,
+      "sha256": "b91dfd61b0d5c76f0e506a6db13d4f89048cac0e094c1287b298146cac2a481b"
+    },
+    {
+      "path": "review/vela-closure/native-final/ipad-default-current/detail.png",
+      "source": "artifacts/review/vela-closure/native-final/ipad-default-current/detail.png",
+      "bytes": 242751,
+      "sha256": "2dda49d26edcc723304e5c5f6958f8283c6dc8f26e966f400cf938aee1bb70a4"
+    },
+    {
+      "path": "review/vela-closure/native-final/iphone-default-current/detail.json",
+      "source": "artifacts/review/vela-closure/native-final/iphone-default-current/detail.json",
+      "bytes": 48596,
+      "sha256": "656d844b64793c38b11cb091924b4e7ee54be66b462adfd9e580dd21c3b698ed"
+    },
+    {
+      "path": "review/vela-closure/native-final/iphone-default-current/detail.png",
+      "source": "artifacts/review/vela-closure/native-final/iphone-default-current/detail.png",
+      "bytes": 241336,
+      "sha256": "bcb6c85d85c81fa3baa85cd378e1c10dd1d6acc6ab3c1e9fc2c2024a626c011b"
+    },
+    {
+      "path": "review/vela-closure/native-final/iphone-enlarged-current/active.json",
+      "source": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/active.json",
+      "bytes": 43833,
+      "sha256": "b06e14669534da37f72aa7ef1a4bdfc69d7a2d2af592dfed6cb2bd8fba2c3af3"
+    },
+    {
+      "path": "review/vela-closure/native-final/iphone-enlarged-current/active.png",
+      "source": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/active.png",
+      "bytes": 218305,
+      "sha256": "0cffd655d9f5f81bb07f58359b8cbddbcd7f1e27fe8acb1426b7991b9a9d2598"
+    },
+    {
+      "path": "review/vela-closure/native-final/iphone-enlarged-current/complete.json",
+      "source": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/complete.json",
+      "bytes": 33416,
+      "sha256": "67629ccfbedac2c2fb048f283b78b518dd20dc5c1d46fe21760e15f8615788b2"
+    },
+    {
+      "path": "review/vela-closure/native-final/iphone-enlarged-current/complete.png",
+      "source": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/complete.png",
+      "bytes": 254842,
+      "sha256": "2c96d58c6aa2da81b14110721b779349567063a3cfb83b22c04be5b05d4b3126"
+    },
+    {
+      "path": "review/vela-closure/native-final/iphone-enlarged-current/detail.json",
+      "source": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/detail.json",
+      "bytes": 50225,
+      "sha256": "c12bf0f966da571da163beea34b0ca8fb4402a9835733d890e544691738e0588"
+    },
+    {
+      "path": "review/vela-closure/native-final/iphone-enlarged-current/detail.png",
+      "source": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/detail.png",
+      "bytes": 231602,
+      "sha256": "b7e5ead9c117220547fc40ef4e61aae2c6818c96c6626691c2520d4c3fe0d3c4"
+    },
+    {
+      "path": "review/vela-closure/native-final/iphone-enlarged-current/insights.json",
+      "source": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/insights.json",
+      "bytes": 57358,
+      "sha256": "24d587606e4b2de44b7c3ef9e6e27a79c75df42cf5d03d7c70a328c9351bcc89"
+    },
+    {
+      "path": "review/vela-closure/native-final/iphone-enlarged-current/insights.png",
+      "source": "artifacts/review/vela-closure/native-final/iphone-enlarged-current/insights.png",
+      "bytes": 202069,
+      "sha256": "1af73e131350502b4d0127913f791fe485d654bc3ca7568f60b39a50258b2427"
+    },
+    {
+      "path": "review/vela-closure/native-final/manifest.json",
+      "source": "artifacts/review/vela-closure/native-final/manifest.json",
+      "bytes": 4091,
+      "sha256": "d80d1c2fce431d10dc28316a74121dd6019a3fb0e9638fc71f813d8091172ae3"
+    },
+    {
+      "path": "review/vela-closure/native/android-default-current/detail.json",
+      "source": "artifacts/review/vela-closure/native/android-default-current/detail.json",
+      "bytes": 45319,
+      "sha256": "f3e0dd5b14e0a04125387cb252ca2f6ee20bfbbac017487342d1fb0e42228f6d"
+    },
+    {
+      "path": "review/vela-closure/native/android-default-current/detail.png",
+      "source": "artifacts/review/vela-closure/native/android-default-current/detail.png",
+      "bytes": 156273,
+      "sha256": "0875edc55b725aeb239d6f02bed96b7ebff25b4d6ed46a3c92e1fd427974b327"
+    },
+    {
+      "path": "review/vela-closure/native/android-default-current/summary.json",
+      "source": "artifacts/review/vela-closure/native/android-default-current/summary.json",
+      "bytes": 3490,
+      "sha256": "9e37dca413fcd3062ff06cbf2479f244b608fed8377fa7685884948c3d2307c0"
+    },
+    {
+      "path": "review/vela-closure/native/ipad-default-current/active.json",
+      "source": "artifacts/review/vela-closure/native/ipad-default-current/active.json",
+      "bytes": 47813,
+      "sha256": "7de3a6c2739e2541db09b8b6b68e89c8760817388d891d7c343982ab9ab58cca"
+    },
+    {
+      "path": "review/vela-closure/native/ipad-default-current/active.png",
+      "source": "artifacts/review/vela-closure/native/ipad-default-current/active.png",
+      "bytes": 200332,
+      "sha256": "c2098f58a3eccebf47f56b8f7cdbf41d1fa4ac518a01f341d2ef2aacd3e0065f"
+    },
+    {
+      "path": "review/vela-closure/native/ipad-default-current/insights.json",
+      "source": "artifacts/review/vela-closure/native/ipad-default-current/insights.json",
+      "bytes": 58948,
+      "sha256": "c861ea63da3a30be6f61e91b4e75c65a8dca70311e0d2ddc7f1b68a91d65ed5f"
+    },
+    {
+      "path": "review/vela-closure/native/ipad-default-current/insights.png",
+      "source": "artifacts/review/vela-closure/native/ipad-default-current/insights.png",
+      "bytes": 206668,
+      "sha256": "ccbfefb90b25e2c483546c84715a43d3d6c46ce13505c414993439e9c9a5a5c2"
+    },
+    {
+      "path": "review/vela-closure/native/ipad-default-current/summary.json",
+      "source": "artifacts/review/vela-closure/native/ipad-default-current/summary.json",
+      "bytes": 3283,
+      "sha256": "0b70dadfdb201550033bcc448349c49eb7bd1fff39d6e032c0c272dca8884978"
+    },
+    {
+      "path": "review/vela-closure/native/ipad-default-current/today.json",
+      "source": "artifacts/review/vela-closure/native/ipad-default-current/today.json",
+      "bytes": 62386,
+      "sha256": "1b1b52c7e6a4471770753da041531e722401a9eb43f5cc9b653615e2c29850ed"
+    },
+    {
+      "path": "review/vela-closure/native/ipad-default-current/today.png",
+      "source": "artifacts/review/vela-closure/native/ipad-default-current/today.png",
+      "bytes": 268505,
+      "sha256": "f2c6da2f5548ea2c7dc5a3465e4c96b1b904c8c220729836e5ec45151466c60c"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/active.json",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/active.json",
+      "bytes": 43413,
+      "sha256": "f4d856e9b21184df336159d124b1f739f8119b65c595c7d2473d57ac39ad48e7"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/active.png",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/active.png",
+      "bytes": 217208,
+      "sha256": "9d8a5ae91db61f3fa586d529d08c5a090a732ab76a469d1afc375fdd4dbce704"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/complete.json",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/complete.json",
+      "bytes": 32995,
+      "sha256": "9474133998c79032996492ce6318ec35e6e1d1922c40fdbfbca7640470281b52"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/complete.png",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/complete.png",
+      "bytes": 253742,
+      "sha256": "eb7ec6c70e6bb49aa9608b97a6ab99dd4dea49fbbe19307ec06e4ab2e55f4120"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/detail.json",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/detail.json",
+      "bytes": 49145,
+      "sha256": "b628ec638c74abdccf093c6e519f87b98f39d7696cc55cde9283b7d0d48fe98c"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/detail.png",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/detail.png",
+      "bytes": 232268,
+      "sha256": "70cdc93da4985a7b37551c6dcb05041c97410926ce546d693b631b727d584926"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/insights.json",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/insights.json",
+      "bytes": 57274,
+      "sha256": "fff463935fa7043e3f80efd8d02c86a98d3575ca3603b382cda905636c0d3103"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/insights.png",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/insights.png",
+      "bytes": 201034,
+      "sha256": "5b0af6040c9432665d8ebbfb7bf16d6b95ac30027a7e1fbc15c9aa49b07580a1"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/summary.json",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/summary.json",
+      "bytes": 3312,
+      "sha256": "52690a86a49e477af2641dad116da52e4f5a258ec625bca6c0dc79b8ac171899"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/today.json",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/today.json",
+      "bytes": 60483,
+      "sha256": "842d3b9715f8befbbdc90f783dad5d8e93687369c72174f86457d25219232c39"
+    },
+    {
+      "path": "review/vela-closure/native/iphone-enlarged-current/today.png",
+      "source": "artifacts/review/vela-closure/native/iphone-enlarged-current/today.png",
+      "bytes": 224159,
+      "sha256": "bf13ce819e567fa0f6049c901e85e67c364a1dce307c6cf42eb0ac86759b2fc3"
+    },
+    {
+      "path": "review/vela-closure/native/manifest.json",
+      "source": "artifacts/review/vela-closure/native/manifest.json",
+      "bytes": 5858,
+      "sha256": "85c1358c657ad0e3976836af44862b1799e84ff41cb7b3cbe12ac06f23e534a0"
+    },
+    {
+      "path": "review/vela-closure/safe-area-after/active.json",
+      "source": "artifacts/review/vela-closure/safe-area-after/active.json",
+      "bytes": 47847,
+      "sha256": "7631927e6d8ab2108171ff5481bf7db7d53b039d4790c983303a1e0692181909"
+    },
+    {
+      "path": "review/vela-closure/safe-area-after/active.png",
+      "source": "artifacts/review/vela-closure/safe-area-after/active.png",
+      "bytes": 231917,
+      "sha256": "9f9d729e2d9de8c9e16087a2790793e53abe68c0a9ce02c73d5101b3442e02e0"
+    },
+    {
+      "path": "review/vela-closure/safe-area-after/detail.json",
+      "source": "artifacts/review/vela-closure/safe-area-after/detail.json",
+      "bytes": 54972,
+      "sha256": "885c2d8f47f1326809360f7f6106437a3ed5b1b934fb52df65a1b74d981ce073"
+    },
+    {
+      "path": "review/vela-closure/safe-area-after/detail.png",
+      "source": "artifacts/review/vela-closure/safe-area-after/detail.png",
+      "bytes": 216600,
+      "sha256": "6cef9d21a2a2a3e26c4a913d849135b1e31fed9474cb6bd48bd1ecd5fc3f7ce1"
+    },
+    {
+      "path": "review/vela-closure/safe-area-after/manifest.json",
+      "source": "artifacts/review/vela-closure/safe-area-after/manifest.json",
+      "bytes": 1405,
+      "sha256": "cba7dcd8e2c2cb1e9b13a9bfe2c2449719f10f8c851ef15715267c5cc3a54a9a"
+    },
+    {
+      "path": "review/vela-closure/safe-area-before/active.json",
+      "source": "artifacts/review/vela-closure/safe-area-before/active.json",
+      "bytes": 47962,
+      "sha256": "e0884929742d09aaa918c377f5360192f6285da2e1f1378b7272af0bdb7f3555"
+    },
+    {
+      "path": "review/vela-closure/safe-area-before/active.png",
+      "source": "artifacts/review/vela-closure/safe-area-before/active.png",
+      "bytes": 238554,
+      "sha256": "d325b6ca4bee8070fd45800a1fb8730a6ec140f3ccb21574339511a6658c34f2"
+    },
+    {
+      "path": "review/vela-closure/safe-area-before/manifest.json",
+      "source": "artifacts/review/vela-closure/safe-area-before/manifest.json",
+      "bytes": 530,
+      "sha256": "d82049fc35c322184dec18921d27aa59e23ac85ff43358ac35977f47113a6120"
+    },
+    {
+      "path": "review/vela-closure/web-final/active-390-3.6.png",
+      "source": "artifacts/review/vela-closure/web-final/active-390-3.6.png",
+      "bytes": 29172,
+      "sha256": "2f4d410cf4373f00964a4d0d471e7992c5e057bd6523f20ff600c53a89f3dc8b"
+    },
+    {
+      "path": "review/vela-closure/web-final/detail-390-3.6.png",
+      "source": "artifacts/review/vela-closure/web-final/detail-390-3.6.png",
+      "bytes": 31435,
+      "sha256": "a3107e5ee5a8d1d4e3d790e4c7e6366f7911f3413ab03fdc24b6af3028ae8dbf"
+    },
+    {
+      "path": "review/vela-closure/web-final/insights-390-2.png",
+      "source": "artifacts/review/vela-closure/web-final/insights-390-2.png",
+      "bytes": 122701,
+      "sha256": "66373367bd62c1b6f8f60a854cf12727e2672afe5c8a54a8ca0f5016041b8bb4"
+    },
+    {
+      "path": "review/vela-closure/web-final/manifest.json",
+      "source": "artifacts/review/vela-closure/web-final/manifest.json",
+      "bytes": 1078,
+      "sha256": "8d7f8a77cebb9cc56a037aafb7caa9f2b854703fb94beec5ae81ff526501b7ad"
+    },
+    {
+      "path": "review/vela-closure/web-final/report.json",
+      "source": "artifacts/review/vela-closure/web-final/report.json",
+      "bytes": 834822,
+      "sha256": "6507ba5cdbf44eb0d4c44045718130b7073b58916192a8be3da6fd5408dd4d37"
+    },
+    {
+      "path": "review/vela-closure/web/active-390-3.6.png",
+      "source": "artifacts/review/vela-closure/web/active-390-3.6.png",
+      "bytes": 29172,
+      "sha256": "2f4d410cf4373f00964a4d0d471e7992c5e057bd6523f20ff600c53a89f3dc8b"
+    },
+    {
+      "path": "review/vela-closure/web/detail-390-3.6.png",
+      "source": "artifacts/review/vela-closure/web/detail-390-3.6.png",
+      "bytes": 31435,
+      "sha256": "a3107e5ee5a8d1d4e3d790e4c7e6366f7911f3413ab03fdc24b6af3028ae8dbf"
+    },
+    {
+      "path": "review/vela-closure/web/insights-390-2.png",
+      "source": "artifacts/review/vela-closure/web/insights-390-2.png",
+      "bytes": 122704,
+      "sha256": "02431ca9fc5fd36a8d6eca7c5d1acd697685b9af4e7dc1862250f7142f93f1e9"
+    },
+    {
+      "path": "review/vela-closure/web/manifest.json",
+      "source": "artifacts/review/vela-closure/web/manifest.json",
+      "bytes": 1938,
+      "sha256": "08914a8e473f6438cb91e24e6b3c68131de5b02a5ab26461cdf73a7bd6f2e522"
+    },
+    {
+      "path": "review/vela-closure/web/report.json",
+      "source": "artifacts/review/vela-closure/web/report.json",
+      "bytes": 834817,
+      "sha256": "985c1d32a580f352b24735792b9dcf3ab1b10a5df9c82035e457450588399f76"
+    },
+    {
+      "path": "review/vela-closure/web/restore-error-throw.png",
+      "source": "artifacts/review/vela-closure/web/restore-error-throw.png",
+      "bytes": 22835,
+      "sha256": "bc68278bd4b919ff0b348ed95719869832f9687a0b8163b513136b301d65a6f8"
+    },
+    {
+      "path": "review/vela-closure/web/save-error.png",
+      "source": "artifacts/review/vela-closure/web/save-error.png",
+      "bytes": 88192,
+      "sha256": "c39685fa14cd0a0fb8c643ece2cb630e29826fb47a78cabc35e167630732a55f"
+    },
+    {
+      "path": "review/vela-closure/web/today-1440-1.png",
+      "source": "artifacts/review/vela-closure/web/today-1440-1.png",
+      "bytes": 102855,
+      "sha256": "b7e0a73568a4ad66dd8f97a83fab583da2965ce9051b65c2d4d1fc47e1040e5e"
+    },
+    {
+      "path": "review/vela-closure/web/today-390-3.6.png",
+      "source": "artifacts/review/vela-closure/web/today-390-3.6.png",
+      "bytes": 308026,
+      "sha256": "f38fff3a1452e226fee8e572e41b340753102f1369f745bd3ccd919ec10d136a"
+    },
+    {
       "path": "selector/editorial.json",
       "source": "artifacts/selector/editorial.json",
-      "bytes": 212987,
-      "sha256": "62568bdce26a70de96118201935a22099c001bd06a67820e6e92b86293483426"
+      "bytes": 213210,
+      "sha256": "bbc40cc3911849599fd6b4815339a105092fe140f87237a75153c6779adc647b"
     },
     {
       "path": "selector/hero.json",
       "source": "artifacts/selector/hero.json",
-      "bytes": 131071,
-      "sha256": "724cf7a3b6db15e968b67f0693d713ebe4b644f21c2119bf6f81b9bb6765953d"
+      "bytes": 131293,
+      "sha256": "12f2046991bae7b94817292712427f66fa932c5813320cbf2564716de0662586"
     },
     {
       "path": "system/android-longword-failure.json",
@@ -2063,8 +2508,8 @@
     {
       "path": "system/native-android/observations.jsonl",
       "source": "artifacts/system/native-android/observations.jsonl",
-      "bytes": 1542628,
-      "sha256": "8dc35f68b3ce37eca6fdddae99b74a7788f7d993935da9bf7b0b9792fffc12bd"
+      "bytes": 1542640,
+      "sha256": "17c7bf22f5d3babba481f4c8c69aa7a0b5008401aba956b941a51cc1e4abde6f"
     },
     {
       "path": "system/native-android/summary.json",
@@ -2075,8 +2520,8 @@
     {
       "path": "system/native-ios/observations.jsonl",
       "source": "artifacts/system/native-ios/observations.jsonl",
-      "bytes": 1489363,
-      "sha256": "7d1491584e8de3f197034fb31aa66693df6d92559e11efb92d776a651981d656"
+      "bytes": 1489323,
+      "sha256": "3752be7344cc5d6712cbedccde08ed407455768b4069a8479dd1afea3f4fdabb"
     },
     {
       "path": "system/native-ios/summary.json",
@@ -2087,8 +2532,8 @@
     {
       "path": "system/web/observations.jsonl",
       "source": "artifacts/system/web/observations.jsonl",
-      "bytes": 1430920,
-      "sha256": "3c31d111ca200c750fd15e1b801f56b999d9bc7a4d2cd1af82339125c835bab0"
+      "bytes": 1430943,
+      "sha256": "bc2507ae1e099ba56305730b466651f01533bf3834ebf248a66c1935af860a9e"
     },
     {
       "path": "system/web/summary.json",
@@ -2385,6 +2830,1212 @@
       "sha256": "1ecc4362fa2781f291b5e2f10c2ddb430f200f8896444321c34801e4c4338b7a"
     },
     {
+      "path": "vela/diagnostics/android-root-bounds/detail-receipt.json",
+      "source": "artifacts/vela/diagnostics/android-root-bounds/detail-receipt.json",
+      "bytes": 31898,
+      "sha256": "a471edd065756a7485c0ee4fa3dfbdcc4afb935e447ce1dd0b8e4bb32625fa3f"
+    },
+    {
+      "path": "vela/diagnostics/android-root-bounds/detail.png",
+      "source": "artifacts/vela/diagnostics/android-root-bounds/detail.png",
+      "bytes": 163308,
+      "sha256": "0e1feaa5db0d6cb1bf9432cd0cebcaab16e225a2ebf8b8a17b92bf4181dff645"
+    },
+    {
+      "path": "vela/diagnostics/android-trailing-advance/detail.json",
+      "source": "artifacts/vela/diagnostics/android-trailing-advance/detail.json",
+      "bytes": 33930,
+      "sha256": "4068099e3761285aed052004803357fb62fb548aeb04e59d41df103d9c70a7e5"
+    },
+    {
+      "path": "vela/diagnostics/android-trailing-advance/detail.png",
+      "source": "artifacts/vela/diagnostics/android-trailing-advance/detail.png",
+      "bytes": 156275,
+      "sha256": "1bff424cfc184995511a100129495aaaaeae80579778b3682d943b718913f6fa"
+    },
+    {
+      "path": "vela/diagnostics/web-transient/assessment.json",
+      "source": "artifacts/vela/diagnostics/web-transient/assessment.json",
+      "bytes": 1698,
+      "sha256": "d632861ccb5c0c7c90fd3a6d6dd719d3c1dffc849bfea40651763890be9236a1"
+    },
+    {
+      "path": "vela/diagnostics/web-transient/report.json",
+      "source": "artifacts/vela/diagnostics/web-transient/report.json",
+      "bytes": 839597,
+      "sha256": "ec4c182b6fc5a41c0802b47a956d82bc81f6748c42d19a710b07aed46806c45f"
+    },
+    {
+      "path": "vela/diagnostics/web-transient/today-834-3.6.png",
+      "source": "artifacts/vela/diagnostics/web-transient/today-834-3.6.png",
+      "bytes": 16691,
+      "sha256": "0ac1c7c791ac68b56fe1d41c6be883d4bb7a93b35dd60366339f8dbd069b7a8b"
+    },
+    {
+      "path": "vela/diagnostics/web-transient/vela-web.log",
+      "source": "artifacts/vela/diagnostics/web-transient/vela-web.log",
+      "bytes": 7075,
+      "sha256": "b1ce39c1b82ebc2935d4574ec33c593078e3b80a4732a0923f2970e782af5ad8"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/0-accessibility.xml",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/0-accessibility.xml",
+      "bytes": 22696,
+      "sha256": "5544436d7e46340112dc2fb9deec409603eece9bd607813d25146b6aaa3454f6"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/1-accessibility.xml",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/1-accessibility.xml",
+      "bytes": 22529,
+      "sha256": "ec212f10a7fc41ff49d3edf59535166b42d1e7428dd026018a60c9fc4801d59c"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/3-accessibility.xml",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/3-accessibility.xml",
+      "bytes": 19313,
+      "sha256": "b827692b55d4326a3b3e318a8ede64ddfafef1f5991b630137e590d2c8f9dc00"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/5-accessibility.xml",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/5-accessibility.xml",
+      "bytes": 18851,
+      "sha256": "317ef72e80619307e30f3e27283f61a00cc6a974fbf90eea16bf510d2842b997"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/6-accessibility.xml",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/6-accessibility.xml",
+      "bytes": 25994,
+      "sha256": "6090f2459714f1ef0a73c8988f4c8c70cdbcf6d2c3d9b888e10f27aec463f2ad"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/7-accessibility.xml",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/7-accessibility.xml",
+      "bytes": 23345,
+      "sha256": "f7c88917523151b6745e38f7bef3b1bfe78ab76a0985ac30ed27c4c6915c9cc7"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/8-accessibility.xml",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/8-accessibility.xml",
+      "bytes": 23345,
+      "sha256": "16ec86b1783e9315f0b22afe491b28522b0ec561b479a87c8805f7604ce54c80"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/9-accessibility.xml",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/9-accessibility.xml",
+      "bytes": 23349,
+      "sha256": "6ddeecb5351fd28dbec67f991bb40c8ba92fc775134052d54afd1432f03b6b57"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/complete.json",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/complete.json",
+      "bytes": 16344,
+      "sha256": "0f451d1ee796e483a0c0fa8b7c2824edc685d0cbb95d0f9db20353453fafc134"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/complete.png",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/complete.png",
+      "bytes": 150371,
+      "sha256": "acae8a024fc878326eb83610c2b789fcf3f8b887bc2a87aaaee154205e833ffa"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/insights.json",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/insights.json",
+      "bytes": 42964,
+      "sha256": "f919281fc5ebfa63181fde12f5f1a3af3a5b3079eedbebd62327ad65cb5f2bd9"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/insights.png",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/insights.png",
+      "bytes": 144411,
+      "sha256": "643624b6749711971d6e2186182fb05b950ce784e0bc5fdd3750d10a85554a9b"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/paused.json",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/paused.json",
+      "bytes": 20049,
+      "sha256": "129195aceffedff24556bb30d51f1fb23379ee09d8bad58e467c0ecab4a624f1"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/paused.png",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/paused.png",
+      "bytes": 133204,
+      "sha256": "c4bf00c0264f1dcf1ca1455e66bfa03e29139e34dfa546cbbbca5b15f9bfefbf"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/reduced-page.json",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/reduced-page.json",
+      "bytes": 37945,
+      "sha256": "a96a746bbb002ef30298e61def8f183834df51bfe3f534ecb4aca789bc933ff9"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/reduced-page.png",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/reduced-page.png",
+      "bytes": 150439,
+      "sha256": "ddde6581b1adcd917d55090cddfe56ac02caa7f66ae506755204194145aa19f7"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/reduced-preference.json",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/reduced-preference.json",
+      "bytes": 32270,
+      "sha256": "33ceeae6d08fb988b90f8d1f9791238a5f6f81c628c7160c9ebdd3d981d84dab"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/reduced-preference.png",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/reduced-preference.png",
+      "bytes": 165198,
+      "sha256": "18b556c7dff040bdc8c59498ad35c6d3b117c79157d394759b7c583c6be85355"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/running.json",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/running.json",
+      "bytes": 19973,
+      "sha256": "9de2fda20522d865ddc9e4cefb94dc2ed690dfe71b7c11504a9e01c29c8fcf60"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/running.png",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/running.png",
+      "bytes": 126435,
+      "sha256": "48d52c5fb329da67191096efab7458bd49eb62838b036614c3f994f6d13399d3"
+    },
+    {
+      "path": "vela/flows-android/flows-1792908583406/summary.json",
+      "source": "artifacts/vela/flows-android/flows-1792908583406/summary.json",
+      "bytes": 6893,
+      "sha256": "770f97cf96c52b7d6380b0cee7ab66eca00754a65ddd8f2dfaf3c03a3c7f1419"
+    },
+    {
+      "path": "vela/machine-proof.json",
+      "source": "artifacts/vela/machine-proof.json",
+      "bytes": 2286,
+      "sha256": "99be7b288f251325efd8f244d446120de8ef3d60936085124c17936a5e86269c"
+    },
+    {
+      "path": "vela/native-text-coverage-posthoc.json",
+      "source": "artifacts/vela/native-text-coverage-posthoc.json",
+      "bytes": 14856,
+      "sha256": "6651fda85c64a405f2b9971e8ce1fd95b8d4eaaab0bc3b3bfb64ae3e0a482d80"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/active.json",
+      "source": "artifacts/vela/proof-native/android-default-current/active.json",
+      "bytes": 34445,
+      "sha256": "87c758ff4633f08555b93701fb13f8a5315d7609a8d88aaec8f4d2e1dc65e393"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/active.png",
+      "source": "artifacts/vela/proof-native/android-default-current/active.png",
+      "bytes": 137073,
+      "sha256": "50154ea4b410937912a483011068b382581edec4702dd7cb26085a6e93a9a17f"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/complete.json",
+      "source": "artifacts/vela/proof-native/android-default-current/complete.json",
+      "bytes": 27743,
+      "sha256": "f1a7c7e8bd53acb2f56f9468e7c38545818af6fe05ee0225f13ebd96f91d4493"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/complete.png",
+      "source": "artifacts/vela/proof-native/android-default-current/complete.png",
+      "bytes": 140030,
+      "sha256": "4c4755eea5bb1def4ebfe30f34368cf415bbaed00f2855e1d8f32adf72487722"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/detail.json",
+      "source": "artifacts/vela/proof-native/android-default-current/detail.json",
+      "bytes": 48043,
+      "sha256": "8ae6898a53d14441b674d7549dc7556fe6d6a957888d7e8f175acff624b9f6da"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/detail.png",
+      "source": "artifacts/vela/proof-native/android-default-current/detail.png",
+      "bytes": 171710,
+      "sha256": "ffbc70d8c3eb33a63c3c5d829ff2f89055d6f0e071752f78b293d593397e4966"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/insights.json",
+      "source": "artifacts/vela/proof-native/android-default-current/insights.json",
+      "bytes": 55760,
+      "sha256": "fb5d5813047d29f70eed5f57ddee6331015901e8add63e81a98ad2379e9c04e6"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/insights.png",
+      "source": "artifacts/vela/proof-native/android-default-current/insights.png",
+      "bytes": 140440,
+      "sha256": "f0216ede87d76f5d454fe418f68e26b700e49144f4b935c44bf56b34eee67531"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/profile.json",
+      "source": "artifacts/vela/proof-native/android-default-current/profile.json",
+      "bytes": 48497,
+      "sha256": "08791df3ce57e4d9da93ea0cf194f9fa163c9a31d0f49ed2dd61f2aea5feaefe"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/profile.png",
+      "source": "artifacts/vela/proof-native/android-default-current/profile.png",
+      "bytes": 170278,
+      "sha256": "f467df9521a97d4ebeaa485569002dbf01d7b01a2f8626e4f8518eeb9859ac8e"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/summary.json",
+      "source": "artifacts/vela/proof-native/android-default-current/summary.json",
+      "bytes": 13698,
+      "sha256": "96de83b656a0b7e70e67b8f0c248e6e416c59d6ff31e35814f73e16640ab7fee"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/today.json",
+      "source": "artifacts/vela/proof-native/android-default-current/today.json",
+      "bytes": 53399,
+      "sha256": "615942739ad20aec0e23271bbd5e8c40ab0cceaa49a9707249482917392fa064"
+    },
+    {
+      "path": "vela/proof-native/android-default-current/today.png",
+      "source": "artifacts/vela/proof-native/android-default-current/today.png",
+      "bytes": 155335,
+      "sha256": "decfb17d92f032caa0934854b204ae0f83610fc25f48f3a56f287efab41d1e2b"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/active.json",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/active.json",
+      "bytes": 39870,
+      "sha256": "d9a7e3a56a8a43f94c3428de977b3bfb7ab62b5fb261cd74ba58e6be76268315"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/active.png",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/active.png",
+      "bytes": 149536,
+      "sha256": "c7465846c26d2e0716e49ef362522cebabb11de00d278675a9901562adcaf51c"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/complete.json",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/complete.json",
+      "bytes": 29542,
+      "sha256": "0f2d5f31adb75ca064f25bae6e683ef3d4ef6625df8875d6d38ccd89d2af4468"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/complete.png",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/complete.png",
+      "bytes": 149604,
+      "sha256": "16c01ef846c9670b89d4bb350c51aa43006d9272e53835546127f79a2372cec7"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/detail.json",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/detail.json",
+      "bytes": 48061,
+      "sha256": "5ef8334fbbb591cd5d3f701dfd5cf65e682a3c8ba6809c7776f914e284c25056"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/detail.png",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/detail.png",
+      "bytes": 162226,
+      "sha256": "05b17761fa8f499a0f256017a7f46147898e4e2379629d6e39138079187623c5"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/insights.json",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/insights.json",
+      "bytes": 56252,
+      "sha256": "d278b034ecd090a5b7448ba3e0fed6ba4c671393ea126be183f4418f8df6762e"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/insights.png",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/insights.png",
+      "bytes": 169655,
+      "sha256": "1351c9c9145575ba17d5113b386c467bd295a03227c0ab9cface189aa53abaff"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/profile.json",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/profile.json",
+      "bytes": 49937,
+      "sha256": "04c26b45a6116ad97bd9514ed3a71981711e0f4106f6d2b4f1aeca16cdc029ef"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/profile.png",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/profile.png",
+      "bytes": 204792,
+      "sha256": "24f2009a4998b54e02c8b800f718232cf724b43c408a1b62e508777c61cad92a"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/summary.json",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/summary.json",
+      "bytes": 13699,
+      "sha256": "3e67a89cafb28e6a6b2970a51fb72dda21b16d2b32badc5154de7135ff3ac8c6"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/today.json",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/today.json",
+      "bytes": 55330,
+      "sha256": "bcf2094c3ba93fc720554d2f246d4de621478033d95601b897685e3e3160e7c6"
+    },
+    {
+      "path": "vela/proof-native/android-enlarged-current/today.png",
+      "source": "artifacts/vela/proof-native/android-enlarged-current/today.png",
+      "bytes": 156028,
+      "sha256": "ec83610fabeace25d39df93010a69afc02f5ace56e9df43ea44df03f50bde3ce"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/active.json",
+      "source": "artifacts/vela/proof-native/ipad-default-current/active.json",
+      "bytes": 49465,
+      "sha256": "423bf97307097176b5ad0d9dfb95e8f0a6c56ce06e923d0871cc151b39b74d59"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/active.png",
+      "source": "artifacts/vela/proof-native/ipad-default-current/active.png",
+      "bytes": 200760,
+      "sha256": "037f2ffa07d29fa152ffc0f6656e2052859563c726889b317c58d8e6c05ce93e"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/complete.json",
+      "source": "artifacts/vela/proof-native/ipad-default-current/complete.json",
+      "bytes": 42883,
+      "sha256": "84088b6c6a13bb0df83df5f9081d4926c7f1ccf6370d32057c0378e9be04b99d"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/complete.png",
+      "source": "artifacts/vela/proof-native/ipad-default-current/complete.png",
+      "bytes": 198566,
+      "sha256": "8cc20c3970a5d3573241b769c4885c20da007a6ff8475496c2e319bcc3bd09cb"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/detail.json",
+      "source": "artifacts/vela/proof-native/ipad-default-current/detail.json",
+      "bytes": 59098,
+      "sha256": "85c3d4b49ee03f4448423267052f7cf7176a2618ab30db20dcfb7e2a79835c51"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/detail.png",
+      "source": "artifacts/vela/proof-native/ipad-default-current/detail.png",
+      "bytes": 242841,
+      "sha256": "1d5a2c10e15f16e28faa5b6a94e1366e6dccec73e15bb344ca46c1865569554c"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/insights.json",
+      "source": "artifacts/vela/proof-native/ipad-default-current/insights.json",
+      "bytes": 60326,
+      "sha256": "7670a7041da7183f996780bf9d8a2898172097e7b0db3eb12f34e68adcb4d717"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/insights.png",
+      "source": "artifacts/vela/proof-native/ipad-default-current/insights.png",
+      "bytes": 206935,
+      "sha256": "ac360b3be2bb8aab2d92c682ac51b73c9d3de53c7d6e70c4f4c76b25be8876cd"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/profile.json",
+      "source": "artifacts/vela/proof-native/ipad-default-current/profile.json",
+      "bytes": 57320,
+      "sha256": "bc5eff1294eeccd571f8b6604efca1ed52784e30f3244bdf211c7924d5b59838"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/profile.png",
+      "source": "artifacts/vela/proof-native/ipad-default-current/profile.png",
+      "bytes": 251664,
+      "sha256": "c5cc1433b55b10cf8c591395292733a4c4ef196bc9d9561ff354f6e7fd9cd474"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/summary.json",
+      "source": "artifacts/vela/proof-native/ipad-default-current/summary.json",
+      "bytes": 10699,
+      "sha256": "44b642aebe0e06ff6c676785c710ae8d5ce5883bca05c5ff348e4faa6480ce68"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/today.json",
+      "source": "artifacts/vela/proof-native/ipad-default-current/today.json",
+      "bytes": 63766,
+      "sha256": "f5e6b59a7ac08f9e10bf1c1934355ae8df6d51e6b513a825ec3a27074f67ef99"
+    },
+    {
+      "path": "vela/proof-native/ipad-default-current/today.png",
+      "source": "artifacts/vela/proof-native/ipad-default-current/today.png",
+      "bytes": 268784,
+      "sha256": "a21ad41bc2b57143d33361b10eb18f54485b4a4468ee661a71b6d9c146930044"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/active.json",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/active.json",
+      "bytes": 38044,
+      "sha256": "0789a773ffe6d9bb084fe559facbe7d5b129227af74e95c121199ed4341bf766"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/active.png",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/active.png",
+      "bytes": 234706,
+      "sha256": "1eee77ad270c333b035a15a885902fa00a482b0fc8d3c043fdade1ddc92e8bee"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/complete.json",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/complete.json",
+      "bytes": 31993,
+      "sha256": "3019947a072d45384a4e24a340616340a092494a8cca3f614d2b2190fe87b621"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/complete.png",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/complete.png",
+      "bytes": 200927,
+      "sha256": "9ddb02d3e8fdecef97649d54847ff72c658e23ddbb5304793b9100e2a7d39135"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/detail.json",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/detail.json",
+      "bytes": 48790,
+      "sha256": "b1d26414230fd3b271312694aa8e9e2652d9ab512c2bc76b531f3cbf35805063"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/detail.png",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/detail.png",
+      "bytes": 303168,
+      "sha256": "741dc5abf1dbc07489b5ed44430e1c99585a9b18d0dff6ef85656fd72fa0bdc0"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/insights.json",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/insights.json",
+      "bytes": 56265,
+      "sha256": "1ca31428701bd4317df3d2d05049201bf4d1b43e1a20e418d21b3d1118c7500f"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/insights.png",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/insights.png",
+      "bytes": 243422,
+      "sha256": "a2522685e029f6cc732e82ea9376e73f60aab2078542d9df200e1884df6673ff"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/profile.json",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/profile.json",
+      "bytes": 55537,
+      "sha256": "ea94662fd051b8e50e3bf4627be9b5e0790e2794b235517aa1ec5a912204bc00"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/profile.png",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/profile.png",
+      "bytes": 294812,
+      "sha256": "e93834fb7f0027e1001cf46343088d6ea5aae65d18b2e77fcd45c4d087bb165e"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/summary.json",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/summary.json",
+      "bytes": 10810,
+      "sha256": "3fbe9b7ad0bea399b961500d3170a37299250726d9d65f136f718d0675db08f6"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/today.json",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/today.json",
+      "bytes": 57398,
+      "sha256": "f67ed8e2646fd341d041dc32a8216981518fda543bb1dab0856d98ccda081b61"
+    },
+    {
+      "path": "vela/proof-native/ipad-enlarged-current/today.png",
+      "source": "artifacts/vela/proof-native/ipad-enlarged-current/today.png",
+      "bytes": 259976,
+      "sha256": "c914284ae654a56dcc020a756967525a2743e742ea8c65496d7e9f808da07931"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/active.json",
+      "source": "artifacts/vela/proof-native/iphone-default-current/active.json",
+      "bytes": 38897,
+      "sha256": "60e8fc2bab74b87d567d1fca815718ac8093da5b0baf3e3afbb9d098a193a356"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/active.png",
+      "source": "artifacts/vela/proof-native/iphone-default-current/active.png",
+      "bytes": 200521,
+      "sha256": "4fc47cf4d784a7be621c0a79cf8e6c45a2ea2081578acf5c1f3a61cf5ece118b"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/complete.json",
+      "source": "artifacts/vela/proof-native/iphone-default-current/complete.json",
+      "bytes": 32539,
+      "sha256": "5809e3d8e018c6339534841e99553cbd82d12375ab1bbd3ef2b3365b752cd06b"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/complete.png",
+      "source": "artifacts/vela/proof-native/iphone-default-current/complete.png",
+      "bytes": 202096,
+      "sha256": "b1e24e28548a61374b833c4a8055937f9748ae9018f19e00bec887a550081a5d"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/detail.json",
+      "source": "artifacts/vela/proof-native/iphone-default-current/detail.json",
+      "bytes": 50006,
+      "sha256": "51725c59cfdd1192cd6f4d2b3d7cc781e3b607b8be89f0591d29a6d7378affb2"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/detail.png",
+      "source": "artifacts/vela/proof-native/iphone-default-current/detail.png",
+      "bytes": 235968,
+      "sha256": "4d32cf24d9525dc9c62f093a2d183262c9dd1109527f88d0c30332d7447e58bf"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/insights.json",
+      "source": "artifacts/vela/proof-native/iphone-default-current/insights.json",
+      "bytes": 59860,
+      "sha256": "6e640aab61c17facb417e6d2ef5983e97ae48fdcaa105135e0aff36306202464"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/insights.png",
+      "source": "artifacts/vela/proof-native/iphone-default-current/insights.png",
+      "bytes": 211326,
+      "sha256": "df29a4ee3d2b1f4e1c9e892656a4664b73f2d1026aadf32480ce415bd25d4be3"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/profile.json",
+      "source": "artifacts/vela/proof-native/iphone-default-current/profile.json",
+      "bytes": 57253,
+      "sha256": "40b7bfe5d5946260e28b6c56a30cbb97ecb1520e11547b3e46aebfc75519364b"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/profile.png",
+      "source": "artifacts/vela/proof-native/iphone-default-current/profile.png",
+      "bytes": 234869,
+      "sha256": "9411f01b07d46a6977a413f3ff8bd496c8437c7149fe27ff05dfa524bddcc590"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/summary.json",
+      "source": "artifacts/vela/proof-native/iphone-default-current/summary.json",
+      "bytes": 12139,
+      "sha256": "bb6b5227ac618f26f3f21efb82e9e0ed230e9b7132018e51f12a8c17d8c6e40f"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/today.json",
+      "source": "artifacts/vela/proof-native/iphone-default-current/today.json",
+      "bytes": 61095,
+      "sha256": "adcf4cf6ecd8c7b647a23eb0fe0db75c0449406f8b267730550d17713c6f293c"
+    },
+    {
+      "path": "vela/proof-native/iphone-default-current/today.png",
+      "source": "artifacts/vela/proof-native/iphone-default-current/today.png",
+      "bytes": 215460,
+      "sha256": "77b9f5b920b4e791a4cf38e72b02ed03e51ef6513d12f63aa4077e2f9504f5ec"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/active.json",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/active.json",
+      "bytes": 45139,
+      "sha256": "fe08584458898644af0895483022875b6ecdb008b7be9c73365aa6564ec66b80"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/active.png",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/active.png",
+      "bytes": 218002,
+      "sha256": "d1046117dd37c5a808450f56dd791eb3f2ab2699fa9b8ef5f94a1d07f19df40f"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/complete.json",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/complete.json",
+      "bytes": 34721,
+      "sha256": "d03e89015506c6cbfd3cfc75039f49012cbb2002f76225c75059556df8498f54"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/complete.png",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/complete.png",
+      "bytes": 255409,
+      "sha256": "32cc46d92b352588c6aa31c4c34f3f703d9d6ccbd95aaa57e0052a4568fada35"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/detail.json",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/detail.json",
+      "bytes": 51135,
+      "sha256": "6539a3e35f4d37e638074582fa094f542363e0faf23acf9a358ac26fa96515d9"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/detail.png",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/detail.png",
+      "bytes": 231273,
+      "sha256": "485b5cabaf849f281508a55dda63d0adc5ff4e0434505df56bdb1c61f5a3626b"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/insights.json",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/insights.json",
+      "bytes": 58662,
+      "sha256": "194c109aa5e9481b5c57d6b054eb18e4044cded6a9ca874ac59a8751a7c0b6de"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/insights.png",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/insights.png",
+      "bytes": 202282,
+      "sha256": "4617e6061c23b384ce80cafceb664f37393b78bd4ec281e8d9f3a340526785ab"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/profile.json",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/profile.json",
+      "bytes": 55964,
+      "sha256": "dfe780f24510a5b4c6c93ca253d2cc3761b636e24e58adc3193e79a5415fc97b"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/profile.png",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/profile.png",
+      "bytes": 251309,
+      "sha256": "5f17479fc25375fd28ccf0b2fd6d9192bed29477eb1e0f35d41ce9ccf0cda913"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/summary.json",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/summary.json",
+      "bytes": 10932,
+      "sha256": "85ace71726909e97ec29b3bed27b26ecf5aff7484e059e26e2d0b35c669bb8b4"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/today.json",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/today.json",
+      "bytes": 61864,
+      "sha256": "81889bbbac8d0ae34ad29f1d221c1110eb28b9849fb3f054214b2b06cc86194d"
+    },
+    {
+      "path": "vela/proof-native/iphone-enlarged-current/today.png",
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/today.png",
+      "bytes": 225782,
+      "sha256": "d37260c7285b095ee9453aa9208df8194b28b516d4afaa00f1f11e17ad09f4a0"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/active.json",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/active.json",
+      "bytes": 49006,
+      "sha256": "24239158238fb04d4dfded61cc89167935e845e75300d0a2da6365f6f493fd61"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/active.png",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/active.png",
+      "bytes": 224348,
+      "sha256": "b21c3480cc0e99acfd64d200b94a7bfd0f666fa357b440143eba9e4190efe4d3"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/complete.json",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/complete.json",
+      "bytes": 38151,
+      "sha256": "d93b547a942782412ab4a635abb4ed654a046876087b0c895a7334156282a0a3"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/complete.png",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/complete.png",
+      "bytes": 243789,
+      "sha256": "0053f30a6c1682940e8336ef4281f524d976d6cd4c0164728858a7dad7eddeb9"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/detail.json",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/detail.json",
+      "bytes": 56165,
+      "sha256": "ce3113563d26192817f8574cc3c06146bb2a2d83e9516d6bb586d72204c68328"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/detail.png",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/detail.png",
+      "bytes": 217158,
+      "sha256": "9caf1b3cc3686524ee93e1ff4ed53533df47a02d4b641b5d446acdb66858969d"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/insights.json",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/insights.json",
+      "bytes": 55125,
+      "sha256": "a6dc16989fb02bc716a9dc88ed57695eef667150e3f52056be1591429088014b"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/insights.png",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/insights.png",
+      "bytes": 207632,
+      "sha256": "6f4bf638d284db4c5fce9900f04c51d0e6a86a8dc1eb6027f2ba77dac9d05516"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/profile.json",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/profile.json",
+      "bytes": 57844,
+      "sha256": "e71740629aa4d30c7cf7037901f554809ee19f1cd6732d38db528387780d6875"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/profile.png",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/profile.png",
+      "bytes": 216216,
+      "sha256": "59e5788bef2ab0b63f78ad65123ed4aeef7e48a371aca02c731e04b81bb95bd8"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/summary.json",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/summary.json",
+      "bytes": 10905,
+      "sha256": "955ebe789193bb61dab3caf6d3393ddb8824bd39ffa1fe6822ee9bbbdc23a0da"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/today.json",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/today.json",
+      "bytes": 62198,
+      "sha256": "86c098f44fa7c9f0d6b4f0705df2708686954b03635841b8469862134739b666"
+    },
+    {
+      "path": "vela/proof-native/iphone-maximum-current/today.png",
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/today.png",
+      "bytes": 204440,
+      "sha256": "a5cf5baa6d1db915bf91697fc92f4c392768b7e885793ce4dfdee0617ae6c068"
+    },
+    {
+      "path": "vela/proof-web/active-1440-1.png",
+      "source": "artifacts/vela/proof-web/active-1440-1.png",
+      "bytes": 79278,
+      "sha256": "8b7591f5519a230ba0a7352113753bf97c847f5540924fad6a30d0298689e2e9"
+    },
+    {
+      "path": "vela/proof-web/active-1440-2.143.png",
+      "source": "artifacts/vela/proof-web/active-1440-2.143.png",
+      "bytes": 82909,
+      "sha256": "c6059708a4055fb9974384ba6e32efa7ff9f21e372e837ffd1666139d54a36aa"
+    },
+    {
+      "path": "vela/proof-web/active-1440-2.png",
+      "source": "artifacts/vela/proof-web/active-1440-2.png",
+      "bytes": 77888,
+      "sha256": "270ca9179bbde25847ce30b1e48b71ae8867d8f430597e9344ef6a2ea5aba8e8"
+    },
+    {
+      "path": "vela/proof-web/active-1440-3.6.png",
+      "source": "artifacts/vela/proof-web/active-1440-3.6.png",
+      "bytes": 67190,
+      "sha256": "9c788678f448d211e0d72a7fa57c86421e42a6c9a21b795a2d54057d9a08d92b"
+    },
+    {
+      "path": "vela/proof-web/active-390-1.png",
+      "source": "artifacts/vela/proof-web/active-390-1.png",
+      "bytes": 36737,
+      "sha256": "5468a4ca854331b014eeb8264ba8a5766a64747584c57202be736bf85e759b13"
+    },
+    {
+      "path": "vela/proof-web/active-390-2.143.png",
+      "source": "artifacts/vela/proof-web/active-390-2.143.png",
+      "bytes": 37567,
+      "sha256": "a9337fdca66156c6093403c682dec0555e52a6bdbe41d72d2ffecbc612b37e04"
+    },
+    {
+      "path": "vela/proof-web/active-390-2.png",
+      "source": "artifacts/vela/proof-web/active-390-2.png",
+      "bytes": 37785,
+      "sha256": "e43302a892e3bcda5a290f95c7d50b09268475b5caab1926a2bb5b16273ef233"
+    },
+    {
+      "path": "vela/proof-web/active-390-3.6.png",
+      "source": "artifacts/vela/proof-web/active-390-3.6.png",
+      "bytes": 29172,
+      "sha256": "2f4d410cf4373f00964a4d0d471e7992c5e057bd6523f20ff600c53a89f3dc8b"
+    },
+    {
+      "path": "vela/proof-web/active-834-1.png",
+      "source": "artifacts/vela/proof-web/active-834-1.png",
+      "bytes": 60799,
+      "sha256": "0faf3a78ef80f830a575cb55df6522cf947bd249b4f6e93b27ac7e3e381be1c8"
+    },
+    {
+      "path": "vela/proof-web/active-834-2.143.png",
+      "source": "artifacts/vela/proof-web/active-834-2.143.png",
+      "bytes": 54321,
+      "sha256": "a0c67cd6c0c39cad1c3f88a0f092bb20b84d138d62dee62c32b1121b4be3beff"
+    },
+    {
+      "path": "vela/proof-web/active-834-2.png",
+      "source": "artifacts/vela/proof-web/active-834-2.png",
+      "bytes": 50990,
+      "sha256": "87375653e11faff3857a0863b7c96debe24101ec810f44e64d99c5793cb2b8c8"
+    },
+    {
+      "path": "vela/proof-web/active-834-3.6.png",
+      "source": "artifacts/vela/proof-web/active-834-3.6.png",
+      "bytes": 53287,
+      "sha256": "5e982064e263b7e7a2bddc4d76c51c3e555bafc6f9c7cf2425e001954263442f"
+    },
+    {
+      "path": "vela/proof-web/complete-1440-1.png",
+      "source": "artifacts/vela/proof-web/complete-1440-1.png",
+      "bytes": 57641,
+      "sha256": "ec4b4234e202118dff292fe11876ebd31694f17bd169094de5dd71ab204a32bb"
+    },
+    {
+      "path": "vela/proof-web/complete-1440-2.143.png",
+      "source": "artifacts/vela/proof-web/complete-1440-2.143.png",
+      "bytes": 85179,
+      "sha256": "69efcc2a35803ea7b5b37129ef2698740fcc6112e1d8d0df61da285185f2e756"
+    },
+    {
+      "path": "vela/proof-web/complete-1440-2.png",
+      "source": "artifacts/vela/proof-web/complete-1440-2.png",
+      "bytes": 82139,
+      "sha256": "e66a3ff7863efc265d9c0527bef1e45ca585eb1205284719147096f3496225d4"
+    },
+    {
+      "path": "vela/proof-web/complete-1440-3.6.png",
+      "source": "artifacts/vela/proof-web/complete-1440-3.6.png",
+      "bytes": 66811,
+      "sha256": "83e95a98ca4a6de8932955f232b6b78cb00a00ea69ea10b4520e979236a25f7c"
+    },
+    {
+      "path": "vela/proof-web/complete-390-1.png",
+      "source": "artifacts/vela/proof-web/complete-390-1.png",
+      "bytes": 40364,
+      "sha256": "92d836e09022717dc23a8d5a4eba5012a363a39cc83af37448b02311a4555afb"
+    },
+    {
+      "path": "vela/proof-web/complete-390-2.143.png",
+      "source": "artifacts/vela/proof-web/complete-390-2.143.png",
+      "bytes": 42519,
+      "sha256": "59cda892dc5a32d0ec1b29d1336681928f49c4470289863825c5321380b10131"
+    },
+    {
+      "path": "vela/proof-web/complete-390-2.png",
+      "source": "artifacts/vela/proof-web/complete-390-2.png",
+      "bytes": 38477,
+      "sha256": "9322523f7222f75bf32a1d1a7fad050978476f5dfafc00998f41bb23f0f72fc4"
+    },
+    {
+      "path": "vela/proof-web/complete-390-3.6.png",
+      "source": "artifacts/vela/proof-web/complete-390-3.6.png",
+      "bytes": 29447,
+      "sha256": "b460f8baf8fbd8d11a1ecd39086a8d0df3ddd43ff6267c506753092e2f2958ca"
+    },
+    {
+      "path": "vela/proof-web/complete-834-1.png",
+      "source": "artifacts/vela/proof-web/complete-834-1.png",
+      "bytes": 54254,
+      "sha256": "79c8a4df470df62ae4880b56a3a62fa9b4703022473c27ce57a97867ec7a7311"
+    },
+    {
+      "path": "vela/proof-web/complete-834-2.143.png",
+      "source": "artifacts/vela/proof-web/complete-834-2.143.png",
+      "bytes": 60638,
+      "sha256": "5ba83ace54c4fe2065e67698de398349e7e0ac7a0380e2c3c7c8d98d5a1087e4"
+    },
+    {
+      "path": "vela/proof-web/complete-834-2.png",
+      "source": "artifacts/vela/proof-web/complete-834-2.png",
+      "bytes": 52641,
+      "sha256": "a39c82f4f7c04510484297c6fdaa3773cc27cb3162ed059a1ddc7b1ab076647a"
+    },
+    {
+      "path": "vela/proof-web/complete-834-3.6.png",
+      "source": "artifacts/vela/proof-web/complete-834-3.6.png",
+      "bytes": 65363,
+      "sha256": "abcd430f50a078f8aa5419fd4a0b8e36c936735c31d0a458cb34bdf5233219d8"
+    },
+    {
+      "path": "vela/proof-web/detail-1440-1.png",
+      "source": "artifacts/vela/proof-web/detail-1440-1.png",
+      "bytes": 71728,
+      "sha256": "9c8171f5599e4ea8f51a9f55c62eabc3adac74c1a5644f5aff8570888caeaa49"
+    },
+    {
+      "path": "vela/proof-web/detail-1440-2.143.png",
+      "source": "artifacts/vela/proof-web/detail-1440-2.143.png",
+      "bytes": 115909,
+      "sha256": "b799edc2babc1ff0ba5a02938ce9ef79dd4db4d2869e73510a1bf3c392cffcbb"
+    },
+    {
+      "path": "vela/proof-web/detail-1440-2.png",
+      "source": "artifacts/vela/proof-web/detail-1440-2.png",
+      "bytes": 109854,
+      "sha256": "87dbf9145f9a39edc0cae05f4633ce27ec219cec914195b73eaee591e350a34a"
+    },
+    {
+      "path": "vela/proof-web/detail-1440-3.6.png",
+      "source": "artifacts/vela/proof-web/detail-1440-3.6.png",
+      "bytes": 103264,
+      "sha256": "c030c62ac5f8e416371a1e3a029133b24f307287e3b36a9ec56456ffd9994167"
+    },
+    {
+      "path": "vela/proof-web/detail-390-1.png",
+      "source": "artifacts/vela/proof-web/detail-390-1.png",
+      "bytes": 50931,
+      "sha256": "18522bfb612d80690c54d569d181ac7c5817a707db170a29924c8df8d291350b"
+    },
+    {
+      "path": "vela/proof-web/detail-390-2.143.png",
+      "source": "artifacts/vela/proof-web/detail-390-2.143.png",
+      "bytes": 55068,
+      "sha256": "23bb6612330274596cb7cb62a28130ab1ebd0fedec8ea29f125c39521421e9b2"
+    },
+    {
+      "path": "vela/proof-web/detail-390-2.png",
+      "source": "artifacts/vela/proof-web/detail-390-2.png",
+      "bytes": 56812,
+      "sha256": "1d88ce56562c2933aaa6a9ba29071d453800dc7ac18294d4cb852a4bc121cf84"
+    },
+    {
+      "path": "vela/proof-web/detail-390-3.6.png",
+      "source": "artifacts/vela/proof-web/detail-390-3.6.png",
+      "bytes": 31435,
+      "sha256": "a3107e5ee5a8d1d4e3d790e4c7e6366f7911f3413ab03fdc24b6af3028ae8dbf"
+    },
+    {
+      "path": "vela/proof-web/detail-834-1.png",
+      "source": "artifacts/vela/proof-web/detail-834-1.png",
+      "bytes": 67252,
+      "sha256": "cc4f322fffb46956cc0becc93902ee3711c56c47bc457af62b8a541fe1423290"
+    },
+    {
+      "path": "vela/proof-web/detail-834-2.143.png",
+      "source": "artifacts/vela/proof-web/detail-834-2.143.png",
+      "bytes": 85952,
+      "sha256": "2878cf0bc6564bc8e2546f9ddab2b1154376fda95d6ca00a9129a26891c99ba3"
+    },
+    {
+      "path": "vela/proof-web/detail-834-2.png",
+      "source": "artifacts/vela/proof-web/detail-834-2.png",
+      "bytes": 87127,
+      "sha256": "35587041c540d7a0d786ef4cebb5cce2dff85d9448a78df27eadaba68588a5c6"
+    },
+    {
+      "path": "vela/proof-web/detail-834-3.6.png",
+      "source": "artifacts/vela/proof-web/detail-834-3.6.png",
+      "bytes": 78707,
+      "sha256": "379cf3ccb38f5805e06edd8de8762cace304e27b5168ceda8035ef14bcff2540"
+    },
+    {
+      "path": "vela/proof-web/insights-1440-1.png",
+      "source": "artifacts/vela/proof-web/insights-1440-1.png",
+      "bytes": 69735,
+      "sha256": "7c049ff8292ae2821389b5ae483cdfe79828ad022ec8d15d49858f6a2c7590c8"
+    },
+    {
+      "path": "vela/proof-web/insights-1440-2.143.png",
+      "source": "artifacts/vela/proof-web/insights-1440-2.143.png",
+      "bytes": 141936,
+      "sha256": "d7110357bfa720eca285a471f29b20b349f7a30937edc45b630c408fc5be292d"
+    },
+    {
+      "path": "vela/proof-web/insights-1440-2.png",
+      "source": "artifacts/vela/proof-web/insights-1440-2.png",
+      "bytes": 129357,
+      "sha256": "7c0e0b19b2713ffc68d877d64022451a45fd1665995802b64c0c87695a98e552"
+    },
+    {
+      "path": "vela/proof-web/insights-1440-3.6.png",
+      "source": "artifacts/vela/proof-web/insights-1440-3.6.png",
+      "bytes": 218495,
+      "sha256": "f307967c30fe21cf010642e630c84a37e2d4383dc4fe470318c28c478dc5f0f1"
+    },
+    {
+      "path": "vela/proof-web/insights-390-1.png",
+      "source": "artifacts/vela/proof-web/insights-390-1.png",
+      "bytes": 59563,
+      "sha256": "7fabceb18f8415e69386d79fe88a072cc1e1572ef9319c7f0fe089d271f01a74"
+    },
+    {
+      "path": "vela/proof-web/insights-390-2.143.png",
+      "source": "artifacts/vela/proof-web/insights-390-2.143.png",
+      "bytes": 131917,
+      "sha256": "7864ca43bfbb440f2c665a889649c120f1bc503200858d55fdb114bbc16434ec"
+    },
+    {
+      "path": "vela/proof-web/insights-390-2.png",
+      "source": "artifacts/vela/proof-web/insights-390-2.png",
+      "bytes": 122704,
+      "sha256": "02431ca9fc5fd36a8d6eca7c5d1acd697685b9af4e7dc1862250f7142f93f1e9"
+    },
+    {
+      "path": "vela/proof-web/insights-390-3.6.png",
+      "source": "artifacts/vela/proof-web/insights-390-3.6.png",
+      "bytes": 225339,
+      "sha256": "57a5d57ae44c45ad30e8e548b57d44aaeb2b0cbfc367cde9a1ed3a7c9e3e99e7"
+    },
+    {
+      "path": "vela/proof-web/insights-834-1.png",
+      "source": "artifacts/vela/proof-web/insights-834-1.png",
+      "bytes": 67227,
+      "sha256": "34acf7fa1a11c0fa8ce6df21faa78756ad3e05a1766e8b5dea4b4926c77058ee"
+    },
+    {
+      "path": "vela/proof-web/insights-834-2.143.png",
+      "source": "artifacts/vela/proof-web/insights-834-2.143.png",
+      "bytes": 125198,
+      "sha256": "0840f57e36141a2aa03f387392ee8761af48acfd657bd85462f504a1e2978a66"
+    },
+    {
+      "path": "vela/proof-web/insights-834-2.png",
+      "source": "artifacts/vela/proof-web/insights-834-2.png",
+      "bytes": 114131,
+      "sha256": "8a407db391dbba274ba754013a6cd1bdc2b99c0bcced354894df659e06444606"
+    },
+    {
+      "path": "vela/proof-web/insights-834-3.6.png",
+      "source": "artifacts/vela/proof-web/insights-834-3.6.png",
+      "bytes": 215641,
+      "sha256": "842d61d0612e04a0308df6bde3846089bbcc6636eac07e6b49ef901052a2c5fa"
+    },
+    {
+      "path": "vela/proof-web/matrix.json",
+      "source": "artifacts/vela/proof-web/matrix.json",
+      "bytes": 821349,
+      "sha256": "f289eb9e3b622915ae19aa208c120e548eb155fefe3c373a16d9c47da3ea2278"
+    },
+    {
+      "path": "vela/proof-web/menu-390-3.6.png",
+      "source": "artifacts/vela/proof-web/menu-390-3.6.png",
+      "bytes": 296966,
+      "sha256": "def23a75d7df02fccc73c5196172a41d5c44e84e342ddf7aaa1d850cf8cb6033"
+    },
+    {
+      "path": "vela/proof-web/profile-1440-1.png",
+      "source": "artifacts/vela/proof-web/profile-1440-1.png",
+      "bytes": 77577,
+      "sha256": "a544f7abf990ebd48858e893f8682c0c5a6c20123d331a0556f83968429a2325"
+    },
+    {
+      "path": "vela/proof-web/profile-1440-2.143.png",
+      "source": "artifacts/vela/proof-web/profile-1440-2.143.png",
+      "bytes": 163302,
+      "sha256": "bdf9b46bbab8da2e925b9691878fc8cda36bfd281236f8b660c6c718a915d076"
+    },
+    {
+      "path": "vela/proof-web/profile-1440-2.png",
+      "source": "artifacts/vela/proof-web/profile-1440-2.png",
+      "bytes": 153703,
+      "sha256": "d8a631ee172f52742115a28948dc12e260a829d4237e7e2390d120e713bf2531"
+    },
+    {
+      "path": "vela/proof-web/profile-1440-3.6.png",
+      "source": "artifacts/vela/proof-web/profile-1440-3.6.png",
+      "bytes": 246148,
+      "sha256": "58313944ed43f07cbb1380aa5068a60aa6ff115e5f1dfd4f9092547a5d9e43fe"
+    },
+    {
+      "path": "vela/proof-web/profile-390-1.png",
+      "source": "artifacts/vela/proof-web/profile-390-1.png",
+      "bytes": 68565,
+      "sha256": "3f6da486be69e1c4dcde8aff68e88039e9da27dac1c16a5d2b82702ed56c8970"
+    },
+    {
+      "path": "vela/proof-web/profile-390-2.143.png",
+      "source": "artifacts/vela/proof-web/profile-390-2.143.png",
+      "bytes": 149085,
+      "sha256": "f0c36f0b085508eaebfd91bb1c1da69bd284749bf35b740d39b829ab684cf2d2"
+    },
+    {
+      "path": "vela/proof-web/profile-390-2.png",
+      "source": "artifacts/vela/proof-web/profile-390-2.png",
+      "bytes": 138960,
+      "sha256": "6aecdf0b214b23905168f0c716b1d70ae2e25d8c21b794a1bb23645497d4ecd5"
+    },
+    {
+      "path": "vela/proof-web/profile-390-3.6.png",
+      "source": "artifacts/vela/proof-web/profile-390-3.6.png",
+      "bytes": 255245,
+      "sha256": "7fec3a836d19dbd2199d40457bd26640bb3a3b8e73096881a1e5a3472f07ce32"
+    },
+    {
+      "path": "vela/proof-web/profile-834-1.png",
+      "source": "artifacts/vela/proof-web/profile-834-1.png",
+      "bytes": 77412,
+      "sha256": "b02e2539cc0b218542b2a590dd2bacdee1df55d39ef5159b2ed95c64e754d752"
+    },
+    {
+      "path": "vela/proof-web/profile-834-2.143.png",
+      "source": "artifacts/vela/proof-web/profile-834-2.143.png",
+      "bytes": 139683,
+      "sha256": "095aeaf3aa3583c595e1854c9f5517cfdf78c70a10d195c87f47ec6f06a0dde4"
+    },
+    {
+      "path": "vela/proof-web/profile-834-2.png",
+      "source": "artifacts/vela/proof-web/profile-834-2.png",
+      "bytes": 132300,
+      "sha256": "f84ebaa5c4490a07f3217d479612d97f785c266224831ffe6c2596473fe2ad7c"
+    },
+    {
+      "path": "vela/proof-web/profile-834-3.6.png",
+      "source": "artifacts/vela/proof-web/profile-834-3.6.png",
+      "bytes": 242962,
+      "sha256": "01d633366696b73a4974b1865b1b065733501eeb1d33fb7bfcf7cc3d6dee3791"
+    },
+    {
+      "path": "vela/proof-web/report.json",
+      "source": "artifacts/vela/proof-web/report.json",
+      "bytes": 838279,
+      "sha256": "a6806309175565899641098c9c3d8e551c14d90f06926323a46ebb8d14755434"
+    },
+    {
+      "path": "vela/proof-web/restore-error-corrupt-json.png",
+      "source": "artifacts/vela/proof-web/restore-error-corrupt-json.png",
+      "bytes": 22835,
+      "sha256": "bc68278bd4b919ff0b348ed95719869832f9687a0b8163b513136b301d65a6f8"
+    },
+    {
+      "path": "vela/proof-web/restore-error-invalid-schema.png",
+      "source": "artifacts/vela/proof-web/restore-error-invalid-schema.png",
+      "bytes": 22835,
+      "sha256": "bc68278bd4b919ff0b348ed95719869832f9687a0b8163b513136b301d65a6f8"
+    },
+    {
+      "path": "vela/proof-web/restore-error-throw.png",
+      "source": "artifacts/vela/proof-web/restore-error-throw.png",
+      "bytes": 22835,
+      "sha256": "bc68278bd4b919ff0b348ed95719869832f9687a0b8163b513136b301d65a6f8"
+    },
+    {
+      "path": "vela/proof-web/save-error.png",
+      "source": "artifacts/vela/proof-web/save-error.png",
+      "bytes": 88192,
+      "sha256": "c39685fa14cd0a0fb8c643ece2cb630e29826fb47a78cabc35e167630732a55f"
+    },
+    {
+      "path": "vela/proof-web/today-1440-1.png",
+      "source": "artifacts/vela/proof-web/today-1440-1.png",
+      "bytes": 102855,
+      "sha256": "b7e0a73568a4ad66dd8f97a83fab583da2965ce9051b65c2d4d1fc47e1040e5e"
+    },
+    {
+      "path": "vela/proof-web/today-1440-2.143.png",
+      "source": "artifacts/vela/proof-web/today-1440-2.143.png",
+      "bytes": 208406,
+      "sha256": "d97098890d14f8d4833e3168c6eb37210ce6fa1c84520bd0984824bd3382c388"
+    },
+    {
+      "path": "vela/proof-web/today-1440-2.png",
+      "source": "artifacts/vela/proof-web/today-1440-2.png",
+      "bytes": 194574,
+      "sha256": "3bf378014c63bb588166ea64f9476cd4c76da6451cce4654a998128cc473cc07"
+    },
+    {
+      "path": "vela/proof-web/today-1440-3.6.png",
+      "source": "artifacts/vela/proof-web/today-1440-3.6.png",
+      "bytes": 292507,
+      "sha256": "29d4f6dd2e9fc74e50998535bece4d0b3729f7f87fa018813fe35eb43016a541"
+    },
+    {
+      "path": "vela/proof-web/today-390-1.png",
+      "source": "artifacts/vela/proof-web/today-390-1.png",
+      "bytes": 86930,
+      "sha256": "0b18a67f3a6f4d29180c282fd35b3f7b51dd39d40a118ac4e2ecfcb13af23443"
+    },
+    {
+      "path": "vela/proof-web/today-390-2.143.png",
+      "source": "artifacts/vela/proof-web/today-390-2.143.png",
+      "bytes": 180488,
+      "sha256": "ae0fb6cdb49b831682ac77807286bf18aa13d805329e632956ce1b1932904fc6"
+    },
+    {
+      "path": "vela/proof-web/today-390-2.png",
+      "source": "artifacts/vela/proof-web/today-390-2.png",
+      "bytes": 167560,
+      "sha256": "863b9a793b5c99e91b4b2f5a5ff555ec0c9b9e64fb6e73352b55c6dc5f387259"
+    },
+    {
+      "path": "vela/proof-web/today-390-3.6.png",
+      "source": "artifacts/vela/proof-web/today-390-3.6.png",
+      "bytes": 308026,
+      "sha256": "f38fff3a1452e226fee8e572e41b340753102f1369f745bd3ccd919ec10d136a"
+    },
+    {
+      "path": "vela/proof-web/today-834-1.png",
+      "source": "artifacts/vela/proof-web/today-834-1.png",
+      "bytes": 100989,
+      "sha256": "2f21d2ceba42344d12feef37a785b186e8af547257cd96cb5e3acb91247f4f33"
+    },
+    {
+      "path": "vela/proof-web/today-834-2.143.png",
+      "source": "artifacts/vela/proof-web/today-834-2.143.png",
+      "bytes": 168175,
+      "sha256": "cd988087691e596675b847a8586567f267a455a771870f6214fff52db216f43c"
+    },
+    {
+      "path": "vela/proof-web/today-834-2.png",
+      "source": "artifacts/vela/proof-web/today-834-2.png",
+      "bytes": 160646,
+      "sha256": "9ad3497fc88b066de7c0a1590c2276963e9b596da3498b70484f000df9c29723"
+    },
+    {
+      "path": "vela/proof-web/today-834-3.6.png",
+      "source": "artifacts/vela/proof-web/today-834-3.6.png",
+      "bytes": 291241,
+      "sha256": "ea0fa082b3bf52a001933401b066de3960e05a3e4ea072cf81b82af1a13af967"
+    },
+    {
       "path": "verification-final-full/browser.log",
       "source": "artifacts/verification-final-full/browser.log",
       "bytes": 1026,
@@ -2661,10 +4312,124 @@
       "sha256": "4c16a2945ae90c7fa6ae763fed40d7a08571ddc150dd1232d36d0a004bb43bdf"
     },
     {
+      "path": "verification-web-domain-failure/browser.log",
+      "source": "artifacts/verification-web-domain-failure/browser.log",
+      "bytes": 1028,
+      "sha256": "9e2146071b86cc81cfeaaf086a145ae5069e4795d5f57633d01a96abdf471bbc"
+    },
+    {
+      "path": "verification-web-domain-failure/build.log",
+      "source": "artifacts/verification-web-domain-failure/build.log",
+      "bytes": 73,
+      "sha256": "542b040ef78d19df67e5d7ba63fa53bf33d738ef95ee8dd3cd53d4b81c5da5bc"
+    },
+    {
+      "path": "verification-web-domain-failure/commands-and-app.log",
+      "source": "artifacts/verification-web-domain-failure/commands-and-app.log",
+      "bytes": 1250,
+      "sha256": "f37acb1001a1074378ce9adbff44a5b05df14a69baa26403dd6ea6ab6f5a4d63"
+    },
+    {
+      "path": "verification-web-domain-failure/consumer.log",
+      "source": "artifacts/verification-web-domain-failure/consumer.log",
+      "bytes": 90,
+      "sha256": "3b222533128938d98807124aa94aed358204562c0c453f7ecd9b6cb98e554e7f"
+    },
+    {
+      "path": "verification-web-domain-failure/fieldwork-build.log",
+      "source": "artifacts/verification-web-domain-failure/fieldwork-build.log",
+      "bytes": 24,
+      "sha256": "94029fede5a7c946d01bda75585b06395c4b1f17d5515dd2f2857831352efae6"
+    },
+    {
+      "path": "verification-web-domain-failure/fieldwork-web.log",
+      "source": "artifacts/verification-web-domain-failure/fieldwork-web.log",
+      "bytes": 72,
+      "sha256": "ec2de3d5b27435e512184cb50e8a4627139af31ff121373960b1fc09f581d4d2"
+    },
+    {
+      "path": "verification-web-domain-failure/matrix-native-android.log",
+      "source": "artifacts/verification-web-domain-failure/matrix-native-android.log",
+      "bytes": 1169,
+      "sha256": "3ad5fed1074b44a53b6518bd5952b771ac2aade05d4701cc7f8b31aeb3ea879f"
+    },
+    {
+      "path": "verification-web-domain-failure/matrix-native-ios.log",
+      "source": "artifacts/verification-web-domain-failure/matrix-native-ios.log",
+      "bytes": 767,
+      "sha256": "33c959a98625aa73e93dff1e7d081fadeabc55aa299e4565d696432f215f3ebb"
+    },
+    {
+      "path": "verification-web-domain-failure/matrix-web.log",
+      "source": "artifacts/verification-web-domain-failure/matrix-web.log",
+      "bytes": 630,
+      "sha256": "16279309884c39283f53106f2f8696ca1fa727d9d7acb14a6534c30ed84d3fdb"
+    },
+    {
+      "path": "verification-web-domain-failure/native-android.log",
+      "source": "artifacts/verification-web-domain-failure/native-android.log",
+      "bytes": 411,
+      "sha256": "2bbe30c1637d82754a38d831c92a202256528ad42124b2888f1dd6732ee00c3c"
+    },
+    {
+      "path": "verification-web-domain-failure/native-ios.log",
+      "source": "artifacts/verification-web-domain-failure/native-ios.log",
+      "bytes": 411,
+      "sha256": "96fc37a1983f90955200ddcf2552793d9a98ebbcfcef2720129a0201879d08e1"
+    },
+    {
+      "path": "verification-web-domain-failure/native-types.log",
+      "source": "artifacts/verification-web-domain-failure/native-types.log",
+      "bytes": 72,
+      "sha256": "6679293f34eaacf488f82600e44ea811d1cb6b1514979004f41999537e059b87"
+    },
+    {
+      "path": "verification-web-domain-failure/selector.log",
+      "source": "artifacts/verification-web-domain-failure/selector.log",
+      "bytes": 3181,
+      "sha256": "91763d4c58d049133c4b8d2f8e4b4a9700f4a1f072104ce6ccbaba6e8023808a"
+    },
+    {
+      "path": "verification-web-domain-failure/summary.json",
+      "source": "artifacts/verification-web-domain-failure/summary.json",
+      "bytes": 3365,
+      "sha256": "c80034d11a25091d80ca0835544d1c3313893597a7ed96a9c7838d1730dcee03"
+    },
+    {
+      "path": "verification-web-domain-failure/types.log",
+      "source": "artifacts/verification-web-domain-failure/types.log",
+      "bytes": 62,
+      "sha256": "1f4673840d3baf9d7edd04f7c4a30f6f8b0435280ba9c0970b196897d97abd1b"
+    },
+    {
+      "path": "verification-web-domain-failure/unit.log",
+      "source": "artifacts/verification-web-domain-failure/unit.log",
+      "bytes": 22387,
+      "sha256": "2b363c901b3adf7a23271b11d9e0f5fb3cc35d45df608414aff40e980622c7b5"
+    },
+    {
+      "path": "verification-web-domain-failure/vela-build.log",
+      "source": "artifacts/verification-web-domain-failure/vela-build.log",
+      "bytes": 19,
+      "sha256": "90984ce90a81cac39bf6fdb4c0d19be0165cf3af4c074bf6134506db9831df35"
+    },
+    {
+      "path": "verification-web-domain-failure/vela-policy.log",
+      "source": "artifacts/verification-web-domain-failure/vela-policy.log",
+      "bytes": 16069,
+      "sha256": "07dccdce31a173ede0c21280490c7f65dbd56a4c4ee364f1d2c8ac2e5aef16c3"
+    },
+    {
+      "path": "verification-web-domain-failure/vela-web.log",
+      "source": "artifacts/verification-web-domain-failure/vela-web.log",
+      "bytes": 7075,
+      "sha256": "b1ce39c1b82ebc2935d4574ec33c593078e3b80a4732a0923f2970e782af5ad8"
+    },
+    {
       "path": "verification/browser.log",
       "source": "artifacts/verification/browser.log",
-      "bytes": 1028,
-      "sha256": "941c6cca37e42318328e36161f700016432bc88026b21648dd5427aa97ed4f67"
+      "bytes": 1027,
+      "sha256": "8901bcbd27bcaa300feecd814361d843d72112e9e01bde669665acfb68235ca6"
     },
     {
       "path": "verification/build.log",
@@ -2675,14 +4440,20 @@
     {
       "path": "verification/commands-and-app.log",
       "source": "artifacts/verification/commands-and-app.log",
-      "bytes": 1125,
-      "sha256": "82864dfabe2370d77af98f4d01a3a0b64c819a565f814295148afb96049ffead"
+      "bytes": 1249,
+      "sha256": "ad04051c6dc10326e52b7872b8bf89c8e2ff997b4daeb8aac8df4b4192ae1af8"
     },
     {
       "path": "verification/consumer.log",
       "source": "artifacts/verification/consumer.log",
       "bytes": 90,
       "sha256": "3b222533128938d98807124aa94aed358204562c0c453f7ecd9b6cb98e554e7f"
+    },
+    {
+      "path": "verification/evidence-policy.log",
+      "source": "artifacts/verification/evidence-policy.log",
+      "bytes": 863,
+      "sha256": "b2f0bf287f939c9ef0911925eefe4631152a5e7928f9c2064b1c63b9a2c0931b"
     },
     {
       "path": "verification/fieldwork-build.log",
@@ -2717,14 +4488,14 @@
     {
       "path": "verification/native-android.log",
       "source": "artifacts/verification/native-android.log",
-      "bytes": 410,
-      "sha256": "7af0c8a166da7102b9b77e69453447b0d3fb570788a4cb6615ca977adb4f712b"
+      "bytes": 408,
+      "sha256": "8bedb85227f29b7d3b1b42c1cd70d6a58aaa2ea328e7366a62a04896ed047e56"
     },
     {
       "path": "verification/native-ios.log",
       "source": "artifacts/verification/native-ios.log",
       "bytes": 411,
-      "sha256": "127d7e935639d94a75d98df89affb45620660f4bb8c058eb32d60ee0e02dd783"
+      "sha256": "bc3cc31a87689987a3cc1b0d67fbb4523d80028f7e14c80859f40f331aeba0ae"
     },
     {
       "path": "verification/native-types.log",
@@ -2735,14 +4506,14 @@
     {
       "path": "verification/selector.log",
       "source": "artifacts/verification/selector.log",
-      "bytes": 3186,
-      "sha256": "d66b3f21b4fe07410a18337e9ac2c58bfc9e699772f816c878bf4a0723a4977b"
+      "bytes": 3175,
+      "sha256": "75ca9990fa15be716309b75d6ac57144f8927614a9f6523378eb9468d8c2e02a"
     },
     {
       "path": "verification/summary.json",
       "source": "artifacts/verification/summary.json",
-      "bytes": 1736,
-      "sha256": "57e41200cb3d92f4189d1e1c69f7743e3bebad0ed7e7ceb52a7d41b78d85800f"
+      "bytes": 3363,
+      "sha256": "120eab59465653f9944b234898463c5c0ab6701ef37e09e1ae8f7e6564cecf99"
     },
     {
       "path": "verification/types.log",
@@ -2753,8 +4524,26 @@
     {
       "path": "verification/unit.log",
       "source": "artifacts/verification/unit.log",
-      "bytes": 7948,
-      "sha256": "bfcd1f763443fd82361fa7581945f4d7bba982b26752d8aba71791064809df9d"
+      "bytes": 22403,
+      "sha256": "0ac5de3ef4c3524c972633c7b6f1a2747c67e9661aa5f16adf926f6c01537cc9"
+    },
+    {
+      "path": "verification/vela-build.log",
+      "source": "artifacts/verification/vela-build.log",
+      "bytes": 19,
+      "sha256": "90984ce90a81cac39bf6fdb4c0d19be0165cf3af4c074bf6134506db9831df35"
+    },
+    {
+      "path": "verification/vela-policy.log",
+      "source": "artifacts/verification/vela-policy.log",
+      "bytes": 16061,
+      "sha256": "d5141292ebc79e9a0915be5c9916dcb4a86a3a020ae0c1ca2cc1a1222f0d2668"
+    },
+    {
+      "path": "verification/vela-web.log",
+      "source": "artifacts/verification/vela-web.log",
+      "bytes": 2646,
+      "sha256": "702757ec1af12c5635d7b7057bd823adf04d59c8301a182c8d70d88ee4e9a44f"
     }
   ],
   "derived": [

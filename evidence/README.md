@@ -1,6 +1,11 @@
 # Portable execution evidence
 
-This directory contains curated authored measurements, screenshots, synthetic rating records, review hashes, dependency audits and trial accounting. [index.json](index.json) records the source path, byte length and SHA-256 of each copied file. Regenerate it with `npm run evidence:export` after the relevant runs finish.
+This directory contains curated authored measurements, screenshots, synthetic rating records, review hashes, dependency audits and trial accounting. [index.json](index.json) records the source path, byte length and SHA-256 of each copied file. Regenerate it after the relevant runs finish with `EVIDENCE_VELA_ANDROID_FLOW=flows-1792908583406 npm run evidence:export`. Use `node scripts/export-evidence.mjs --check` with that environment variable for a read-only preflight; later runs must name their own successful flow.
+
+- [Current design-machine proof](vela/machine-proof.json) records bounded mathematical search, one real local neural readout and zero-selector replay.
+- [Vela web matrix](vela/proof-web/report.json) covers 72 complete screens and interactive failure/recovery behavior. [Native proofs](vela/proof-native) cover 42 screens across seven actual phone/tablet/Android text-scale groups; [expanded Text coverage](vela/native-text-coverage-posthoc.json) rechecks all 665 mounted nonzero boxes, including 189 wholly offscreen children.
+- [Vela Android flow](vela/flows-android/flows-1792908583406/summary.json) proves actual task gestures, persistence and reduced motion. Eight taps have independent fresh accessibility XML; two live-clock taps have measured bounds and state-transition evidence with that accessibility oracle explicitly unavailable.
+- [Frozen Vela review captures](review/vela-closure) retain historical failures and source-bound before/after corrections. [Current report](../docs/design-machine-report.md) explains their scopes and remaining research limits.
 
 - [Current verification](verification/summary.json) records the latest lane and whether it completed; never infer success from the existence of a log. [Earlier complete lane](verification-full/summary.json) and interrupted/failed runs remain separate.
 - [Core matrices](system) preserve actual renderer observations, including the adversarial Android failure and independent repair.

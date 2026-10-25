@@ -1,7 +1,7 @@
 {
-  "completedAt": "2026-10-25T03:16:19.093Z",
+  "completedAt": "2026-10-25T06:36:37.427Z",
   "complete": true,
-  "expectedStages": 9,
+  "expectedStages": 18,
   "results": [
     {
       "name": "build",
@@ -11,7 +11,7 @@
         "build"
       ],
       "code": 0,
-      "latencyMs": 1156
+      "latencyMs": 1707
     },
     {
       "name": "types",
@@ -21,7 +21,7 @@
         "typecheck"
       ],
       "code": 0,
-      "latencyMs": 957
+      "latencyMs": 1458
     },
     {
       "name": "native-types",
@@ -33,7 +33,7 @@
         "native"
       ],
       "code": 0,
-      "latencyMs": 817
+      "latencyMs": 1010
     },
     {
       "name": "unit",
@@ -42,7 +42,7 @@
         "test"
       ],
       "code": 0,
-      "latencyMs": 2400
+      "latencyMs": 2925
     },
     {
       "name": "browser",
@@ -53,7 +53,7 @@
         "test/browser.integration.ts"
       ],
       "code": 0,
-      "latencyMs": 8398
+      "latencyMs": 8009
     },
     {
       "name": "commands-and-app",
@@ -66,7 +66,7 @@
         "test/context.integration.ts"
       ],
       "code": 0,
-      "latencyMs": 39048
+      "latencyMs": 21213
     },
     {
       "name": "consumer",
@@ -75,7 +75,7 @@
         "scripts/consumer-check.mjs"
       ],
       "code": 0,
-      "latencyMs": 990
+      "latencyMs": 480
     },
     {
       "name": "fieldwork-build",
@@ -84,7 +84,7 @@
         "scripts/build-fieldwork.mjs"
       ],
       "code": 0,
-      "latencyMs": 342
+      "latencyMs": 203
     },
     {
       "name": "fieldwork-web",
@@ -93,7 +93,96 @@
         "scripts/prove-fieldwork-web.mjs"
       ],
       "code": 0,
-      "latencyMs": 6939
+      "latencyMs": 4729
+    },
+    {
+      "name": "vela-policy",
+      "command": [
+        "npx",
+        "tsx",
+        "scripts/vela-design.ts"
+      ],
+      "code": 0,
+      "latencyMs": 825
+    },
+    {
+      "name": "vela-build",
+      "command": [
+        "node",
+        "scripts/build-vela.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 217
+    },
+    {
+      "name": "vela-web",
+      "command": [
+        "node",
+        "scripts/prove-vela-web.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 39005
+    },
+    {
+      "name": "native-ios",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/native.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 12073
+    },
+    {
+      "name": "native-android",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/native.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 12377
+    },
+    {
+      "name": "selector",
+      "command": [
+        "node",
+        "scripts/selector-smoke.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 92372
+    },
+    {
+      "name": "matrix-web",
+      "command": [
+        "node",
+        "scripts/system-matrix.mjs",
+        "web"
+      ],
+      "code": 0,
+      "latencyMs": 108202
+    },
+    {
+      "name": "matrix-native-ios",
+      "command": [
+        "node",
+        "scripts/system-matrix.mjs",
+        "native-ios"
+      ],
+      "code": 0,
+      "latencyMs": 155203
+    },
+    {
+      "name": "matrix-native-android",
+      "command": [
+        "node",
+        "scripts/system-matrix.mjs",
+        "native-android"
+      ],
+      "code": 0,
+      "latencyMs": 187290
     }
   ],
   "passed": true

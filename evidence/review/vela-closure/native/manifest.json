@@ -1,0 +1,111 @@
+{
+  "handoffIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+  "implementationIdentity": "61a754d7cc3445eff3888e8f8146c53ac93e652703e0022eac5fa00a9a788036",
+  "files": [
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/today.json",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/today.json",
+      "sha256": "842d3b9715f8befbbdc90f783dad5d8e93687369c72174f86457d25219232c39"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/today.png",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/today.png",
+      "sha256": "bf13ce819e567fa0f6049c901e85e67c364a1dce307c6cf42eb0ac86759b2fc3"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/detail.json",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/detail.json",
+      "sha256": "b628ec638c74abdccf093c6e519f87b98f39d7696cc55cde9283b7d0d48fe98c"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/detail.png",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/detail.png",
+      "sha256": "70cdc93da4985a7b37551c6dcb05041c97410926ce546d693b631b727d584926"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/active.json",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/active.json",
+      "sha256": "f4d856e9b21184df336159d124b1f739f8119b65c595c7d2473d57ac39ad48e7"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/active.png",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/active.png",
+      "sha256": "9d8a5ae91db61f3fa586d529d08c5a090a732ab76a469d1afc375fdd4dbce704"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/complete.json",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/complete.json",
+      "sha256": "9474133998c79032996492ce6318ec35e6e1d1922c40fdbfbca7640470281b52"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/complete.png",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/complete.png",
+      "sha256": "eb7ec6c70e6bb49aa9608b97a6ab99dd4dea49fbbe19307ec06e4ab2e55f4120"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/insights.json",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/insights.json",
+      "sha256": "fff463935fa7043e3f80efd8d02c86a98d3575ca3603b382cda905636c0d3103"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/insights.png",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/insights.png",
+      "sha256": "5b0af6040c9432665d8ebbfb7bf16d6b95ac30027a7e1fbc15c9aa49b07580a1"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-enlarged-current/summary.json",
+      "frozen": "artifacts/review/vela-closure/native/iphone-enlarged-current/summary.json",
+      "sha256": "52690a86a49e477af2641dad116da52e4f5a258ec625bca6c0dc79b8ac171899"
+    },
+    {
+      "source": "artifacts/vela/proof-native/ipad-default-current/today.json",
+      "frozen": "artifacts/review/vela-closure/native/ipad-default-current/today.json",
+      "sha256": "1b1b52c7e6a4471770753da041531e722401a9eb43f5cc9b653615e2c29850ed"
+    },
+    {
+      "source": "artifacts/vela/proof-native/ipad-default-current/today.png",
+      "frozen": "artifacts/review/vela-closure/native/ipad-default-current/today.png",
+      "sha256": "f2c6da2f5548ea2c7dc5a3465e4c96b1b904c8c220729836e5ec45151466c60c"
+    },
+    {
+      "source": "artifacts/vela/proof-native/ipad-default-current/active.json",
+      "frozen": "artifacts/review/vela-closure/native/ipad-default-current/active.json",
+      "sha256": "7de3a6c2739e2541db09b8b6b68e89c8760817388d891d7c343982ab9ab58cca"
+    },
+    {
+      "source": "artifacts/vela/proof-native/ipad-default-current/active.png",
+      "frozen": "artifacts/review/vela-closure/native/ipad-default-current/active.png",
+      "sha256": "c2098f58a3eccebf47f56b8f7cdbf41d1fa4ac518a01f341d2ef2aacd3e0065f"
+    },
+    {
+      "source": "artifacts/vela/proof-native/ipad-default-current/insights.json",
+      "frozen": "artifacts/review/vela-closure/native/ipad-default-current/insights.json",
+      "sha256": "c861ea63da3a30be6f61e91b4e75c65a8dca70311e0d2ddc7f1b68a91d65ed5f"
+    },
+    {
+      "source": "artifacts/vela/proof-native/ipad-default-current/insights.png",
+      "frozen": "artifacts/review/vela-closure/native/ipad-default-current/insights.png",
+      "sha256": "ccbfefb90b25e2c483546c84715a43d3d6c46ce13505c414993439e9c9a5a5c2"
+    },
+    {
+      "source": "artifacts/vela/proof-native/ipad-default-current/summary.json",
+      "frozen": "artifacts/review/vela-closure/native/ipad-default-current/summary.json",
+      "sha256": "0b70dadfdb201550033bcc448349c49eb7bd1fff39d6e032c0c272dca8884978"
+    },
+    {
+      "source": "artifacts/vela/proof-native/android-default-current/detail.json",
+      "frozen": "artifacts/review/vela-closure/native/android-default-current/detail.json",
+      "sha256": "f3e0dd5b14e0a04125387cb252ca2f6ee20bfbbac017487342d1fb0e42228f6d"
+    },
+    {
+      "source": "artifacts/vela/proof-native/android-default-current/detail.png",
+      "frozen": "artifacts/review/vela-closure/native/android-default-current/detail.png",
+      "sha256": "0875edc55b725aeb239d6f02bed96b7ebff25b4d6ed46a3c92e1fd427974b327"
+    },
+    {
+      "source": "artifacts/vela/proof-native/android-default-current/summary.json",
+      "frozen": "artifacts/review/vela-closure/native/android-default-current/summary.json",
+      "sha256": "9e37dca413fcd3062ff06cbf2479f244b608fed8377fa7685884948c3d2307c0"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/active.json",
+      "frozen": "artifacts/review/vela-closure/safe-area-before/active.json",
+      "sha256": "e0884929742d09aaa918c377f5360192f6285da2e1f1378b7272af0bdb7f3555"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/active.png",
+      "frozen": "artifacts/review/vela-closure/safe-area-before/active.png",
+      "sha256": "d325b6ca4bee8070fd45800a1fb8730a6ec140f3ccb21574339511a6658c34f2"
+    }
+  ]
+}

@@ -1,0 +1,568 @@
+(node:99527) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{
+  "statistics": {
+    "evaluated": 1795,
+    "factorEvaluations": 236940,
+    "uniqueStateBudget": 4096,
+    "effectiveStateBudget": 1795,
+    "expressionOperationUpperBound": 4997280,
+    "observationBudget": 500000,
+    "cardinality": 2721600,
+    "method": "beam",
+    "complete": false,
+    "latencyMs": 257.509667,
+    "selectorCalls": 0,
+    "mainAgentCalls": 0
+  },
+  "assignment": {
+    "body": 19,
+    "bodyLeading": 1.5,
+    "damping": 18,
+    "density": 0.9,
+    "display": 80,
+    "gutter": 20,
+    "radius": 24,
+    "space": 22,
+    "stiffness": 200,
+    "titleLeading": 1.12,
+    "tracking": -0.04
+  },
+  "palette": {
+    "system": {
+      "tokens": {
+        "canvas": "#111310",
+        "surface": "#232621",
+        "ink": "#f5f6ed",
+        "muted": "#b4b9ac",
+        "lime": "#d5ff3f",
+        "cobalt": "#3d44e8",
+        "on-lime": "#152000",
+        "on-cobalt": "#ffffff"
+      },
+      "roles": [
+        {
+          "id": "body",
+          "foreground": "ink",
+          "background": "canvas",
+          "use": "text",
+          "source": [
+            "Vela visual brief"
+          ],
+          "adjacentBackgrounds": [],
+          "backdrop": null,
+          "state": "default",
+          "theme": "default"
+        },
+        {
+          "id": "muted",
+          "foreground": "muted",
+          "background": "surface",
+          "use": "text",
+          "source": [
+            "Vela visual brief"
+          ],
+          "adjacentBackgrounds": [],
+          "backdrop": null,
+          "state": "default",
+          "theme": "default"
+        },
+        {
+          "id": "primary-action",
+          "foreground": "on-lime",
+          "background": "lime",
+          "use": "text",
+          "source": [
+            "Vela visual brief"
+          ],
+          "adjacentBackgrounds": [],
+          "backdrop": null,
+          "state": "default",
+          "theme": "default"
+        },
+        {
+          "id": "session",
+          "foreground": "on-cobalt",
+          "background": "cobalt",
+          "use": "text",
+          "source": [
+            "Vela visual brief"
+          ],
+          "adjacentBackgrounds": [],
+          "backdrop": null,
+          "state": "default",
+          "theme": "default"
+        }
+      ],
+      "harmony": "free"
+    },
+    "tokens": {
+      "canvas": {
+        "source": "#111310",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.06666666666666667,
+            0.07450980392156863,
+            0.06274509803921569
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.18328183836566236,
+            "C": 0.006786667250687041,
+            "h": 135.01398491620876
+          }
+        },
+        "emitted": {
+          "css": "#111310",
+          "hex": "#111310",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.18328183836566236,
+            -0.004800069620382624,
+            0.004797726962951082
+          ]
+        }
+      },
+      "surface": {
+        "source": "#232621",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.13725490196078433,
+            0.14901960784313725,
+            0.12941176470588237
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.263697875565184,
+            "C": 0.010103397915621416,
+            "h": 132.65155443201297
+          }
+        },
+        "emitted": {
+          "css": "#232621",
+          "hex": "#232621",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.263697875565184,
+            -0.006845436337787045,
+            0.007430925298150148
+          ]
+        }
+      },
+      "ink": {
+        "source": "#f5f6ed",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.9607843137254902,
+            0.9647058823529412,
+            0.9294117647058824
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.9699172462248794,
+            "C": 0.01191830696231077,
+            "h": 111.7546355229183
+          }
+        },
+        "emitted": {
+          "css": "#f5f6ed",
+          "hex": "#f5f6ed",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.9699172462248794,
+            -0.004417312879667901,
+            0.011069480013577215
+          ]
+        }
+      },
+      "muted": {
+        "source": "#b4b9ac",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.7058823529411765,
+            0.7254901960784313,
+            0.6745098039215687
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.7780759318134859,
+            "C": 0.018916511602364985,
+            "h": 124.05538873292869
+          }
+        },
+        "emitted": {
+          "css": "#b4b9ac",
+          "hex": "#b4b9ac",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.7780759318134859,
+            -0.010593134620109301,
+            0.01567226563463786
+          ]
+        }
+      },
+      "lime": {
+        "source": "#d5ff3f",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.8352941176470589,
+            1,
+            0.24705882352941178
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.938444081141788,
+            "C": 0.20845081930867812,
+            "h": 121.64982943632481
+          }
+        },
+        "emitted": {
+          "css": "#d5ff3f",
+          "hex": "#d5ff3f",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.938444081141788,
+            -0.10937965720205195,
+            0.17744811822282247
+          ]
+        }
+      },
+      "cobalt": {
+        "source": "#3d44e8",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.23921568627450981,
+            0.26666666666666666,
+            0.9098039215686274
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.49965265951498516,
+            "C": 0.23992632764975466,
+            "h": 271.88560211757556
+          }
+        },
+        "emitted": {
+          "css": "#3d44e8",
+          "hex": "#3d44e8",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.49965265951498516,
+            0.007894541894232943,
+            -0.23979641137385194
+          ]
+        }
+      },
+      "on-lime": {
+        "source": "#152000",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.08235294117647059,
+            0.12549019607843137,
+            0
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.22461257424667352,
+            "C": 0.0571354191078893,
+            "h": 125.94809077786454
+          }
+        },
+        "emitted": {
+          "css": "#152000",
+          "hex": "#152000",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.22461257424667352,
+            -0.033541465052772806,
+            0.04625393214363274
+          ]
+        }
+      },
+      "on-cobalt": {
+        "source": "#ffffff",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            1,
+            1,
+            1
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 1.0000000000000002,
+            "C": 0,
+            "h": null
+          }
+        },
+        "emitted": {
+          "css": "#ffffff",
+          "hex": "#ffffff",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            1.0000000000000002,
+            -4.996003610813204e-16,
+            0
+          ]
+        }
+      }
+    },
+    "checks": [
+      {
+        "id": "body/canvas",
+        "role": "body",
+        "foreground": "ink",
+        "foregroundBackdrop": "canvas",
+        "background": "canvas",
+        "backdrop": null,
+        "state": "default",
+        "theme": "default",
+        "use": "text",
+        "minimum": 4.5,
+        "ratio": 17.15276523865685,
+        "ratioInterval": {
+          "min": 17.15276523865685,
+          "max": 17.15276523865685
+        },
+        "compositingUncertainty": {
+          "foregroundCodeValues": 0,
+          "backgroundCodeValues": 0
+        },
+        "effectiveForeground": "#f5f6ed",
+        "effectiveBackground": "#111310",
+        "status": "pass",
+        "reason": null
+      },
+      {
+        "id": "muted/surface",
+        "role": "muted",
+        "foreground": "muted",
+        "foregroundBackdrop": "surface",
+        "background": "surface",
+        "backdrop": null,
+        "state": "default",
+        "theme": "default",
+        "use": "text",
+        "minimum": 4.5,
+        "ratio": 7.642937867572071,
+        "ratioInterval": {
+          "min": 7.642937867572071,
+          "max": 7.642937867572071
+        },
+        "compositingUncertainty": {
+          "foregroundCodeValues": 0,
+          "backgroundCodeValues": 0
+        },
+        "effectiveForeground": "#b4b9ac",
+        "effectiveBackground": "#232621",
+        "status": "pass",
+        "reason": null
+      },
+      {
+        "id": "primary-action/lime",
+        "role": "primary-action",
+        "foreground": "on-lime",
+        "foregroundBackdrop": "lime",
+        "background": "lime",
+        "backdrop": null,
+        "state": "default",
+        "theme": "default",
+        "use": "text",
+        "minimum": 4.5,
+        "ratio": 14.699346716730563,
+        "ratioInterval": {
+          "min": 14.699346716730563,
+          "max": 14.699346716730563
+        },
+        "compositingUncertainty": {
+          "foregroundCodeValues": 0,
+          "backgroundCodeValues": 0
+        },
+        "effectiveForeground": "#152000",
+        "effectiveBackground": "#d5ff3f",
+        "status": "pass",
+        "reason": null
+      },
+      {
+        "id": "session/cobalt",
+        "role": "session",
+        "foreground": "on-cobalt",
+        "foregroundBackdrop": "cobalt",
+        "background": "cobalt",
+        "backdrop": null,
+        "state": "default",
+        "theme": "default",
+        "use": "text",
+        "minimum": 4.5,
+        "ratio": 6.582024174734595,
+        "ratioInterval": {
+          "min": 6.582024174734595,
+          "max": 6.582024174734595
+        },
+        "compositingUncertainty": {
+          "foregroundCodeValues": 0,
+          "backgroundCodeValues": 0
+        },
+        "effectiveForeground": "#ffffff",
+        "effectiveBackground": "#3d44e8",
+        "status": "pass",
+        "reason": null
+      }
+    ],
+    "summary": {
+      "pass": 4,
+      "fail": 0,
+      "unknown": 0,
+      "notApplicable": 0,
+      "status": "pass"
+    },
+    "compatibleSystem": null,
+    "measurementRef": "palette:0a07f77383368d4e359bcc16f77ade0e24cb1e6ea22b96cfb0be13febddab2da",
+    "algorithm": "colorjs.io@0.7.1:css-gamut-map/srgb-rgba8/encoded-srgb-source-over-interval-v2",
+    "contrastLevel": "AA",
+    "standard": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+    "capabilities": {
+      "target": "srgb-8bit",
+      "compositing": "encoded-srgb-source-over",
+      "compositingUncertainty": "Conditional bound: ±1 sRGB code value at each alpha-compositing stage, propagated to foreground; pass uses interval lower bound. This rounding envelope is not a universal compositor guarantee. Threshold overlaps require actual-render verification or opaque resolved emission.",
+      "legacyHexSystem": false,
+      "legacyReason": "Legacy StateSchema requires canvas/ink/accent, opaque hex tokens and at most 128 expanded roles; per-backdrop alpha cannot be represented as one global hex token.",
+      "stateCoverage": "Only declared theme/state/adjacency relations are checked.",
+      "unverified": [
+        "actual backdrop/large-text applicability",
+        "color-only meaning and CVD",
+        "focus area/obscuration and keyboard behavior",
+        "ARIA/name/role/state semantics",
+        "wide-gamut rendering",
+        "aesthetic preference"
+      ]
+    }
+  },
+  "motion": {
+    "motion": {
+      "spring": {
+        "mass": 1,
+        "stiffness": 200,
+        "damping": 18
+      },
+      "coordinate": {
+        "unit": "dp",
+        "from": 32,
+        "to": 0,
+        "initialVelocity": 0
+      },
+      "durationSeconds": 2,
+      "sampleCount": 121,
+      "settling": {
+        "positionTolerance": 0.001,
+        "speedTolerance": 0.001
+      },
+      "bounds": null
+    },
+    "regime": "underdamped",
+    "omega0": 14.142135623730951,
+    "dampingRatio": 0.6363961030678927,
+    "metrics": {
+      "peakOvershoot": 2.3960749602912204,
+      "overshootHorizonSeconds": 2,
+      "allTimePeakOvershoot": 2.3960749602912204,
+      "allTimePeakOvershootRatio": 0.07487734250910064,
+      "peakOvershootRatio": 0.07487734250910064,
+      "extrema": {
+        "min": -2.3960749602912204,
+        "max": 32
+      },
+      "allTimeRange": {
+        "min": -2.3960749602912204,
+        "max": 32
+      },
+      "targetCrossings": 7,
+      "oscillationPeriodSeconds": 0.5759786527641267,
+      "settling": {
+        "certifiedBySeconds": 1.4854834058966457,
+        "observedSampledSeconds": null,
+        "horizonSeconds": 2,
+        "method": "Certificate: E <= min(k*positionTolerance^2,m*speedTolerance^2)/2 implies both bounds for all future times. Conservative, not earliest settling. Sampled observation only covers this horizon."
+      }
+    },
+    "constraints": {
+      "bounds": {
+        "min": null,
+        "max": null
+      },
+      "passesAllTimeBounds": true,
+      "accessibility": "not evaluated by spring physics; reduced-motion substitution is an emission policy",
+      "content": "not evaluated: readability, flashing, occlusion, semantic timing and task success need renderer/context evidence"
+    },
+    "units": {
+      "time": "seconds",
+      "position": "dp",
+      "velocity": "dp/second",
+      "acceleration": "dp/second^2",
+      "mass": "abstract inertia M",
+      "stiffness": "M/second^2",
+      "damping": "M/second",
+      "energy": "M*dp^2/second^2; UI model energy, not physical joules"
+    },
+    "energy": {
+      "initial": 102400,
+      "final": 1.804555471230013e-11,
+      "law": "E = (m*v^2+k*(x-target)^2)/2; dE/dt = -c*v^2. Constant for c=0; nonincreasing for stationary unforced target.",
+      "passiveAssumptions": [
+        "stationary target",
+        "no clamp, collision, forcing or target change",
+        "positive mass/stiffness and nonnegative damping"
+      ]
+    },
+    "provenance": {
+      "kind": "analytic-model",
+      "sources": {
+        "model": "m*x″ + c*x′ + k*(x-target) = 0; stationary target, no forcing",
+        "reducedMotion": "https://www.w3.org/TR/2026/WD-mediaqueries-5-20260219/#prefers-reduced-motion",
+        "native": "native/node_modules/react-native/Libraries/Animated/animations/SpringAnimation.js (inspected React Native 0.88.0)"
+      },
+      "uncertainty": "Floating-point analytic samples; browser/native interpolation, thresholds and interruption differ. Neither energy nor damping ratio measures design quality."
+    },
+    "sampling": "omitted; observedSampledSeconds is null"
+  },
+  "replay": "replayed"
+}

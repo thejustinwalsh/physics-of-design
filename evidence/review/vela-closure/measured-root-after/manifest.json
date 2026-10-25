@@ -1,0 +1,62 @@
+{
+  "implementationIdentity": "54a5fd6cf374ea679a96425a20c4a6b730a12bd5085a0e5e867a081976fc619c",
+  "handoffIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+  "files": [
+    {
+      "source": "artifacts/vela/proof-native/android-enlarged-current/detail.json",
+      "frozen": "artifacts/review/vela-closure/measured-root-after/android-enlarged-current/detail.json",
+      "sha256": "5ef8334fbbb591cd5d3f701dfd5cf65e682a3c8ba6809c7776f914e284c25056"
+    },
+    {
+      "source": "artifacts/vela/proof-native/android-enlarged-current/detail.png",
+      "frozen": "artifacts/review/vela-closure/measured-root-after/android-enlarged-current/detail.png",
+      "sha256": "05b17761fa8f499a0f256017a7f46147898e4e2379629d6e39138079187623c5"
+    },
+    {
+      "source": "artifacts/vela/proof-native/android-enlarged-current/active.json",
+      "frozen": "artifacts/review/vela-closure/measured-root-after/android-enlarged-current/active.json",
+      "sha256": "d9a7e3a56a8a43f94c3428de977b3bfb7ab62b5fb261cd74ba58e6be76268315"
+    },
+    {
+      "source": "artifacts/vela/proof-native/android-enlarged-current/active.png",
+      "frozen": "artifacts/review/vela-closure/measured-root-after/android-enlarged-current/active.png",
+      "sha256": "c7465846c26d2e0716e49ef362522cebabb11de00d278675a9901562adcaf51c"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/detail.json",
+      "frozen": "artifacts/review/vela-closure/measured-root-after/iphone-maximum-current/detail.json",
+      "sha256": "ce3113563d26192817f8574cc3c06146bb2a2d83e9516d6bb586d72204c68328"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/detail.png",
+      "frozen": "artifacts/review/vela-closure/measured-root-after/iphone-maximum-current/detail.png",
+      "sha256": "9caf1b3cc3686524ee93e1ff4ed53533df47a02d4b641b5d446acdb66858969d"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/active.json",
+      "frozen": "artifacts/review/vela-closure/measured-root-after/iphone-maximum-current/active.json",
+      "sha256": "24239158238fb04d4dfded61cc89167935e845e75300d0a2da6365f6f493fd61"
+    },
+    {
+      "source": "artifacts/vela/proof-native/iphone-maximum-current/active.png",
+      "frozen": "artifacts/review/vela-closure/measured-root-after/iphone-maximum-current/active.png",
+      "sha256": "b21c3480cc0e99acfd64d200b94a7bfd0f666fa357b440143eba9e4190efe4d3"
+    },
+    {
+      "source": "native/VelaApp.tsx",
+      "sha256": "814f041b2d074e300d46636939945aa07af9650b9d810e6df967b0c7ac652148"
+    },
+    {
+      "source": "native/observations.tsx",
+      "sha256": "bee2db1ee56b3c2a063ee4325784ce3b1530659739a43f642d018d8cd002f3bf"
+    },
+    {
+      "source": "src/native-root-geometry.ts",
+      "sha256": "7e7a8850dcf9447fc116d5e0d1452d5f586e00cff848511929fa38ab0066d4cb"
+    },
+    {
+      "source": "src/native-safe-area.ts",
+      "sha256": "9ed40e9ad2a827a833474550410dd9163835eb653bb937adfd7fc5fa2f69a806"
+    }
+  ]
+}

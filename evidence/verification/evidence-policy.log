@@ -1,0 +1,16 @@
+✔ exact complete eighteen-stage control passes; partial and failed lanes fail (1.821208ms)
+✔ repeated or reordered successful stages cannot masquerade as a full lane (0.246417ms)
+✔ real-flow shape passes; all-unavailable downgrade and action reorder fail (0.478042ms)
+✔ XML files must be unique simple names and clock exceptions stay explicit (0.245875ms)
+✔ finite fresh delivery, real bounds, and bounded oracle errors are required (0.233959ms)
+✔ saved XML requires complete hierarchy, unique clickable label, and exact tapped bounds (1.026083ms)
+✔ XML labels decode entities without accepting external entity declarations (0.12925ms)
+✔ curated paths are sorted, unique, fixed, and exclude new bundles or model weights (0.082042ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 42.667167

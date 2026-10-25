@@ -1,11 +1,36 @@
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { inflateSync } from 'node:zlib';
 import { chromium } from 'playwright';
 import { convertColor, analyzePalette } from '../dist/palette.js';
+import { nativeSourceIdentity } from './native-source-identity.mjs';
 
+// Bind this run to both the served build and its inputs. The shared identity
+// deliberately includes extra native files; it conservatively invalidates web
+// evidence when shared equations, motion, typography, policy or fonts change.
+const implementationProvenance = {
+  algorithm: 'sha256',
+  capturedAt: new Date().toISOString(),
+  files: Object.fromEntries(
+    await Promise.all(
+      [
+        'examples/vela/web.jsx',
+        'artifacts/vela/web/app.js',
+        'scripts/build-vela.mjs',
+        'package-lock.json',
+      ].map(async (file) => [
+        file,
+        createHash('sha256')
+          .update(await readFile(file))
+          .digest('hex'),
+      ]),
+    ),
+  ),
+  sharedNativeSourceIdentity: await nativeSourceIdentity(),
+};
 const directory = process.env.VELA_PROOF_DIR ?? 'artifacts/vela/proof-web';
 await mkdir(directory, { recursive: true });
 const root = path.resolve('artifacts/vela/web');
@@ -96,6 +121,9 @@ try {
         height: innerHeight,
         screen: window.__VELA__?.screen,
         lastResolved: window.__VELA__?.resolved?.values,
+        lastRuntimeInput: window.__VELA_LAST_RUNTIME_INPUT__,
+        viewportRejections: window.__VELA_VIEWPORT_REJECTIONS__,
+        viewportBoundary: window.__VELA_VIEWPORT_BOUNDARY__,
       }));
     } catch {}
   });
@@ -555,7 +583,9 @@ try {
     );
     Object.defineProperty(window, 'innerWidth', {
       configurable: true,
-      value: 0,
+      value: Number(
+        new URLSearchParams(location.search).get('boundaryWidth') ?? 0,
+      ),
     });
   });
   await boundaryPage.goto(base);
@@ -566,6 +596,32 @@ try {
     ),
     'Zero initial geometry evaluated the design program',
   );
+  // Positive but unsupported geometry distinguishes a policy-domain guard
+  // from a zero-only guard. The unfixed policy evaluates log2 of a negative
+  // fitted title size at width=1, even though height and scale are valid.
+  await boundaryPage.goto(`${base}/?view=today&textScale=3.6&boundaryWidth=1`);
+  await boundaryPage.locator('[data-waiting-viewport]').waitFor();
+  check(
+    await boundaryPage.evaluate(
+      () =>
+        !window.__VELA_READY__ &&
+        !window.__VELA_LAST_RUNTIME_INPUT__ &&
+        window.__VELA_VIEWPORT_REJECTIONS__.some(
+          (r) =>
+            r.width === 1 && r.reason === 'outside-declared-viewport-envelope',
+        ),
+    ),
+    'Positive out-of-domain initial geometry evaluated the design program',
+  );
+  await boundaryPage.goto(`${base}/?boundaryWidth=1920`);
+  await boundaryPage.locator('[data-viewport-status="unsupported"]').waitFor();
+  check(
+    await boundaryPage
+      .getByRole('status')
+      .textContent()
+      .then((text) => text.includes('390–1440') && text.includes('700–1210')),
+    'Unsupported initial viewport did not disclose the validated range',
+  );
   await boundaryPage.evaluate(() => {
     Object.defineProperty(window, 'innerWidth', window.__testWidthDescriptor);
     dispatchEvent(new Event('resize'));
@@ -573,6 +629,27 @@ try {
   await boundaryPage.waitForFunction(
     () =>
       window.__VELA_READY__ && window.__VELA__.resolved.values.width === 390,
+  );
+  await boundaryPage.evaluate(() => {
+    Object.defineProperty(window, 'innerWidth', {
+      configurable: true,
+      value: 1,
+    });
+    dispatchEvent(new Event('resize'));
+  });
+  await boundaryPage.waitForTimeout(50);
+  check(
+    await boundaryPage.evaluate(
+      () =>
+        window.__VELA__.resolved.values.width === 390 &&
+        window.__VELA_LAST_RUNTIME_INPUT__.width === 390 &&
+        window.__VELA_VIEWPORT_BOUNDARY__.status === 'held' &&
+        window.__VELA_VIEWPORT_BOUNDARY__.current.width === 1 &&
+        window.__VELA_VIEWPORT_REJECTIONS__.some(
+          (r) => r.width === 1 && r.height === 844,
+        ),
+    ),
+    'Positive out-of-domain resize replaced the last valid geometry',
   );
   await boundaryPage.evaluate(() => {
     window.__testHeightDescriptor = Object.getOwnPropertyDescriptor(
@@ -610,6 +687,32 @@ try {
     Object.defineProperty(window, 'innerWidth', window.__testWidthDescriptor);
     Object.defineProperty(window, 'innerHeight', window.__testHeightDescriptor);
   });
+  const unsupportedViewportCases = [];
+  for (const viewport of [
+    { width: 1920, height: 1080 },
+    { width: 390, height: 600 },
+  ]) {
+    await boundaryPage.setViewportSize(viewport);
+    await boundaryPage.waitForFunction(
+      ({ width, height }) =>
+        window.__VELA_VIEWPORT_BOUNDARY__.status === 'held' &&
+        window.__VELA_VIEWPORT_BOUNDARY__.current.width === width &&
+        window.__VELA_VIEWPORT_BOUNDARY__.current.height === height,
+      viewport,
+    );
+    const observation = await boundaryPage.evaluate(() => ({
+      boundary: window.__VELA_VIEWPORT_BOUNDARY__,
+      runtimeInput: window.__VELA_LAST_RUNTIME_INPUT__,
+      notice: document.querySelector('[data-waiting-viewport]')?.textContent,
+    }));
+    unsupportedViewportCases.push(observation);
+    check(
+      observation.runtimeInput.width === 390 &&
+        observation.runtimeInput.height === 844 &&
+        observation.notice.includes('last validated layout'),
+      'Unsupported ordinary viewport silently became current',
+    );
+  }
   await boundaryPage.setViewportSize({ width: 834, height: 1000 });
   await boundaryPage.waitForFunction(
     () =>
@@ -622,108 +725,216 @@ try {
     admissible: window.__VELA__.resolved.admissible,
   }));
   check(
-    recoveredViewport.admissible,
+    recoveredViewport.admissible &&
+      (await boundaryPage.evaluate(
+        () => window.__VELA_VIEWPORT_BOUNDARY__.status === 'current',
+      )),
     'Positive viewport failed to recover after unavailable geometry',
   );
   await boundaryPage.close();
 
   const storageRecovery = [];
   const priorJournal = {
-    accent: 'cobalt', motion: 'system', checkIn: 'steady',
-    entries: [{ id: 'prior-valid-session', seconds: 127, completedAt: '2026-10-24T12:00:00.000Z' }],
+    accent: 'cobalt',
+    motion: 'system',
+    checkIn: 'steady',
+    entries: [
+      {
+        id: 'prior-valid-session',
+        seconds: 127,
+        completedAt: '2026-10-24T12:00:00.000Z',
+      },
+    ],
   };
   for (const fault of ['throw', 'corrupt-json', 'invalid-schema']) {
-    const storagePage = await browser.newPage({ viewport: { width: 390, height: 844 } });
-    storagePage.on('pageerror', (error) => errors.push({ message: String(error), phase: `storage-${fault}` }));
-    await storagePage.addInitScript(({ fault, priorJournal }) => {
-      const key = 'vela-web-local-v1';
-      const originalGet = Storage.prototype.getItem;
-      const originalSet = Storage.prototype.setItem;
-      const initial = fault === 'corrupt-json' ? '{broken' : fault === 'invalid-schema' ? JSON.stringify({ entries: [] }) : JSON.stringify(priorJournal);
-      originalSet.call(localStorage, key, initial);
-      const state = window.__STORAGE_FAULT__ = {
-        readBlocked: fault === 'throw', failSave: false, writes: [], initial,
-        readRaw: () => originalGet.call(localStorage, key),
-        repair: () => { state.readBlocked = false; originalSet.call(localStorage, key, JSON.stringify(priorJournal)); },
-      };
-      Storage.prototype.getItem = function (name) {
-        if (name === key && state.readBlocked) throw new Error('Injected storage read failure');
-        return originalGet.call(this, name);
-      };
-      Storage.prototype.setItem = function (name, value) {
-        if (name === key) {
-          state.writes.push(value);
-          if (state.failSave) throw new Error('Injected storage write failure');
-        }
-        return originalSet.call(this, name, value);
-      };
-    }, { fault, priorJournal });
+    const storagePage = await browser.newPage({
+      viewport: { width: 390, height: 844 },
+    });
+    storagePage.on('pageerror', (error) =>
+      errors.push({ message: String(error), phase: `storage-${fault}` }),
+    );
+    await storagePage.addInitScript(
+      ({ fault, priorJournal }) => {
+        const key = 'vela-web-local-v1';
+        const originalGet = Storage.prototype.getItem;
+        const originalSet = Storage.prototype.setItem;
+        const initial =
+          fault === 'corrupt-json'
+            ? '{broken'
+            : fault === 'invalid-schema'
+              ? JSON.stringify({ entries: [] })
+              : JSON.stringify(priorJournal);
+        originalSet.call(localStorage, key, initial);
+        const state = (window.__STORAGE_FAULT__ = {
+          readBlocked: fault === 'throw',
+          failSave: false,
+          writes: [],
+          initial,
+          readRaw: () => originalGet.call(localStorage, key),
+          repair: () => {
+            state.readBlocked = false;
+            originalSet.call(localStorage, key, JSON.stringify(priorJournal));
+          },
+        });
+        Storage.prototype.getItem = function (name) {
+          if (name === key && state.readBlocked)
+            throw new Error('Injected storage read failure');
+          return originalGet.call(this, name);
+        };
+        Storage.prototype.setItem = function (name, value) {
+          if (name === key) {
+            state.writes.push(value);
+            if (state.failSave)
+              throw new Error('Injected storage write failure');
+          }
+          return originalSet.call(this, name, value);
+        };
+      },
+      { fault, priorJournal },
+    );
     await storagePage.goto(base);
-    await storagePage.getByRole('button', { name: 'Retry restore', exact: true }).waitFor();
-    await storagePage.getByRole('button', { name: 'Retry restore', exact: true }).click();
+    await storagePage
+      .getByRole('button', { name: 'Retry restore', exact: true })
+      .waitFor();
+    await storagePage
+      .getByRole('button', { name: 'Retry restore', exact: true })
+      .click();
     const blocked = await storagePage.evaluate(() => ({
       writes: window.__STORAGE_FAULT__.writes.length,
-      unchanged: window.__STORAGE_FAULT__.readRaw() === window.__STORAGE_FAULT__.initial,
+      unchanged:
+        window.__STORAGE_FAULT__.readRaw() === window.__STORAGE_FAULT__.initial,
       restore: window.__VELA__.storage.restore,
       sessionActions: document.querySelectorAll('[data-screen]').length,
     }));
-    check(blocked.writes === 0 && blocked.unchanged && blocked.restore === 'blocked' && blocked.sessionActions === 0,
-      `${fault}: failed restoration wrote data or exposed journal mutations`);
-    await storagePage.screenshot({ path: `${directory}/restore-error-${fault}.png`, fullPage: true });
+    check(
+      blocked.writes === 0 &&
+        blocked.unchanged &&
+        blocked.restore === 'blocked' &&
+        blocked.sessionActions === 0,
+      `${fault}: failed restoration wrote data or exposed journal mutations`,
+    );
+    await storagePage.screenshot({
+      path: `${directory}/restore-error-${fault}.png`,
+      fullPage: true,
+    });
     await storagePage.evaluate(() => window.__STORAGE_FAULT__.repair());
-    await storagePage.getByRole('button', { name: 'Retry restore', exact: true }).click();
-    await storagePage.waitForFunction(() => window.__VELA__.storage.restore === 'ready');
+    await storagePage
+      .getByRole('button', { name: 'Retry restore', exact: true })
+      .click();
+    await storagePage.waitForFunction(
+      () => window.__VELA__.storage.restore === 'ready',
+    );
     const recovered = await storagePage.evaluate(() => ({
       preferences: window.__VELA__.preferences,
       writes: window.__STORAGE_FAULT__.writes.length,
     }));
-    check(JSON.stringify(recovered.preferences) === JSON.stringify(priorJournal) && recovered.writes === 0,
-      `${fault}: restore retry lost prior history or rewrote untouched storage`);
+    check(
+      JSON.stringify(recovered.preferences) === JSON.stringify(priorJournal) &&
+        recovered.writes === 0,
+      `${fault}: restore retry lost prior history or rewrote untouched storage`,
+    );
     const result = { fault, blocked, recovered };
     if (fault === 'throw') {
-      await storagePage.getByRole('button', { name: 'Profile', exact: true }).click();
-      await storagePage.evaluate(() => { window.__STORAGE_FAULT__.failSave = true; });
-      await storagePage.getByRole('button', { name: 'Electric lime', exact: true }).click();
-      await storagePage.getByRole('button', { name: 'Retry save', exact: true }).waitFor();
-      await storagePage.getByRole('button', { name: 'Retry save', exact: true }).click();
+      await storagePage
+        .getByRole('button', { name: 'Profile', exact: true })
+        .click();
+      await storagePage.evaluate(() => {
+        window.__STORAGE_FAULT__.failSave = true;
+      });
+      await storagePage
+        .getByRole('button', { name: 'Electric lime', exact: true })
+        .click();
+      await storagePage
+        .getByRole('button', { name: 'Retry save', exact: true })
+        .waitFor();
+      await storagePage
+        .getByRole('button', { name: 'Retry save', exact: true })
+        .click();
       const unsaved = await storagePage.evaluate(() => ({
         memory: window.__VELA__.preferences,
         disk: JSON.parse(window.__STORAGE_FAULT__.readRaw()),
         restore: window.__VELA__.storage.restore,
         saveError: window.__VELA__.storage.saveError,
       }));
-      check(unsaved.memory.accent === 'lime' && unsaved.disk.accent === 'cobalt' &&
-        unsaved.memory.entries[0].id === 'prior-valid-session' && unsaved.restore === 'ready' && Boolean(unsaved.saveError),
-        'Save failure lost in-memory data, changed disk, or was confused with restore failure');
-      await storagePage.screenshot({ path: `${directory}/save-error.png`, fullPage: true });
-      await storagePage.evaluate(() => { window.__STORAGE_FAULT__.failSave = false; });
-      await storagePage.getByRole('button', { name: 'Retry save', exact: true }).click();
-      await storagePage.waitForFunction(() => !window.__VELA__.storage.saveError);
-      const savedRetry = await storagePage.evaluate(() => JSON.parse(window.__STORAGE_FAULT__.readRaw()));
-      check(savedRetry.accent === 'lime' && savedRetry.entries[0].id === 'prior-valid-session',
-        'Save retry did not persist current changes with prior history');
-      await storagePage.getByRole('button', { name: 'Today', exact: true }).click();
-      await storagePage.getByRole('button', { name: 'Open session', exact: true }).click();
-      await storagePage.getByRole('button', { name: 'Start session', exact: true }).click();
+      check(
+        unsaved.memory.accent === 'lime' &&
+          unsaved.disk.accent === 'cobalt' &&
+          unsaved.memory.entries[0].id === 'prior-valid-session' &&
+          unsaved.restore === 'ready' &&
+          Boolean(unsaved.saveError),
+        'Save failure lost in-memory data, changed disk, or was confused with restore failure',
+      );
+      await storagePage.screenshot({
+        path: `${directory}/save-error.png`,
+        fullPage: true,
+      });
+      await storagePage.evaluate(() => {
+        window.__STORAGE_FAULT__.failSave = false;
+      });
+      await storagePage
+        .getByRole('button', { name: 'Retry save', exact: true })
+        .click();
+      await storagePage.waitForFunction(
+        () => !window.__VELA__.storage.saveError,
+      );
+      const savedRetry = await storagePage.evaluate(() =>
+        JSON.parse(window.__STORAGE_FAULT__.readRaw()),
+      );
+      check(
+        savedRetry.accent === 'lime' &&
+          savedRetry.entries[0].id === 'prior-valid-session',
+        'Save retry did not persist current changes with prior history',
+      );
+      await storagePage
+        .getByRole('button', { name: 'Today', exact: true })
+        .click();
+      await storagePage
+        .getByRole('button', { name: 'Open session', exact: true })
+        .click();
+      await storagePage
+        .getByRole('button', { name: 'Start session', exact: true })
+        .click();
       await storagePage.waitForFunction(() => window.__VELA__.elapsed >= 1);
-      await storagePage.evaluate(() => { window.__STORAGE_FAULT__.failSave = true; });
-      await storagePage.getByRole('button', { name: 'Finish session', exact: true }).click();
-      await storagePage.getByRole('button', { name: 'Retry save', exact: true }).waitFor();
+      await storagePage.evaluate(() => {
+        window.__STORAGE_FAULT__.failSave = true;
+      });
+      await storagePage
+        .getByRole('button', { name: 'Finish session', exact: true })
+        .click();
+      await storagePage
+        .getByRole('button', { name: 'Retry save', exact: true })
+        .waitFor();
       const unsavedSession = await storagePage.evaluate(() => ({
         memory: window.__VELA__.preferences.entries,
         disk: JSON.parse(window.__STORAGE_FAULT__.readRaw()).entries,
-        receipt: document.querySelector('[data-region="saved-session"]')?.textContent,
+        receipt: document.querySelector('[data-region="saved-session"]')
+          ?.textContent,
       }));
-      check(unsavedSession.memory.length === 2 && unsavedSession.disk.length === 1 &&
-        unsavedSession.memory[1].id === 'prior-valid-session' && unsavedSession.receipt.includes('Kept in this tab') &&
-        !unsavedSession.receipt.includes('Saved to your local journal'),
-        'Unsaved session lost history or falsely claimed durable storage');
-      await storagePage.evaluate(() => { window.__STORAGE_FAULT__.failSave = false; });
-      await storagePage.getByRole('button', { name: 'Retry save', exact: true }).click();
-      await storagePage.waitForFunction(() => !window.__VELA__.storage.saveError);
-      const durableSession = await storagePage.evaluate(() => JSON.parse(window.__STORAGE_FAULT__.readRaw()).entries);
-      check(durableSession.length === 2 && durableSession[1].id === 'prior-valid-session',
-        'Session save retry failed to retain new and prior history');
+      check(
+        unsavedSession.memory.length === 2 &&
+          unsavedSession.disk.length === 1 &&
+          unsavedSession.memory[1].id === 'prior-valid-session' &&
+          unsavedSession.receipt.includes('Kept in this tab') &&
+          !unsavedSession.receipt.includes('Saved to your local journal'),
+        'Unsaved session lost history or falsely claimed durable storage',
+      );
+      await storagePage.evaluate(() => {
+        window.__STORAGE_FAULT__.failSave = false;
+      });
+      await storagePage
+        .getByRole('button', { name: 'Retry save', exact: true })
+        .click();
+      await storagePage.waitForFunction(
+        () => !window.__VELA__.storage.saveError,
+      );
+      const durableSession = await storagePage.evaluate(
+        () => JSON.parse(window.__STORAGE_FAULT__.readRaw()).entries,
+      );
+      check(
+        durableSession.length === 2 &&
+          durableSession[1].id === 'prior-valid-session',
+        'Session save retry failed to retain new and prior history',
+      );
       result.unsavedSession = unsavedSession;
       result.durableSession = durableSession;
       result.unsaved = unsaved;
@@ -852,6 +1063,7 @@ try {
 
   check(errors.length === 0, `Browser errors: ${JSON.stringify(errors)}`);
   const report = {
+    implementationProvenance,
     browser: browser.version(),
     scenarios: observations.length,
     observations,
@@ -862,6 +1074,7 @@ try {
       storageRecovery,
       deferredViewport,
       recoveredViewport,
+      unsupportedViewportCases,
       paused,
       restored,
       spatialMotion,

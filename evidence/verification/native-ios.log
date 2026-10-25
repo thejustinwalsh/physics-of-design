@@ -1,6 +1,6 @@
-(node:90400) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(node:99752) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-✔ actual native Text/Yoga wrapping thresholds, scaled reflow and clipping rejection (11408.871292ms)
+✔ actual native Text/Yoga wrapping thresholds, scaled reflow and clipping rejection (11200.699833ms)
 ℹ tests 1
 ℹ suites 0
 ℹ pass 1
@@ -8,4 +8,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 11836.082041
+ℹ duration_ms 11708.150958

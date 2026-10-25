@@ -1,0 +1,928 @@
+{
+  "receipt": {
+    "version": 1,
+    "capturedAt": "2026-10-25T05:59:51.105Z",
+    "engine": "react-native/Text+Yoga",
+    "platform": "android",
+    "snapshot": {
+      "app": "vela",
+      "designHandoffIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+      "implementationIdentity": "54a5fd6cf374ea679a96425a20c4a6b730a12bd5085a0e5e867a081976fc619c",
+      "proofId": "vela-android-enlarged-current-complete-1792907983098",
+      "screen": "complete",
+      "elapsedSeconds": 0,
+      "sessionOutcome": "idle",
+      "persistence": "saved",
+      "restoreState": "ready",
+      "navigationMenuOpen": false,
+      "copyMode": "compact",
+      "coordinateSpace": {
+        "units": "dp",
+        "origin": "measured root",
+        "screenOffset": {
+          "x": 0,
+          "y": -0.0000152587890625
+        },
+        "screen": {
+          "width": 411.42857142857144,
+          "height": 914.2857142857143,
+          "scale": 2.625,
+          "fontScale": 2
+        }
+      },
+      "windowSafeArea": {
+        "top": 51.809539794921875,
+        "left": 0,
+        "right": 0,
+        "bottom": 48.0000370570591
+      },
+      "designViewport": {
+        "width": 411.4285583496094,
+        "height": 814.4761897495815,
+        "textScale": 2,
+        "reducedMotion": 0
+      },
+      "running": false,
+      "completedSessions": 1,
+      "preferences": {
+        "motion": "system",
+        "accent": "lime",
+        "checkIn": null
+      },
+      "reducedMotion": false,
+      "systemReducedMotion": false,
+      "motionPhase": "held",
+      "hydrated": true,
+      "window": {
+        "width": 411.4285583496094,
+        "height": 914.2857666015625,
+        "scale": 2.625,
+        "fontScale": 2
+      },
+      "viewportGuard": {
+        "status": "current",
+        "rejectedCount": 0,
+        "lastRejection": null
+      },
+      "safeArea": {
+        "left": 0,
+        "bottom": 48,
+        "right": 0,
+        "top": 51.80952453613281
+      },
+      "nominalWindow": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 2
+      },
+      "measuredRootFrame": {
+        "x": 0,
+        "y": -51.809539794921875,
+        "width": 411.4285583496094,
+        "height": 914.2857666015625
+      },
+      "palette": {
+        "canvas": "#111310",
+        "surface": "#232621",
+        "ink": "#f5f6ed",
+        "muted": "#b4b9ac",
+        "lime": "#d5ff3f",
+        "cobalt": "#3d44e8",
+        "on-lime": "#152000",
+        "on-cobalt": "#ffffff"
+      },
+      "plan": {
+        "titleSize": 72.92312640142309,
+        "bodySize": 19,
+        "pageGutter": 20,
+        "gap": 19.8,
+        "sectionGap": 39.6,
+        "cardWidth": 371.4285583496094,
+        "contentWidth": 371.4285583496094,
+        "paired": 0,
+        "navRail": 0,
+        "navRailWidth": 0,
+        "paneWidth": 411.4285583496094,
+        "pageDistance": 29.700000000000003,
+        "titleLeading": 1.12,
+        "bodyLeading": 1.5,
+        "timerSize": 80.2154390415654,
+        "timerStacked": 1,
+        "timerInnerWidth": 331.4285583496094,
+        "compactHierarchy": 1,
+        "heroActionFirst": 1,
+        "navCompact": 0,
+        "navLabelSize": 11.97,
+        "railLabelSize": 16.15,
+        "sessionNumeralSize": 31.349999999999998,
+        "phaseStacked": 1,
+        "operatingHeadingSize": 26.599999999999998,
+        "sectionHeadingSize": 26.599999999999998,
+        "radius": 24,
+        "tracking": -0.04,
+        "headingSize": 26.599999999999998,
+        "persistentActions": 1,
+        "actionDockMaxHeight": 366.5142853873117
+      },
+      "resolvedAdmissible": true,
+      "resolvedFailures": [],
+      "navigation": "focused",
+      "designPolicy": {
+        "policy": "vela-v1",
+        "font": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
+        "math": "energy-v1",
+        "motion": "stationary spring; RN 0.88 underdamped mapping"
+      },
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      },
+      "storageError": "",
+      "keyboard": {
+        "visible": false,
+        "screenCoordinates": null
+      }
+    },
+    "observations": [
+      {
+        "id": "control-4",
+        "name": "Back to Today",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 62.857177734375,
+          "width": 48,
+          "height": 48
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 62.857177734375,
+          "width": 48,
+          "height": 48
+        }
+      },
+      {
+        "id": "text-5",
+        "name": "SESSION SUMMARY",
+        "kind": "text",
+        "clipId": null,
+        "text": "SESSION SUMMARY",
+        "lines": [
+          {
+            "text": "SESSION SUMMARY",
+            "x": 0,
+            "y": 0,
+            "width": 276.9601135253906,
+            "height": 27.809524536132812,
+            "descender": 3.809523820877075,
+            "capHeight": 19.30666732788086,
+            "ascender": 24,
+            "xHeight": 13.554286003112793
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"SESSION SUMMARY\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":14.06,\\\"letterSpacing\\\":0.9500000000000001,\\\"lineHeight\\\":15.747200000000001},\\\"fontScale\\\":2}\",\"width\":304,\"lines\":[{\"text\":\"SESSION SUMMARY\",\"x\":0,\"y\":0,\"width\":276.9601135253906,\"height\":27.809524536132812}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 87.61904907226562,
+          "y": 72.76190185546875,
+          "width": 304,
+          "height": 27.8095703125
+        },
+        "visibleBox": {
+          "x": 87.61904907226562,
+          "y": 72.76190185546875,
+          "width": 304,
+          "height": 27.8095703125
+        }
+      },
+      {
+        "id": "text-8",
+        "name": "⁠.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "⁠.",
+        "lines": [],
+        "textLayoutIdentity": "{\"text\":\"⁠.\",\"styleIdentity\":\"{\\\"style\\\":{},\\\"fontScale\\\":2}\",\"width\":0,\"lines\":[]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 0,
+          "y": 51.809539794921875,
+          "width": 0,
+          "height": 0
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 121.5238037109375,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-7",
+        "name": "No time\nsaved⁠.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "No time\nsaved⁠.",
+        "lines": [
+          {
+            "text": "No time\n",
+            "x": 0,
+            "y": 0,
+            "width": 119.8852767944336,
+            "height": 38.095237731933594,
+            "descender": 4.5714287757873535,
+            "capHeight": 27.139047622680664,
+            "ascender": 33.52381134033203,
+            "xHeight": 19.055238723754883
+          },
+          {
+            "text": "saved⁠.",
+            "x": 0,
+            "y": 38.095237731933594,
+            "width": 92.93441009521484,
+            "height": 38.095237731933594,
+            "descender": 4.5714287757873535,
+            "capHeight": 27.139047622680664,
+            "ascender": 33.52381134033203,
+            "xHeight": 19.055238723754883
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"No time\\nsaved⁠.\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":26.599999999999998,\\\"letterSpacing\\\":-1.0639999999999998,\\\"lineHeight\\\":29.792},\\\"fontScale\\\":2}\",\"width\":371.4285888671875,\"lines\":[{\"text\":\"No time\\n\",\"x\":0,\"y\":0,\"width\":119.8852767944336,\"height\":38.095237731933594},{\"text\":\"saved⁠.\",\"x\":0,\"y\":38.095237731933594,\"width\":92.93441009521484,\"height\":38.095237731933594}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 141.3333740234375,
+          "width": 371.4285888671875,
+          "height": 76.19046020507812
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 141.3333740234375,
+          "width": 371.4285888671875,
+          "height": 76.19046020507812
+        }
+      },
+      {
+        "id": "text-9",
+        "name": "Your journal changes after you finish a session with elapsed time.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "Your journal changes after you finish a session with elapsed time.",
+        "lines": [
+          {
+            "text": "Your journal changes after ",
+            "x": 0,
+            "y": 0,
+            "width": 373.5372009277344,
+            "height": 37.71428680419922,
+            "descender": 6.476190567016602,
+            "capHeight": 23.00190544128418,
+            "ascender": 31.238094329833984,
+            "xHeight": 16.502857208251953,
+            "contentAdvanceEvidence": {
+              "engine": "react-native/Text.onTextLayout-trimmed-line",
+              "layoutIdentity": "{\"text\":\"Your journal changes after you finish a session with elapsed time.\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaRegular\\\",\\\"fontSize\\\":19,\\\"lineHeight\\\":28.5},\\\"fontScale\\\":2}\",\"width\":371.4285888671875,\"lines\":[{\"text\":\"Your journal changes after \",\"x\":0,\"y\":0,\"width\":373.5372009277344,\"height\":37.71428680419922},{\"text\":\"you finish a session with \",\"x\":0,\"y\":37.71428680419922,\"width\":348.7395935058594,\"height\":37.71428680419922},{\"text\":\"elapsed time.\",\"x\":0,\"y\":75.42857360839844,\"width\":185.62649536132812,\"height\":37.71428680419922}]}",
+              "lineIndex": 0,
+              "rawText": "Your journal changes after ",
+              "rawWidth": 373.5372009277344,
+              "trimmedText": "Your journal changes after",
+              "contentAdvance": 365.3452453613281,
+              "probeWidth": 747.0744018554688
+            }
+          },
+          {
+            "text": "you finish a session with ",
+            "x": 0,
+            "y": 37.71428680419922,
+            "width": 348.7395935058594,
+            "height": 37.71428680419922,
+            "descender": 6.476190567016602,
+            "capHeight": 23.00190544128418,
+            "ascender": 31.238094329833984,
+            "xHeight": 16.502857208251953
+          },
+          {
+            "text": "elapsed time.",
+            "x": 0,
+            "y": 75.42857360839844,
+            "width": 185.62649536132812,
+            "height": 37.71428680419922,
+            "descender": 6.476190567016602,
+            "capHeight": 23.00190544128418,
+            "ascender": 31.238094329833984,
+            "xHeight": 16.502857208251953
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Your journal changes after you finish a session with elapsed time.\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaRegular\\\",\\\"fontSize\\\":19,\\\"lineHeight\\\":28.5},\\\"fontScale\\\":2}\",\"width\":371.4285888671875,\"lines\":[{\"text\":\"Your journal changes after \",\"x\":0,\"y\":0,\"width\":373.5372009277344,\"height\":37.71428680419922},{\"text\":\"you finish a session with \",\"x\":0,\"y\":37.71428680419922,\"width\":348.7395935058594,\"height\":37.71428680419922},{\"text\":\"elapsed time.\",\"x\":0,\"y\":75.42857360839844,\"width\":185.62649536132812,\"height\":37.71428680419922}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 256.7619171142578,
+          "width": 371.4285888671875,
+          "height": 113.14283752441406
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 256.7619171142578,
+          "width": 371.4285888671875,
+          "height": 113.14283752441406
+        }
+      },
+      {
+        "id": "text-12",
+        "name": "Back to Today",
+        "kind": "text",
+        "clipId": "clip-10",
+        "text": "Back to Today",
+        "lines": [
+          {
+            "text": "Back to Today",
+            "x": 0,
+            "y": 0,
+            "width": 182.85523986816406,
+            "height": 34.66666793823242,
+            "descender": 4.952381134033203,
+            "capHeight": 23.500951766967773,
+            "ascender": 29.714284896850586,
+            "xHeight": 16.502857208251953
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"Back to Today\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":19,\\\"letterSpacing\\\":-0.76,\\\"lineHeight\\\":21.28},\\\"fontScale\\\":2}\",\"width\":288,\"lines\":[{\"text\":\"Back to Today\",\"x\":0,\"y\":0,\"width\":182.85523986816406,\"height\":34.66666793823242}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 713.9048156738281,
+          "width": 288,
+          "height": 34.66668701171875
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 713.9048156738281,
+          "width": 288,
+          "height": 34.66668701171875
+        }
+      },
+      {
+        "id": "control-11",
+        "name": "Back to Today",
+        "kind": "target",
+        "clipId": "clip-10",
+        "box": {
+          "x": 20.190475463867188,
+          "y": 700.1905212402344,
+          "width": 371.4285888671875,
+          "height": 62.4761962890625
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 700.1905212402344,
+          "width": 371.4285888671875,
+          "height": 62.4761962890625
+        }
+      },
+      {
+        "id": "text-14",
+        "name": "View insights",
+        "kind": "text",
+        "clipId": "clip-10",
+        "text": "View insights",
+        "lines": [
+          {
+            "text": "View insights",
+            "x": 0,
+            "y": 0,
+            "width": 173.0471954345703,
+            "height": 34.66666793823242,
+            "descender": 4.952381134033203,
+            "capHeight": 23.500951766967773,
+            "ascender": 29.714284896850586,
+            "xHeight": 16.502857208251953
+          }
+        ],
+        "textLayoutIdentity": "{\"text\":\"View insights\",\"styleIdentity\":\"{\\\"style\\\":{\\\"fontFamily\\\":\\\"VelaHeavy\\\",\\\"fontSize\\\":19,\\\"letterSpacing\\\":-0.76,\\\"lineHeight\\\":21.28},\\\"fontScale\\\":2}\",\"width\":286.0952453613281,\"lines\":[{\"text\":\"View insights\",\"x\":0,\"y\":0,\"width\":173.0471954345703,\"height\":34.66666793823242}]}",
+        "pendingContentProbes": 0,
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 41.142852783203125,
+          "y": 797.3333435058594,
+          "width": 286.09527587890625,
+          "height": 34.6666259765625
+        },
+        "visibleBox": {
+          "x": 41.142852783203125,
+          "y": 797.3333435058594,
+          "width": 286.09527587890625,
+          "height": 34.6666259765625
+        }
+      },
+      {
+        "id": "control-13",
+        "name": "View insights",
+        "kind": "target",
+        "clipId": "clip-10",
+        "box": {
+          "x": 20.190475463867188,
+          "y": 782.4761657714844,
+          "width": 371.4285888671875,
+          "height": 64.3809814453125
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 782.4761657714844,
+          "width": 371.4285888671875,
+          "height": 64.3809814453125
+        }
+      },
+      {
+        "id": "clip-6",
+        "name": "scroll viewport",
+        "kind": "clip",
+        "clipId": null,
+        "box": {
+          "x": 0,
+          "y": 121.5238037109375,
+          "width": 411.4285583496094,
+          "height": 557.71435546875
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 121.5238037109375,
+          "width": 411.4285583496094,
+          "height": 557.71435546875
+        }
+      },
+      {
+        "id": "clip-10",
+        "name": "scroll viewport",
+        "kind": "clip",
+        "clipId": null,
+        "box": {
+          "x": 0,
+          "y": 679.2381286621094,
+          "width": 411.4285583496094,
+          "height": 187.047607421875
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 679.2381286621094,
+          "width": 411.4285583496094,
+          "height": 187.047607421875
+        }
+      }
+    ],
+    "incomplete": false,
+    "scope": "Actual native view frames and Text.onTextLayout observations from the product. Declared props are identified separately. Screenshots and task review remain required."
+  },
+  "audit": null,
+  "plan": {
+    "values": {
+      "body": 19,
+      "bodyLeading": 1.5,
+      "damping": 18,
+      "density": 0.9,
+      "display": 80,
+      "gutter": 20,
+      "radius": 24,
+      "space": 22,
+      "stiffness": 200,
+      "titleLeading": 1.12,
+      "tracking": -0.04,
+      "width": 411.4285583496094,
+      "height": 814.4761897495815,
+      "textScale": 2,
+      "reducedMotion": 0,
+      "bodySize": 19,
+      "dampingRatio": 0.6363961030678927,
+      "gap": 19.8,
+      "groupRatio": 1.0421052631578949,
+      "navLabelSize": 11.97,
+      "navRail": 0,
+      "navRailWidth": 0,
+      "operatingHeadingSize": 26.599999999999998,
+      "overshoot": 0.07487734250910066,
+      "pageDistance": 29.700000000000003,
+      "pageGutter": 20,
+      "paneWidth": 411.4285583496094,
+      "contentWidth": 371.4285583496094,
+      "leadingTarget": 1.428195485968339,
+      "leadingResidual": 0.071804514031661,
+      "navCompact": 0,
+      "paired": 0,
+      "cardWidth": 371.4285583496094,
+      "phaseStacked": 1,
+      "railLabelSize": 16.15,
+      "sectionGap": 39.6,
+      "timerInnerWidth": 331.4285583496094,
+      "titleSize": 72.92312640142309,
+      "displayLeadingResidual": -0.007076873598576672,
+      "hierarchy": 1.9403769961825958,
+      "predictedHeadlineLines": 3,
+      "predictedHeadlineHeight": 490.0434094175632,
+      "compactHierarchy": 1,
+      "expressiveHeadingSize": 26.599999999999998,
+      "heroActionFirst": 1,
+      "sectionHeadingSize": 26.599999999999998,
+      "sessionNumeralSize": 31.349999999999998,
+      "timerSize": 80.2154390415654,
+      "timerStacked": 1,
+      "titleFill": 0.9946153844257783,
+      "trackingTarget": -0.0401077195207827,
+      "trackingResidual": 0.00010771952078270086
+    },
+    "admissible": true,
+    "failures": [],
+    "regions": {
+      "today": {
+        "screen": {
+          "role": "dashboard",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 1,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 1,
+          "heroActionFirst": 1,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 31.349999999999998,
+          "phaseStacked": 1,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 26.599999999999998,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 26.599999999999998,
+          "persistentActions": 0,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      },
+      "detail": {
+        "screen": {
+          "role": "detail",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 1,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 1,
+          "heroActionFirst": 1,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 31.349999999999998,
+          "phaseStacked": 1,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 26.599999999999998,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 26.599999999999998,
+          "persistentActions": 1,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      },
+      "active": {
+        "screen": {
+          "role": "session",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 1,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 1,
+          "heroActionFirst": 1,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 31.349999999999998,
+          "phaseStacked": 1,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 26.599999999999998,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 26.599999999999998,
+          "persistentActions": 1,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      },
+      "complete": {
+        "screen": {
+          "role": "completion",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 1,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 1,
+          "heroActionFirst": 1,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 31.349999999999998,
+          "phaseStacked": 1,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 26.599999999999998,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 26.599999999999998,
+          "persistentActions": 1,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      },
+      "insights": {
+        "screen": {
+          "role": "insights",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 1,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 1,
+          "heroActionFirst": 1,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 31.349999999999998,
+          "phaseStacked": 1,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 26.599999999999998,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 26.599999999999998,
+          "persistentActions": 0,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      },
+      "profile": {
+        "screen": {
+          "role": "settings",
+          "titleSize": 72.92312640142309,
+          "bodySize": 19,
+          "pageGutter": 20,
+          "gap": 19.8,
+          "sectionGap": 39.6,
+          "cardWidth": 371.4285583496094,
+          "contentWidth": 371.4285583496094,
+          "paired": 0,
+          "navRail": 0,
+          "navRailWidth": 0,
+          "paneWidth": 411.4285583496094,
+          "pageDistance": 29.700000000000003,
+          "titleLeading": 1.12,
+          "bodyLeading": 1.5,
+          "timerSize": 80.2154390415654,
+          "timerStacked": 1,
+          "timerInnerWidth": 331.4285583496094,
+          "compactHierarchy": 1,
+          "heroActionFirst": 1,
+          "navCompact": 0,
+          "navLabelSize": 11.97,
+          "railLabelSize": 16.15,
+          "sessionNumeralSize": 31.349999999999998,
+          "phaseStacked": 1,
+          "operatingHeadingSize": 26.599999999999998,
+          "sectionHeadingSize": 26.599999999999998,
+          "radius": 24,
+          "tracking": -0.04,
+          "headingSize": 26.599999999999998,
+          "persistentActions": 0,
+          "actionDockMaxHeight": 366.5142853873117
+        }
+      }
+    },
+    "motions": {
+      "page": {
+        "mass": 1,
+        "stiffness": 200,
+        "damping": 18,
+        "channel": "translateY",
+        "reducedMotion": "opacity-fade"
+      }
+    },
+    "applicability": "within-declared-envelope",
+    "outsideEnvelope": [],
+    "verification": "pending-renderer-verification"
+  },
+  "textWidthFailures": [],
+  "textWidthUnknown": [],
+  "textWidthDiagnostics": [
+    {
+      "id": "text-5",
+      "name": "SESSION SUMMARY",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-7",
+      "name": "No time\nsaved⁠.",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        },
+        {
+          "lineIndex": 1,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-9",
+      "name": "Your journal changes after you finish a session with elapsed time.",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "separately-measured-native-content-advance",
+          "contentAdvance": 365.3452453613281,
+          "rawAdvance": 373.5372009277344
+        },
+        {
+          "lineIndex": 1,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        },
+        {
+          "lineIndex": 2,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-12",
+      "name": "Back to Today",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    },
+    {
+      "id": "text-14",
+      "name": "View insights",
+      "lines": [
+        {
+          "lineIndex": 0,
+          "status": "pass",
+          "reason": "raw-line-extent-fits"
+        }
+      ]
+    }
+  ],
+  "primaryCheck": {
+    "status": "verified",
+    "screen": "complete",
+    "label": "Back to Today",
+    "targetId": "control-11",
+    "clipId": "clip-10",
+    "box": {
+      "x": 20.190475463867188,
+      "y": 700.1905212402344,
+      "width": 371.4285888671875,
+      "height": 62.4761962890625
+    },
+    "screenBox": {
+      "x": 20.190475463867188,
+      "y": 700.1905059814453,
+      "width": 371.4285888671875,
+      "height": 62.4761962890625
+    },
+    "tolerance": 1
+  },
+  "geometryCheck": {
+    "source": "measured-root-physical-safe-area-projection",
+    "measuredRootFrame": {
+      "x": 0,
+      "y": -51.809539794921875,
+      "width": 411.4285583496094,
+      "height": 914.2857666015625
+    },
+    "nominalWindow": {
+      "width": 411.42857142857144,
+      "height": 814.4761904761905,
+      "scale": 2.625,
+      "fontScale": 2
+    },
+    "coordinateSpace": {
+      "units": "dp",
+      "origin": "measured root",
+      "screenOffset": {
+        "x": 0,
+        "y": -0.0000152587890625
+      },
+      "screen": {
+        "width": 411.42857142857144,
+        "height": 914.2857142857143,
+        "scale": 2.625,
+        "fontScale": 2
+      }
+    },
+    "projectedSafeArea": {
+      "top": 51.809539794921875,
+      "left": 0,
+      "right": 0,
+      "bottom": 48.0000370570591
+    },
+    "expectedDesignViewport": {
+      "width": 411.4285583496094,
+      "height": 814.4761897495815,
+      "textScale": 2,
+      "reducedMotion": 0
+    }
+  },
+  "androidRoute": {
+    "launchedAt": 1792907983222,
+    "bridgeReadyAt": 1792907989804,
+    "heartbeats": 2,
+    "baseLaunchAttempts": 2,
+    "routeAttempts": 1,
+    "expectedFontScale": 2
+  }
+}

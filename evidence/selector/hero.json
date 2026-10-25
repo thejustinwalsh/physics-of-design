@@ -895,6 +895,7 @@
               "passes": true,
               "size": 92.9230769230769,
               "weight": 900,
+              "effectiveWeight": 900,
               "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
               "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
             },
@@ -905,6 +906,7 @@
               "passes": true,
               "size": 24,
               "weight": 400,
+              "effectiveWeight": 400,
               "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
               "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
             }
@@ -2226,6 +2228,7 @@
               "passes": true,
               "size": 92.9230769230769,
               "weight": 900,
+              "effectiveWeight": 900,
               "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
               "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
             },
@@ -2236,6 +2239,7 @@
               "passes": true,
               "size": 25.532,
               "weight": 400,
+              "effectiveWeight": 400,
               "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
               "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
             }
@@ -3539,6 +3543,7 @@
               "passes": true,
               "size": 92.9230769230769,
               "weight": 900,
+              "effectiveWeight": 900,
               "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
               "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
             },
@@ -3549,6 +3554,7 @@
               "passes": true,
               "size": 22.642,
               "weight": 400,
+              "effectiveWeight": 400,
               "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
               "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
             }
@@ -3993,28 +3999,6 @@
   ],
   "selection": {
     "selected": "3861a289e8a9c994",
-    "modelCalled": true,
-    "verified": [
-      {
-        "id": "3861a289e8a9c994",
-        "inputHash": "423564f4140ec683d142ee8960f23213d56e93a81d6438c8c8122a9329b18d5f",
-        "engine": "chromium/react/stylex",
-        "scenarios": 5
-      },
-      {
-        "id": "1d2aa5bdf70f1d6b",
-        "inputHash": "fe6269aba020db654949a17514f3efc87e702eeb390e2a5d6efe61bb02e8b4e0",
-        "engine": "chromium/react/stylex",
-        "scenarios": 5
-      },
-      {
-        "id": "9c464e03926de7ea",
-        "inputHash": "86f53ec3bbd675b0f7209a8af3415f93510147bc5e85c5f4c256f945850b1ecf",
-        "engine": "chromium/react/stylex",
-        "scenarios": 5
-      }
-    ],
-    "rejected": [],
     "provenance": {
       "profile": "qwen3.5-4b",
       "readoutMode": "single",
@@ -4044,9 +4028,31 @@
       },
       "promptHash": "9f73b5d4deba877aa2bac480af9caa7b375b4fcdb08b0e863da6195ba52bf869",
       "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
-      "latencyMs": 39257.054749999996
+      "latencyMs": 39156.399875
     },
-    "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+    "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed.",
+    "modelCalled": true,
+    "verified": [
+      {
+        "id": "3861a289e8a9c994",
+        "inputHash": "423564f4140ec683d142ee8960f23213d56e93a81d6438c8c8122a9329b18d5f",
+        "engine": "chromium/react/stylex",
+        "scenarios": 5
+      },
+      {
+        "id": "1d2aa5bdf70f1d6b",
+        "inputHash": "fe6269aba020db654949a17514f3efc87e702eeb390e2a5d6efe61bb02e8b4e0",
+        "engine": "chromium/react/stylex",
+        "scenarios": 5
+      },
+      {
+        "id": "9c464e03926de7ea",
+        "inputHash": "86f53ec3bbd675b0f7209a8af3415f93510147bc5e85c5f4c256f945850b1ecf",
+        "engine": "chromium/react/stylex",
+        "scenarios": 5
+      }
+    ],
+    "rejected": []
   },
   "search": {
     "seedCount": 3,

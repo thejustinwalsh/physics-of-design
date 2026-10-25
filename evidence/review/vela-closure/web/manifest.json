@@ -1,0 +1,45 @@
+{
+  "policyIdentity": "14a4fdb536ec291f14b83f9e7775617068647c7b8aeef66b0c3ec64ecc78baff",
+  "files": [
+    {
+      "source": "artifacts/vela/proof-web/report.json",
+      "frozen": "artifacts/review/vela-closure/web/report.json",
+      "sha256": "985c1d32a580f352b24735792b9dcf3ab1b10a5df9c82035e457450588399f76"
+    },
+    {
+      "source": "artifacts/vela/proof-web/today-390-3.6.png",
+      "frozen": "artifacts/review/vela-closure/web/today-390-3.6.png",
+      "sha256": "f38fff3a1452e226fee8e572e41b340753102f1369f745bd3ccd919ec10d136a"
+    },
+    {
+      "source": "artifacts/vela/proof-web/detail-390-3.6.png",
+      "frozen": "artifacts/review/vela-closure/web/detail-390-3.6.png",
+      "sha256": "a3107e5ee5a8d1d4e3d790e4c7e6366f7911f3413ab03fdc24b6af3028ae8dbf"
+    },
+    {
+      "source": "artifacts/vela/proof-web/active-390-3.6.png",
+      "frozen": "artifacts/review/vela-closure/web/active-390-3.6.png",
+      "sha256": "2f4d410cf4373f00964a4d0d471e7992c5e057bd6523f20ff600c53a89f3dc8b"
+    },
+    {
+      "source": "artifacts/vela/proof-web/insights-390-2.png",
+      "frozen": "artifacts/review/vela-closure/web/insights-390-2.png",
+      "sha256": "02431ca9fc5fd36a8d6eca7c5d1acd697685b9af4e7dc1862250f7142f93f1e9"
+    },
+    {
+      "source": "artifacts/vela/proof-web/today-1440-1.png",
+      "frozen": "artifacts/review/vela-closure/web/today-1440-1.png",
+      "sha256": "b7e0a73568a4ad66dd8f97a83fab583da2965ce9051b65c2d4d1fc47e1040e5e"
+    },
+    {
+      "source": "artifacts/vela/proof-web/restore-error-throw.png",
+      "frozen": "artifacts/review/vela-closure/web/restore-error-throw.png",
+      "sha256": "bc68278bd4b919ff0b348ed95719869832f9687a0b8163b513136b301d65a6f8"
+    },
+    {
+      "source": "artifacts/vela/proof-web/save-error.png",
+      "frozen": "artifacts/review/vela-closure/web/save-error.png",
+      "sha256": "c39685fa14cd0a0fb8c643ece2cb630e29826fb47a78cabc35e167630732a55f"
+    }
+  ]
+}

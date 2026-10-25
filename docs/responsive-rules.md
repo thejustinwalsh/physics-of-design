@@ -31,3 +31,11 @@ Ordinary-word fragmentation and excessive heading dominance are design-review co
 Use the actual window/container dimensions, then test around every anchor and structural transition, intermediate widths, 320px reflow, 200% text, long and translated content, RTL/script-specific shaping, iPad narrow windows and rotation. Browser viewport tests, virtual native artboards, actual tablet simulators and physical hardware are different evidence classes and must remain labeled.
 
 The source-attributed registry records these practices. The measurement receipts establish only the executed renderer/version/device/scenario; they do not certify all native capabilities or complete WCAG conformance.
+
+## Runtime geometry and mathematical domains
+
+Window metadata is not necessarily the rendered content root. Measure the actual native root, translate children and scroll clips into that same coordinate space once, project physical safe areas into it, then resolve the usable viewport. Keep nominal dimensions as provenance. The Vela Android 2× failure demonstrated why a nominal height and a full-screen root cannot be mixed; the corrected adapter has separate root-generation and observation-revision guards.
+
+Positive geometry alone is insufficient for an expression program. A fitted type size can become nonpositive in a tiny transient window and invalidate a logarithmic relationship. Check the handoff's declared input applicability before evaluating. Record the exact rejected dimensions and reason; distinguish current facts from a held previous layout. Initial unsupported geometry needs an explicit status, and valid geometry must recover without losing an active session. Do not silently clamp inputs or turn arbitrary evaluator exceptions into successful designs.
+
+Vela's current program declares widths 390–1440 and usable heights 700–1210. Its browser proof covers 390/834/1440 and heights 844/1000; its actual native windows have separate receipts. Those are this example's limits, not recommended universal responsive breakpoints. A new brief must declare and verify its own window range, including smaller phone/split-view cases when required.

@@ -18,6 +18,7 @@ const steps = [
       'test/commands.integration.ts',
       'test/app.integration.ts',
       'test/context.integration.ts',
+      'scripts/evidence-policy.test.mjs',
     ],
   ],
   ['consumer', ['node', 'scripts/consumer-check.mjs']],

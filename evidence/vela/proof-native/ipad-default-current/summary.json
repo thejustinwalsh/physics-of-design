@@ -1,0 +1,471 @@
+{
+  "passed": true,
+  "engine": "react-native/Text+Yoga",
+  "platform": "ios",
+  "label": "ipad-default-current",
+  "results": [
+    {
+      "screen": "today",
+      "viewport": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "navigation": "rail",
+      "targets": 7,
+      "texts": 24,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "not-applicable",
+        "screen": "today"
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 834,
+          "height": 1210
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 834,
+          "height": 1210,
+          "scale": 2
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 834,
+            "height": 1210,
+            "scale": 2
+          }
+        },
+        "projectedSafeArea": {
+          "top": 32,
+          "left": 0,
+          "right": 0,
+          "bottom": 20
+        },
+        "expectedDesignViewport": {
+          "width": 834,
+          "height": 1158,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "detail",
+      "viewport": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "navigation": "rail",
+      "targets": 5,
+      "texts": 23,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "verified",
+        "screen": "detail",
+        "label": "Start session",
+        "targetId": "control-34",
+        "clipId": "clip-33",
+        "box": {
+          "x": 240,
+          "y": 1118.5,
+          "width": 574,
+          "height": 52
+        },
+        "screenBox": {
+          "x": 240,
+          "y": 1118.5,
+          "width": 574,
+          "height": 52
+        },
+        "tolerance": 1
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 834,
+          "height": 1210
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 834,
+          "height": 1210,
+          "scale": 2
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 834,
+            "height": 1210,
+            "scale": 2
+          }
+        },
+        "projectedSafeArea": {
+          "top": 32,
+          "left": 0,
+          "right": 0,
+          "bottom": 20
+        },
+        "expectedDesignViewport": {
+          "width": 834,
+          "height": 1158,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "active",
+      "viewport": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "navigation": "rail",
+      "targets": 6,
+      "texts": 16,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "verified",
+        "screen": "active",
+        "label": "Resume session",
+        "targetId": "control-25",
+        "clipId": "clip-24",
+        "box": {
+          "x": 240,
+          "y": 1045,
+          "width": 574,
+          "height": 52
+        },
+        "screenBox": {
+          "x": 240,
+          "y": 1045,
+          "width": 574,
+          "height": 52
+        },
+        "tolerance": 1
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 834,
+          "height": 1210
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 834,
+          "height": 1210,
+          "scale": 2
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 834,
+            "height": 1210,
+            "scale": 2
+          }
+        },
+        "projectedSafeArea": {
+          "top": 32,
+          "left": 0,
+          "right": 0,
+          "bottom": 20
+        },
+        "expectedDesignViewport": {
+          "width": 834,
+          "height": 1158,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "complete",
+      "viewport": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "navigation": "rail",
+      "targets": 6,
+      "texts": 11,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "verified",
+        "screen": "complete",
+        "label": "Back to Today",
+        "targetId": "control-20",
+        "clipId": "clip-19",
+        "box": {
+          "x": 240,
+          "y": 1045,
+          "width": 574,
+          "height": 52
+        },
+        "screenBox": {
+          "x": 240,
+          "y": 1045,
+          "width": 574,
+          "height": 52
+        },
+        "tolerance": 1
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 834,
+          "height": 1210
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 834,
+          "height": 1210,
+          "scale": 2
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 834,
+            "height": 1210,
+            "scale": 2
+          }
+        },
+        "projectedSafeArea": {
+          "top": 32,
+          "left": 0,
+          "right": 0,
+          "bottom": 20
+        },
+        "expectedDesignViewport": {
+          "width": 834,
+          "height": 1158,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "insights",
+      "viewport": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "navigation": "rail",
+      "targets": 4,
+      "texts": 26,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "not-applicable",
+        "screen": "insights"
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 834,
+          "height": 1210
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 834,
+          "height": 1210,
+          "scale": 2
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 834,
+            "height": 1210,
+            "scale": 2
+          }
+        },
+        "projectedSafeArea": {
+          "top": 32,
+          "left": 0,
+          "right": 0,
+          "bottom": 20
+        },
+        "expectedDesignViewport": {
+          "width": 834,
+          "height": 1158,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    },
+    {
+      "screen": "profile",
+      "viewport": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "navigation": "rail",
+      "targets": 7,
+      "texts": 19,
+      "textWidthFailures": 0,
+      "primaryCheck": {
+        "status": "not-applicable",
+        "screen": "profile"
+      },
+      "geometryCheck": {
+        "source": "measured-root-physical-safe-area-projection",
+        "measuredRootFrame": {
+          "x": 0,
+          "y": 0,
+          "width": 834,
+          "height": 1210
+        },
+        "nominalWindow": {
+          "fontScale": 1,
+          "width": 834,
+          "height": 1210,
+          "scale": 2
+        },
+        "coordinateSpace": {
+          "units": "dp",
+          "origin": "measured root",
+          "screenOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "screen": {
+            "fontScale": 1,
+            "width": 834,
+            "height": 1210,
+            "scale": 2
+          }
+        },
+        "projectedSafeArea": {
+          "top": 32,
+          "left": 0,
+          "right": 0,
+          "bottom": 20
+        },
+        "expectedDesignViewport": {
+          "width": 834,
+          "height": 1158,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      "auditFailures": [],
+      "reducedMotion": false,
+      "motion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 200,
+          "damping": 18
+        },
+        "kind": "react-native-spring",
+        "phase": "held"
+      }
+    }
+  ],
+  "scope": "Actual default viewport/scaling text and target observations; task flows and visual critique are separate."
+}

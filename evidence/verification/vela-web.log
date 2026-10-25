@@ -1,0 +1,102 @@
+Captured 72 browser scenarios.
+{
+  "scenarios": 72,
+  "screenshots": "artifacts/vela/proof-web",
+  "palette": [
+    {
+      "input": "color(display-p3 1 0 0)",
+      "emitted": {
+        "css": "#ff0b0c",
+        "hex": "#ff0b0c",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": true,
+        "deltaEOK": 0.047761307526658664,
+        "oklab": [
+          0.6301652091442145,
+          0.22359747808311436,
+          0.12345443896260727
+        ]
+      },
+      "observed": "#ff0b0c",
+      "measurementRef": "color:78d4c3bd5df0ff8d641d11f43791d7100a8a3b066cc89feb2be6983a001e7462"
+    },
+    {
+      "input": "oklch(0.7 0.2 220)",
+      "emitted": {
+        "css": "#00b2dd",
+        "hex": "#00b2dd",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": true,
+        "deltaEOK": 0.0689254734497465,
+        "oklab": [
+          0.7088048197123072,
+          -0.09637325284688131,
+          -0.09057191221547489
+        ]
+      },
+      "observed": "#00b2dd",
+      "measurementRef": "color:28424e919092878cb03c236356c820532576b51fd10ecbc4698464684d55fdd3"
+    },
+    {
+      "input": "lab(55% 65 -40)",
+      "emitted": {
+        "css": "#d24acb",
+        "hex": "#d24acb",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": false,
+        "deltaEOK": 0.0007921775554076717,
+        "oklab": [
+          0.640917292784127,
+          0.1926600428687545,
+          -0.11150438132185714
+        ]
+      },
+      "observed": "#d24acb",
+      "measurementRef": "color:e9097d0b9c8918a44d526dcf11d2a311759f4ac2953d196a4567f09a4cb6dd01"
+    },
+    {
+      "input": "hsl(245 80% 55%)",
+      "emitted": {
+        "css": "#4030e8",
+        "hex": "#4030e8",
+        "alpha": 1,
+        "alphaQuantized": false,
+        "gamut": "srgb",
+        "gamutMapped": false,
+        "deltaEOK": 0.0006485729661859679,
+        "oklab": [
+          0.47570631205056113,
+          0.019556549882558116,
+          -0.2561511591507945
+        ]
+      },
+      "observed": "#4030e8",
+      "measurementRef": "color:e2c452cd985f0d3293aaa699b68cd8aa61fd295745c13d81024b630a5654b120"
+    },
+    {
+      "input": "red 0.5 over white",
+      "expected": "#ff7f7f",
+      "observed": "#ff7f7f"
+    },
+    {
+      "input": "white 0.5 over black 0.5 over white",
+      "expected": "#bfbfbf",
+      "observed": "#bfbfbf"
+    },
+    {
+      "input": "black 0.5 over white compared with black neighbor",
+      "expected": [
+        "#7f7f7f",
+        "#7f7f7f"
+      ],
+      "observed": "#7f7f7f"
+    }
+  ],
+  "failures": []
+}
