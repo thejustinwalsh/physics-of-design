@@ -6,6 +6,7 @@ import { build } from 'esbuild';
 import { chromium, webkit } from 'playwright';
 import {
   captureDomSurface,
+  captureStaticDomSurface,
   observeDomSurfaceMotion,
 } from './dom-surface-observation.mjs';
 const output =
@@ -70,9 +71,11 @@ async function pixels(page, index = 1) {
       height: r.height - 64,
     };
   }, index);
-  const bytes = await captureDomSurface(page, { fullPage: true });
+  const { bytes, captureSha256 } = await captureStaticDomSurface(page, {
+    fullPage: true,
+  });
   await page.evaluate(() => proof.hideText(false));
-  return page.evaluate(
+  const metrics = await page.evaluate(
     async ({ png, rect }) => {
       const image = new Image();
       image.src = `data:image/png;base64,${png}`;
@@ -141,6 +144,7 @@ async function pixels(page, index = 1) {
     },
     { png: bytes.toString('base64'), rect },
   );
+  return { ...metrics, captureSha256 };
 }
 const compact = ({ rgb, ...metrics }) => metrics;
 async function contrast(page) {
@@ -403,12 +407,13 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
             { metalness, roughness, pass },
           );
           const oracle = await page.evaluate(
-              (pass) => proof.oracle(1, pass),
-              pass,
-            ),
-            png = (await captureDomSurface(page, { fullPage: true })).toString(
-              'base64',
-            );
+            (pass) => proof.oracle(1, pass),
+            pass,
+          );
+          const { bytes, captureSha256 } = await captureStaticDomSurface(page, {
+            fullPage: true,
+          });
+          const png = bytes.toString('base64');
           const observed = await page.evaluate(
             async ({ png, x, y }) => {
               const im = new Image();
@@ -430,6 +435,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
             pass,
             expected: oracle.expected,
             observed,
+            captureSha256,
             maxChannelError: Math.max(
               ...observed.map((v, i) => Math.abs(v - oracle.expected[i])),
             ),

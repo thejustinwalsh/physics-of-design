@@ -1,3 +1,5 @@
+import { createHash } from 'node:crypto';
+
 // Proof-only synchronization. A WebGL draw submission is not a presented frame.
 // Two animation callbacks leave a rendering opportunity between the mutation and
 // capture; the unchanged pixel oracle still determines whether the result is right.
@@ -21,6 +23,23 @@ export async function waitForDomSurfacePaint(page) {
 export async function captureDomSurface(page, options = {}) {
   await waitForDomSurfacePaint(page);
   return page.screenshot(options);
+}
+
+// Only for a held pose: Linux WebKit can return the preceding canvas composite
+// on the first snapshot even after RAF callbacks. Require successive captures
+// to agree, independently of the pixel oracle. Never use this for motion timing.
+export async function captureStaticDomSurface(page, options = {}) {
+  let previous;
+  const captureSha256 = [];
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const bytes = await captureDomSurface(page, options);
+    captureSha256.push(createHash('sha256').update(bytes).digest('hex'));
+    if (previous?.equals(bytes)) return { bytes, captureSha256 };
+    previous = bytes;
+  }
+  throw new Error(
+    `Static DOM surface did not settle in five captures: ${JSON.stringify(captureSha256)}`,
+  );
 }
 
 // Record both a retained MediaQueryList and a new query, together with CSS and

@@ -19,4 +19,7 @@ jobs:
         if: always()
         with:
           name: verification
-          path: artifacts/verification
+          path: |
+            artifacts/verification
+            artifacts/dom-surfaces
+            artifacts/dom-surfaces-gpu
