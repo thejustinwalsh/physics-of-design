@@ -1,0 +1,3333 @@
+{
+  "generatedAt": "2026-10-25T14:56:49.834Z",
+  "sources": [
+    {
+      "path": "src/dom-surface.ts",
+      "sha256": "a48beb62babc4a340b1b6bbe660604dfab70d95afbe49a83d837aa54a0d31c11"
+    },
+    {
+      "path": "src/browser-dom-light.ts",
+      "sha256": "2e69e318efbe6d80fa6859d2f6272e8ba91e6affa86195a60e7702e8e32b3807"
+    },
+    {
+      "path": "examples/dom-surfaces/proof-client.js",
+      "sha256": "bd050f757ce6e253f86035514556223444a0a5dc36dfaec5cd979da59445bf6d"
+    },
+    {
+      "path": "examples/dom-surfaces/recipes.json",
+      "sha256": "e747d41a47ec04ffa78a9ff0f6455bf281b9131813ed3728a4fddc3589917ed7"
+    },
+    {
+      "path": "scripts/prove-dom-surfaces.mjs",
+      "sha256": "3ce12ea9fd3d2fecb06e6f0fbeac0b5aaa59fecfb5cea3053c200662a9a9359c"
+    }
+  ],
+  "checks": [
+    {
+      "engine": "chromium",
+      "name": "nine actual composite lighting poses preserve authored text contrast",
+      "passed": true,
+      "detail": {
+        "poses": 9,
+        "minimum": 6.093329733321862,
+        "threshold": 4.5
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "translucent negative control distinguishes nominal and rendered contrast",
+      "passed": true,
+      "detail": {
+        "nominal": 21,
+        "renderedMinimum": 1.0537825532689855
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "retained motion has no layout reads per frame and recipe updates preserve state",
+      "passed": true,
+      "detail": {
+        "before": 14,
+        "after": 14,
+        "frames": 120,
+        "angle": "4.5deg",
+        "updatePreservedAngle": true,
+        "milliseconds120StyleUpdates": 1.300000011920929
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "reduced motion pauses driver and resets transform",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "transform": "none",
+        "before": 727,
+        "after": 727
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "offscreen observer suspends lighting updates",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "offscreen": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "dispose removes owned variables and stops controllers",
+      "passed": true,
+      "detail": {
+        "statuses": [
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed"
+        ],
+        "retainedVariables": false
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "nine actual composite lighting poses preserve authored text contrast",
+      "passed": true,
+      "detail": {
+        "poses": 9,
+        "minimum": 6.093329733321862,
+        "threshold": 4.5
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "translucent negative control distinguishes nominal and rendered contrast",
+      "passed": true,
+      "detail": {
+        "nominal": 21,
+        "renderedMinimum": 1.0537825532689855
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "retained motion has no layout reads per frame and recipe updates preserve state",
+      "passed": true,
+      "detail": {
+        "before": 2,
+        "after": 2,
+        "frames": 120,
+        "angle": "4.5deg",
+        "updatePreservedAngle": true,
+        "milliseconds120StyleUpdates": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "reduced motion pauses driver and resets transform",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "transform": "none",
+        "before": 727,
+        "after": 727
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "offscreen observer suspends lighting updates",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "offscreen": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "dispose removes owned variables and stops controllers",
+      "passed": true,
+      "detail": {
+        "statuses": [
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed"
+        ],
+        "retainedVariables": false
+      }
+    }
+  ],
+  "engines": [
+    {
+      "runtime": {
+        "engine": "chromium",
+        "version": "156.0.8078.4",
+        "playwright": "1.64.1"
+      },
+      "states": [
+        {
+          "x": -1,
+          "y": -1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 1605,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.152151355909822,
+              "samples": 12464,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.152151355909822,
+              "samples": 15888,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.209239869495068,
+              "samples": 2096,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 12464,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.161685758657848,
+              "samples": 15888,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.99607812935095,
+              "samples": 2096,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 12464,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 15888,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.697581655167058,
+              "samples": 1455,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.618093317102897,
+              "maximum": 10.729488692166564,
+              "samples": 12464,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.637482541768799,
+              "samples": 15888,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1470,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20400,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13152,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": -1,
+          "y": 0,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.152151355909822,
+              "samples": 1512,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 11772,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.152151355909822,
+              "samples": 16023,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.161685758657848,
+              "maximum": 6.164322796007483,
+              "samples": 1980,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.1198504472890685,
+              "maximum": 6.164322796007483,
+              "samples": 11772,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 16023,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 1980,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 11772,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 16023,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.690591874334979,
+              "maximum": 10.709981099000883,
+              "samples": 1372,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.637482541768799,
+              "maximum": 10.729488692166564,
+              "samples": 11772,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.709981099000883,
+              "samples": 16023,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1386,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20054,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13279,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": -1,
+          "y": 1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.22588537998959,
+              "samples": 1526,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.22588537998959,
+              "samples": 13080,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.22588537998959,
+              "samples": 16900,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.164322796007483,
+              "samples": 1876,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.1198504472890685,
+              "maximum": 6.209239869495068,
+              "samples": 13080,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.1198504472890685,
+              "maximum": 6.164322796007483,
+              "samples": 16900,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 9.975336749968292,
+              "samples": 1876,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 10.069092006738828,
+              "samples": 13080,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.975336749968292,
+              "samples": 16900,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.690591874334979,
+              "maximum": 10.709981099000883,
+              "samples": 1386,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.637482541768799,
+              "maximum": 10.736478472998643,
+              "samples": 13080,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.729488692166564,
+              "samples": 16900,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1400,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20400,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13719,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 1430,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.152151355909822,
+              "samples": 11880,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.152151355909822,
+              "samples": 15604,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.209239869495068,
+              "samples": 1755,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 11880,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.161685758657848,
+              "samples": 15604,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 9.99607812935095,
+              "samples": 1742,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 11880,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 15604,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.671320812063504,
+              "maximum": 10.697581655167058,
+              "samples": 1300,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.729488692166564,
+              "samples": 11880,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.637482541768799,
+              "samples": 15604,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1300,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 19728,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 12925,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.251482512562406,
+              "samples": 1443,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.251482512562406,
+              "samples": 11480,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.251482512562406,
+              "samples": 15088,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.166995912639796,
+              "samples": 1768,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.1198504472890685,
+              "maximum": 6.164322796007483,
+              "samples": 11480,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.1198504472890685,
+              "maximum": 6.164322796007483,
+              "samples": 15088,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.975336749968292,
+              "samples": 1768,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.975336749968292,
+              "samples": 11480,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.975336749968292,
+              "samples": 15088,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.690591874334979,
+              "maximum": 10.716970879832962,
+              "samples": 1313,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.637482541768799,
+              "maximum": 10.749114859400468,
+              "samples": 11480,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.729488692166564,
+              "samples": 15088,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1313,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 19584,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 12512,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.149078563518207,
+              "maximum": 10.251482512562406,
+              "samples": 1568,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.146040824105135,
+              "maximum": 10.251482512562406,
+              "samples": 11480,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.146040824105135,
+              "maximum": 10.251482512562406,
+              "samples": 14670,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.164322796007483,
+              "samples": 1918,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.161685758657848,
+              "maximum": 6.254602940006484,
+              "samples": 11480,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.161685758657848,
+              "maximum": 6.164322796007483,
+              "samples": 14670,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 9.975336749968292,
+              "samples": 1918,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 10.069092006738828,
+              "samples": 11480,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 9.975336749968292,
+              "samples": 14670,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.690591874334979,
+              "maximum": 10.716970879832962,
+              "samples": 1428,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.637482541768799,
+              "maximum": 10.756104640232547,
+              "samples": 11480,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.618093317102897,
+              "maximum": 10.736478472998643,
+              "samples": 14670,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1428,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 19656,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 12195,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.222777419995678,
+              "samples": 1792,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.22588537998959,
+              "samples": 12464,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.22588537998959,
+              "samples": 15888,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.209239869495068,
+              "samples": 2192,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.1198504472890685,
+              "maximum": 6.164322796007483,
+              "samples": 12464,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 15888,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 9.99607812935095,
+              "samples": 2176,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 12464,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 15888,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.716970879832962,
+              "samples": 1530,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.749114859400468,
+              "samples": 12464,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.637482541768799,
+              "samples": 15888,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1515,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20400,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13152,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.075856714495243,
+              "maximum": 10.251482512562406,
+              "samples": 1695,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.075856714495243,
+              "maximum": 10.251482512562406,
+              "samples": 11772,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.075856714495243,
+              "maximum": 10.251482512562406,
+              "samples": 16023,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.166995912639796,
+              "samples": 2070,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.161685758657848,
+              "maximum": 6.164322796007483,
+              "samples": 11772,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.161685758657848,
+              "maximum": 6.164322796007483,
+              "samples": 16023,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.702462602986998,
+              "maximum": 9.99607812935095,
+              "samples": 2070,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.702462602986998,
+              "maximum": 9.975336749968292,
+              "samples": 11772,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.702462602986998,
+              "maximum": 9.975336749968292,
+              "samples": 16023,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.671320812063504,
+              "maximum": 10.716970879832962,
+              "samples": 1545,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.756104640232547,
+              "samples": 11772,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.729488692166564,
+              "samples": 16023,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1530,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20054,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13279,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.149078563518207,
+              "maximum": 10.251482512562406,
+              "samples": 1596,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.149078563518207,
+              "maximum": 10.251482512562406,
+              "samples": 13080,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.149078563518207,
+              "maximum": 10.251482512562406,
+              "samples": 16900,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.164322796007483,
+              "samples": 1946,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.3298669090888815,
+              "samples": 13080,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.164322796007483,
+              "samples": 16900,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.794552021338488,
+              "maximum": 9.99607812935095,
+              "samples": 1946,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 10.097815265856646,
+              "samples": 13080,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 9.99607812935095,
+              "samples": 16900,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.690591874334979,
+              "maximum": 10.716970879832962,
+              "samples": 1456,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.690591874334979,
+              "maximum": 10.829013579725228,
+              "samples": 13080,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.671320812063504,
+              "maximum": 10.736478472998643,
+              "samples": 16900,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1442,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20400,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13719,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "motion": {
+        "before": 14,
+        "after": 14,
+        "frames": 120,
+        "angle": "4.5deg",
+        "updatePreservedAngle": true,
+        "milliseconds120StyleUpdates": 1.300000011920929
+      },
+      "reduced": {
+        "status": "paused",
+        "transform": "none",
+        "before": 727,
+        "after": 727
+      },
+      "offscreen": {
+        "status": "paused",
+        "offscreen": true
+      },
+      "disposal": {
+        "statuses": [
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed"
+        ],
+        "retainedVariables": false
+      },
+      "capabilities": {
+        "backdropFilter": true,
+        "prefixedBackdropFilter": false,
+        "pointer": true,
+        "secureContext": false
+      }
+    },
+    {
+      "runtime": {
+        "engine": "webkit",
+        "version": "27.2",
+        "playwright": "1.64.1"
+      },
+      "states": [
+        {
+          "x": -1,
+          "y": -1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 1605,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 12464,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.152151355909822,
+              "samples": 15888,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.209239869495068,
+              "samples": 2096,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 12464,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 15888,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.975336749968292,
+              "samples": 2096,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 12464,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 15888,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.697581655167058,
+              "samples": 1455,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.618093317102897,
+              "maximum": 10.729488692166564,
+              "samples": 12464,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.709981099000883,
+              "samples": 15888,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1470,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20400,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13152,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": -1,
+          "y": 0,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 1512,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 11772,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 16023,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.164322796007483,
+              "samples": 1980,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 11772,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 16023,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 1980,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 11772,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 16023,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.697581655167058,
+              "samples": 1372,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.690591874334979,
+              "maximum": 10.736478472998643,
+              "samples": 11772,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.716970879832962,
+              "samples": 16023,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1386,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20054,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13279,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": -1,
+          "y": 1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.053436368476019,
+              "maximum": 10.155259315903736,
+              "samples": 1526,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 13080,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 16900,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.164322796007483,
+              "samples": 1876,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.095966770671497,
+              "maximum": 6.211949205085282,
+              "samples": 13080,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.095966770671497,
+              "maximum": 6.164322796007483,
+              "samples": 16900,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 1876,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.99607812935095,
+              "samples": 13080,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 16900,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.697581655167058,
+              "samples": 1386,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.697581655167058,
+              "maximum": 10.736478472998643,
+              "samples": 13080,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.618093317102897,
+              "maximum": 10.716970879832962,
+              "samples": 16900,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1400,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20400,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13719,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": -1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 1430,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 11880,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.152151355909822,
+              "samples": 15604,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.209239869495068,
+              "samples": 1755,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 11880,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 15604,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.99607812935095,
+              "samples": 1742,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 11880,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 15604,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.697581655167058,
+              "samples": 1300,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.618093317102897,
+              "maximum": 10.729488692166564,
+              "samples": 11880,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.709981099000883,
+              "samples": 15604,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1300,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 19728,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 12925,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.053436368476019,
+              "maximum": 10.155259315903736,
+              "samples": 1443,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.053436368476019,
+              "maximum": 10.155259315903736,
+              "samples": 11480,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 15088,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.166995912639796,
+              "samples": 1768,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.095966770671497,
+              "maximum": 6.164322796007483,
+              "samples": 11480,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.095966770671497,
+              "maximum": 6.164322796007483,
+              "samples": 15088,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 1768,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 11480,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.967539441561039,
+              "samples": 15088,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.716970879832962,
+              "samples": 1313,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.697581655167058,
+              "maximum": 10.736478472998643,
+              "samples": 11480,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.716970879832962,
+              "samples": 15088,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1313,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 19584,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 12512,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.149078563518207,
+              "maximum": 10.22588537998959,
+              "samples": 1568,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.149078563518207,
+              "maximum": 10.22588537998959,
+              "samples": 11480,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.149078563518207,
+              "maximum": 10.22588537998959,
+              "samples": 14670,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.164322796007483,
+              "samples": 1918,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.254602940006484,
+              "samples": 11480,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.137802082040277,
+              "maximum": 6.164322796007483,
+              "samples": 14670,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.975336749968292,
+              "samples": 1918,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.99607812935095,
+              "samples": 11480,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.975336749968292,
+              "samples": 14670,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.605812035663499,
+              "maximum": 10.716970879832962,
+              "samples": 1428,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.697581655167058,
+              "maximum": 10.789879819325643,
+              "samples": 11480,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.690591874334979,
+              "maximum": 10.736478472998643,
+              "samples": 14670,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1428,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 19656,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 12195,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 1792,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 12464,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.050398629062947,
+              "maximum": 10.155259315903736,
+              "samples": 15888,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.209239869495068,
+              "samples": 2192,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.095966770671497,
+              "maximum": 6.164322796007483,
+              "samples": 12464,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.093329733321862,
+              "maximum": 6.164322796007483,
+              "samples": 15888,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.99607812935095,
+              "samples": 2176,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 12464,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.674428022278644,
+              "maximum": 9.8949907783619,
+              "samples": 15888,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.697581655167058,
+              "samples": 1530,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.618093317102897,
+              "maximum": 10.736478472998643,
+              "samples": 12464,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.716970879832962,
+              "samples": 15888,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1515,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20400,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13152,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.053436368476019,
+              "maximum": 10.22588537998959,
+              "samples": 1695,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.053436368476019,
+              "maximum": 10.22588537998959,
+              "samples": 11772,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.053436368476019,
+              "maximum": 10.22588537998959,
+              "samples": 16023,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.209239869495068,
+              "samples": 2070,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.137802082040277,
+              "maximum": 6.164322796007483,
+              "samples": 11772,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.095966770671497,
+              "maximum": 6.164322796007483,
+              "samples": 16023,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.975336749968292,
+              "samples": 2070,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.967539441561039,
+              "samples": 11772,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.694760663436082,
+              "maximum": 9.967539441561039,
+              "samples": 16023,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.716970879832962,
+              "samples": 1545,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.697581655167058,
+              "maximum": 10.736478472998643,
+              "samples": 11772,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.59882225483142,
+              "maximum": 10.736478472998643,
+              "samples": 16023,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1530,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20054,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13279,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.149078563518207,
+              "maximum": 10.251482512562406,
+              "samples": 1596,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.149078563518207,
+              "maximum": 10.251482512562406,
+              "samples": 13080,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 0,
+              "minimum": 10.149078563518207,
+              "maximum": 10.251482512562406,
+              "samples": 16900,
+              "foreground": [
+                46,
+                37,
+                24
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.164322796007483,
+              "samples": 1946,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.303195463647405,
+              "samples": 13080,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 1,
+              "minimum": 6.164322796007483,
+              "maximum": 6.166995912639796,
+              "samples": 16900,
+              "foreground": [
+                36,
+                29,
+                26
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 9.975336749968292,
+              "samples": 1946,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 10.069092006738828,
+              "samples": 13080,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 2,
+              "minimum": 9.774083392486132,
+              "maximum": 9.975336749968292,
+              "samples": 16900,
+              "foreground": [
+                23,
+                35,
+                45
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.678310592895583,
+              "maximum": 10.716970879832962,
+              "samples": 1456,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.697581655167058,
+              "maximum": 10.836044249197682,
+              "samples": 13080,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 3,
+              "minimum": 10.697581655167058,
+              "maximum": 10.809387412491326,
+              "samples": 16900,
+              "foreground": [
+                24,
+                52,
+                44
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 1442,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 20400,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "index": 4,
+              "minimum": 1.0537825532689855,
+              "maximum": 1.0537825532689855,
+              "samples": 13719,
+              "foreground": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "motion": {
+        "before": 2,
+        "after": 2,
+        "frames": 120,
+        "angle": "4.5deg",
+        "updatePreservedAngle": true,
+        "milliseconds120StyleUpdates": 1
+      },
+      "reduced": {
+        "status": "paused",
+        "transform": "none",
+        "before": 727,
+        "after": 727
+      },
+      "offscreen": {
+        "status": "paused",
+        "offscreen": true
+      },
+      "disposal": {
+        "statuses": [
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed"
+        ],
+        "retainedVariables": false
+      },
+      "capabilities": {
+        "backdropFilter": true,
+        "prefixedBackdropFilter": true,
+        "pointer": true,
+        "secureContext": false
+      }
+    }
+  ],
+  "limits": [
+    "Screenshot background pixels are measured with foreground spans hidden, preserving their boxes and shields; opaque computed ink is compared against those pixels. Antialiased glyph pixels are not the foreground oracle.",
+    "Nine authored poses and one backdrop do not certify every motion path or user-supplied backdrop.",
+    "120 synchronous updates measure JS arithmetic/style writes only, not paint/compositor time, frame pacing, thermal behavior, or hardware Safari.",
+    "Playwright WebKit is not physical Safari or an iPhone sensor test."
+  ]
+}

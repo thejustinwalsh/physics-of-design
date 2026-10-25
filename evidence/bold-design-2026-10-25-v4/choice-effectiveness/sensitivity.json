@@ -1,0 +1,3578 @@
+[
+  {
+    "reading": {
+      "bodySize": 16,
+      "contentMax": 1080,
+      "gap": 32,
+      "leading": 1.35,
+      "titleSize": 52
+    },
+    "expression": {
+      "counterRoughness": 0.55,
+      "imageAspect": 2,
+      "imageShare": 0.64,
+      "motionRole": 1,
+      "roughness": 0.18
+    },
+    "expressionEnergy": 0.9200935231166597,
+    "expressionProgram": "a74989b8c4fca255b48c45350cf6a7a837c7166dd206519cb87f0fadb7130956",
+    "readingGeometry": {
+      "desktop": {
+        "bodyHeight": 64.78125,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 52,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 54.078125,
+        "ctaBottom": 262.859375,
+        "actionSlack": 717.140625,
+        "titleLines": 1
+      },
+      "desktop-large": {
+        "bodyHeight": 215.9375,
+        "bodyLines": 5,
+        "charactersPerLine": 35.4,
+        "effectiveTitle": 104,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 216.3125,
+        "ctaBottom": 576.25,
+        "actionSlack": 1223.75,
+        "titleLines": 2
+      },
+      "ipad": {
+        "bodyHeight": 64.78125,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 52,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 54.078125,
+        "ctaBottom": 262.859375,
+        "actionSlack": 907.2606249999999,
+        "titleLines": 1
+      },
+      "ipad-large": {
+        "bodyHeight": 215.9375,
+        "bodyLines": 5,
+        "charactersPerLine": 35.4,
+        "effectiveTitle": 104,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 216.3125,
+        "ctaBottom": 576.25,
+        "actionSlack": 1572.9500000000003,
+        "titleLines": 2
+      },
+      "phone": {
+        "bodyHeight": 86.375,
+        "bodyLines": 4,
+        "charactersPerLine": 44.25,
+        "effectiveTitle": 52,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 162.234375,
+        "ctaBottom": 376.609375,
+        "actionSlack": 450.510625,
+        "titleLines": 3
+      },
+      "phone-large": {
+        "bodyHeight": 388.6875,
+        "bodyLines": 9,
+        "charactersPerLine": 19.666666666666668,
+        "effectiveTitle": 104,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 648.9375,
+        "ctaBottom": 1165.625,
+        "actionSlack": 353.57500000000005,
+        "titleLines": 6
+      }
+    },
+    "diagnostics": {
+      "policy": "pareto-diverse",
+      "scope": "Evaluated mathematically admissible assignments only; numeric profiles do not establish visual equivalence or quality.",
+      "admissibleAssignments": 432,
+      "preferenceProfiles": 192,
+      "paretoProfiles": 3,
+      "paretoComplete": true,
+      "diversityComplete": true,
+      "comparisons": 7029,
+      "maxComparisons": 1000000,
+      "retainedPreferenceProfiles": 3,
+      "minimumEnergyAssignments": 10,
+      "jointlySatisfiedAssignments": 0,
+      "preferences": [
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            1.7181563956499222,
+            5.206534532272491
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 36
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.4,
+              "max": 1.2
+            }
+          ],
+          "observedRange": [
+            0.5583198707592891,
+            1.6918783962402701
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 324
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.65,
+              "max": 1.5
+            }
+          ],
+          "observedRange": [
+            1.2122547902641119,
+            3.673499364436702
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 72
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.39392568659127625,
+            1.1937142017917461
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 252
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.35,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.29934851606436885,
+            0.9071167153465722
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 360
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.08,
+              "max": 0.25
+            }
+          ],
+          "observedRange": [
+            0.07853219586303611,
+            0.23797635110010942
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        }
+      ],
+      "distance": "Squared numeric differences divided by each authored domain span; categorical indices have no perceptual interpretation.",
+      "fallback": null
+    }
+  },
+  {
+    "reading": {
+      "bodySize": 16,
+      "contentMax": 900,
+      "gap": 32,
+      "leading": 1.65,
+      "titleSize": 64
+    },
+    "expression": {
+      "counterRoughness": 0.55,
+      "imageAspect": 1.7,
+      "imageShare": 0.64,
+      "motionRole": 1,
+      "roughness": 0.18
+    },
+    "expressionEnergy": 0,
+    "expressionProgram": "4c45d7468bfe67cd8b3abb3c4871221753062f1e297f394d229c5097fe770af1",
+    "readingGeometry": {
+      "desktop": {
+        "bodyHeight": 79.171875,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 64,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 66.546875,
+        "ctaBottom": 289.71875,
+        "actionSlack": 690.28125,
+        "titleLines": 1
+      },
+      "desktop-large": {
+        "bodyHeight": 316.78125,
+        "bodyLines": 6,
+        "charactersPerLine": 29.5,
+        "effectiveTitle": 128,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 266.21875,
+        "ctaBottom": 727,
+        "actionSlack": 1073,
+        "titleLines": 2
+      },
+      "ipad": {
+        "bodyHeight": 79.171875,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 64,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 133.09375,
+        "ctaBottom": 356.265625,
+        "actionSlack": 813.8543749999999,
+        "titleLines": 2
+      },
+      "ipad-large": {
+        "bodyHeight": 316.78125,
+        "bodyLines": 6,
+        "charactersPerLine": 29.5,
+        "effectiveTitle": 128,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 399.328125,
+        "ctaBottom": 860.109375,
+        "actionSlack": 1289.0906250000003,
+        "titleLines": 3
+      },
+      "phone": {
+        "bodyHeight": 105.5625,
+        "bodyLines": 4,
+        "charactersPerLine": 44.25,
+        "effectiveTitle": 52.650000000000006,
+        "gapRatio": 2,
+        "hierarchy": 3.2906250000000004,
+        "overflow": 0,
+        "titleHeight": 164.25,
+        "ctaBottom": 397.8125,
+        "actionSlack": 429.3075,
+        "titleLines": 3
+      },
+      "phone-large": {
+        "bodyHeight": 475.171875,
+        "bodyLines": 9,
+        "charactersPerLine": 19.666666666666668,
+        "effectiveTitle": 105.30000000000001,
+        "gapRatio": 2,
+        "hierarchy": 3.2906250000000004,
+        "overflow": 0,
+        "titleHeight": 657,
+        "ctaBottom": 1260.171875,
+        "actionSlack": 259.02812500000005,
+        "titleLines": 6
+      }
+    },
+    "diagnostics": {
+      "policy": "pareto-diverse",
+      "scope": "Evaluated mathematically admissible assignments only; numeric profiles do not establish visual equivalence or quality.",
+      "admissibleAssignments": 432,
+      "preferenceProfiles": 176,
+      "paretoProfiles": 1,
+      "paretoComplete": true,
+      "diversityComplete": true,
+      "comparisons": 6175,
+      "maxComparisons": 1000000,
+      "retainedPreferenceProfiles": 1,
+      "minimumEnergyAssignments": 16,
+      "jointlySatisfiedAssignments": 16,
+      "preferences": [
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            1.215403551960612,
+            3.683041066547309
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 180
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.4,
+              "max": 1.2
+            }
+          ],
+          "observedRange": [
+            0.35121951219512193,
+            1.06430155210643
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.65,
+              "max": 1.5
+            }
+          ],
+          "observedRange": [
+            0.7486931491076568,
+            2.268767118508051
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 324
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.24445623342175066,
+            0.7407764649143959
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.35,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.27831849244149925,
+            0.8433893710348462
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 324
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.08,
+              "max": 0.25
+            }
+          ],
+          "observedRange": [
+            0.07215429422738803,
+            0.21864937644663038
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        }
+      ],
+      "distance": "Squared numeric differences divided by each authored domain span; categorical indices have no perceptual interpretation.",
+      "fallback": null
+    }
+  },
+  {
+    "reading": {
+      "bodySize": 16,
+      "contentMax": 1080,
+      "gap": 32,
+      "leading": 1.5,
+      "titleSize": 64
+    },
+    "expression": {
+      "counterRoughness": 0.55,
+      "imageAspect": 2,
+      "imageShare": 0.64,
+      "motionRole": 1,
+      "roughness": 0.18
+    },
+    "expressionEnergy": 0.006545070191117986,
+    "expressionProgram": "2257b04707a5d6dd443d20e07305ac4f70b08eb31799ae315ea74dfe8373e291",
+    "readingGeometry": {
+      "desktop": {
+        "bodyHeight": 72,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 64,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 66.546875,
+        "ctaBottom": 282.546875,
+        "actionSlack": 697.453125,
+        "titleLines": 1
+      },
+      "desktop-large": {
+        "bodyHeight": 240,
+        "bodyLines": 5,
+        "charactersPerLine": 35.4,
+        "effectiveTitle": 128,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 266.21875,
+        "ctaBottom": 650.21875,
+        "actionSlack": 1149.78125,
+        "titleLines": 2
+      },
+      "ipad": {
+        "bodyHeight": 72,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 64,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 133.09375,
+        "ctaBottom": 349.09375,
+        "actionSlack": 821.0262499999999,
+        "titleLines": 2
+      },
+      "ipad-large": {
+        "bodyHeight": 240,
+        "bodyLines": 5,
+        "charactersPerLine": 35.4,
+        "effectiveTitle": 128,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 399.328125,
+        "ctaBottom": 783.328125,
+        "actionSlack": 1365.8718750000003,
+        "titleLines": 3
+      },
+      "phone": {
+        "bodyHeight": 96,
+        "bodyLines": 4,
+        "charactersPerLine": 44.25,
+        "effectiveTitle": 52.650000000000006,
+        "gapRatio": 2,
+        "hierarchy": 3.2906250000000004,
+        "overflow": 0,
+        "titleHeight": 164.25,
+        "ctaBottom": 388.25,
+        "actionSlack": 438.87,
+        "titleLines": 3
+      },
+      "phone-large": {
+        "bodyHeight": 432,
+        "bodyLines": 9,
+        "charactersPerLine": 19.666666666666668,
+        "effectiveTitle": 105.30000000000001,
+        "gapRatio": 2,
+        "hierarchy": 3.2906250000000004,
+        "overflow": 0,
+        "titleHeight": 657,
+        "ctaBottom": 1217,
+        "actionSlack": 302.20000000000005,
+        "titleLines": 6
+      }
+    },
+    "diagnostics": {
+      "policy": "pareto-diverse",
+      "scope": "Evaluated mathematically admissible assignments only; numeric profiles do not establish visual equivalence or quality.",
+      "admissibleAssignments": 432,
+      "preferenceProfiles": 192,
+      "paretoProfiles": 2,
+      "paretoComplete": true,
+      "diversityComplete": true,
+      "comparisons": 6647,
+      "maxComparisons": 1000000,
+      "retainedPreferenceProfiles": 2,
+      "minimumEnergyAssignments": 10,
+      "jointlySatisfiedAssignments": 0,
+      "preferences": [
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            1.5198167659184607,
+            4.605505351268063
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 72
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.4,
+              "max": 1.2
+            }
+          ],
+          "observedRange": [
+            0.4815885734192649,
+            1.4593593133917118
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.65,
+              "max": 1.5
+            }
+          ],
+          "observedRange": [
+            0.7713404507710557,
+            2.3373953053668353
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.27241522169207494,
+            0.8255006717941664
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.35,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.2874251497005988,
+            0.8709853021230266
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 324
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.08,
+              "max": 0.25
+            }
+          ],
+          "observedRange": [
+            0.07493309545049064,
+            0.22706998621360797
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        }
+      ],
+      "distance": "Squared numeric differences divided by each authored domain span; categorical indices have no perceptual interpretation.",
+      "fallback": null
+    }
+  },
+  {
+    "reading": {
+      "bodySize": 16,
+      "contentMax": 1080,
+      "gap": 32,
+      "leading": 1.65,
+      "titleSize": 52
+    },
+    "expression": {
+      "counterRoughness": 0.55,
+      "imageAspect": 2,
+      "imageShare": 0.64,
+      "motionRole": 1,
+      "roughness": 0.18
+    },
+    "expressionEnergy": 0.07827845308419601,
+    "expressionProgram": "67b1891780610beae7ef962a51cc7eae387b0ebb9d9804e225497e2d285ce8eb",
+    "readingGeometry": {
+      "desktop": {
+        "bodyHeight": 79.171875,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 52,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 54.078125,
+        "ctaBottom": 277.25,
+        "actionSlack": 702.75,
+        "titleLines": 1
+      },
+      "desktop-large": {
+        "bodyHeight": 263.984375,
+        "bodyLines": 5,
+        "charactersPerLine": 35.4,
+        "effectiveTitle": 104,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 216.3125,
+        "ctaBottom": 624.296875,
+        "actionSlack": 1175.703125,
+        "titleLines": 2
+      },
+      "ipad": {
+        "bodyHeight": 79.171875,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 52,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 54.078125,
+        "ctaBottom": 277.25,
+        "actionSlack": 892.8699999999999,
+        "titleLines": 1
+      },
+      "ipad-large": {
+        "bodyHeight": 263.984375,
+        "bodyLines": 5,
+        "charactersPerLine": 35.4,
+        "effectiveTitle": 104,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 216.3125,
+        "ctaBottom": 624.296875,
+        "actionSlack": 1524.9031250000003,
+        "titleLines": 2
+      },
+      "phone": {
+        "bodyHeight": 105.5625,
+        "bodyLines": 4,
+        "charactersPerLine": 44.25,
+        "effectiveTitle": 52,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 162.234375,
+        "ctaBottom": 395.796875,
+        "actionSlack": 431.323125,
+        "titleLines": 3
+      },
+      "phone-large": {
+        "bodyHeight": 475.171875,
+        "bodyLines": 9,
+        "charactersPerLine": 19.666666666666668,
+        "effectiveTitle": 104,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 648.9375,
+        "ctaBottom": 1252.109375,
+        "actionSlack": 267.09062500000005,
+        "titleLines": 6
+      }
+    },
+    "diagnostics": {
+      "policy": "pareto-diverse",
+      "scope": "Evaluated mathematically admissible assignments only; numeric profiles do not establish visual equivalence or quality.",
+      "admissibleAssignments": 432,
+      "preferenceProfiles": 192,
+      "paretoProfiles": 2,
+      "paretoComplete": true,
+      "diversityComplete": true,
+      "comparisons": 6647,
+      "maxComparisons": 1000000,
+      "retainedPreferenceProfiles": 2,
+      "minimumEnergyAssignments": 10,
+      "jointlySatisfiedAssignments": 0,
+      "preferences": [
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            1.5685325264750378,
+            4.753128868106175
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 72
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.4,
+              "max": 1.2
+            }
+          ],
+          "observedRange": [
+            0.505956629151798,
+            1.5332019065205997
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 324
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.65,
+              "max": 1.5
+            }
+          ],
+          "observedRange": [
+            1.1066868381240544,
+            3.353596479163801
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 108
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.356980510568213,
+            1.0817591229339787
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 324
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.35,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.2801897117840204,
+            0.8490597326788497
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 324
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.08,
+              "max": 0.25
+            }
+          ],
+          "observedRange": [
+            0.07265748536984228,
+            0.22017419809043112
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        }
+      ],
+      "distance": "Squared numeric differences divided by each authored domain span; categorical indices have no perceptual interpretation.",
+      "fallback": null
+    }
+  },
+  {
+    "reading": {
+      "bodySize": 16,
+      "contentMax": 900,
+      "gap": 32,
+      "leading": 1.35,
+      "titleSize": 64
+    },
+    "expression": {
+      "counterRoughness": 0.55,
+      "imageAspect": 2,
+      "imageShare": 0.64,
+      "motionRole": 1,
+      "roughness": 0.18
+    },
+    "expressionEnergy": 0,
+    "expressionProgram": "29e8fdd5396b8a239a9504540efd690846dc2b47c1c34dadad12d1277421de40",
+    "readingGeometry": {
+      "desktop": {
+        "bodyHeight": 64.78125,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 64,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 66.546875,
+        "ctaBottom": 275.328125,
+        "actionSlack": 704.671875,
+        "titleLines": 1
+      },
+      "desktop-large": {
+        "bodyHeight": 259.125,
+        "bodyLines": 6,
+        "charactersPerLine": 29.5,
+        "effectiveTitle": 128,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 266.21875,
+        "ctaBottom": 669.34375,
+        "actionSlack": 1130.65625,
+        "titleLines": 2
+      },
+      "ipad": {
+        "bodyHeight": 64.78125,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 64,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 133.09375,
+        "ctaBottom": 341.875,
+        "actionSlack": 828.2449999999999,
+        "titleLines": 2
+      },
+      "ipad-large": {
+        "bodyHeight": 259.125,
+        "bodyLines": 6,
+        "charactersPerLine": 29.5,
+        "effectiveTitle": 128,
+        "gapRatio": 2,
+        "hierarchy": 4,
+        "overflow": 0,
+        "titleHeight": 399.328125,
+        "ctaBottom": 802.453125,
+        "actionSlack": 1346.7468750000003,
+        "titleLines": 3
+      },
+      "phone": {
+        "bodyHeight": 86.375,
+        "bodyLines": 4,
+        "charactersPerLine": 44.25,
+        "effectiveTitle": 52.650000000000006,
+        "gapRatio": 2,
+        "hierarchy": 3.2906250000000004,
+        "overflow": 0,
+        "titleHeight": 164.25,
+        "ctaBottom": 378.625,
+        "actionSlack": 448.495,
+        "titleLines": 3
+      },
+      "phone-large": {
+        "bodyHeight": 388.6875,
+        "bodyLines": 9,
+        "charactersPerLine": 19.666666666666668,
+        "effectiveTitle": 105.30000000000001,
+        "gapRatio": 2,
+        "hierarchy": 3.2906250000000004,
+        "overflow": 0,
+        "titleHeight": 657,
+        "ctaBottom": 1173.6875,
+        "actionSlack": 345.51250000000005,
+        "titleLines": 6
+      }
+    },
+    "diagnostics": {
+      "policy": "pareto-diverse",
+      "scope": "Evaluated mathematically admissible assignments only; numeric profiles do not establish visual equivalence or quality.",
+      "admissibleAssignments": 432,
+      "preferenceProfiles": 192,
+      "paretoProfiles": 1,
+      "paretoComplete": true,
+      "diversityComplete": true,
+      "comparisons": 6055,
+      "maxComparisons": 1000000,
+      "retainedPreferenceProfiles": 1,
+      "minimumEnergyAssignments": 8,
+      "jointlySatisfiedAssignments": 8,
+      "preferences": [
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            1.3224911508657802,
+            4.007548942017515
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.4,
+              "max": 1.2
+            }
+          ],
+          "observedRange": [
+            0.3875525651808242,
+            1.1744017126691642
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.65,
+              "max": 1.5
+            }
+          ],
+          "observedRange": [
+            0.795562805872757,
+            2.4107963814325966
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 252
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.26486953766774535,
+            0.8026349626295314
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.35,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.29721362229102166,
+            0.9006473402758232
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 324
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.08,
+              "max": 0.25
+            }
+          ],
+          "observedRange": [
+            0.07794467320071913,
+            0.23619597939611858
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        }
+      ],
+      "distance": "Squared numeric differences divided by each authored domain span; categorical indices have no perceptual interpretation.",
+      "fallback": null
+    }
+  },
+  {
+    "reading": {
+      "bodySize": 16,
+      "contentMax": 900,
+      "gap": 32,
+      "leading": 1.5,
+      "titleSize": 52
+    },
+    "expression": {
+      "counterRoughness": 0.55,
+      "imageAspect": 2,
+      "imageShare": 0.64,
+      "motionRole": 1,
+      "roughness": 0.18
+    },
+    "expressionEnergy": 0.016956246528154046,
+    "expressionProgram": "ccae695a50ffeda13bc3dd6a41512036db0259869c1e2617577da00e2d95a01c",
+    "readingGeometry": {
+      "desktop": {
+        "bodyHeight": 72,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 52,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 54.078125,
+        "ctaBottom": 270.078125,
+        "actionSlack": 709.921875,
+        "titleLines": 1
+      },
+      "desktop-large": {
+        "bodyHeight": 288,
+        "bodyLines": 6,
+        "charactersPerLine": 29.5,
+        "effectiveTitle": 104,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 216.3125,
+        "ctaBottom": 648.3125,
+        "actionSlack": 1151.6875,
+        "titleLines": 2
+      },
+      "ipad": {
+        "bodyHeight": 72,
+        "bodyLines": 3,
+        "charactersPerLine": 59,
+        "effectiveTitle": 52,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 54.078125,
+        "ctaBottom": 270.078125,
+        "actionSlack": 900.0418749999999,
+        "titleLines": 1
+      },
+      "ipad-large": {
+        "bodyHeight": 288,
+        "bodyLines": 6,
+        "charactersPerLine": 29.5,
+        "effectiveTitle": 104,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 216.3125,
+        "ctaBottom": 648.3125,
+        "actionSlack": 1500.8875000000003,
+        "titleLines": 2
+      },
+      "phone": {
+        "bodyHeight": 96,
+        "bodyLines": 4,
+        "charactersPerLine": 44.25,
+        "effectiveTitle": 52,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 162.234375,
+        "ctaBottom": 386.234375,
+        "actionSlack": 440.885625,
+        "titleLines": 3
+      },
+      "phone-large": {
+        "bodyHeight": 432,
+        "bodyLines": 9,
+        "charactersPerLine": 19.666666666666668,
+        "effectiveTitle": 104,
+        "gapRatio": 2,
+        "hierarchy": 3.25,
+        "overflow": 0,
+        "titleHeight": 648.9375,
+        "ctaBottom": 1208.9375,
+        "actionSlack": 310.26250000000005,
+        "titleLines": 6
+      }
+    },
+    "diagnostics": {
+      "policy": "pareto-diverse",
+      "scope": "Evaluated mathematically admissible assignments only; numeric profiles do not establish visual equivalence or quality.",
+      "admissibleAssignments": 432,
+      "preferenceProfiles": 192,
+      "paretoProfiles": 2,
+      "paretoComplete": true,
+      "diversityComplete": true,
+      "comparisons": 6967,
+      "maxComparisons": 1000000,
+      "retainedPreferenceProfiles": 2,
+      "minimumEnergyAssignments": 10,
+      "jointlySatisfiedAssignments": 0,
+      "preferences": [
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            1.3664129682712267,
+            4.140645358397657
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.4,
+              "max": 1.2
+            }
+          ],
+          "observedRange": [
+            0.40275026220720195,
+            1.220455340021824
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "desktop-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.65,
+              "max": 1.5
+            }
+          ],
+          "observedRange": [
+            1.1568963131363053,
+            3.5057464034433488
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 72
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.34099522200209764,
+            1.033318854551811
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 324
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "ipad-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.35,
+              "max": 0.75
+            }
+          ],
+          "observedRange": [
+            0.289421265141319,
+            0.8770341367918757
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 324
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "deliberate-tension",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.25,
+              "max": 0.55
+            }
+          ],
+          "observedRange": [
+            0.040000000000000036,
+            0.6000000000000001
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "image-dominance",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.64,
+              "max": 0.8
+            }
+          ],
+          "observedRange": [
+            0.48,
+            0.8
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.08,
+              "max": 0.25
+            }
+          ],
+          "observedRange": [
+            0.07547593642949402,
+            0.2287149588772546
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 396
+        },
+        {
+          "id": "material-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.2,
+              "max": 0.42
+            }
+          ],
+          "observedRange": [
+            0,
+            0.6699999999999999
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 144
+        },
+        {
+          "id": "motion-role",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2
+            }
+          ],
+          "observedRange": [
+            0,
+            2
+          ],
+          "minimumResidual": 0,
+          "satisfiedAssignments": 288
+        }
+      ],
+      "distance": "Squared numeric differences divided by each authored domain span; categorical indices have no perceptual interpretation.",
+      "fallback": null
+    }
+  }
+]

@@ -1,0 +1,451 @@
+{
+  "manifest": {
+    "version": 1,
+    "engine": "output-bindings-v1",
+    "current": {
+      "designIdentity": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+      "sourceIdentity": "ea278d46bc07d9b2d9c66096e956db1431e35e2cf7d17942e8d631de321b11fa",
+      "inputIdentity": "c969870e67d9acc46cb1060c85fe39faf0f4ae4a8713128de40478857411e49f",
+      "resultIdentity": "0d96ebe012e45096cb5d79d032566a7bb4aac9572cc506b72fce312da01155bd"
+    },
+    "sourceValueIdentity": "0d96ebe012e45096cb5d79d032566a7bb4aac9572cc506b72fce312da01155bd",
+    "entries": [
+      {
+        "id": "label-small-phone",
+        "scenario": "small-phone",
+        "scenarioIdentity": "8786c086adb2e44f3e93dd3b942ff335a8164f1c608e30e6caa17e2068d4244b",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/values/small-phone/service-row.textWidth",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "tolerance": 0.01,
+        "unsupportedPolicy": "block",
+        "expected": 240
+      },
+      {
+        "id": "label-phone",
+        "scenario": "phone",
+        "scenarioIdentity": "778a39aee830f65e4219d20cdce0ba2634d095c243486db6b74cec426801f41b",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/values/phone/service-row.textWidth",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "tolerance": 0.01,
+        "unsupportedPolicy": "block",
+        "expected": 240
+      },
+      {
+        "id": "label-phone-large",
+        "scenario": "phone-large",
+        "scenarioIdentity": "4d1cb264343acbf40016486fbdc0df48fdc860152dd0ead2c00cafb23c6f8dd1",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/values/phone-large/service-row.textWidth",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "tolerance": 0.01,
+        "unsupportedPolicy": "block",
+        "expected": 240
+      },
+      {
+        "id": "label-narrow",
+        "scenario": "narrow",
+        "scenarioIdentity": "e4838843ad61b44b9e10cabcd7313c2b043f0b5450d19e7025b4aeee4ba64807",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/values/narrow/service-row.textWidth",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "tolerance": 0.01,
+        "unsupportedPolicy": "block",
+        "expected": 240
+      },
+      {
+        "id": "label-ipad",
+        "scenario": "ipad",
+        "scenarioIdentity": "0bd4ca41ce5d9bcdd2826e903b4a74c1af494febb8d921f62290a93b92db9444",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/values/ipad/service-row.textWidth",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "tolerance": 0.01,
+        "unsupportedPolicy": "block",
+        "expected": 240
+      },
+      {
+        "id": "label-desktop",
+        "scenario": "desktop",
+        "scenarioIdentity": "a4331b1bfc5deb1e85213b420270e2be5e3f66ab037474f5f8ce45ba46398554",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/values/desktop/service-row.textWidth",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "tolerance": 0.01,
+        "unsupportedPolicy": "block",
+        "expected": 240
+      }
+    ],
+    "scope": "Expected values projected from exact source pointers. No renderer ran; hashes detect payload changes, not authenticity or causal consumption.",
+    "identity": "c6ebbe5711b51a6cac8e0656fa8c4b919e5039152891f42e92f5370179969c18"
+  },
+  "observations": [
+    {
+      "binding": "label-small-phone",
+      "current": {
+        "designIdentity": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+        "sourceIdentity": "ea278d46bc07d9b2d9c66096e956db1431e35e2cf7d17942e8d631de321b11fa",
+        "inputIdentity": "c969870e67d9acc46cb1060c85fe39faf0f4ae4a8713128de40478857411e49f",
+        "resultIdentity": "0d96ebe012e45096cb5d79d032566a7bb4aac9572cc506b72fce312da01155bd"
+      },
+      "scenario": "small-phone",
+      "scenarioIdentity": "8786c086adb2e44f3e93dd3b942ff335a8164f1c608e30e6caa17e2068d4244b",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "relay-service-label",
+      "property": "width",
+      "sourceLocation": "src/emission.ts:emitStyleX",
+      "status": "observed",
+      "value": 240,
+      "provider": "browser",
+      "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+      "resultRef": "artifacts/relational-kernels/text-observations.json#/0/measurement",
+      "observedAt": "2026-10-25T14:57:30.432Z",
+      "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+    },
+    {
+      "binding": "label-phone",
+      "current": {
+        "designIdentity": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+        "sourceIdentity": "ea278d46bc07d9b2d9c66096e956db1431e35e2cf7d17942e8d631de321b11fa",
+        "inputIdentity": "c969870e67d9acc46cb1060c85fe39faf0f4ae4a8713128de40478857411e49f",
+        "resultIdentity": "0d96ebe012e45096cb5d79d032566a7bb4aac9572cc506b72fce312da01155bd"
+      },
+      "scenario": "phone",
+      "scenarioIdentity": "778a39aee830f65e4219d20cdce0ba2634d095c243486db6b74cec426801f41b",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "relay-service-label",
+      "property": "width",
+      "sourceLocation": "src/emission.ts:emitStyleX",
+      "status": "observed",
+      "value": 240,
+      "provider": "browser",
+      "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+      "resultRef": "artifacts/relational-kernels/text-observations.json#/1/measurement",
+      "observedAt": "2026-10-25T14:57:30.432Z",
+      "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+    },
+    {
+      "binding": "label-phone-large",
+      "current": {
+        "designIdentity": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+        "sourceIdentity": "ea278d46bc07d9b2d9c66096e956db1431e35e2cf7d17942e8d631de321b11fa",
+        "inputIdentity": "c969870e67d9acc46cb1060c85fe39faf0f4ae4a8713128de40478857411e49f",
+        "resultIdentity": "0d96ebe012e45096cb5d79d032566a7bb4aac9572cc506b72fce312da01155bd"
+      },
+      "scenario": "phone-large",
+      "scenarioIdentity": "4d1cb264343acbf40016486fbdc0df48fdc860152dd0ead2c00cafb23c6f8dd1",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "relay-service-label",
+      "property": "width",
+      "sourceLocation": "src/emission.ts:emitStyleX",
+      "status": "observed",
+      "value": 240,
+      "provider": "browser",
+      "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+      "resultRef": "artifacts/relational-kernels/text-observations.json#/2/measurement",
+      "observedAt": "2026-10-25T14:57:30.432Z",
+      "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+    },
+    {
+      "binding": "label-narrow",
+      "current": {
+        "designIdentity": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+        "sourceIdentity": "ea278d46bc07d9b2d9c66096e956db1431e35e2cf7d17942e8d631de321b11fa",
+        "inputIdentity": "c969870e67d9acc46cb1060c85fe39faf0f4ae4a8713128de40478857411e49f",
+        "resultIdentity": "0d96ebe012e45096cb5d79d032566a7bb4aac9572cc506b72fce312da01155bd"
+      },
+      "scenario": "narrow",
+      "scenarioIdentity": "e4838843ad61b44b9e10cabcd7313c2b043f0b5450d19e7025b4aeee4ba64807",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "relay-service-label",
+      "property": "width",
+      "sourceLocation": "src/emission.ts:emitStyleX",
+      "status": "observed",
+      "value": 240,
+      "provider": "browser",
+      "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+      "resultRef": "artifacts/relational-kernels/text-observations.json#/3/measurement",
+      "observedAt": "2026-10-25T14:57:30.432Z",
+      "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+    },
+    {
+      "binding": "label-ipad",
+      "current": {
+        "designIdentity": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+        "sourceIdentity": "ea278d46bc07d9b2d9c66096e956db1431e35e2cf7d17942e8d631de321b11fa",
+        "inputIdentity": "c969870e67d9acc46cb1060c85fe39faf0f4ae4a8713128de40478857411e49f",
+        "resultIdentity": "0d96ebe012e45096cb5d79d032566a7bb4aac9572cc506b72fce312da01155bd"
+      },
+      "scenario": "ipad",
+      "scenarioIdentity": "0bd4ca41ce5d9bcdd2826e903b4a74c1af494febb8d921f62290a93b92db9444",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "relay-service-label",
+      "property": "width",
+      "sourceLocation": "src/emission.ts:emitStyleX",
+      "status": "observed",
+      "value": 240,
+      "provider": "browser",
+      "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+      "resultRef": "artifacts/relational-kernels/text-observations.json#/4/measurement",
+      "observedAt": "2026-10-25T14:57:30.432Z",
+      "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+    },
+    {
+      "binding": "label-desktop",
+      "current": {
+        "designIdentity": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+        "sourceIdentity": "ea278d46bc07d9b2d9c66096e956db1431e35e2cf7d17942e8d631de321b11fa",
+        "inputIdentity": "c969870e67d9acc46cb1060c85fe39faf0f4ae4a8713128de40478857411e49f",
+        "resultIdentity": "0d96ebe012e45096cb5d79d032566a7bb4aac9572cc506b72fce312da01155bd"
+      },
+      "scenario": "desktop",
+      "scenarioIdentity": "a4331b1bfc5deb1e85213b420270e2be5e3f66ab037474f5f8ce45ba46398554",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "relay-service-label",
+      "property": "width",
+      "sourceLocation": "src/emission.ts:emitStyleX",
+      "status": "observed",
+      "value": 240,
+      "provider": "browser",
+      "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+      "resultRef": "artifacts/relational-kernels/text-observations.json#/5/measurement",
+      "observedAt": "2026-10-25T14:57:30.432Z",
+      "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+    }
+  ],
+  "checked": {
+    "version": 1,
+    "manifestIdentity": "c6ebbe5711b51a6cac8e0656fa8c4b919e5039152891f42e92f5370179969c18",
+    "current": {
+      "designIdentity": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+      "sourceIdentity": "ea278d46bc07d9b2d9c66096e956db1431e35e2cf7d17942e8d631de321b11fa",
+      "inputIdentity": "c969870e67d9acc46cb1060c85fe39faf0f4ae4a8713128de40478857411e49f",
+      "resultIdentity": "0d96ebe012e45096cb5d79d032566a7bb4aac9572cc506b72fce312da01155bd"
+    },
+    "complete": true,
+    "verified": true,
+    "entries": [
+      {
+        "id": "label-small-phone",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/0/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      },
+      {
+        "id": "label-phone",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/1/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      },
+      {
+        "id": "label-phone-large",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/2/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      },
+      {
+        "id": "label-narrow",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/3/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      },
+      {
+        "id": "label-ipad",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/4/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      },
+      {
+        "id": "label-desktop",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/5/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      }
+    ],
+    "scope": "Compares caller-supplied current renderer observations with consumed-value expectations. Matching values support consistency, not authorship, causal influence, task success or whole-app accessibility."
+  },
+  "override": {
+    "version": 1,
+    "manifestIdentity": "c6ebbe5711b51a6cac8e0656fa8c4b919e5039152891f42e92f5370179969c18",
+    "current": {
+      "designIdentity": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+      "sourceIdentity": "ea278d46bc07d9b2d9c66096e956db1431e35e2cf7d17942e8d631de321b11fa",
+      "inputIdentity": "c969870e67d9acc46cb1060c85fe39faf0f4ae4a8713128de40478857411e49f",
+      "resultIdentity": "0d96ebe012e45096cb5d79d032566a7bb4aac9572cc506b72fce312da01155bd"
+    },
+    "complete": false,
+    "verified": false,
+    "entries": [
+      {
+        "id": "label-small-phone",
+        "status": "override",
+        "expected": 240,
+        "observed": 242,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/0/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      },
+      {
+        "id": "label-phone",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/1/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      },
+      {
+        "id": "label-phone-large",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/2/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      },
+      {
+        "id": "label-narrow",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/3/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      },
+      {
+        "id": "label-ipad",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/4/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      },
+      {
+        "id": "label-desktop",
+        "status": "pass",
+        "expected": 240,
+        "observed": 240,
+        "unit": "css-px",
+        "target": {
+          "surface": "relay-service-label",
+          "property": "width",
+          "sourceLocation": "src/emission.ts:emitStyleX"
+        },
+        "resultRef": "artifacts/relational-kernels/text-observations.json#/5/measurement",
+        "detail": "Actual existing React/StyleX specimen text box read from BrowserRenderer; not a Relay application task receipt"
+      }
+    ],
+    "scope": "Compares caller-supplied current renderer observations with consumed-value expectations. Matching values support consistency, not authorship, causal influence, task success or whole-app accessibility."
+  }
+}

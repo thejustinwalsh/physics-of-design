@@ -1,0 +1,18 @@
+{
+  "published": true,
+  "allowlistedFiles": 170,
+  "storedPayloadBytes": 13250023,
+  "uncompressedPayloadBytes": 53195513,
+  "sourceIdentity": "84bc53e57d77fd4d4e5a0bb015fb17054d2bd523661eae09d46d50d29527b99b",
+  "sourceSnapshotFiles": 348,
+  "recoveryProducerSha256": "aafc7706fc1fa5d38952971a8d046152708c20eba3abb2a725a7dc7bcdbfc4c5",
+  "originalExporterUnchanged": true,
+  "originalFailureSha256": "17c69911018957f15651665ec1f147c96ea648d995e17bd9041dc55b9c608015",
+  "regressionTests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "rawReceiptsUnchanged": true,
+  "gzipRoundTripsVerified": true,
+  "scope": "Recovery publisher validation and exact archive-byte verification; original full34 source checkpoint remains unchanged. No model or renderer rerun."
+}

@@ -1,0 +1,179 @@
+{
+  "generatedAt": "2026-10-25T14:56:49.834Z",
+  "sources": [
+    {
+      "path": "src/dom-surface.ts",
+      "sha256": "a48beb62babc4a340b1b6bbe660604dfab70d95afbe49a83d837aa54a0d31c11"
+    },
+    {
+      "path": "src/browser-dom-light.ts",
+      "sha256": "2e69e318efbe6d80fa6859d2f6272e8ba91e6affa86195a60e7702e8e32b3807"
+    },
+    {
+      "path": "examples/dom-surfaces/proof-client.js",
+      "sha256": "bd050f757ce6e253f86035514556223444a0a5dc36dfaec5cd979da59445bf6d"
+    },
+    {
+      "path": "examples/dom-surfaces/recipes.json",
+      "sha256": "e747d41a47ec04ffa78a9ff0f6455bf281b9131813ed3728a4fddc3589917ed7"
+    },
+    {
+      "path": "scripts/prove-dom-surfaces.mjs",
+      "sha256": "3ce12ea9fd3d2fecb06e6f0fbeac0b5aaa59fecfb5cea3053c200662a9a9359c"
+    }
+  ],
+  "runtimes": [
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "playwright": "1.64.1"
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "playwright": "1.64.1"
+    }
+  ],
+  "checks": [
+    {
+      "engine": "chromium",
+      "name": "nine actual composite lighting poses preserve authored text contrast",
+      "passed": true,
+      "detail": {
+        "poses": 9,
+        "minimum": 6.093329733321862,
+        "threshold": 4.5
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "translucent negative control distinguishes nominal and rendered contrast",
+      "passed": true,
+      "detail": {
+        "nominal": 21,
+        "renderedMinimum": 1.0537825532689855
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "retained motion has no layout reads per frame and recipe updates preserve state",
+      "passed": true,
+      "detail": {
+        "before": 14,
+        "after": 14,
+        "frames": 120,
+        "angle": "4.5deg",
+        "updatePreservedAngle": true,
+        "milliseconds120StyleUpdates": 1.300000011920929
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "reduced motion pauses driver and resets transform",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "transform": "none",
+        "before": 727,
+        "after": 727
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "offscreen observer suspends lighting updates",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "offscreen": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "dispose removes owned variables and stops controllers",
+      "passed": true,
+      "detail": {
+        "statuses": [
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed"
+        ],
+        "retainedVariables": false
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "nine actual composite lighting poses preserve authored text contrast",
+      "passed": true,
+      "detail": {
+        "poses": 9,
+        "minimum": 6.093329733321862,
+        "threshold": 4.5
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "translucent negative control distinguishes nominal and rendered contrast",
+      "passed": true,
+      "detail": {
+        "nominal": 21,
+        "renderedMinimum": 1.0537825532689855
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "retained motion has no layout reads per frame and recipe updates preserve state",
+      "passed": true,
+      "detail": {
+        "before": 2,
+        "after": 2,
+        "frames": 120,
+        "angle": "4.5deg",
+        "updatePreservedAngle": true,
+        "milliseconds120StyleUpdates": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "reduced motion pauses driver and resets transform",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "transform": "none",
+        "before": 727,
+        "after": 727
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "offscreen observer suspends lighting updates",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "offscreen": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "dispose removes owned variables and stops controllers",
+      "passed": true,
+      "detail": {
+        "statuses": [
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed"
+        ],
+        "retainedVariables": false
+      }
+    }
+  ],
+  "limits": [
+    "Screenshot background pixels are measured with foreground spans hidden, preserving their boxes and shields; opaque computed ink is compared against those pixels. Antialiased glyph pixels are not the foreground oracle.",
+    "Nine authored poses and one backdrop do not certify every motion path or user-supplied backdrop.",
+    "120 synchronous updates measure JS arithmetic/style writes only, not paint/compositor time, frame pacing, thermal behavior, or hardware Safari.",
+    "Playwright WebKit is not physical Safari or an iPhone sensor test."
+  ]
+}

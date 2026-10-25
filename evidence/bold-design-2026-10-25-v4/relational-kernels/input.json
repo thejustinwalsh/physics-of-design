@@ -1,0 +1,677 @@
+{
+  "version": 1,
+  "id": "relay-relational-kernels",
+  "brief": "Operational precision with material character; current task information, readable rows and preserved list/detail access.",
+  "identities": {
+    "design": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+    "content": "107f4315ec2589aaa4ed2328b767e54b4c7a12b3be2b34d56eb20c5638f61d62",
+    "source": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9"
+  },
+  "scenarios": [
+    {
+      "id": "small-phone",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 320,
+      "height": 740,
+      "textScale": 1
+    },
+    {
+      "id": "phone",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 390,
+      "height": 844,
+      "textScale": 1
+    },
+    {
+      "id": "phone-large",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 390,
+      "height": 844,
+      "textScale": 1.5
+    },
+    {
+      "id": "narrow",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 768,
+      "height": 900,
+      "textScale": 1
+    },
+    {
+      "id": "ipad",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 834,
+      "height": 1194,
+      "textScale": 1.5
+    },
+    {
+      "id": "desktop",
+      "platform": "web",
+      "unit": "css-px",
+      "width": 1440,
+      "height": 1000,
+      "textScale": 1
+    }
+  ],
+  "kernels": [
+    {
+      "id": "service-row",
+      "kind": "type-row",
+      "purpose": "Readable operational label and editable row density",
+      "source": "Relay BRIEF.md and DESIGN.md",
+      "text": "checkout-api · production · us-east-1",
+      "fontIdentity": "3e94f0454333cdb4d5d94662a022ef7e91d0befabc348c7bb26c6ac5a4d28fea",
+      "minHitSize": 44,
+      "maxRowHeight": 150,
+      "preferredRowHeight": 72,
+      "paddingBlock": [
+        4,
+        8,
+        12
+      ],
+      "candidates": [
+        {
+          "id": "type-14",
+          "label": "14px operational labels",
+          "fontSize": 14,
+          "lineHeight": 1.4,
+          "trackingEm": 0,
+          "cells": [
+            {
+              "scenario": "small-phone",
+              "width": 240,
+              "height": 19.59375,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "47dc4ef619b3e2861e207bf79f1da7e5d8019128b12fd642e88a1b7fef21ac1e",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "5e6fe5873b1e59901991c2f335c0482df76830865338aaa26cac5080125f1645",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/0/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "phone",
+              "width": 240,
+              "height": 19.59375,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "b84fefd67d972db668c68049e9e7756b3e29da4f9213f9f4e640005e28e581ec",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "cf866f52358123983a31e2e8007a02908f7221505287e9ae487df057028f6614",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/1/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "phone-large",
+              "width": 240,
+              "height": 58.78125,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "1720f0417b4d0961dc16e0d9438678842bbb2c920d3960db5e8bc0570abf1002",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "085a73d24dace25784c9426a38f092b8e0ae334fdb5d3832ba4679b3d046d88d",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/2/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "narrow",
+              "width": 240,
+              "height": 19.59375,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "87d7ccfb13b7c66d428ea15aa05fe34262607459a49f9fffd5147d81e002e352",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "477e8c837bcd107cdf89fedc46aa45ce7cc692aeba7dc709004fd26002e411c5",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/3/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "ipad",
+              "width": 240,
+              "height": 58.78125,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "e3a597b61e59203a7e2c6a3cddee931f3f5ba44700a77b6a81dad7bf0871cbfe",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "6142285fe48ca81c6dea16b5b4d00b0335bdb4e9224620ce436a06a53e624386",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/4/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "desktop",
+              "width": 240,
+              "height": 19.59375,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "b6318f89d5d55168ab389f86137958cd48bf6c642164a8c8015bb0c5dd3c5717",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "c97fb891ba2938ab5b75c284e0155d5331d7f9de383f0c1d19e1be9c2c5e989a",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/5/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            }
+          ]
+        },
+        {
+          "id": "type-15",
+          "label": "15px operational labels",
+          "fontSize": 15,
+          "lineHeight": 1.4,
+          "trackingEm": 0,
+          "cells": [
+            {
+              "scenario": "small-phone",
+              "width": 240,
+              "height": 42,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "997e1726032e024f2ca43e6c9297c7d06ffef1a88720c0c2cd690ea37d977e91",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "807269764eb51172095fc3c10b85e478c8d2174487af5c23062cc5a2229e1910",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/6/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "phone",
+              "width": 240,
+              "height": 42,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "514429deb7daf1c8e588a40fbb9763cc3312f313a05534b72bc79e17b1c8c5a6",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "e612803037ee8f86ed5dab610d46fba953e8908b51536f78394eee491518ddaf",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/7/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "phone-large",
+              "width": 240,
+              "height": 63,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "7e7a466df97f030082610603e2bf6301b60799263fdbcfc2592400674575d377",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "8eccaf6f6436dbf8a8cf655c9a2863dda021678393a1a20dbe9c31befda62f85",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/8/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "narrow",
+              "width": 240,
+              "height": 42,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "b7599af4f383af70a0a178fba444ce33208a9e90797077cc863fbfcb2d294d5b",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "921f9db9b321aa6618d0f1f6fd297c657638f550e5c10455a2d7def4f953d3ba",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/9/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "ipad",
+              "width": 240,
+              "height": 63,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "336af09319d5a2bcdebf6dcd755d17f4fcefd84870e63b0957ff7c08b09aca36",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "291ce20f041537418c7a4cd6ea47a4ad17c67e18708ca7f1af27420761fe3a30",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/10/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "desktop",
+              "width": 240,
+              "height": 42,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "33f024f988dea05ea2b79d4648e4eaaf10b8d41a3e11f70d50cf04e52ed74ed6",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "3d7fb1fb50ea225fc5174724e222ecf05181d3e1ef26dbded1f720819f2a1a6c",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/11/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            }
+          ]
+        },
+        {
+          "id": "type-16",
+          "label": "16px operational labels",
+          "fontSize": 16,
+          "lineHeight": 1.4,
+          "trackingEm": 0,
+          "cells": [
+            {
+              "scenario": "small-phone",
+              "width": 260,
+              "height": 44.78125,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "9dd25b132814436f9801c9c2b4654f7ef2fea2b899cb4e3d28b7ab028a91c3cc",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "644233f87a9ff1571fe3b03fcba9bcee42a224126dce81debc2cbd09b8971416",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/12/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "phone",
+              "width": 260,
+              "height": 44.78125,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "cad9096a8f17b4c2b2778278b5b10a813bc80239f2e087274ea4ddab82478534",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "7d971e8ab1c19777ada3323e14504f532003581a50bff94afc040a3e1f1bfdf8",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/13/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "phone-large",
+              "width": 260,
+              "height": 67.1875,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "dfa233026dcba8a7e9cafe4ea3678cb468ec8e6b416f649713d450842c793859",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "dbd84c7e008019270bddd12af1a462e1b6e76f5b011335dca42652c8c46c6bb3",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/14/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "narrow",
+              "width": 260,
+              "height": 44.78125,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "11c5bcb12f092fed88880eaf83a0b3caa92c0e8e0be48453e214902cbc9d69ea",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "96b919c64256f6b9ebdaef8db3e5080467b8bcb8788d1ef9799cefb819b427be",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/15/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "ipad",
+              "width": 260,
+              "height": 67.1875,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "3d2a8616fb8b0ab589181cf46d24b67eac1823087c1d4d6312745afc8224adbf",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "40967a07d5a1b8ae602e7f145666504a0bfa4329db8b28f447bcd707b8931d62",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/16/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            },
+            {
+              "scenario": "desktop",
+              "width": 260,
+              "height": 44.78125,
+              "overflowX": 0,
+              "overflowY": 0,
+              "inputIdentity": "f5b450736013213be4be2f5eb19fe94e92b67e039377578303deb215cc837b5c",
+              "sourceIdentity": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+              "sourceInputIdentity": "86bafeb9733789a2be1b2d9a54af76fbaf894b44edb4663100f6dd64c8c18516",
+              "resultRef": "artifacts/relational-kernels/text-observations.json#/17/measurement",
+              "runtime": "{\"chromium\":\"156.0.8078.4\",\"deviceScaleFactor\":1}",
+              "provider": "browser"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workspace",
+      "kind": "regions",
+      "purpose": "Preserve service list and inspector at measured minimum widths",
+      "source": "Relay DESIGN.md; authored minimum measures",
+      "regions": [
+        {
+          "id": "list",
+          "minInline": 180,
+          "share": 1
+        },
+        {
+          "id": "inspector",
+          "minInline": 180,
+          "share": 1.4
+        }
+      ],
+      "roleLink": {
+        "kernel": "service-row",
+        "region": "list"
+      },
+      "candidates": [
+        {
+          "id": "compact",
+          "label": "Compact paired workspace",
+          "gap": 16,
+          "inlinePadding": 12,
+          "splitMinimum": 680
+        },
+        {
+          "id": "open",
+          "label": "Open investigation workspace",
+          "gap": 24,
+          "inlinePadding": 16,
+          "splitMinimum": 780
+        }
+      ]
+    },
+    {
+      "id": "appearance",
+      "kind": "appearance",
+      "purpose": "Compare Night and Day instrument directions",
+      "source": "Relay DESIGN.md; equal authored direction preference",
+      "candidates": [
+        {
+          "id": "night",
+          "label": "Night instrument",
+          "palette": {
+            "system": {
+              "tokens": {
+                "canvas": "#0e1720",
+                "ink": "#eaf2f7",
+                "accent": "#66d9ed",
+                "dark-canvas": "#0e1720",
+                "dark-ink": "#eaf2f7",
+                "light-canvas": "#edf0eb",
+                "light-ink": "#182b35"
+              },
+              "roles": [
+                {
+                  "id": "primary",
+                  "foreground": "ink",
+                  "background": "canvas",
+                  "use": "text",
+                  "source": [
+                    "Relay operational labels"
+                  ]
+                },
+                {
+                  "id": "accent",
+                  "foreground": "accent",
+                  "background": "canvas",
+                  "use": "non-text",
+                  "source": [
+                    "Relay selected data and focused controls"
+                  ]
+                },
+                {
+                  "id": "light",
+                  "foreground": "light-ink",
+                  "background": "light-canvas",
+                  "theme": "light",
+                  "use": "text",
+                  "source": [
+                    "Relay light fallback"
+                  ]
+                },
+                {
+                  "id": "dark",
+                  "foreground": "dark-ink",
+                  "background": "dark-canvas",
+                  "theme": "dark",
+                  "use": "text",
+                  "source": [
+                    "Relay dark fallback"
+                  ]
+                }
+              ]
+            }
+          },
+          "material": {
+            "first": {
+              "id": "substrate",
+              "surface": {
+                "baseColor": [
+                  0.18,
+                  0.2,
+                  0.22
+                ],
+                "roughness": 0.88,
+                "metalness": 0
+              },
+              "composition": "homogeneous-dielectric",
+              "lighting": {
+                "rigId": "relay-room",
+                "coordinateFrame": "surface",
+                "environmentId": "neutral-room",
+                "exposureEv": 0,
+                "lightDirection": [
+                  0.4,
+                  0.3,
+                  1
+                ]
+              },
+              "provenance": {
+                "kind": "authored",
+                "source": "Relay DESIGN.md; illustrative material parameters, not calibrated samples"
+              }
+            },
+            "second": {
+              "id": "panel",
+              "surface": {
+                "baseColor": [
+                  0.04,
+                  0.12,
+                  0.18
+                ],
+                "roughness": 0.3,
+                "metalness": 0
+              },
+              "composition": "homogeneous-dielectric",
+              "lighting": {
+                "rigId": "relay-room",
+                "coordinateFrame": "surface",
+                "environmentId": "neutral-room",
+                "exposureEv": 0,
+                "lightDirection": [
+                  0.4,
+                  0.3,
+                  1
+                ]
+              },
+              "provenance": {
+                "kind": "authored",
+                "source": "Relay DESIGN.md; illustrative material parameters, not calibrated samples"
+              }
+            },
+            "profile": {
+              "id": "counterpoint",
+              "intent": "Quiet substrate and restrained active panel",
+              "roleRelation": "counterpoint",
+              "source": "Relay DESIGN.md",
+              "bands": [
+                {
+                  "metric": "roughnessDifference",
+                  "min": 0.3,
+                  "max": 0.65,
+                  "rationale": "Authored finish distinction under one rig",
+                  "source": "Relay DESIGN.md"
+                }
+              ]
+            }
+          },
+          "motion": {
+            "spring": {
+              "mass": 1,
+              "stiffness": 200,
+              "damping": 28
+            },
+            "coordinate": {
+              "unit": "normalized",
+              "from": 0,
+              "to": 1
+            },
+            "durationSeconds": 2
+          },
+          "preference": 0,
+          "nativeFinish": "static"
+        },
+        {
+          "id": "day",
+          "label": "Day instrument",
+          "palette": {
+            "system": {
+              "tokens": {
+                "canvas": "#edf0eb",
+                "ink": "#182b35",
+                "accent": "#00667a",
+                "dark-canvas": "#0e1720",
+                "dark-ink": "#eaf2f7",
+                "light-canvas": "#edf0eb",
+                "light-ink": "#182b35"
+              },
+              "roles": [
+                {
+                  "id": "primary",
+                  "foreground": "ink",
+                  "background": "canvas",
+                  "use": "text",
+                  "source": [
+                    "Relay operational labels"
+                  ]
+                },
+                {
+                  "id": "accent",
+                  "foreground": "accent",
+                  "background": "canvas",
+                  "use": "non-text",
+                  "source": [
+                    "Relay selected data and focused controls"
+                  ]
+                },
+                {
+                  "id": "light",
+                  "foreground": "light-ink",
+                  "background": "light-canvas",
+                  "theme": "light",
+                  "use": "text",
+                  "source": [
+                    "Relay light fallback"
+                  ]
+                },
+                {
+                  "id": "dark",
+                  "foreground": "dark-ink",
+                  "background": "dark-canvas",
+                  "theme": "dark",
+                  "use": "text",
+                  "source": [
+                    "Relay dark fallback"
+                  ]
+                }
+              ]
+            }
+          },
+          "material": {
+            "first": {
+              "id": "substrate",
+              "surface": {
+                "baseColor": [
+                  0.18,
+                  0.2,
+                  0.22
+                ],
+                "roughness": 0.88,
+                "metalness": 0
+              },
+              "composition": "homogeneous-dielectric",
+              "lighting": {
+                "rigId": "relay-room",
+                "coordinateFrame": "surface",
+                "environmentId": "neutral-room",
+                "exposureEv": 0,
+                "lightDirection": [
+                  0.4,
+                  0.3,
+                  1
+                ]
+              },
+              "provenance": {
+                "kind": "authored",
+                "source": "Relay DESIGN.md; illustrative material parameters, not calibrated samples"
+              }
+            },
+            "second": {
+              "id": "panel",
+              "surface": {
+                "baseColor": [
+                  0.04,
+                  0.12,
+                  0.18
+                ],
+                "roughness": 0.5,
+                "metalness": 0
+              },
+              "composition": "homogeneous-dielectric",
+              "lighting": {
+                "rigId": "relay-room",
+                "coordinateFrame": "surface",
+                "environmentId": "neutral-room",
+                "exposureEv": 0,
+                "lightDirection": [
+                  0.4,
+                  0.3,
+                  1
+                ]
+              },
+              "provenance": {
+                "kind": "authored",
+                "source": "Relay DESIGN.md; illustrative material parameters, not calibrated samples"
+              }
+            },
+            "profile": {
+              "id": "counterpoint",
+              "intent": "Quiet substrate and restrained active panel",
+              "roleRelation": "counterpoint",
+              "source": "Relay DESIGN.md",
+              "bands": [
+                {
+                  "metric": "roughnessDifference",
+                  "min": 0.3,
+                  "max": 0.65,
+                  "rationale": "Authored finish distinction under one rig",
+                  "source": "Relay DESIGN.md"
+                }
+              ]
+            }
+          },
+          "motion": {
+            "spring": {
+              "mass": 1,
+              "stiffness": 160,
+              "damping": 26
+            },
+            "coordinate": {
+              "unit": "normalized",
+              "from": 0,
+              "to": 1
+            },
+            "durationSeconds": 2
+          },
+          "preference": 0,
+          "nativeFinish": "static"
+        }
+      ]
+    }
+  ]
+}

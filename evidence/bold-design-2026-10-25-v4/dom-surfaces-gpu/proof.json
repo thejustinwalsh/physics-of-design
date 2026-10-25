@@ -1,0 +1,5832 @@
+{
+  "generatedAt": "2026-10-25T14:56:54.431Z",
+  "sources": [
+    {
+      "path": "src/dom-surface.ts",
+      "sha256": "a48beb62babc4a340b1b6bbe660604dfab70d95afbe49a83d837aa54a0d31c11"
+    },
+    {
+      "path": "src/browser-dom-light.ts",
+      "sha256": "2e69e318efbe6d80fa6859d2f6272e8ba91e6affa86195a60e7702e8e32b3807"
+    },
+    {
+      "path": "src/dom-surface-gpu.ts",
+      "sha256": "2c363138bae85c0fd4053f35b2de8fcb1e0591f07fcfcbeb943011a9e85d3001"
+    },
+    {
+      "path": "src/dom-surface-shading.ts",
+      "sha256": "ea00caf8a0fa04514b7311e6c95060bf114f3a539b9db64daba08c643ba634de"
+    },
+    {
+      "path": "src/surface.ts",
+      "sha256": "fd0a89a64c42e59c8738ffd7bb87f36d49d384f9753a3d318253209f5310220c"
+    },
+    {
+      "path": "examples/dom-surfaces/gpu-proof-client.js",
+      "sha256": "f48aa05a249d1767d4750af450b7ab42efb64050b86402b1dff130178e5973b3"
+    },
+    {
+      "path": "examples/dom-surfaces/gpu-recipes.json",
+      "sha256": "a7fe870f306c02a38c532786181783e38863b5acea565e0c64d4c32c290afdae"
+    },
+    {
+      "path": "scripts/prove-dom-surface-gpu.mjs",
+      "sha256": "d77c683c8a40325f3be31a2c92dcf69ed5f86e021cb027102b727004aad2aff4"
+    }
+  ],
+  "checks": [
+    {
+      "engine": "chromium",
+      "name": "four bounded GPU layers initialize",
+      "passed": true,
+      "detail": [
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 53.5,
+          "initializationTaskMaxMs": 9.300000011920929,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 6.899999976158142,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 114.60000002384186,
+          "initializationTaskMaxMs": 7,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 6.800000011920929,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 127,
+          "initializationTaskMaxMs": 13.800000011920929,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 13.600000023841858,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 211.39999997615814,
+          "initializationTaskMaxMs": 4.800000011920929,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 4.699999988079071,
+          "status": "ready",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "real content contrast through nine pose/exposure combinations",
+      "passed": true,
+      "detail": {
+        "minimum": 5.432660477230262,
+        "threshold": 4.5,
+        "poses": [
+          {
+            "x": -1,
+            "y": -1,
+            "exposure": 1.2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 6.018968643884622,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 7.472387233632006,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 6.641718824989672,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 6.463288268042327,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 5.432660477230262,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 6.320981195186701,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 7.120828230515198,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 6.643408958106788,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 6.5330083859785315,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 6.009688660702583,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 7.049344007052345,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 9.443420095741036,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 8.755717656354035,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 8.645506212100155,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 7.8151791497397864,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "exposure": 1.2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 7.292754969889715,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 9.671898246369128,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 8.963422580343327,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 7.668743604932427,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 6.305363872215388,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 6.973284830828287,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 8.440836284462625,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 7.8987899588870585,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 7.208231256028578,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 6.454946988952786,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 6.791096883339196,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 6.791096883339196,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 8.063827909206454,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 10.98088391711464,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 10.495544306906634,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 9.648184176927849,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 8.556574020642307,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "exposure": 1.2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 8.010846905894278,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 8.289336016418892,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 8.383547264713785,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 7.913471042474931,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 8.283220055765181,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 7.355508647240925,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 7.56113281626067,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 7.6218349832367975,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 7.296369341810023,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 7.531005653628878,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 8.620255071733652,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 9.989000476643762,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 10.143874018693722,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 9.820402111506159,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 10.073767592989645,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": -1,
+            "y": -1,
+            "exposure": 1.5,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 6.869675538520998,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 8.383547264713785,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 7.554694233019459,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 7.317360818770576,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 6.227387671300939,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 7.186763209272757,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 8.064519894503768,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 7.539116817011551,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 7.363526138007143,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 6.845841452246705,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 7.585980591408947,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 7.5927890448246,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 7.585980591408947,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 7.7671549511261,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 10.151460020673328,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 9.443420095741036,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 9.322273273159555,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 8.442981207318002,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "exposure": 1.5,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 8.189749003566652,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 10.617444854147674,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 9.887660345862722,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 8.595128983229456,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 7.1457299088578905,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 7.876396023465855,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 9.369186320282045,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 8.882482316855514,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 8.155345070213677,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 7.300354707899716,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 7.770690293185159,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 7.770690293185159,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 7.585980591408947,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 8.820412688180483,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 11.557909384344786,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 11.101238969224072,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 10.279436845333358,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 9.221791241750198,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "exposure": 1.5,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 8.963422580343327,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 9.262815644091402,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 9.36402363175898,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 8.858621505396568,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 9.262815644091402,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 8.251239643722998,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 8.515798931658196,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 8.515798931658196,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 8.251239643722998,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 8.417809029182882,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 9.336024705199797,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 10.62640827921976,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 10.744296563527222,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 10.48780433294013,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 10.714514780049036,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": -1,
+            "y": -1,
+            "exposure": 2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 8.010846905894278,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 9.649311143031227,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 8.767338749128234,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 8.499380638084986,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 7.379390733125751,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 8.399561754027966,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 9.274549397340774,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 8.695578791865087,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 8.591491439922835,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 7.978762535299012,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 8.794050513701514,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 11.048362121348049,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 10.28712539713446,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 10.172453369938081,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 9.342091884690813,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "exposure": 2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 9.370729460590075,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 11.77015456260955,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 11.071009662266068,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 9.857811771181982,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 8.377382744219856,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 9.067696513190466,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 10.681039485555647,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 10.143172579334326,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 9.374135561518642,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 8.4974735230524,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 9.044137645936543,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 9.044137645936543,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 9.84962679549276,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 12.376546911004159,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 11.908055685194334,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 11.183576242938482,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 10.073767592989645,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "exposure": 2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 10.206382910069713,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 10.429715972157473,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 10.531574165009681,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 10.069169214034734,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 10.422456046873434,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 9.556454025047744,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 9.741348657313681,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 9.84421640928586,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 9.450545872755658,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 9.73619964028342,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 10.380919420791292,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 11.526555042264814,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 11.534814571529418,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 11.266434343117785,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 11.534814571529418,
+                "samples": 2822
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "native roughness keyboard changes finish",
+      "passed": true,
+      "detail": {
+        "before": "0.24",
+        "after": "0.25"
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "continuous native pointer drag keeps rail fixed and retains GPU resources",
+      "passed": true,
+      "detail": {
+        "rail": {
+          "x": 42,
+          "y": 200.5,
+          "width": 400,
+          "height": 36
+        },
+        "last": {
+          "x": 42,
+          "y": 200.5,
+          "width": 400,
+          "height": 36
+        },
+        "value": "1",
+        "renderer": {
+          "draws": 81,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 114.60000002384186,
+          "initializationTaskMaxMs": 7,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 6.800000011920929,
+          "status": "ready",
+          "reason": ""
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "live semantic DOM button operates",
+      "passed": true,
+      "detail": "Inspecting Matte paper"
+    },
+    {
+      "engine": "chromium",
+      "name": "roughness broadens actual specular response",
+      "passed": true,
+      "detail": {
+        "smooth": {
+          "mean": 0.020584039663942667,
+          "std": 0.09133577341042502,
+          "maximum": 0.9559733532492862,
+          "centroid": {
+            "x": 216.99678839629493,
+            "y": 147.47312606147065
+          },
+          "spread": 43.40397859563136,
+          "halfMaximumArea": 0.012678509230233368,
+          "width": 435,
+          "height": 296
+        },
+        "rough": {
+          "mean": 0.03873775338874741,
+          "std": 0.019156630512140362,
+          "maximum": 0.08650046203654975,
+          "centroid": {
+            "x": 216.61994588727478,
+            "y": 147.20577178894104
+          },
+          "spread": 126.62464876027369,
+          "halfMaximumArea": 0.3524904214559387,
+          "width": 435,
+          "height": 296
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "metalness removes diffuse response with same reflectance and light",
+      "passed": true,
+      "detail": {
+        "dielectric": {
+          "mean": 0.31881024052161483,
+          "std": 0.052555740334579826,
+          "maximum": 0.4128107423606544,
+          "centroid": {
+            "x": 216.28641470089224,
+            "y": 147.07519637940902
+          },
+          "spread": 143.45096691535073,
+          "halfMaximumArea": 0.9969348659003832,
+          "width": 435,
+          "height": 296
+        },
+        "metal": {
+          "mean": 0,
+          "std": 0,
+          "maximum": 0,
+          "centroid": {
+            "x": 0,
+            "y": 0
+          },
+          "spread": 0,
+          "halfMaximumArea": 0,
+          "width": 435,
+          "height": 296
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "metalness changes specular energy with same reflectance and light",
+      "passed": true,
+      "detail": {
+        "dielectric": {
+          "mean": 0.04875164464568119,
+          "std": 0.09572059458894858,
+          "maximum": 0.6038273388553377,
+          "centroid": {
+            "x": 216.95259379681065,
+            "y": 147.43685645634986
+          },
+          "spread": 76.41708345352504,
+          "halfMaximumArea": 0.04054336468129571,
+          "width": 435,
+          "height": 296
+        },
+        "metal": {
+          "mean": 0.19333343370206105,
+          "std": 0.2151345144603376,
+          "maximum": 0.9099825048257706,
+          "centroid": {
+            "x": 216.89625440517318,
+            "y": 147.3583040418207
+          },
+          "spread": 98.80376347059277,
+          "halfMaximumArea": 0.13256704980842912,
+          "width": 435,
+          "height": 296
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "zero-light negative control extinguishes driven response",
+      "passed": true,
+      "detail": {
+        "mean": 0,
+        "std": 0,
+        "maximum": 0,
+        "centroid": {
+          "x": 0,
+          "y": 0
+        },
+        "spread": 0,
+        "halfMaximumArea": 0,
+        "width": 435,
+        "height": 296
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "GPU diffuse/specular pixels agree with headless GGX oracle",
+      "passed": true,
+      "detail": [
+        {
+          "metalness": 0,
+          "roughness": 0.3,
+          "pass": "diffuse",
+          "expected": [
+            209.84564831081585,
+            161.42168649101524,
+            113.10715251925903
+          ],
+          "observed": [
+            210,
+            161,
+            113
+          ],
+          "maxChannelError": 0.4216864910152367
+        },
+        {
+          "metalness": 0,
+          "roughness": 0.3,
+          "pass": "specular",
+          "expected": [
+            136.265508037892,
+            136.265508037892,
+            136.265508037892
+          ],
+          "observed": [
+            136,
+            136,
+            136
+          ],
+          "maxChannelError": 0.2655080378920047
+        },
+        {
+          "metalness": 0,
+          "roughness": 0.7,
+          "pass": "diffuse",
+          "expected": [
+            209.84564831081585,
+            161.42168649101524,
+            113.10715251925903
+          ],
+          "observed": [
+            210,
+            161,
+            113
+          ],
+          "maxChannelError": 0.4216864910152367
+        },
+        {
+          "metalness": 0,
+          "roughness": 0.7,
+          "pass": "specular",
+          "expected": [
+            79.5933764516426,
+            79.5933764516426,
+            79.5933764516426
+          ],
+          "observed": [
+            80,
+            80,
+            80
+          ],
+          "maxChannelError": 0.4066235483574019
+        },
+        {
+          "metalness": 1,
+          "roughness": 0.3,
+          "pass": "diffuse",
+          "expected": [
+            0,
+            0,
+            0
+          ],
+          "observed": [
+            0,
+            0,
+            0
+          ],
+          "maxChannelError": 0
+        },
+        {
+          "metalness": 1,
+          "roughness": 0.3,
+          "pass": "specular",
+          "expected": [
+            240.35329241961918,
+            215.469236617097,
+            175.81784555900697
+          ],
+          "observed": [
+            240,
+            215,
+            176
+          ],
+          "maxChannelError": 0.46923661709701037
+        },
+        {
+          "metalness": 1,
+          "roughness": 0.7,
+          "pass": "diffuse",
+          "expected": [
+            0,
+            0,
+            0
+          ],
+          "observed": [
+            0,
+            0,
+            0
+          ],
+          "maxChannelError": 0
+        },
+        {
+          "metalness": 1,
+          "roughness": 0.7,
+          "pass": "specular",
+          "expected": [
+            210.23662013044182,
+            161.97425137661187,
+            113.62884878043552
+          ],
+          "observed": [
+            210,
+            162,
+            114
+          ],
+          "maxChannelError": 0.3711512195644815
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "intrinsic normal texture changes spatial response independently of color",
+      "passed": true,
+      "detail": {
+        "flat": {
+          "mean": 0.2724753720057335,
+          "std": 0,
+          "maximum": 0.27247537200567573,
+          "centroid": {
+            "x": 215.9999999999555,
+            "y": 146.9999999999659
+          },
+          "spread": 152.0460456572123,
+          "halfMaximumArea": 1,
+          "width": 435,
+          "height": 296
+        },
+        "textured": {
+          "mean": 0.2695464210615817,
+          "std": 0.015148431941192827,
+          "maximum": 0.3238065286163525,
+          "centroid": {
+            "x": 216.00490956805325,
+            "y": 147.0026743269607
+          },
+          "spread": 152.0477854432423,
+          "halfMaximumArea": 1,
+          "width": 435,
+          "height": 296
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "intrinsic roughness variation is independent of scalar roughness",
+      "passed": true,
+      "detail": {
+        "uniform": {
+          "mean": 0.215860500113956,
+          "std": 0,
+          "maximum": 0.21586050011389923,
+          "centroid": {
+            "x": 215.99999999994202,
+            "y": 146.99999999996135
+          },
+          "spread": 152.04604565720837,
+          "halfMaximumArea": 1,
+          "width": 435,
+          "height": 296
+        },
+        "varied": {
+          "mean": 0.22596506021556592,
+          "std": 0.10975498314221196,
+          "maximum": 0.5520114015120001,
+          "centroid": {
+            "x": 216.62295121326378,
+            "y": 147.25610938336308
+          },
+          "spread": 151.95639980170634,
+          "halfMaximumArea": 0.30741901776384534,
+          "width": 435,
+          "height": 296
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "120 changing light samples retain geometry texture and program",
+      "passed": true,
+      "detail": {
+        "before": {
+          "geometry": 30,
+          "texture": 1,
+          "programs": 1
+        },
+        "after": {
+          "geometry": 30,
+          "texture": 1,
+          "programs": 1
+        },
+        "milliseconds120Updates": 1.199999988079071
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "observed pointer light sequence moves the specular centroid",
+      "passed": true,
+      "detail": [
+        {
+          "step": 0,
+          "mean": 0.034190072011553614,
+          "std": 0.10490817478921842,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 169.19109325369078,
+            "y": 147.45738322589938
+          },
+          "spread": 56.89960193012175,
+          "halfMaximumArea": 0.022013235806339255,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 1,
+          "mean": 0.034150120044724314,
+          "std": 0.10481045538563526,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 180.26183704785126,
+            "y": 147.45913288709298
+          },
+          "spread": 57.00136120216299,
+          "halfMaximumArea": 0.0219435736677116,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 2,
+          "mean": 0.034129657911138075,
+          "std": 0.1047274656381208,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 195.2095610601866,
+            "y": 147.46231541452514
+          },
+          "spread": 57.074784152399026,
+          "halfMaximumArea": 0.022013235806339255,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 3,
+          "mean": 0.03411432131460775,
+          "std": 0.10464383410076462,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 211.24262948756254,
+            "y": 147.4672591359335
+          },
+          "spread": 57.11747835574879,
+          "halfMaximumArea": 0.0219435736677116,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 4,
+          "mean": 0.034109230688305285,
+          "std": 0.1046067647568848,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 227.56066183462798,
+            "y": 147.4770250461212
+          },
+          "spread": 57.102857026268154,
+          "halfMaximumArea": 0.021873911529083943,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 5,
+          "mean": 0.03414122392743796,
+          "std": 0.10475684398128975,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 243.93588936261045,
+            "y": 147.45900820854635
+          },
+          "spread": 57.036669202861624,
+          "halfMaximumArea": 0.022152560083594567,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 6,
+          "mean": 0.03416145741772295,
+          "std": 0.1048273409525528,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 260.28102669238575,
+            "y": 147.45992216012215
+          },
+          "spread": 56.92316391119445,
+          "halfMaximumArea": 0.022152560083594567,
+          "width": 435,
+          "height": 296
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "real DOM reflow 390",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390,
+        "cards": [
+          {
+            "x": 20,
+            "width": 350
+          },
+          {
+            "x": 20,
+            "width": 350
+          },
+          {
+            "x": 20,
+            "width": 350
+          },
+          {
+            "x": 20,
+            "width": 350
+          }
+        ]
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "real DOM reflow 820",
+      "passed": true,
+      "detail": {
+        "width": 820,
+        "scrollWidth": 820,
+        "cards": [
+          {
+            "x": 40,
+            "width": 359
+          },
+          {
+            "x": 421,
+            "width": 359
+          },
+          {
+            "x": 40,
+            "width": 359
+          },
+          {
+            "x": 421,
+            "width": 359
+          }
+        ]
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "real DOM reflow 1440",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "cards": [
+          {
+            "x": 40,
+            "width": 669
+          },
+          {
+            "x": 731,
+            "width": 669
+          },
+          {
+            "x": 40,
+            "width": 669
+          },
+          {
+            "x": 731,
+            "width": 669
+          }
+        ]
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "oversized surface respects the configured GPU pixel budget",
+      "passed": true,
+      "detail": {
+        "pixels": 500000,
+        "width": 1000,
+        "height": 500
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "changed HTML copy and enlarged text retain content without horizontal overflow",
+      "passed": true,
+      "detail": [
+        {
+          "scroll": 497,
+          "width": 497,
+          "contained": true,
+          "text": "01 / MATTE PAPERKeep every observation in the archive.Uncoated stock. Soft light breaks across the fibers.READ / MARK / KEEPInspect ↗"
+        },
+        {
+          "scroll": 497,
+          "width": 497,
+          "contained": true,
+          "text": "02 / GLAZED ENAMELMake it vivid.Colored pigment under a smooth, reflective finish.PIGMENT / GLAZE / LIGHTInspect ↗"
+        },
+        {
+          "scroll": 497,
+          "width": 497,
+          "contained": true,
+          "text": "03 / BRUSHED METALFollow the cut.Directional grooves catch a narrow ribbon of light.BRUSH / REFLECT / REPEATInspect ↗"
+        },
+        {
+          "scroll": 497,
+          "width": 497,
+          "contained": true,
+          "text": "04 / SOFT GLASSLet light through.A translucent tint holds its place over the room.TRANSMIT / FILTER / READInspect ↗"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "reduced motion holds a static lit DOM surface",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "before": 65,
+        "after": 65,
+        "transform": "none"
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "offscreen lighting submits no GPU work",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "before": 65,
+        "after": 65
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "context loss reveals CSS fallback with live HTML",
+      "passed": true,
+      "detail": {
+        "supported": true,
+        "status": "fallback",
+        "attribute": "css",
+        "button": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "context restoration rebuilds resources using retained texture data",
+      "passed": true,
+      "detail": {
+        "draws": 66,
+        "textureBuilds": 1,
+        "textureUploads": 2,
+        "programBuilds": 2,
+        "pixels": 213572,
+        "initializationMs": 24.600000023841858,
+        "initializationTaskMaxMs": 9.300000011920929,
+        "initializationTasks": 6,
+        "parallelCompile": false,
+        "textureBuildMs": 6.899999976158142,
+        "status": "ready",
+        "reason": ""
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "unavailable WebGL selects explicit CSS fallback with semantic content",
+      "passed": true,
+      "detail": {
+        "fallback": true,
+        "cards": 4,
+        "buttons": 4,
+        "canvasesHidden": true
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "early disposal cancels pending optional GPU initialization",
+      "passed": true,
+      "detail": {
+        "contexts": 0,
+        "canvases": 0,
+        "statuses": [
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed"
+        ]
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "disposal removes decorative canvases and stops all controllers",
+      "passed": true,
+      "detail": {
+        "canvases": 0,
+        "statuses": [
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed"
+        ]
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "no uncaught browser errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "engine": "webkit",
+      "name": "four bounded GPU layers initialize",
+      "passed": true,
+      "detail": [
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 42,
+          "initializationTaskMaxMs": 16,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 8,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 33,
+          "initializationTaskMaxMs": 8,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 8,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 54,
+          "initializationTaskMaxMs": 22,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 22,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 57,
+          "initializationTaskMaxMs": 3,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 3,
+          "status": "ready",
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "real content contrast through nine pose/exposure combinations",
+      "passed": true,
+      "detail": {
+        "minimum": 5.432660477230262,
+        "threshold": 4.5,
+        "poses": [
+          {
+            "x": -1,
+            "y": -1,
+            "exposure": 1.2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 6.018968643884622,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 7.472387233632006,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 6.646933477112689,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 6.463288268042327,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 5.432660477230262,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 6.320981195186701,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 7.120828230515198,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 6.643408958106788,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 6.5330083859785315,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 6.009688660702583,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 7.049344007052345,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 9.443420095741036,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 8.839004317330602,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 8.645506212100155,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 7.8151791497397864,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "exposure": 1.2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 7.231208246933663,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 9.671898246369128,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 8.963422580343327,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 7.688489577363048,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 6.305363872215388,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 6.973284830828287,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 8.440836284462625,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 7.8987899588870585,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 7.208231256028578,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 6.454946988952786,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 6.791096883339196,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 6.773835661489962,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 6.767558017870674,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 8.063827909206454,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 10.96654473450531,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 10.50939223960423,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 9.66858774159749,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 8.556574020642307,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "exposure": 1.2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 8.010846905894278,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 8.289336016418892,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 8.383547264713785,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 7.919393866649046,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 8.283220055765181,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 7.355508647240925,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 7.56113281626067,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 7.6218349832367975,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 7.296369341810023,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 7.531005653628878,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 6.70640969751693,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 6.767558017870674,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 6.767558017870674,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 8.620255071733652,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 10.066181591010041,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 10.087174940274792,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 9.751622811372167,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 10.087174940274792,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": -1,
+            "y": -1,
+            "exposure": 1.5,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 6.869675538520998,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 8.383547264713785,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 7.554694233019459,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 7.33652275141098,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 6.227387671300939,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 7.186763209272757,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 8.064519894503768,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 7.539116817011551,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 7.363526138007143,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 6.845841452246705,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 7.585980591408947,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 7.5927890448246,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 7.585980591408947,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 7.7671549511261,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 10.087174940274792,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 9.518059188829723,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 9.334912113127,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 8.454771159205256,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "exposure": 1.5,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 8.256669529754381,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 10.617444854147674,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 9.887660345862722,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 8.601439839008345,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 7.1457299088578905,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 7.876396023465855,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 9.369186320282045,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 8.882482316855514,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 8.155345070213677,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 7.300354707899716,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 7.770690293185159,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 7.696916063466256,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 7.585980591408947,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 8.820412688180483,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 11.650647588462569,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 11.183576242938482,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 10.308415432090298,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 9.23433493286474,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "exposure": 1.5,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 8.963422580343327,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 9.262815644091402,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 9.370729460590075,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 8.86503046085752,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 9.262815644091402,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 8.251239643722998,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 8.515798931658196,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 8.515798931658196,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 8.251239643722998,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 8.417809029182882,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 7.677965832327008,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 9.336024705199797,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 10.634251390627426,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 10.847113928277025,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 10.50939223960423,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 10.736401737397044,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": -1,
+            "y": -1,
+            "exposure": 2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 8.076780855147561,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 9.649311143031227,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 8.767338749128234,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 8.567788846384937,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 7.379390733125751,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 8.399561754027966,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 9.274549397340774,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 8.763185605861597,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 8.591491439922835,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 7.978762535299012,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 8.970226741503843,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 8.794050513701514,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 10.958546188293813,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 10.387133373506568,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 10.193594913351744,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 9.342091884690813,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "exposure": 2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 9.399768079112127,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 11.77015456260955,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 11.071009662266068,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 9.857811771181982,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 8.377382744219856,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 9.067696513190466,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 10.681039485555647,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 10.143172579334326,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 9.374135561518642,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 8.4974735230524,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 9.044137645936543,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 9.015562664094213,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 9.015562664094213,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 8.941651759661513,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 9.84962679549276,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 12.369691104120488,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 11.908055685194334,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 11.214318591801414,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 10.087174940274792,
+                "samples": 2822
+              }
+            ]
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "exposure": 2,
+            "observed": [
+              {
+                "index": 0,
+                "minimum": 10.206382910069713,
+                "samples": 3031
+              },
+              {
+                "index": 0,
+                "minimum": 10.429715972157473,
+                "samples": 13832
+              },
+              {
+                "index": 0,
+                "minimum": 10.531574165009681,
+                "samples": 8931
+              },
+              {
+                "index": 0,
+                "minimum": 10.069169214034734,
+                "samples": 864
+              },
+              {
+                "index": 0,
+                "minimum": 10.422456046873434,
+                "samples": 2822
+              },
+              {
+                "index": 1,
+                "minimum": 9.556454025047744,
+                "samples": 3031
+              },
+              {
+                "index": 1,
+                "minimum": 9.741348657313681,
+                "samples": 13832
+              },
+              {
+                "index": 1,
+                "minimum": 9.84421640928586,
+                "samples": 8931
+              },
+              {
+                "index": 1,
+                "minimum": 9.450545872755658,
+                "samples": 1072
+              },
+              {
+                "index": 1,
+                "minimum": 9.73619964028342,
+                "samples": 2822
+              },
+              {
+                "index": 2,
+                "minimum": 8.970226741503843,
+                "samples": 3031
+              },
+              {
+                "index": 2,
+                "minimum": 8.962654913250686,
+                "samples": 13832
+              },
+              {
+                "index": 2,
+                "minimum": 9.015562664094213,
+                "samples": 8931
+              },
+              {
+                "index": 2,
+                "minimum": 9.015562664094213,
+                "samples": 1176
+              },
+              {
+                "index": 2,
+                "minimum": 8.970226741503843,
+                "samples": 2822
+              },
+              {
+                "index": 3,
+                "minimum": 10.380919420791292,
+                "samples": 3031
+              },
+              {
+                "index": 3,
+                "minimum": 11.534814571529418,
+                "samples": 13832
+              },
+              {
+                "index": 3,
+                "minimum": 11.650647588462569,
+                "samples": 8931
+              },
+              {
+                "index": 3,
+                "minimum": 11.297176691980717,
+                "samples": 1120
+              },
+              {
+                "index": 3,
+                "minimum": 11.557909384344786,
+                "samples": 2822
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "native roughness keyboard changes finish",
+      "passed": true,
+      "detail": {
+        "before": "0.24",
+        "after": "0.25"
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "continuous native pointer drag keeps rail fixed and retains GPU resources",
+      "passed": true,
+      "detail": {
+        "rail": {
+          "x": 42,
+          "y": 200.5,
+          "width": 400,
+          "height": 36
+        },
+        "last": {
+          "x": 42,
+          "y": 200.5,
+          "width": 400,
+          "height": 36
+        },
+        "value": "1",
+        "renderer": {
+          "draws": 67,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 33,
+          "initializationTaskMaxMs": 8,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 8,
+          "status": "ready",
+          "reason": ""
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "live semantic DOM button operates",
+      "passed": true,
+      "detail": "Inspecting Matte paper"
+    },
+    {
+      "engine": "webkit",
+      "name": "roughness broadens actual specular response",
+      "passed": true,
+      "detail": {
+        "smooth": {
+          "mean": 0.020857718701051513,
+          "std": 0.09205170861111192,
+          "maximum": 0.9559733532492862,
+          "centroid": {
+            "x": 216.9812887869135,
+            "y": 147.48816551009034
+          },
+          "spread": 43.575128157847956,
+          "halfMaximumArea": 0.012957157784743992,
+          "width": 435,
+          "height": 296
+        },
+        "rough": {
+          "mean": 0.038961551702575356,
+          "std": 0.019293552519050638,
+          "maximum": 0.08650046203654975,
+          "centroid": {
+            "x": 216.62377538849282,
+            "y": 147.20217003897298
+          },
+          "spread": 126.56663347667566,
+          "halfMaximumArea": 0.3575757575757576,
+          "width": 435,
+          "height": 296
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "metalness removes diffuse response with same reflectance and light",
+      "passed": true,
+      "detail": {
+        "dielectric": {
+          "mean": 0.31933038747002523,
+          "std": 0.05268287231187258,
+          "maximum": 0.4128107423606544,
+          "centroid": {
+            "x": 216.286027535384,
+            "y": 147.07941309194482
+          },
+          "spread": 143.4420652396005,
+          "halfMaximumArea": 0.9969348659003832,
+          "width": 435,
+          "height": 296
+        },
+        "metal": {
+          "mean": 0,
+          "std": 0,
+          "maximum": 0,
+          "centroid": {
+            "x": 0,
+            "y": 0
+          },
+          "spread": 0,
+          "halfMaximumArea": 0,
+          "width": 435,
+          "height": 296
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "metalness changes specular energy with same reflectance and light",
+      "passed": true,
+      "detail": {
+        "dielectric": {
+          "mean": 0.0494051517465451,
+          "std": 0.09673104632165053,
+          "maximum": 0.6038273388553377,
+          "centroid": {
+            "x": 216.94755427620694,
+            "y": 147.44073342565218
+          },
+          "spread": 76.44383456266928,
+          "halfMaximumArea": 0.041588296760710554,
+          "width": 435,
+          "height": 296
+        },
+        "metal": {
+          "mean": 0.19480354904318528,
+          "std": 0.2166890285820237,
+          "maximum": 0.9165740530495471,
+          "centroid": {
+            "x": 216.88839685985786,
+            "y": 147.368413506169
+          },
+          "spread": 98.79072196885741,
+          "halfMaximumArea": 0.1322884012539185,
+          "width": 435,
+          "height": 296
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "zero-light negative control extinguishes driven response",
+      "passed": true,
+      "detail": {
+        "mean": 0,
+        "std": 0,
+        "maximum": 0,
+        "centroid": {
+          "x": 0,
+          "y": 0
+        },
+        "spread": 0,
+        "halfMaximumArea": 0,
+        "width": 435,
+        "height": 296
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "GPU diffuse/specular pixels agree with headless GGX oracle",
+      "passed": true,
+      "detail": [
+        {
+          "metalness": 0,
+          "roughness": 0.3,
+          "pass": "diffuse",
+          "expected": [
+            209.84564831081585,
+            161.42168649101527,
+            113.10715251925905
+          ],
+          "observed": [
+            210,
+            161,
+            113
+          ],
+          "maxChannelError": 0.4216864910152651
+        },
+        {
+          "metalness": 0,
+          "roughness": 0.3,
+          "pass": "specular",
+          "expected": [
+            136.265508037892,
+            136.265508037892,
+            136.265508037892
+          ],
+          "observed": [
+            137,
+            137,
+            137
+          ],
+          "maxChannelError": 0.7344919621079953
+        },
+        {
+          "metalness": 0,
+          "roughness": 0.7,
+          "pass": "diffuse",
+          "expected": [
+            209.84564831081585,
+            161.42168649101524,
+            113.10715251925902
+          ],
+          "observed": [
+            210,
+            161,
+            113
+          ],
+          "maxChannelError": 0.4216864910152367
+        },
+        {
+          "metalness": 0,
+          "roughness": 0.7,
+          "pass": "specular",
+          "expected": [
+            79.5933764516426,
+            79.5933764516426,
+            79.5933764516426
+          ],
+          "observed": [
+            80,
+            80,
+            80
+          ],
+          "maxChannelError": 0.4066235483574019
+        },
+        {
+          "metalness": 1,
+          "roughness": 0.3,
+          "pass": "diffuse",
+          "expected": [
+            0,
+            0,
+            0
+          ],
+          "observed": [
+            0,
+            0,
+            0
+          ],
+          "maxChannelError": 0
+        },
+        {
+          "metalness": 1,
+          "roughness": 0.3,
+          "pass": "specular",
+          "expected": [
+            240.35329241961918,
+            215.46923661709704,
+            175.817845559007
+          ],
+          "observed": [
+            240,
+            216,
+            176
+          ],
+          "maxChannelError": 0.5307633829029612
+        },
+        {
+          "metalness": 1,
+          "roughness": 0.7,
+          "pass": "diffuse",
+          "expected": [
+            0,
+            0,
+            0
+          ],
+          "observed": [
+            0,
+            0,
+            0
+          ],
+          "maxChannelError": 0
+        },
+        {
+          "metalness": 1,
+          "roughness": 0.7,
+          "pass": "specular",
+          "expected": [
+            210.23662013044182,
+            161.97425137661187,
+            113.62884878043552
+          ],
+          "observed": [
+            210,
+            162,
+            114
+          ],
+          "maxChannelError": 0.3711512195644815
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "intrinsic normal texture changes spatial response independently of color",
+      "passed": true,
+      "detail": {
+        "flat": {
+          "mean": 0.2724753720057335,
+          "std": 0,
+          "maximum": 0.27247537200567573,
+          "centroid": {
+            "x": 215.9999999999555,
+            "y": 146.9999999999659
+          },
+          "spread": 152.0460456572123,
+          "halfMaximumArea": 1,
+          "width": 435,
+          "height": 296
+        },
+        "textured": {
+          "mean": 0.2712670989126669,
+          "std": 0.015504007391259601,
+          "maximum": 0.32556744056569914,
+          "centroid": {
+            "x": 215.99930529186346,
+            "y": 146.9990817659361
+          },
+          "spread": 152.0534584172905,
+          "halfMaximumArea": 1,
+          "width": 435,
+          "height": 296
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "intrinsic roughness variation is independent of scalar roughness",
+      "passed": true,
+      "detail": {
+        "uniform": {
+          "mean": 0.215860500113956,
+          "std": 0,
+          "maximum": 0.21586050011389923,
+          "centroid": {
+            "x": 215.99999999994202,
+            "y": 146.99999999996135
+          },
+          "spread": 152.04604565720837,
+          "halfMaximumArea": 1,
+          "width": 435,
+          "height": 296
+        },
+        "varied": {
+          "mean": 0.2279598548321091,
+          "std": 0.11126034575448043,
+          "maximum": 0.5583403896342678,
+          "centroid": {
+            "x": 216.59357482772953,
+            "y": 147.23448837171082
+          },
+          "spread": 151.95528501673854,
+          "halfMaximumArea": 0.30010449320794147,
+          "width": 435,
+          "height": 296
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "120 changing light samples retain geometry texture and program",
+      "passed": true,
+      "detail": {
+        "before": {
+          "geometry": 2,
+          "texture": 1,
+          "programs": 1
+        },
+        "after": {
+          "geometry": 2,
+          "texture": 1,
+          "programs": 1
+        },
+        "milliseconds120Updates": 2
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "observed pointer light sequence moves the specular centroid",
+      "passed": true,
+      "detail": [
+        {
+          "step": 0,
+          "mean": 0.034593428474378976,
+          "std": 0.10566387032569383,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 169.00976946370517,
+            "y": 147.35693378278498
+          },
+          "spread": 57.026380929084084,
+          "halfMaximumArea": 0.022640195053988156,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 1,
+          "mean": 0.034583493534282396,
+          "std": 0.10560531221851484,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 180.14473130132103,
+            "y": 147.33993257018312
+          },
+          "spread": 57.132448428353094,
+          "halfMaximumArea": 0.02243120863810519,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 2,
+          "mean": 0.034555942287247635,
+          "std": 0.10553783600674181,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 195.0231491063227,
+            "y": 147.33145951378384
+          },
+          "spread": 57.201385345112506,
+          "halfMaximumArea": 0.022361546499477535,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 3,
+          "mean": 0.03455251453968871,
+          "std": 0.10551848782445637,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 211.10106881632703,
+            "y": 147.33280146220952
+          },
+          "spread": 57.246809556764504,
+          "halfMaximumArea": 0.022361546499477535,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 4,
+          "mean": 0.03455341855414773,
+          "std": 0.10552825661167005,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 227.48810155487257,
+            "y": 147.32494952013855
+          },
+          "spread": 57.224633698563025,
+          "halfMaximumArea": 0.022361546499477535,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 5,
+          "mean": 0.03457226933432554,
+          "std": 0.10556801196544612,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 243.75869840496577,
+            "y": 147.3302303540454
+          },
+          "spread": 57.17460804959812,
+          "halfMaximumArea": 0.022152560083594567,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 6,
+          "mean": 0.03458629868114431,
+          "std": 0.10565058519371703,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 260.15959946102106,
+            "y": 147.32410008712503
+          },
+          "spread": 57.051857862578046,
+          "halfMaximumArea": 0.022640195053988156,
+          "width": 435,
+          "height": 296
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "real DOM reflow 390",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390,
+        "cards": [
+          {
+            "x": 20,
+            "width": 350
+          },
+          {
+            "x": 20,
+            "width": 350
+          },
+          {
+            "x": 20,
+            "width": 350
+          },
+          {
+            "x": 20,
+            "width": 350
+          }
+        ]
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "real DOM reflow 820",
+      "passed": true,
+      "detail": {
+        "width": 820,
+        "scrollWidth": 820,
+        "cards": [
+          {
+            "x": 40,
+            "width": 359
+          },
+          {
+            "x": 421,
+            "width": 359
+          },
+          {
+            "x": 40,
+            "width": 359
+          },
+          {
+            "x": 421,
+            "width": 359
+          }
+        ]
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "real DOM reflow 1440",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "cards": [
+          {
+            "x": 40,
+            "width": 669
+          },
+          {
+            "x": 731,
+            "width": 669
+          },
+          {
+            "x": 40,
+            "width": 669
+          },
+          {
+            "x": 731,
+            "width": 669
+          }
+        ]
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "oversized surface respects the configured GPU pixel budget",
+      "passed": true,
+      "detail": {
+        "pixels": 500000,
+        "width": 1000,
+        "height": 500
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "changed HTML copy and enlarged text retain content without horizontal overflow",
+      "passed": true,
+      "detail": [
+        {
+          "scroll": 497,
+          "width": 497,
+          "contained": true,
+          "text": "01 / MATTE PAPERKeep every observation in the archive.Uncoated stock. Soft light breaks across the fibers.READ / MARK / KEEPInspect ↗"
+        },
+        {
+          "scroll": 497,
+          "width": 497,
+          "contained": true,
+          "text": "02 / GLAZED ENAMELMake it vivid.Colored pigment under a smooth, reflective finish.PIGMENT / GLAZE / LIGHTInspect ↗"
+        },
+        {
+          "scroll": 497,
+          "width": 497,
+          "contained": true,
+          "text": "03 / BRUSHED METALFollow the cut.Directional grooves catch a narrow ribbon of light.BRUSH / REFLECT / REPEATInspect ↗"
+        },
+        {
+          "scroll": 497,
+          "width": 497,
+          "contained": true,
+          "text": "04 / SOFT GLASSLet light through.A translucent tint holds its place over the room.TRANSMIT / FILTER / READInspect ↗"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "reduced motion holds a static lit DOM surface",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "before": 52,
+        "after": 52,
+        "transform": "none"
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "offscreen lighting submits no GPU work",
+      "passed": true,
+      "detail": {
+        "status": "paused",
+        "before": 52,
+        "after": 52
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "context loss reveals CSS fallback with live HTML",
+      "passed": true,
+      "detail": {
+        "supported": true,
+        "status": "fallback",
+        "attribute": "css",
+        "button": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "context restoration rebuilds resources using retained texture data",
+      "passed": true,
+      "detail": {
+        "draws": 53,
+        "textureBuilds": 1,
+        "textureUploads": 2,
+        "programBuilds": 2,
+        "pixels": 213572,
+        "initializationMs": 18,
+        "initializationTaskMaxMs": 16,
+        "initializationTasks": 6,
+        "parallelCompile": true,
+        "textureBuildMs": 8,
+        "status": "ready",
+        "reason": ""
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "unavailable WebGL selects explicit CSS fallback with semantic content",
+      "passed": true,
+      "detail": {
+        "fallback": true,
+        "cards": 4,
+        "buttons": 4,
+        "canvasesHidden": true
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "early disposal cancels pending optional GPU initialization",
+      "passed": true,
+      "detail": {
+        "contexts": 0,
+        "canvases": 0,
+        "statuses": [
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed"
+        ]
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "disposal removes decorative canvases and stops all controllers",
+      "passed": true,
+      "detail": {
+        "canvases": 0,
+        "statuses": [
+          "disposed",
+          "disposed",
+          "disposed",
+          "disposed"
+        ]
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "no uncaught browser errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "engine": "source",
+      "name": "source freeze held during run",
+      "passed": true,
+      "detail": [
+        {
+          "path": "src/dom-surface.ts",
+          "sha256": "a48beb62babc4a340b1b6bbe660604dfab70d95afbe49a83d837aa54a0d31c11"
+        },
+        {
+          "path": "src/browser-dom-light.ts",
+          "sha256": "2e69e318efbe6d80fa6859d2f6272e8ba91e6affa86195a60e7702e8e32b3807"
+        },
+        {
+          "path": "src/dom-surface-gpu.ts",
+          "sha256": "2c363138bae85c0fd4053f35b2de8fcb1e0591f07fcfcbeb943011a9e85d3001"
+        },
+        {
+          "path": "src/dom-surface-shading.ts",
+          "sha256": "ea00caf8a0fa04514b7311e6c95060bf114f3a539b9db64daba08c643ba634de"
+        },
+        {
+          "path": "src/surface.ts",
+          "sha256": "fd0a89a64c42e59c8738ffd7bb87f36d49d384f9753a3d318253209f5310220c"
+        },
+        {
+          "path": "examples/dom-surfaces/gpu-proof-client.js",
+          "sha256": "f48aa05a249d1767d4750af450b7ab42efb64050b86402b1dff130178e5973b3"
+        },
+        {
+          "path": "examples/dom-surfaces/gpu-recipes.json",
+          "sha256": "a7fe870f306c02a38c532786181783e38863b5acea565e0c64d4c32c290afdae"
+        },
+        {
+          "path": "scripts/prove-dom-surface-gpu.mjs",
+          "sha256": "d77c683c8a40325f3be31a2c92dcf69ed5f86e021cb027102b727004aad2aff4"
+        }
+      ]
+    }
+  ],
+  "engines": [
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "startup": [
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 53.5,
+          "initializationTaskMaxMs": 9.300000011920929,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 6.899999976158142,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 114.60000002384186,
+          "initializationTaskMaxMs": 7,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 6.800000011920929,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 127,
+          "initializationTaskMaxMs": 13.800000011920929,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 13.600000023841858,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 211.39999997615814,
+          "initializationTaskMaxMs": 4.800000011920929,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 4.699999988079071,
+          "status": "ready",
+          "reason": ""
+        }
+      ],
+      "poses": [
+        {
+          "x": -1,
+          "y": -1,
+          "exposure": 1.2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 6.018968643884622,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 7.472387233632006,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 6.641718824989672,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 6.463288268042327,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 5.432660477230262,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 6.320981195186701,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 7.120828230515198,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 6.643408958106788,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 6.5330083859785315,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 6.009688660702583,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 7.049344007052345,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 9.443420095741036,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 8.755717656354035,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 8.645506212100155,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 7.8151791497397864,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "exposure": 1.2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 7.292754969889715,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 9.671898246369128,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 8.963422580343327,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 7.668743604932427,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 6.305363872215388,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 6.973284830828287,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 8.440836284462625,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 7.8987899588870585,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 7.208231256028578,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 6.454946988952786,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 6.791096883339196,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 6.791096883339196,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 8.063827909206454,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 10.98088391711464,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 10.495544306906634,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 9.648184176927849,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 8.556574020642307,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "exposure": 1.2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 8.010846905894278,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 8.289336016418892,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 8.383547264713785,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 7.913471042474931,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 8.283220055765181,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 7.355508647240925,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 7.56113281626067,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 7.6218349832367975,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 7.296369341810023,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 7.531005653628878,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 8.620255071733652,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 9.989000476643762,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 10.143874018693722,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 9.820402111506159,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 10.073767592989645,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "exposure": 1.5,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 6.869675538520998,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 8.383547264713785,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 7.554694233019459,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 7.317360818770576,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 6.227387671300939,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 7.186763209272757,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 8.064519894503768,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 7.539116817011551,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 7.363526138007143,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 6.845841452246705,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 7.585980591408947,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 7.5927890448246,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 7.585980591408947,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 7.7671549511261,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 10.151460020673328,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 9.443420095741036,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 9.322273273159555,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 8.442981207318002,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "exposure": 1.5,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 8.189749003566652,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 10.617444854147674,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 9.887660345862722,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 8.595128983229456,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 7.1457299088578905,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 7.876396023465855,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 9.369186320282045,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 8.882482316855514,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 8.155345070213677,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 7.300354707899716,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 7.770690293185159,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 7.770690293185159,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 7.585980591408947,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 8.820412688180483,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 11.557909384344786,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 11.101238969224072,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 10.279436845333358,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 9.221791241750198,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "exposure": 1.5,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 8.963422580343327,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 9.262815644091402,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 9.36402363175898,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 8.858621505396568,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 9.262815644091402,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 8.251239643722998,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 8.515798931658196,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 8.515798931658196,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 8.251239643722998,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 8.417809029182882,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 9.336024705199797,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 10.62640827921976,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 10.744296563527222,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 10.48780433294013,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 10.714514780049036,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "exposure": 2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 8.010846905894278,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 9.649311143031227,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 8.767338749128234,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 8.499380638084986,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 7.379390733125751,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 8.399561754027966,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 9.274549397340774,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 8.695578791865087,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 8.591491439922835,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 7.978762535299012,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 8.794050513701514,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 11.048362121348049,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 10.28712539713446,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 10.172453369938081,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 9.342091884690813,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "exposure": 2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 9.370729460590075,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 11.77015456260955,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 11.071009662266068,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 9.857811771181982,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 8.377382744219856,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 9.067696513190466,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 10.681039485555647,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 10.143172579334326,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 9.374135561518642,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 8.4974735230524,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 9.044137645936543,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 9.044137645936543,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 9.84962679549276,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 12.376546911004159,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 11.908055685194334,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 11.183576242938482,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 10.073767592989645,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "exposure": 2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.206382910069713,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 10.429715972157473,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 10.531574165009681,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 10.069169214034734,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 10.422456046873434,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 9.556454025047744,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 9.741348657313681,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 9.84421640928586,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 9.450545872755658,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 9.73619964028342,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 10.380919420791292,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 11.526555042264814,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 11.534814571529418,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 11.266434343117785,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 11.534814571529418,
+              "samples": 2822
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        {
+          "step": 0,
+          "mean": 0.034190072011553614,
+          "std": 0.10490817478921842,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 169.19109325369078,
+            "y": 147.45738322589938
+          },
+          "spread": 56.89960193012175,
+          "halfMaximumArea": 0.022013235806339255,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 1,
+          "mean": 0.034150120044724314,
+          "std": 0.10481045538563526,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 180.26183704785126,
+            "y": 147.45913288709298
+          },
+          "spread": 57.00136120216299,
+          "halfMaximumArea": 0.0219435736677116,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 2,
+          "mean": 0.034129657911138075,
+          "std": 0.1047274656381208,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 195.2095610601866,
+            "y": 147.46231541452514
+          },
+          "spread": 57.074784152399026,
+          "halfMaximumArea": 0.022013235806339255,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 3,
+          "mean": 0.03411432131460775,
+          "std": 0.10464383410076462,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 211.24262948756254,
+            "y": 147.4672591359335
+          },
+          "spread": 57.11747835574879,
+          "halfMaximumArea": 0.0219435736677116,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 4,
+          "mean": 0.034109230688305285,
+          "std": 0.1046067647568848,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 227.56066183462798,
+            "y": 147.4770250461212
+          },
+          "spread": 57.102857026268154,
+          "halfMaximumArea": 0.021873911529083943,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 5,
+          "mean": 0.03414122392743796,
+          "std": 0.10475684398128975,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 243.93588936261045,
+            "y": 147.45900820854635
+          },
+          "spread": 57.036669202861624,
+          "halfMaximumArea": 0.022152560083594567,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 6,
+          "mean": 0.03416145741772295,
+          "std": 0.1048273409525528,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 260.28102669238575,
+            "y": 147.45992216012215
+          },
+          "spread": 56.92316391119445,
+          "halfMaximumArea": 0.022152560083594567,
+          "width": 435,
+          "height": 296
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "startup": [
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 42,
+          "initializationTaskMaxMs": 16,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 8,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 33,
+          "initializationTaskMaxMs": 8,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 8,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 54,
+          "initializationTaskMaxMs": 22,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 22,
+          "status": "ready",
+          "reason": ""
+        },
+        {
+          "draws": 1,
+          "textureBuilds": 1,
+          "textureUploads": 1,
+          "programBuilds": 1,
+          "pixels": 179640,
+          "initializationMs": 57,
+          "initializationTaskMaxMs": 3,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 3,
+          "status": "ready",
+          "reason": ""
+        }
+      ],
+      "poses": [
+        {
+          "x": -1,
+          "y": -1,
+          "exposure": 1.2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 6.018968643884622,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 7.472387233632006,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 6.646933477112689,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 6.463288268042327,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 5.432660477230262,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 6.320981195186701,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 7.120828230515198,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 6.643408958106788,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 6.5330083859785315,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 6.009688660702583,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 7.049344007052345,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 9.443420095741036,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 8.839004317330602,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 8.645506212100155,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 7.8151791497397864,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "exposure": 1.2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 7.231208246933663,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 9.671898246369128,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 8.963422580343327,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 7.688489577363048,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 6.305363872215388,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 6.973284830828287,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 8.440836284462625,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 7.8987899588870585,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 7.208231256028578,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 6.454946988952786,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 6.791096883339196,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 6.773835661489962,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 6.767558017870674,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 8.063827909206454,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 10.96654473450531,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 10.50939223960423,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 9.66858774159749,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 8.556574020642307,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "exposure": 1.2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 8.010846905894278,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 8.289336016418892,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 8.383547264713785,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 7.919393866649046,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 8.283220055765181,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 7.355508647240925,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 7.56113281626067,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 7.6218349832367975,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 7.296369341810023,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 7.531005653628878,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 6.70640969751693,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 6.767558017870674,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 6.767558017870674,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 8.620255071733652,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 10.066181591010041,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 10.087174940274792,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 9.751622811372167,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 10.087174940274792,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "exposure": 1.5,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 6.869675538520998,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 8.383547264713785,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 7.554694233019459,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 7.33652275141098,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 6.227387671300939,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 7.186763209272757,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 8.064519894503768,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 7.539116817011551,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 7.363526138007143,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 6.845841452246705,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 7.585980591408947,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 7.5927890448246,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 7.585980591408947,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 7.7671549511261,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 10.087174940274792,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 9.518059188829723,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 9.334912113127,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 8.454771159205256,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "exposure": 1.5,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 8.256669529754381,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 10.617444854147674,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 9.887660345862722,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 8.601439839008345,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 7.1457299088578905,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 7.876396023465855,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 9.369186320282045,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 8.882482316855514,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 8.155345070213677,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 7.300354707899716,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 7.770690293185159,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 7.696916063466256,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 7.585980591408947,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 8.820412688180483,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 11.650647588462569,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 11.183576242938482,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 10.308415432090298,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 9.23433493286474,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "exposure": 1.5,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 8.963422580343327,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 9.262815644091402,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 9.370729460590075,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 8.86503046085752,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 9.262815644091402,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 8.251239643722998,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 8.515798931658196,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 8.515798931658196,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 8.251239643722998,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 8.417809029182882,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 7.677965832327008,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 9.336024705199797,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 10.634251390627426,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 10.847113928277025,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 10.50939223960423,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 10.736401737397044,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": -1,
+          "y": -1,
+          "exposure": 2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 8.076780855147561,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 9.649311143031227,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 8.767338749128234,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 8.567788846384937,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 7.379390733125751,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 8.399561754027966,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 9.274549397340774,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 8.763185605861597,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 8.591491439922835,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 7.978762535299012,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 8.970226741503843,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 8.794050513701514,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 10.958546188293813,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 10.387133373506568,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 10.193594913351744,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 9.342091884690813,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "exposure": 2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 9.399768079112127,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 11.77015456260955,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 11.071009662266068,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 9.857811771181982,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 8.377382744219856,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 9.067696513190466,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 10.681039485555647,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 10.143172579334326,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 9.374135561518642,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 8.4974735230524,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 9.044137645936543,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 9.015562664094213,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 9.015562664094213,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 8.941651759661513,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 9.84962679549276,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 12.369691104120488,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 11.908055685194334,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 11.214318591801414,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 10.087174940274792,
+              "samples": 2822
+            }
+          ]
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "exposure": 2,
+          "observed": [
+            {
+              "index": 0,
+              "minimum": 10.206382910069713,
+              "samples": 3031
+            },
+            {
+              "index": 0,
+              "minimum": 10.429715972157473,
+              "samples": 13832
+            },
+            {
+              "index": 0,
+              "minimum": 10.531574165009681,
+              "samples": 8931
+            },
+            {
+              "index": 0,
+              "minimum": 10.069169214034734,
+              "samples": 864
+            },
+            {
+              "index": 0,
+              "minimum": 10.422456046873434,
+              "samples": 2822
+            },
+            {
+              "index": 1,
+              "minimum": 9.556454025047744,
+              "samples": 3031
+            },
+            {
+              "index": 1,
+              "minimum": 9.741348657313681,
+              "samples": 13832
+            },
+            {
+              "index": 1,
+              "minimum": 9.84421640928586,
+              "samples": 8931
+            },
+            {
+              "index": 1,
+              "minimum": 9.450545872755658,
+              "samples": 1072
+            },
+            {
+              "index": 1,
+              "minimum": 9.73619964028342,
+              "samples": 2822
+            },
+            {
+              "index": 2,
+              "minimum": 8.970226741503843,
+              "samples": 3031
+            },
+            {
+              "index": 2,
+              "minimum": 8.962654913250686,
+              "samples": 13832
+            },
+            {
+              "index": 2,
+              "minimum": 9.015562664094213,
+              "samples": 8931
+            },
+            {
+              "index": 2,
+              "minimum": 9.015562664094213,
+              "samples": 1176
+            },
+            {
+              "index": 2,
+              "minimum": 8.970226741503843,
+              "samples": 2822
+            },
+            {
+              "index": 3,
+              "minimum": 10.380919420791292,
+              "samples": 3031
+            },
+            {
+              "index": 3,
+              "minimum": 11.534814571529418,
+              "samples": 13832
+            },
+            {
+              "index": 3,
+              "minimum": 11.650647588462569,
+              "samples": 8931
+            },
+            {
+              "index": 3,
+              "minimum": 11.297176691980717,
+              "samples": 1120
+            },
+            {
+              "index": 3,
+              "minimum": 11.557909384344786,
+              "samples": 2822
+            }
+          ]
+        }
+      ],
+      "sequence": [
+        {
+          "step": 0,
+          "mean": 0.034593428474378976,
+          "std": 0.10566387032569383,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 169.00976946370517,
+            "y": 147.35693378278498
+          },
+          "spread": 57.026380929084084,
+          "halfMaximumArea": 0.022640195053988156,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 1,
+          "mean": 0.034583493534282396,
+          "std": 0.10560531221851484,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 180.14473130132103,
+            "y": 147.33993257018312
+          },
+          "spread": 57.132448428353094,
+          "halfMaximumArea": 0.02243120863810519,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 2,
+          "mean": 0.034555942287247635,
+          "std": 0.10553783600674181,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 195.0231491063227,
+            "y": 147.33145951378384
+          },
+          "spread": 57.201385345112506,
+          "halfMaximumArea": 0.022361546499477535,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 3,
+          "mean": 0.03455251453968871,
+          "std": 0.10551848782445637,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 211.10106881632703,
+            "y": 147.33280146220952
+          },
+          "spread": 57.246809556764504,
+          "halfMaximumArea": 0.022361546499477535,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 4,
+          "mean": 0.03455341855414773,
+          "std": 0.10552825661167005,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 227.48810155487257,
+            "y": 147.32494952013855
+          },
+          "spread": 57.224633698563025,
+          "halfMaximumArea": 0.022361546499477535,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 5,
+          "mean": 0.03457226933432554,
+          "std": 0.10556801196544612,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 243.75869840496577,
+            "y": 147.3302303540454
+          },
+          "spread": 57.17460804959812,
+          "halfMaximumArea": 0.022152560083594567,
+          "width": 435,
+          "height": 296
+        },
+        {
+          "step": 6,
+          "mean": 0.03458629868114431,
+          "std": 0.10565058519371703,
+          "maximum": 0.8549926081242338,
+          "centroid": {
+            "x": 260.15959946102106,
+            "y": 147.32410008712503
+          },
+          "spread": 57.051857862578046,
+          "halfMaximumArea": 0.022640195053988156,
+          "width": 435,
+          "height": 296
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Observed Playwright Chromium/WebKit pixels; physical Safari power, refresh, thermal and sensor behavior remain unverified.",
+    "The shader shares the headless Lambert/GGX conventions. Ambient fill, procedural microstructure, point-light normalization, and Reinhard display mapping are authored; no full light transport or energy-conservation claim.",
+    "Frame interval observations include screenshot overhead and are not a GPU timing benchmark. JS update timing excludes GPU completion, paint and compositing.",
+    "Contrast covers the recorded real DOM copy at sampled poses/exposures. It cannot certify every supplied color, backdrop or motion path."
+  ]
+}

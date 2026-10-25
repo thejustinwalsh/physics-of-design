@@ -1,0 +1,18 @@
+✔ actual fixture reproduces original failure and passes equivalent checkpoint metadata (2.695541ms)
+✔ functional mismatch remains rejected: source (0.258833ms)
+✔ functional mismatch remains rejected: revision (0.151209ms)
+✔ functional mismatch remains rejected: dtype (0.106541ms)
+✔ functional mismatch remains rejected: backend (0.097667ms)
+✔ functional mismatch remains rejected: serving_config (0.097125ms)
+✔ functional mismatch remains rejected: threads (0.083583ms)
+✔ functional mismatch remains rejected: context_tokens (0.089459ms)
+✔ changed or missing checkpoint digest remains rejected (0.162417ms)
+✔ validation does not mutate either preserved receipt (0.110208ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 59.926667

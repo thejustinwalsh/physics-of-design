@@ -1,0 +1,40 @@
+(node:62820) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ exact complete eighteen-stage control passes; partial and failed lanes fail (2.844125ms)
+✔ repeated or reordered successful stages cannot masquerade as a full lane (0.306959ms)
+✔ versioned full receipts require exact expanded stages and cannot use a headless lane (0.826291ms)
+✔ real-flow shape passes; all-unavailable downgrade and action reorder fail (1.25025ms)
+✔ XML files must be unique simple names and clock exceptions stay explicit (0.297959ms)
+✔ finite fresh delivery, real bounds, and bounded oracle errors are required (0.336667ms)
+✔ saved XML requires complete hierarchy, unique clickable label, and exact tapped bounds (1.336833ms)
+✔ XML labels decode entities without accepting external entity declarations (0.616041ms)
+✔ curated paths are sorted, unique, fixed, and exclude new bundles or model weights (0.551291ms)
+(node:62821) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ real MCP App SDK host bridge renders, edits, recomputes, compares and records a human tie-break (8864.232583ms)
+✔ MCP App projects exact component dimensions and analytic motion samples through the real host bridge (1824.398833ms)
+✔ MCP App edits whole-layout equations, recomputes dependent geometry and shares selected nodes (2517.886959ms)
+✔ wireframe host keeps newest geometry under delayed replies, selections, mode changes and server errors (3122.083042ms)
+(node:62822) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ every public command executes through CLI and MCP with matching result contracts (43181.816292ms)
+✔ Unix streams handle files, JSONL, invalid commands and caller errors without polluting stdout (1755.872333ms)
+✔ CLI schema and compact receipts compose through explicit hash-bound file pointers (1761.205333ms)
+(node:62823) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ compact MCP discovers one schema and reuses exact states without repeated input context (588.096042ms)
+(node:62824) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ actual CLI and MCP transports stream selector progress while keeping results composable (3070.27525ms)
+(node:62825) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ chromium: editor skips unsafe Arabic baselines and preserves every grapheme rectangle (3320.693917ms)
+✔ webkit: editor skips unsafe Arabic baselines and preserves every grapheme rectangle (4096.801417ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 47579.612125

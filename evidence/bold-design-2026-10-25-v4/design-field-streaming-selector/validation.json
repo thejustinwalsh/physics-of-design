@@ -1,0 +1,314 @@
+{
+  "identity": "2b37aaf6452e2a38c61733fd7ce80dc6cc8476b6d1476c19e00cc1af749c1236",
+  "runtime": "Chromium 156.0.8078.4",
+  "status": "passed",
+  "scenarios": [
+    {
+      "scenario": "phone",
+      "viewport": {
+        "id": "phone",
+        "width": 390,
+        "height": 844,
+        "textScale": 1
+      },
+      "title": {
+        "x": 20,
+        "y": 20,
+        "width": 350,
+        "height": 164.25,
+        "right": 370,
+        "bottom": 184.25
+      },
+      "body": {
+        "x": 20,
+        "y": 216.25,
+        "width": 350,
+        "height": 105.5625,
+        "right": 370,
+        "bottom": 321.8125
+      },
+      "action": {
+        "x": 20,
+        "y": 353.8125,
+        "width": 165.40625,
+        "height": 44,
+        "right": 185.40625,
+        "bottom": 397.8125
+      },
+      "image": {
+        "x": 20,
+        "y": 429.8125,
+        "width": 224,
+        "height": 112,
+        "right": 244,
+        "bottom": 541.8125
+      },
+      "overflowX": 0,
+      "imageLoaded": true,
+      "fontLoaded": true,
+      "checks": {
+        "horizontalContainment": true,
+        "typographyMatchesTable": true,
+        "actionReach": true,
+        "contentLoaded": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "phone-large",
+      "viewport": {
+        "id": "phone-large",
+        "width": 390,
+        "height": 844,
+        "textScale": 2
+      },
+      "title": {
+        "x": 20,
+        "y": 20,
+        "width": 350,
+        "height": 657,
+        "right": 370,
+        "bottom": 677
+      },
+      "body": {
+        "x": 20,
+        "y": 709,
+        "width": 350,
+        "height": 475.171875,
+        "right": 370,
+        "bottom": 1184.171875
+      },
+      "action": {
+        "x": 20,
+        "y": 1216.171875,
+        "width": 165.40625,
+        "height": 44,
+        "right": 185.40625,
+        "bottom": 1260.171875
+      },
+      "image": {
+        "x": 20,
+        "y": 1292.171875,
+        "width": 224,
+        "height": 112,
+        "right": 244,
+        "bottom": 1404.171875
+      },
+      "overflowX": 0,
+      "imageLoaded": true,
+      "fontLoaded": true,
+      "checks": {
+        "horizontalContainment": true,
+        "typographyMatchesTable": true,
+        "actionReach": true,
+        "contentLoaded": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "ipad",
+      "viewport": {
+        "id": "ipad",
+        "width": 834,
+        "height": 1194,
+        "textScale": 1
+      },
+      "title": {
+        "x": 36,
+        "y": 36,
+        "width": 762,
+        "height": 133.09375,
+        "right": 798,
+        "bottom": 169.09375
+      },
+      "body": {
+        "x": 36,
+        "y": 201.09375,
+        "width": 495,
+        "height": 79.171875,
+        "right": 531,
+        "bottom": 280.265625
+      },
+      "action": {
+        "x": 36,
+        "y": 312.265625,
+        "width": 165.40625,
+        "height": 44,
+        "right": 201.40625,
+        "bottom": 356.265625
+      },
+      "image": {
+        "x": 36,
+        "y": 388.265625,
+        "width": 487.671875,
+        "height": 243.828125,
+        "right": 523.671875,
+        "bottom": 632.09375
+      },
+      "overflowX": 0,
+      "imageLoaded": true,
+      "fontLoaded": true,
+      "checks": {
+        "horizontalContainment": true,
+        "typographyMatchesTable": true,
+        "actionReach": true,
+        "contentLoaded": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "ipad-large",
+      "viewport": {
+        "id": "ipad-large",
+        "width": 834,
+        "height": 1194,
+        "textScale": 2
+      },
+      "title": {
+        "x": 36,
+        "y": 36,
+        "width": 762,
+        "height": 399.328125,
+        "right": 798,
+        "bottom": 435.328125
+      },
+      "body": {
+        "x": 36,
+        "y": 467.328125,
+        "width": 495,
+        "height": 316.78125,
+        "right": 531,
+        "bottom": 784.109375
+      },
+      "action": {
+        "x": 36,
+        "y": 816.109375,
+        "width": 165.40625,
+        "height": 44,
+        "right": 201.40625,
+        "bottom": 860.109375
+      },
+      "image": {
+        "x": 36,
+        "y": 892.109375,
+        "width": 487.671875,
+        "height": 243.828125,
+        "right": 523.671875,
+        "bottom": 1135.9375
+      },
+      "overflowX": 0,
+      "imageLoaded": true,
+      "fontLoaded": true,
+      "checks": {
+        "horizontalContainment": true,
+        "typographyMatchesTable": true,
+        "actionReach": true,
+        "contentLoaded": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "desktop",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "textScale": 1
+      },
+      "title": {
+        "x": 270,
+        "y": 36,
+        "width": 900,
+        "height": 66.546875,
+        "right": 1170,
+        "bottom": 102.546875
+      },
+      "body": {
+        "x": 270,
+        "y": 134.546875,
+        "width": 495,
+        "height": 79.171875,
+        "right": 765,
+        "bottom": 213.71875
+      },
+      "action": {
+        "x": 270,
+        "y": 245.71875,
+        "width": 165.40625,
+        "height": 44,
+        "right": 435.40625,
+        "bottom": 289.71875
+      },
+      "image": {
+        "x": 270,
+        "y": 321.71875,
+        "width": 576,
+        "height": 288,
+        "right": 846,
+        "bottom": 609.71875
+      },
+      "overflowX": 0,
+      "imageLoaded": true,
+      "fontLoaded": true,
+      "checks": {
+        "horizontalContainment": true,
+        "typographyMatchesTable": true,
+        "actionReach": true,
+        "contentLoaded": true
+      },
+      "passed": true
+    },
+    {
+      "scenario": "desktop-large",
+      "viewport": {
+        "id": "desktop-large",
+        "width": 1440,
+        "height": 1000,
+        "textScale": 2
+      },
+      "title": {
+        "x": 270,
+        "y": 36,
+        "width": 900,
+        "height": 266.21875,
+        "right": 1170,
+        "bottom": 302.21875
+      },
+      "body": {
+        "x": 270,
+        "y": 334.21875,
+        "width": 495,
+        "height": 316.78125,
+        "right": 765,
+        "bottom": 651
+      },
+      "action": {
+        "x": 270,
+        "y": 683,
+        "width": 165.40625,
+        "height": 44,
+        "right": 435.40625,
+        "bottom": 727
+      },
+      "image": {
+        "x": 270,
+        "y": 759,
+        "width": 576,
+        "height": 288,
+        "right": 846,
+        "bottom": 1047
+      },
+      "overflowX": 0,
+      "imageLoaded": true,
+      "fontLoaded": true,
+      "checks": {
+        "horizontalContainment": true,
+        "typographyMatchesTable": true,
+        "actionReach": true,
+        "contentLoaded": true
+      },
+      "passed": true
+    }
+  ],
+  "scope": "Exact field finalist typography/image/action fixture only; layout and source loading verified. Whole gallery, native, physical devices, accessibility, material appearance and motion choreography require separate evidence."
+}

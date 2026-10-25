@@ -1,0 +1,59 @@
+{
+  "directory": "artifacts/design-field-mathematical",
+  "cells": 252,
+  "statistics": {
+    "searches": 7,
+    "evaluated": 3132,
+    "revalidated": 0,
+    "factorEvaluations": 112752,
+    "graphNodes": 3132,
+    "selectorCalls": 0,
+    "requestedReadoutPasses": 0,
+    "completedReadoutPasses": 0,
+    "neuralCalls": 0,
+    "testSelectorCalls": 0,
+    "cacheHits": 0,
+    "checkpointHashes": 0,
+    "expressionOperationUpperBound": 22643064,
+    "lookahead": {
+      "searches": 6,
+      "evaluated": 2592,
+      "factorEvaluations": 93312,
+      "expressionOperationUpperBound": 14105664,
+      "graphNodes": 2592,
+      "branches": 6,
+      "revalidated": 0,
+      "reusedSearches": 1
+    }
+  },
+  "validation": "passed",
+  "replay": {
+    "searches": 0,
+    "evaluated": 0,
+    "revalidated": 18,
+    "factorEvaluations": 648,
+    "graphNodes": 0,
+    "selectorCalls": 0,
+    "requestedReadoutPasses": 0,
+    "completedReadoutPasses": 0,
+    "neuralCalls": 0,
+    "testSelectorCalls": 0,
+    "cacheHits": 2,
+    "checkpointHashes": 0,
+    "expressionOperationUpperBound": 0,
+    "lookahead": {
+      "searches": 0,
+      "evaluated": 0,
+      "factorEvaluations": 216,
+      "expressionOperationUpperBound": 0,
+      "graphNodes": 0,
+      "branches": 0,
+      "revalidated": 6,
+      "reusedSearches": 0
+    }
+  },
+  "partialReplay": {
+    "reading": "stale",
+    "expression": "blocked"
+  }
+}

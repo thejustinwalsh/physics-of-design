@@ -1,0 +1,2694 @@
+{
+  "publicationRecovery": {
+    "producer": "evidence/exporter-recovery-2026-10-25/export.mjs",
+    "producerSha256": "aafc7706fc1fa5d38952971a8d046152708c20eba3abb2a725a7dc7bcdbfc4c5",
+    "originalProducer": "scripts/export-bold-design-evidence.mjs",
+    "originalProducerSha256": "b2be870e6d38d749dc0534c86f71cbb11aae55033c1bbfe720be759cb573f66d",
+    "scope": "Recovery artifact publisher only; the original publisher failed its overly strict metadata comparison. Full34 verification covers the unchanged original execution-source snapshot, not this recovery helper."
+  },
+  "createdAt": "2026-10-25T15:27:20.191Z",
+  "verificationVersion": 4,
+  "scope": "full",
+  "stages": 34,
+  "sourceIdentity": "84bc53e57d77fd4d4e5a0bb015fb17054d2bd523661eae09d46d50d29527b99b",
+  "nativeImplementationIdentity": "b9ac092863dd0dae6b1fe0e1e83d235d8f4dfda052ce3d58bc5ecece97626f1d",
+  "fieldIdentity": "f759714bdab90462e5d176bdfbd4231c26b6619eb22f7bd0ed9d6ee3208d274f",
+  "field": {
+    "evaluated": 3132,
+    "searches": 7,
+    "completedReadouts": 2,
+    "replaySearches": 0,
+    "replayNeuralCalls": 0,
+    "revalidated": 18,
+    "progress": [
+      {
+        "stage": "reading",
+        "processEvents": 15,
+        "providerEvents": 14,
+        "completedInputTokens": 4506,
+        "generatedTokens": 0
+      },
+      {
+        "stage": "expression",
+        "processEvents": 14,
+        "providerEvents": 13,
+        "completedInputTokens": 3733,
+        "generatedTokens": 0
+      }
+    ]
+  },
+  "expo": {
+    "valid": true,
+    "failures": [],
+    "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+    "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45",
+    "platforms": [
+      "web",
+      "native-ios",
+      "native-android"
+    ],
+    "scope": "Current files, exact retained artifacts, required actual renderer geometry and input-provider/state records. Does not authenticate observations or imply physical-device/native-release parity."
+  },
+  "blankTemplate": {
+    "valid": true,
+    "failures": [],
+    "sourceIdentity": "2c3b5b30f8e867d8956186d0759a48b3f0d8302bc5da1084bd5c50e5f1b510e7",
+    "scope": "Independent blank shell bytes and actual platform primitive/input records; original spike UI proof is not reused."
+  },
+  "sourceChecks": [
+    {
+      "path": "artifacts/choice-effectiveness/current-measurements.json",
+      "sha256": "6d3f9e914958cef6b202031ce3da0a04e288e3e763b2e735f4f2f6ffb0b716d0"
+    },
+    {
+      "path": "artifacts/choice-effectiveness/report.json",
+      "sha256": "73c9f1ac286df72bcb813162944602c6bdd07579989b551a8cc22e3b2c832699"
+    },
+    {
+      "path": "artifacts/choice-effectiveness/runs.json",
+      "sha256": "5575fc3e858846405f4966da6986d6a9978a601750a9fc35c410d49ca973d169"
+    },
+    {
+      "path": "artifacts/choice-effectiveness/sensitivity.json",
+      "sha256": "127367852c9b644bcfc9c83133638fb2bc936416fa23a7f159b968720ecab69d"
+    },
+    {
+      "path": "artifacts/choice-effectiveness/validations.json",
+      "sha256": "6b3547c2e79b4c90dbaafc145b80c643532842df134bc00cd8a5e8b7cb19e50a"
+    },
+    {
+      "path": "artifacts/context/budget.json",
+      "sha256": "a3d19d593166b517b5093a53b1832cf4ac996fe29698f08d4996a62ca1de8e8a"
+    },
+    {
+      "path": "artifacts/context/tools-compact.json",
+      "sha256": "15fc126b1eb80fc529b31cf4010bd13340d33124ba9a2ff5ecd872538a5c3977"
+    },
+    {
+      "path": "artifacts/context/tools-full.json",
+      "sha256": "ee9bc2573f10ff84e631614de9f393f93019142e087d2a7a9b95541b97855acd"
+    },
+    {
+      "path": "artifacts/design-field-mathematical/gallery-session.json",
+      "sha256": "b58640b0518c8f0c3ca5a6561dc467242ab83ae6d8b0640f5c65c52d44aabde9"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/first.json",
+      "sha256": "0418cdd6d9b6c7584b368dc1bfbafd53352f5efec8c0014ea45caa9c397f4b9f"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/gallery-session.json",
+      "sha256": "16ff9929469e82fde32b4b3786d304dccee12b24455cdcd6d98e8e32e335253a"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/implementation-freeze.json",
+      "sha256": "242102cbb609ce0ee1f6c9d14023175349ad7df438bcfc083a9e6dc3a6784e6a"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/measurements.json",
+      "sha256": "6d3f9e914958cef6b202031ce3da0a04e288e3e763b2e735f4f2f6ffb0b716d0"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/partial-replay.json",
+      "sha256": "1b25e881951dcfee70c5cf87b85f7a99b0548a67969849c8281c82c002902b49"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/replay.json",
+      "sha256": "ad86a21e666d14cb96f5c11502c9ae9cdaf73868c4256e2dcc663e21d4b8d29b"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.output.jsonl",
+      "sha256": "7d3e456982d7d6618c99453eb3dac5582889821aff5cfd198ca44da210602427"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.process.json",
+      "sha256": "b8b0a8084d4b817ca7b20df4c40e14d3bd778346e34e91fbd15d725fe5833153"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.stderr.txt",
+      "sha256": "526ce4af75d298d5516e42af238d10cf90dfa0bf4136cab935219e6b98ef7cc2"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.output.jsonl",
+      "sha256": "b11f131b4ddbf2aec4161123693d3bb62c03723c3a8142ed07af53778478c05d"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.process.json",
+      "sha256": "eacd37e6e53fac64b41231b6e72fabd19759837b0efc33db1826452aa3fdcb61"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.stderr.txt",
+      "sha256": "b26c43c127e25697acde54818beef78004a2af6eee37d406ebc3d49a49f3a0c7"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "artifacts/design-field-streaming-selector/validation.json",
+      "sha256": "6a626c08062ee2e50f1a89832d63f58afd36baac59e0594193a565a6c1182118"
+    },
+    {
+      "path": "artifacts/design-theory/interactions-verification-webkit/report.json",
+      "sha256": "30654bd28952d6d34b5fd69de1e7c6f3dd012f1057bf4af838dd6906f920ce36"
+    },
+    {
+      "path": "artifacts/design-theory/interactions-verification/report.json",
+      "sha256": "b7b66f1d7f94b343c668b335cfe5c2cf27843b474c637fbca128b928ae7859d7"
+    },
+    {
+      "path": "artifacts/design-theory/material-integration/chromium-1440-hero.png",
+      "sha256": "fb2604c6aad46e4b61e31e2d44b07a372401d360ccf84f007a42616c63c99842"
+    },
+    {
+      "path": "artifacts/design-theory/material-integration/chromium-390-hero.png",
+      "sha256": "ddd126d64f682978a0c4447d78a8aa9655b860d68834fc02c17072fd0c8276f2"
+    },
+    {
+      "path": "artifacts/design-theory/material-integration/chromium-834-hero.png",
+      "sha256": "3e1ca73d0fa963aeb4c8d5cfb2e74adf33ae66102fd7b663e3c3432775460c24"
+    },
+    {
+      "path": "artifacts/design-theory/material-integration/chromium-fallback.png",
+      "sha256": "a3b04e5ba32236c4570a44ddf6a9a1fdfea94bff7c6fa187233778b729640bd7"
+    },
+    {
+      "path": "artifacts/design-theory/material-integration/report.json",
+      "sha256": "e0ef0e234ae22f515eee0721328b470b106b98f8b4ef68670a556fc94bd648a7"
+    },
+    {
+      "path": "artifacts/design-theory/material-integration/webkit-1440-hero.png",
+      "sha256": "ab47ed0c5b8589ec1bbff60bc425ca2c0a366763ffd73417991628ba707d512e"
+    },
+    {
+      "path": "artifacts/design-theory/material-integration/webkit-390-hero.png",
+      "sha256": "911fe0f35f0541552fc03dbac34ce1e1c7da3509913ccfb455b49fe9c2177f49"
+    },
+    {
+      "path": "artifacts/design-theory/material-integration/webkit-834-hero.png",
+      "sha256": "d54357f9ce729de97bf9058820bf1f27d1e9b3f9563432c3543fcceb815b25c7"
+    },
+    {
+      "path": "artifacts/design-theory/material-integration/webkit-fallback.png",
+      "sha256": "3aac4df05774cb1a05670d036ab0dfe2c405864e9cd328357996d4163be0dbef"
+    },
+    {
+      "path": "artifacts/design-theory/proof/chromium-1440-viewport.png",
+      "sha256": "2f399e5ecafe48d36a2a6bc23d87dcffddeb40ecf36293c3bc8b28c0f00545aa"
+    },
+    {
+      "path": "artifacts/design-theory/proof/chromium-320-viewport.png",
+      "sha256": "508898dfcab2f99c88079ad6d3d3e747da8180509f04afaa31c3728f26afed5e"
+    },
+    {
+      "path": "artifacts/design-theory/proof/chromium-390-viewport.png",
+      "sha256": "228e008663078305cb39dec652a19beda305ec33fb32f3b96e2c7a76220845b9"
+    },
+    {
+      "path": "artifacts/design-theory/proof/chromium-834-viewport.png",
+      "sha256": "b6aadbfe766cef867a1adbde412d8e03781a3a9d8588760585a2c361f79385a3"
+    },
+    {
+      "path": "artifacts/design-theory/proof/report.json",
+      "sha256": "84c2f1f0968620ad337a85ab0ed9ced62691216b529979fc324e96380b1daf7b"
+    },
+    {
+      "path": "artifacts/design-theory/proof/webkit-1440-viewport.png",
+      "sha256": "906fdb1731b33452c8cdb46e0b42af5c95e693c8dce58ce8be5b8e19974a3de5"
+    },
+    {
+      "path": "artifacts/design-theory/proof/webkit-320-viewport.png",
+      "sha256": "a61dd8815dba920650b4cb21f59a209d91dbfb8352d1d825e45ac016243e4c99"
+    },
+    {
+      "path": "artifacts/design-theory/proof/webkit-390-viewport.png",
+      "sha256": "2886c50d443843dbddb390c6dcf27c5afc2bd7539a28124daf2ed144399f7f81"
+    },
+    {
+      "path": "artifacts/design-theory/proof/webkit-834-viewport.png",
+      "sha256": "12182d6ea912b5cbe249fccccc306702c98e6b5cf5713eddd5f084ae7174f01a"
+    },
+    {
+      "path": "artifacts/dom-surfaces-gpu/chromium-refined.png",
+      "sha256": "5e8abb2363e2d07e7e8c7ed966590f46b4be8bdeb4edffba2a5cb2f0ca4f0b8d"
+    },
+    {
+      "path": "artifacts/dom-surfaces-gpu/context.json",
+      "sha256": "85dd5d0de61017b58e2237a0036e5841d3de9ea01fb4dbfc8252e5c9bd98f616"
+    },
+    {
+      "path": "artifacts/dom-surfaces-gpu/execution-trail.json",
+      "sha256": "f008b94a91ca227ffe5e9f308e14b277a8d3270c5027eaddbff5d0ccd9e09be2"
+    },
+    {
+      "path": "artifacts/dom-surfaces-gpu/proof.json",
+      "sha256": "dd7f3c6cb1e3020fc2fd091d7b9ff258d6c91d812451f9432e2a0f46a1781f0a"
+    },
+    {
+      "path": "artifacts/dom-surfaces-gpu/summary.json",
+      "sha256": "aacf6e10734a3080ab967a7e23e01c49070c49af1c8ce9c73655c59285b42b23"
+    },
+    {
+      "path": "artifacts/dom-surfaces-gpu/webkit-refined.png",
+      "sha256": "bf1b027d87039b428fe999400dc7ef1861001b06c5e9cf3c710c9ea79d080eef"
+    },
+    {
+      "path": "artifacts/dom-surfaces/proof.json",
+      "sha256": "7327f8a7ab28a556bef35c104a843ac62caf6655e65efc4e27a3577a2c6e8571"
+    },
+    {
+      "path": "artifacts/dom-surfaces/summary.json",
+      "sha256": "fed3f97bdb41a9341c4f21ad18790133ccbbc5a8e53673f3884b96f0bbbacf67"
+    },
+    {
+      "path": "artifacts/expo-design-theory/context.json",
+      "sha256": "b280c15126e487d0e3595d38d18326fa60da1c9c371caf1a8eb6020ad993fbb1"
+    },
+    {
+      "path": "artifacts/expo-design-theory/decisions/compiled.json",
+      "sha256": "79d3c738675dfeb250157702b4a93d3221d39f817b5e48fd9bfe7d62f5c8d4a5"
+    },
+    {
+      "path": "artifacts/expo-design-theory/decisions/workflow.json",
+      "sha256": "c1bbe54bdfa3a8537e866b5407d9c970c5be4c579b233a46ec024bccd6bb07c9"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-android-proof.json",
+      "sha256": "bb1cae9f9a6e0c97d5e31ae644dca95450eb306e85eecd099ca2f04eb172fcbe"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-ios-proof.json",
+      "sha256": "2baf742811a96e26af82c36fe2ecf988e4904fd8a1e8e8a8ecf31d84428460a6"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-proof.json",
+      "sha256": "4985455f8d976e05030d0ad39cad8e9f7d1177e18274e2f6cc9c6a187bbb6438"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-0-accessibility.xml",
+      "sha256": "57eadaf28190585ada21dbde621dc65a666ff16cfce10f6f95d5c8f178191425"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-1-accessibility.xml",
+      "sha256": "57eadaf28190585ada21dbde621dc65a666ff16cfce10f6f95d5c8f178191425"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-2-accessibility.xml",
+      "sha256": "252f5450065f33735707784457a99da3f83202f34cba3e26ef8824bb4223fd3c"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-3-accessibility.xml",
+      "sha256": "57eadaf28190585ada21dbde621dc65a666ff16cfce10f6f95d5c8f178191425"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-4-accessibility.xml",
+      "sha256": "059124e80e63d6f94f31d610c5c5b67d6016b9267da02929ef3ab866953525c0"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-5-accessibility.xml",
+      "sha256": "b4287eec9256ea24f14db420b321d918086eef9809bd6e93219bde2b8141fcf7"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-6-accessibility.xml",
+      "sha256": "00e7dfa7d1cfd863258e25fe123dd05e7dce17f44f43d76e7c96d8a085ef1257"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-7-accessibility.xml",
+      "sha256": "0aef939d1097fe6e2ce3cd8532e462c144e977cb8213615849ca462c62946200"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-detail.png",
+      "sha256": "394bf7172203149562e1add6ec7b79491b0e30ee5688f5f8b0a26fa83e9beefc"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-enlarged.png",
+      "sha256": "e92942c12f6cea77d16da5c8837d7f845b568d18b1a2a367caae07c022b62160"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-normal.png",
+      "sha256": "698b44809794dbb0a8313682ec15c95faf9eb31e5e4c0301d87ef0072716b175"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/android-reviewed-long-text.png",
+      "sha256": "d68cf68affe39053c7cfa307a0b856a84afb627c65828f048edf9e8a80a1d0cf"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/ios-detail.png",
+      "sha256": "554b908b5066078887d7a3930ed8f000282e2afcb36782de6ce09242ed2e83ee"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/ios-enlarged.png",
+      "sha256": "d61cbf8ecbe12df8120efeee613c82d2b1110c49031e9e02081591ea346c1721"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/ios-normal.png",
+      "sha256": "db15a2745d894feffd677cb7c9895cd7e6ee2c7f45b47ed0405376c264362dc8"
+    },
+    {
+      "path": "artifacts/expo-design-theory/native-round2/ios-reviewed-long-text.png",
+      "sha256": "17850ab566e0d20744e8bbc3cc49097187baff46ace3d9f7e2efb920f94a6877"
+    },
+    {
+      "path": "artifacts/expo-design-theory/output-bindings.json",
+      "sha256": "1b7ecf6142cc5692fbdd1d1410e58a7e276135d85285deb816ba0bddcfb6623a"
+    },
+    {
+      "path": "artifacts/expo-design-theory/proof.json",
+      "sha256": "1a57f67b9868356fe986cffdbacd3a8977003133e0fe8d831525acf04410a14f"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/chromium-1440-1.png",
+      "sha256": "cac862e9119d8bcb9bde04235e763a5f5bcd7e4a360d30c4e4c5dd241abb63f6"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/chromium-1440-2.png",
+      "sha256": "004beaa564ae6280ca7d7ceaac702f77f07d86b6dc1967de124dedac12d7b605"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/chromium-1440-detail.png",
+      "sha256": "1a6dfefa0363fc1962d00ea81c762e5187691e28636d18569cd532e4d6240211"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/chromium-390-1.png",
+      "sha256": "5d236ad95f73798ad3a666e0d02dbfdc95383a311a5cda271096d21fa7c9c89f"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/chromium-390-2.png",
+      "sha256": "a651728a7b2e0a9a428f69b27147b128cbed2e1946b049eb5cff41df568c36ad"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/chromium-390-detail.png",
+      "sha256": "4f3978a56db944ea5a429b30d0ed9973f129ea7f7b39ca86518a0fb21cdd6a60"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/chromium-820-1.png",
+      "sha256": "70c7ad0a2958659a8183efd1792eb66a27ffdb8848dbf4f420557e222f218788"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/chromium-820-2.png",
+      "sha256": "84ccadb556a43af0cf04e8f3cd29868af6db73222aa6163c78eec536a7493e43"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/chromium-820-detail.png",
+      "sha256": "ed994435b6a0b8a2273d954a14ed30726209915e14349e9f6c42b0df9f246c62"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/proof.json",
+      "sha256": "1e6ad75bbdabb79c81d8e9842f9441118276d1cb9f09d2437304ccbe5fbbb404"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/webkit-1440-1.png",
+      "sha256": "34f3e575e892d05bd530ddeafbd58fed68dc0ca09f8f8a25059078c6d9490b86"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/webkit-1440-2.png",
+      "sha256": "8ef923e24fd062b678b4568ac6f9ea35453fbb83655e4b07491bea009bddf394"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/webkit-1440-detail.png",
+      "sha256": "f00da74122213bca7a1a265d1ab2c3d0bb8c8373dd99a878a2afafe971226afb"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/webkit-390-1.png",
+      "sha256": "b8037375246a601c4f30baf708210e4f91a044eb018c2bcc7fc1bc38dee27e6e"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/webkit-390-2.png",
+      "sha256": "69d0625e9c959400aba3037cf932f6f63def76b9475b55a2b9e837083718a64b"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/webkit-390-detail.png",
+      "sha256": "07adbaf093f0aefa84eb7f7acdf19d3e583dada360750318b22e15668eca9c36"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/webkit-820-1.png",
+      "sha256": "0456d7ee4f6047ebc3aafa901f9d6a810197a1ceb7d233431f3c328dfba5d5e7"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/webkit-820-2.png",
+      "sha256": "a8e1f6ed6adb14b609c563eb4e4e6955075b7e99d50b522763f74b91c6de1021"
+    },
+    {
+      "path": "artifacts/expo-design-theory/round2/webkit-820-detail.png",
+      "sha256": "1a959376c39c245eec071211eee1d5775a10703e6cdb52eb6417a5b369ee6bc0"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/android-accessibility.xml",
+      "sha256": "020994d26b25de7ebabde526af23438b6d11df4806ab2902e5e18c4cbb01f79b"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/chromium-1440.png",
+      "sha256": "06feb89e97914e6342927f70e73d4a9ccdbb3762716738f0c81568584f07115b"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/chromium-390.png",
+      "sha256": "0b76f2729e6c422f063890d0cf9b6a137dfd010ea50270c88b0f226705594fe6"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/chromium-820.png",
+      "sha256": "c5aa403daf5d3b1048c911b6dec22b7794c3cfb3ea4d3f97182080b026e2c794"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/native-android.png",
+      "sha256": "2bcad2958781cc787635f4b3c0b1a023bf06464e3771cdcf7ff5cc63e39d80af"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/native-ios.png",
+      "sha256": "4036648006f8ddc9c1abb143ab0659d6b52408d502dec5194281c2113c4144f5"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/proof.json",
+      "sha256": "5745b17801f2824118f58be0c56d7c2126ef2d0ede93a2223d658a64a73409a9"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/webkit-1440.png",
+      "sha256": "0e2fedd7a9c71345489fe333d3443fa678e44fead01ee5d0a3c7dcd20b96d37b"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/webkit-390.png",
+      "sha256": "0515b145df9f921c1a2e0a359a168ef38d1658ee3798e225235672f268fe1770"
+    },
+    {
+      "path": "artifacts/expo-template-smoke/webkit-820.png",
+      "sha256": "e755ad09ab794e35d8e8ea239876764c93ad8435aa5a1eba29dda02b6a72bd22"
+    },
+    {
+      "path": "artifacts/relational-kernels/bindings.json",
+      "sha256": "90eb656d49b1d6ac17015a0404d008fc110032ad05cd154f0e0c4a859693e3d0"
+    },
+    {
+      "path": "artifacts/relational-kernels/compilation.json",
+      "sha256": "7053b6731388e73421d56e97db74bc27961c615f11754c7bd78d46a4dd91f94f"
+    },
+    {
+      "path": "artifacts/relational-kernels/font-numerals.json",
+      "sha256": "1ff897436604c72fd601cbb017826fb37bd5a0a119c30c05961d48fbda98db44"
+    },
+    {
+      "path": "artifacts/relational-kernels/input.json",
+      "sha256": "49c1bdcd89a1c8ae9ece5150ea131c2a495a9e3acfa53701152c766a405fd4f1"
+    },
+    {
+      "path": "artifacts/relational-kernels/receipt.json",
+      "sha256": "a0c6afe4eb035da9995a090553112a8c6adac09f75fcfa7bf2dd2595bcdbc2f5"
+    },
+    {
+      "path": "artifacts/relational-kernels/replay.json",
+      "sha256": "9a0038d440a02bfda437591011995e74583e9d2300caca10de78297c88d0447a"
+    },
+    {
+      "path": "artifacts/relational-kernels/resolved.json",
+      "sha256": "18661faf55276d7242aa3c7525767cfef0ea69c5dd66e9405081b06f74982c5a"
+    },
+    {
+      "path": "artifacts/relational-kernels/text-observations.json",
+      "sha256": "f06d8a150b55db4ff6a6c9f57442a4ebbf376ac753595a21a4a2f90e2c076a4d"
+    },
+    {
+      "path": "artifacts/relational-kernels/workflow.json",
+      "sha256": "cb459f4c2097de5c77189c9d72140612bb10d808499637b3823c17fce27c306f"
+    },
+    {
+      "path": "artifacts/system/native-android/editorial-musical.json",
+      "sha256": "6c6988fe3e0aac4866383a24605ceec816f1cf75fc39c29b436863dfc5ea064e"
+    },
+    {
+      "path": "artifacts/system/native-android/editorial-smooth.json",
+      "sha256": "098de5962e28ff41671faf36ac39bd60bbccae0db3131bab9f6b9e2699482a6a"
+    },
+    {
+      "path": "artifacts/system/native-android/hero-musical.json",
+      "sha256": "5f436d250c7cceb7c5e6bd5d8e9d794cf4983079e234f48d86eac74ff25cb1ee"
+    },
+    {
+      "path": "artifacts/system/native-android/hero-smooth.json",
+      "sha256": "5273fd783fd3c3f06464307cf931773297a83bfb1257d6a01ced9c135d959870"
+    },
+    {
+      "path": "artifacts/system/native-android/observations.jsonl",
+      "sha256": "061038fae4869015a2cb81d8e921eda7828ec186be474e8541bf4794af6f25be"
+    },
+    {
+      "path": "artifacts/system/native-android/summary.json",
+      "sha256": "c7819246745a5a580bf3e8762094207989632ad586302e2cb6121d6123debbe1"
+    },
+    {
+      "path": "artifacts/system/native-ios/editorial-musical.json",
+      "sha256": "efe929e4d861f13aaecaf441ff09268aa3ae5b360b7a3d922119a6a9f9bd464c"
+    },
+    {
+      "path": "artifacts/system/native-ios/editorial-smooth.json",
+      "sha256": "846032bce4d94a6b7a7578e435a9c936bdd1be92642d9d54e57cbd04e1213758"
+    },
+    {
+      "path": "artifacts/system/native-ios/hero-musical.json",
+      "sha256": "0589791d105f70a138cdbf279791e69288d4a1697214f15d750942721b5e37af"
+    },
+    {
+      "path": "artifacts/system/native-ios/hero-smooth.json",
+      "sha256": "9c44c8c54dc3995e788aa312d04f5930402f84526c5292981ef73bdcdd9b7baf"
+    },
+    {
+      "path": "artifacts/system/native-ios/observations.jsonl",
+      "sha256": "7e9da36e57661574273c8ef0b561f39a101508668bbc7c6a029f2511b8f0d33d"
+    },
+    {
+      "path": "artifacts/system/native-ios/summary.json",
+      "sha256": "55ef25917c620aa95ebdc57baaa9ac630d0f9aed023fb5fe306da82cb2cab375"
+    },
+    {
+      "path": "artifacts/system/web/editorial-musical.json",
+      "sha256": "31edac4209c07c98b1b76e10b58cf0e9cf7f17e0401ae2e0b46d3aad2d793998"
+    },
+    {
+      "path": "artifacts/system/web/editorial-smooth.json",
+      "sha256": "2dfd39d384cd5101f1460e01a73d5e61232dce9ea00d81a57d861f9cd70483fb"
+    },
+    {
+      "path": "artifacts/system/web/hero-musical.json",
+      "sha256": "4d47794bdf4a20f4837fb7c64f217fe2b1bc9266084802b8995faca332b60b08"
+    },
+    {
+      "path": "artifacts/system/web/hero-smooth.json",
+      "sha256": "c78fe57a35490d45f5c857f692dc0ab1e8863613927fac517f0f98802d64c6c5"
+    },
+    {
+      "path": "artifacts/system/web/observations.jsonl",
+      "sha256": "44f21577f3ed5ced4075cc6dcdc99706844d35802c08c5e5d843120ea094a524"
+    },
+    {
+      "path": "artifacts/system/web/summary.json",
+      "sha256": "83523870668f73d9117398126ff9a75f489beff5e976407157b64f7e321e55e3"
+    },
+    {
+      "path": "artifacts/typography/chromium.json",
+      "sha256": "69f832a7dd61e158233ba319a1bb92ec256c441ecdc8d4d755c3fd71f7f18238"
+    },
+    {
+      "path": "artifacts/typography/proof.json",
+      "sha256": "a34b59fe24483d9aaa16ce50e17dab5981d6dcfb3a2cce920985969046085526"
+    },
+    {
+      "path": "artifacts/typography/summary.json",
+      "sha256": "d3fe43a5ee3812663ffc354a17468a58111222ddb11cc9c418f1470935cc34e1"
+    },
+    {
+      "path": "artifacts/typography/webkit.json",
+      "sha256": "2c75ac74c50b6d92272d71daef153075e9d094016ea80e61408239fe9c9260d7"
+    },
+    {
+      "path": "artifacts/validation/report.json",
+      "sha256": "d69d6eab172a2832f06a440fda668d996783c36183c8a9a45141b068d869baab"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/about.html",
+      "sha256": "6f2d9cfddce38f790e3d0d20a3ea1279a484f906955888b5c49a1b02ef73529b"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/app.js",
+      "sha256": "445707339bb8b2a2f40fc3a0a8c88c6ec30a4bff2e9079ddbb5241b4e9f6772d"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/assets/Lato-Black.ttf",
+      "sha256": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/assets/lato-OFL.txt",
+      "sha256": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/assets/Lato-Regular.ttf",
+      "sha256": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/assets/spectral-OFL.txt",
+      "sha256": "501d6ceca8e552630fe3aa9442b9a818565680a1a2f79f3fb8c13d6f309a9e98"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/assets/Spectral-Regular.ttf",
+      "sha256": "c89021dc20720c8d0dcf40b0b2f6e00c13665fa8041717f581396f51b8c78f5d"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/chunks/chunk-5UAMCWIE.js",
+      "sha256": "bd26df6c56787a91eade050033df1f00ce2c46b72cbfbfb5051d4e6384e1f149"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/chunks/surface-scene-YH5FJEQ6.js",
+      "sha256": "9648ce322b41902fad800616f4afe4c2113749756cd4c80bb9570ea763afd847"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/field/app.js",
+      "sha256": "e646de4d5e6a80438618e687ca740b65fea2abf8ed58f097354a128f9e59cb24"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/field/index.html",
+      "sha256": "2fe3b74ec89b14476cb5399c8db51c2f02ccc8a728e49ed7c5b0af4e71c348b7"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/index.html",
+      "sha256": "ae6205561e344807c7640fa44307b5b7810b6ae3e88b42770e603e0991fda2ac"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/still-life.svg",
+      "sha256": "7f34d81862a36f8589fc6d93311697818e8fdfeef1e9a48a01a079c376316f29"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/surface-worker.js",
+      "sha256": "65848cfdef599dd03387f86e2a782ce04d44d4beae7abce8c7319dde77e16741"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/browser.log",
+      "sha256": "7fa675ebf803bed880e1fa426c3aa0a460115a349f9631b29aad9706a1bd281f"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/build.log",
+      "sha256": "5652d5522d0d747ea8144f52cba078e940b290630f824ac216f6011e35b48181"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/choice-effectiveness.log",
+      "sha256": "73c9f1ac286df72bcb813162944602c6bdd07579989b551a8cc22e3b2c832699"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/commands-and-app.log",
+      "sha256": "23ef015f751d2fbddd094d1913fdba9ce843be1dc12b3338bacbe9bae3789929"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/consumer.log",
+      "sha256": "3b222533128938d98807124aa94aed358204562c0c453f7ecd9b6cb98e554e7f"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/design-field.log",
+      "sha256": "958368df2e56101783ac787b89c6f6401dc860094af7f1ad74d0a5150f6c0b66"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/dom-surface-gpu.log",
+      "sha256": "b9ee20b335da744b17ff54496d8d42fd2cf13abca23b6757da659aa34cb872f7"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/dom-surfaces.log",
+      "sha256": "6392682125f4ca34ff249be85d71642a928a2aac9c36a2b2857a3eac32a7a7ab"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/expo-web.log",
+      "sha256": "004a6758333b2b4ce226390071deb6507ab83640dc9cb3c8e6f89183331f04b6"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/fieldwork-build.log",
+      "sha256": "94029fede5a7c946d01bda75585b06395c4b1f17d5515dd2f2857831352efae6"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/fieldwork-web.log",
+      "sha256": "ec2de3d5b27435e512184cb50e8a4627139af31ff121373960b1fc09f581d4d2"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/gallery-build.log",
+      "sha256": "8c1865f63a7a6c947b53694cb0641f49cfe72381c6435210a3c34188a7e6fc07"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/gallery-interactions-webkit.log",
+      "sha256": "58a09f877a29464eadf92b51978a4d4185ab5de15cccc394ed1053fb761325f0"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/gallery-interactions.log",
+      "sha256": "1ee3c1d19c85f48988b56c8aec3ccaa1f70d3bddfee55c829ece4026343d0469"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/gallery-materials.log",
+      "sha256": "eef79086aac61f864e4f3989004e745e1eb63bfef55f1126391f16330716622b"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/gallery-web.log",
+      "sha256": "6ca8573cb59b3d890005987f4a631b2dbd9e317e87561ac3170b04cd0eac6a84"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/matrix-native-android.log",
+      "sha256": "1eddf3c1743cb31f94788d73883b75ba3cd3b7973c7aa1fa1e534534414ef9ab"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/matrix-native-ios.log",
+      "sha256": "3743dc15204a6c6d7c130ce9a6e03c744e4687d9c9d859efe93b95d741f0a9c3"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/matrix-web.log",
+      "sha256": "eab0cc5421812b98e4f00d9ef6fd5947da716a6028ee00a71c45e1d64992def6"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/migrations.log",
+      "sha256": "1769a0b031a188ccc946630e3ba86c290316755e49721829e123df6ed73b7d21"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/native-android.log",
+      "sha256": "cfe48be82075b3e3275861e92ab5326f98645b758c2bc63a1e8126443a51327c"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/native-ios.log",
+      "sha256": "e7db27140343b1c6c0cd1fd7ebafea79a068565876aa83a134facbdfec55a80c"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/native-types.log",
+      "sha256": "6679293f34eaacf488f82600e44ea811d1cb6b1514979004f41999537e059b87"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/relational-kernels.log",
+      "sha256": "a0c6afe4eb035da9995a090553112a8c6adac09f75fcfa7bf2dd2595bcdbc2f5"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/selector.log",
+      "sha256": "9d6362ebb35a918bb2676b65ccc793310e3969f45484dd3f72f36ae836539962"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/summary.json",
+      "sha256": "171042749226f6e351ec2589ee2c5f733464f817e5936faa3d5467c153369f4b"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/types.log",
+      "sha256": "d097d1623e2c58eb50d42d5f7f4401d2e66a6023404e0b0f48f267b868b1e615"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/typography.log",
+      "sha256": "aa3564c5c2e6d650a7bfd757b362f44120fec4378787a3f00dbc18a284448a47"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/unit.log",
+      "sha256": "8f10a3281fcb70dcd057f021188334510f3c80a27ee26bc9e48f793232ffcbd5"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/validation-phases.log",
+      "sha256": "c5158016537d7ffccbe4f81648b392fa194d4e9ca420911900e53036776d3648"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/vela-build.log",
+      "sha256": "90984ce90a81cac39bf6fdb4c0d19be0165cf3af4c074bf6134506db9831df35"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/vela-motion.log",
+      "sha256": "86f957fbe6e3aa314fcfb3d05907386526002050428643715f65afc101a395e2"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/vela-policy.log",
+      "sha256": "5f685bb2a9beb8e9dd975a93d439778d3275f6f69ec4f020553bcb74e823b1f0"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/vela-web.log",
+      "sha256": "702757ec1af12c5635d7b7057bd823adf04d59c8301a182c8d70d88ee4e9a44f"
+    },
+    {
+      "path": "artifacts/verification-design-theory-final/workflow-mathematical.log",
+      "sha256": "bdee85ea7a3c68176c9f426de0de7ddc7b050427ac4b6323e5a9ce77fe67fade"
+    },
+    {
+      "path": "assets/fonts/Lato-Regular.ttf",
+      "sha256": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251"
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "3bc9b66ae3b4d059197c9156412ba7d2a682b93c55883d44c4cab8d367eee511"
+    },
+    {
+      "path": "dist/decision-workflow.js",
+      "sha256": "bfd14fdeb14c8d2af047c726fe9be262599ab06361724a45049ded4184c3d432"
+    },
+    {
+      "path": "dist/design-field-vocabulary.js",
+      "sha256": "ec46856a1000d2306ac36803aaf1c3b0b630b4b781da62e62d93e0bb47ffff33"
+    },
+    {
+      "path": "dist/design-field.js",
+      "sha256": "bec992b87fc14f821ad2b3c6b736449abe0687d07210234d787b51605f82641b"
+    },
+    {
+      "path": "dist/emission.js",
+      "sha256": "2690849a90e915d39d19a4e34f68c4413af77df08982aa87905c09a79dad5389"
+    },
+    {
+      "path": "dist/energy-analysis.js",
+      "sha256": "d88d1e7e07525b370a0e72786ddf910e8229aba0cf69e723f45cdb6011f97f10"
+    },
+    {
+      "path": "dist/energy.js",
+      "sha256": "a723a497b0b8b0fe0d8691c0e6d8609eb8d24536fc2412ee3921335672bbbe68"
+    },
+    {
+      "path": "dist/fonts.js",
+      "sha256": "52036ad1b0d4c09602bc33766289e543f3c28fbeb7342b19fd0eaed8f2ba2c8e"
+    },
+    {
+      "path": "dist/identity.js",
+      "sha256": "c33d97607da271438bc994b5bf7507dc927d59a8e0646ca9f5ad43e22df58b74"
+    },
+    {
+      "path": "dist/math-expression.js",
+      "sha256": "eb69ee26ce2f88e02bd17afd082346fd2b1f7ea676d36cba7a9b7a52ebfd69d7"
+    },
+    {
+      "path": "dist/measurement.js",
+      "sha256": "588324da8f81cfc222504583fa97a21c30b986d6646ec6f47aabc1f0873298d4"
+    },
+    {
+      "path": "dist/output-bindings.js",
+      "sha256": "17dce3bc09df5c317a07d6756a22ac6b3a8de46c1e54d656e0dc3501c6b7edab"
+    },
+    {
+      "path": "dist/relational-kernels.js",
+      "sha256": "efc3761a680f5088fb53362dc162664253810b6acbe78924ca9455853bc67146"
+    },
+    {
+      "path": "dist/selector-process.js",
+      "sha256": "0f0a910399b0c08f87fe41352329befbbd29b5455d4468675f48ba7f28c97198"
+    },
+    {
+      "path": "dist/selector.js",
+      "sha256": "587f54fe8cdcdcd3e31278effb410d07cea24f08c5f2cdcd180f63c9ace3d09e"
+    },
+    {
+      "path": "examples/design-field/brief.json",
+      "sha256": "c9b90359cfa64dec930f0e6da650af941ab9f985b7dfb579809375b806dcf607"
+    },
+    {
+      "path": "examples/design-field/gallery-session.json",
+      "sha256": "16ff9929469e82fde32b4b3786d304dccee12b24455cdcd6d98e8e32e335253a"
+    },
+    {
+      "path": "examples/design-field/measurements.json",
+      "sha256": "6d3f9e914958cef6b202031ce3da0a04e288e3e763b2e735f4f2f6ffb0b716d0"
+    },
+    {
+      "path": "examples/design-theory/DomMaterialStudy.jsx",
+      "sha256": "f5ebf7dfbc7ebf602b126442beda8dbdb63f1133a8fef0c2db207783f840440e"
+    },
+    {
+      "path": "examples/design-theory/field-entry.jsx",
+      "sha256": "56b2cbba1618a20589632ebc9793bdfe30258203eb13bd1af5e6f9ea6eefc51c"
+    },
+    {
+      "path": "examples/design-theory/FieldSession.jsx",
+      "sha256": "9bfb37b2e0788cfb101c9ee0d3032c386c6069ce6a0264ef96b60804a93a6bf2"
+    },
+    {
+      "path": "examples/design-theory/HeroMaterial.jsx",
+      "sha256": "58af82c81f707949cd52c2dd719efed235fd84a432969b5160a1f0acdd895016"
+    },
+    {
+      "path": "examples/design-theory/InteractionRange.jsx",
+      "sha256": "31d27089a6ebb81308bdf0229a15d679c8e63576fe414f2d375e5edc9106a05a"
+    },
+    {
+      "path": "examples/design-theory/LayoutPreview.jsx",
+      "sha256": "dbb1692fce0f55c0ebc21467f1dc339a063a82fa3189d20cf37f4090bd0068ed"
+    },
+    {
+      "path": "examples/design-theory/profiles.js",
+      "sha256": "7e75bfadf12ba5ad7c4f90efdf0c4b59c1df77facd7dfa0663b2cf79080e003a"
+    },
+    {
+      "path": "examples/design-theory/RegistrationBand.jsx",
+      "sha256": "7d197450b9cdd1c13fc999a21db200443b435d3605794a4aa06984ed1b2d9fb4"
+    },
+    {
+      "path": "examples/design-theory/runtime.js",
+      "sha256": "745fb416ee11433b692d1a734ddd32d5a4faaaea7db3fb4fdca96e5827dac6ad"
+    },
+    {
+      "path": "examples/design-theory/still-life.svg",
+      "sha256": "7f34d81862a36f8589fc6d93311697818e8fdfeef1e9a48a01a079c376316f29"
+    },
+    {
+      "path": "examples/design-theory/surface-scene.js",
+      "sha256": "837e99d08a7509f473f2f552429fab5e3bd897f88fce22ce1e504677c4862a78"
+    },
+    {
+      "path": "examples/design-theory/surface-worker.js",
+      "sha256": "4c1014273b3f63d0d70079733d9fef88710abd9dce8966224cce04e26abab805"
+    },
+    {
+      "path": "examples/design-theory/Surface.jsx",
+      "sha256": "ed8ef450dc7fe8b8389bd6b20113dfeb000ad204fc3c4634f29e608766bd34c1"
+    },
+    {
+      "path": "examples/design-theory/useDomMaterial.js",
+      "sha256": "b2aa65b97d5b43bcea15522f84a4c3c97e6b303fcf2224ec1d01244f5e6fe949"
+    },
+    {
+      "path": "examples/design-theory/web.jsx",
+      "sha256": "45ddb065fccd77a888fc0a319159f9dd5b89848e9588edff32e959d1cad993bc"
+    },
+    {
+      "path": "examples/dom-surfaces/gpu-proof-client.js",
+      "sha256": "f48aa05a249d1767d4750af450b7ab42efb64050b86402b1dff130178e5973b3"
+    },
+    {
+      "path": "examples/dom-surfaces/gpu-recipes.json",
+      "sha256": "a7fe870f306c02a38c532786181783e38863b5acea565e0c64d4c32c290afdae"
+    },
+    {
+      "path": "examples/dom-surfaces/proof-client.js",
+      "sha256": "bd050f757ce6e253f86035514556223444a0a5dc36dfaec5cd979da59445bf6d"
+    },
+    {
+      "path": "examples/dom-surfaces/recipes.json",
+      "sha256": "e747d41a47ec04ffa78a9ff0f6455bf281b9131813ed3728a4fddc3589917ed7"
+    },
+    {
+      "path": "examples/kernels/relay-proof.mjs",
+      "sha256": "f17b968ce9a2466f9964e1ab617287500524c659c2e44cc455d14151ce46c601"
+    },
+    {
+      "path": "examples/typography/variable-block.json",
+      "sha256": "73ad21be2977b20eaf4bdf09598f8ad8dec321559f1aaf3665dffa2f502173d0"
+    },
+    {
+      "path": "experiments/expo-design-theory/app.json",
+      "sha256": "6a3f9003961fca215f68e03e724b8a371f1231472f19598722cbe1f29acba040"
+    },
+    {
+      "path": "experiments/expo-design-theory/babel.config.js",
+      "sha256": "7bf5079996ef39a36dc8801d571607988a68c9480ae6378cfafb02c6469da191"
+    },
+    {
+      "path": "experiments/expo-design-theory/index.js",
+      "sha256": "fe279463ab64c8d2b1057c5595fdc8c01fb2c0a288657d5e01681be180a73729"
+    },
+    {
+      "path": "experiments/expo-design-theory/metro.config.js",
+      "sha256": "e746ada24a7ee087e06e361ca23526c21ef3def61cb617abefc906aa52c1e4ca"
+    },
+    {
+      "path": "experiments/expo-design-theory/package-lock.json",
+      "sha256": "4949924e4d92fd05ff4140b5f1668adcc7437deca0a2a4b280f17e90852e34e6"
+    },
+    {
+      "path": "experiments/expo-design-theory/package.json",
+      "sha256": "735aaa996a3e2d5b3bc9ce4811cb88723f577aac9b2b94565418293d050ba9b9"
+    },
+    {
+      "path": "experiments/expo-design-theory/postcss.config.js",
+      "sha256": "64616c00a3afdc85185146cc95c41dd09514d0c271d31db5e38d510b2fb5ba55"
+    },
+    {
+      "path": "experiments/expo-design-theory/scripts/finalize-proof.mts",
+      "sha256": "8230d58349e6f33aab420cec3636a281e13fbb8a3485c652ff288f76ff9151f1"
+    },
+    {
+      "path": "experiments/expo-design-theory/scripts/generate-design.mts",
+      "sha256": "e743c02e5746c02a7c7724b118de791cb18b317855fea2b837f8aefd7ace23d5"
+    },
+    {
+      "path": "experiments/expo-design-theory/scripts/native-proof.mjs",
+      "sha256": "de5b25032d937a8fed068a7ef02fab1506d8e8e2414e65a356e957cd6600b71f"
+    },
+    {
+      "path": "experiments/expo-design-theory/scripts/proof-contract.mjs",
+      "sha256": "a0d3f65660ef5a192aec92b752d4ff437240275c48a8aea10f75ddf1bb446d81"
+    },
+    {
+      "path": "experiments/expo-design-theory/scripts/session.mjs",
+      "sha256": "0ed50876f51d9e00df51ed8950fcc0d28cd39bbcb5aedd9b8443a1554da6623d"
+    },
+    {
+      "path": "experiments/expo-design-theory/scripts/source-identity.mjs",
+      "sha256": "e98ccd530d5d8ce8511cb9818df09cd695f95a131c0ee28f6cfaa453a4d40c1e"
+    },
+    {
+      "path": "experiments/expo-design-theory/src/App.jsx",
+      "sha256": "00f32f176276956a71227b3466e5de53e9e6ecb9c5cef6a2b04a80a927d9a1fc"
+    },
+    {
+      "path": "experiments/expo-design-theory/src/assets.d.ts",
+      "sha256": "de1e7dd1aef1f88d1640d98fff8f0adc0ee8f0e1379d33035c1444ad67a241c9"
+    },
+    {
+      "path": "experiments/expo-design-theory/src/content.js",
+      "sha256": "464daa5efd8af80f85d9ea189b5877a1145c3db61d7bc4252e9cfdc44e1c6192"
+    },
+    {
+      "path": "experiments/expo-design-theory/src/design.generated.json",
+      "sha256": "af25e6596ee07dc5204da34900a29bd6dba96371ae50150118ba2bcb029dc5eb"
+    },
+    {
+      "path": "experiments/expo-design-theory/src/Scroll.jsx",
+      "sha256": "93cd97e8619b15f76edb00fc3e3b5530cf9b427e406153f33ef7b21496a1c4db"
+    },
+    {
+      "path": "experiments/expo-design-theory/src/Scroll.native.jsx",
+      "sha256": "5d2944b0590fa1a975ac309224d7e8452308167e812ef8d5b14a87858fc00b6a"
+    },
+    {
+      "path": "experiments/expo-design-theory/src/useObservations.jsx",
+      "sha256": "5e053a62f1bc6ff4d152cd7bd287c95ffa5b7695a39907bef4ecb47258f79f90"
+    },
+    {
+      "path": "experiments/expo-design-theory/strict.css",
+      "sha256": "2c87a07763a379df62870b6ebded590dedf7df150f3c2e3c8ba8305deda7356f"
+    },
+    {
+      "path": "experiments/expo-design-theory/tsconfig.json",
+      "sha256": "ba945066f305c4e7af9263c4d071af62f60994c1f20b2dcbb7c39fafb497bfb6"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "dc82ff1d7932a21163672c0bcba893740bc348639f9e481797011eb1205c554d"
+    },
+    {
+      "path": "scripts/build-design-theory.mjs",
+      "sha256": "96f2b598bbc059dc631074a2ef11dcbe5928d282f0a71fd32537f814de1c6997"
+    },
+    {
+      "path": "scripts/expo-proof-contract.mjs",
+      "sha256": "d52e41776c2eff8429e2c2dc163518b74974afc09582558308843357df8c9741"
+    },
+    {
+      "path": "scripts/prove-choice-effectiveness.mjs",
+      "sha256": "ba23f69ddbd73061928a0399cfb894c4ebdf43bc59b95521e9d452279a9992b7"
+    },
+    {
+      "path": "scripts/prove-design-field.mjs",
+      "sha256": "0d195559f877045f15ce3c600829d396c3618d0fc0aaab807063ebe9bf9186e8"
+    },
+    {
+      "path": "scripts/prove-design-theory.mjs",
+      "sha256": "791c46ed9735f9c0d41e8f2f2095a20a8ee676d7ab11a94a1b920a64c3425394"
+    },
+    {
+      "path": "scripts/prove-dom-surface-gpu.mjs",
+      "sha256": "d77c683c8a40325f3be31a2c92dcf69ed5f86e021cb027102b727004aad2aff4"
+    },
+    {
+      "path": "scripts/prove-dom-surfaces.mjs",
+      "sha256": "3ce12ea9fd3d2fecb06e6f0fbeac0b5aaa59fecfb5cea3053c200662a9a9359c"
+    },
+    {
+      "path": "scripts/prove-expo-design-theory.mjs",
+      "sha256": "6e72df202ef4ed7349d714e23cbe3de4396ec64c7c6ba2c9de14bb4ccdd16c38"
+    },
+    {
+      "path": "scripts/prove-typography.mjs",
+      "sha256": "644c370064ac283a6338315df541d669bc572f338fc097703dda19117a15e13f"
+    },
+    {
+      "path": "scripts/prove-validation-machine.mjs",
+      "sha256": "91723d62d6ea96d02ea7190f9e3e2d1e832250887afa3545e4c257dd08b431ac"
+    },
+    {
+      "path": "scripts/semif-local.sh",
+      "sha256": "94277a2a74e8a2a6745e7d600677fef4d3645f9cf4008e0a9470caebd9107555"
+    },
+    {
+      "path": "scripts/semif-progress.py",
+      "sha256": "d37ab46892946a305767760317a02f6c0a81bf1f89520e93df37194a74b45653"
+    },
+    {
+      "path": "src/browser-dom-light.ts",
+      "sha256": "2e69e318efbe6d80fa6859d2f6272e8ba91e6affa86195a60e7702e8e32b3807"
+    },
+    {
+      "path": "src/browser-tilt.ts",
+      "sha256": "988b73779f8cc2281f248f9c96cd4830659a194496e19be33290ee1b779b0ed3"
+    },
+    {
+      "path": "src/decision-workflow.ts",
+      "sha256": "8f5ecef8a2fae27c3222e6968b383701d3b536f615ba6484ee2d49038e302506"
+    },
+    {
+      "path": "src/design-context.ts",
+      "sha256": "1b53a8d5166722d46176ff1ac688647900d8966e341a4d69dd7736d4043a04d1"
+    },
+    {
+      "path": "src/design-field-vocabulary.ts",
+      "sha256": "4ba5d0b57738ddc1dda16c1b1e4eb8dd86ffbe66ab5b8137c9f18172ee3b34ce"
+    },
+    {
+      "path": "src/design-field.ts",
+      "sha256": "376d7b22a9d3c2185cd4e9a8e94aa0f7f4da2111b0a7ed6d54ee9c386c1846a6"
+    },
+    {
+      "path": "src/dom-surface-gpu.ts",
+      "sha256": "2c363138bae85c0fd4053f35b2de8fcb1e0591f07fcfcbeb943011a9e85d3001"
+    },
+    {
+      "path": "src/dom-surface-shading.ts",
+      "sha256": "ea00caf8a0fa04514b7311e6c95060bf114f3a539b9db64daba08c643ba634de"
+    },
+    {
+      "path": "src/dom-surface.ts",
+      "sha256": "a48beb62babc4a340b1b6bbe660604dfab70d95afbe49a83d837aa54a0d31c11"
+    },
+    {
+      "path": "src/emission.ts",
+      "sha256": "794e6949a81a9c3a8bf31192b746b5dcf8a14014bae6db694fa84ffe2acabe27"
+    },
+    {
+      "path": "src/energy-analysis.ts",
+      "sha256": "46382d8e9fce4ad6db2cc6dd75b3c52d6ec31c677c7d788afbedeea529d682a0"
+    },
+    {
+      "path": "src/energy.ts",
+      "sha256": "2a08f830d8055b69d303a71fc76a5a7b1c45bf47ab0a64f7eb8bbfa2f0901db1"
+    },
+    {
+      "path": "src/fonts.ts",
+      "sha256": "0553158be10eea31ced0bfde887f32fdff6beb704fbf22b80d1ae602345ac33f"
+    },
+    {
+      "path": "src/identity.ts",
+      "sha256": "1733b1060364133ce9e24cd2a960e0dd0f6e36220267c80ecc4d5cff36b234eb"
+    },
+    {
+      "path": "src/material-relations.ts",
+      "sha256": "6bc11197459d5dc05382b18286baf0092ed62d721142f8d81ac09b52f0412944"
+    },
+    {
+      "path": "src/math-expression.ts",
+      "sha256": "1be57d263ce5976c1e5b0ff624273721395823efe7792db9b6a48afcc8e13807"
+    },
+    {
+      "path": "src/measurement.ts",
+      "sha256": "cacee5e5ce7b5981b26c621d5979c8b4f255c393c83fb27a383164c3d1f82f6b"
+    },
+    {
+      "path": "src/media-geometry.ts",
+      "sha256": "7efa48d4dd27d478dbd31928139c4f3a2e2d0acbc3c7555a62a3853a88ca3bb0"
+    },
+    {
+      "path": "src/motion-dynamics.ts",
+      "sha256": "a1d4b5c49631f3b9fa50ac8e6def7e9091530dc95898459cf3f0cbdc27db3093"
+    },
+    {
+      "path": "src/motion.ts",
+      "sha256": "9f9502b04059d4aafe53d0250b9c750f3a27b9c88537c7759dd6bdea4342ea1d"
+    },
+    {
+      "path": "src/output-bindings.ts",
+      "sha256": "1b52eae8ab933d34fb9550300df4dc333122f8ba3ffd4dd6e579a6b73c9efe3f"
+    },
+    {
+      "path": "src/palette.ts",
+      "sha256": "957dae501a57bc1fa3b8dd4b0fda0831df90a7cb5eab3caeebb7afd9fb888f6a"
+    },
+    {
+      "path": "src/prose.ts",
+      "sha256": "15f4a4bb2df6358c0eb47662678e79a4db18b2e4c87f73e53820e0763a47da01"
+    },
+    {
+      "path": "src/relational-kernels.ts",
+      "sha256": "75c33979c0b4fbec0e21687b76ba9f5af2406361c72839161a6c3b5c62f3c3db"
+    },
+    {
+      "path": "src/responsive.ts",
+      "sha256": "fd522d24c2bfa7f446870c2b5ce39071fa86aacf7fef3b6f69baea17879462ab"
+    },
+    {
+      "path": "src/selector-process.ts",
+      "sha256": "75cb501981bd850001613918fb32b782dbb4e209785263cdfd68672c33f7332a"
+    },
+    {
+      "path": "src/selector.ts",
+      "sha256": "dc686b35f739461e2d54e571eb0c4efb93176d4a58d94c936d5f48835a40db6f"
+    },
+    {
+      "path": "src/surface.ts",
+      "sha256": "fd0a89a64c42e59c8738ffd7bb87f36d49d384f9753a3d318253209f5310220c"
+    },
+    {
+      "path": "src/typography-browser.ts",
+      "sha256": "b33c497d5a7836990782d184f440d8a591ea92d3fb1b8bfcbf7b602298473857"
+    },
+    {
+      "path": "src/typography-inspection.ts",
+      "sha256": "468270608d21ec30bf02524a6eb7bc0999a218a1d2adca066fa8e82a7297de4e"
+    },
+    {
+      "path": "src/validation-machine.ts",
+      "sha256": "5be3411dfddbee049e7d0a67f98548d771871fad69aa56e1a1fac8d67ed7adcf"
+    },
+    {
+      "path": "src/wireframe.ts",
+      "sha256": "ddf798565aae45b1728287053aea8dd41cf3aa5415433cd8b9919d543094b3be"
+    }
+  ],
+  "unsupported": [
+    "Human preference, award-level aesthetic quality, universal beauty scoring, and general end-to-end token savings are not measured.",
+    "Browser GPU/CSS material receipts do not establish native material equivalence or physical-device power/thermal/Safari-sensor behavior.",
+    "Expo native receipts cover virtual devices and declared scenarios, not native release-build performance, every API, OS Dynamic Type or a complete accessibility audit.",
+    "Kernel proof and blank template smoke are not completed Relay applications. The Luna/Sol/Astra builder comparison has not run.",
+    "Earlier matched-workflow comparisons, failed attempts and stale tokenizer counts remain historical and are excluded from this current manifest."
+  ],
+  "files": [
+    {
+      "file": "verification-design-theory-final/summary.json.gz",
+      "source": "artifacts/verification-design-theory-final/summary.json",
+      "sha256": "343140aad1014704f9bbc44b8c56778687c2696ff36630e520863359c6320ca4",
+      "bytes": 76110,
+      "sourceSha256": "171042749226f6e351ec2589ee2c5f733464f817e5936faa3d5467c153369f4b",
+      "sourceBytes": 303273,
+      "encoding": "gzip",
+      "uncompressedSha256": "171042749226f6e351ec2589ee2c5f733464f817e5936faa3d5467c153369f4b",
+      "uncompressedBytes": 303273
+    },
+    {
+      "file": "verification-design-theory-final/build.log",
+      "source": "artifacts/verification-design-theory-final/build.log",
+      "sha256": "5652d5522d0d747ea8144f52cba078e940b290630f824ac216f6011e35b48181",
+      "bytes": 69,
+      "sourceSha256": "5652d5522d0d747ea8144f52cba078e940b290630f824ac216f6011e35b48181",
+      "sourceBytes": 69
+    },
+    {
+      "file": "verification-design-theory-final/types.log",
+      "source": "artifacts/verification-design-theory-final/types.log",
+      "sha256": "d097d1623e2c58eb50d42d5f7f4401d2e66a6023404e0b0f48f267b868b1e615",
+      "bytes": 58,
+      "sourceSha256": "d097d1623e2c58eb50d42d5f7f4401d2e66a6023404e0b0f48f267b868b1e615",
+      "sourceBytes": 58
+    },
+    {
+      "file": "verification-design-theory-final/native-types.log",
+      "source": "artifacts/verification-design-theory-final/native-types.log",
+      "sha256": "6679293f34eaacf488f82600e44ea811d1cb6b1514979004f41999537e059b87",
+      "bytes": 72,
+      "sourceSha256": "6679293f34eaacf488f82600e44ea811d1cb6b1514979004f41999537e059b87",
+      "sourceBytes": 72
+    },
+    {
+      "file": "verification-design-theory-final/unit.log",
+      "source": "artifacts/verification-design-theory-final/unit.log",
+      "sha256": "8f10a3281fcb70dcd057f021188334510f3c80a27ee26bc9e48f793232ffcbd5",
+      "bytes": 50567,
+      "sourceSha256": "8f10a3281fcb70dcd057f021188334510f3c80a27ee26bc9e48f793232ffcbd5",
+      "sourceBytes": 50567
+    },
+    {
+      "file": "verification-design-theory-final/browser.log",
+      "source": "artifacts/verification-design-theory-final/browser.log",
+      "sha256": "7fa675ebf803bed880e1fa426c3aa0a460115a349f9631b29aad9706a1bd281f",
+      "bytes": 1027,
+      "sourceSha256": "7fa675ebf803bed880e1fa426c3aa0a460115a349f9631b29aad9706a1bd281f",
+      "sourceBytes": 1027
+    },
+    {
+      "file": "verification-design-theory-final/commands-and-app.log",
+      "source": "artifacts/verification-design-theory-final/commands-and-app.log",
+      "sha256": "23ef015f751d2fbddd094d1913fdba9ce843be1dc12b3338bacbe9bae3789929",
+      "bytes": 3332,
+      "sourceSha256": "23ef015f751d2fbddd094d1913fdba9ce843be1dc12b3338bacbe9bae3789929",
+      "sourceBytes": 3332
+    },
+    {
+      "file": "verification-design-theory-final/consumer.log",
+      "source": "artifacts/verification-design-theory-final/consumer.log",
+      "sha256": "3b222533128938d98807124aa94aed358204562c0c453f7ecd9b6cb98e554e7f",
+      "bytes": 90,
+      "sourceSha256": "3b222533128938d98807124aa94aed358204562c0c453f7ecd9b6cb98e554e7f",
+      "sourceBytes": 90
+    },
+    {
+      "file": "verification-design-theory-final/fieldwork-build.log",
+      "source": "artifacts/verification-design-theory-final/fieldwork-build.log",
+      "sha256": "94029fede5a7c946d01bda75585b06395c4b1f17d5515dd2f2857831352efae6",
+      "bytes": 24,
+      "sourceSha256": "94029fede5a7c946d01bda75585b06395c4b1f17d5515dd2f2857831352efae6",
+      "sourceBytes": 24
+    },
+    {
+      "file": "verification-design-theory-final/fieldwork-web.log",
+      "source": "artifacts/verification-design-theory-final/fieldwork-web.log",
+      "sha256": "ec2de3d5b27435e512184cb50e8a4627139af31ff121373960b1fc09f581d4d2",
+      "bytes": 72,
+      "sourceSha256": "ec2de3d5b27435e512184cb50e8a4627139af31ff121373960b1fc09f581d4d2",
+      "sourceBytes": 72
+    },
+    {
+      "file": "verification-design-theory-final/vela-policy.log",
+      "source": "artifacts/verification-design-theory-final/vela-policy.log",
+      "sha256": "5f685bb2a9beb8e9dd975a93d439778d3275f6f69ec4f020553bcb74e823b1f0",
+      "bytes": 16061,
+      "sourceSha256": "5f685bb2a9beb8e9dd975a93d439778d3275f6f69ec4f020553bcb74e823b1f0",
+      "sourceBytes": 16061
+    },
+    {
+      "file": "verification-design-theory-final/vela-build.log",
+      "source": "artifacts/verification-design-theory-final/vela-build.log",
+      "sha256": "90984ce90a81cac39bf6fdb4c0d19be0165cf3af4c074bf6134506db9831df35",
+      "bytes": 19,
+      "sourceSha256": "90984ce90a81cac39bf6fdb4c0d19be0165cf3af4c074bf6134506db9831df35",
+      "sourceBytes": 19
+    },
+    {
+      "file": "verification-design-theory-final/vela-web.log",
+      "source": "artifacts/verification-design-theory-final/vela-web.log",
+      "sha256": "702757ec1af12c5635d7b7057bd823adf04d59c8301a182c8d70d88ee4e9a44f",
+      "bytes": 2646,
+      "sourceSha256": "702757ec1af12c5635d7b7057bd823adf04d59c8301a182c8d70d88ee4e9a44f",
+      "sourceBytes": 2646
+    },
+    {
+      "file": "verification-design-theory-final/workflow-mathematical.log",
+      "source": "artifacts/verification-design-theory-final/workflow-mathematical.log",
+      "sha256": "bdee85ea7a3c68176c9f426de0de7ddc7b050427ac4b6323e5a9ce77fe67fade",
+      "bytes": 3109,
+      "sourceSha256": "bdee85ea7a3c68176c9f426de0de7ddc7b050427ac4b6323e5a9ce77fe67fade",
+      "sourceBytes": 3109
+    },
+    {
+      "file": "verification-design-theory-final/vela-motion.log",
+      "source": "artifacts/verification-design-theory-final/vela-motion.log",
+      "sha256": "86f957fbe6e3aa314fcfb3d05907386526002050428643715f65afc101a395e2",
+      "bytes": 121,
+      "sourceSha256": "86f957fbe6e3aa314fcfb3d05907386526002050428643715f65afc101a395e2",
+      "sourceBytes": 121
+    },
+    {
+      "file": "verification-design-theory-final/gallery-build.log",
+      "source": "artifacts/verification-design-theory-final/gallery-build.log",
+      "sha256": "8c1865f63a7a6c947b53694cb0641f49cfe72381c6435210a3c34188a7e6fc07",
+      "bytes": 33,
+      "sourceSha256": "8c1865f63a7a6c947b53694cb0641f49cfe72381c6435210a3c34188a7e6fc07",
+      "sourceBytes": 33
+    },
+    {
+      "file": "verification-design-theory-final/gallery-web.log",
+      "source": "artifacts/verification-design-theory-final/gallery-web.log",
+      "sha256": "6ca8573cb59b3d890005987f4a631b2dbd9e317e87561ac3170b04cd0eac6a84",
+      "bytes": 88,
+      "sourceSha256": "6ca8573cb59b3d890005987f4a631b2dbd9e317e87561ac3170b04cd0eac6a84",
+      "sourceBytes": 88
+    },
+    {
+      "file": "verification-design-theory-final/dom-surfaces.log",
+      "source": "artifacts/verification-design-theory-final/dom-surfaces.log",
+      "sha256": "6392682125f4ca34ff249be85d71642a928a2aac9c36a2b2857a3eac32a7a7ab",
+      "bytes": 111,
+      "sourceSha256": "6392682125f4ca34ff249be85d71642a928a2aac9c36a2b2857a3eac32a7a7ab",
+      "sourceBytes": 111
+    },
+    {
+      "file": "verification-design-theory-final/dom-surface-gpu.log",
+      "source": "artifacts/verification-design-theory-final/dom-surface-gpu.log",
+      "sha256": "b9ee20b335da744b17ff54496d8d42fd2cf13abca23b6757da659aa34cb872f7",
+      "bytes": 51,
+      "sourceSha256": "b9ee20b335da744b17ff54496d8d42fd2cf13abca23b6757da659aa34cb872f7",
+      "sourceBytes": 51
+    },
+    {
+      "file": "verification-design-theory-final/design-field.log",
+      "source": "artifacts/verification-design-theory-final/design-field.log",
+      "sha256": "958368df2e56101783ac787b89c6f6401dc860094af7f1ad74d0a5150f6c0b66",
+      "bytes": 1401,
+      "sourceSha256": "958368df2e56101783ac787b89c6f6401dc860094af7f1ad74d0a5150f6c0b66",
+      "sourceBytes": 1401
+    },
+    {
+      "file": "verification-design-theory-final/choice-effectiveness.log",
+      "source": "artifacts/verification-design-theory-final/choice-effectiveness.log",
+      "sha256": "73c9f1ac286df72bcb813162944602c6bdd07579989b551a8cc22e3b2c832699",
+      "bytes": 14918,
+      "sourceSha256": "73c9f1ac286df72bcb813162944602c6bdd07579989b551a8cc22e3b2c832699",
+      "sourceBytes": 14918
+    },
+    {
+      "file": "verification-design-theory-final/relational-kernels.log",
+      "source": "artifacts/verification-design-theory-final/relational-kernels.log",
+      "sha256": "a0c6afe4eb035da9995a090553112a8c6adac09f75fcfa7bf2dd2595bcdbc2f5",
+      "bytes": 3355,
+      "sourceSha256": "a0c6afe4eb035da9995a090553112a8c6adac09f75fcfa7bf2dd2595bcdbc2f5",
+      "sourceBytes": 3355
+    },
+    {
+      "file": "verification-design-theory-final/expo-web.log",
+      "source": "artifacts/verification-design-theory-final/expo-web.log",
+      "sha256": "004a6758333b2b4ce226390071deb6507ab83640dc9cb3c8e6f89183331f04b6",
+      "bytes": 1670,
+      "sourceSha256": "004a6758333b2b4ce226390071deb6507ab83640dc9cb3c8e6f89183331f04b6",
+      "sourceBytes": 1670
+    },
+    {
+      "file": "verification-design-theory-final/gallery-materials.log",
+      "source": "artifacts/verification-design-theory-final/gallery-materials.log",
+      "sha256": "eef79086aac61f864e4f3989004e745e1eb63bfef55f1126391f16330716622b",
+      "bytes": 27,
+      "sourceSha256": "eef79086aac61f864e4f3989004e745e1eb63bfef55f1126391f16330716622b",
+      "sourceBytes": 27
+    },
+    {
+      "file": "verification-design-theory-final/gallery-interactions.log",
+      "source": "artifacts/verification-design-theory-final/gallery-interactions.log",
+      "sha256": "1ee3c1d19c85f48988b56c8aec3ccaa1f70d3bddfee55c829ece4026343d0469",
+      "bytes": 10078,
+      "sourceSha256": "1ee3c1d19c85f48988b56c8aec3ccaa1f70d3bddfee55c829ece4026343d0469",
+      "sourceBytes": 10078
+    },
+    {
+      "file": "verification-design-theory-final/gallery-interactions-webkit.log",
+      "source": "artifacts/verification-design-theory-final/gallery-interactions-webkit.log",
+      "sha256": "58a09f877a29464eadf92b51978a4d4185ab5de15cccc394ed1053fb761325f0",
+      "bytes": 9205,
+      "sourceSha256": "58a09f877a29464eadf92b51978a4d4185ab5de15cccc394ed1053fb761325f0",
+      "sourceBytes": 9205
+    },
+    {
+      "file": "verification-design-theory-final/validation-phases.log",
+      "source": "artifacts/verification-design-theory-final/validation-phases.log",
+      "sha256": "c5158016537d7ffccbe4f81648b392fa194d4e9ca420911900e53036776d3648",
+      "bytes": 99,
+      "sourceSha256": "c5158016537d7ffccbe4f81648b392fa194d4e9ca420911900e53036776d3648",
+      "sourceBytes": 99
+    },
+    {
+      "file": "verification-design-theory-final/typography.log",
+      "source": "artifacts/verification-design-theory-final/typography.log",
+      "sha256": "aa3564c5c2e6d650a7bfd757b362f44120fec4378787a3f00dbc18a284448a47",
+      "bytes": 277,
+      "sourceSha256": "aa3564c5c2e6d650a7bfd757b362f44120fec4378787a3f00dbc18a284448a47",
+      "sourceBytes": 277
+    },
+    {
+      "file": "verification-design-theory-final/migrations.log",
+      "source": "artifacts/verification-design-theory-final/migrations.log",
+      "sha256": "1769a0b031a188ccc946630e3ba86c290316755e49721829e123df6ed73b7d21",
+      "bytes": 69,
+      "sourceSha256": "1769a0b031a188ccc946630e3ba86c290316755e49721829e123df6ed73b7d21",
+      "sourceBytes": 69
+    },
+    {
+      "file": "verification-design-theory-final/native-ios.log",
+      "source": "artifacts/verification-design-theory-final/native-ios.log",
+      "sha256": "e7db27140343b1c6c0cd1fd7ebafea79a068565876aa83a134facbdfec55a80c",
+      "bytes": 411,
+      "sourceSha256": "e7db27140343b1c6c0cd1fd7ebafea79a068565876aa83a134facbdfec55a80c",
+      "sourceBytes": 411
+    },
+    {
+      "file": "verification-design-theory-final/native-android.log",
+      "source": "artifacts/verification-design-theory-final/native-android.log",
+      "sha256": "cfe48be82075b3e3275861e92ab5326f98645b758c2bc63a1e8126443a51327c",
+      "bytes": 410,
+      "sourceSha256": "cfe48be82075b3e3275861e92ab5326f98645b758c2bc63a1e8126443a51327c",
+      "sourceBytes": 410
+    },
+    {
+      "file": "verification-design-theory-final/selector.log",
+      "source": "artifacts/verification-design-theory-final/selector.log",
+      "sha256": "9d6362ebb35a918bb2676b65ccc793310e3969f45484dd3f72f36ae836539962",
+      "bytes": 3757,
+      "sourceSha256": "9d6362ebb35a918bb2676b65ccc793310e3969f45484dd3f72f36ae836539962",
+      "sourceBytes": 3757
+    },
+    {
+      "file": "verification-design-theory-final/matrix-web.log",
+      "source": "artifacts/verification-design-theory-final/matrix-web.log",
+      "sha256": "eab0cc5421812b98e4f00d9ef6fd5947da716a6028ee00a71c45e1d64992def6",
+      "bytes": 680,
+      "sourceSha256": "eab0cc5421812b98e4f00d9ef6fd5947da716a6028ee00a71c45e1d64992def6",
+      "sourceBytes": 680
+    },
+    {
+      "file": "verification-design-theory-final/matrix-native-ios.log",
+      "source": "artifacts/verification-design-theory-final/matrix-native-ios.log",
+      "sha256": "3743dc15204a6c6d7c130ce9a6e03c744e4687d9c9d859efe93b95d741f0a9c3",
+      "bytes": 971,
+      "sourceSha256": "3743dc15204a6c6d7c130ce9a6e03c744e4687d9c9d859efe93b95d741f0a9c3",
+      "sourceBytes": 971
+    },
+    {
+      "file": "verification-design-theory-final/matrix-native-android.log",
+      "source": "artifacts/verification-design-theory-final/matrix-native-android.log",
+      "sha256": "1eddf3c1743cb31f94788d73883b75ba3cd3b7973c7aa1fa1e534534414ef9ab",
+      "bytes": 1373,
+      "sourceSha256": "1eddf3c1743cb31f94788d73883b75ba3cd3b7973c7aa1fa1e534534414ef9ab",
+      "sourceBytes": 1373
+    },
+    {
+      "file": "design-theory/proof/report.json",
+      "source": "artifacts/design-theory/proof/report.json",
+      "sha256": "84c2f1f0968620ad337a85ab0ed9ced62691216b529979fc324e96380b1daf7b",
+      "bytes": 140733,
+      "sourceSha256": "84c2f1f0968620ad337a85ab0ed9ced62691216b529979fc324e96380b1daf7b",
+      "sourceBytes": 140733
+    },
+    {
+      "file": "design-theory/interactions-verification/report.json.gz",
+      "source": "artifacts/design-theory/interactions-verification/report.json",
+      "sha256": "4b49671fc9f80d31363489f8af907b2a3cccb3b3433f762e7bc9e06f0f65eee5",
+      "bytes": 23603,
+      "sourceSha256": "b7b66f1d7f94b343c668b335cfe5c2cf27843b474c637fbca128b928ae7859d7",
+      "sourceBytes": 602153,
+      "encoding": "gzip",
+      "uncompressedSha256": "b7b66f1d7f94b343c668b335cfe5c2cf27843b474c637fbca128b928ae7859d7",
+      "uncompressedBytes": 602153
+    },
+    {
+      "file": "design-theory/interactions-verification-webkit/report.json.gz",
+      "source": "artifacts/design-theory/interactions-verification-webkit/report.json",
+      "sha256": "1b9a0ef5925d5c49a4c83745621a714b172c7861ae2df852d7507e223824ffc2",
+      "bytes": 19095,
+      "sourceSha256": "30654bd28952d6d34b5fd69de1e7c6f3dd012f1057bf4af838dd6906f920ce36",
+      "sourceBytes": 380223,
+      "encoding": "gzip",
+      "uncompressedSha256": "30654bd28952d6d34b5fd69de1e7c6f3dd012f1057bf4af838dd6906f920ce36",
+      "uncompressedBytes": 380223
+    },
+    {
+      "file": "design-theory/material-integration/report.json",
+      "source": "artifacts/design-theory/material-integration/report.json",
+      "sha256": "e0ef0e234ae22f515eee0721328b470b106b98f8b4ef68670a556fc94bd648a7",
+      "bytes": 174943,
+      "sourceSha256": "e0ef0e234ae22f515eee0721328b470b106b98f8b4ef68670a556fc94bd648a7",
+      "sourceBytes": 174943
+    },
+    {
+      "file": "design-theory/proof/chromium-320-viewport.png",
+      "source": "artifacts/design-theory/proof/chromium-320-viewport.png",
+      "sha256": "508898dfcab2f99c88079ad6d3d3e747da8180509f04afaa31c3728f26afed5e",
+      "bytes": 69557,
+      "sourceSha256": "508898dfcab2f99c88079ad6d3d3e747da8180509f04afaa31c3728f26afed5e",
+      "sourceBytes": 69557
+    },
+    {
+      "file": "design-theory/proof/chromium-390-viewport.png",
+      "source": "artifacts/design-theory/proof/chromium-390-viewport.png",
+      "sha256": "228e008663078305cb39dec652a19beda305ec33fb32f3b96e2c7a76220845b9",
+      "bytes": 80862,
+      "sourceSha256": "228e008663078305cb39dec652a19beda305ec33fb32f3b96e2c7a76220845b9",
+      "sourceBytes": 80862
+    },
+    {
+      "file": "design-theory/proof/chromium-834-viewport.png",
+      "source": "artifacts/design-theory/proof/chromium-834-viewport.png",
+      "sha256": "b6aadbfe766cef867a1adbde412d8e03781a3a9d8588760585a2c361f79385a3",
+      "bytes": 135473,
+      "sourceSha256": "b6aadbfe766cef867a1adbde412d8e03781a3a9d8588760585a2c361f79385a3",
+      "sourceBytes": 135473
+    },
+    {
+      "file": "design-theory/proof/chromium-1440-viewport.png",
+      "source": "artifacts/design-theory/proof/chromium-1440-viewport.png",
+      "sha256": "2f399e5ecafe48d36a2a6bc23d87dcffddeb40ecf36293c3bc8b28c0f00545aa",
+      "bytes": 159097,
+      "sourceSha256": "2f399e5ecafe48d36a2a6bc23d87dcffddeb40ecf36293c3bc8b28c0f00545aa",
+      "sourceBytes": 159097
+    },
+    {
+      "file": "design-theory/proof/webkit-320-viewport.png",
+      "source": "artifacts/design-theory/proof/webkit-320-viewport.png",
+      "sha256": "a61dd8815dba920650b4cb21f59a209d91dbfb8352d1d825e45ac016243e4c99",
+      "bytes": 90983,
+      "sourceSha256": "a61dd8815dba920650b4cb21f59a209d91dbfb8352d1d825e45ac016243e4c99",
+      "sourceBytes": 90983
+    },
+    {
+      "file": "design-theory/proof/webkit-390-viewport.png",
+      "source": "artifacts/design-theory/proof/webkit-390-viewport.png",
+      "sha256": "2886c50d443843dbddb390c6dcf27c5afc2bd7539a28124daf2ed144399f7f81",
+      "bytes": 109591,
+      "sourceSha256": "2886c50d443843dbddb390c6dcf27c5afc2bd7539a28124daf2ed144399f7f81",
+      "sourceBytes": 109591
+    },
+    {
+      "file": "design-theory/proof/webkit-834-viewport.png",
+      "source": "artifacts/design-theory/proof/webkit-834-viewport.png",
+      "sha256": "12182d6ea912b5cbe249fccccc306702c98e6b5cf5713eddd5f084ae7174f01a",
+      "bytes": 179566,
+      "sourceSha256": "12182d6ea912b5cbe249fccccc306702c98e6b5cf5713eddd5f084ae7174f01a",
+      "sourceBytes": 179566
+    },
+    {
+      "file": "design-theory/proof/webkit-1440-viewport.png",
+      "source": "artifacts/design-theory/proof/webkit-1440-viewport.png",
+      "sha256": "906fdb1731b33452c8cdb46e0b42af5c95e693c8dce58ce8be5b8e19974a3de5",
+      "bytes": 227183,
+      "sourceSha256": "906fdb1731b33452c8cdb46e0b42af5c95e693c8dce58ce8be5b8e19974a3de5",
+      "sourceBytes": 227183
+    },
+    {
+      "file": "design-theory/material-integration/chromium-390-hero.png",
+      "source": "artifacts/design-theory/material-integration/chromium-390-hero.png",
+      "sha256": "ddd126d64f682978a0c4447d78a8aa9655b860d68834fc02c17072fd0c8276f2",
+      "bytes": 83342,
+      "sourceSha256": "ddd126d64f682978a0c4447d78a8aa9655b860d68834fc02c17072fd0c8276f2",
+      "sourceBytes": 83342
+    },
+    {
+      "file": "design-theory/material-integration/chromium-834-hero.png",
+      "source": "artifacts/design-theory/material-integration/chromium-834-hero.png",
+      "sha256": "3e1ca73d0fa963aeb4c8d5cfb2e74adf33ae66102fd7b663e3c3432775460c24",
+      "bytes": 111143,
+      "sourceSha256": "3e1ca73d0fa963aeb4c8d5cfb2e74adf33ae66102fd7b663e3c3432775460c24",
+      "sourceBytes": 111143
+    },
+    {
+      "file": "design-theory/material-integration/chromium-1440-hero.png",
+      "source": "artifacts/design-theory/material-integration/chromium-1440-hero.png",
+      "sha256": "fb2604c6aad46e4b61e31e2d44b07a372401d360ccf84f007a42616c63c99842",
+      "bytes": 146962,
+      "sourceSha256": "fb2604c6aad46e4b61e31e2d44b07a372401d360ccf84f007a42616c63c99842",
+      "sourceBytes": 146962
+    },
+    {
+      "file": "design-theory/material-integration/webkit-390-hero.png",
+      "source": "artifacts/design-theory/material-integration/webkit-390-hero.png",
+      "sha256": "911fe0f35f0541552fc03dbac34ce1e1c7da3509913ccfb455b49fe9c2177f49",
+      "bytes": 116292,
+      "sourceSha256": "911fe0f35f0541552fc03dbac34ce1e1c7da3509913ccfb455b49fe9c2177f49",
+      "sourceBytes": 116292
+    },
+    {
+      "file": "design-theory/material-integration/webkit-834-hero.png",
+      "source": "artifacts/design-theory/material-integration/webkit-834-hero.png",
+      "sha256": "d54357f9ce729de97bf9058820bf1f27d1e9b3f9563432c3543fcceb815b25c7",
+      "bytes": 152804,
+      "sourceSha256": "d54357f9ce729de97bf9058820bf1f27d1e9b3f9563432c3543fcceb815b25c7",
+      "sourceBytes": 152804
+    },
+    {
+      "file": "design-theory/material-integration/webkit-1440-hero.png",
+      "source": "artifacts/design-theory/material-integration/webkit-1440-hero.png",
+      "sha256": "ab47ed0c5b8589ec1bbff60bc425ca2c0a366763ffd73417991628ba707d512e",
+      "bytes": 212738,
+      "sourceSha256": "ab47ed0c5b8589ec1bbff60bc425ca2c0a366763ffd73417991628ba707d512e",
+      "sourceBytes": 212738
+    },
+    {
+      "file": "design-theory/material-integration/chromium-fallback.png",
+      "source": "artifacts/design-theory/material-integration/chromium-fallback.png",
+      "sha256": "a3b04e5ba32236c4570a44ddf6a9a1fdfea94bff7c6fa187233778b729640bd7",
+      "bytes": 46402,
+      "sourceSha256": "a3b04e5ba32236c4570a44ddf6a9a1fdfea94bff7c6fa187233778b729640bd7",
+      "sourceBytes": 46402
+    },
+    {
+      "file": "design-theory/material-integration/webkit-fallback.png",
+      "source": "artifacts/design-theory/material-integration/webkit-fallback.png",
+      "sha256": "3aac4df05774cb1a05670d036ab0dfe2c405864e9cd328357996d4163be0dbef",
+      "bytes": 92580,
+      "sourceSha256": "3aac4df05774cb1a05670d036ab0dfe2c405864e9cd328357996d4163be0dbef",
+      "sourceBytes": 92580
+    },
+    {
+      "file": "dom-surfaces/summary.json",
+      "source": "artifacts/dom-surfaces/summary.json",
+      "sha256": "fed3f97bdb41a9341c4f21ad18790133ccbbc5a8e53673f3884b96f0bbbacf67",
+      "bytes": 4913,
+      "sourceSha256": "fed3f97bdb41a9341c4f21ad18790133ccbbc5a8e53673f3884b96f0bbbacf67",
+      "sourceBytes": 4913
+    },
+    {
+      "file": "dom-surfaces/proof.json",
+      "source": "artifacts/dom-surfaces/proof.json",
+      "sha256": "7327f8a7ab28a556bef35c104a843ac62caf6655e65efc4e27a3577a2c6e8571",
+      "bytes": 83886,
+      "sourceSha256": "7327f8a7ab28a556bef35c104a843ac62caf6655e65efc4e27a3577a2c6e8571",
+      "sourceBytes": 83886
+    },
+    {
+      "file": "dom-surfaces-gpu/summary.json",
+      "source": "artifacts/dom-surfaces-gpu/summary.json",
+      "sha256": "aacf6e10734a3080ab967a7e23e01c49070c49af1c8ce9c73655c59285b42b23",
+      "bytes": 98844,
+      "sourceSha256": "aacf6e10734a3080ab967a7e23e01c49070c49af1c8ce9c73655c59285b42b23",
+      "sourceBytes": 98844
+    },
+    {
+      "file": "dom-surfaces-gpu/proof.json",
+      "source": "artifacts/dom-surfaces-gpu/proof.json",
+      "sha256": "dd7f3c6cb1e3020fc2fd091d7b9ff258d6c91d812451f9432e2a0f46a1781f0a",
+      "bytes": 153320,
+      "sourceSha256": "dd7f3c6cb1e3020fc2fd091d7b9ff258d6c91d812451f9432e2a0f46a1781f0a",
+      "sourceBytes": 153320
+    },
+    {
+      "file": "dom-surfaces-gpu/context.json",
+      "source": "artifacts/dom-surfaces-gpu/context.json",
+      "sha256": "85dd5d0de61017b58e2237a0036e5841d3de9ea01fb4dbfc8252e5c9bd98f616",
+      "bytes": 887,
+      "sourceSha256": "85dd5d0de61017b58e2237a0036e5841d3de9ea01fb4dbfc8252e5c9bd98f616",
+      "sourceBytes": 887
+    },
+    {
+      "file": "dom-surfaces-gpu/execution-trail.json",
+      "source": "artifacts/dom-surfaces-gpu/execution-trail.json",
+      "sha256": "f008b94a91ca227ffe5e9f308e14b277a8d3270c5027eaddbff5d0ccd9e09be2",
+      "bytes": 3768,
+      "sourceSha256": "f008b94a91ca227ffe5e9f308e14b277a8d3270c5027eaddbff5d0ccd9e09be2",
+      "sourceBytes": 3768
+    },
+    {
+      "file": "dom-surfaces-gpu/chromium-refined.png",
+      "source": "artifacts/dom-surfaces-gpu/chromium-refined.png",
+      "sha256": "5e8abb2363e2d07e7e8c7ed966590f46b4be8bdeb4edffba2a5cb2f0ca4f0b8d",
+      "bytes": 484210,
+      "sourceSha256": "5e8abb2363e2d07e7e8c7ed966590f46b4be8bdeb4edffba2a5cb2f0ca4f0b8d",
+      "sourceBytes": 484210
+    },
+    {
+      "file": "dom-surfaces-gpu/webkit-refined.png",
+      "source": "artifacts/dom-surfaces-gpu/webkit-refined.png",
+      "sha256": "bf1b027d87039b428fe999400dc7ef1861001b06c5e9cf3c710c9ea79d080eef",
+      "bytes": 764963,
+      "sourceSha256": "bf1b027d87039b428fe999400dc7ef1861001b06c5e9cf3c710c9ea79d080eef",
+      "sourceBytes": 764963
+    },
+    {
+      "file": "design-field-streaming-selector/first.json.gz",
+      "source": "artifacts/design-field-streaming-selector/first.json",
+      "sha256": "23946241a007cb6748f31de22440b1062d2914f4efc719d7db318efe1a5360cc",
+      "bytes": 286772,
+      "sourceSha256": "0418cdd6d9b6c7584b368dc1bfbafd53352f5efec8c0014ea45caa9c397f4b9f",
+      "sourceBytes": 4460088,
+      "encoding": "gzip",
+      "uncompressedSha256": "0418cdd6d9b6c7584b368dc1bfbafd53352f5efec8c0014ea45caa9c397f4b9f",
+      "uncompressedBytes": 4460088
+    },
+    {
+      "file": "design-field-streaming-selector/measurements.json",
+      "source": "artifacts/design-field-streaming-selector/measurements.json",
+      "sha256": "6d3f9e914958cef6b202031ce3da0a04e288e3e763b2e735f4f2f6ffb0b716d0",
+      "bytes": 46420,
+      "sourceSha256": "6d3f9e914958cef6b202031ce3da0a04e288e3e763b2e735f4f2f6ffb0b716d0",
+      "sourceBytes": 46420
+    },
+    {
+      "file": "design-field-streaming-selector/gallery-session.json.gz",
+      "source": "artifacts/design-field-streaming-selector/gallery-session.json",
+      "sha256": "6ebb349a507a228a80f055ca8a93cd1d3c939fbf5244eb0e4662b18e0aa4413e",
+      "bytes": 16076,
+      "sourceSha256": "16ff9929469e82fde32b4b3786d304dccee12b24455cdcd6d98e8e32e335253a",
+      "sourceBytes": 288674,
+      "encoding": "gzip",
+      "uncompressedSha256": "16ff9929469e82fde32b4b3786d304dccee12b24455cdcd6d98e8e32e335253a",
+      "uncompressedBytes": 288674
+    },
+    {
+      "file": "design-field-streaming-selector/implementation-freeze.json",
+      "source": "artifacts/design-field-streaming-selector/implementation-freeze.json",
+      "sha256": "242102cbb609ce0ee1f6c9d14023175349ad7df438bcfc083a9e6dc3a6784e6a",
+      "bytes": 2203,
+      "sourceSha256": "242102cbb609ce0ee1f6c9d14023175349ad7df438bcfc083a9e6dc3a6784e6a",
+      "sourceBytes": 2203
+    },
+    {
+      "file": "design-field-streaming-selector/validation.json",
+      "source": "artifacts/design-field-streaming-selector/validation.json",
+      "sha256": "6a626c08062ee2e50f1a89832d63f58afd36baac59e0594193a565a6c1182118",
+      "bytes": 6972,
+      "sourceSha256": "6a626c08062ee2e50f1a89832d63f58afd36baac59e0594193a565a6c1182118",
+      "sourceBytes": 6972
+    },
+    {
+      "file": "design-field-streaming-selector/replay.json.gz",
+      "source": "artifacts/design-field-streaming-selector/replay.json",
+      "sha256": "489eb2edc591b56cbfe42a76e8d5db508bbf33bfad80b66d44e431a0bc113474",
+      "bytes": 286757,
+      "sourceSha256": "ad86a21e666d14cb96f5c11502c9ae9cdaf73868c4256e2dcc663e21d4b8d29b",
+      "sourceBytes": 4460057,
+      "encoding": "gzip",
+      "uncompressedSha256": "ad86a21e666d14cb96f5c11502c9ae9cdaf73868c4256e2dcc663e21d4b8d29b",
+      "uncompressedBytes": 4460057
+    },
+    {
+      "file": "design-field-streaming-selector/partial-replay.json.gz",
+      "source": "artifacts/design-field-streaming-selector/partial-replay.json",
+      "sha256": "ba8488672ab0910e9c6d2148350b1ea6cd2fde1be866ae03d5f09a107e920aa1",
+      "bytes": 98962,
+      "sourceSha256": "1b25e881951dcfee70c5cf87b85f7a99b0548a67969849c8281c82c002902b49",
+      "sourceBytes": 1782404,
+      "encoding": "gzip",
+      "uncompressedSha256": "1b25e881951dcfee70c5cf87b85f7a99b0548a67969849c8281c82c002902b49",
+      "uncompressedBytes": 1782404
+    },
+    {
+      "file": "design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.output.jsonl",
+      "source": "artifacts/design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.output.jsonl",
+      "sha256": "7d3e456982d7d6618c99453eb3dac5582889821aff5cfd198ca44da210602427",
+      "bytes": 1557,
+      "sourceSha256": "7d3e456982d7d6618c99453eb3dac5582889821aff5cfd198ca44da210602427",
+      "sourceBytes": 1557
+    },
+    {
+      "file": "design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.process.json",
+      "source": "artifacts/design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.process.json",
+      "sha256": "b8b0a8084d4b817ca7b20df4c40e14d3bd778346e34e91fbd15d725fe5833153",
+      "bytes": 270,
+      "sourceSha256": "b8b0a8084d4b817ca7b20df4c40e14d3bd778346e34e91fbd15d725fe5833153",
+      "sourceBytes": 270
+    },
+    {
+      "file": "design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.stdout.txt",
+      "source": "artifacts/design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceBytes": 0
+    },
+    {
+      "file": "design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.stderr.txt",
+      "source": "artifacts/design-field-streaming-selector/selector/1971c2672b7a0778641b80723ddaa6fa485db123c02b386f1e148b9d3ac28648.stderr.txt",
+      "sha256": "526ce4af75d298d5516e42af238d10cf90dfa0bf4136cab935219e6b98ef7cc2",
+      "bytes": 87874,
+      "sourceSha256": "526ce4af75d298d5516e42af238d10cf90dfa0bf4136cab935219e6b98ef7cc2",
+      "sourceBytes": 87874
+    },
+    {
+      "file": "design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.output.jsonl",
+      "source": "artifacts/design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.output.jsonl",
+      "sha256": "b11f131b4ddbf2aec4161123693d3bb62c03723c3a8142ed07af53778478c05d",
+      "bytes": 1552,
+      "sourceSha256": "b11f131b4ddbf2aec4161123693d3bb62c03723c3a8142ed07af53778478c05d",
+      "sourceBytes": 1552
+    },
+    {
+      "file": "design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.process.json",
+      "source": "artifacts/design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.process.json",
+      "sha256": "eacd37e6e53fac64b41231b6e72fabd19759837b0efc33db1826452aa3fdcb61",
+      "bytes": 276,
+      "sourceSha256": "eacd37e6e53fac64b41231b6e72fabd19759837b0efc33db1826452aa3fdcb61",
+      "sourceBytes": 276
+    },
+    {
+      "file": "design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.stdout.txt",
+      "source": "artifacts/design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceBytes": 0
+    },
+    {
+      "file": "design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.stderr.txt",
+      "source": "artifacts/design-field-streaming-selector/selector/252bb65206eef632e3ffc7d99ce43c1bd932d1fe157dbb5a167dba76d6245653.stderr.txt",
+      "sha256": "b26c43c127e25697acde54818beef78004a2af6eee37d406ebc3d49a49f3a0c7",
+      "bytes": 87722,
+      "sourceSha256": "b26c43c127e25697acde54818beef78004a2af6eee37d406ebc3d49a49f3a0c7",
+      "sourceBytes": 87722
+    },
+    {
+      "file": "design-field-mathematical/gallery-session.json.gz",
+      "source": "artifacts/design-field-mathematical/gallery-session.json",
+      "sha256": "ff25743ee5fbb212836ebf26f783a745d248c31cbe9dba033d7a6d8e22b28a17",
+      "bytes": 15186,
+      "sourceSha256": "b58640b0518c8f0c3ca5a6561dc467242ab83ae6d8b0640f5c65c52d44aabde9",
+      "sourceBytes": 285615,
+      "encoding": "gzip",
+      "uncompressedSha256": "b58640b0518c8f0c3ca5a6561dc467242ab83ae6d8b0640f5c65c52d44aabde9",
+      "uncompressedBytes": 285615
+    },
+    {
+      "file": "choice-effectiveness/report.json",
+      "source": "artifacts/choice-effectiveness/report.json",
+      "sha256": "73c9f1ac286df72bcb813162944602c6bdd07579989b551a8cc22e3b2c832699",
+      "bytes": 14918,
+      "sourceSha256": "73c9f1ac286df72bcb813162944602c6bdd07579989b551a8cc22e3b2c832699",
+      "sourceBytes": 14918
+    },
+    {
+      "file": "choice-effectiveness/runs.json.gz",
+      "source": "artifacts/choice-effectiveness/runs.json",
+      "sha256": "12e00493a757f3d66ee0d6b90ef5c8b01ec221f69e8196dbb3bc26988206a50f",
+      "bytes": 606920,
+      "sourceSha256": "5575fc3e858846405f4966da6986d6a9978a601750a9fc35c410d49ca973d169",
+      "sourceBytes": 8799117,
+      "encoding": "gzip",
+      "uncompressedSha256": "5575fc3e858846405f4966da6986d6a9978a601750a9fc35c410d49ca973d169",
+      "uncompressedBytes": 8799117
+    },
+    {
+      "file": "choice-effectiveness/sensitivity.json",
+      "source": "artifacts/choice-effectiveness/sensitivity.json",
+      "sha256": "127367852c9b644bcfc9c83133638fb2bc936416fa23a7f159b968720ecab69d",
+      "bytes": 86786,
+      "sourceSha256": "127367852c9b644bcfc9c83133638fb2bc936416fa23a7f159b968720ecab69d",
+      "sourceBytes": 86786
+    },
+    {
+      "file": "choice-effectiveness/validations.json",
+      "source": "artifacts/choice-effectiveness/validations.json",
+      "sha256": "6b3547c2e79b4c90dbaafc145b80c643532842df134bc00cd8a5e8b7cb19e50a",
+      "bytes": 103824,
+      "sourceSha256": "6b3547c2e79b4c90dbaafc145b80c643532842df134bc00cd8a5e8b7cb19e50a",
+      "sourceBytes": 103824
+    },
+    {
+      "file": "choice-effectiveness/current-measurements.json",
+      "source": "artifacts/choice-effectiveness/current-measurements.json",
+      "sha256": "6d3f9e914958cef6b202031ce3da0a04e288e3e763b2e735f4f2f6ffb0b716d0",
+      "bytes": 46420,
+      "sourceSha256": "6d3f9e914958cef6b202031ce3da0a04e288e3e763b2e735f4f2f6ffb0b716d0",
+      "sourceBytes": 46420
+    },
+    {
+      "file": "relational-kernels/receipt.json",
+      "source": "artifacts/relational-kernels/receipt.json",
+      "sha256": "a0c6afe4eb035da9995a090553112a8c6adac09f75fcfa7bf2dd2595bcdbc2f5",
+      "bytes": 3355,
+      "sourceSha256": "a0c6afe4eb035da9995a090553112a8c6adac09f75fcfa7bf2dd2595bcdbc2f5",
+      "sourceBytes": 3355
+    },
+    {
+      "file": "relational-kernels/input.json",
+      "source": "artifacts/relational-kernels/input.json",
+      "sha256": "49c1bdcd89a1c8ae9ece5150ea131c2a495a9e3acfa53701152c766a405fd4f1",
+      "bytes": 25292,
+      "sourceSha256": "49c1bdcd89a1c8ae9ece5150ea131c2a495a9e3acfa53701152c766a405fd4f1",
+      "sourceBytes": 25292
+    },
+    {
+      "file": "relational-kernels/text-observations.json",
+      "source": "artifacts/relational-kernels/text-observations.json",
+      "sha256": "f06d8a150b55db4ff6a6c9f57442a4ebbf376ac753595a21a4a2f90e2c076a4d",
+      "bytes": 72710,
+      "sourceSha256": "f06d8a150b55db4ff6a6c9f57442a4ebbf376ac753595a21a4a2f90e2c076a4d",
+      "sourceBytes": 72710
+    },
+    {
+      "file": "relational-kernels/font-numerals.json",
+      "source": "artifacts/relational-kernels/font-numerals.json",
+      "sha256": "1ff897436604c72fd601cbb017826fb37bd5a0a119c30c05961d48fbda98db44",
+      "bytes": 947,
+      "sourceSha256": "1ff897436604c72fd601cbb017826fb37bd5a0a119c30c05961d48fbda98db44",
+      "sourceBytes": 947
+    },
+    {
+      "file": "relational-kernels/compilation.json.gz",
+      "source": "artifacts/relational-kernels/compilation.json",
+      "sha256": "63c85e8a72217245e56330cb9b3af90c47d8af01612d62e14d8813992707dafb",
+      "bytes": 53125,
+      "sourceSha256": "7053b6731388e73421d56e97db74bc27961c615f11754c7bd78d46a4dd91f94f",
+      "sourceBytes": 333233,
+      "encoding": "gzip",
+      "uncompressedSha256": "7053b6731388e73421d56e97db74bc27961c615f11754c7bd78d46a4dd91f94f",
+      "uncompressedBytes": 333233
+    },
+    {
+      "file": "relational-kernels/workflow.json.gz",
+      "source": "artifacts/relational-kernels/workflow.json",
+      "sha256": "3e6cc2b1e8ec80dbbf440a96ecd0c926849d8b9ea2a6165651b7d52006e5fe26",
+      "bytes": 24327,
+      "sourceSha256": "cb459f4c2097de5c77189c9d72140612bb10d808499637b3823c17fce27c306f",
+      "sourceBytes": 363574,
+      "encoding": "gzip",
+      "uncompressedSha256": "cb459f4c2097de5c77189c9d72140612bb10d808499637b3823c17fce27c306f",
+      "uncompressedBytes": 363574
+    },
+    {
+      "file": "relational-kernels/resolved.json",
+      "source": "artifacts/relational-kernels/resolved.json",
+      "sha256": "18661faf55276d7242aa3c7525767cfef0ea69c5dd66e9405081b06f74982c5a",
+      "bytes": 12490,
+      "sourceSha256": "18661faf55276d7242aa3c7525767cfef0ea69c5dd66e9405081b06f74982c5a",
+      "sourceBytes": 12490
+    },
+    {
+      "file": "relational-kernels/replay.json.gz",
+      "source": "artifacts/relational-kernels/replay.json",
+      "sha256": "d7e2ed921d95647f8327856e6c40fce9110fcfcc629b12efd7db0ef2b7330c57",
+      "bytes": 24320,
+      "sourceSha256": "9a0038d440a02bfda437591011995e74583e9d2300caca10de78297c88d0447a",
+      "sourceBytes": 363574,
+      "encoding": "gzip",
+      "uncompressedSha256": "9a0038d440a02bfda437591011995e74583e9d2300caca10de78297c88d0447a",
+      "uncompressedBytes": 363574
+    },
+    {
+      "file": "relational-kernels/bindings.json",
+      "source": "artifacts/relational-kernels/bindings.json",
+      "sha256": "90eb656d49b1d6ac17015a0404d008fc110032ad05cd154f0e0c4a859693e3d0",
+      "bytes": 19104,
+      "sourceSha256": "90eb656d49b1d6ac17015a0404d008fc110032ad05cd154f0e0c4a859693e3d0",
+      "sourceBytes": 19104
+    },
+    {
+      "file": "context/budget.json",
+      "source": "artifacts/context/budget.json",
+      "sha256": "a3d19d593166b517b5093a53b1832cf4ac996fe29698f08d4996a62ca1de8e8a",
+      "bytes": 339,
+      "sourceSha256": "a3d19d593166b517b5093a53b1832cf4ac996fe29698f08d4996a62ca1de8e8a",
+      "sourceBytes": 339
+    },
+    {
+      "file": "context/tools-compact.json",
+      "source": "artifacts/context/tools-compact.json",
+      "sha256": "15fc126b1eb80fc529b31cf4010bd13340d33124ba9a2ff5ecd872538a5c3977",
+      "bytes": 1799,
+      "sourceSha256": "15fc126b1eb80fc529b31cf4010bd13340d33124ba9a2ff5ecd872538a5c3977",
+      "sourceBytes": 1799
+    },
+    {
+      "file": "context/tools-full.json.gz",
+      "source": "artifacts/context/tools-full.json",
+      "sha256": "151dbfe276a1a8ed2a8a6704f64eee44a74ef2c7a9e4ffafcbb29a589e0105d6",
+      "bytes": 16924,
+      "sourceSha256": "ee9bc2573f10ff84e631614de9f393f93019142e087d2a7a9b95541b97855acd",
+      "sourceBytes": 252726,
+      "encoding": "gzip",
+      "uncompressedSha256": "ee9bc2573f10ff84e631614de9f393f93019142e087d2a7a9b95541b97855acd",
+      "uncompressedBytes": 252726
+    },
+    {
+      "file": "typography/summary.json",
+      "source": "artifacts/typography/summary.json",
+      "sha256": "d3fe43a5ee3812663ffc354a17468a58111222ddb11cc9c418f1470935cc34e1",
+      "bytes": 12236,
+      "sourceSha256": "d3fe43a5ee3812663ffc354a17468a58111222ddb11cc9c418f1470935cc34e1",
+      "sourceBytes": 12236
+    },
+    {
+      "file": "typography/proof.json.gz",
+      "source": "artifacts/typography/proof.json",
+      "sha256": "d096f4526e37cf9e925333892369be076f570cbc1b0be0d9a951798eb5fb8d94",
+      "bytes": 48471,
+      "sourceSha256": "a34b59fe24483d9aaa16ce50e17dab5981d6dcfb3a2cce920985969046085526",
+      "sourceBytes": 1119700,
+      "encoding": "gzip",
+      "uncompressedSha256": "a34b59fe24483d9aaa16ce50e17dab5981d6dcfb3a2cce920985969046085526",
+      "uncompressedBytes": 1119700
+    },
+    {
+      "file": "typography/chromium.json.gz",
+      "source": "artifacts/typography/chromium.json",
+      "sha256": "706b6f8441df214fa0d9f89ec185cac4038ae139e98c66fa568e50d9efac4043",
+      "bytes": 21866,
+      "sourceSha256": "69f832a7dd61e158233ba319a1bb92ec256c441ecdc8d4d755c3fd71f7f18238",
+      "sourceBytes": 482093,
+      "encoding": "gzip",
+      "uncompressedSha256": "69f832a7dd61e158233ba319a1bb92ec256c441ecdc8d4d755c3fd71f7f18238",
+      "uncompressedBytes": 482093
+    },
+    {
+      "file": "typography/webkit.json.gz",
+      "source": "artifacts/typography/webkit.json",
+      "sha256": "36220ac598156a3bdb87dac8b106eb2c961b54908a28e6eb2ec666d2b02045a9",
+      "bytes": 21193,
+      "sourceSha256": "2c75ac74c50b6d92272d71daef153075e9d094016ea80e61408239fe9c9260d7",
+      "sourceBytes": 488925,
+      "encoding": "gzip",
+      "uncompressedSha256": "2c75ac74c50b6d92272d71daef153075e9d094016ea80e61408239fe9c9260d7",
+      "uncompressedBytes": 488925
+    },
+    {
+      "file": "validation/report.json",
+      "source": "artifacts/validation/report.json",
+      "sha256": "d69d6eab172a2832f06a440fda668d996783c36183c8a9a45141b068d869baab",
+      "bytes": 17591,
+      "sourceSha256": "d69d6eab172a2832f06a440fda668d996783c36183c8a9a45141b068d869baab",
+      "sourceBytes": 17591
+    },
+    {
+      "file": "system/web/summary.json",
+      "source": "artifacts/system/web/summary.json",
+      "sha256": "83523870668f73d9117398126ff9a75f489beff5e976407157b64f7e321e55e3",
+      "bytes": 463,
+      "sourceSha256": "83523870668f73d9117398126ff9a75f489beff5e976407157b64f7e321e55e3",
+      "sourceBytes": 463
+    },
+    {
+      "file": "system/web/observations.jsonl.gz",
+      "source": "artifacts/system/web/observations.jsonl",
+      "sha256": "16634de294b9d7f07c9136663c1592610a7035f93029079b297e3481939a8249",
+      "bytes": 86007,
+      "sourceSha256": "44f21577f3ed5ced4075cc6dcdc99706844d35802c08c5e5d843120ea094a524",
+      "sourceBytes": 1430919,
+      "encoding": "gzip",
+      "uncompressedSha256": "44f21577f3ed5ced4075cc6dcdc99706844d35802c08c5e5d843120ea094a524",
+      "uncompressedBytes": 1430919
+    },
+    {
+      "file": "system/web/editorial-smooth.json.gz",
+      "source": "artifacts/system/web/editorial-smooth.json",
+      "sha256": "373121cc786678b96d700b33c3c801fed28f7290c18f4a3eb684775fdf6851db",
+      "bytes": 128964,
+      "sourceSha256": "2dfd39d384cd5101f1460e01a73d5e61232dce9ea00d81a57d861f9cd70483fb",
+      "sourceBytes": 1411755,
+      "encoding": "gzip",
+      "uncompressedSha256": "2dfd39d384cd5101f1460e01a73d5e61232dce9ea00d81a57d861f9cd70483fb",
+      "uncompressedBytes": 1411755
+    },
+    {
+      "file": "system/web/editorial-musical.json.gz",
+      "source": "artifacts/system/web/editorial-musical.json",
+      "sha256": "05b07ba621c137785adaf347b61266ec330c00dc01fa43178b4d8c59b5086992",
+      "bytes": 135456,
+      "sourceSha256": "31edac4209c07c98b1b76e10b58cf0e9cf7f17e0401ae2e0b46d3aad2d793998",
+      "sourceBytes": 1461621,
+      "encoding": "gzip",
+      "uncompressedSha256": "31edac4209c07c98b1b76e10b58cf0e9cf7f17e0401ae2e0b46d3aad2d793998",
+      "uncompressedBytes": 1461621
+    },
+    {
+      "file": "system/web/hero-smooth.json.gz",
+      "source": "artifacts/system/web/hero-smooth.json",
+      "sha256": "8eada994864cab2624db3e51baec7accc28ea59b5045126c1c591ccb36c5b08f",
+      "bytes": 82078,
+      "sourceSha256": "c78fe57a35490d45f5c857f692dc0ab1e8863613927fac517f0f98802d64c6c5",
+      "sourceBytes": 751453,
+      "encoding": "gzip",
+      "uncompressedSha256": "c78fe57a35490d45f5c857f692dc0ab1e8863613927fac517f0f98802d64c6c5",
+      "uncompressedBytes": 751453
+    },
+    {
+      "file": "system/web/hero-musical.json.gz",
+      "source": "artifacts/system/web/hero-musical.json",
+      "sha256": "ff0f0b46978281b38b82b251b36dda67d9034d2fcd0b3f318c80440b466e8b18",
+      "bytes": 87503,
+      "sourceSha256": "4d47794bdf4a20f4837fb7c64f217fe2b1bc9266084802b8995faca332b60b08",
+      "sourceBytes": 783469,
+      "encoding": "gzip",
+      "uncompressedSha256": "4d47794bdf4a20f4837fb7c64f217fe2b1bc9266084802b8995faca332b60b08",
+      "uncompressedBytes": 783469
+    },
+    {
+      "file": "system/native-ios/summary.json",
+      "source": "artifacts/system/native-ios/summary.json",
+      "sha256": "55ef25917c620aa95ebdc57baaa9ac630d0f9aed023fb5fe306da82cb2cab375",
+      "bytes": 746,
+      "sourceSha256": "55ef25917c620aa95ebdc57baaa9ac630d0f9aed023fb5fe306da82cb2cab375",
+      "sourceBytes": 746
+    },
+    {
+      "file": "system/native-ios/observations.jsonl.gz",
+      "source": "artifacts/system/native-ios/observations.jsonl",
+      "sha256": "16ec864f0c032d5c841f61864d6dfc9db741f767d9db539fddb2232398d4b5ea",
+      "bytes": 93612,
+      "sourceSha256": "7e9da36e57661574273c8ef0b561f39a101508668bbc7c6a029f2511b8f0d33d",
+      "sourceBytes": 1511449,
+      "encoding": "gzip",
+      "uncompressedSha256": "7e9da36e57661574273c8ef0b561f39a101508668bbc7c6a029f2511b8f0d33d",
+      "uncompressedBytes": 1511449
+    },
+    {
+      "file": "system/native-ios/editorial-smooth.json.gz",
+      "source": "artifacts/system/native-ios/editorial-smooth.json",
+      "sha256": "b675a1218c752eaefcfd048db187155519975e63a21fa1bed4565dfd5fb28b83",
+      "bytes": 151038,
+      "sourceSha256": "846032bce4d94a6b7a7578e435a9c936bdd1be92642d9d54e57cbd04e1213758",
+      "sourceBytes": 1526990,
+      "encoding": "gzip",
+      "uncompressedSha256": "846032bce4d94a6b7a7578e435a9c936bdd1be92642d9d54e57cbd04e1213758",
+      "uncompressedBytes": 1526990
+    },
+    {
+      "file": "system/native-ios/editorial-musical.json.gz",
+      "source": "artifacts/system/native-ios/editorial-musical.json",
+      "sha256": "c60d0496f5f57c78d5dce8e593821b3f9e1ba23de3da55813fec504abda47728",
+      "bytes": 157477,
+      "sourceSha256": "efe929e4d861f13aaecaf441ff09268aa3ae5b360b7a3d922119a6a9f9bd464c",
+      "sourceBytes": 1579867,
+      "encoding": "gzip",
+      "uncompressedSha256": "efe929e4d861f13aaecaf441ff09268aa3ae5b360b7a3d922119a6a9f9bd464c",
+      "uncompressedBytes": 1579867
+    },
+    {
+      "file": "system/native-ios/hero-smooth.json.gz",
+      "source": "artifacts/system/native-ios/hero-smooth.json",
+      "sha256": "2ff99dbcb10eef57c93cdfc162bd4c9c9285b3a86554c97b3102f002300dccda",
+      "bytes": 90757,
+      "sourceSha256": "9c44c8c54dc3995e788aa312d04f5930402f84526c5292981ef73bdcdd9b7baf",
+      "sourceBytes": 801388,
+      "encoding": "gzip",
+      "uncompressedSha256": "9c44c8c54dc3995e788aa312d04f5930402f84526c5292981ef73bdcdd9b7baf",
+      "uncompressedBytes": 801388
+    },
+    {
+      "file": "system/native-ios/hero-musical.json.gz",
+      "source": "artifacts/system/native-ios/hero-musical.json",
+      "sha256": "7f8cb3bafae81ad94b5563473e6784470539b616062f7b4702a65ec93d2a32e0",
+      "bytes": 95910,
+      "sourceSha256": "0589791d105f70a138cdbf279791e69288d4a1697214f15d750942721b5e37af",
+      "sourceBytes": 833942,
+      "encoding": "gzip",
+      "uncompressedSha256": "0589791d105f70a138cdbf279791e69288d4a1697214f15d750942721b5e37af",
+      "uncompressedBytes": 833942
+    },
+    {
+      "file": "system/native-android/summary.json",
+      "source": "artifacts/system/native-android/summary.json",
+      "sha256": "c7819246745a5a580bf3e8762094207989632ad586302e2cb6121d6123debbe1",
+      "bytes": 1305,
+      "sourceSha256": "c7819246745a5a580bf3e8762094207989632ad586302e2cb6121d6123debbe1",
+      "sourceBytes": 1305
+    },
+    {
+      "file": "system/native-android/observations.jsonl.gz",
+      "source": "artifacts/system/native-android/observations.jsonl",
+      "sha256": "dd7028f9962d00463c3a9cb5480cdd8fdb0c7d743ab2793514283ce073a896ed",
+      "bytes": 99632,
+      "sourceSha256": "061038fae4869015a2cb81d8e921eda7828ec186be474e8541bf4794af6f25be",
+      "sourceBytes": 1564728,
+      "encoding": "gzip",
+      "uncompressedSha256": "061038fae4869015a2cb81d8e921eda7828ec186be474e8541bf4794af6f25be",
+      "uncompressedBytes": 1564728
+    },
+    {
+      "file": "system/native-android/editorial-smooth.json.gz",
+      "source": "artifacts/system/native-android/editorial-smooth.json",
+      "sha256": "8fcdffad5e1a8d3d045922b32ae7b0f39d01b2743dfecd8d4da4d8916491ed27",
+      "bytes": 154005,
+      "sourceSha256": "098de5962e28ff41671faf36ac39bd60bbccae0db3131bab9f6b9e2699482a6a",
+      "sourceBytes": 1570188,
+      "encoding": "gzip",
+      "uncompressedSha256": "098de5962e28ff41671faf36ac39bd60bbccae0db3131bab9f6b9e2699482a6a",
+      "uncompressedBytes": 1570188
+    },
+    {
+      "file": "system/native-android/editorial-musical.json.gz",
+      "source": "artifacts/system/native-android/editorial-musical.json",
+      "sha256": "dc3789edb29e0e068580c6d6bb6d858658897b4c35b23364715bdf8918098007",
+      "bytes": 161530,
+      "sourceSha256": "6c6988fe3e0aac4866383a24605ceec816f1cf75fc39c29b436863dfc5ea064e",
+      "sourceBytes": 1626486,
+      "encoding": "gzip",
+      "uncompressedSha256": "6c6988fe3e0aac4866383a24605ceec816f1cf75fc39c29b436863dfc5ea064e",
+      "uncompressedBytes": 1626486
+    },
+    {
+      "file": "system/native-android/hero-smooth.json.gz",
+      "source": "artifacts/system/native-android/hero-smooth.json",
+      "sha256": "80d9ada914245a898b5f602a0d1478f4fbe09e0b8d44311842ea2a85ed3962f1",
+      "bytes": 92682,
+      "sourceSha256": "5273fd783fd3c3f06464307cf931773297a83bfb1257d6a01ced9c135d959870",
+      "sourceBytes": 824212,
+      "encoding": "gzip",
+      "uncompressedSha256": "5273fd783fd3c3f06464307cf931773297a83bfb1257d6a01ced9c135d959870",
+      "uncompressedBytes": 824212
+    },
+    {
+      "file": "system/native-android/hero-musical.json.gz",
+      "source": "artifacts/system/native-android/hero-musical.json",
+      "sha256": "dac11368b729e74a842ec6045bbafaacfc98c8697e12b7283966511da313064c",
+      "bytes": 98060,
+      "sourceSha256": "5f436d250c7cceb7c5e6bd5d8e9d794cf4983079e234f48d86eac74ff25cb1ee",
+      "sourceBytes": 856012,
+      "encoding": "gzip",
+      "uncompressedSha256": "5f436d250c7cceb7c5e6bd5d8e9d794cf4983079e234f48d86eac74ff25cb1ee",
+      "uncompressedBytes": 856012
+    },
+    {
+      "file": "expo-design-theory/proof.json",
+      "source": "artifacts/expo-design-theory/proof.json",
+      "sha256": "1a57f67b9868356fe986cffdbacd3a8977003133e0fe8d831525acf04410a14f",
+      "bytes": 24150,
+      "sourceSha256": "1a57f67b9868356fe986cffdbacd3a8977003133e0fe8d831525acf04410a14f",
+      "sourceBytes": 24150
+    },
+    {
+      "file": "expo-design-theory/native-proof.json",
+      "source": "artifacts/expo-design-theory/native-proof.json",
+      "sha256": "4985455f8d976e05030d0ad39cad8e9f7d1177e18274e2f6cc9c6a187bbb6438",
+      "bytes": 103031,
+      "sourceSha256": "4985455f8d976e05030d0ad39cad8e9f7d1177e18274e2f6cc9c6a187bbb6438",
+      "sourceBytes": 103031
+    },
+    {
+      "file": "expo-design-theory/native-ios-proof.json",
+      "source": "artifacts/expo-design-theory/native-ios-proof.json",
+      "sha256": "2baf742811a96e26af82c36fe2ecf988e4904fd8a1e8e8a8ecf31d84428460a6",
+      "bytes": 40100,
+      "sourceSha256": "2baf742811a96e26af82c36fe2ecf988e4904fd8a1e8e8a8ecf31d84428460a6",
+      "sourceBytes": 40100
+    },
+    {
+      "file": "expo-design-theory/native-android-proof.json",
+      "source": "artifacts/expo-design-theory/native-android-proof.json",
+      "sha256": "bb1cae9f9a6e0c97d5e31ae644dca95450eb306e85eecd099ca2f04eb172fcbe",
+      "bytes": 43820,
+      "sourceSha256": "bb1cae9f9a6e0c97d5e31ae644dca95450eb306e85eecd099ca2f04eb172fcbe",
+      "sourceBytes": 43820
+    },
+    {
+      "file": "expo-design-theory/output-bindings.json",
+      "source": "artifacts/expo-design-theory/output-bindings.json",
+      "sha256": "1b7ecf6142cc5692fbdd1d1410e58a7e276135d85285deb816ba0bddcfb6623a",
+      "bytes": 84119,
+      "sourceSha256": "1b7ecf6142cc5692fbdd1d1410e58a7e276135d85285deb816ba0bddcfb6623a",
+      "sourceBytes": 84119
+    },
+    {
+      "file": "expo-design-theory/context.json",
+      "source": "artifacts/expo-design-theory/context.json",
+      "sha256": "b280c15126e487d0e3595d38d18326fa60da1c9c371caf1a8eb6020ad993fbb1",
+      "bytes": 744,
+      "sourceSha256": "b280c15126e487d0e3595d38d18326fa60da1c9c371caf1a8eb6020ad993fbb1",
+      "sourceBytes": 744
+    },
+    {
+      "file": "expo-design-theory/round2/proof.json",
+      "source": "artifacts/expo-design-theory/round2/proof.json",
+      "sha256": "1e6ad75bbdabb79c81d8e9842f9441118276d1cb9f09d2437304ccbe5fbbb404",
+      "bytes": 114179,
+      "sourceSha256": "1e6ad75bbdabb79c81d8e9842f9441118276d1cb9f09d2437304ccbe5fbbb404",
+      "sourceBytes": 114179
+    },
+    {
+      "file": "expo-design-theory/round2/chromium-390-1.png",
+      "source": "artifacts/expo-design-theory/round2/chromium-390-1.png",
+      "sha256": "5d236ad95f73798ad3a666e0d02dbfdc95383a311a5cda271096d21fa7c9c89f",
+      "bytes": 70259,
+      "sourceSha256": "5d236ad95f73798ad3a666e0d02dbfdc95383a311a5cda271096d21fa7c9c89f",
+      "sourceBytes": 70259
+    },
+    {
+      "file": "expo-design-theory/round2/chromium-390-2.png",
+      "source": "artifacts/expo-design-theory/round2/chromium-390-2.png",
+      "sha256": "a651728a7b2e0a9a428f69b27147b128cbed2e1946b049eb5cff41df568c36ad",
+      "bytes": 70206,
+      "sourceSha256": "a651728a7b2e0a9a428f69b27147b128cbed2e1946b049eb5cff41df568c36ad",
+      "sourceBytes": 70206
+    },
+    {
+      "file": "expo-design-theory/round2/chromium-390-detail.png",
+      "source": "artifacts/expo-design-theory/round2/chromium-390-detail.png",
+      "sha256": "4f3978a56db944ea5a429b30d0ed9973f129ea7f7b39ca86518a0fb21cdd6a60",
+      "bytes": 74058,
+      "sourceSha256": "4f3978a56db944ea5a429b30d0ed9973f129ea7f7b39ca86518a0fb21cdd6a60",
+      "sourceBytes": 74058
+    },
+    {
+      "file": "expo-design-theory/round2/chromium-820-1.png",
+      "source": "artifacts/expo-design-theory/round2/chromium-820-1.png",
+      "sha256": "70c7ad0a2958659a8183efd1792eb66a27ffdb8848dbf4f420557e222f218788",
+      "bytes": 74501,
+      "sourceSha256": "70c7ad0a2958659a8183efd1792eb66a27ffdb8848dbf4f420557e222f218788",
+      "sourceBytes": 74501
+    },
+    {
+      "file": "expo-design-theory/round2/chromium-820-2.png",
+      "source": "artifacts/expo-design-theory/round2/chromium-820-2.png",
+      "sha256": "84ccadb556a43af0cf04e8f3cd29868af6db73222aa6163c78eec536a7493e43",
+      "bytes": 133390,
+      "sourceSha256": "84ccadb556a43af0cf04e8f3cd29868af6db73222aa6163c78eec536a7493e43",
+      "sourceBytes": 133390
+    },
+    {
+      "file": "expo-design-theory/round2/chromium-820-detail.png",
+      "source": "artifacts/expo-design-theory/round2/chromium-820-detail.png",
+      "sha256": "ed994435b6a0b8a2273d954a14ed30726209915e14349e9f6c42b0df9f246c62",
+      "bytes": 150267,
+      "sourceSha256": "ed994435b6a0b8a2273d954a14ed30726209915e14349e9f6c42b0df9f246c62",
+      "sourceBytes": 150267
+    },
+    {
+      "file": "expo-design-theory/round2/chromium-1440-1.png",
+      "source": "artifacts/expo-design-theory/round2/chromium-1440-1.png",
+      "sha256": "cac862e9119d8bcb9bde04235e763a5f5bcd7e4a360d30c4e4c5dd241abb63f6",
+      "bytes": 77620,
+      "sourceSha256": "cac862e9119d8bcb9bde04235e763a5f5bcd7e4a360d30c4e4c5dd241abb63f6",
+      "sourceBytes": 77620
+    },
+    {
+      "file": "expo-design-theory/round2/chromium-1440-2.png",
+      "source": "artifacts/expo-design-theory/round2/chromium-1440-2.png",
+      "sha256": "004beaa564ae6280ca7d7ceaac702f77f07d86b6dc1967de124dedac12d7b605",
+      "bytes": 147320,
+      "sourceSha256": "004beaa564ae6280ca7d7ceaac702f77f07d86b6dc1967de124dedac12d7b605",
+      "sourceBytes": 147320
+    },
+    {
+      "file": "expo-design-theory/round2/chromium-1440-detail.png",
+      "source": "artifacts/expo-design-theory/round2/chromium-1440-detail.png",
+      "sha256": "1a6dfefa0363fc1962d00ea81c762e5187691e28636d18569cd532e4d6240211",
+      "bytes": 160863,
+      "sourceSha256": "1a6dfefa0363fc1962d00ea81c762e5187691e28636d18569cd532e4d6240211",
+      "sourceBytes": 160863
+    },
+    {
+      "file": "expo-design-theory/round2/webkit-390-1.png",
+      "source": "artifacts/expo-design-theory/round2/webkit-390-1.png",
+      "sha256": "b8037375246a601c4f30baf708210e4f91a044eb018c2bcc7fc1bc38dee27e6e",
+      "bytes": 85046,
+      "sourceSha256": "b8037375246a601c4f30baf708210e4f91a044eb018c2bcc7fc1bc38dee27e6e",
+      "sourceBytes": 85046
+    },
+    {
+      "file": "expo-design-theory/round2/webkit-390-2.png",
+      "source": "artifacts/expo-design-theory/round2/webkit-390-2.png",
+      "sha256": "69d0625e9c959400aba3037cf932f6f63def76b9475b55a2b9e837083718a64b",
+      "bytes": 82669,
+      "sourceSha256": "69d0625e9c959400aba3037cf932f6f63def76b9475b55a2b9e837083718a64b",
+      "sourceBytes": 82669
+    },
+    {
+      "file": "expo-design-theory/round2/webkit-390-detail.png",
+      "source": "artifacts/expo-design-theory/round2/webkit-390-detail.png",
+      "sha256": "07adbaf093f0aefa84eb7f7acdf19d3e583dada360750318b22e15668eca9c36",
+      "bytes": 82357,
+      "sourceSha256": "07adbaf093f0aefa84eb7f7acdf19d3e583dada360750318b22e15668eca9c36",
+      "sourceBytes": 82357
+    },
+    {
+      "file": "expo-design-theory/round2/webkit-820-1.png",
+      "source": "artifacts/expo-design-theory/round2/webkit-820-1.png",
+      "sha256": "0456d7ee4f6047ebc3aafa901f9d6a810197a1ceb7d233431f3c328dfba5d5e7",
+      "bytes": 94996,
+      "sourceSha256": "0456d7ee4f6047ebc3aafa901f9d6a810197a1ceb7d233431f3c328dfba5d5e7",
+      "sourceBytes": 94996
+    },
+    {
+      "file": "expo-design-theory/round2/webkit-820-2.png",
+      "source": "artifacts/expo-design-theory/round2/webkit-820-2.png",
+      "sha256": "a8e1f6ed6adb14b609c563eb4e4e6955075b7e99d50b522763f74b91c6de1021",
+      "bytes": 146046,
+      "sourceSha256": "a8e1f6ed6adb14b609c563eb4e4e6955075b7e99d50b522763f74b91c6de1021",
+      "sourceBytes": 146046
+    },
+    {
+      "file": "expo-design-theory/round2/webkit-820-detail.png",
+      "source": "artifacts/expo-design-theory/round2/webkit-820-detail.png",
+      "sha256": "1a959376c39c245eec071211eee1d5775a10703e6cdb52eb6417a5b369ee6bc0",
+      "bytes": 165224,
+      "sourceSha256": "1a959376c39c245eec071211eee1d5775a10703e6cdb52eb6417a5b369ee6bc0",
+      "sourceBytes": 165224
+    },
+    {
+      "file": "expo-design-theory/round2/webkit-1440-1.png",
+      "source": "artifacts/expo-design-theory/round2/webkit-1440-1.png",
+      "sha256": "34f3e575e892d05bd530ddeafbd58fed68dc0ca09f8f8a25059078c6d9490b86",
+      "bytes": 106348,
+      "sourceSha256": "34f3e575e892d05bd530ddeafbd58fed68dc0ca09f8f8a25059078c6d9490b86",
+      "sourceBytes": 106348
+    },
+    {
+      "file": "expo-design-theory/round2/webkit-1440-2.png",
+      "source": "artifacts/expo-design-theory/round2/webkit-1440-2.png",
+      "sha256": "8ef923e24fd062b678b4568ac6f9ea35453fbb83655e4b07491bea009bddf394",
+      "bytes": 170078,
+      "sourceSha256": "8ef923e24fd062b678b4568ac6f9ea35453fbb83655e4b07491bea009bddf394",
+      "sourceBytes": 170078
+    },
+    {
+      "file": "expo-design-theory/round2/webkit-1440-detail.png",
+      "source": "artifacts/expo-design-theory/round2/webkit-1440-detail.png",
+      "sha256": "f00da74122213bca7a1a265d1ab2c3d0bb8c8373dd99a878a2afafe971226afb",
+      "bytes": 185280,
+      "sourceSha256": "f00da74122213bca7a1a265d1ab2c3d0bb8c8373dd99a878a2afafe971226afb",
+      "sourceBytes": 185280
+    },
+    {
+      "file": "expo-design-theory/native-round2/ios-normal.png",
+      "source": "artifacts/expo-design-theory/native-round2/ios-normal.png",
+      "sha256": "db15a2745d894feffd677cb7c9895cd7e6ee2c7f45b47ed0405376c264362dc8",
+      "bytes": 323378,
+      "sourceSha256": "db15a2745d894feffd677cb7c9895cd7e6ee2c7f45b47ed0405376c264362dc8",
+      "sourceBytes": 323378
+    },
+    {
+      "file": "expo-design-theory/native-round2/ios-enlarged.png",
+      "source": "artifacts/expo-design-theory/native-round2/ios-enlarged.png",
+      "sha256": "d61cbf8ecbe12df8120efeee613c82d2b1110c49031e9e02081591ea346c1721",
+      "bytes": 337013,
+      "sourceSha256": "d61cbf8ecbe12df8120efeee613c82d2b1110c49031e9e02081591ea346c1721",
+      "sourceBytes": 337013
+    },
+    {
+      "file": "expo-design-theory/native-round2/ios-detail.png",
+      "source": "artifacts/expo-design-theory/native-round2/ios-detail.png",
+      "sha256": "554b908b5066078887d7a3930ed8f000282e2afcb36782de6ce09242ed2e83ee",
+      "bytes": 303701,
+      "sourceSha256": "554b908b5066078887d7a3930ed8f000282e2afcb36782de6ce09242ed2e83ee",
+      "sourceBytes": 303701
+    },
+    {
+      "file": "expo-design-theory/native-round2/ios-reviewed-long-text.png",
+      "source": "artifacts/expo-design-theory/native-round2/ios-reviewed-long-text.png",
+      "sha256": "17850ab566e0d20744e8bbc3cc49097187baff46ace3d9f7e2efb920f94a6877",
+      "bytes": 341001,
+      "sourceSha256": "17850ab566e0d20744e8bbc3cc49097187baff46ace3d9f7e2efb920f94a6877",
+      "sourceBytes": 341001
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-normal.png",
+      "source": "artifacts/expo-design-theory/native-round2/android-normal.png",
+      "sha256": "698b44809794dbb0a8313682ec15c95faf9eb31e5e4c0301d87ef0072716b175",
+      "bytes": 211535,
+      "sourceSha256": "698b44809794dbb0a8313682ec15c95faf9eb31e5e4c0301d87ef0072716b175",
+      "sourceBytes": 211535
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-enlarged.png",
+      "source": "artifacts/expo-design-theory/native-round2/android-enlarged.png",
+      "sha256": "e92942c12f6cea77d16da5c8837d7f845b568d18b1a2a367caae07c022b62160",
+      "bytes": 233902,
+      "sourceSha256": "e92942c12f6cea77d16da5c8837d7f845b568d18b1a2a367caae07c022b62160",
+      "sourceBytes": 233902
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-detail.png",
+      "source": "artifacts/expo-design-theory/native-round2/android-detail.png",
+      "sha256": "394bf7172203149562e1add6ec7b79491b0e30ee5688f5f8b0a26fa83e9beefc",
+      "bytes": 197786,
+      "sourceSha256": "394bf7172203149562e1add6ec7b79491b0e30ee5688f5f8b0a26fa83e9beefc",
+      "sourceBytes": 197786
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-reviewed-long-text.png",
+      "source": "artifacts/expo-design-theory/native-round2/android-reviewed-long-text.png",
+      "sha256": "d68cf68affe39053c7cfa307a0b856a84afb627c65828f048edf9e8a80a1d0cf",
+      "bytes": 240878,
+      "sourceSha256": "d68cf68affe39053c7cfa307a0b856a84afb627c65828f048edf9e8a80a1d0cf",
+      "sourceBytes": 240878
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-0-accessibility.xml",
+      "source": "artifacts/expo-design-theory/native-round2/android-0-accessibility.xml",
+      "sha256": "57eadaf28190585ada21dbde621dc65a666ff16cfce10f6f95d5c8f178191425",
+      "bytes": 20121,
+      "sourceSha256": "57eadaf28190585ada21dbde621dc65a666ff16cfce10f6f95d5c8f178191425",
+      "sourceBytes": 20121
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-1-accessibility.xml",
+      "source": "artifacts/expo-design-theory/native-round2/android-1-accessibility.xml",
+      "sha256": "57eadaf28190585ada21dbde621dc65a666ff16cfce10f6f95d5c8f178191425",
+      "bytes": 20121,
+      "sourceSha256": "57eadaf28190585ada21dbde621dc65a666ff16cfce10f6f95d5c8f178191425",
+      "sourceBytes": 20121
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-2-accessibility.xml",
+      "source": "artifacts/expo-design-theory/native-round2/android-2-accessibility.xml",
+      "sha256": "252f5450065f33735707784457a99da3f83202f34cba3e26ef8824bb4223fd3c",
+      "bytes": 15565,
+      "sourceSha256": "252f5450065f33735707784457a99da3f83202f34cba3e26ef8824bb4223fd3c",
+      "sourceBytes": 15565
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-3-accessibility.xml",
+      "source": "artifacts/expo-design-theory/native-round2/android-3-accessibility.xml",
+      "sha256": "57eadaf28190585ada21dbde621dc65a666ff16cfce10f6f95d5c8f178191425",
+      "bytes": 20121,
+      "sourceSha256": "57eadaf28190585ada21dbde621dc65a666ff16cfce10f6f95d5c8f178191425",
+      "sourceBytes": 20121
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-4-accessibility.xml",
+      "source": "artifacts/expo-design-theory/native-round2/android-4-accessibility.xml",
+      "sha256": "059124e80e63d6f94f31d610c5c5b67d6016b9267da02929ef3ab866953525c0",
+      "bytes": 19035,
+      "sourceSha256": "059124e80e63d6f94f31d610c5c5b67d6016b9267da02929ef3ab866953525c0",
+      "sourceBytes": 19035
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-5-accessibility.xml",
+      "source": "artifacts/expo-design-theory/native-round2/android-5-accessibility.xml",
+      "sha256": "b4287eec9256ea24f14db420b321d918086eef9809bd6e93219bde2b8141fcf7",
+      "bytes": 17088,
+      "sourceSha256": "b4287eec9256ea24f14db420b321d918086eef9809bd6e93219bde2b8141fcf7",
+      "sourceBytes": 17088
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-6-accessibility.xml",
+      "source": "artifacts/expo-design-theory/native-round2/android-6-accessibility.xml",
+      "sha256": "00e7dfa7d1cfd863258e25fe123dd05e7dce17f44f43d76e7c96d8a085ef1257",
+      "bytes": 17520,
+      "sourceSha256": "00e7dfa7d1cfd863258e25fe123dd05e7dce17f44f43d76e7c96d8a085ef1257",
+      "sourceBytes": 17520
+    },
+    {
+      "file": "expo-design-theory/native-round2/android-7-accessibility.xml",
+      "source": "artifacts/expo-design-theory/native-round2/android-7-accessibility.xml",
+      "sha256": "0aef939d1097fe6e2ce3cd8532e462c144e977cb8213615849ca462c62946200",
+      "bytes": 20118,
+      "sourceSha256": "0aef939d1097fe6e2ce3cd8532e462c144e977cb8213615849ca462c62946200",
+      "sourceBytes": 20118
+    },
+    {
+      "file": "expo-template-smoke/proof.json",
+      "source": "artifacts/expo-template-smoke/proof.json",
+      "sha256": "5745b17801f2824118f58be0c56d7c2126ef2d0ede93a2223d658a64a73409a9",
+      "bytes": 22711,
+      "sourceSha256": "5745b17801f2824118f58be0c56d7c2126ef2d0ede93a2223d658a64a73409a9",
+      "sourceBytes": 22711
+    },
+    {
+      "file": "expo-template-smoke/chromium-390.png",
+      "source": "artifacts/expo-template-smoke/chromium-390.png",
+      "sha256": "0b76f2729e6c422f063890d0cf9b6a137dfd010ea50270c88b0f226705594fe6",
+      "bytes": 10803,
+      "sourceSha256": "0b76f2729e6c422f063890d0cf9b6a137dfd010ea50270c88b0f226705594fe6",
+      "sourceBytes": 10803
+    },
+    {
+      "file": "expo-template-smoke/chromium-820.png",
+      "source": "artifacts/expo-template-smoke/chromium-820.png",
+      "sha256": "c5aa403daf5d3b1048c911b6dec22b7794c3cfb3ea4d3f97182080b026e2c794",
+      "bytes": 12555,
+      "sourceSha256": "c5aa403daf5d3b1048c911b6dec22b7794c3cfb3ea4d3f97182080b026e2c794",
+      "sourceBytes": 12555
+    },
+    {
+      "file": "expo-template-smoke/chromium-1440.png",
+      "source": "artifacts/expo-template-smoke/chromium-1440.png",
+      "sha256": "06feb89e97914e6342927f70e73d4a9ccdbb3762716738f0c81568584f07115b",
+      "bytes": 14884,
+      "sourceSha256": "06feb89e97914e6342927f70e73d4a9ccdbb3762716738f0c81568584f07115b",
+      "sourceBytes": 14884
+    },
+    {
+      "file": "expo-template-smoke/webkit-390.png",
+      "source": "artifacts/expo-template-smoke/webkit-390.png",
+      "sha256": "0515b145df9f921c1a2e0a359a168ef38d1658ee3798e225235672f268fe1770",
+      "bytes": 19257,
+      "sourceSha256": "0515b145df9f921c1a2e0a359a168ef38d1658ee3798e225235672f268fe1770",
+      "sourceBytes": 19257
+    },
+    {
+      "file": "expo-template-smoke/webkit-820.png",
+      "source": "artifacts/expo-template-smoke/webkit-820.png",
+      "sha256": "e755ad09ab794e35d8e8ea239876764c93ad8435aa5a1eba29dda02b6a72bd22",
+      "bytes": 26589,
+      "sourceSha256": "e755ad09ab794e35d8e8ea239876764c93ad8435aa5a1eba29dda02b6a72bd22",
+      "sourceBytes": 26589
+    },
+    {
+      "file": "expo-template-smoke/webkit-1440.png",
+      "source": "artifacts/expo-template-smoke/webkit-1440.png",
+      "sha256": "0e2fedd7a9c71345489fe333d3443fa678e44fead01ee5d0a3c7dcd20b96d37b",
+      "bytes": 37762,
+      "sourceSha256": "0e2fedd7a9c71345489fe333d3443fa678e44fead01ee5d0a3c7dcd20b96d37b",
+      "sourceBytes": 37762
+    },
+    {
+      "file": "expo-template-smoke/native-ios.png",
+      "source": "artifacts/expo-template-smoke/native-ios.png",
+      "sha256": "4036648006f8ddc9c1abb143ab0659d6b52408d502dec5194281c2113c4144f5",
+      "bytes": 159601,
+      "sourceSha256": "4036648006f8ddc9c1abb143ab0659d6b52408d502dec5194281c2113c4144f5",
+      "sourceBytes": 159601
+    },
+    {
+      "file": "expo-template-smoke/native-android.png",
+      "source": "artifacts/expo-template-smoke/native-android.png",
+      "sha256": "2bcad2958781cc787635f4b3c0b1a023bf06464e3771cdcf7ff5cc63e39d80af",
+      "bytes": 50071,
+      "sourceSha256": "2bcad2958781cc787635f4b3c0b1a023bf06464e3771cdcf7ff5cc63e39d80af",
+      "sourceBytes": 50071
+    },
+    {
+      "file": "expo-template-smoke/android-accessibility.xml",
+      "source": "artifacts/expo-template-smoke/android-accessibility.xml",
+      "sha256": "020994d26b25de7ebabde526af23438b6d11df4806ab2902e5e18c4cbb01f79b",
+      "bytes": 9354,
+      "sourceSha256": "020994d26b25de7ebabde526af23438b6d11df4806ab2902e5e18c4cbb01f79b",
+      "sourceBytes": 9354
+    }
+  ]
+}

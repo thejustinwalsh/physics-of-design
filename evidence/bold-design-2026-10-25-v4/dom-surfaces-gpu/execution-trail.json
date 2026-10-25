@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-10-25T13:09:06.329Z",
+  "brief": {
+    "file": "DESIGN.md",
+    "sha256": "3bc9b66ae3b4d059197c9156412ba7d2a682b93c55883d44c4cab8d367eee511",
+    "inspection": "context.json",
+    "stage": "brief read before implementation; hash inspection after final renderer run"
+  },
+  "authoredInputs": [
+    {
+      "path": "examples/dom-surfaces/gpu-recipes.json",
+      "sha256": "a7fe870f306c02a38c532786181783e38863b5acea565e0c64d4c32c290afdae"
+    },
+    {
+      "path": "docs/dom-surface-research.md",
+      "sha256": "843c51250d9223eb2dcdac58fc237225fc55f9cfc4c9a6d1bdb75dddbe44e0a0"
+    }
+  ],
+  "generation": {
+    "entryPoints": [
+      "createDomSurfaceRecipe",
+      "generateSurfaceTextures",
+      "probeSurface"
+    ],
+    "invokedBy": [
+      "src/dom-surface-shading.ts",
+      "examples/dom-surfaces/gpu-proof-client.js",
+      "scripts/prove-dom-surface-gpu.mjs"
+    ],
+    "numericExploration": "same pigment/light paired comparisons of scalar roughness, metalness, independent normals, intrinsic roughness, point-light motion and exposure"
+  },
+  "modelSelection": {
+    "performed": false
+  },
+  "critique": {
+    "kind": "synthetic agent image critique",
+    "observations": [
+      "Initial paper was overly embossed; reduce normal amplitude and separate pigment grain.",
+      "Enamel was pebbled; lower normal amplitude.",
+      "Metal grooves competed with text; reduce groove amplitude and verify actual contrast."
+    ],
+    "humanPreferenceEvidence": false
+  },
+  "renderer": {
+    "proof": "proof.json",
+    "checks": 55,
+    "allPassed": true,
+    "sourceIdentities": [
+      {
+        "path": "src/dom-surface.ts",
+        "sha256": "a48beb62babc4a340b1b6bbe660604dfab70d95afbe49a83d837aa54a0d31c11"
+      },
+      {
+        "path": "src/browser-dom-light.ts",
+        "sha256": "2e69e318efbe6d80fa6859d2f6272e8ba91e6affa86195a60e7702e8e32b3807"
+      },
+      {
+        "path": "src/dom-surface-gpu.ts",
+        "sha256": "2c363138bae85c0fd4053f35b2de8fcb1e0591f07fcfcbeb943011a9e85d3001"
+      },
+      {
+        "path": "src/dom-surface-shading.ts",
+        "sha256": "ea00caf8a0fa04514b7311e6c95060bf114f3a539b9db64daba08c643ba634de"
+      },
+      {
+        "path": "src/surface.ts",
+        "sha256": "fd0a89a64c42e59c8738ffd7bb87f36d49d384f9753a3d318253209f5310220c"
+      },
+      {
+        "path": "examples/dom-surfaces/gpu-proof-client.js",
+        "sha256": "f48aa05a249d1767d4750af450b7ab42efb64050b86402b1dff130178e5973b3"
+      },
+      {
+        "path": "examples/dom-surfaces/gpu-recipes.json",
+        "sha256": "a7fe870f306c02a38c532786181783e38863b5acea565e0c64d4c32c290afdae"
+      },
+      {
+        "path": "scripts/prove-dom-surface-gpu.mjs",
+        "sha256": "d77c683c8a40325f3be31a2c92dcf69ed5f86e021cb027102b727004aad2aff4"
+      }
+    ]
+  },
+  "replay": {
+    "command": "DESIGN_WEBKIT_EXECUTABLE=artifacts/runtime/playwright/webkit-2370/pw_run.sh node scripts/prove-dom-surface-gpu.mjs",
+    "scope": "production material adapter rendered with actual DOM; no saved preset described as solver execution"
+  },
+  "limits": [
+    "Observed Playwright Chromium/WebKit pixels; physical Safari power, refresh, thermal and sensor behavior remain unverified.",
+    "The shader shares the headless Lambert/GGX conventions. Ambient fill, procedural microstructure, point-light normalization, and Reinhard display mapping are authored; no full light transport or energy-conservation claim.",
+    "Frame interval observations include screenshot overhead and are not a GPU timing benchmark. JS update timing excludes GPU completion, paint and compositing.",
+    "Contrast covers the recorded real DOM copy at sampled poses/exposures. It cannot certify every supplied color, backdrop or motion path."
+  ]
+}

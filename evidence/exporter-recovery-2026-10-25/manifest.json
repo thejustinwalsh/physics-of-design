@@ -1,0 +1,52 @@
+{
+  "kind": "artifact-publisher-recovery",
+  "originalProductionSourceUnchanged": true,
+  "fullVerificationScope": "The original unchanged 348-source/full34 snapshot; recovery helper has its own ten focused tests.",
+  "files": [
+    {
+      "file": "export.mjs",
+      "bytes": 22550,
+      "sha256": "aafc7706fc1fa5d38952971a8d046152708c20eba3abb2a725a7dc7bcdbfc4c5"
+    },
+    {
+      "file": "regression.test.mjs",
+      "bytes": 1579,
+      "sha256": "223174acf41184a33060e30b7d47b37c6ce1e4561139dafc8c9ccffc16f4af83"
+    },
+    {
+      "file": "model-provenance.fixture.json",
+      "bytes": 1248,
+      "sha256": "e59eb6fb91a2b61582ae95a547efe111241322067a0b8aeb6a0e164c3fe4f239"
+    },
+    {
+      "file": "original-failure.log",
+      "bytes": 1976,
+      "sha256": "17c69911018957f15651665ec1f147c96ea648d995e17bd9041dc55b9c608015"
+    },
+    {
+      "file": "regression.log",
+      "bytes": 811,
+      "sha256": "e976b1363a204833345bd2f06e950c20937c765eda7191be8f795c312c420eb3"
+    },
+    {
+      "file": "publication.log",
+      "bytes": 166,
+      "sha256": "b4a00f7a3ddad7ba757836cdd0328ee1054f8248bae3c5517ceb766edcd14398"
+    },
+    {
+      "file": "verification.json",
+      "bytes": 761,
+      "sha256": "deaaf5dc8ef0ade3f9282cf29d649544d3b034593f69460fb92fe8d15482f27b"
+    },
+    {
+      "file": "publisher.diff",
+      "bytes": 3469,
+      "sha256": "f77d00621b09f2c407490c66db89a86f7020ffeceb842c4a5ce8117dda21b4f5"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1709,
+      "sha256": "57f3e5bd426c6234fa03a1163b562a5aaacce1026eaaf6554eec2b56a621be96"
+    }
+  ]
+}

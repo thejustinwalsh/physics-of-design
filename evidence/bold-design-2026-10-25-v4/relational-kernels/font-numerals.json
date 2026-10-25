@@ -1,0 +1,56 @@
+{
+  "fontIdentity": "3e94f0454333cdb4d5d94662a022ef7e91d0befabc348c7bb26c6ac5a4d28fea",
+  "features": [
+    "liga",
+    "locl",
+    "pnum",
+    "rvrn",
+    "kern",
+    "mark",
+    "mkmk"
+  ],
+  "requestedFeatures": {},
+  "digitAdvances": [
+    {
+      "digit": "0",
+      "advance": 8.467
+    },
+    {
+      "digit": "1",
+      "advance": 8.467
+    },
+    {
+      "digit": "2",
+      "advance": 8.467
+    },
+    {
+      "digit": "3",
+      "advance": 8.467
+    },
+    {
+      "digit": "4",
+      "advance": 8.467
+    },
+    {
+      "digit": "5",
+      "advance": 8.467
+    },
+    {
+      "digit": "6",
+      "advance": 8.467
+    },
+    {
+      "digit": "7",
+      "advance": 8.467
+    },
+    {
+      "digit": "8",
+      "advance": 8.467
+    },
+    {
+      "digit": "9",
+      "advance": 8.467
+    }
+  ],
+  "scope": "Default Fontkit advances at this exact state. tnum is unavailable; native and browser numeric rendering remain separate checks."
+}

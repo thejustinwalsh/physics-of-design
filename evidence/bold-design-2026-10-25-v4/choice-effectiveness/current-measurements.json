@@ -1,0 +1,2292 @@
+{
+  "version": 1,
+  "sourceIdentity": "4d29d5667b277be48492d025a8d3df4297bc77fcdf8a9db5bac9310ec104ac59",
+  "identity": "26b0559541bb45f6a3dee5db51ee6e97b60193c2b0400a7cfca84ffbaf6cfd4b",
+  "policy": "design-field-text-v2: LTR plain text; declared leading/tracking/axes; title min(size,width*.135)*textScale; body min(contentMax*.55,available,680); natural height",
+  "provider": "chromium",
+  "runtime": "Chromium 156.0.8078.4",
+  "sources": {
+    "titleFont": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
+    "bodyFont": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251",
+    "image": "7f34d81862a36f8589fc6d93311697818e8fdfeef1e9a48a01a079c376316f29",
+    "briefSource": "e8414616b85e1b75064f6cc4ae9cf7b9d17133d7e756dfe94da01fa767f0cd55",
+    "content": "703f1b554daa9a947100f3253bf7f396e635bec6e6e56637a311b22ba71091f0"
+  },
+  "rows": [
+    {
+      "scenario": "phone",
+      "key": "t52c900",
+      "height": 162.234375,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t52c1080",
+      "height": 162.234375,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t52c1260",
+      "height": 162.234375,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t64c900",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t64c1080",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t64c1260",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t76c900",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t76c1080",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t76c1260",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t88c900",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t88c1080",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t88c1260",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t100c900",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t100c1080",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "t100c1260",
+      "height": 164.25,
+      "width": 350,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b16c900l1_35",
+      "height": 86.375,
+      "width": 350,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b16c900l1_5",
+      "height": 96,
+      "width": 350,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b16c900l1_65",
+      "height": 105.5625,
+      "width": 350,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b16c1080l1_35",
+      "height": 86.375,
+      "width": 350,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b16c1080l1_5",
+      "height": 96,
+      "width": 350,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b16c1080l1_65",
+      "height": 105.5625,
+      "width": 350,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b16c1260l1_35",
+      "height": 86.375,
+      "width": 350,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b16c1260l1_5",
+      "height": 96,
+      "width": 350,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b16c1260l1_65",
+      "height": 105.5625,
+      "width": 350,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b18c900l1_35",
+      "height": 121.484375,
+      "width": 350,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b18c900l1_5",
+      "height": 135,
+      "width": 350,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b18c900l1_65",
+      "height": 148.4375,
+      "width": 350,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b18c1080l1_35",
+      "height": 121.484375,
+      "width": 350,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b18c1080l1_5",
+      "height": 135,
+      "width": 350,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b18c1080l1_65",
+      "height": 148.4375,
+      "width": 350,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b18c1260l1_35",
+      "height": 121.484375,
+      "width": 350,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b18c1260l1_5",
+      "height": 135,
+      "width": 350,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b18c1260l1_65",
+      "height": 148.4375,
+      "width": 350,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b20c900l1_35",
+      "height": 162,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b20c900l1_5",
+      "height": 180,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b20c900l1_65",
+      "height": 198,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b20c1080l1_35",
+      "height": 162,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b20c1080l1_5",
+      "height": 180,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b20c1080l1_65",
+      "height": 198,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b20c1260l1_35",
+      "height": 162,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b20c1260l1_5",
+      "height": 180,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone",
+      "key": "b20c1260l1_65",
+      "height": 198,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t52c900",
+      "height": 648.9375,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t52c1080",
+      "height": 648.9375,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t52c1260",
+      "height": 648.9375,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t64c900",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t64c1080",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t64c1260",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t76c900",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t76c1080",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t76c1260",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t88c900",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t88c1080",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t88c1260",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t100c900",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t100c1080",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "t100c1260",
+      "height": 657,
+      "width": 350,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b16c900l1_35",
+      "height": 388.6875,
+      "width": 350,
+      "lines": 9,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b16c900l1_5",
+      "height": 432,
+      "width": 350,
+      "lines": 9,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b16c900l1_65",
+      "height": 475.171875,
+      "width": 350,
+      "lines": 9,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b16c1080l1_35",
+      "height": 388.6875,
+      "width": 350,
+      "lines": 9,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b16c1080l1_5",
+      "height": 432,
+      "width": 350,
+      "lines": 9,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b16c1080l1_65",
+      "height": 475.171875,
+      "width": 350,
+      "lines": 9,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b16c1260l1_35",
+      "height": 388.6875,
+      "width": 350,
+      "lines": 9,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b16c1260l1_5",
+      "height": 432,
+      "width": 350,
+      "lines": 9,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b16c1260l1_65",
+      "height": 475.171875,
+      "width": 350,
+      "lines": 9,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b18c900l1_35",
+      "height": 485.9375,
+      "width": 350,
+      "lines": 10,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b18c900l1_5",
+      "height": 540,
+      "width": 350,
+      "lines": 10,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b18c900l1_65",
+      "height": 593.90625,
+      "width": 350,
+      "lines": 10,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b18c1080l1_35",
+      "height": 485.9375,
+      "width": 350,
+      "lines": 10,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b18c1080l1_5",
+      "height": 540,
+      "width": 350,
+      "lines": 10,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b18c1080l1_65",
+      "height": 593.90625,
+      "width": 350,
+      "lines": 10,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b18c1260l1_35",
+      "height": 485.9375,
+      "width": 350,
+      "lines": 10,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b18c1260l1_5",
+      "height": 540,
+      "width": 350,
+      "lines": 10,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b18c1260l1_65",
+      "height": 593.90625,
+      "width": 350,
+      "lines": 10,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b20c900l1_35",
+      "height": 594,
+      "width": 350,
+      "lines": 11,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b20c900l1_5",
+      "height": 660,
+      "width": 350,
+      "lines": 11,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b20c900l1_65",
+      "height": 726,
+      "width": 350,
+      "lines": 11,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b20c1080l1_35",
+      "height": 594,
+      "width": 350,
+      "lines": 11,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b20c1080l1_5",
+      "height": 660,
+      "width": 350,
+      "lines": 11,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b20c1080l1_65",
+      "height": 726,
+      "width": 350,
+      "lines": 11,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b20c1260l1_35",
+      "height": 594,
+      "width": 350,
+      "lines": 11,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b20c1260l1_5",
+      "height": 660,
+      "width": 350,
+      "lines": 11,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "phone-large",
+      "key": "b20c1260l1_65",
+      "height": 726,
+      "width": 350,
+      "lines": 11,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t52c900",
+      "height": 54.078125,
+      "width": 762,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t52c1080",
+      "height": 54.078125,
+      "width": 762,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t52c1260",
+      "height": 54.078125,
+      "width": 762,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t64c900",
+      "height": 133.09375,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t64c1080",
+      "height": 133.09375,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t64c1260",
+      "height": 133.09375,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t76c900",
+      "height": 158.0625,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t76c1080",
+      "height": 158.0625,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t76c1260",
+      "height": 158.0625,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t88c900",
+      "height": 183.03125,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t88c1080",
+      "height": 183.03125,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t88c1260",
+      "height": 183.03125,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t100c900",
+      "height": 208,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t100c1080",
+      "height": 208,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "t100c1260",
+      "height": 208,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b16c900l1_35",
+      "height": 64.78125,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b16c900l1_5",
+      "height": 72,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b16c900l1_65",
+      "height": 79.171875,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b16c1080l1_35",
+      "height": 64.78125,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b16c1080l1_5",
+      "height": 72,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b16c1080l1_65",
+      "height": 79.171875,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b16c1260l1_35",
+      "height": 43.1875,
+      "width": 680,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b16c1260l1_5",
+      "height": 48,
+      "width": 680,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b16c1260l1_65",
+      "height": 52.78125,
+      "width": 680,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b18c900l1_35",
+      "height": 72.890625,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b18c900l1_5",
+      "height": 81,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b18c900l1_65",
+      "height": 89.0625,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b18c1080l1_35",
+      "height": 72.890625,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b18c1080l1_5",
+      "height": 81,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b18c1080l1_65",
+      "height": 89.0625,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b18c1260l1_35",
+      "height": 72.890625,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b18c1260l1_5",
+      "height": 81,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b18c1260l1_65",
+      "height": 89.0625,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b20c900l1_35",
+      "height": 108,
+      "width": 495,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b20c900l1_5",
+      "height": 120,
+      "width": 495,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b20c900l1_65",
+      "height": 132,
+      "width": 495,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b20c1080l1_35",
+      "height": 81,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b20c1080l1_5",
+      "height": 90,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b20c1080l1_65",
+      "height": 99,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b20c1260l1_35",
+      "height": 81,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b20c1260l1_5",
+      "height": 90,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad",
+      "key": "b20c1260l1_65",
+      "height": 99,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t52c900",
+      "height": 216.3125,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t52c1080",
+      "height": 216.3125,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t52c1260",
+      "height": 216.3125,
+      "width": 762,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t64c900",
+      "height": 399.328125,
+      "width": 762,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t64c1080",
+      "height": 399.328125,
+      "width": 762,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t64c1260",
+      "height": 399.328125,
+      "width": 762,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t76c900",
+      "height": 474.234375,
+      "width": 762,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t76c1080",
+      "height": 474.234375,
+      "width": 762,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t76c1260",
+      "height": 474.234375,
+      "width": 762,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t88c900",
+      "height": 915.15625,
+      "width": 762,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t88c1080",
+      "height": 915.15625,
+      "width": 762,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t88c1260",
+      "height": 915.15625,
+      "width": 762,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t100c900",
+      "height": 1040,
+      "width": 762,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t100c1080",
+      "height": 1040,
+      "width": 762,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "t100c1260",
+      "height": 1040,
+      "width": 762,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b16c900l1_35",
+      "height": 259.125,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b16c900l1_5",
+      "height": 288,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b16c900l1_65",
+      "height": 316.78125,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b16c1080l1_35",
+      "height": 215.9375,
+      "width": 594,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b16c1080l1_5",
+      "height": 240,
+      "width": 594,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b16c1080l1_65",
+      "height": 263.984375,
+      "width": 594,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b16c1260l1_35",
+      "height": 172.75,
+      "width": 680,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b16c1260l1_5",
+      "height": 192,
+      "width": 680,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b16c1260l1_65",
+      "height": 211.1875,
+      "width": 680,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b18c900l1_35",
+      "height": 291.5625,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b18c900l1_5",
+      "height": 324,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b18c900l1_65",
+      "height": 356.34375,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b18c1080l1_35",
+      "height": 291.5625,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b18c1080l1_5",
+      "height": 324,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b18c1080l1_65",
+      "height": 356.34375,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b18c1260l1_35",
+      "height": 242.96875,
+      "width": 680,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b18c1260l1_5",
+      "height": 270,
+      "width": 680,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b18c1260l1_65",
+      "height": 296.953125,
+      "width": 680,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b20c900l1_35",
+      "height": 378,
+      "width": 495,
+      "lines": 7,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b20c900l1_5",
+      "height": 420,
+      "width": 495,
+      "lines": 7,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b20c900l1_65",
+      "height": 462,
+      "width": 495,
+      "lines": 7,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b20c1080l1_35",
+      "height": 324,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b20c1080l1_5",
+      "height": 360,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b20c1080l1_65",
+      "height": 396,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b20c1260l1_35",
+      "height": 324,
+      "width": 680,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b20c1260l1_5",
+      "height": 360,
+      "width": 680,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "ipad-large",
+      "key": "b20c1260l1_65",
+      "height": 396,
+      "width": 680,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t52c900",
+      "height": 54.078125,
+      "width": 900,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t52c1080",
+      "height": 54.078125,
+      "width": 1080,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t52c1260",
+      "height": 54.078125,
+      "width": 1260,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t64c900",
+      "height": 66.546875,
+      "width": 900,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t64c1080",
+      "height": 66.546875,
+      "width": 1080,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t64c1260",
+      "height": 66.546875,
+      "width": 1260,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t76c900",
+      "height": 158.0625,
+      "width": 900,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t76c1080",
+      "height": 79.03125,
+      "width": 1080,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t76c1260",
+      "height": 79.03125,
+      "width": 1260,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t88c900",
+      "height": 183.03125,
+      "width": 900,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t88c1080",
+      "height": 183.03125,
+      "width": 1080,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t88c1260",
+      "height": 91.515625,
+      "width": 1260,
+      "lines": 1,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t100c900",
+      "height": 208,
+      "width": 900,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t100c1080",
+      "height": 208,
+      "width": 1080,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "t100c1260",
+      "height": 208,
+      "width": 1260,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b16c900l1_35",
+      "height": 64.78125,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b16c900l1_5",
+      "height": 72,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b16c900l1_65",
+      "height": 79.171875,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b16c1080l1_35",
+      "height": 64.78125,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b16c1080l1_5",
+      "height": 72,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b16c1080l1_65",
+      "height": 79.171875,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b16c1260l1_35",
+      "height": 43.1875,
+      "width": 680,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b16c1260l1_5",
+      "height": 48,
+      "width": 680,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b16c1260l1_65",
+      "height": 52.78125,
+      "width": 680,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b18c900l1_35",
+      "height": 72.890625,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b18c900l1_5",
+      "height": 81,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b18c900l1_65",
+      "height": 89.0625,
+      "width": 495,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b18c1080l1_35",
+      "height": 72.890625,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b18c1080l1_5",
+      "height": 81,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b18c1080l1_65",
+      "height": 89.0625,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b18c1260l1_35",
+      "height": 72.890625,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b18c1260l1_5",
+      "height": 81,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b18c1260l1_65",
+      "height": 89.0625,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b20c900l1_35",
+      "height": 108,
+      "width": 495,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b20c900l1_5",
+      "height": 120,
+      "width": 495,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b20c900l1_65",
+      "height": 132,
+      "width": 495,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b20c1080l1_35",
+      "height": 81,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b20c1080l1_5",
+      "height": 90,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b20c1080l1_65",
+      "height": 99,
+      "width": 594,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b20c1260l1_35",
+      "height": 81,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b20c1260l1_5",
+      "height": 90,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop",
+      "key": "b20c1260l1_65",
+      "height": 99,
+      "width": 680,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t52c900",
+      "height": 216.3125,
+      "width": 900,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t52c1080",
+      "height": 216.3125,
+      "width": 1080,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t52c1260",
+      "height": 216.3125,
+      "width": 1260,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t64c900",
+      "height": 266.21875,
+      "width": 900,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t64c1080",
+      "height": 266.21875,
+      "width": 1080,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t64c1260",
+      "height": 266.21875,
+      "width": 1260,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t76c900",
+      "height": 474.234375,
+      "width": 900,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t76c1080",
+      "height": 316.15625,
+      "width": 1080,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t76c1260",
+      "height": 316.15625,
+      "width": 1260,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t88c900",
+      "height": 549.09375,
+      "width": 900,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t88c1080",
+      "height": 549.09375,
+      "width": 1080,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t88c1260",
+      "height": 366.0625,
+      "width": 1260,
+      "lines": 2,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t100c900",
+      "height": 832,
+      "width": 900,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t100c1080",
+      "height": 624,
+      "width": 1080,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "t100c1260",
+      "height": 624,
+      "width": 1260,
+      "lines": 3,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b16c900l1_35",
+      "height": 259.125,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b16c900l1_5",
+      "height": 288,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b16c900l1_65",
+      "height": 316.78125,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b16c1080l1_35",
+      "height": 215.9375,
+      "width": 594,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b16c1080l1_5",
+      "height": 240,
+      "width": 594,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b16c1080l1_65",
+      "height": 263.984375,
+      "width": 594,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b16c1260l1_35",
+      "height": 172.75,
+      "width": 680,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b16c1260l1_5",
+      "height": 192,
+      "width": 680,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b16c1260l1_65",
+      "height": 211.1875,
+      "width": 680,
+      "lines": 4,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b18c900l1_35",
+      "height": 291.5625,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b18c900l1_5",
+      "height": 324,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b18c900l1_65",
+      "height": 356.34375,
+      "width": 495,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b18c1080l1_35",
+      "height": 291.5625,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b18c1080l1_5",
+      "height": 324,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b18c1080l1_65",
+      "height": 356.34375,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b18c1260l1_35",
+      "height": 242.96875,
+      "width": 680,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b18c1260l1_5",
+      "height": 270,
+      "width": 680,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b18c1260l1_65",
+      "height": 296.953125,
+      "width": 680,
+      "lines": 5,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b20c900l1_35",
+      "height": 378,
+      "width": 495,
+      "lines": 7,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b20c900l1_5",
+      "height": 420,
+      "width": 495,
+      "lines": 7,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b20c900l1_65",
+      "height": 462,
+      "width": 495,
+      "lines": 7,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b20c1080l1_35",
+      "height": 324,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b20c1080l1_5",
+      "height": 360,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b20c1080l1_65",
+      "height": 396,
+      "width": 594,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b20c1260l1_35",
+      "height": 324,
+      "width": 680,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b20c1260l1_5",
+      "height": 360,
+      "width": 680,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    },
+    {
+      "scenario": "desktop-large",
+      "key": "b20c1260l1_65",
+      "height": 396,
+      "width": 680,
+      "lines": 6,
+      "overflowX": 0,
+      "fontLoaded": true
+    }
+  ],
+  "image": {
+    "width": 225,
+    "height": 150,
+    "meanLuminance": 0.610448846511295,
+    "luminanceStdDev": 0.16267808838804135,
+    "sampleCount": 1024
+  }
+}

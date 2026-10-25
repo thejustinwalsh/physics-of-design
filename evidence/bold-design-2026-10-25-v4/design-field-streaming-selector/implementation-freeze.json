@@ -1,0 +1,27 @@
+{
+  "status": "verified-unchanged",
+  "implementationSources": {
+    "src/design-field.ts": "053c2a3be89527c1cd4cf165043ae91d10c5a95567d0ff77d27a815268c4d340",
+    "src/design-field-vocabulary.ts": "ca9bfce41fc89f105ed21f9e8f34043ea1e0e025e57399272f76462dca112ea8",
+    "src/energy.ts": "7da336be3b429c85abc92483478266a440f946f3c2639f0996ef2a0f9ecb555d",
+    "src/energy-analysis.ts": "23a2bff31db2c576f105990eb8b5b3c2fb28e99919ae185788b8422fb0ddc67b",
+    "src/decision-workflow.ts": "bcbd51a167d1a3fa6181c0dde664bae1cd056e6610a4fca8e994fbee001f6986",
+    "src/selector.ts": "3c6e3ab1c3c3ec96a72a0f43dbd95202d9c2b7035e3018968039cf03da116155",
+    "src/selector-process.ts": "e3a86e759980818e6f5c9aa4acef6ac35291ffd0598f2b659e60a0d6ee257694",
+    "scripts/semif-local.sh": "25e124fb3f6b500a96459d80e47adb4857fdbb7206a841b6d106d14f16c54ab9",
+    "scripts/semif-progress.py": "5264d1ff99a48b941682b29e9d8f50d3d17f17b94bc97df15dd5bf592772e2cd",
+    "src/math-expression.ts": "3c0e85863a2552819145ce2035625226d90bdc8ab354ea382c44052f33541bbb",
+    "src/identity.ts": "df0a6e2c01eadd71051c8f6021f80b80ea53f0a3496410ccef55b3874e904975",
+    "scripts/prove-design-field.mjs": "6c23db1f0b2b399549903eaab6af531d08b49c4c3071a61a53b764791c3642f5",
+    "dist/design-field.js": "70ca9098d8583344ea089850bfc67b1ad1d6c9146e745cfadedea3dd465df2c9",
+    "dist/design-field-vocabulary.js": "3031dfadd8973204e8dc3ac46f2d6b0489ed5376d07ad4b17b5a3a5cdd0cf503",
+    "dist/energy.js": "87804140df8bee76627faf114d1c9d32b5450dfe7648597cade3f04bf9382ed6",
+    "dist/energy-analysis.js": "4d8ddb3062e776620554c88d4453b557c298e665eadce68349306ab7dc5e4031",
+    "dist/decision-workflow.js": "89105d71bc519394acf07654f3959c7b318ee2b75a1fe1896cfc80c9ca21b01b",
+    "dist/selector.js": "94951506267a7d6a891a6e8f995b8e25de0e52431430df2681e7e42a002cf7e9",
+    "dist/selector-process.js": "242c2c79a186f74b2ec43319acb4250a2750cf84b44cb42bc2cdf4c313b882aa",
+    "dist/math-expression.js": "19bb816e6daade4cc36ef786c733278d40ae387291f55b6da8856b858f4c5222",
+    "dist/identity.js": "3210b78d4edd805f08a35db56be00e7ce3852d8503c2361183b107f9b5a6eb0d"
+  },
+  "scope": "Source and executed module hashes matched before and after proof calls"
+}

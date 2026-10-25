@@ -1,0 +1,36 @@
+Starting Metro Bundler
+
+| (node:66393) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:66393) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:66393) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:66393) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:66393) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:66393) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:66393) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+Web Bundled 3610ms index.js (221 modules)
+
+› Assets (1):
+../../assets/fonts/Lato-Regular.8d72101cad1547bed5ba3105041eeeae.ttf (657KB)
+
+› web bundles (2):
+_expo/static/css/strict-68c96bdba4645c365284a139585479b5.css (3.8KB)
+_expo/static/js/web/index-c8999887e9d3f6597f85be57ff464edb.js (426KB)
+
+› Files (2):
+index.html (1.4KB)
+metadata.json (49B)
+
+Exported: dist
+{
+  "output": "artifacts/expo-design-theory/round2",
+  "checks": 60,
+  "failed": [],
+  "errors": []
+}

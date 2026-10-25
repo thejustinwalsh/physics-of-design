@@ -1,0 +1,411 @@
+{
+  "output": "artifacts/design-theory/interactions-verification",
+  "scenarios": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "name": "Layout gutter",
+      "frameSamples": 87,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000273,
+      "maxFrameInterval": 16.800000000000182,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "name": "Layout content gap",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.799999999999272,
+      "maxFrameInterval": 16.800000000000182,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "name": "Motion damping",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.800000000000182,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "name": "Material roughness",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.799999999999272,
+      "maxFrameInterval": 16.80000000000109,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "name": "Material metalness",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.80000000000109,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "name": "Normal texture scale",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.799999999999272,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "name": "Normal texture amplitude",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.799999999999272,
+      "maxFrameInterval": 16.80000000000109,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "name": "Surface finish roughness",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.799999999999272,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "name": "Image focal point",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.80000000000291,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "name": "Layout gutter",
+      "frameSamples": 86,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.800000000000182,
+      "maxFrameInterval": 16.800000000000182,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "name": "Layout content gap",
+      "frameSamples": 83,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.800000000000182,
+      "maxFrameInterval": 16.800000000000182,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "name": "Motion damping",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.800000000000182,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "name": "Material roughness",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.80000000000109,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "name": "Material metalness",
+      "frameSamples": 83,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.80000000000109,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "name": "Normal texture scale",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.799999999999272,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "name": "Normal texture amplitude",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.799999999999272,
+      "maxFrameInterval": 16.80000000000109,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "name": "Surface finish roughness",
+      "frameSamples": 85,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.799999999999272,
+      "maxFrameInterval": 16.80000000000291,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "name": "Image focal point",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.799999999999272,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "name": "Layout gutter",
+      "frameSamples": 85,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000273,
+      "maxFrameInterval": 33.399999999999864,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "name": "Layout content gap",
+      "frameSamples": 86,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.799999999999727,
+      "maxFrameInterval": 16.800000000000182,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "name": "Motion damping",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.800000000000182,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "name": "Material roughness",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.799999999999272,
+      "maxFrameInterval": 16.80000000000109,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "name": "Material metalness",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.80000000000109,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "name": "Normal texture scale",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.799999999999272,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "name": "Normal texture amplitude",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.799999999999272,
+      "maxFrameInterval": 16.80000000000109,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "name": "Surface finish roughness",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.799999999999272,
+      "maxFrameInterval": 16.799999999999272,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "name": "Image focal point",
+      "frameSamples": 84,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 16.700000000000728,
+      "maxFrameInterval": 16.799999999999272,
+      "longTasks": [],
+      "longTaskObserverSupported": true
+    }
+  ],
+  "errors": []
+}

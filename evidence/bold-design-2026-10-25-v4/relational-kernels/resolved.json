@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "compilationIdentity": "a2a520e0a4e260dc5529c94d4990c1fd238b83daeabc30e9bc062d5196fdd6b1",
+  "inputIdentity": "c969870e67d9acc46cb1060c85fe39faf0f4ae4a8713128de40478857411e49f",
+  "identities": {
+    "design": "52347cd4011539b07eab43ce218c4295373f190e009a7683366c2a87af5dece2",
+    "source": "43dceb37f87324a058ecf58b59f2fc3a4004114cedab2100b259811add339ef9",
+    "content": "107f4315ec2589aaa4ed2328b767e54b4c7a12b3be2b34d56eb20c5638f61d62"
+  },
+  "resultIdentity": "7bbd739405d4eb1735532746ca722d2b04a42798312a94dbb2d69368901926a0",
+  "scenarioIdentities": {
+    "small-phone": "8786c086adb2e44f3e93dd3b942ff335a8164f1c608e30e6caa17e2068d4244b",
+    "phone": "778a39aee830f65e4219d20cdce0ba2634d095c243486db6b74cec426801f41b",
+    "phone-large": "4d1cb264343acbf40016486fbdc0df48fdc860152dd0ead2c00cafb23c6f8dd1",
+    "narrow": "e4838843ad61b44b9e10cabcd7313c2b043f0b5450d19e7025b4aeee4ba64807",
+    "ipad": "0bd4ca41ce5d9bcdd2826e903b4a74c1af494febb8d921f62290a93b92db9444",
+    "desktop": "a4331b1bfc5deb1e85213b420270e2be5e3f66ab037474f5f8ce45ba46398554"
+  },
+  "values": {
+    "desktop": {
+      "service-row.fontSize": 14,
+      "service-row.lineHeightRatio": 1.4,
+      "service-row.lineHeight": 19.599999999999998,
+      "service-row.letterSpacing": 0,
+      "service-row.textWidth": 240,
+      "service-row.rowHeight": 44,
+      "service-row.paddingBlock": 4,
+      "workspace.gap": 16,
+      "workspace.inlinePadding": 12,
+      "workspace.available": 1416,
+      "workspace.columns": 2,
+      "workspace.list.width": 648.3333333333334,
+      "workspace.inspector.width": 751.6666666666667,
+      "appearance.constraintFailures": 0,
+      "appearance.material.roughnessDifference": 0,
+      "appearance.spring.mass": 1,
+      "appearance.spring.stiffness": 200,
+      "appearance.spring.damping": 28,
+      "appearance.surface.roughness": 0.3,
+      "appearance.surface.metalness": 0,
+      "appearance.palette.canvas": "#0e1720",
+      "appearance.palette.ink": "#eaf2f7",
+      "appearance.palette.accent": "#66d9ed",
+      "appearance.palette.dark-canvas": "#0e1720",
+      "appearance.palette.dark-ink": "#eaf2f7",
+      "appearance.palette.light-canvas": "#edf0eb",
+      "appearance.palette.light-ink": "#182b35",
+      "appearance.nativeFinish": "static"
+    },
+    "ipad": {
+      "service-row.fontSize": 21,
+      "service-row.lineHeightRatio": 1.4,
+      "service-row.lineHeight": 29.4,
+      "service-row.letterSpacing": 0,
+      "service-row.textWidth": 240,
+      "service-row.rowHeight": 66.78125,
+      "service-row.paddingBlock": 4,
+      "workspace.gap": 16,
+      "workspace.inlinePadding": 12,
+      "workspace.available": 810,
+      "workspace.columns": 2,
+      "workspace.list.width": 375.83333333333337,
+      "workspace.inspector.width": 418.1666666666667,
+      "appearance.constraintFailures": 0,
+      "appearance.material.roughnessDifference": 0,
+      "appearance.spring.mass": 1,
+      "appearance.spring.stiffness": 200,
+      "appearance.spring.damping": 28,
+      "appearance.surface.roughness": 0.3,
+      "appearance.surface.metalness": 0,
+      "appearance.palette.canvas": "#0e1720",
+      "appearance.palette.ink": "#eaf2f7",
+      "appearance.palette.accent": "#66d9ed",
+      "appearance.palette.dark-canvas": "#0e1720",
+      "appearance.palette.dark-ink": "#eaf2f7",
+      "appearance.palette.light-canvas": "#edf0eb",
+      "appearance.palette.light-ink": "#182b35",
+      "appearance.nativeFinish": "static"
+    },
+    "narrow": {
+      "service-row.fontSize": 14,
+      "service-row.lineHeightRatio": 1.4,
+      "service-row.lineHeight": 19.599999999999998,
+      "service-row.letterSpacing": 0,
+      "service-row.textWidth": 240,
+      "service-row.rowHeight": 44,
+      "service-row.paddingBlock": 4,
+      "workspace.gap": 16,
+      "workspace.inlinePadding": 12,
+      "workspace.available": 744,
+      "workspace.columns": 2,
+      "workspace.list.width": 368.33333333333337,
+      "workspace.inspector.width": 359.6666666666667,
+      "appearance.constraintFailures": 0,
+      "appearance.material.roughnessDifference": 0,
+      "appearance.spring.mass": 1,
+      "appearance.spring.stiffness": 200,
+      "appearance.spring.damping": 28,
+      "appearance.surface.roughness": 0.3,
+      "appearance.surface.metalness": 0,
+      "appearance.palette.canvas": "#0e1720",
+      "appearance.palette.ink": "#eaf2f7",
+      "appearance.palette.accent": "#66d9ed",
+      "appearance.palette.dark-canvas": "#0e1720",
+      "appearance.palette.dark-ink": "#eaf2f7",
+      "appearance.palette.light-canvas": "#edf0eb",
+      "appearance.palette.light-ink": "#182b35",
+      "appearance.nativeFinish": "static"
+    },
+    "phone": {
+      "service-row.fontSize": 14,
+      "service-row.lineHeightRatio": 1.4,
+      "service-row.lineHeight": 19.599999999999998,
+      "service-row.letterSpacing": 0,
+      "service-row.textWidth": 240,
+      "service-row.rowHeight": 44,
+      "service-row.paddingBlock": 4,
+      "workspace.gap": 16,
+      "workspace.inlinePadding": 12,
+      "workspace.available": 366,
+      "workspace.columns": 1,
+      "workspace.list.width": 366,
+      "workspace.inspector.width": 366,
+      "appearance.constraintFailures": 0,
+      "appearance.material.roughnessDifference": 0,
+      "appearance.spring.mass": 1,
+      "appearance.spring.stiffness": 200,
+      "appearance.spring.damping": 28,
+      "appearance.surface.roughness": 0.3,
+      "appearance.surface.metalness": 0,
+      "appearance.palette.canvas": "#0e1720",
+      "appearance.palette.ink": "#eaf2f7",
+      "appearance.palette.accent": "#66d9ed",
+      "appearance.palette.dark-canvas": "#0e1720",
+      "appearance.palette.dark-ink": "#eaf2f7",
+      "appearance.palette.light-canvas": "#edf0eb",
+      "appearance.palette.light-ink": "#182b35",
+      "appearance.nativeFinish": "static"
+    },
+    "phone-large": {
+      "service-row.fontSize": 21,
+      "service-row.lineHeightRatio": 1.4,
+      "service-row.lineHeight": 29.4,
+      "service-row.letterSpacing": 0,
+      "service-row.textWidth": 240,
+      "service-row.rowHeight": 66.78125,
+      "service-row.paddingBlock": 4,
+      "workspace.gap": 16,
+      "workspace.inlinePadding": 12,
+      "workspace.available": 366,
+      "workspace.columns": 1,
+      "workspace.list.width": 366,
+      "workspace.inspector.width": 366,
+      "appearance.constraintFailures": 0,
+      "appearance.material.roughnessDifference": 0,
+      "appearance.spring.mass": 1,
+      "appearance.spring.stiffness": 200,
+      "appearance.spring.damping": 28,
+      "appearance.surface.roughness": 0.3,
+      "appearance.surface.metalness": 0,
+      "appearance.palette.canvas": "#0e1720",
+      "appearance.palette.ink": "#eaf2f7",
+      "appearance.palette.accent": "#66d9ed",
+      "appearance.palette.dark-canvas": "#0e1720",
+      "appearance.palette.dark-ink": "#eaf2f7",
+      "appearance.palette.light-canvas": "#edf0eb",
+      "appearance.palette.light-ink": "#182b35",
+      "appearance.nativeFinish": "static"
+    },
+    "small-phone": {
+      "service-row.fontSize": 14,
+      "service-row.lineHeightRatio": 1.4,
+      "service-row.lineHeight": 19.599999999999998,
+      "service-row.letterSpacing": 0,
+      "service-row.textWidth": 240,
+      "service-row.rowHeight": 44,
+      "service-row.paddingBlock": 4,
+      "workspace.gap": 16,
+      "workspace.inlinePadding": 12,
+      "workspace.available": 296,
+      "workspace.columns": 1,
+      "workspace.list.width": 296,
+      "workspace.inspector.width": 296,
+      "appearance.constraintFailures": 0,
+      "appearance.material.roughnessDifference": 0,
+      "appearance.spring.mass": 1,
+      "appearance.spring.stiffness": 200,
+      "appearance.spring.damping": 28,
+      "appearance.surface.roughness": 0.3,
+      "appearance.surface.metalness": 0,
+      "appearance.palette.canvas": "#0e1720",
+      "appearance.palette.ink": "#eaf2f7",
+      "appearance.palette.accent": "#66d9ed",
+      "appearance.palette.dark-canvas": "#0e1720",
+      "appearance.palette.dark-ink": "#eaf2f7",
+      "appearance.palette.light-canvas": "#edf0eb",
+      "appearance.palette.light-ink": "#182b35",
+      "appearance.nativeFinish": "static"
+    }
+  },
+  "obligations": [
+    {
+      "kernel": "service-row",
+      "scenario": "small-phone",
+      "platform": "web",
+      "checks": [
+        "current-text-and-hit-geometry",
+        "changed-text",
+        "system-enlargement"
+      ]
+    },
+    {
+      "kernel": "service-row",
+      "scenario": "phone",
+      "platform": "web",
+      "checks": [
+        "current-text-and-hit-geometry",
+        "changed-text",
+        "system-enlargement"
+      ]
+    },
+    {
+      "kernel": "service-row",
+      "scenario": "phone-large",
+      "platform": "web",
+      "checks": [
+        "current-text-and-hit-geometry",
+        "changed-text",
+        "system-enlargement"
+      ]
+    },
+    {
+      "kernel": "service-row",
+      "scenario": "narrow",
+      "platform": "web",
+      "checks": [
+        "current-text-and-hit-geometry",
+        "changed-text",
+        "system-enlargement"
+      ]
+    },
+    {
+      "kernel": "service-row",
+      "scenario": "ipad",
+      "platform": "web",
+      "checks": [
+        "current-text-and-hit-geometry",
+        "changed-text",
+        "system-enlargement"
+      ]
+    },
+    {
+      "kernel": "service-row",
+      "scenario": "desktop",
+      "platform": "web",
+      "checks": [
+        "current-text-and-hit-geometry",
+        "changed-text",
+        "system-enlargement"
+      ]
+    },
+    {
+      "kernel": "workspace",
+      "scenario": "small-phone",
+      "platform": "web",
+      "checks": [
+        "all-regions-present",
+        "current-root-and-safe-area",
+        "changed-text-reflow"
+      ]
+    },
+    {
+      "kernel": "workspace",
+      "scenario": "phone",
+      "platform": "web",
+      "checks": [
+        "all-regions-present",
+        "current-root-and-safe-area",
+        "changed-text-reflow"
+      ]
+    },
+    {
+      "kernel": "workspace",
+      "scenario": "phone-large",
+      "platform": "web",
+      "checks": [
+        "all-regions-present",
+        "current-root-and-safe-area",
+        "changed-text-reflow"
+      ]
+    },
+    {
+      "kernel": "workspace",
+      "scenario": "narrow",
+      "platform": "web",
+      "checks": [
+        "all-regions-present",
+        "current-root-and-safe-area",
+        "changed-text-reflow"
+      ]
+    },
+    {
+      "kernel": "workspace",
+      "scenario": "ipad",
+      "platform": "web",
+      "checks": [
+        "all-regions-present",
+        "current-root-and-safe-area",
+        "changed-text-reflow"
+      ]
+    },
+    {
+      "kernel": "workspace",
+      "scenario": "desktop",
+      "platform": "web",
+      "checks": [
+        "all-regions-present",
+        "current-root-and-safe-area",
+        "changed-text-reflow"
+      ]
+    },
+    {
+      "kernel": "appearance",
+      "scenario": "small-phone",
+      "platform": "web",
+      "checks": [
+        "actual-composite-contrast",
+        "reduced-motion",
+        "continuous-retarget-and-disposal",
+        "native-finish-support"
+      ]
+    },
+    {
+      "kernel": "appearance",
+      "scenario": "phone",
+      "platform": "web",
+      "checks": [
+        "actual-composite-contrast",
+        "reduced-motion",
+        "continuous-retarget-and-disposal",
+        "native-finish-support"
+      ]
+    },
+    {
+      "kernel": "appearance",
+      "scenario": "phone-large",
+      "platform": "web",
+      "checks": [
+        "actual-composite-contrast",
+        "reduced-motion",
+        "continuous-retarget-and-disposal",
+        "native-finish-support"
+      ]
+    },
+    {
+      "kernel": "appearance",
+      "scenario": "narrow",
+      "platform": "web",
+      "checks": [
+        "actual-composite-contrast",
+        "reduced-motion",
+        "continuous-retarget-and-disposal",
+        "native-finish-support"
+      ]
+    },
+    {
+      "kernel": "appearance",
+      "scenario": "ipad",
+      "platform": "web",
+      "checks": [
+        "actual-composite-contrast",
+        "reduced-motion",
+        "continuous-retarget-and-disposal",
+        "native-finish-support"
+      ]
+    },
+    {
+      "kernel": "appearance",
+      "scenario": "desktop",
+      "platform": "web",
+      "checks": [
+        "actual-composite-contrast",
+        "reduced-motion",
+        "continuous-retarget-and-disposal",
+        "native-finish-support"
+      ]
+    }
+  ],
+  "verification": "pending-current-renderer"
+}

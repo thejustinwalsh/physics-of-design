@@ -1,0 +1,587 @@
+{
+  "status": "passed",
+  "implementationSources": {
+    "src/energy.ts": "7da336be3b429c85abc92483478266a440f946f3c2639f0996ef2a0f9ecb555d",
+    "src/design-field.ts": "053c2a3be89527c1cd4cf165043ae91d10c5a95567d0ff77d27a815268c4d340",
+    "scripts/prove-choice-effectiveness.mjs": "0906ad4360f8b9bdfd9f9731ea0bb11c458941338b46ac7c5b5cb437ad0d61c1"
+  },
+  "briefIdentity": "07ee4a18cfaf124b74e1ad64fe07d25b6bc5b58a5b0e629e8c940bfc1cd39d0a",
+  "measurementIdentity": "26b0559541bb45f6a3dee5db51ee6e97b60193c2b0400a7cfca84ffbaf6cfd4b",
+  "runtime": "Chromium 156.0.8078.4",
+  "measuredCells": 252,
+  "summary": {
+    "original-ranked/reading": {
+      "evaluated": 540,
+      "admissible": 510,
+      "profiles": 60,
+      "paretoProfiles": 1,
+      "retainedProfiles": 1,
+      "retained": [
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.35,
+            "titleSize": 52
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.35,
+            "titleSize": 64
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.5,
+            "titleSize": 52
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.5,
+            "titleSize": 64
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.65,
+            "titleSize": 52
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.65,
+            "titleSize": 64
+          },
+          "energy": 0.4342569444444445
+        }
+      ],
+      "comparisons": null,
+      "coverageComplete": null,
+      "unachievablePreferences": null,
+      "jointlySatisfiedAssignments": null
+    },
+    "original-ranked/expression": {
+      "evaluated": 432,
+      "admissible": 432,
+      "profiles": 192,
+      "paretoProfiles": 12,
+      "retainedProfiles": 2,
+      "retained": [
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.64,
+            "motionRole": 1,
+            "roughness": 0.18
+          },
+          "energy": 14.93877334499847
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.64,
+            "motionRole": 1,
+            "roughness": 0.35
+          },
+          "energy": 14.93877334499847
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.64,
+            "motionRole": 1,
+            "roughness": 0.75
+          },
+          "energy": 14.93877334499847
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.64,
+            "motionRole": 2,
+            "roughness": 0.18
+          },
+          "energy": 14.93877334499847
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.64,
+            "motionRole": 2,
+            "roughness": 0.35
+          },
+          "energy": 14.93877334499847
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.64,
+            "motionRole": 2,
+            "roughness": 0.75
+          },
+          "energy": 14.93877334499847
+        }
+      ],
+      "comparisons": null,
+      "coverageComplete": null,
+      "unachievablePreferences": null,
+      "jointlySatisfiedAssignments": null
+    },
+    "original-pareto/reading": {
+      "evaluated": 540,
+      "admissible": 510,
+      "profiles": 60,
+      "paretoProfiles": 1,
+      "retainedProfiles": 1,
+      "retained": [
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.35,
+            "titleSize": 52
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 900,
+            "gap": 32,
+            "leading": 1.65,
+            "titleSize": 64
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.5,
+            "titleSize": 64
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.65,
+            "titleSize": 52
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 900,
+            "gap": 32,
+            "leading": 1.35,
+            "titleSize": 64
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 900,
+            "gap": 32,
+            "leading": 1.5,
+            "titleSize": 52
+          },
+          "energy": 0.4342569444444445
+        }
+      ],
+      "comparisons": 2041,
+      "coverageComplete": true,
+      "unachievablePreferences": [
+        {
+          "id": "headline-wrap",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2.4
+            }
+          ],
+          "observedRange": [
+            3,
+            3
+          ],
+          "minimumResidual": 0.6000000000000001,
+          "satisfiedAssignments": 0
+        },
+        {
+          "id": "headline-wrap",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2.4
+            }
+          ],
+          "observedRange": [
+            3,
+            3
+          ],
+          "minimumResidual": 0.6000000000000001,
+          "satisfiedAssignments": 0
+        },
+        {
+          "id": "reading-density",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 40,
+              "max": 76
+            }
+          ],
+          "observedRange": [
+            32.18181818181818,
+            39.333333333333336
+          ],
+          "minimumResidual": 0.04166666666666652,
+          "satisfiedAssignments": 0
+        }
+      ],
+      "jointlySatisfiedAssignments": 0
+    },
+    "original-pareto/expression": {
+      "evaluated": 432,
+      "admissible": 432,
+      "profiles": 192,
+      "paretoProfiles": 12,
+      "retainedProfiles": 6,
+      "retained": [
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.64,
+            "motionRole": 1,
+            "roughness": 0.18
+          },
+          "energy": 14.93877334499847
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 1.7,
+            "imageShare": 0.64,
+            "motionRole": 1,
+            "roughness": 0.18
+          },
+          "energy": 26.4761115489409
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.8,
+            "motionRole": 1,
+            "roughness": 0.18
+          },
+          "energy": 35.71448390920836
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 1.4,
+            "imageShare": 0.64,
+            "motionRole": 1,
+            "roughness": 0.18
+          },
+          "energy": 51.27764962195254
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 1.7,
+            "imageShare": 0.8,
+            "motionRole": 1,
+            "roughness": 0.18
+          },
+          "energy": 59.34327213955325
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.48,
+            "motionRole": 1,
+            "roughness": 0.18
+          },
+          "energy": 68.8826402364811
+        }
+      ],
+      "comparisons": 17020,
+      "coverageComplete": true,
+      "unachievablePreferences": [
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "desktop",
+          "targetBands": [
+            {
+              "min": 0.65,
+              "max": 1.25
+            }
+          ],
+          "observedRange": [
+            1.7181563956499222,
+            5.206534532272491
+          ],
+          "minimumResidual": 1.1703909891248054,
+          "satisfiedAssignments": 0
+        },
+        {
+          "id": "image-type-counterpoint",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 0.65,
+              "max": 1.25
+            }
+          ],
+          "observedRange": [
+            0.07853219586303611,
+            0.23797635110010942
+          ],
+          "minimumResidual": 1.0300591222497264,
+          "satisfiedAssignments": 0
+        }
+      ],
+      "jointlySatisfiedAssignments": 0
+    },
+    "responsive-pareto/reading": {
+      "evaluated": 540,
+      "admissible": 510,
+      "profiles": 60,
+      "paretoProfiles": 1,
+      "retainedProfiles": 1,
+      "retained": [
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.35,
+            "titleSize": 52
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 900,
+            "gap": 32,
+            "leading": 1.65,
+            "titleSize": 64
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.5,
+            "titleSize": 64
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 1080,
+            "gap": 32,
+            "leading": 1.65,
+            "titleSize": 52
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 900,
+            "gap": 32,
+            "leading": 1.35,
+            "titleSize": 64
+          },
+          "energy": 0.4342569444444445
+        },
+        {
+          "assignment": {
+            "bodySize": 16,
+            "contentMax": 900,
+            "gap": 32,
+            "leading": 1.5,
+            "titleSize": 52
+          },
+          "energy": 0.4342569444444445
+        }
+      ],
+      "comparisons": 2041,
+      "coverageComplete": true,
+      "unachievablePreferences": [
+        {
+          "id": "headline-wrap",
+          "scenario": "phone",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2.4
+            }
+          ],
+          "observedRange": [
+            3,
+            3
+          ],
+          "minimumResidual": 0.6000000000000001,
+          "satisfiedAssignments": 0
+        },
+        {
+          "id": "headline-wrap",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 1,
+              "max": 2.4
+            }
+          ],
+          "observedRange": [
+            3,
+            3
+          ],
+          "minimumResidual": 0.6000000000000001,
+          "satisfiedAssignments": 0
+        },
+        {
+          "id": "reading-density",
+          "scenario": "phone-large",
+          "targetBands": [
+            {
+              "min": 40,
+              "max": 76
+            }
+          ],
+          "observedRange": [
+            32.18181818181818,
+            39.333333333333336
+          ],
+          "minimumResidual": 0.04166666666666652,
+          "satisfiedAssignments": 0
+        }
+      ],
+      "jointlySatisfiedAssignments": 0
+    },
+    "responsive-pareto/expression": {
+      "evaluated": 432,
+      "admissible": 432,
+      "profiles": 192,
+      "paretoProfiles": 3,
+      "retainedProfiles": 3,
+      "retained": [
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.64,
+            "motionRole": 1,
+            "roughness": 0.18
+          },
+          "energy": 0.9200935231166597
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 1.7,
+            "imageShare": 0.48,
+            "motionRole": 1,
+            "roughness": 0.18
+          },
+          "energy": 61.92427752642294
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.55,
+            "imageAspect": 2,
+            "imageShare": 0.48,
+            "motionRole": 1,
+            "roughness": 0.18
+          },
+          "energy": 61.94407244319247
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.85,
+            "imageAspect": 2,
+            "imageShare": 0.64,
+            "motionRole": 2,
+            "roughness": 0.55
+          },
+          "energy": 0.9200935231166597
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.85,
+            "imageAspect": 1.7,
+            "imageShare": 0.48,
+            "motionRole": 1,
+            "roughness": 0.55
+          },
+          "energy": 61.92427752642294
+        },
+        {
+          "assignment": {
+            "counterRoughness": 0.7,
+            "imageAspect": 1.7,
+            "imageShare": 0.48,
+            "motionRole": 2,
+            "roughness": 0.35
+          },
+          "energy": 61.92427752642294
+        }
+      ],
+      "comparisons": 7029,
+      "coverageComplete": true,
+      "unachievablePreferences": [],
+      "jointlySatisfiedAssignments": 0
+    }
+  },
+  "validations": 12,
+  "renderedScenarios": 72,
+  "neuralCalls": 0,
+  "scope": "Current Chromium standalone text/action/image fixture geometry. Cost/profile changes do not demonstrate human preference, model quality, material appearance, motion quality or full-gallery interaction."
+}

@@ -1,0 +1,111 @@
+{
+  "createdAt": "2026-10-25T14:56:13.232Z",
+  "implementation": "Executable dependency-ordered design-stage machine",
+  "realNeuralReadouts": false,
+  "firstMs": 16.438958000000014,
+  "replayMs": 2.0525420000000167,
+  "statistics": {
+    "searches": 2,
+    "evaluated": 6,
+    "revalidated": 0,
+    "factorEvaluations": 12,
+    "graphNodes": 6,
+    "selectorCalls": 0,
+    "requestedReadoutPasses": 0,
+    "completedReadoutPasses": 0,
+    "neuralCalls": 0,
+    "testSelectorCalls": 0,
+    "cacheHits": 0,
+    "checkpointHashes": 0,
+    "expressionOperationUpperBound": 27,
+    "lookahead": {
+      "searches": 0,
+      "evaluated": 0,
+      "factorEvaluations": 0,
+      "expressionOperationUpperBound": 0,
+      "graphNodes": 0,
+      "branches": 0,
+      "revalidated": 0,
+      "reusedSearches": 0
+    }
+  },
+  "stages": {
+    "composition": {
+      "status": "chosen",
+      "cacheKey": "243a09585e99c328b101235c9ccb3ba469981f587d3f64f7a7041ac5cab9233e",
+      "assignment": {
+        "contentWidth": 640
+      },
+      "selection": {
+        "policy": "minimum declared preference energy; deterministic ties",
+        "modelCalled": false
+      }
+    },
+    "typography": {
+      "status": "chosen",
+      "cacheKey": "79247c84e94707a2942248042c62abdcb75375134025d0bf76681abee86472a9",
+      "assignment": {
+        "bodySize": 18
+      },
+      "selection": {
+        "policy": "minimum declared preference energy; deterministic ties",
+        "modelCalled": false
+      }
+    }
+  },
+  "replay": {
+    "searches": 0,
+    "evaluated": 0,
+    "revalidated": 6,
+    "factorEvaluations": 12,
+    "graphNodes": 0,
+    "selectorCalls": 0,
+    "requestedReadoutPasses": 0,
+    "completedReadoutPasses": 0,
+    "neuralCalls": 0,
+    "testSelectorCalls": 0,
+    "cacheHits": 2,
+    "checkpointHashes": 0,
+    "expressionOperationUpperBound": 0,
+    "lookahead": {
+      "searches": 0,
+      "evaluated": 0,
+      "factorEvaluations": 0,
+      "expressionOperationUpperBound": 0,
+      "graphNodes": 0,
+      "branches": 0,
+      "revalidated": 0,
+      "reusedSearches": 0
+    }
+  },
+  "downstreamRuleChange": {
+    "composition": "replayed",
+    "typography": "stale",
+    "statistics": {
+      "searches": 0,
+      "evaluated": 0,
+      "revalidated": 3,
+      "factorEvaluations": 3,
+      "graphNodes": 0,
+      "selectorCalls": 0,
+      "requestedReadoutPasses": 0,
+      "completedReadoutPasses": 0,
+      "neuralCalls": 0,
+      "testSelectorCalls": 0,
+      "cacheHits": 1,
+      "checkpointHashes": 0,
+      "expressionOperationUpperBound": 0,
+      "lookahead": {
+        "searches": 0,
+        "evaluated": 0,
+        "factorEvaluations": 0,
+        "expressionOperationUpperBound": 0,
+        "graphNodes": 0,
+        "branches": 0,
+        "revalidated": 0,
+        "reusedSearches": 0
+      }
+    }
+  },
+  "scope": "Two sequential, conditioned design decisions with bounded mathematical exploration. Optional real local model chooses a mathematical alternative at each stage. Renderer checks remain pending. This is a protocol/reuse demonstration, not a design-quality or throughput benchmark."
+}

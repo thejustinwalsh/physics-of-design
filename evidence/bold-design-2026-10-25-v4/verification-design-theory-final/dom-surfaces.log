@@ -1,0 +1,3 @@
+chromium: 6 checks passed
+webkit: 6 checks passed
+DOM surfaces: 12 passed; artifacts/dom-surfaces/summary.json

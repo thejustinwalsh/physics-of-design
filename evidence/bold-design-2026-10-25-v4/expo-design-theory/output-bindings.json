@@ -1,0 +1,1942 @@
+{
+  "manifest": {
+    "version": 1,
+    "engine": "output-bindings-v1",
+    "current": {
+      "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+      "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+      "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+      "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+    },
+    "sourceValueIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45",
+    "entries": [
+      {
+        "id": "web-390-1-list-width",
+        "scenario": "web-390-1",
+        "scenarioIdentity": "ee22c8bcb73a87dad6915438a7b4d9309284a331aa949354bf7d4bb4959bbde1",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-390-1/regions.list.width",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 350
+      },
+      {
+        "id": "web-390-1-detail-width",
+        "scenario": "web-390-1",
+        "scenarioIdentity": "ee22c8bcb73a87dad6915438a7b4d9309284a331aa949354bf7d4bb4959bbde1",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-390-1/regions.detail.width",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 350
+      },
+      {
+        "id": "web-390-1-line-height-probe-lineheight",
+        "scenario": "web-390-1",
+        "scenarioIdentity": "ee22c8bcb73a87dad6915438a7b4d9309284a331aa949354bf7d4bb4959bbde1",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-390-1/row.lineHeight",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 1,
+        "unsupportedPolicy": "block",
+        "expected": 22.4
+      },
+      {
+        "id": "web-390-1-row-inlet-fontsize",
+        "scenario": "web-390-1",
+        "scenarioIdentity": "ee22c8bcb73a87dad6915438a7b4d9309284a331aa949354bf7d4bb4959bbde1",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-390-1/row.fontSize",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 16
+      },
+      {
+        "id": "web-390-2-list-width",
+        "scenario": "web-390-2",
+        "scenarioIdentity": "91f2deaa10a59e4e4fc672f2e99fbc57b4760d33fe659bf254810dfd56b39df5",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-390-2/regions.list.width",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 350
+      },
+      {
+        "id": "web-390-2-detail-width",
+        "scenario": "web-390-2",
+        "scenarioIdentity": "91f2deaa10a59e4e4fc672f2e99fbc57b4760d33fe659bf254810dfd56b39df5",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-390-2/regions.detail.width",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 350
+      },
+      {
+        "id": "web-390-2-line-height-probe-lineheight",
+        "scenario": "web-390-2",
+        "scenarioIdentity": "91f2deaa10a59e4e4fc672f2e99fbc57b4760d33fe659bf254810dfd56b39df5",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-390-2/row.lineHeight",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 1,
+        "unsupportedPolicy": "block",
+        "expected": 44.8
+      },
+      {
+        "id": "web-390-2-row-inlet-fontsize",
+        "scenario": "web-390-2",
+        "scenarioIdentity": "91f2deaa10a59e4e4fc672f2e99fbc57b4760d33fe659bf254810dfd56b39df5",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-390-2/row.fontSize",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 32
+      },
+      {
+        "id": "web-820-1-list-width",
+        "scenario": "web-820-1",
+        "scenarioIdentity": "f42448c1d017f34a8f2a0b942ab7b339ed732eb4867d6ef5495b8eb0060c2712",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-820-1/regions.list.width",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 406.40000000000003
+      },
+      {
+        "id": "web-820-1-detail-width",
+        "scenario": "web-820-1",
+        "scenarioIdentity": "f42448c1d017f34a8f2a0b942ab7b339ed732eb4867d6ef5495b8eb0060c2712",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-820-1/regions.detail.width",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 353.6
+      },
+      {
+        "id": "web-820-1-line-height-probe-lineheight",
+        "scenario": "web-820-1",
+        "scenarioIdentity": "f42448c1d017f34a8f2a0b942ab7b339ed732eb4867d6ef5495b8eb0060c2712",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-820-1/row.lineHeight",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 1,
+        "unsupportedPolicy": "block",
+        "expected": 22.4
+      },
+      {
+        "id": "web-820-1-row-inlet-fontsize",
+        "scenario": "web-820-1",
+        "scenarioIdentity": "f42448c1d017f34a8f2a0b942ab7b339ed732eb4867d6ef5495b8eb0060c2712",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-820-1/row.fontSize",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 16
+      },
+      {
+        "id": "web-820-2-list-width",
+        "scenario": "web-820-2",
+        "scenarioIdentity": "01f273ed15a468ee2b28a4505293e6ebc0e970718946276fba5b77a705c97809",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-820-2/regions.list.width",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 387.2
+      },
+      {
+        "id": "web-820-2-detail-width",
+        "scenario": "web-820-2",
+        "scenarioIdentity": "01f273ed15a468ee2b28a4505293e6ebc0e970718946276fba5b77a705c97809",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-820-2/regions.detail.width",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 372.8
+      },
+      {
+        "id": "web-820-2-line-height-probe-lineheight",
+        "scenario": "web-820-2",
+        "scenarioIdentity": "01f273ed15a468ee2b28a4505293e6ebc0e970718946276fba5b77a705c97809",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-820-2/row.lineHeight",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 1,
+        "unsupportedPolicy": "block",
+        "expected": 44.8
+      },
+      {
+        "id": "web-820-2-row-inlet-fontsize",
+        "scenario": "web-820-2",
+        "scenarioIdentity": "01f273ed15a468ee2b28a4505293e6ebc0e970718946276fba5b77a705c97809",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-820-2/row.fontSize",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 32
+      },
+      {
+        "id": "web-1440-1-list-width",
+        "scenario": "web-1440-1",
+        "scenarioIdentity": "a994dd4fa6c93c73f2308e26b28b88741d68ece1fcf8e78cf0dd1c88a6798d3f",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-1440-1/regions.list.width",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 753.6
+      },
+      {
+        "id": "web-1440-1-detail-width",
+        "scenario": "web-1440-1",
+        "scenarioIdentity": "a994dd4fa6c93c73f2308e26b28b88741d68ece1fcf8e78cf0dd1c88a6798d3f",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-1440-1/regions.detail.width",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 626.4
+      },
+      {
+        "id": "web-1440-1-line-height-probe-lineheight",
+        "scenario": "web-1440-1",
+        "scenarioIdentity": "a994dd4fa6c93c73f2308e26b28b88741d68ece1fcf8e78cf0dd1c88a6798d3f",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-1440-1/row.lineHeight",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 1,
+        "unsupportedPolicy": "block",
+        "expected": 22.4
+      },
+      {
+        "id": "web-1440-1-row-inlet-fontsize",
+        "scenario": "web-1440-1",
+        "scenarioIdentity": "a994dd4fa6c93c73f2308e26b28b88741d68ece1fcf8e78cf0dd1c88a6798d3f",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-1440-1/row.fontSize",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 16
+      },
+      {
+        "id": "web-1440-2-list-width",
+        "scenario": "web-1440-2",
+        "scenarioIdentity": "2f4ea86d6544b7961232c5e693197e0472fc47d42697ee3482afcdb01b8ee7a9",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-1440-2/regions.list.width",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 734.4000000000001
+      },
+      {
+        "id": "web-1440-2-detail-width",
+        "scenario": "web-1440-2",
+        "scenarioIdentity": "2f4ea86d6544b7961232c5e693197e0472fc47d42697ee3482afcdb01b8ee7a9",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-1440-2/regions.detail.width",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 645.6
+      },
+      {
+        "id": "web-1440-2-line-height-probe-lineheight",
+        "scenario": "web-1440-2",
+        "scenarioIdentity": "2f4ea86d6544b7961232c5e693197e0472fc47d42697ee3482afcdb01b8ee7a9",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-1440-2/row.lineHeight",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 1,
+        "unsupportedPolicy": "block",
+        "expected": 44.8
+      },
+      {
+        "id": "web-1440-2-row-inlet-fontsize",
+        "scenario": "web-1440-2",
+        "scenarioIdentity": "2f4ea86d6544b7961232c5e693197e0472fc47d42697ee3482afcdb01b8ee7a9",
+        "platform": "web",
+        "unit": "css-px",
+        "pointer": "/web-1440-2/row.fontSize",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 32
+      },
+      {
+        "id": "native-android-411-1-list-width",
+        "scenario": "native-android-411-1",
+        "scenarioIdentity": "71afa483095cb3915907c6ff84a8a66498edf411e99a4d2122cf6b9f562912f6",
+        "platform": "native-android",
+        "unit": "dp",
+        "pointer": "/native-android-411-1/regions.list.width",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 371.42857142857144
+      },
+      {
+        "id": "native-android-411-1-detail-width",
+        "scenario": "native-android-411-1",
+        "scenarioIdentity": "71afa483095cb3915907c6ff84a8a66498edf411e99a4d2122cf6b9f562912f6",
+        "platform": "native-android",
+        "unit": "dp",
+        "pointer": "/native-android-411-1/regions.detail.width",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 371.42857142857144
+      },
+      {
+        "id": "native-android-411-1-line-height-probe-lineheight",
+        "scenario": "native-android-411-1",
+        "scenarioIdentity": "71afa483095cb3915907c6ff84a8a66498edf411e99a4d2122cf6b9f562912f6",
+        "platform": "native-android",
+        "unit": "dp",
+        "pointer": "/native-android-411-1/row.lineHeight",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 1,
+        "unsupportedPolicy": "block",
+        "expected": 22.4
+      },
+      {
+        "id": "native-android-411-2-list-width",
+        "scenario": "native-android-411-2",
+        "scenarioIdentity": "65d640369b07a344039bc01e5d818966519875626b688258c894e4f9e9b0ef1c",
+        "platform": "native-android",
+        "unit": "dp",
+        "pointer": "/native-android-411-2/regions.list.width",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 371.42857142857144
+      },
+      {
+        "id": "native-android-411-2-detail-width",
+        "scenario": "native-android-411-2",
+        "scenarioIdentity": "65d640369b07a344039bc01e5d818966519875626b688258c894e4f9e9b0ef1c",
+        "platform": "native-android",
+        "unit": "dp",
+        "pointer": "/native-android-411-2/regions.detail.width",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 371.42857142857144
+      },
+      {
+        "id": "native-android-411-2-line-height-probe-lineheight",
+        "scenario": "native-android-411-2",
+        "scenarioIdentity": "65d640369b07a344039bc01e5d818966519875626b688258c894e4f9e9b0ef1c",
+        "platform": "native-android",
+        "unit": "dp",
+        "pointer": "/native-android-411-2/row.lineHeight",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 1,
+        "unsupportedPolicy": "block",
+        "expected": 44.8
+      },
+      {
+        "id": "native-ios-402-1-list-width",
+        "scenario": "native-ios-402-1",
+        "scenarioIdentity": "b54e15dd08095e13d54a8d15aea57ea61d59209ddb0b2f8e7abc8542f7beafc6",
+        "platform": "native-ios",
+        "unit": "pt",
+        "pointer": "/native-ios-402-1/regions.list.width",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 362
+      },
+      {
+        "id": "native-ios-402-1-detail-width",
+        "scenario": "native-ios-402-1",
+        "scenarioIdentity": "b54e15dd08095e13d54a8d15aea57ea61d59209ddb0b2f8e7abc8542f7beafc6",
+        "platform": "native-ios",
+        "unit": "pt",
+        "pointer": "/native-ios-402-1/regions.detail.width",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 362
+      },
+      {
+        "id": "native-ios-402-1-line-height-probe-lineheight",
+        "scenario": "native-ios-402-1",
+        "scenarioIdentity": "b54e15dd08095e13d54a8d15aea57ea61d59209ddb0b2f8e7abc8542f7beafc6",
+        "platform": "native-ios",
+        "unit": "pt",
+        "pointer": "/native-ios-402-1/row.lineHeight",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 1,
+        "unsupportedPolicy": "block",
+        "expected": 22.4
+      },
+      {
+        "id": "native-ios-402-2-list-width",
+        "scenario": "native-ios-402-2",
+        "scenarioIdentity": "21515a14d3125f9a23d84a8fbe93499178ffd4e7b469aed8d71ed961f2fb3dfe",
+        "platform": "native-ios",
+        "unit": "pt",
+        "pointer": "/native-ios-402-2/regions.list.width",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 362
+      },
+      {
+        "id": "native-ios-402-2-detail-width",
+        "scenario": "native-ios-402-2",
+        "scenarioIdentity": "21515a14d3125f9a23d84a8fbe93499178ffd4e7b469aed8d71ed961f2fb3dfe",
+        "platform": "native-ios",
+        "unit": "pt",
+        "pointer": "/native-ios-402-2/regions.detail.width",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 0.6,
+        "unsupportedPolicy": "block",
+        "expected": 362
+      },
+      {
+        "id": "native-ios-402-2-line-height-probe-lineheight",
+        "scenario": "native-ios-402-2",
+        "scenarioIdentity": "21515a14d3125f9a23d84a8fbe93499178ffd4e7b469aed8d71ed961f2fb3dfe",
+        "platform": "native-ios",
+        "unit": "pt",
+        "pointer": "/native-ios-402-2/row.lineHeight",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "tolerance": 1,
+        "unsupportedPolicy": "block",
+        "expected": 44.8
+      }
+    ],
+    "scope": "Expected values projected from exact source pointers. No renderer ran; hashes detect payload changes, not authenticity or causal consumption.",
+    "identity": "5d2c28a6235abbf4201fb6bde826e838ff38c3e09a9b96f57487786ab3023ccb"
+  },
+  "observations": [
+    {
+      "binding": "web-390-1-list-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-390-1",
+      "scenarioIdentity": "ee22c8bcb73a87dad6915438a7b4d9309284a331aa949354bf7d4bb4959bbde1",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "list",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 350,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:35.851Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-390-1-detail-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-390-1",
+      "scenarioIdentity": "ee22c8bcb73a87dad6915438a7b4d9309284a331aa949354bf7d4bb4959bbde1",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "detail",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 350,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:35.851Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-390-1-line-height-probe-lineheight",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-390-1",
+      "scenarioIdentity": "ee22c8bcb73a87dad6915438a7b4d9309284a331aa949354bf7d4bb4959bbde1",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "line-height-probe",
+      "property": "lineHeight",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 22.390625,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:35.851Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-390-1-row-inlet-fontsize",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-390-1",
+      "scenarioIdentity": "ee22c8bcb73a87dad6915438a7b4d9309284a331aa949354bf7d4bb4959bbde1",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "row-inlet",
+      "property": "fontSize",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 16,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:35.851Z",
+      "detail": "Actual browser computed fontSize on the bound row."
+    },
+    {
+      "binding": "web-390-2-list-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-390-2",
+      "scenarioIdentity": "91f2deaa10a59e4e4fc672f2e99fbc57b4760d33fe659bf254810dfd56b39df5",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "list",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 350,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:36.647Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-390-2-detail-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-390-2",
+      "scenarioIdentity": "91f2deaa10a59e4e4fc672f2e99fbc57b4760d33fe659bf254810dfd56b39df5",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "detail",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 350,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:36.647Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-390-2-line-height-probe-lineheight",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-390-2",
+      "scenarioIdentity": "91f2deaa10a59e4e4fc672f2e99fbc57b4760d33fe659bf254810dfd56b39df5",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "line-height-probe",
+      "property": "lineHeight",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 44.796875,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:36.647Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-390-2-row-inlet-fontsize",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-390-2",
+      "scenarioIdentity": "91f2deaa10a59e4e4fc672f2e99fbc57b4760d33fe659bf254810dfd56b39df5",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "row-inlet",
+      "property": "fontSize",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 32,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:36.647Z",
+      "detail": "Actual browser computed fontSize on the bound row."
+    },
+    {
+      "binding": "web-820-1-list-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-820-1",
+      "scenarioIdentity": "f42448c1d017f34a8f2a0b942ab7b339ed732eb4867d6ef5495b8eb0060c2712",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "list",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 406.390625,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:39.145Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-820-1-detail-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-820-1",
+      "scenarioIdentity": "f42448c1d017f34a8f2a0b942ab7b339ed732eb4867d6ef5495b8eb0060c2712",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "detail",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 353.59375,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:39.145Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-820-1-line-height-probe-lineheight",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-820-1",
+      "scenarioIdentity": "f42448c1d017f34a8f2a0b942ab7b339ed732eb4867d6ef5495b8eb0060c2712",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "line-height-probe",
+      "property": "lineHeight",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 22.390625,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:39.145Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-820-1-row-inlet-fontsize",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-820-1",
+      "scenarioIdentity": "f42448c1d017f34a8f2a0b942ab7b339ed732eb4867d6ef5495b8eb0060c2712",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "row-inlet",
+      "property": "fontSize",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 16,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:39.145Z",
+      "detail": "Actual browser computed fontSize on the bound row."
+    },
+    {
+      "binding": "web-820-2-list-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-820-2",
+      "scenarioIdentity": "01f273ed15a468ee2b28a4505293e6ebc0e970718946276fba5b77a705c97809",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "list",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 387.1875,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:39.943Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-820-2-detail-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-820-2",
+      "scenarioIdentity": "01f273ed15a468ee2b28a4505293e6ebc0e970718946276fba5b77a705c97809",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "detail",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 372.796875,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:39.943Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-820-2-line-height-probe-lineheight",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-820-2",
+      "scenarioIdentity": "01f273ed15a468ee2b28a4505293e6ebc0e970718946276fba5b77a705c97809",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "line-height-probe",
+      "property": "lineHeight",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 44.796875,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:39.943Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-820-2-row-inlet-fontsize",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-820-2",
+      "scenarioIdentity": "01f273ed15a468ee2b28a4505293e6ebc0e970718946276fba5b77a705c97809",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "row-inlet",
+      "property": "fontSize",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 32,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:39.943Z",
+      "detail": "Actual browser computed fontSize on the bound row."
+    },
+    {
+      "binding": "web-1440-1-list-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-1440-1",
+      "scenarioIdentity": "a994dd4fa6c93c73f2308e26b28b88741d68ece1fcf8e78cf0dd1c88a6798d3f",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "list",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 753.59375,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:42.458Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-1440-1-detail-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-1440-1",
+      "scenarioIdentity": "a994dd4fa6c93c73f2308e26b28b88741d68ece1fcf8e78cf0dd1c88a6798d3f",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "detail",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 626.390625,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:42.458Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-1440-1-line-height-probe-lineheight",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-1440-1",
+      "scenarioIdentity": "a994dd4fa6c93c73f2308e26b28b88741d68ece1fcf8e78cf0dd1c88a6798d3f",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "line-height-probe",
+      "property": "lineHeight",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 22.390625,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:42.458Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-1440-1-row-inlet-fontsize",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-1440-1",
+      "scenarioIdentity": "a994dd4fa6c93c73f2308e26b28b88741d68ece1fcf8e78cf0dd1c88a6798d3f",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "row-inlet",
+      "property": "fontSize",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 16,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:42.458Z",
+      "detail": "Actual browser computed fontSize on the bound row."
+    },
+    {
+      "binding": "web-1440-2-list-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-1440-2",
+      "scenarioIdentity": "2f4ea86d6544b7961232c5e693197e0472fc47d42697ee3482afcdb01b8ee7a9",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "list",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 734.390625,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:43.255Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-1440-2-detail-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-1440-2",
+      "scenarioIdentity": "2f4ea86d6544b7961232c5e693197e0472fc47d42697ee3482afcdb01b8ee7a9",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "detail",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 645.59375,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:43.255Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-1440-2-line-height-probe-lineheight",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-1440-2",
+      "scenarioIdentity": "2f4ea86d6544b7961232c5e693197e0472fc47d42697ee3482afcdb01b8ee7a9",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "line-height-probe",
+      "property": "lineHeight",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 44.796875,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:43.255Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "web-1440-2-row-inlet-fontsize",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "web-1440-2",
+      "scenarioIdentity": "2f4ea86d6544b7961232c5e693197e0472fc47d42697ee3482afcdb01b8ee7a9",
+      "platform": "web",
+      "unit": "css-px",
+      "surface": "row-inlet",
+      "property": "fontSize",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 32,
+      "provider": "browser",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / web",
+      "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+      "observedAt": "2026-10-25T14:57:43.255Z",
+      "detail": "Actual browser computed fontSize on the bound row."
+    },
+    {
+      "binding": "native-android-411-1-list-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-android-411-1",
+      "scenarioIdentity": "71afa483095cb3915907c6ff84a8a66498edf411e99a4d2122cf6b9f562912f6",
+      "platform": "native-android",
+      "unit": "dp",
+      "surface": "list",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 371.4285888671875,
+      "provider": "native-android",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / android",
+      "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+      "observedAt": "2026-10-25T14:30:16.282Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-android-411-1-detail-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-android-411-1",
+      "scenarioIdentity": "71afa483095cb3915907c6ff84a8a66498edf411e99a4d2122cf6b9f562912f6",
+      "platform": "native-android",
+      "unit": "dp",
+      "surface": "detail",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 371.4285888671875,
+      "provider": "native-android",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / android",
+      "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+      "observedAt": "2026-10-25T14:30:16.282Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-android-411-1-line-height-probe-lineheight",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-android-411-1",
+      "scenarioIdentity": "71afa483095cb3915907c6ff84a8a66498edf411e99a4d2122cf6b9f562912f6",
+      "platform": "native-android",
+      "unit": "dp",
+      "surface": "line-height-probe",
+      "property": "lineHeight",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 22.4761962890625,
+      "provider": "native-android",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / android",
+      "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+      "observedAt": "2026-10-25T14:30:16.282Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-android-411-2-list-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-android-411-2",
+      "scenarioIdentity": "65d640369b07a344039bc01e5d818966519875626b688258c894e4f9e9b0ef1c",
+      "platform": "native-android",
+      "unit": "dp",
+      "surface": "list",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 371.4285888671875,
+      "provider": "native-android",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / android",
+      "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+      "observedAt": "2026-10-25T14:30:19.544Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-android-411-2-detail-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-android-411-2",
+      "scenarioIdentity": "65d640369b07a344039bc01e5d818966519875626b688258c894e4f9e9b0ef1c",
+      "platform": "native-android",
+      "unit": "dp",
+      "surface": "detail",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 371.4285888671875,
+      "provider": "native-android",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / android",
+      "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+      "observedAt": "2026-10-25T14:30:19.544Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-android-411-2-line-height-probe-lineheight",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-android-411-2",
+      "scenarioIdentity": "65d640369b07a344039bc01e5d818966519875626b688258c894e4f9e9b0ef1c",
+      "platform": "native-android",
+      "unit": "dp",
+      "surface": "line-height-probe",
+      "property": "lineHeight",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 44.952392578125,
+      "provider": "native-android",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / android",
+      "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+      "observedAt": "2026-10-25T14:30:19.544Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-ios-402-1-list-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-ios-402-1",
+      "scenarioIdentity": "b54e15dd08095e13d54a8d15aea57ea61d59209ddb0b2f8e7abc8542f7beafc6",
+      "platform": "native-ios",
+      "unit": "pt",
+      "surface": "list",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 362,
+      "provider": "native-ios",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / ios",
+      "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+      "observedAt": "2026-10-25T14:30:04.623Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-ios-402-1-detail-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-ios-402-1",
+      "scenarioIdentity": "b54e15dd08095e13d54a8d15aea57ea61d59209ddb0b2f8e7abc8542f7beafc6",
+      "platform": "native-ios",
+      "unit": "pt",
+      "surface": "detail",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 362,
+      "provider": "native-ios",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / ios",
+      "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+      "observedAt": "2026-10-25T14:30:04.623Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-ios-402-1-line-height-probe-lineheight",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-ios-402-1",
+      "scenarioIdentity": "b54e15dd08095e13d54a8d15aea57ea61d59209ddb0b2f8e7abc8542f7beafc6",
+      "platform": "native-ios",
+      "unit": "pt",
+      "surface": "line-height-probe",
+      "property": "lineHeight",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 22.66666603088379,
+      "provider": "native-ios",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / ios",
+      "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+      "observedAt": "2026-10-25T14:30:04.623Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-ios-402-2-list-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-ios-402-2",
+      "scenarioIdentity": "21515a14d3125f9a23d84a8fbe93499178ffd4e7b469aed8d71ed961f2fb3dfe",
+      "platform": "native-ios",
+      "unit": "pt",
+      "surface": "list",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 362,
+      "provider": "native-ios",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / ios",
+      "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+      "observedAt": "2026-10-25T14:30:06.240Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-ios-402-2-detail-width",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-ios-402-2",
+      "scenarioIdentity": "21515a14d3125f9a23d84a8fbe93499178ffd4e7b469aed8d71ed961f2fb3dfe",
+      "platform": "native-ios",
+      "unit": "pt",
+      "surface": "detail",
+      "property": "width",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 362,
+      "provider": "native-ios",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / ios",
+      "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+      "observedAt": "2026-10-25T14:30:06.240Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    },
+    {
+      "binding": "native-ios-402-2-line-height-probe-lineheight",
+      "current": {
+        "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+      },
+      "scenario": "native-ios-402-2",
+      "scenarioIdentity": "21515a14d3125f9a23d84a8fbe93499178ffd4e7b469aed8d71ed961f2fb3dfe",
+      "platform": "native-ios",
+      "unit": "pt",
+      "surface": "line-height-probe",
+      "property": "lineHeight",
+      "sourceLocation": "experiments/expo-design-theory/src/App.jsx",
+      "status": "observed",
+      "value": 45,
+      "provider": "native-ios",
+      "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / ios",
+      "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+      "observedAt": "2026-10-25T14:30:06.240Z",
+      "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+    }
+  ],
+  "check": {
+    "version": 1,
+    "manifestIdentity": "5d2c28a6235abbf4201fb6bde826e838ff38c3e09a9b96f57487786ab3023ccb",
+    "current": {
+      "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+      "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+      "inputIdentity": "14a81890caa74b7585b955908c2e16dbadd99fa15b4064f6e376690059515192",
+      "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45"
+    },
+    "complete": true,
+    "verified": true,
+    "entries": [
+      {
+        "id": "web-390-1-list-width",
+        "status": "pass",
+        "expected": 350,
+        "observed": 350,
+        "unit": "css-px",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-390-1-detail-width",
+        "status": "pass",
+        "expected": 350,
+        "observed": 350,
+        "unit": "css-px",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-390-1-line-height-probe-lineheight",
+        "status": "pass",
+        "expected": 22.4,
+        "observed": 22.390625,
+        "unit": "css-px",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-390-1-row-inlet-fontsize",
+        "status": "pass",
+        "expected": 16,
+        "observed": 16,
+        "unit": "css-px",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual browser computed fontSize on the bound row."
+      },
+      {
+        "id": "web-390-2-list-width",
+        "status": "pass",
+        "expected": 350,
+        "observed": 350,
+        "unit": "css-px",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-390-2-detail-width",
+        "status": "pass",
+        "expected": 350,
+        "observed": 350,
+        "unit": "css-px",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-390-2-line-height-probe-lineheight",
+        "status": "pass",
+        "expected": 44.8,
+        "observed": 44.796875,
+        "unit": "css-px",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-390-2-row-inlet-fontsize",
+        "status": "pass",
+        "expected": 32,
+        "observed": 32,
+        "unit": "css-px",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual browser computed fontSize on the bound row."
+      },
+      {
+        "id": "web-820-1-list-width",
+        "status": "pass",
+        "expected": 406.40000000000003,
+        "observed": 406.390625,
+        "unit": "css-px",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-820-1-detail-width",
+        "status": "pass",
+        "expected": 353.6,
+        "observed": 353.59375,
+        "unit": "css-px",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-820-1-line-height-probe-lineheight",
+        "status": "pass",
+        "expected": 22.4,
+        "observed": 22.390625,
+        "unit": "css-px",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-820-1-row-inlet-fontsize",
+        "status": "pass",
+        "expected": 16,
+        "observed": 16,
+        "unit": "css-px",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual browser computed fontSize on the bound row."
+      },
+      {
+        "id": "web-820-2-list-width",
+        "status": "pass",
+        "expected": 387.2,
+        "observed": 387.1875,
+        "unit": "css-px",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-820-2-detail-width",
+        "status": "pass",
+        "expected": 372.8,
+        "observed": 372.796875,
+        "unit": "css-px",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-820-2-line-height-probe-lineheight",
+        "status": "pass",
+        "expected": 44.8,
+        "observed": 44.796875,
+        "unit": "css-px",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-820-2-row-inlet-fontsize",
+        "status": "pass",
+        "expected": 32,
+        "observed": 32,
+        "unit": "css-px",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual browser computed fontSize on the bound row."
+      },
+      {
+        "id": "web-1440-1-list-width",
+        "status": "pass",
+        "expected": 753.6,
+        "observed": 753.59375,
+        "unit": "css-px",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-1440-1-detail-width",
+        "status": "pass",
+        "expected": 626.4,
+        "observed": 626.390625,
+        "unit": "css-px",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-1440-1-line-height-probe-lineheight",
+        "status": "pass",
+        "expected": 22.4,
+        "observed": 22.390625,
+        "unit": "css-px",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-1440-1-row-inlet-fontsize",
+        "status": "pass",
+        "expected": 16,
+        "observed": 16,
+        "unit": "css-px",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual browser computed fontSize on the bound row."
+      },
+      {
+        "id": "web-1440-2-list-width",
+        "status": "pass",
+        "expected": 734.4000000000001,
+        "observed": 734.390625,
+        "unit": "css-px",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-1440-2-detail-width",
+        "status": "pass",
+        "expected": 645.6,
+        "observed": 645.59375,
+        "unit": "css-px",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-1440-2-line-height-probe-lineheight",
+        "status": "pass",
+        "expected": 44.8,
+        "observed": 44.796875,
+        "unit": "css-px",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "web-1440-2-row-inlet-fontsize",
+        "status": "pass",
+        "expected": 32,
+        "observed": 32,
+        "unit": "css-px",
+        "target": {
+          "surface": "row-inlet",
+          "property": "fontSize",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/round2/proof.json",
+        "detail": "Actual browser computed fontSize on the bound row."
+      },
+      {
+        "id": "native-android-411-1-list-width",
+        "status": "pass",
+        "expected": 371.42857142857144,
+        "observed": 371.4285888671875,
+        "unit": "dp",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-android-411-1-detail-width",
+        "status": "pass",
+        "expected": 371.42857142857144,
+        "observed": 371.4285888671875,
+        "unit": "dp",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-android-411-1-line-height-probe-lineheight",
+        "status": "pass",
+        "expected": 22.4,
+        "observed": 22.4761962890625,
+        "unit": "dp",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-android-411-2-list-width",
+        "status": "pass",
+        "expected": 371.42857142857144,
+        "observed": 371.4285888671875,
+        "unit": "dp",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-android-411-2-detail-width",
+        "status": "pass",
+        "expected": 371.42857142857144,
+        "observed": 371.4285888671875,
+        "unit": "dp",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-android-411-2-line-height-probe-lineheight",
+        "status": "pass",
+        "expected": 44.8,
+        "observed": 44.952392578125,
+        "unit": "dp",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-android-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-ios-402-1-list-width",
+        "status": "pass",
+        "expected": 362,
+        "observed": 362,
+        "unit": "pt",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-ios-402-1-detail-width",
+        "status": "pass",
+        "expected": 362,
+        "observed": 362,
+        "unit": "pt",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-ios-402-1-line-height-probe-lineheight",
+        "status": "pass",
+        "expected": 22.4,
+        "observed": 22.66666603088379,
+        "unit": "pt",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-ios-402-2-list-width",
+        "status": "pass",
+        "expected": 362,
+        "observed": 362,
+        "unit": "pt",
+        "target": {
+          "surface": "list",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-ios-402-2-detail-width",
+        "status": "pass",
+        "expected": 362,
+        "observed": 362,
+        "unit": "pt",
+        "target": {
+          "surface": "detail",
+          "property": "width",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      },
+      {
+        "id": "native-ios-402-2-line-height-probe-lineheight",
+        "status": "pass",
+        "expected": 44.8,
+        "observed": 45,
+        "unit": "pt",
+        "target": {
+          "surface": "line-height-probe",
+          "property": "lineHeight",
+          "sourceLocation": "experiments/expo-design-theory/src/App.jsx"
+        },
+        "resultRef": "artifacts/expo-design-theory/native-ios-proof.json",
+        "detail": "Actual current host-node geometry, independently captured by browser/native renderer; single-line text probe for lineHeight."
+      }
+    ],
+    "scope": "Compares caller-supplied current renderer observations with consumed-value expectations. Matching values support consistency, not authorship, causal influence, task success or whole-app accessibility."
+  }
+}

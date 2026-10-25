@@ -1,0 +1,411 @@
+{
+  "output": "artifacts/design-theory/interactions-verification-webkit",
+  "scenarios": [
+    {
+      "engine": "webkit",
+      "width": 390,
+      "name": "Layout gutter",
+      "frameSamples": 53,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 20,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "name": "Layout content gap",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "name": "Motion damping",
+      "frameSamples": 63,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 19,
+      "maxFrameInterval": 51,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "name": "Material roughness",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "name": "Material metalness",
+      "frameSamples": 53,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "name": "Normal texture scale",
+      "frameSamples": 51,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 18,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "name": "Normal texture amplitude",
+      "frameSamples": 53,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "name": "Surface finish roughness",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 18,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "name": "Image focal point",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 20,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "name": "Layout gutter",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 18,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "name": "Layout content gap",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "name": "Motion damping",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "name": "Material roughness",
+      "frameSamples": 69,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 24,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "name": "Material metalness",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "name": "Normal texture scale",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "name": "Normal texture amplitude",
+      "frameSamples": 53,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "name": "Surface finish roughness",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "name": "Image focal point",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 19,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "name": "Layout gutter",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 19,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "name": "Layout content gap",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 18,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "name": "Motion damping",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 19,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "name": "Material roughness",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 18,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "name": "Material metalness",
+      "frameSamples": 53,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "name": "Normal texture scale",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "name": "Normal texture amplitude",
+      "frameSamples": 53,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 19,
+      "maxFrameInterval": 21,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "name": "Surface finish roughness",
+      "frameSamples": 53,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 19,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "name": "Image focal point",
+      "frameSamples": 52,
+      "railMovement": {
+        "x": 0,
+        "y": 0
+      },
+      "scrollMovement": 0,
+      "frameIntervalP95": 18,
+      "maxFrameInterval": 19,
+      "longTasks": [],
+      "longTaskObserverSupported": false
+    }
+  ],
+  "errors": []
+}

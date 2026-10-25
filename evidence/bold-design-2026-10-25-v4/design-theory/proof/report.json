@@ -1,0 +1,5163 @@
+{
+  "capturedAt": "2026-10-25T14:56:26.815Z",
+  "implementation": {
+    "examples/design-theory/DomMaterialStudy.jsx": "f5ebf7dfbc7ebf602b126442beda8dbdb63f1133a8fef0c2db207783f840440e",
+    "examples/design-theory/FieldSession.jsx": "9bfb37b2e0788cfb101c9ee0d3032c386c6069ce6a0264ef96b60804a93a6bf2",
+    "examples/design-theory/HeroMaterial.jsx": "58af82c81f707949cd52c2dd719efed235fd84a432969b5160a1f0acdd895016",
+    "examples/design-theory/InteractionRange.jsx": "31d27089a6ebb81308bdf0229a15d679c8e63576fe414f2d375e5edc9106a05a",
+    "examples/design-theory/LayoutPreview.jsx": "dbb1692fce0f55c0ebc21467f1dc339a063a82fa3189d20cf37f4090bd0068ed",
+    "examples/design-theory/RegistrationBand.jsx": "7d197450b9cdd1c13fc999a21db200443b435d3605794a4aa06984ed1b2d9fb4",
+    "examples/design-theory/Surface.jsx": "ed8ef450dc7fe8b8389bd6b20113dfeb000ad204fc3c4634f29e608766bd34c1",
+    "examples/design-theory/field-entry.jsx": "56b2cbba1618a20589632ebc9793bdfe30258203eb13bd1af5e6f9ea6eefc51c",
+    "examples/design-theory/profiles.js": "7e75bfadf12ba5ad7c4f90efdf0c4b59c1df77facd7dfa0663b2cf79080e003a",
+    "examples/design-theory/runtime.js": "745fb416ee11433b692d1a734ddd32d5a4faaaea7db3fb4fdca96e5827dac6ad",
+    "examples/design-theory/still-life.svg": "7f34d81862a36f8589fc6d93311697818e8fdfeef1e9a48a01a079c376316f29",
+    "examples/design-theory/surface-scene.js": "837e99d08a7509f473f2f552429fab5e3bd897f88fce22ce1e504677c4862a78",
+    "examples/design-theory/surface-worker.js": "4c1014273b3f63d0d70079733d9fef88710abd9dce8966224cce04e26abab805",
+    "examples/design-theory/useDomMaterial.js": "b2aa65b97d5b43bcea15522f84a4c3c97e6b303fcf2224ec1d01244f5e6fe949",
+    "examples/design-theory/web.jsx": "45ddb065fccd77a888fc0a319159f9dd5b89848e9588edff32e959d1cad993bc",
+    "artifacts/vela/web/design-theory/about.html": "6f2d9cfddce38f790e3d0d20a3ea1279a484f906955888b5c49a1b02ef73529b",
+    "artifacts/vela/web/design-theory/app.js": "445707339bb8b2a2f40fc3a0a8c88c6ec30a4bff2e9079ddbb5241b4e9f6772d",
+    "artifacts/vela/web/design-theory/assets/Lato-Black.ttf": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
+    "artifacts/vela/web/design-theory/assets/Lato-Regular.ttf": "d636e4683231f931eda222d588e944d082bfd3bdba02f928bee461c0f185b251",
+    "artifacts/vela/web/design-theory/assets/Spectral-Regular.ttf": "c89021dc20720c8d0dcf40b0b2f6e00c13665fa8041717f581396f51b8c78f5d",
+    "artifacts/vela/web/design-theory/assets/lato-OFL.txt": "74ba064d03f1f1c4a952da936c3eb71866c34404916734de3cae73b34357e59e",
+    "artifacts/vela/web/design-theory/assets/spectral-OFL.txt": "501d6ceca8e552630fe3aa9442b9a818565680a1a2f79f3fb8c13d6f309a9e98",
+    "artifacts/vela/web/design-theory/chunks/chunk-5UAMCWIE.js": "bd26df6c56787a91eade050033df1f00ce2c46b72cbfbfb5051d4e6384e1f149",
+    "artifacts/vela/web/design-theory/chunks/surface-scene-YH5FJEQ6.js": "9648ce322b41902fad800616f4afe4c2113749756cd4c80bb9570ea763afd847",
+    "artifacts/vela/web/design-theory/field/app.js": "e646de4d5e6a80438618e687ca740b65fea2abf8ed58f097354a128f9e59cb24",
+    "artifacts/vela/web/design-theory/field/index.html": "2fe3b74ec89b14476cb5399c8db51c2f02ccc8a728e49ed7c5b0af4e71c348b7",
+    "artifacts/vela/web/design-theory/index.html": "ae6205561e344807c7640fa44307b5b7810b6ae3e88b42770e603e0991fda2ac",
+    "artifacts/vela/web/design-theory/still-life.svg": "7f34d81862a36f8589fc6d93311697818e8fdfeef1e9a48a01a079c376316f29",
+    "artifacts/vela/web/design-theory/surface-worker.js": "65848cfdef599dd03387f86e2a782ce04d44d4beae7abce8c7319dde77e16741",
+    "src/motion.ts": "9f9502b04059d4aafe53d0250b9c750f3a27b9c88537c7759dd6bdea4342ea1d",
+    "src/motion-dynamics.ts": "a1d4b5c49631f3b9fa50ac8e6def7e9091530dc95898459cf3f0cbdc27db3093",
+    "src/browser-tilt.ts": "988b73779f8cc2281f248f9c96cd4830659a194496e19be33290ee1b779b0ed3",
+    "src/surface.ts": "fd0a89a64c42e59c8738ffd7bb87f36d49d384f9753a3d318253209f5310220c",
+    "src/material-relations.ts": "6bc11197459d5dc05382b18286baf0092ed62d721142f8d81ac09b52f0412944",
+    "src/wireframe.ts": "ddf798565aae45b1728287053aea8dd41cf3aa5415433cd8b9919d543094b3be",
+    "src/prose.ts": "15f4a4bb2df6358c0eb47662678e79a4db18b2e4c87f73e53820e0763a47da01",
+    "src/math-expression.ts": "1be57d263ce5976c1e5b0ff624273721395823efe7792db9b6a48afcc8e13807",
+    "src/media-geometry.ts": "7efa48d4dd27d478dbd31928139c4f3a2e2d0acbc3c7555a62a3853a88ca3bb0",
+    "src/design-field.ts": "376d7b22a9d3c2185cd4e9a8e94aa0f7f4da2111b0a7ed6d54ee9c386c1846a6",
+    "src/design-context.ts": "1b53a8d5166722d46176ff1ac688647900d8966e341a4d69dd7736d4043a04d1",
+    "src/dom-surface.ts": "a48beb62babc4a340b1b6bbe660604dfab70d95afbe49a83d837aa54a0d31c11",
+    "src/browser-dom-light.ts": "2e69e318efbe6d80fa6859d2f6272e8ba91e6affa86195a60e7702e8e32b3807",
+    "DESIGN.md": "3bc9b66ae3b4d059197c9156412ba7d2a682b93c55883d44c4cab8d367eee511",
+    "examples/design-field/brief.json": "c9b90359cfa64dec930f0e6da650af941ab9f985b7dfb579809375b806dcf607",
+    "examples/design-field/measurements.json": "6d3f9e914958cef6b202031ce3da0a04e288e3e763b2e735f4f2f6ffb0b716d0",
+    "examples/design-field/gallery-session.json": "16ff9929469e82fde32b4b3786d304dccee12b24455cdcd6d98e8e32e335253a",
+    "scripts/build-design-theory.mjs": "96f2b598bbc059dc631074a2ef11dcbe5928d282f0a71fd32537f814de1c6997",
+    "scripts/prove-design-theory.mjs": "791c46ed9735f9c0d41e8f2f2095a20a8ee676d7ab11a94a1b920a64c3425394",
+    "package-lock.json": "dc82ff1d7932a21163672c0bcba893740bc348639f9e481797011eb1205c554d"
+  },
+  "observations": [
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "phase": "responsive",
+      "initialHeroColors": 188,
+      "initialHeroPixels": {
+        "quantizedColors": 188,
+        "changedFraction": 0.9979474548440066
+      },
+      "width": 320,
+      "scrollWidth": 320,
+      "headings": [
+        {
+          "text": "Make therules.Then bendthem.",
+          "width": 284,
+          "right": 302
+        },
+        {
+          "text": "Start somewhere.Make it yours.",
+          "width": 255.875,
+          "right": 273.875
+        },
+        {
+          "text": "Compare the choices behind a direction.",
+          "width": 284,
+          "right": 302
+        },
+        {
+          "text": "Feel thedifference.",
+          "width": 284,
+          "right": 302
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "width": 222.0625,
+          "right": 240.0625
+        },
+        {
+          "text": "Give the interfacesome substance.",
+          "width": 244,
+          "right": 282
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "width": 197.015625,
+          "right": 215.015625
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "width": 266.5625,
+          "right": 284.5625
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "width": 284,
+          "right": 302
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "width": 284,
+          "right": 302
+        }
+      ],
+      "surfaces": {
+        "material": {
+          "frames": 0,
+          "renderer": "static",
+          "activation": "not-requested",
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          }
+        }
+      },
+      "bodyText": 5732,
+      "borders": {
+        "header": "1px",
+        "profile": "1px"
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "phase": "responsive",
+      "initialHeroColors": 192,
+      "initialHeroPixels": {
+        "quantizedColors": 192,
+        "changedFraction": 0.998404071773637
+      },
+      "width": 390,
+      "scrollWidth": 390,
+      "headings": [
+        {
+          "text": "Make therules.Then bendthem.",
+          "width": 354,
+          "right": 372
+        },
+        {
+          "text": "Start somewhere.Make it yours.",
+          "width": 255.875,
+          "right": 273.875
+        },
+        {
+          "text": "Compare the choices behind a direction.",
+          "width": 354,
+          "right": 372
+        },
+        {
+          "text": "Feel thedifference.",
+          "width": 354,
+          "right": 372
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "width": 222.0625,
+          "right": 240.0625
+        },
+        {
+          "text": "Give the interfacesome substance.",
+          "width": 314,
+          "right": 352
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "width": 197.015625,
+          "right": 215.015625
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "width": 266.5625,
+          "right": 284.5625
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "width": 296.421875,
+          "right": 314.421875
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "width": 284.359375,
+          "right": 302.359375
+        }
+      ],
+      "surfaces": {
+        "material": {
+          "frames": 0,
+          "renderer": "static",
+          "activation": "not-requested",
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          }
+        }
+      },
+      "bodyText": 5732,
+      "borders": {
+        "header": "1px",
+        "profile": "1px"
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "phase": "responsive",
+      "initialHeroColors": 229,
+      "initialHeroPixels": {
+        "quantizedColors": 229,
+        "changedFraction": 0.9985853227232537
+      },
+      "width": 834,
+      "scrollWidth": 834,
+      "headings": [
+        {
+          "text": "Make therules.Then bendthem.",
+          "width": 444.28125,
+          "right": 472.28125
+        },
+        {
+          "text": "Start somewhere.Make it yours.",
+          "width": 410.671875,
+          "right": 514.671875
+        },
+        {
+          "text": "Compare the choices behind a direction.",
+          "width": 483.703125,
+          "right": 511.703125
+        },
+        {
+          "text": "Feel thedifference.",
+          "width": 251.875,
+          "right": 279.875
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "width": 410.671875,
+          "right": 514.671875
+        },
+        {
+          "text": "Give the interfacesome substance.",
+          "width": 263.140625,
+          "right": 324.5
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "width": 410.671875,
+          "right": 514.671875
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "width": 410.671875,
+          "right": 514.671875
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "width": 410.671875,
+          "right": 514.671875
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "width": 323.390625,
+          "right": 351.390625
+        }
+      ],
+      "surfaces": {
+        "material": {
+          "frames": 0,
+          "renderer": "static",
+          "activation": "not-requested",
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          }
+        }
+      },
+      "bodyText": 5799,
+      "borders": {
+        "header": "1px",
+        "profile": "1px"
+      }
+    },
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "phase": "responsive",
+      "initialHeroColors": 224,
+      "initialHeroPixels": {
+        "quantizedColors": 224,
+        "changedFraction": 0.9991656305215627
+      },
+      "width": 1440,
+      "scrollWidth": 1440,
+      "headings": [
+        {
+          "text": "Make therules.Then bendthem.",
+          "width": 758.640625,
+          "right": 818.640625
+        },
+        {
+          "text": "Start somewhere.Make it yours.",
+          "width": 834,
+          "right": 970
+        },
+        {
+          "text": "Compare the choices behind a direction.",
+          "width": 836,
+          "right": 896
+        },
+        {
+          "text": "Feel thedifference.",
+          "width": 442.234375,
+          "right": 502.234375
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "width": 834,
+          "right": 970
+        },
+        {
+          "text": "Give the interfacesome substance.",
+          "width": 444.671875,
+          "right": 552.671875
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "width": 834,
+          "right": 970
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "width": 834,
+          "right": 970
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "width": 834,
+          "right": 970
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "width": 529.9375,
+          "right": 589.9375
+        }
+      ],
+      "surfaces": {
+        "material": {
+          "frames": 0,
+          "renderer": "static",
+          "activation": "not-requested",
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          }
+        }
+      },
+      "bodyText": 5836,
+      "borders": {
+        "header": "1px",
+        "profile": "1px"
+      }
+    },
+    {
+      "engine": "chromium",
+      "kind": "normal-motion-event-trace",
+      "before": 1.0022285064440248,
+      "samples": [
+        {
+          "time": 855.6000000238419,
+          "position": 1.0022285064440248
+        },
+        {
+          "time": 858.6999999880791,
+          "position": 1.0030734861129647
+        },
+        {
+          "time": 874.1999999880791,
+          "position": 1.0035700301324382
+        },
+        {
+          "time": 891.8000000119209,
+          "position": 0.9817904208366564
+        },
+        {
+          "time": 908,
+          "position": 0.9224914882097369
+        }
+      ],
+      "maxSampleGapMs": 17.600000023841858
+    },
+    {
+      "engine": "chromium",
+      "phase": "interaction",
+      "studio": {
+        "font": "TheorySans, Arial, sans-serif",
+        "tracking": "-8.748px",
+        "color": "rgb(21, 45, 129)"
+      },
+      "utility": {
+        "font": "TheorySans, Arial, sans-serif",
+        "tracking": "-6.4152px",
+        "color": "rgb(40, 59, 49)"
+      },
+      "editorial": {
+        "font": "TheorySans, Arial, sans-serif",
+        "tracking": "-8.1648px",
+        "color": "rgb(23, 27, 24)"
+      },
+      "exportedMotion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 165,
+          "damping": 35
+        },
+        "coordinate": {
+          "unit": "px",
+          "from": 0,
+          "to": 120
+        },
+        "durationSeconds": 2,
+        "sampleCount": 121
+      },
+      "initialFrameRegressions": [
+        {
+          "width": 320,
+          "pixels": {
+            "quantizedColors": 188,
+            "changedFraction": 0.9979474548440066
+          },
+          "stats": {
+            "material": {
+              "frames": 0,
+              "renderer": "static",
+              "activation": "not-requested",
+              "settings": {
+                "surface": {
+                  "baseColor": [
+                    0.2,
+                    0.34,
+                    0.22
+                  ],
+                  "roughness": 0.32,
+                  "metalness": 0
+                },
+                "accentSurface": {
+                  "baseColor": [
+                    0.62,
+                    0.43,
+                    0.22
+                  ],
+                  "roughness": 0.55,
+                  "metalness": 1
+                },
+                "normalScale": 1,
+                "normalStrength": 0.11
+              }
+            }
+          }
+        },
+        {
+          "width": 320,
+          "pixels": {
+            "quantizedColors": 188,
+            "changedFraction": 0.9979474548440066
+          },
+          "stats": {
+            "material": {
+              "frames": 0,
+              "renderer": "static",
+              "activation": "not-requested",
+              "settings": {
+                "surface": {
+                  "baseColor": [
+                    0.2,
+                    0.34,
+                    0.22
+                  ],
+                  "roughness": 0.32,
+                  "metalness": 0
+                },
+                "accentSurface": {
+                  "baseColor": [
+                    0.62,
+                    0.43,
+                    0.22
+                  ],
+                  "roughness": 0.55,
+                  "metalness": 1
+                },
+                "normalScale": 1,
+                "normalStrength": 0.11
+              }
+            }
+          }
+        },
+        {
+          "width": 320,
+          "pixels": {
+            "quantizedColors": 188,
+            "changedFraction": 0.9979474548440066
+          },
+          "stats": {
+            "material": {
+              "frames": 0,
+              "renderer": "static",
+              "activation": "not-requested",
+              "settings": {
+                "surface": {
+                  "baseColor": [
+                    0.2,
+                    0.34,
+                    0.22
+                  ],
+                  "roughness": 0.32,
+                  "metalness": 0
+                },
+                "accentSurface": {
+                  "baseColor": [
+                    0.62,
+                    0.43,
+                    0.22
+                  ],
+                  "roughness": 0.55,
+                  "metalness": 1
+                },
+                "normalScale": 1,
+                "normalStrength": 0.11
+              }
+            }
+          }
+        },
+        {
+          "width": 834,
+          "pixels": {
+            "quantizedColors": 229,
+            "changedFraction": 0.9985853227232537
+          },
+          "stats": {
+            "material": {
+              "frames": 0,
+              "renderer": "static",
+              "activation": "not-requested",
+              "settings": {
+                "surface": {
+                  "baseColor": [
+                    0.2,
+                    0.34,
+                    0.22
+                  ],
+                  "roughness": 0.32,
+                  "metalness": 0
+                },
+                "accentSurface": {
+                  "baseColor": [
+                    0.62,
+                    0.43,
+                    0.22
+                  ],
+                  "roughness": 0.55,
+                  "metalness": 1
+                },
+                "normalScale": 1,
+                "normalStrength": 0.11
+              }
+            }
+          }
+        }
+      ],
+      "clippingFixture": {
+        "authoredHeight": 190,
+        "naturalHeight": 196.78125,
+        "scrollHeight": 197,
+        "paragraphBottom": 196.78125
+      },
+      "layoutComparisons": [
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "390",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 32,
+                "y": 30,
+                "width": 326,
+                "height": 40
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 32,
+                "y": 104,
+                "width": 326,
+                "height": 197
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 32,
+                "y": 329,
+                "width": 326,
+                "height": 255
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 32,
+                "y": 610,
+                "width": 160,
+                "height": 44
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 32,
+                "y": 698,
+                "width": 326,
+                "height": 28
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 29.983407079646014,
+                "width": 325.9886615044247,
+                "height": 39.98686393805309
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 103.94427544247787,
+                "width": 325.9886615044247,
+                "height": 196.99529867256635
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 328.92768252212386,
+                "width": 325.9886615044247,
+                "height": 254.99377765486724
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 609.9142699115043,
+                "width": 159.9744192477876,
+                "height": 43.97746128318584
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 697.869192477876,
+                "width": 325.9886615044247,
+                "height": 27.988108407079643
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0.02129424778761191
+            },
+            {
+              "id": "title",
+              "maxError": 0.055724557522125906
+            },
+            {
+              "id": "image",
+              "maxError": 0.0723174778761404
+            },
+            {
+              "id": "action",
+              "maxError": 0.08573008849566577
+            },
+            {
+              "id": "footer",
+              "maxError": 0.13080752212397329
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 114,
+            "clientHeight": 114,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -106.046875,
+                "right": -127.625,
+                "textBottom": -107.15625,
+                "textRight": -127.625
+              },
+              {
+                "tag": "H3",
+                "bottom": -26.8125,
+                "right": -87.46875,
+                "textBottom": -20.90625,
+                "textRight": -87.46875
+              },
+              {
+                "tag": "P",
+                "bottom": -0.1875,
+                "right": -44.046875,
+                "textBottom": -1.609375,
+                "textRight": -51.890625
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "834",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 29.98340707964602,
+                "width": 769.9969579646018,
+                "height": 39.95865597345133
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 103.90403761061948,
+                "width": 370.9870022123894,
+                "height": 229.94966814159292
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 361.8189988938053,
+                "width": 159.9499446902655,
+                "height": 43.994883849557525
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 430.89615597345136,
+                "y": 103.90403761061948,
+                "width": 370.9870022123894,
+                "height": 289.9741426991151
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 447.7906526548673,
+                "width": 769.9969579646018,
+                "height": 27.965293141592923
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 29.98340707964602,
+                "width": 769.9969579646018,
+                "height": 39.95865597345133
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 103.90403761061948,
+                "width": 370.9870022123894,
+                "height": 229.94966814159292
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 361.8189988938053,
+                "width": 159.9499446902655,
+                "height": 43.994883849557525
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 430.89615597345136,
+                "y": 103.90403761061948,
+                "width": 370.9870022123894,
+                "height": 289.9741426991151
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 447.7906526548673,
+                "width": 769.9969579646018,
+                "height": 27.965293141592923
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 62,
+            "clientHeight": 62,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -58.515625,
+                "right": -71.9375,
+                "textBottom": -59.3125,
+                "textRight": -71.9375
+              },
+              {
+                "tag": "H3",
+                "bottom": -13.03125,
+                "right": -41.25,
+                "textBottom": -10.109375,
+                "textRight": -41.25
+              },
+              {
+                "tag": "P",
+                "bottom": -0.578125,
+                "right": -32.796875,
+                "textBottom": -1.453125,
+                "textRight": -36.453125
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "960",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 30,
+                "width": 895.9513274336283,
+                "height": 39.955752212389385
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 103.93805309734513,
+                "width": 433.9380530973451,
+                "height": 229.97787610619469
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 361.85840707964604,
+                "width": 159.95575221238937,
+                "height": 43.93805309734513
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 493.87168141592923,
+                "y": 103.93805309734513,
+                "width": 433.9380530973451,
+                "height": 289.9778761061947
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 447.7433628318584,
+                "width": 895.9513274336283,
+                "height": 27.942477876106196
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 30,
+                "width": 895.9513274336283,
+                "height": 39.955752212389385
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 103.93805309734513,
+                "width": 433.9380530973451,
+                "height": 229.97787610619469
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 361.85840707964604,
+                "width": 159.95575221238937,
+                "height": 43.93805309734513
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 493.87168141592923,
+                "y": 103.93805309734513,
+                "width": 433.9380530973451,
+                "height": 289.9778761061947
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 447.7433628318584,
+                "width": 895.9513274336283,
+                "height": 27.942477876106196
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 54,
+            "clientHeight": 54,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -50.84375,
+                "right": -77.3125,
+                "textBottom": -52.140625,
+                "textRight": -77.3125
+              },
+              {
+                "tag": "H3",
+                "bottom": -11.328125,
+                "right": -50.625,
+                "textBottom": -9.5625,
+                "textRight": -50.625
+              },
+              {
+                "tag": "P",
+                "bottom": -0.515625,
+                "right": -43.3125,
+                "textBottom": -0.75,
+                "textRight": -46.5625
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "390",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 29.983407079646014,
+                "width": 261.9773230088495,
+                "height": 39.98686393805309
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 103.94427544247787,
+                "width": 261.9773230088495,
+                "height": 196.99529867256635
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 348.934596238938,
+                "width": 261.9773230088495,
+                "height": 254.99377765486724
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 629.9211836283185,
+                "width": 159.9744192477876,
+                "height": 43.97746128318584
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 707.8726493362831,
+                "width": 261.9773230088495,
+                "height": 27.988108407079643
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 29.983407079646014,
+                "width": 261.9773230088495,
+                "height": 39.98686393805309
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 103.94427544247787,
+                "width": 261.9773230088495,
+                "height": 196.99529867256635
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 348.934596238938,
+                "width": 261.9773230088495,
+                "height": 254.99377765486724
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 629.9211836283185,
+                "width": 159.9744192477876,
+                "height": 43.97746128318584
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 707.8726493362831,
+                "width": 261.9773230088495,
+                "height": 27.988108407079643
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 114,
+            "clientHeight": 114,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -106.046875,
+                "right": -90.53125,
+                "textBottom": -107.15625,
+                "textRight": -90.53125
+              },
+              {
+                "tag": "H3",
+                "bottom": -26.8125,
+                "right": -50.375,
+                "textBottom": -20.90625,
+                "textRight": -50.375
+              },
+              {
+                "tag": "P",
+                "bottom": -0.1875,
+                "right": -6.953125,
+                "textBottom": -1.609375,
+                "textRight": -14.796875
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "834",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 29.98340707964602,
+                "width": 705.9939159292036,
+                "height": 39.95865597345133
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 103.90403761061948,
+                "width": 328.9525719026549,
+                "height": 229.94966814159292
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 381.82715707964604,
+                "width": 159.9499446902655,
+                "height": 43.994883849557525
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 440.8714048672567,
+                "y": 103.90403761061948,
+                "width": 328.9525719026549,
+                "height": 289.9741426991151
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 459.7840154867257,
+                "width": 705.9939159292036,
+                "height": 27.965293141592923
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 29.98340707964602,
+                "width": 705.9939159292036,
+                "height": 39.95865597345133
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 103.90403761061948,
+                "width": 328.9525719026549,
+                "height": 229.94966814159292
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 381.82715707964604,
+                "width": 159.9499446902655,
+                "height": 43.994883849557525
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 440.8714048672567,
+                "y": 103.90403761061948,
+                "width": 328.9525719026549,
+                "height": 289.9741426991151
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 459.7840154867257,
+                "width": 705.9939159292036,
+                "height": 27.965293141592923
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 62,
+            "clientHeight": 62,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -58.515625,
+                "right": -60.546875,
+                "textBottom": -59.3125,
+                "textRight": -60.546875
+              },
+              {
+                "tag": "H3",
+                "bottom": -13.03125,
+                "right": -29.859375,
+                "textBottom": -10.109375,
+                "textRight": -29.859375
+              },
+              {
+                "tag": "P",
+                "bottom": -0.578125,
+                "right": -21.40625,
+                "textBottom": -1.453125,
+                "textRight": -25.0625
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "960",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 30,
+                "width": 831.9690265486726,
+                "height": 39.955752212389385
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 103.93805309734513,
+                "width": 391.9911504424779,
+                "height": 229.97787610619469
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 381.9026548672566,
+                "width": 159.95575221238937,
+                "height": 43.93805309734513
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 503.96017699115043,
+                "y": 103.93805309734513,
+                "width": 391.9911504424779,
+                "height": 289.9778761061947
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 459.82300884955754,
+                "width": 831.9690265486726,
+                "height": 27.942477876106196
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 30,
+                "width": 831.9690265486726,
+                "height": 39.955752212389385
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 103.93805309734513,
+                "width": 391.9911504424779,
+                "height": 229.97787610619469
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 381.9026548672566,
+                "width": 159.95575221238937,
+                "height": 43.93805309734513
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 503.96017699115043,
+                "y": 103.93805309734513,
+                "width": 391.9911504424779,
+                "height": 289.9778761061947
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 459.82300884955754,
+                "width": 831.9690265486726,
+                "height": 27.942477876106196
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 54,
+            "clientHeight": 54,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -50.84375,
+                "right": -67.4375,
+                "textBottom": -52.140625,
+                "textRight": -67.4375
+              },
+              {
+                "tag": "H3",
+                "bottom": -11.328125,
+                "right": -40.75,
+                "textBottom": -9.5625,
+                "textRight": -40.75
+              },
+              {
+                "tag": "P",
+                "bottom": -0.515625,
+                "right": -33.4375,
+                "textBottom": -0.75,
+                "textRight": -36.6875
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "390",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 32,
+                "y": 30,
+                "width": 326,
+                "height": 40
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 32,
+                "y": 104,
+                "width": 326,
+                "height": 197
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 32,
+                "y": 329,
+                "width": 326,
+                "height": 255
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 32,
+                "y": 610,
+                "width": 160,
+                "height": 44
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 32,
+                "y": 698,
+                "width": 326,
+                "height": 28
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 32,
+                "y": 30,
+                "width": 326,
+                "height": 40
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 32,
+                "y": 104,
+                "width": 326,
+                "height": 197
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 32,
+                "y": 329,
+                "width": 326,
+                "height": 255
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 32,
+                "y": 610,
+                "width": 160,
+                "height": 44
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 32,
+                "y": 698,
+                "width": 326,
+                "height": 28
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 197,
+            "clientHeight": 197,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -183,
+                "right": -220.15625,
+                "textBottom": -185,
+                "textRight": -220.15625
+              },
+              {
+                "tag": "H3",
+                "bottom": -46.21875,
+                "right": -150.875,
+                "textBottom": -36.8125,
+                "textRight": -150.875
+              },
+              {
+                "tag": "P",
+                "bottom": -0.21875,
+                "right": -76,
+                "textBottom": -2.21875,
+                "textRight": -89.4375
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "834",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 29.998957951409658,
+                "width": 769.9947125682638,
+                "height": 39.99324598135891
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 103.98243955153316,
+                "width": 370.9956967252658,
+                "height": 229.99737558132801
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 361.96704038903147,
+                "width": 159.98907778699754,
+                "height": 43.98452364871384
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 430.9775187665232,
+                "y": 103.98243955153316,
+                "width": 370.9956967252658,
+                "height": 289.99529148414734
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 447.9404488527817,
+                "width": 769.9947125682638,
+                "height": 27.987225256170277
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 29.998957951409658,
+                "width": 769.9947125682638,
+                "height": 39.99324598135891
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 103.98243955153316,
+                "width": 370.9956967252658,
+                "height": 229.99737558132801
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 361.96704038903147,
+                "width": 159.98907778699754,
+                "height": 43.98452364871384
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 430.9775187665232,
+                "y": 103.98243955153316,
+                "width": 370.9956967252658,
+                "height": 289.99529148414734
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 447.9404488527817,
+                "width": 769.9947125682638,
+                "height": 27.987225256170277
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 223,
+            "clientHeight": 223,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -209.703125,
+                "right": -257.5,
+                "textBottom": -211.296875,
+                "textRight": -257.5
+              },
+              {
+                "tag": "H3",
+                "bottom": -46.609375,
+                "right": -147.671875,
+                "textBottom": -36.09375,
+                "textRight": -147.671875
+              },
+              {
+                "tag": "P",
+                "bottom": -1.9375,
+                "right": -117.484375,
+                "textBottom": -4.421875,
+                "textRight": -130.515625
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "960",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 29.992474093514215,
+                "width": 895.995059917794,
+                "height": 39.996140560776524
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 103.98255533470987,
+                "width": 433.9923969047298,
+                "height": 229.99170220566953
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 361.96599834044116,
+                "width": 159.9845622431061,
+                "height": 43.99760714768144
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 493.9773450917582,
+                "y": 103.98255533470987,
+                "width": 433.9923969047298,
+                "height": 289.99517570097066
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 447.96047934235156,
+                "width": 895.995059917794,
+                "height": 27.991740800061752
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 29.992474093514215,
+                "width": 895.995059917794,
+                "height": 39.996140560776524
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 103.98255533470987,
+                "width": 433.9923969047298,
+                "height": 229.99170220566953
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 361.96599834044116,
+                "width": 159.9845622431061,
+                "height": 43.99760714768144
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 493.9773450917582,
+                "y": 103.98255533470987,
+                "width": 433.9923969047298,
+                "height": 289.99517570097066
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 447.96047934235156,
+                "width": 895.995059917794,
+                "height": 27.991740800061752
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 194,
+            "clientHeight": 194,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -182.171875,
+                "right": -276.78125,
+                "textBottom": -183.984375,
+                "textRight": -276.78125
+              },
+              {
+                "tag": "H3",
+                "bottom": -40.53125,
+                "right": -181.421875,
+                "textBottom": -30.375,
+                "textRight": -181.421875
+              },
+              {
+                "tag": "P",
+                "bottom": -1.734375,
+                "right": -155.1875,
+                "textBottom": -3.921875,
+                "textRight": -166.53125
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "390",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 64,
+                "y": 30,
+                "width": 262,
+                "height": 40
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 64,
+                "y": 104,
+                "width": 262,
+                "height": 197
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 64,
+                "y": 349,
+                "width": 262,
+                "height": 255
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 64,
+                "y": 630,
+                "width": 160,
+                "height": 44
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 64,
+                "y": 708,
+                "width": 262,
+                "height": 28
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 64,
+                "y": 30,
+                "width": 262,
+                "height": 40
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 64,
+                "y": 104,
+                "width": 262,
+                "height": 197
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 64,
+                "y": 349,
+                "width": 262,
+                "height": 255
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 64,
+                "y": 630,
+                "width": 160,
+                "height": 44
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 64,
+                "y": 708,
+                "width": 262,
+                "height": 28
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 197,
+            "clientHeight": 197,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -183,
+                "right": -156.15625,
+                "textBottom": -185,
+                "textRight": -156.15625
+              },
+              {
+                "tag": "H3",
+                "bottom": -46.21875,
+                "right": -86.875,
+                "textBottom": -36.8125,
+                "textRight": -86.875
+              },
+              {
+                "tag": "P",
+                "bottom": -0.21875,
+                "right": -12,
+                "textBottom": -2.21875,
+                "textRight": -25.4375
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "834",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 29.998957951409658,
+                "width": 705.9894251365276,
+                "height": 39.99324598135891
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 103.98243955153316,
+                "width": 328.99071804866753,
+                "height": 229.99737558132801
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 381.97171031049186,
+                "width": 159.98907778699754,
+                "height": 43.98452364871384
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 440.97180679647244,
+                "y": 103.98243955153316,
+                "width": 328.99071804866753,
+                "height": 289.99529148414734
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 459.9464695779703,
+                "width": 705.9894251365276,
+                "height": 27.987225256170277
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 29.998957951409658,
+                "width": 705.9894251365276,
+                "height": 39.99324598135891
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 103.98243955153316,
+                "width": 328.99071804866753,
+                "height": 229.99737558132801
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 381.97171031049186,
+                "width": 159.98907778699754,
+                "height": 43.98452364871384
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 440.97180679647244,
+                "y": 103.98243955153316,
+                "width": 328.99071804866753,
+                "height": 289.99529148414734
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 459.9464695779703,
+                "width": 705.9894251365276,
+                "height": 27.987225256170277
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 223,
+            "clientHeight": 223,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -209.703125,
+                "right": -216.71875,
+                "textBottom": -211.296875,
+                "textRight": -216.71875
+              },
+              {
+                "tag": "H3",
+                "bottom": -46.609375,
+                "right": -106.890625,
+                "textBottom": -36.09375,
+                "textRight": -106.890625
+              },
+              {
+                "tag": "P",
+                "bottom": -1.9375,
+                "right": -76.703125,
+                "textBottom": -4.421875,
+                "textRight": -89.734375
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "960",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 29.992474093514215,
+                "width": 831.990119835588,
+                "height": 39.996140560776524
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 103.98255533470987,
+                "width": 391.99552305050076,
+                "height": 229.99170220566953
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 381.97333127496574,
+                "width": 159.9845622431061,
+                "height": 43.99760714768144
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 503.9810115590205,
+                "y": 103.98255533470987,
+                "width": 391.99552305050076,
+                "height": 289.99517570097066
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 459.9648791030664,
+                "width": 831.990119835588,
+                "height": 27.991740800061752
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 29.992474093514215,
+                "width": 831.990119835588,
+                "height": 39.996140560776524
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 103.98255533470987,
+                "width": 391.99552305050076,
+                "height": 229.99170220566953
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 381.97333127496574,
+                "width": 159.9845622431061,
+                "height": 43.99760714768144
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 503.9810115590205,
+                "y": 103.98255533470987,
+                "width": 391.99552305050076,
+                "height": 289.99517570097066
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 459.9648791030664,
+                "width": 831.990119835588,
+                "height": 27.991740800061752
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 194,
+            "clientHeight": 194,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -182.171875,
+                "right": -241.359375,
+                "textBottom": -183.984375,
+                "textRight": -241.359375
+              },
+              {
+                "tag": "H3",
+                "bottom": -40.53125,
+                "right": -146,
+                "textBottom": -30.375,
+                "textRight": -146
+              },
+              {
+                "tag": "P",
+                "bottom": -1.734375,
+                "right": -119.765625,
+                "textBottom": -3.921875,
+                "textRight": -131.109375
+              }
+            ]
+          }
+        }
+      ],
+      "inspectorOrigin": {
+        "hostTop": 535.734375,
+        "svgTop": 535.734375,
+        "scrollTop": 0
+      },
+      "reducedPositions": [
+        "0",
+        "0"
+      ],
+      "movingPositions": [
+        1.0022285064440248,
+        1.0030734861129647,
+        1.0035700301324382,
+        0.9817904208366564,
+        0.9224914882097369
+      ],
+      "pressed": "matrix(0.9729, 0, 0, 0.9729, 0, 0)",
+      "stats": {
+        "ticks": 87,
+        "frameCallbacks": 87,
+        "maxCallbackMilliseconds": 0.5,
+        "reduced": false,
+        "scroll": 2424.1355532907355,
+        "surfaces": {
+          "material": {
+            "frames": 0,
+            "renderer": "static",
+            "activation": "not-requested",
+            "settings": {
+              "surface": {
+                "baseColor": [
+                  0.2,
+                  0.34,
+                  0.22
+                ],
+                "roughness": 0.32,
+                "metalness": 0
+              },
+              "accentSurface": {
+                "baseColor": [
+                  0.62,
+                  0.43,
+                  0.22
+                ],
+                "roughness": 0.55,
+                "metalness": 1
+              },
+              "normalScale": 1,
+              "normalStrength": 0.11
+            }
+          }
+        },
+        "domSurfaces": {
+          "hero": {
+            "adapter": {
+              "frames": 6,
+              "styleWrites": 43,
+              "geometryReads": 2,
+              "active": false,
+              "reduced": false,
+              "offscreen": true
+            },
+            "renderer": {
+              "draws": 3,
+              "textureBuilds": 1,
+              "textureUploads": 1,
+              "programBuilds": 1,
+              "pixels": 243507,
+              "initializationMs": 33.40000003576279,
+              "initializationTaskMaxMs": 5.800000011920929,
+              "initializationTasks": 3,
+              "parallelCompile": false,
+              "textureBuildMs": 5.600000023841858,
+              "status": "ready",
+              "reason": ""
+            },
+            "disposed": false
+          },
+          "study": {
+            "adapter": {
+              "frames": 2,
+              "styleWrites": 16,
+              "geometryReads": 2,
+              "active": false,
+              "reduced": false,
+              "offscreen": true
+            },
+            "renderer": {
+              "draws": 0,
+              "textureBuilds": 0,
+              "textureUploads": 0,
+              "programBuilds": 0,
+              "pixels": 349044,
+              "initializationMs": 0,
+              "initializationTaskMaxMs": 0,
+              "initializationTasks": 0,
+              "parallelCompile": false,
+              "textureBuildMs": 0,
+              "status": "initializing",
+              "reason": ""
+            },
+            "disposed": false
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "phase": "responsive",
+      "initialHeroColors": 208,
+      "initialHeroPixels": {
+        "quantizedColors": 208,
+        "changedFraction": 0.9976053639846744
+      },
+      "width": 320,
+      "scrollWidth": 320,
+      "headings": [
+        {
+          "text": "Make therules.Then bendthem.",
+          "width": 284,
+          "right": 302
+        },
+        {
+          "text": "Start somewhere.Make it yours.",
+          "width": 255.875,
+          "right": 273.875
+        },
+        {
+          "text": "Compare the choices behind a direction.",
+          "width": 284,
+          "right": 302
+        },
+        {
+          "text": "Feel thedifference.",
+          "width": 284,
+          "right": 302
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "width": 222.0625,
+          "right": 240.0625
+        },
+        {
+          "text": "Give the interfacesome substance.",
+          "width": 244,
+          "right": 282
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "width": 197.015625,
+          "right": 215.015625
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "width": 266.5625,
+          "right": 284.5625
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "width": 284,
+          "right": 302
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "width": 284,
+          "right": 302
+        }
+      ],
+      "surfaces": {
+        "material": {
+          "frames": 0,
+          "renderer": "static",
+          "activation": "not-requested",
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          }
+        }
+      },
+      "bodyText": 5596,
+      "borders": {
+        "header": "1px",
+        "profile": "1px"
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "phase": "responsive",
+      "initialHeroColors": 207,
+      "initialHeroPixels": {
+        "quantizedColors": 207,
+        "changedFraction": 0.9983178053830227
+      },
+      "width": 390,
+      "scrollWidth": 390,
+      "headings": [
+        {
+          "text": "Make therules.Then bendthem.",
+          "width": 354,
+          "right": 372
+        },
+        {
+          "text": "Start somewhere.Make it yours.",
+          "width": 255.875,
+          "right": 273.875
+        },
+        {
+          "text": "Compare the choices behind a direction.",
+          "width": 354,
+          "right": 372
+        },
+        {
+          "text": "Feel thedifference.",
+          "width": 354,
+          "right": 372
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "width": 222.0625,
+          "right": 240.0625
+        },
+        {
+          "text": "Give the interfacesome substance.",
+          "width": 314,
+          "right": 352
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "width": 197.015625,
+          "right": 215.015625
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "width": 266.5625,
+          "right": 284.5625
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "width": 297.1875,
+          "right": 315.1875
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "width": 284.359375,
+          "right": 302.359375
+        }
+      ],
+      "surfaces": {
+        "material": {
+          "frames": 0,
+          "renderer": "static",
+          "activation": "not-requested",
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          }
+        }
+      },
+      "bodyText": 5596,
+      "borders": {
+        "header": "1px",
+        "profile": "1px"
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "phase": "responsive",
+      "initialHeroColors": 210,
+      "initialHeroPixels": {
+        "quantizedColors": 210,
+        "changedFraction": 0.9987913259864913
+      },
+      "width": 834,
+      "scrollWidth": 834,
+      "headings": [
+        {
+          "text": "Make therules.Then bendthem.",
+          "width": 444.28125,
+          "right": 472.28125
+        },
+        {
+          "text": "Start somewhere.Make it yours.",
+          "width": 410.671875,
+          "right": 514.671875
+        },
+        {
+          "text": "Compare the choices behind a direction.",
+          "width": 483.703125,
+          "right": 511.703125
+        },
+        {
+          "text": "Feel thedifference.",
+          "width": 251.875,
+          "right": 279.875
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "width": 410.671875,
+          "right": 514.671875
+        },
+        {
+          "text": "Give the interfacesome substance.",
+          "width": 263.1875,
+          "right": 324.546875
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "width": 410.671875,
+          "right": 514.671875
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "width": 410.671875,
+          "right": 514.671875
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "width": 410.671875,
+          "right": 514.671875
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "width": 323.390625,
+          "right": 351.390625
+        }
+      ],
+      "surfaces": {
+        "material": {
+          "frames": 0,
+          "renderer": "static",
+          "activation": "not-requested",
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          }
+        }
+      },
+      "bodyText": 5663,
+      "borders": {
+        "header": "1px",
+        "profile": "1px"
+      }
+    },
+    {
+      "engine": "webkit",
+      "version": "27.2",
+      "phase": "responsive",
+      "initialHeroColors": 216,
+      "initialHeroPixels": {
+        "quantizedColors": 216,
+        "changedFraction": 0.9990963607984884
+      },
+      "width": 1440,
+      "scrollWidth": 1440,
+      "headings": [
+        {
+          "text": "Make therules.Then bendthem.",
+          "width": 758.640625,
+          "right": 818.640625
+        },
+        {
+          "text": "Start somewhere.Make it yours.",
+          "width": 834,
+          "right": 970
+        },
+        {
+          "text": "Compare the choices behind a direction.",
+          "width": 836,
+          "right": 896
+        },
+        {
+          "text": "Feel thedifference.",
+          "width": 442.234375,
+          "right": 502.234375
+        },
+        {
+          "text": "A surface.Not just a color.",
+          "width": 834,
+          "right": 970
+        },
+        {
+          "text": "Give the interfacesome substance.",
+          "width": 444.671875,
+          "right": 552.671875
+        },
+        {
+          "text": "Keep the partthat matters.",
+          "width": 834,
+          "right": 970
+        },
+        {
+          "text": "See the whole.Inspect the details.",
+          "width": 834,
+          "right": 970
+        },
+        {
+          "text": "From a point of viewto a working system.",
+          "width": 834,
+          "right": 970
+        },
+        {
+          "text": "Make somethingworth feeling.",
+          "width": 529.9375,
+          "right": 589.9375
+        }
+      ],
+      "surfaces": {
+        "material": {
+          "frames": 0,
+          "renderer": "static",
+          "activation": "not-requested",
+          "settings": {
+            "surface": {
+              "baseColor": [
+                0.2,
+                0.34,
+                0.22
+              ],
+              "roughness": 0.32,
+              "metalness": 0
+            },
+            "accentSurface": {
+              "baseColor": [
+                0.62,
+                0.43,
+                0.22
+              ],
+              "roughness": 0.55,
+              "metalness": 1
+            },
+            "normalScale": 1,
+            "normalStrength": 0.11
+          }
+        }
+      },
+      "bodyText": 5700,
+      "borders": {
+        "header": "1px",
+        "profile": "1px"
+      }
+    },
+    {
+      "engine": "webkit",
+      "kind": "normal-motion-event-trace",
+      "before": 0.9985912142259359,
+      "samples": [
+        {
+          "time": 844,
+          "position": 0.9985912142259359
+        },
+        {
+          "time": 851,
+          "position": 1.0002054295900147
+        },
+        {
+          "time": 867,
+          "position": 1.0015799742862506
+        },
+        {
+          "time": 885,
+          "position": 0.9829024247376346
+        },
+        {
+          "time": 901,
+          "position": 0.9261666485749758
+        }
+      ],
+      "maxSampleGapMs": 18
+    },
+    {
+      "engine": "webkit",
+      "phase": "interaction",
+      "studio": {
+        "font": "TheorySans, Arial, sans-serif",
+        "tracking": "-8.748px",
+        "color": "rgb(21, 45, 129)"
+      },
+      "utility": {
+        "font": "TheorySans, Arial, sans-serif",
+        "tracking": "-6.4152px",
+        "color": "rgb(40, 59, 49)"
+      },
+      "editorial": {
+        "font": "TheorySans, Arial, sans-serif",
+        "tracking": "-8.1648px",
+        "color": "rgb(23, 27, 24)"
+      },
+      "exportedMotion": {
+        "spring": {
+          "mass": 1,
+          "stiffness": 165,
+          "damping": 35
+        },
+        "coordinate": {
+          "unit": "px",
+          "from": 0,
+          "to": 120
+        },
+        "durationSeconds": 2,
+        "sampleCount": 121
+      },
+      "initialFrameRegressions": [
+        {
+          "width": 320,
+          "pixels": {
+            "quantizedColors": 208,
+            "changedFraction": 0.9976053639846744
+          },
+          "stats": {
+            "material": {
+              "frames": 0,
+              "renderer": "static",
+              "activation": "not-requested",
+              "settings": {
+                "surface": {
+                  "baseColor": [
+                    0.2,
+                    0.34,
+                    0.22
+                  ],
+                  "roughness": 0.32,
+                  "metalness": 0
+                },
+                "accentSurface": {
+                  "baseColor": [
+                    0.62,
+                    0.43,
+                    0.22
+                  ],
+                  "roughness": 0.55,
+                  "metalness": 1
+                },
+                "normalScale": 1,
+                "normalStrength": 0.11
+              }
+            }
+          }
+        },
+        {
+          "width": 320,
+          "pixels": {
+            "quantizedColors": 208,
+            "changedFraction": 0.9976053639846744
+          },
+          "stats": {
+            "material": {
+              "frames": 0,
+              "renderer": "static",
+              "activation": "not-requested",
+              "settings": {
+                "surface": {
+                  "baseColor": [
+                    0.2,
+                    0.34,
+                    0.22
+                  ],
+                  "roughness": 0.32,
+                  "metalness": 0
+                },
+                "accentSurface": {
+                  "baseColor": [
+                    0.62,
+                    0.43,
+                    0.22
+                  ],
+                  "roughness": 0.55,
+                  "metalness": 1
+                },
+                "normalScale": 1,
+                "normalStrength": 0.11
+              }
+            }
+          }
+        },
+        {
+          "width": 320,
+          "pixels": {
+            "quantizedColors": 208,
+            "changedFraction": 0.9976053639846744
+          },
+          "stats": {
+            "material": {
+              "frames": 0,
+              "renderer": "static",
+              "activation": "not-requested",
+              "settings": {
+                "surface": {
+                  "baseColor": [
+                    0.2,
+                    0.34,
+                    0.22
+                  ],
+                  "roughness": 0.32,
+                  "metalness": 0
+                },
+                "accentSurface": {
+                  "baseColor": [
+                    0.62,
+                    0.43,
+                    0.22
+                  ],
+                  "roughness": 0.55,
+                  "metalness": 1
+                },
+                "normalScale": 1,
+                "normalStrength": 0.11
+              }
+            }
+          }
+        },
+        {
+          "width": 834,
+          "pixels": {
+            "quantizedColors": 210,
+            "changedFraction": 0.9987913259864913
+          },
+          "stats": {
+            "material": {
+              "frames": 0,
+              "renderer": "static",
+              "activation": "not-requested",
+              "settings": {
+                "surface": {
+                  "baseColor": [
+                    0.2,
+                    0.34,
+                    0.22
+                  ],
+                  "roughness": 0.32,
+                  "metalness": 0
+                },
+                "accentSurface": {
+                  "baseColor": [
+                    0.62,
+                    0.43,
+                    0.22
+                  ],
+                  "roughness": 0.55,
+                  "metalness": 1
+                },
+                "normalScale": 1,
+                "normalStrength": 0.11
+              }
+            }
+          }
+        }
+      ],
+      "clippingFixture": {
+        "authoredHeight": 190,
+        "naturalHeight": 196.78125,
+        "scrollHeight": 197,
+        "paragraphBottom": 196.78125
+      },
+      "layoutComparisons": [
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "390",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 29.983407079646014,
+                "width": 325.9886615044247,
+                "height": 39.98686393805309
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 103.94427544247787,
+                "width": 325.9886615044247,
+                "height": 196.99529867256635
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 328.92768252212386,
+                "width": 325.9886615044247,
+                "height": 254.99377765486724
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 609.9142699115043,
+                "width": 159.9744192477876,
+                "height": 43.97746128318584
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 697.869192477876,
+                "width": 325.9886615044247,
+                "height": 27.988108407079643
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 29.983407079646014,
+                "width": 325.9886615044247,
+                "height": 39.98686393805309
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 103.94427544247787,
+                "width": 325.9886615044247,
+                "height": 196.99529867256635
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 328.92768252212386,
+                "width": 325.9886615044247,
+                "height": 254.99377765486724
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 609.9142699115043,
+                "width": 159.9744192477876,
+                "height": 43.97746128318584
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.978705752212388,
+                "y": 697.869192477876,
+                "width": 325.9886615044247,
+                "height": 27.988108407079643
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 114,
+            "clientHeight": 114,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -106.046875,
+                "right": -127.5625,
+                "textBottom": -106.970703125,
+                "textRight": -127.57594299316406
+              },
+              {
+                "tag": "H3",
+                "bottom": -26.8125,
+                "right": -87.421875,
+                "textBottom": -21.2197265625,
+                "textRight": -87.42645263671875
+              },
+              {
+                "tag": "P",
+                "bottom": -0.1875,
+                "right": -44.046875,
+                "textBottom": -1.2265625,
+                "textRight": -51.67906188964844
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "834",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 29.98340707964602,
+                "width": 769.9969579646018,
+                "height": 39.95865597345133
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 103.90403761061948,
+                "width": 370.9870022123894,
+                "height": 229.94966814159292
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 361.8189988938053,
+                "width": 159.9499446902655,
+                "height": 43.994883849557525
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 430.89615597345136,
+                "y": 103.90403761061948,
+                "width": 370.9870022123894,
+                "height": 289.9741426991151
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 447.7906526548673,
+                "width": 769.9969579646018,
+                "height": 27.965293141592923
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 29.98340707964602,
+                "width": 769.9969579646018,
+                "height": 39.95865597345133
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 103.90403761061948,
+                "width": 370.9870022123894,
+                "height": 229.94966814159292
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 361.8189988938053,
+                "width": 159.9499446902655,
+                "height": 43.994883849557525
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 430.89615597345136,
+                "y": 103.90403761061948,
+                "width": 370.9870022123894,
+                "height": 289.9741426991151
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.943860619469028,
+                "y": 447.7906526548673,
+                "width": 769.9969579646018,
+                "height": 27.965293141592923
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 62,
+            "clientHeight": 62,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -58.53125,
+                "right": -71.84375,
+                "textBottom": -58.9521484375,
+                "textRight": -71.85160064697266
+              },
+              {
+                "tag": "H3",
+                "bottom": -13.046875,
+                "right": -41.203125,
+                "textBottom": -9.775390625,
+                "textRight": -41.21302795410156
+              },
+              {
+                "tag": "P",
+                "bottom": -0.59375,
+                "right": -32.796875,
+                "textBottom": -1.080078125,
+                "textRight": -36.360252380371094
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "960",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 30,
+                "width": 895.9513274336283,
+                "height": 39.955752212389385
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 103.93805309734513,
+                "width": 433.9380530973451,
+                "height": 229.97787610619469
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 361.85840707964604,
+                "width": 159.95575221238937,
+                "height": 43.93805309734513
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 493.87168141592923,
+                "y": 103.93805309734513,
+                "width": 433.9380530973451,
+                "height": 289.9778761061947
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 447.7433628318584,
+                "width": 895.9513274336283,
+                "height": 27.942477876106196
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 30,
+                "width": 895.9513274336283,
+                "height": 39.955752212389385
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 103.93805309734513,
+                "width": 433.9380530973451,
+                "height": 229.97787610619469
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 361.85840707964604,
+                "width": 159.95575221238937,
+                "height": 43.93805309734513
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 493.87168141592923,
+                "y": 103.93805309734513,
+                "width": 433.9380530973451,
+                "height": 289.9778761061947
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.991150442477878,
+                "y": 447.7433628318584,
+                "width": 895.9513274336283,
+                "height": 27.942477876106196
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 54,
+            "clientHeight": 54,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -50.859375,
+                "right": -77.234375,
+                "textBottom": -51.2216796875,
+                "textRight": -77.24080657958984
+              },
+              {
+                "tag": "H3",
+                "bottom": -11.34375,
+                "right": -50.609375,
+                "textBottom": -8.5029296875,
+                "textRight": -50.62354278564453
+              },
+              {
+                "tag": "P",
+                "bottom": -0.5625,
+                "right": -43.3125,
+                "textBottom": -0.9765625,
+                "textRight": -46.40769958496094
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "390",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 29.983407079646014,
+                "width": 261.9773230088495,
+                "height": 39.98686393805309
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 103.94427544247787,
+                "width": 261.9773230088495,
+                "height": 196.99529867256635
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 348.934596238938,
+                "width": 261.9773230088495,
+                "height": 254.99377765486724
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 629.9211836283185,
+                "width": 159.9744192477876,
+                "height": 43.97746128318584
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 707.8726493362831,
+                "width": 261.9773230088495,
+                "height": 27.988108407079643
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 29.983407079646014,
+                "width": 261.9773230088495,
+                "height": 39.98686393805309
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 103.94427544247787,
+                "width": 261.9773230088495,
+                "height": 196.99529867256635
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 348.934596238938,
+                "width": 261.9773230088495,
+                "height": 254.99377765486724
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 629.9211836283185,
+                "width": 159.9744192477876,
+                "height": 43.97746128318584
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.98437499999999,
+                "y": 707.8726493362831,
+                "width": 261.9773230088495,
+                "height": 27.988108407079643
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 114,
+            "clientHeight": 114,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -106.046875,
+                "right": -90.46875,
+                "textBottom": -106.970703125,
+                "textRight": -90.48219299316406
+              },
+              {
+                "tag": "H3",
+                "bottom": -26.8125,
+                "right": -50.328125,
+                "textBottom": -21.2197265625,
+                "textRight": -50.33270263671875
+              },
+              {
+                "tag": "P",
+                "bottom": -0.1875,
+                "right": -6.953125,
+                "textBottom": -1.2265625,
+                "textRight": -14.585311889648438
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "834",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 29.98340707964602,
+                "width": 705.9939159292036,
+                "height": 39.95865597345133
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 103.90403761061948,
+                "width": 328.9525719026549,
+                "height": 229.94966814159292
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 381.82715707964604,
+                "width": 159.9499446902655,
+                "height": 43.994883849557525
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 440.8714048672567,
+                "y": 103.90403761061948,
+                "width": 328.9525719026549,
+                "height": 289.9741426991151
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 459.7840154867257,
+                "width": 705.9939159292036,
+                "height": 27.965293141592923
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 29.98340707964602,
+                "width": 705.9939159292036,
+                "height": 39.95865597345133
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 103.90403761061948,
+                "width": 328.9525719026549,
+                "height": 229.94966814159292
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 381.82715707964604,
+                "width": 159.9499446902655,
+                "height": 43.994883849557525
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 440.8714048672567,
+                "y": 103.90403761061948,
+                "width": 328.9525719026549,
+                "height": 289.9741426991151
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.94538163716815,
+                "y": 459.7840154867257,
+                "width": 705.9939159292036,
+                "height": 27.965293141592923
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 62,
+            "clientHeight": 62,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -58.53125,
+                "right": -60.453125,
+                "textBottom": -58.9521484375,
+                "textRight": -60.460975646972656
+              },
+              {
+                "tag": "H3",
+                "bottom": -13.046875,
+                "right": -29.8125,
+                "textBottom": -9.775390625,
+                "textRight": -29.822402954101562
+              },
+              {
+                "tag": "P",
+                "bottom": -0.59375,
+                "right": -21.40625,
+                "textBottom": -1.080078125,
+                "textRight": -24.969635009765625
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 320,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "960",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 30,
+                "width": 831.9690265486726,
+                "height": 39.955752212389385
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 103.93805309734513,
+                "width": 391.9911504424779,
+                "height": 229.97787610619469
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 381.9026548672566,
+                "width": 159.95575221238937,
+                "height": 43.93805309734513
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 503.96017699115043,
+                "y": 103.93805309734513,
+                "width": 391.9911504424779,
+                "height": 289.9778761061947
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 459.82300884955754,
+                "width": 831.9690265486726,
+                "height": 27.942477876106196
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 30,
+                "width": 831.9690265486726,
+                "height": 39.955752212389385
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 103.93805309734513,
+                "width": 391.9911504424779,
+                "height": 229.97787610619469
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 381.9026548672566,
+                "width": 159.95575221238937,
+                "height": 43.93805309734513
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 503.96017699115043,
+                "y": 103.93805309734513,
+                "width": 391.9911504424779,
+                "height": 289.9778761061947
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.982300884955755,
+                "y": 459.82300884955754,
+                "width": 831.9690265486726,
+                "height": 27.942477876106196
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 54,
+            "clientHeight": 54,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -50.859375,
+                "right": -67.359375,
+                "textBottom": -51.2216796875,
+                "textRight": -67.36580657958984
+              },
+              {
+                "tag": "H3",
+                "bottom": -11.34375,
+                "right": -40.734375,
+                "textBottom": -8.5029296875,
+                "textRight": -40.74854278564453
+              },
+              {
+                "tag": "P",
+                "bottom": -0.5625,
+                "right": -33.4375,
+                "textBottom": -0.9765625,
+                "textRight": -36.53269958496094
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "390",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 32,
+                "y": 30,
+                "width": 326,
+                "height": 40
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 32,
+                "y": 104,
+                "width": 326,
+                "height": 197
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 32,
+                "y": 329,
+                "width": 326,
+                "height": 255
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 32,
+                "y": 610,
+                "width": 160,
+                "height": 44
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 32,
+                "y": 698,
+                "width": 326,
+                "height": 28
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 32,
+                "y": 30,
+                "width": 326,
+                "height": 40
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 32,
+                "y": 104,
+                "width": 326,
+                "height": 197
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 32,
+                "y": 329,
+                "width": 326,
+                "height": 255
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 32,
+                "y": 610,
+                "width": 160,
+                "height": 44
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 32,
+                "y": 698,
+                "width": 326,
+                "height": 28
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 197,
+            "clientHeight": 197,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -183,
+                "right": -220.15625,
+                "textBottom": -184.60009765625,
+                "textRight": -220.16448974609375
+              },
+              {
+                "tag": "H3",
+                "bottom": -46.21875,
+                "right": -150.875,
+                "textBottom": -36.57568359375,
+                "textRight": -150.87997436523438
+              },
+              {
+                "tag": "P",
+                "bottom": -0.21875,
+                "right": -76,
+                "textBottom": -2.0185546875,
+                "textRight": -89.1920166015625
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "834",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 29.998957951409658,
+                "width": 769.9947125682638,
+                "height": 39.99324598135891
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 103.98243955153316,
+                "width": 370.9956967252658,
+                "height": 229.99737558132801
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 361.96704038903147,
+                "width": 159.98907778699754,
+                "height": 43.98452364871384
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 430.9775187665232,
+                "y": 103.98243955153316,
+                "width": 370.9956967252658,
+                "height": 289.99529148414734
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 447.9404488527817,
+                "width": 769.9947125682638,
+                "height": 27.987225256170277
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 29.998957951409658,
+                "width": 769.9947125682638,
+                "height": 39.99324598135891
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 103.98243955153316,
+                "width": 370.9956967252658,
+                "height": 229.99737558132801
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 361.96704038903147,
+                "width": 159.98907778699754,
+                "height": 43.98452364871384
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 430.9775187665232,
+                "y": 103.98243955153316,
+                "width": 370.9956967252658,
+                "height": 289.99529148414734
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.994596785087126,
+                "y": 447.9404488527817,
+                "width": 769.9947125682638,
+                "height": 27.987225256170277
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 223,
+            "clientHeight": 223,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -209.71875,
+                "right": -257.421875,
+                "textBottom": -211.25830078125,
+                "textRight": -257.435302734375
+              },
+              {
+                "tag": "H3",
+                "bottom": -46.671875,
+                "right": -147.65625,
+                "textBottom": -34.96484375,
+                "textRight": -147.66470336914062
+              },
+              {
+                "tag": "P",
+                "bottom": -2.0625,
+                "right": -117.484375,
+                "textBottom": -3.798828125,
+                "textRight": -130.2784423828125
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 32,
+            "gap": 28
+          },
+          "viewport": "960",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 29.992474093514215,
+                "width": 895.995059917794,
+                "height": 39.996140560776524
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 103.98255533470987,
+                "width": 433.9923969047298,
+                "height": 229.99170220566953
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 361.96599834044116,
+                "width": 159.9845622431061,
+                "height": 43.99760714768144
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 493.9773450917582,
+                "y": 103.98255533470987,
+                "width": 433.9923969047298,
+                "height": 289.99517570097066
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 447.96047934235156,
+                "width": 895.995059917794,
+                "height": 27.991740800061752
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 29.992474093514215,
+                "width": 895.995059917794,
+                "height": 39.996140560776524
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 103.98255533470987,
+                "width": 433.9923969047298,
+                "height": 229.99170220566953
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 361.96599834044116,
+                "width": 159.9845622431061,
+                "height": 43.99760714768144
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 493.9773450917582,
+                "y": 103.98255533470987,
+                "width": 433.9923969047298,
+                "height": 289.99517570097066
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 31.993207386966677,
+                "y": 447.96047934235156,
+                "width": 895.995059917794,
+                "height": 27.991740800061752
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 194,
+            "clientHeight": 194,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -182.1875,
+                "right": -276.765625,
+                "textBottom": -183.52587890625,
+                "textRight": -276.78089904785156
+              },
+              {
+                "tag": "H3",
+                "bottom": -40.546875,
+                "right": -181.40625,
+                "textBottom": -30.3759765625,
+                "textRight": -181.417724609375
+              },
+              {
+                "tag": "P",
+                "bottom": -1.8125,
+                "right": -155.1875,
+                "textBottom": -3.31787109375,
+                "textRight": -166.3133544921875
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "390",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 64,
+                "y": 30,
+                "width": 262,
+                "height": 40
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 64,
+                "y": 104,
+                "width": 262,
+                "height": 197
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 64,
+                "y": 349,
+                "width": 262,
+                "height": 255
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 64,
+                "y": 630,
+                "width": 160,
+                "height": 44
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 64,
+                "y": 708,
+                "width": 262,
+                "height": 28
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 64,
+                "y": 30,
+                "width": 262,
+                "height": 40
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 64,
+                "y": 104,
+                "width": 262,
+                "height": 197
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 64,
+                "y": 349,
+                "width": 262,
+                "height": 255
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 64,
+                "y": 630,
+                "width": 160,
+                "height": 44
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 64,
+                "y": 708,
+                "width": 262,
+                "height": 28
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 197,
+            "clientHeight": 197,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -183,
+                "right": -156.15625,
+                "textBottom": -184.60009765625,
+                "textRight": -156.16448974609375
+              },
+              {
+                "tag": "H3",
+                "bottom": -46.21875,
+                "right": -86.875,
+                "textBottom": -36.57568359375,
+                "textRight": -86.8800048828125
+              },
+              {
+                "tag": "P",
+                "bottom": -0.21875,
+                "right": -12,
+                "textBottom": -2.0185546875,
+                "textRight": -25.1920166015625
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "834",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 29.998957951409658,
+                "width": 705.9894251365276,
+                "height": 39.99324598135891
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 103.98243955153316,
+                "width": 328.99071804866753,
+                "height": 229.99737558132801
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 381.97171031049186,
+                "width": 159.98907778699754,
+                "height": 43.98452364871384
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 440.97180679647244,
+                "y": 103.98243955153316,
+                "width": 328.99071804866753,
+                "height": 289.99529148414734
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 459.9464695779703,
+                "width": 705.9894251365276,
+                "height": 27.987225256170277
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 29.998957951409658,
+                "width": 705.9894251365276,
+                "height": 39.99324598135891
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 103.98243955153316,
+                "width": 328.99071804866753,
+                "height": 229.99737558132801
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 381.97171031049186,
+                "width": 159.98907778699754,
+                "height": 43.98452364871384
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 440.97180679647244,
+                "y": 103.98243955153316,
+                "width": 328.99071804866753,
+                "height": 289.99529148414734
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.98919357017425,
+                "y": 459.9464695779703,
+                "width": 705.9894251365276,
+                "height": 27.987225256170277
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 223,
+            "clientHeight": 223,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -209.71875,
+                "right": -216.640625,
+                "textBottom": -211.25830078125,
+                "textRight": -216.654052734375
+              },
+              {
+                "tag": "H3",
+                "bottom": -46.671875,
+                "right": -106.875,
+                "textBottom": -34.96484375,
+                "textRight": -106.88345336914062
+              },
+              {
+                "tag": "P",
+                "bottom": -2.0625,
+                "right": -76.703125,
+                "textBottom": -3.798828125,
+                "textRight": -89.4971923828125
+              }
+            ]
+          }
+        },
+        {
+          "hostWidth": 1440,
+          "spacing": {
+            "gutter": 64,
+            "gap": 48
+          },
+          "viewport": "960",
+          "expected": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 29.992474093514215,
+                "width": 831.990119835588,
+                "height": 39.996140560776524
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 103.98255533470987,
+                "width": 391.99552305050076,
+                "height": 229.99170220566953
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 381.97333127496574,
+                "width": 159.9845622431061,
+                "height": 43.99760714768144
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 503.9810115590205,
+                "y": 103.98255533470987,
+                "width": 391.99552305050076,
+                "height": 289.99517570097066
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 459.9648791030664,
+                "width": 831.990119835588,
+                "height": 27.991740800061752
+              }
+            }
+          ],
+          "actual": [
+            {
+              "id": "nav",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 29.992474093514215,
+                "width": 831.990119835588,
+                "height": 39.996140560776524
+              }
+            },
+            {
+              "id": "title",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 103.98255533470987,
+                "width": 391.99552305050076,
+                "height": 229.99170220566953
+              }
+            },
+            {
+              "id": "action",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 381.97333127496574,
+                "width": 159.9845622431061,
+                "height": 43.99760714768144
+              }
+            },
+            {
+              "id": "image",
+              "box": {
+                "x": 503.9810115590205,
+                "y": 103.98255533470987,
+                "width": 391.99552305050076,
+                "height": 289.99517570097066
+              }
+            },
+            {
+              "id": "footer",
+              "box": {
+                "x": 63.986414773933355,
+                "y": 459.9648791030664,
+                "width": 831.990119835588,
+                "height": 27.991740800061752
+              }
+            }
+          ],
+          "errors": [
+            {
+              "id": "nav",
+              "maxError": 0
+            },
+            {
+              "id": "title",
+              "maxError": 0
+            },
+            {
+              "id": "action",
+              "maxError": 0
+            },
+            {
+              "id": "image",
+              "maxError": 0
+            },
+            {
+              "id": "footer",
+              "maxError": 0
+            }
+          ],
+          "contentFit": {
+            "scrollHeight": 194,
+            "clientHeight": 194,
+            "overflow": "visible",
+            "children": [
+              {
+                "tag": "SPAN",
+                "bottom": -182.1875,
+                "right": -241.34375,
+                "textBottom": -183.52587890625,
+                "textRight": -241.35902404785156
+              },
+              {
+                "tag": "H3",
+                "bottom": -40.546875,
+                "right": -145.984375,
+                "textBottom": -30.3759765625,
+                "textRight": -145.995849609375
+              },
+              {
+                "tag": "P",
+                "bottom": -1.8125,
+                "right": -119.765625,
+                "textBottom": -3.31787109375,
+                "textRight": -130.8914794921875
+              }
+            ]
+          }
+        }
+      ],
+      "inspectorOrigin": {
+        "hostTop": 535.84375,
+        "svgTop": 535.84375,
+        "scrollTop": 0
+      },
+      "reducedPositions": [
+        "0",
+        "0"
+      ],
+      "movingPositions": [
+        0.9985912142259359,
+        1.0002054295900147,
+        1.0015799742862506,
+        0.9829024247376346,
+        0.9261666485749758
+      ],
+      "pressed": "matrix(0.9729, 0, 0, 0.9729, 0, 0)",
+      "stats": {
+        "ticks": 85,
+        "frameCallbacks": 85,
+        "maxCallbackMilliseconds": 2,
+        "reduced": false,
+        "scroll": 2431.176921019764,
+        "surfaces": {
+          "material": {
+            "frames": 0,
+            "renderer": "static",
+            "activation": "not-requested",
+            "settings": {
+              "surface": {
+                "baseColor": [
+                  0.2,
+                  0.34,
+                  0.22
+                ],
+                "roughness": 0.32,
+                "metalness": 0
+              },
+              "accentSurface": {
+                "baseColor": [
+                  0.62,
+                  0.43,
+                  0.22
+                ],
+                "roughness": 0.55,
+                "metalness": 1
+              },
+              "normalScale": 1,
+              "normalStrength": 0.11
+            }
+          }
+        },
+        "domSurfaces": {
+          "hero": {
+            "adapter": {
+              "frames": 6,
+              "styleWrites": 42,
+              "geometryReads": 2,
+              "active": false,
+              "reduced": false,
+              "offscreen": true
+            },
+            "renderer": {
+              "draws": 4,
+              "textureBuilds": 1,
+              "textureUploads": 1,
+              "programBuilds": 1,
+              "pixels": 242990,
+              "initializationMs": 22,
+              "initializationTaskMaxMs": 5,
+              "initializationTasks": 3,
+              "parallelCompile": true,
+              "textureBuildMs": 5,
+              "status": "ready",
+              "reason": ""
+            },
+            "disposed": false
+          },
+          "study": {
+            "adapter": {
+              "frames": 1,
+              "styleWrites": 0,
+              "geometryReads": 2,
+              "active": false,
+              "reduced": false,
+              "offscreen": true
+            },
+            "renderer": {
+              "draws": 0,
+              "textureBuilds": 0,
+              "textureUploads": 0,
+              "programBuilds": 0,
+              "pixels": 349044,
+              "initializationMs": 0,
+              "initializationTaskMaxMs": 0,
+              "initializationTasks": 0,
+              "parallelCompile": false,
+              "textureBuildMs": 0,
+              "status": "initializing",
+              "reason": ""
+            },
+            "disposed": false
+          }
+        }
+      },
+      "errors": []
+    }
+  ],
+  "failures": [],
+  "opaquePanelContrast": [
+    {
+      "profile": "editorial",
+      "ratios": {
+        "ink/paper": 15.237237552009947,
+        "muted/paper": 6.356811120916259,
+        "accent/paper": 6.24655325615429,
+        "ink/soft": 13.29747340451162,
+        "muted/soft": 5.547562445578421
+      }
+    },
+    {
+      "profile": "studio",
+      "ratios": {
+        "ink/paper": 10.468405986606513,
+        "muted/paper": 6.6657384874657435,
+        "accent/paper": 7.953787097274748,
+        "ink/soft": 8.354034276977574,
+        "muted/soft": 5.319416143862113
+      }
+    },
+    {
+      "profile": "utility",
+      "ratios": {
+        "ink/paper": 10.298931083210885,
+        "muted/paper": 5.632198614860178,
+        "accent/paper": 5.940082123317511,
+        "ink/soft": 8.840183664097532,
+        "muted/soft": 4.834450273116774
+      }
+    }
+  ]
+}

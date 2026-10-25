@@ -1,0 +1,2756 @@
+[
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 320,
+        "height": 740,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 14,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "5e6fe5873b1e59901991c2f335c0482df76830865338aaa26cac5080125f1645",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 240,
+            "height": 19.59375
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 228.90625,
+              "height": 16,
+              "start": 0,
+              "end": 37,
+              "text": "checkout-api · production · us-east-1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 228.90625,
+            "height": 16
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 14,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "cf866f52358123983a31e2e8007a02908f7221505287e9ae487df057028f6614",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 240,
+            "height": 19.59375
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 228.90625,
+              "height": 16,
+              "start": 0,
+              "end": 37,
+              "text": "checkout-api · production · us-east-1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 228.90625,
+            "height": 16
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "textScale": 1.5
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 14,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "085a73d24dace25784c9426a38f092b8e0ae334fdb5d3832ba4679b3d046d88d",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 43.1875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 134.203125,
+              "height": 42,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 134.203125,
+            "height": 42
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 71.1875,
+            "width": 240,
+            "height": 58.78125
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 73.1875,
+              "width": 243.640625,
+              "height": 24,
+              "start": 0,
+              "end": 26,
+              "text": "checkout-api · production "
+            },
+            {
+              "x": 12,
+              "y": 102.578125,
+              "width": 99.734375,
+              "height": 24,
+              "start": 26,
+              "end": 37,
+              "text": "· us-east-1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 73.1875,
+            "width": 238.5,
+            "height": 53.390625
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 768,
+        "height": 900,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 14,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "477e8c837bcd107cdf89fedc46aa45ce7cc692aeba7dc709004fd26002e411c5",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 240,
+            "height": 19.59375
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 228.90625,
+              "height": 16,
+              "start": 0,
+              "end": 37,
+              "text": "checkout-api · production · us-east-1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 228.90625,
+            "height": 16
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 834,
+        "height": 1194,
+        "textScale": 1.5
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 14,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "6142285fe48ca81c6dea16b5b4d00b0335bdb4e9224620ce436a06a53e624386",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 43.1875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 134.203125,
+              "height": 42,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 134.203125,
+            "height": 42
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 71.1875,
+            "width": 240,
+            "height": 58.78125
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 73.1875,
+              "width": 243.640625,
+              "height": 24,
+              "start": 0,
+              "end": 26,
+              "text": "checkout-api · production "
+            },
+            {
+              "x": 12,
+              "y": 102.578125,
+              "width": 99.734375,
+              "height": 24,
+              "start": 26,
+              "end": 37,
+              "text": "· us-east-1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 73.1875,
+            "width": 238.5,
+            "height": 53.390625
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 14,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "c97fb891ba2938ab5b75c284e0155d5331d7f9de383f0c1d19e1be9c2c5e989a",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 240,
+            "height": 19.59375
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 228.90625,
+              "height": 16,
+              "start": 0,
+              "end": 37,
+              "text": "checkout-api · production · us-east-1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 228.90625,
+            "height": 16
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 320,
+        "height": 740,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 15,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "807269764eb51172095fc3c10b85e478c8d2174487af5c23062cc5a2229e1910",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 240,
+            "height": 42
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 236.78125,
+              "height": 18,
+              "start": 0,
+              "end": 36,
+              "text": "checkout-api · production · us-east-"
+            },
+            {
+              "x": 12,
+              "y": 78.796875,
+              "width": 8.46875,
+              "height": 18,
+              "start": 36,
+              "end": 37,
+              "text": "1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 236.78125,
+            "height": 39
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 15,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "e612803037ee8f86ed5dab610d46fba953e8908b51536f78394eee491518ddaf",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 240,
+            "height": 42
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 236.78125,
+              "height": 18,
+              "start": 0,
+              "end": 36,
+              "text": "checkout-api · production · us-east-"
+            },
+            {
+              "x": 12,
+              "y": 78.796875,
+              "width": 8.46875,
+              "height": 18,
+              "start": 36,
+              "end": 37,
+              "text": "1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 236.78125,
+            "height": 39
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "textScale": 1.5
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 15,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "8eccaf6f6436dbf8a8cf655c9a2863dda021678393a1a20dbe9c31befda62f85",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 43.1875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 134.203125,
+              "height": 42,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 134.203125,
+            "height": 42
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 71.1875,
+            "width": 240,
+            "height": 63
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 73.1875,
+              "width": 147.453125,
+              "height": 26,
+              "start": 0,
+              "end": 15,
+              "text": "checkout-api · "
+            },
+            {
+              "x": 12,
+              "y": 104.6875,
+              "width": 220.4375,
+              "height": 26,
+              "start": 15,
+              "end": 37,
+              "text": "production · us-east-1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 73.1875,
+            "width": 220.4375,
+            "height": 57.5
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 768,
+        "height": 900,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 15,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "921f9db9b321aa6618d0f1f6fd297c657638f550e5c10455a2d7def4f953d3ba",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 240,
+            "height": 42
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 236.78125,
+              "height": 18,
+              "start": 0,
+              "end": 36,
+              "text": "checkout-api · production · us-east-"
+            },
+            {
+              "x": 12,
+              "y": 78.796875,
+              "width": 8.46875,
+              "height": 18,
+              "start": 36,
+              "end": 37,
+              "text": "1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 236.78125,
+            "height": 39
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 834,
+        "height": 1194,
+        "textScale": 1.5
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 15,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "291ce20f041537418c7a4cd6ea47a4ad17c67e18708ca7f1af27420761fe3a30",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 43.1875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 134.203125,
+              "height": 42,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 134.203125,
+            "height": 42
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 71.1875,
+            "width": 240,
+            "height": 63
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 73.1875,
+              "width": 147.453125,
+              "height": 26,
+              "start": 0,
+              "end": 15,
+              "text": "checkout-api · "
+            },
+            {
+              "x": 12,
+              "y": 104.6875,
+              "width": 220.4375,
+              "height": 26,
+              "start": 15,
+              "end": 37,
+              "text": "production · us-east-1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 73.1875,
+            "width": 220.4375,
+            "height": 57.5
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 15,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 240,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "3d7fb1fb50ea225fc5174724e222ecf05181d3e1ef26dbded1f720819f2a1a6c",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 240,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 240,
+            "height": 42
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 236.78125,
+              "height": 18,
+              "start": 0,
+              "end": 36,
+              "text": "checkout-api · production · us-east-"
+            },
+            {
+              "x": 12,
+              "y": 78.796875,
+              "width": 8.46875,
+              "height": 18,
+              "start": 36,
+              "end": 37,
+              "text": "1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 236.78125,
+            "height": 39
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 320,
+        "height": 740,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 16,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "644233f87a9ff1571fe3b03fcba9bcee42a224126dce81debc2cbd09b8971416",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 260,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 260,
+            "height": 44.78125
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 252.5625,
+              "height": 19,
+              "start": 0,
+              "end": 36,
+              "text": "checkout-api · production · us-east-"
+            },
+            {
+              "x": 12,
+              "y": 80.1875,
+              "width": 9.03125,
+              "height": 19,
+              "start": 36,
+              "end": 37,
+              "text": "1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 252.5625,
+            "height": 41.390625
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 16,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "7d971e8ab1c19777ada3323e14504f532003581a50bff94afc040a3e1f1bfdf8",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 260,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 260,
+            "height": 44.78125
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 252.5625,
+              "height": 19,
+              "start": 0,
+              "end": 36,
+              "text": "checkout-api · production · us-east-"
+            },
+            {
+              "x": 12,
+              "y": 80.1875,
+              "width": 9.03125,
+              "height": 19,
+              "start": 36,
+              "end": 37,
+              "text": "1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 252.5625,
+            "height": 41.390625
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "textScale": 1.5
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 16,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "dbd84c7e008019270bddd12af1a462e1b6e76f5b011335dca42652c8c46c6bb3",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 260,
+            "height": 43.1875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 134.203125,
+              "height": 42,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 134.203125,
+            "height": 42
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 71.1875,
+            "width": 260,
+            "height": 67.1875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 73.1875,
+              "width": 157.265625,
+              "height": 28,
+              "start": 0,
+              "end": 15,
+              "text": "checkout-api · "
+            },
+            {
+              "x": 12,
+              "y": 106.78125,
+              "width": 235.125,
+              "height": 28,
+              "start": 15,
+              "end": 37,
+              "text": "production · us-east-1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 73.1875,
+            "width": 235.125,
+            "height": 61.59375
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 768,
+        "height": 900,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 16,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "96b919c64256f6b9ebdaef8db3e5080467b8bcb8788d1ef9799cefb819b427be",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 260,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 260,
+            "height": 44.78125
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 252.5625,
+              "height": 19,
+              "start": 0,
+              "end": 36,
+              "text": "checkout-api · production · us-east-"
+            },
+            {
+              "x": 12,
+              "y": 80.1875,
+              "width": 9.03125,
+              "height": 19,
+              "start": 36,
+              "end": 37,
+              "text": "1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 252.5625,
+            "height": 41.390625
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 834,
+        "height": 1194,
+        "textScale": 1.5
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 16,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "40967a07d5a1b8ae602e7f145666504a0bfa4329db8b28f447bcd707b8931d62",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 260,
+            "height": 43.1875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 134.203125,
+              "height": 42,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 134.203125,
+            "height": 42
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 71.1875,
+            "width": 260,
+            "height": 67.1875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 73.1875,
+              "width": 157.265625,
+              "height": 28,
+              "start": 0,
+              "end": 15,
+              "text": "checkout-api · "
+            },
+            {
+              "x": 12,
+              "y": 106.78125,
+              "width": 235.125,
+              "height": 28,
+              "start": 15,
+              "end": 37,
+              "text": "production · us-east-1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 73.1875,
+            "width": 235.125,
+            "height": 61.59375
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  },
+  {
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 12,
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "role": "title",
+          "text": "Services",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.2,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "relay-service-label",
+          "role": "prose",
+          "text": "checkout-api · production · us-east-1",
+          "font": {
+            "file": "assets/fonts/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf",
+            "family": "Roboto Flex",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 16,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.4,
+          "measure": 260,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        16
+      ],
+      "locks": [],
+      "responsive": null,
+      "colors": null
+    },
+    "measurement": {
+      "inputHash": "86bafeb9733789a2be1b2d9a54af76fbaf894b44edb4663100f6dd64c8c18516",
+      "platform": "web",
+      "engine": "chromium/react/stylex",
+      "runtime": {
+        "chromium": "156.0.8078.4",
+        "deviceScaleFactor": 1
+      },
+      "blocks": [
+        {
+          "id": "relay-heading",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 260,
+            "height": 28.796875
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 12,
+              "width": 89.46875,
+              "height": 28,
+              "start": 0,
+              "end": 8,
+              "text": "Services"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 12,
+            "width": 89.46875,
+            "height": 28
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        },
+        {
+          "id": "relay-service-label",
+          "box": {
+            "x": 12,
+            "y": 56.796875,
+            "width": 260,
+            "height": 44.78125
+          },
+          "lines": [
+            {
+              "x": 12,
+              "y": 57.796875,
+              "width": 252.5625,
+              "height": 19,
+              "start": 0,
+              "end": 36,
+              "text": "checkout-api · production · us-east-"
+            },
+            {
+              "x": 12,
+              "y": 80.1875,
+              "width": 9.03125,
+              "height": 19,
+              "start": 36,
+              "end": 37,
+              "text": "1"
+            }
+          ],
+          "inlineBounds": {
+            "x": 12,
+            "y": 57.796875,
+            "width": 252.5625,
+            "height": 41.390625
+          },
+          "inkBounds": null,
+          "overflowX": 0,
+          "overflowY": 0
+        }
+      ],
+      "issues": [],
+      "feasible": true,
+      "textSpacing": {
+        "tested": false,
+        "issues": []
+      },
+      "scope": [
+        "Only this specimen and viewport were verified.",
+        "Inline bounds are DOM range bounds, not glyph ink bounds.",
+        "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+        "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+      ]
+    }
+  }
+]

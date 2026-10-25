@@ -1,0 +1,6820 @@
+{
+  "sources": [
+    {
+      "path": "src/browser-dom-light.ts",
+      "sha256": "2e69e318efbe6d80fa6859d2f6272e8ba91e6affa86195a60e7702e8e32b3807"
+    },
+    {
+      "path": "src/dom-surface-gpu.ts",
+      "sha256": "2c363138bae85c0fd4053f35b2de8fcb1e0591f07fcfcbeb943011a9e85d3001"
+    },
+    {
+      "path": "src/dom-surface-shading.ts",
+      "sha256": "ea00caf8a0fa04514b7311e6c95060bf114f3a539b9db64daba08c643ba634de"
+    },
+    {
+      "path": "examples/design-theory/useDomMaterial.js",
+      "sha256": "b2aa65b97d5b43bcea15522f84a4c3c97e6b303fcf2224ec1d01244f5e6fe949"
+    },
+    {
+      "path": "examples/design-theory/HeroMaterial.jsx",
+      "sha256": "58af82c81f707949cd52c2dd719efed235fd84a432969b5160a1f0acdd895016"
+    },
+    {
+      "path": "examples/design-theory/DomMaterialStudy.jsx",
+      "sha256": "f5ebf7dfbc7ebf602b126442beda8dbdb63f1133a8fef0c2db207783f840440e"
+    },
+    {
+      "path": "examples/design-theory/web.jsx",
+      "sha256": "45ddb065fccd77a888fc0a319159f9dd5b89848e9588edff32e959d1cad993bc"
+    },
+    {
+      "path": "examples/dom-surfaces/gpu-recipes.json",
+      "sha256": "a7fe870f306c02a38c532786181783e38863b5acea565e0c64d4c32c290afdae"
+    },
+    {
+      "path": "artifacts/vela/web/design-theory/app.js",
+      "sha256": "445707339bb8b2a2f40fc3a0a8c88c6ec30a4bff2e9079ddbb5241b4e9f6772d"
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "label": "chromium/390/editorial: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 11.919757290331106,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.399038888279804,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.502740510448072,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.31594528871216,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.780811945112491,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.480724671935185,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/studio: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.283467313521953,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.160135030371047,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.290890365367227,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.160135030371047,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.76633999119309,
+          "samples": 520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.55764933494951,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/utility: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.07416016494205,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.910620441092851,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.035790557590169,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.910620441092851,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.481873206372217,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.276289246479172,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Paper/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.298482332431519,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.913471042474931,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.560425703715447,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.195816514291257,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.893325101925319,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Paper/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.413316191711882,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 9.993184753511374,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 9.262815644091402,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.574050814808377,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.758289922673274,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Paper/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 12.245905058446233,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 9.069073447707185,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 8.574050814808377,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.86503046085752,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.472387233632006,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Enamel/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 9.741348657313681,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.721707074110893,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.539116817011551,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.630040129352761,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.186763209272757,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Enamel/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 10.148523611934172,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 8.882482316855514,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.417809029182882,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.064519894503768,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.691265830410575,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Enamel/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 11.401349283536565,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 8.352349283995956,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.064519894503768,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.064519894503768,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.539116817011551,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Brushed metal/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 8.149014010248518,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.5927890448246,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Brushed metal/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 8.839926603247687,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.8641556619921085,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.770690293185159,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Brushed metal/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 9.461720754956852,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.677965832327008,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.8641556619921085,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Soft glass/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 11.642335576211199,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.88987807019655,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.504191011940389,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.848334760043866,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.886703479515901,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Soft glass/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 12.08058831818196,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 11.26005252634925,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.722409606179214,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.250658074208205,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 8.620255071733652,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390/Soft glass/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 12.497614293750386,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 10.750595548624988,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.314528475578246,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.416312170473612,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 8.416426864010843,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/390: light retarget changes actual pixels",
+      "detail": {
+        "changedFraction": 0.3950364674433187
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/390: roughness drag keeps rail stable",
+      "detail": {
+        "maxRail": 0
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/390: scalar drag does not rebuild texture/program",
+      "detail": {
+        "before": {
+          "draws": 511,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 120890,
+          "initializationMs": 39.39999997615814,
+          "initializationTaskMaxMs": 6.5,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 35.700000047683716,
+          "status": "ready",
+          "reason": ""
+        },
+        "after": {
+          "draws": 559,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 120890,
+          "initializationMs": 39.39999997615814,
+          "initializationTaskMaxMs": 6.5,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 35.700000047683716,
+          "status": "ready",
+          "reason": ""
+        }
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/390: all material tabs retain one program",
+      "detail": {
+        "draws": 559,
+        "textureBuilds": 5,
+        "textureUploads": 5,
+        "programBuilds": 1,
+        "pixels": 120890,
+        "initializationMs": 39.39999997615814,
+        "initializationTaskMaxMs": 6.5,
+        "initializationTasks": 3,
+        "parallelCompile": false,
+        "textureBuildMs": 35.700000047683716,
+        "status": "ready",
+        "reason": ""
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/390: reduced motion holds static plane",
+      "detail": {
+        "paused": 560,
+        "still": 560
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/390: offscreen study submits no frames",
+      "detail": {
+        "adapter": {
+          "frames": 574,
+          "styleWrites": 5008,
+          "geometryReads": 7,
+          "active": false,
+          "reduced": false,
+          "offscreen": true
+        },
+        "renderer": {
+          "draws": 564,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 120890,
+          "initializationMs": 39.39999997615814,
+          "initializationTaskMaxMs": 6.5,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 35.700000047683716,
+          "status": "ready",
+          "reason": ""
+        },
+        "disposed": false
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/editorial: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 12.101785075805408,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.505283142957477,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.399038888279804,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.31594528871216,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.880580505086389,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.580867239689383,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/studio: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.225648732040822,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.290890365367227,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.216519786898351,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.160135030371047,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.8376948766949015,
+          "samples": 520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.625076050751879,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/utility: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.07416016494205,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.055828066185707,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 6.978168123555289,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.910620441092851,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.551346026182945,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.344345743013907,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Paper/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.413316191711882,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.56613200904364,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 8.963422580343327,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.574050814808377,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.305363872215388,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Paper/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 8.767338749128234,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.913471042474931,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.732717027240345,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 7.466703319770494,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.036893512993608,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Paper/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 10.175922705806956,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.206794521839291,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 8.767338749128234,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.289336016418892,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.705128346954557,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Enamel/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 9.953015176290501,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.012939821465161,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.352349283995956,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.155345070213677,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.870565321291765,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Enamel/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.155345070213677,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.691265830410575,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.630040129352761,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.448935369640748,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.186763209272757,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Enamel/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.984063628539529,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.300354707899716,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.251239643722998,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.876396023465855,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.038004496637253,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Brushed metal/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.958363621006216,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.703778270162956,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Brushed metal/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.677965832327008,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.5927890448246,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.5927890448246,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Brushed metal/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.677965832327008,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.677965832327008,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Soft glass/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 11.99405833487854,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.870746638983636,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.604670994149911,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.2430720722286,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.20736543446465,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Soft glass/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 10.186008911372138,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.772173371565364,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.573038628232375,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.409045730572855,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.886703479515901,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834/Soft glass/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 11.101238969224072,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.294228418409599,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.279436845333358,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.855767677826208,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.618214538527396,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/834: light retarget changes actual pixels",
+      "detail": {
+        "changedFraction": 0.39057477365891063
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/834: roughness drag keeps rail stable",
+      "detail": {
+        "maxRail": 0
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/834: scalar drag does not rebuild texture/program",
+      "detail": {
+        "before": {
+          "draws": 507,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 270180,
+          "initializationMs": 39.60000002384186,
+          "initializationTaskMaxMs": 6.5,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 35.10000002384186,
+          "status": "ready",
+          "reason": ""
+        },
+        "after": {
+          "draws": 554,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 270180,
+          "initializationMs": 39.60000002384186,
+          "initializationTaskMaxMs": 6.5,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 35.10000002384186,
+          "status": "ready",
+          "reason": ""
+        }
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/834: all material tabs retain one program",
+      "detail": {
+        "draws": 554,
+        "textureBuilds": 5,
+        "textureUploads": 5,
+        "programBuilds": 1,
+        "pixels": 270180,
+        "initializationMs": 39.60000002384186,
+        "initializationTaskMaxMs": 6.5,
+        "initializationTasks": 3,
+        "parallelCompile": false,
+        "textureBuildMs": 35.10000002384186,
+        "status": "ready",
+        "reason": ""
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/834: reduced motion holds static plane",
+      "detail": {
+        "paused": 555,
+        "still": 555
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/834: offscreen study submits no frames",
+      "detail": {
+        "adapter": {
+          "frames": 571,
+          "styleWrites": 4967,
+          "geometryReads": 3,
+          "active": false,
+          "reduced": false,
+          "offscreen": true
+        },
+        "renderer": {
+          "draws": 558,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 270180,
+          "initializationMs": 39.60000002384186,
+          "initializationTaskMaxMs": 6.5,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 35.10000002384186,
+          "status": "ready",
+          "reason": ""
+        },
+        "disposed": false
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/editorial: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 11.781435260670225,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.086905340738294,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.740298391540337,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.293489958404031,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.580867239689383,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.459595465790592,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/studio: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.138832718872115,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.996333002178419,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.459124843640045,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.1426373236670155,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.641561137207477,
+          "samples": 520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.555165088818611,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/utility: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 7.994828099602577,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.696396197532923,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.202957315351126,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.905837823390409,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.344345743013907,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.208703000146853,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Paper/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 8.670346012727467,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 5.943418805128415,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.64914411162811,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 7.379390733125751,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 5.922019294989437,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Paper/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 6.869675538520998,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.543239601885166,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 6.48599249223963,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 6.383996880371473,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.305363872215388,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Paper/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 7.579879030009236,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.172022663864254,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.036893512993608,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 6.869675538520998,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.095169398926323,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Enamel/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.064519894503768,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 6.705900317519682,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.630040129352761,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.448935369640748,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.677761985162784,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Enamel/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 7.124720548886201,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.012939821465161,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.012939821465161,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 6.955866088394766,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.870565321291765,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Enamel/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 7.478936897191442,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 6.845841452246705,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.2747763337332,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.186763209272757,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.761438728447245,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Brushed metal/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.5927890448246,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Brushed metal/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.585980591408947,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Brushed metal/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.585980591408947,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Soft glass/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 10.087174940274792,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.39098831864365,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.470811305333944,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.261282988501904,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.888126173801845,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Soft glass/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 8.845933467702888,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.652335829629981,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 8.645506212100155,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 8.56860076763334,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.224613221392134,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440/Soft glass/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 9.334912113127,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.517922227464641,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.04230589757319,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 8.936793057680191,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.11638449651614,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440: light retarget changes actual pixels",
+      "detail": {
+        "changedFraction": 0.30583172236030565
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440: roughness drag keeps rail stable",
+      "detail": {
+        "maxRail": 0
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440: scalar drag does not rebuild texture/program",
+      "detail": {
+        "before": {
+          "draws": 523,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 349044,
+          "initializationMs": 38.89999997615814,
+          "initializationTaskMaxMs": 6.800000011920929,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 39.6000000834465,
+          "status": "ready",
+          "reason": ""
+        },
+        "after": {
+          "draws": 570,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 349044,
+          "initializationMs": 38.89999997615814,
+          "initializationTaskMaxMs": 6.800000011920929,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 39.6000000834465,
+          "status": "ready",
+          "reason": ""
+        }
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440: all material tabs retain one program",
+      "detail": {
+        "draws": 570,
+        "textureBuilds": 5,
+        "textureUploads": 5,
+        "programBuilds": 1,
+        "pixels": 349044,
+        "initializationMs": 38.89999997615814,
+        "initializationTaskMaxMs": 6.800000011920929,
+        "initializationTasks": 3,
+        "parallelCompile": false,
+        "textureBuildMs": 39.6000000834465,
+        "status": "ready",
+        "reason": ""
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440: reduced motion holds static plane",
+      "detail": {
+        "paused": 571,
+        "still": 571
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium/1440: offscreen study submits no frames",
+      "detail": {
+        "adapter": {
+          "frames": 586,
+          "styleWrites": 5051,
+          "geometryReads": 3,
+          "active": false,
+          "reduced": false,
+          "offscreen": true
+        },
+        "renderer": {
+          "draws": 575,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 349044,
+          "initializationMs": 38.89999997615814,
+          "initializationTaskMaxMs": 6.800000011920929,
+          "initializationTasks": 3,
+          "parallelCompile": false,
+          "textureBuildMs": 39.6000000834465,
+          "status": "ready",
+          "reason": ""
+        },
+        "disposed": false
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium: synthetic visibility-hidden branch stops plane draws",
+      "detail": {
+        "hiddenBefore": 5,
+        "hiddenAfter": 5,
+        "scope": "document.hidden override exercises adapter event branch, not OS background scheduling"
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium: component unmount disposes both planes",
+      "detail": {
+        "receipts": {
+          "hero": {
+            "adapter": {
+              "frames": 7,
+              "styleWrites": 64,
+              "geometryReads": 2,
+              "active": false,
+              "reduced": false,
+              "offscreen": false
+            },
+            "renderer": {
+              "draws": 5,
+              "textureBuilds": 1,
+              "textureUploads": 1,
+              "programBuilds": 1,
+              "pixels": 349384,
+              "initializationMs": 33.19999998807907,
+              "initializationTaskMaxMs": 7.099999964237213,
+              "initializationTasks": 3,
+              "parallelCompile": false,
+              "textureBuildMs": 6.699999988079071,
+              "status": "disposed",
+              "reason": ""
+            },
+            "disposed": true
+          },
+          "study": {
+            "adapter": {
+              "frames": 7,
+              "styleWrites": 64,
+              "geometryReads": 2,
+              "active": false,
+              "reduced": false,
+              "offscreen": false
+            },
+            "renderer": {
+              "draws": 5,
+              "textureBuilds": 1,
+              "textureUploads": 1,
+              "programBuilds": 1,
+              "pixels": 349478,
+              "initializationMs": 35.89999997615814,
+              "initializationTaskMaxMs": 5.400000035762787,
+              "initializationTasks": 3,
+              "parallelCompile": false,
+              "textureBuildMs": 5.300000011920929,
+              "status": "disposed",
+              "reason": ""
+            },
+            "disposed": true
+          }
+        },
+        "canvases": 0
+      }
+    },
+    {
+      "passed": true,
+      "label": "chromium: unavailable WebGL keeps readable CSS hero",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 13.881049798637743,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 13.632547277924397,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 13.633779216668854,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 13.757068101136044,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 13.509950093348563,
+          "samples": 580
+        },
+        {
+          "text": "CSS lighting fallback",
+          "minimum": 13.412606730091648,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/editorial: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 11.919757290331106,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.396533057446055,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.502740510448072,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.31594528871216,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.780811945112491,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.480724671935185,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/studio: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.283467313521953,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.160135030371047,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.290890365367227,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.160135030371047,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.76633999119309,
+          "samples": 468
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.55764933494951,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/utility: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.07416016494205,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.910620441092851,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.035790557590169,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.910620441092851,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.481873206372217,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.276289246479172,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Paper/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.298482332431519,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.913471042474931,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.554694233019459,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.195816514291257,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.893325101925319,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Paper/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.438378349490003,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 10.069169214034734,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 9.262815644091402,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.66403515694858,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.784057503028553,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Paper/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 12.254098167051293,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 9.069073447707185,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 8.595128983229456,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.86503046085752,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.472387233632006,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Enamel/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 9.820159818646655,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.721707074110893,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.539116817011551,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.630040129352761,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.212170019753256,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Enamel/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 10.148523611934172,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 8.882482316855514,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.417809029182882,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.064519894503768,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.691265830410575,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Enamel/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 11.39490231299904,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 8.417809029182882,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.064519894503768,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.155345070213677,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.539116817011551,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Brushed metal/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 8.053315846787434,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.5927890448246,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.770690293185159,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Brushed metal/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 8.694827138491416,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.703778270162956,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.796712367215452,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Brushed metal/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 9.56018443872868,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.677965832327008,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.890387856054975,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Soft glass/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 11.650647588462569,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.903489331116791,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.586110834194828,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.932438444873915,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.886703479515901,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Soft glass/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 12.002528364184126,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 11.33480797452039,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.744296563527222,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.172453369938081,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 8.658876725905994,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390/Soft glass/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 12.50629632857589,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 10.742804054697073,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.343753609953836,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.50939223960423,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 8.416426864010843,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/390: light retarget changes actual pixels",
+      "detail": {
+        "changedFraction": 0.391211323238973
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/390: roughness drag keeps rail stable",
+      "detail": {
+        "maxRail": 0
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/390: scalar drag does not rebuild texture/program",
+      "detail": {
+        "before": {
+          "draws": 470,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 120890,
+          "initializationMs": 23,
+          "initializationTaskMaxMs": 5,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 31,
+          "status": "ready",
+          "reason": ""
+        },
+        "after": {
+          "draws": 523,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 120890,
+          "initializationMs": 23,
+          "initializationTaskMaxMs": 5,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 31,
+          "status": "ready",
+          "reason": ""
+        }
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/390: all material tabs retain one program",
+      "detail": {
+        "draws": 523,
+        "textureBuilds": 5,
+        "textureUploads": 5,
+        "programBuilds": 1,
+        "pixels": 120890,
+        "initializationMs": 23,
+        "initializationTaskMaxMs": 5,
+        "initializationTasks": 3,
+        "parallelCompile": true,
+        "textureBuildMs": 31,
+        "status": "ready",
+        "reason": ""
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/390: reduced motion holds static plane",
+      "detail": {
+        "paused": 524,
+        "still": 524
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/390: offscreen study submits no frames",
+      "detail": {
+        "adapter": {
+          "frames": 530,
+          "styleWrites": 4714,
+          "geometryReads": 6,
+          "active": false,
+          "reduced": false,
+          "offscreen": true
+        },
+        "renderer": {
+          "draws": 527,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 120890,
+          "initializationMs": 23,
+          "initializationTaskMaxMs": 5,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 31,
+          "status": "ready",
+          "reason": ""
+        },
+        "disposed": false
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/editorial: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 12.101785075805408,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.505283142957477,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.399038888279804,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.31594528871216,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.880580505086389,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.580867239689383,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/studio: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.228931794462763,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.290890365367227,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.216519786898351,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.160135030371047,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.8376948766949015,
+          "samples": 468
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.625076050751879,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/utility: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.07416016494205,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.144542680968747,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.055828066185707,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.9829845022336965,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.6259410576369815,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.412873420358975,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Paper/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.438378349490003,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.58399839103881,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 9.062516535630882,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.601439839008345,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.3451334070427245,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Paper/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 8.767338749128234,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.913471042474931,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.752462999670964,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 7.491694706033967,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.060924287596513,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Paper/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 10.175922705806956,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.206794521839291,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 8.767338749128234,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.289336016418892,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.728398450465258,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Enamel/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 9.953015176290501,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.012939821465161,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.417809029182882,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.155345070213677,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.870565321291765,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Enamel/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.155345070213677,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.717533744082064,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.630040129352761,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.448935369640748,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.186763209272757,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Enamel/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.984063628539529,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.359494013330619,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.251239643722998,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.876396023465855,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.041896815008255,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Brushed metal/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.883417781476459,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.770690293185159,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Brushed metal/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.677965832327008,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.599651251521299,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.611583878570312,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Brushed metal/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.677965832327008,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.677965832327008,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Soft glass/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 12.002528364184126,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.870746638983636,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.596879500221995,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.172453369938081,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.224613221392134,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Soft glass/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 10.172453369938081,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.863251524553824,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.648184176927849,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.342091884690813,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.904938884440822,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834/Soft glass/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 11.191678894946646,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.314485289512152,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.308415432090298,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.863251524553824,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.636024755935683,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/834: light retarget changes actual pixels",
+      "detail": {
+        "changedFraction": 0.3906406259191717
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/834: roughness drag keeps rail stable",
+      "detail": {
+        "maxRail": 0
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/834: scalar drag does not rebuild texture/program",
+      "detail": {
+        "before": {
+          "draws": 471,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 270180,
+          "initializationMs": 21,
+          "initializationTaskMaxMs": 4,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 29,
+          "status": "ready",
+          "reason": ""
+        },
+        "after": {
+          "draws": 523,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 270180,
+          "initializationMs": 21,
+          "initializationTaskMaxMs": 4,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 29,
+          "status": "ready",
+          "reason": ""
+        }
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/834: all material tabs retain one program",
+      "detail": {
+        "draws": 523,
+        "textureBuilds": 5,
+        "textureUploads": 5,
+        "programBuilds": 1,
+        "pixels": 270180,
+        "initializationMs": 21,
+        "initializationTaskMaxMs": 4,
+        "initializationTasks": 3,
+        "parallelCompile": true,
+        "textureBuildMs": 29,
+        "status": "ready",
+        "reason": ""
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/834: reduced motion holds static plane",
+      "detail": {
+        "paused": 524,
+        "still": 524
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/834: offscreen study submits no frames",
+      "detail": {
+        "adapter": {
+          "frames": 527,
+          "styleWrites": 4699,
+          "geometryReads": 2,
+          "active": false,
+          "reduced": false,
+          "offscreen": true
+        },
+        "renderer": {
+          "draws": 528,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 270180,
+          "initializationMs": 21,
+          "initializationTaskMaxMs": 4,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 29,
+          "status": "ready",
+          "reason": ""
+        },
+        "disposed": false
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/editorial: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 11.781435260670225,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.08447265093064,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.740298391540337,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.293489958404031,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.580867239689383,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.459595465790592,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/studio: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.138832718872115,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.996333002178419,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.459124843640045,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.1426373236670155,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.641561137207477,
+          "samples": 468
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.555165088818611,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/utility: hero composite contrast",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 7.915987410619118,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.7673271990340345,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.202957315351126,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.838734976356326,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.412873420358975,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.25775757825914,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Paper/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 8.670346012727467,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 5.943418805128415,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.64914411162811,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 7.398552665766156,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 5.922019294989437,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Paper/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 6.869675538520998,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.4911608582344815,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 6.543239601885166,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 6.458212119446091,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.31039409045623,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Paper/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 7.579879030009236,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.172022663864254,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.060924287596513,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 6.875029753350854,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.112186646564243,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Enamel/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.064519894503768,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 6.705900317519682,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.630040129352761,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.448935369640748,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.677761985162784,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Enamel/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 7.124720548886201,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.012939821465161,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.012939821465161,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 6.955866088394766,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.870565321291765,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Enamel/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 7.539116817011551,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 6.845841452246705,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.300354707899716,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.186763209272757,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.761438728447245,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Brushed metal/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.5927890448246,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Brushed metal/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.585980591408947,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Brushed metal/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.585980591408947,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Soft glass/Light from left: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 10.164867367958475,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.39098831864365,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.545450398422632,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.268462760065717,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.888126173801845,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Soft glass/Light from right: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 8.845933467702888,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.748788505981748,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 8.70415204678387,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 8.556574020642307,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.224613221392134,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440/Soft glass/Follow pointer: composite contrast",
+      "detail": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 9.416225502136667,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.530286036922577,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.122008214516523,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 8.943772128451352,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.11638449651614,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440: light retarget changes actual pixels",
+      "detail": {
+        "changedFraction": 0.306353370769278
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440: roughness drag keeps rail stable",
+      "detail": {
+        "maxRail": 0
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440: scalar drag does not rebuild texture/program",
+      "detail": {
+        "before": {
+          "draws": 491,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 349044,
+          "initializationMs": 22,
+          "initializationTaskMaxMs": 4,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 29,
+          "status": "ready",
+          "reason": ""
+        },
+        "after": {
+          "draws": 545,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 349044,
+          "initializationMs": 22,
+          "initializationTaskMaxMs": 4,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 29,
+          "status": "ready",
+          "reason": ""
+        }
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440: all material tabs retain one program",
+      "detail": {
+        "draws": 545,
+        "textureBuilds": 5,
+        "textureUploads": 5,
+        "programBuilds": 1,
+        "pixels": 349044,
+        "initializationMs": 22,
+        "initializationTaskMaxMs": 4,
+        "initializationTasks": 3,
+        "parallelCompile": true,
+        "textureBuildMs": 29,
+        "status": "ready",
+        "reason": ""
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440: reduced motion holds static plane",
+      "detail": {
+        "paused": 546,
+        "still": 546
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit/1440: offscreen study submits no frames",
+      "detail": {
+        "adapter": {
+          "frames": 549,
+          "styleWrites": 4832,
+          "geometryReads": 2,
+          "active": false,
+          "reduced": false,
+          "offscreen": true
+        },
+        "renderer": {
+          "draws": 550,
+          "textureBuilds": 5,
+          "textureUploads": 5,
+          "programBuilds": 1,
+          "pixels": 349044,
+          "initializationMs": 22,
+          "initializationTaskMaxMs": 4,
+          "initializationTasks": 3,
+          "parallelCompile": true,
+          "textureBuildMs": 29,
+          "status": "ready",
+          "reason": ""
+        },
+        "disposed": false
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit: synthetic visibility-hidden branch stops plane draws",
+      "detail": {
+        "hiddenBefore": 9,
+        "hiddenAfter": 9,
+        "scope": "document.hidden override exercises adapter event branch, not OS background scheduling"
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit: component unmount disposes both planes",
+      "detail": {
+        "receipts": {
+          "hero": {
+            "adapter": {
+              "frames": 9,
+              "styleWrites": 80,
+              "geometryReads": 2,
+              "active": false,
+              "reduced": false,
+              "offscreen": false
+            },
+            "renderer": {
+              "draws": 9,
+              "textureBuilds": 1,
+              "textureUploads": 1,
+              "programBuilds": 1,
+              "pixels": 349384,
+              "initializationMs": 26,
+              "initializationTaskMaxMs": 7,
+              "initializationTasks": 3,
+              "parallelCompile": true,
+              "textureBuildMs": 7,
+              "status": "disposed",
+              "reason": ""
+            },
+            "disposed": true
+          },
+          "study": {
+            "adapter": {
+              "frames": 9,
+              "styleWrites": 80,
+              "geometryReads": 2,
+              "active": false,
+              "reduced": false,
+              "offscreen": false
+            },
+            "renderer": {
+              "draws": 9,
+              "textureBuilds": 1,
+              "textureUploads": 1,
+              "programBuilds": 1,
+              "pixels": 349478,
+              "initializationMs": 30,
+              "initializationTaskMaxMs": 5,
+              "initializationTasks": 3,
+              "parallelCompile": true,
+              "textureBuildMs": 5,
+              "status": "disposed",
+              "reason": ""
+            },
+            "disposed": true
+          }
+        },
+        "canvases": 0
+      }
+    },
+    {
+      "passed": true,
+      "label": "webkit: unavailable WebGL keeps readable CSS hero",
+      "detail": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 14.005725419634258,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 13.632547277924397,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 13.632547277924397,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 13.632547277924397,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 13.534665947753258,
+          "samples": 522
+        },
+        {
+          "text": "CSS lighting fallback",
+          "minimum": 13.412606730091648,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "label": "source identity unchanged"
+    }
+  ],
+  "errors": [],
+  "contrast": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "hero",
+      "profile": "editorial",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 11.919757290331106,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.399038888279804,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.502740510448072,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.31594528871216,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.780811945112491,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.480724671935185,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "hero",
+      "profile": "studio",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.283467313521953,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.160135030371047,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.290890365367227,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.160135030371047,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.76633999119309,
+          "samples": 520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.55764933494951,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "hero",
+      "profile": "utility",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.07416016494205,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.910620441092851,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.035790557590169,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.910620441092851,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.481873206372217,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.276289246479172,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Paper",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.298482332431519,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.913471042474931,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.560425703715447,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.195816514291257,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.893325101925319,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Paper",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.413316191711882,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 9.993184753511374,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 9.262815644091402,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.574050814808377,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.758289922673274,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Paper",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 12.245905058446233,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 9.069073447707185,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 8.574050814808377,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.86503046085752,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.472387233632006,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Enamel",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 9.741348657313681,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.721707074110893,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.539116817011551,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.630040129352761,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.186763209272757,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Enamel",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 10.148523611934172,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 8.882482316855514,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.417809029182882,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.064519894503768,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.691265830410575,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Enamel",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 11.401349283536565,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 8.352349283995956,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.064519894503768,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.064519894503768,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.539116817011551,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Brushed metal",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 8.149014010248518,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.5927890448246,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Brushed metal",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 8.839926603247687,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.8641556619921085,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.770690293185159,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Brushed metal",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 9.461720754956852,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.677965832327008,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.8641556619921085,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Soft glass",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 11.642335576211199,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.88987807019655,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.504191011940389,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.848334760043866,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.886703479515901,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Soft glass",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 12.08058831818196,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 11.26005252634925,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.722409606179214,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.250658074208205,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 8.620255071733652,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "kind": "Soft glass",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 12.497614293750386,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 10.750595548624988,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.314528475578246,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.416312170473612,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 8.416426864010843,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "hero",
+      "profile": "editorial",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 12.101785075805408,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.505283142957477,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.399038888279804,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.31594528871216,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.880580505086389,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.580867239689383,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "hero",
+      "profile": "studio",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.225648732040822,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.290890365367227,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.216519786898351,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.160135030371047,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.8376948766949015,
+          "samples": 520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.625076050751879,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "hero",
+      "profile": "utility",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.07416016494205,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.055828066185707,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 6.978168123555289,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.910620441092851,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.551346026182945,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.344345743013907,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Paper",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.413316191711882,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.56613200904364,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 8.963422580343327,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.574050814808377,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.305363872215388,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Paper",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 8.767338749128234,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.913471042474931,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.732717027240345,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 7.466703319770494,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.036893512993608,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Paper",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 10.175922705806956,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.206794521839291,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 8.767338749128234,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.289336016418892,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.705128346954557,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Enamel",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 9.953015176290501,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.012939821465161,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.352349283995956,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.155345070213677,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.870565321291765,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Enamel",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.155345070213677,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.691265830410575,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.630040129352761,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.448935369640748,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.186763209272757,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Enamel",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.984063628539529,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.300354707899716,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.251239643722998,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.876396023465855,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.038004496637253,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Brushed metal",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.958363621006216,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.703778270162956,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Brushed metal",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.677965832327008,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.5927890448246,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.5927890448246,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Brushed metal",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.677965832327008,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.677965832327008,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Soft glass",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 11.99405833487854,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.870746638983636,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.604670994149911,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.2430720722286,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.20736543446465,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Soft glass",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 10.186008911372138,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.772173371565364,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.573038628232375,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.409045730572855,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.886703479515901,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 834,
+      "kind": "Soft glass",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 11.101238969224072,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.294228418409599,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.279436845333358,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.855767677826208,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.618214538527396,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "hero",
+      "profile": "editorial",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 11.781435260670225,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.086905340738294,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.740298391540337,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.293489958404031,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.580867239689383,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.459595465790592,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "hero",
+      "profile": "studio",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.138832718872115,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.996333002178419,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.459124843640045,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.1426373236670155,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.641561137207477,
+          "samples": 520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.555165088818611,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "hero",
+      "profile": "utility",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 7.994828099602577,
+          "samples": 640
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.696396197532923,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.202957315351126,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.905837823390409,
+          "samples": 640
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.344345743013907,
+          "samples": 580
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.208703000146853,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Paper",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 8.670346012727467,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 5.943418805128415,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.64914411162811,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 7.379390733125751,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 5.922019294989437,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Paper",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 6.869675538520998,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.543239601885166,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 6.48599249223963,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 6.383996880371473,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.305363872215388,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Paper",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 7.579879030009236,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.172022663864254,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.036893512993608,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 6.869675538520998,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.095169398926323,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Enamel",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.064519894503768,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 6.705900317519682,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.630040129352761,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.448935369640748,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.677761985162784,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Enamel",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 7.124720548886201,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.012939821465161,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.012939821465161,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 6.955866088394766,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.870565321291765,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Enamel",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 7.478936897191442,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 6.845841452246705,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.2747763337332,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.186763209272757,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.761438728447245,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Brushed metal",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.5927890448246,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Brushed metal",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.585980591408947,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Brushed metal",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.585980591408947,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Soft glass",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 10.087174940274792,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.39098831864365,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.470811305333944,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.261282988501904,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.888126173801845,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Soft glass",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 8.845933467702888,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.652335829629981,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 8.645506212100155,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 8.56860076763334,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.224613221392134,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "kind": "Soft glass",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 9.334912113127,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.517922227464641,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.04230589757319,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 8.936793057680191,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.11638449651614,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "hero",
+      "profile": "editorial",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 11.919757290331106,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.396533057446055,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.502740510448072,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.31594528871216,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.780811945112491,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.480724671935185,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "hero",
+      "profile": "studio",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.283467313521953,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.160135030371047,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.290890365367227,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.160135030371047,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.76633999119309,
+          "samples": 468
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.55764933494951,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "hero",
+      "profile": "utility",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.07416016494205,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.910620441092851,
+          "samples": 17182
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.035790557590169,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.910620441092851,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.481873206372217,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.276289246479172,
+          "samples": 2740
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Paper",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.298482332431519,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.913471042474931,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.554694233019459,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.195816514291257,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.893325101925319,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Paper",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.438378349490003,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 10.069169214034734,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 9.262815644091402,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.66403515694858,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.784057503028553,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Paper",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 12.254098167051293,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 9.069073447707185,
+          "samples": 8352
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 8.595128983229456,
+          "samples": 9280
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.86503046085752,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.472387233632006,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Enamel",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 9.820159818646655,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.721707074110893,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.539116817011551,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.630040129352761,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.212170019753256,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Enamel",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 10.148523611934172,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 8.882482316855514,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.417809029182882,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.064519894503768,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.691265830410575,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Enamel",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 11.39490231299904,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 8.417809029182882,
+          "samples": 17168
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.064519894503768,
+          "samples": 9280
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.155345070213677,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.539116817011551,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Brushed metal",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 8.053315846787434,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.5927890448246,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.770690293185159,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Brushed metal",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 8.694827138491416,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.703778270162956,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.796712367215452,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Brushed metal",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 9.56018443872868,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.677965832327008,
+          "samples": 17168
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.677965832327008,
+          "samples": 9280
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.890387856054975,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.677965832327008,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Soft glass",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 11.650647588462569,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.903489331116791,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.586110834194828,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.932438444873915,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.886703479515901,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Soft glass",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 12.002528364184126,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 11.33480797452039,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.744296563527222,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.172453369938081,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 8.658876725905994,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "kind": "Soft glass",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 12.50629632857589,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 10.742804054697073,
+          "samples": 8352
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.343753609953836,
+          "samples": 9280
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.50939223960423,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 8.416426864010843,
+          "samples": 3406
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "hero",
+      "profile": "editorial",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 12.101785075805408,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.505283142957477,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.399038888279804,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.31594528871216,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.880580505086389,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.580867239689383,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "hero",
+      "profile": "studio",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.228931794462763,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.290890365367227,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.216519786898351,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.160135030371047,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.8376948766949015,
+          "samples": 468
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.625076050751879,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "hero",
+      "profile": "utility",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.07416016494205,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 7.144542680968747,
+          "samples": 14413
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.055828066185707,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.9829845022336965,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.6259410576369815,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.412873420358975,
+          "samples": 2350
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Paper",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 11.438378349490003,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.58399839103881,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 9.062516535630882,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.601439839008345,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.3451334070427245,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Paper",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 8.767338749128234,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.913471042474931,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.752462999670964,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 7.491694706033967,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.060924287596513,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Paper",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 10.175922705806956,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 7.206794521839291,
+          "samples": 31110
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 8.767338749128234,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 8.289336016418892,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.728398450465258,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Enamel",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 9.953015176290501,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.012939821465161,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.417809029182882,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 8.155345070213677,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.870565321291765,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Enamel",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.155345070213677,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.717533744082064,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.630040129352761,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.448935369640748,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.186763209272757,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Enamel",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.984063628539529,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.359494013330619,
+          "samples": 31110
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 8.251239643722998,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.876396023465855,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.041896815008255,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Brushed metal",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.883417781476459,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.770690293185159,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Brushed metal",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.677965832327008,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.599651251521299,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.611583878570312,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Brushed metal",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.677965832327008,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 31110
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.677965832327008,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.677965832327008,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Soft glass",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 12.002528364184126,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.870746638983636,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.596879500221995,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 10.172453369938081,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.224613221392134,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Soft glass",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 10.172453369938081,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.863251524553824,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.648184176927849,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.342091884690813,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.904938884440822,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 834,
+      "kind": "Soft glass",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 11.191678894946646,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 9.314485289512152,
+          "samples": 31110
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 10.308415432090298,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.863251524553824,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.636024755935683,
+          "samples": 8320
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "hero",
+      "profile": "editorial",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 11.781435260670225,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 10.08447265093064,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 10.740298391540337,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.32",
+          "minimum": 10.293489958404031,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 13",
+          "minimum": 9.580867239689383,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 9.459595465790592,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "hero",
+      "profile": "studio",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 8.138832718872115,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.996333002178419,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.459124843640045,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.17",
+          "minimum": 7.1426373236670155,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 9",
+          "minimum": 6.641561137207477,
+          "samples": 468
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.555165088818611,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "hero",
+      "profile": "utility",
+      "observed": [
+        {
+          "text": "FIELD / 001",
+          "minimum": 7.915987410619118,
+          "samples": 576
+        },
+        {
+          "text": "A littlefriction.",
+          "minimum": 6.7673271990340345,
+          "samples": 45548
+        },
+        {
+          "text": "Precise enough to inspect.Open enough to surprise.",
+          "minimum": 7.202957315351126,
+          "samples": 6586
+        },
+        {
+          "text": "FINISH 0.68",
+          "minimum": 6.838734976356326,
+          "samples": 576
+        },
+        {
+          "text": "DAMPING 31",
+          "minimum": 6.412873420358975,
+          "samples": 522
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.25775757825914,
+          "samples": 4290
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Paper",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 8.670346012727467,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 5.943418805128415,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.64914411162811,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 7.398552665766156,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 5.922019294989437,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Paper",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 6.869675538520998,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.4911608582344815,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 6.543239601885166,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 6.458212119446091,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.31039409045623,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Paper",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "01 / PAPER",
+          "minimum": 7.579879030009236,
+          "samples": 726
+        },
+        {
+          "text": "A little friction.",
+          "minimum": 6.172022663864254,
+          "samples": 81548
+        },
+        {
+          "text": "Fine grain. Broad light. A surface that asks you to slow down.",
+          "minimum": 7.060924287596513,
+          "samples": 10600
+        },
+        {
+          "text": "READ / MARK / KEEP",
+          "minimum": 6.875029753350854,
+          "samples": 1200
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.112186646564243,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Enamel",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 8.064519894503768,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 6.705900317519682,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.630040129352761,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.448935369640748,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.677761985162784,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Enamel",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 7.124720548886201,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 7.012939821465161,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.012939821465161,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 6.955866088394766,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.870565321291765,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Enamel",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "02 / ENAMEL",
+          "minimum": 7.539116817011551,
+          "samples": 858
+        },
+        {
+          "text": "Turn up the color.",
+          "minimum": 6.845841452246705,
+          "samples": 81548
+        },
+        {
+          "text": "A compact highlight moves across a smooth, saturated finish.",
+          "minimum": 7.300354707899716,
+          "samples": 10600
+        },
+        {
+          "text": "BRIGHT / SMOOTH / BOLD",
+          "minimum": 7.186763209272757,
+          "samples": 1520
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.761438728447245,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Brushed metal",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.5927890448246,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Brushed metal",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.585980591408947,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Brushed metal",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "03 / BRUSHED METAL",
+          "minimum": 7.585980591408947,
+          "samples": 1441
+        },
+        {
+          "text": "Follow the grain.",
+          "minimum": 7.585980591408947,
+          "samples": 81548
+        },
+        {
+          "text": "Fine directional lines stretch the light into a band.",
+          "minimum": 7.585980591408947,
+          "samples": 10600
+        },
+        {
+          "text": "LINE / DIRECTION / EDGE",
+          "minimum": 7.585980591408947,
+          "samples": 1460
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.585980591408947,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Soft glass",
+      "direction": "Light from left",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 10.164867367958475,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.39098831864365,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.545450398422632,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 9.268462760065717,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 6.888126173801845,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Soft glass",
+      "direction": "Light from right",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 8.845933467702888,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.748788505981748,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 8.70415204678387,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 8.556574020642307,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.224613221392134,
+          "samples": 14716
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "kind": "Soft glass",
+      "direction": "Follow pointer",
+      "observed": [
+        {
+          "text": "04 / SOFT GLASS",
+          "minimum": 9.416225502136667,
+          "samples": 1111
+        },
+        {
+          "text": "Let the room in.",
+          "minimum": 8.530286036922577,
+          "samples": 81548
+        },
+        {
+          "text": "A softened backdrop and a quiet tint. Clear content stays in front.",
+          "minimum": 9.122008214516523,
+          "samples": 10600
+        },
+        {
+          "text": "LAYER / FILTER / READ",
+          "minimum": 8.943772128451352,
+          "samples": 1300
+        },
+        {
+          "text": "Live material plane",
+          "minimum": 7.11638449651614,
+          "samples": 14716
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Local Chromium/WebKit composites, not physical Safari performance, power or sensors.",
+    "Screenshots perturb presentation; this run makes no timing benchmark claim.",
+    "Contrast compares opaque computed foreground ink with actual text-hidden composite background over the recorded regions/poses; not whole-site accessibility certification."
+  ]
+}

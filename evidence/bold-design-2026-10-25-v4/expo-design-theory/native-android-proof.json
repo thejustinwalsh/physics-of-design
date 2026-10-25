@@ -1,0 +1,1485 @@
+{
+  "version": 1,
+  "platform": "native-android",
+  "calibrate": false,
+  "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+  "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45",
+  "designIdentity": "1be4a8ba9870773a6d77b75fb1c4ff8d5e4377b553f208097da2e386a36a5725",
+  "generatedAt": "2026-10-25T14:30:34.505Z",
+  "sourceStable": true,
+  "actions": [
+    {
+      "target": "filter-all",
+      "method": "adb-native-input-with-independent-uiautomator-bounds",
+      "before": {
+        "filter": "all",
+        "selected": null,
+        "textScale": 1
+      },
+      "after": {
+        "filter": "all",
+        "selected": null,
+        "textScale": 1,
+        "reviewed": [
+          "reservoir"
+        ]
+      },
+      "box": {
+        "x": 20.190475463867188,
+        "y": 177.90475463867188,
+        "width": 146.6666717529297,
+        "height": 48.00001525878906,
+        "nodeName": "BUTTON",
+        "scrollWidth": 145,
+        "scrollHeight": 46,
+        "clientWidth": 145,
+        "clientHeight": 46
+      },
+      "observedAt": "2026-10-25T14:30:16.282Z"
+    },
+    {
+      "target": "enlarge",
+      "method": "adb-native-input-with-independent-uiautomator-bounds",
+      "before": {
+        "filter": "all",
+        "selected": null,
+        "textScale": 1
+      },
+      "after": {
+        "filter": "all",
+        "selected": null,
+        "textScale": 2,
+        "reviewed": [
+          "reservoir"
+        ]
+      },
+      "box": {
+        "x": 20.190475463867188,
+        "y": 233.90476989746094,
+        "width": 110.09524536132812,
+        "height": 48.00001525878906,
+        "nodeName": "BUTTON",
+        "scrollWidth": 108,
+        "scrollHeight": 46,
+        "clientWidth": 108,
+        "clientHeight": 46
+      },
+      "observedAt": "2026-10-25T14:30:19.544Z"
+    },
+    {
+      "target": "enlarge",
+      "method": "adb-native-input-with-independent-uiautomator-bounds",
+      "before": {
+        "filter": "all",
+        "selected": null,
+        "textScale": 2
+      },
+      "after": {
+        "filter": "all",
+        "selected": null,
+        "textScale": 1,
+        "reviewed": [
+          "reservoir"
+        ]
+      },
+      "box": {
+        "x": 20.190475463867188,
+        "y": 525.7142944335938,
+        "width": 222.4761962890625,
+        "height": 62.09521484375,
+        "nodeName": "BUTTON",
+        "scrollWidth": 220,
+        "scrollHeight": 60,
+        "clientWidth": 220,
+        "clientHeight": 60
+      },
+      "observedAt": "2026-10-25T14:30:21.993Z"
+    },
+    {
+      "target": "filter-review",
+      "method": "adb-native-input-with-independent-uiautomator-bounds",
+      "before": {
+        "filter": "all",
+        "selected": null,
+        "textScale": 1
+      },
+      "after": {
+        "filter": "review",
+        "selected": null,
+        "textScale": 1,
+        "reviewed": [
+          "reservoir"
+        ]
+      },
+      "box": {
+        "x": 174.85714721679688,
+        "y": 177.90475463867188,
+        "width": 129.90475463867188,
+        "height": 48.00001525878906,
+        "nodeName": "BUTTON",
+        "scrollWidth": 128,
+        "scrollHeight": 46,
+        "clientWidth": 128,
+        "clientHeight": 46
+      },
+      "observedAt": "2026-10-25T14:30:24.442Z"
+    },
+    {
+      "target": "row-inlet",
+      "method": "adb-native-input-with-independent-uiautomator-bounds",
+      "before": {
+        "filter": "review",
+        "selected": null,
+        "textScale": 1
+      },
+      "after": {
+        "filter": "review",
+        "selected": "inlet",
+        "textScale": 1,
+        "reviewed": [
+          "reservoir"
+        ]
+      },
+      "box": {
+        "x": 20.190475463867188,
+        "y": 348.19049072265625,
+        "width": 371.4285888671875,
+        "height": 106.28570556640625,
+        "nodeName": "BUTTON",
+        "scrollWidth": 369,
+        "scrollHeight": 104,
+        "clientWidth": 369,
+        "clientHeight": 104
+      },
+      "observedAt": "2026-10-25T14:30:26.893Z"
+    },
+    {
+      "target": "mark-reviewed",
+      "method": "adb-native-input-with-independent-uiautomator-bounds",
+      "before": {
+        "filter": "review",
+        "selected": "inlet",
+        "textScale": 1
+      },
+      "after": {
+        "filter": "review",
+        "selected": null,
+        "textScale": 1,
+        "reviewed": [
+          "reservoir",
+          "inlet"
+        ]
+      },
+      "box": {
+        "x": 40.380950927734375,
+        "y": 475.4285888671875,
+        "width": 331.42852783203125,
+        "height": 48,
+        "nodeName": "BUTTON",
+        "scrollWidth": 329,
+        "scrollHeight": 46,
+        "clientWidth": 329,
+        "clientHeight": 46
+      },
+      "observedAt": "2026-10-25T14:30:29.342Z"
+    },
+    {
+      "target": "filter-all",
+      "method": "adb-native-input-with-independent-uiautomator-bounds",
+      "before": {
+        "filter": "review",
+        "selected": null,
+        "textScale": 1
+      },
+      "after": {
+        "filter": "all",
+        "selected": null,
+        "textScale": 1,
+        "reviewed": [
+          "reservoir",
+          "inlet"
+        ]
+      },
+      "box": {
+        "x": 20.190475463867188,
+        "y": 177.90475463867188,
+        "width": 146.6666717529297,
+        "height": 48.00001525878906,
+        "nodeName": "BUTTON",
+        "scrollWidth": 145,
+        "scrollHeight": 46,
+        "clientWidth": 145,
+        "clientHeight": 46
+      },
+      "observedAt": "2026-10-25T14:30:31.793Z"
+    },
+    {
+      "target": "long-text",
+      "method": "adb-native-input-with-independent-uiautomator-bounds",
+      "before": {
+        "filter": "all",
+        "selected": null,
+        "textScale": 1
+      },
+      "after": {
+        "filter": "all",
+        "selected": null,
+        "textScale": 1,
+        "reviewed": [
+          "reservoir",
+          "inlet"
+        ]
+      },
+      "box": {
+        "x": 138.28570556640625,
+        "y": 233.90476989746094,
+        "width": 114.28570556640625,
+        "height": 48.00001525878906,
+        "nodeName": "BUTTON",
+        "scrollWidth": 112,
+        "scrollHeight": 46,
+        "clientWidth": 112,
+        "clientHeight": 46
+      },
+      "observedAt": "2026-10-25T14:30:34.244Z"
+    }
+  ],
+  "receipts": [
+    {
+      "name": "normal",
+      "receipt": {
+        "deliveredAt": "2026-10-25T14:30:16.212Z",
+        "platform": "native-android",
+        "viewport": {
+          "width": 411.42857142857144,
+          "height": 814.4761904761905,
+          "scale": 2.625,
+          "fontScale": 1
+        },
+        "safeArea": {
+          "left": 0,
+          "bottom": 48,
+          "right": 0,
+          "top": 51.80952453613281
+        },
+        "filter": "all",
+        "selected": null,
+        "reviewed": [
+          "reservoir"
+        ],
+        "enlarged": false,
+        "longText": false,
+        "textScale": 1,
+        "scenario": "native-android-411-1",
+        "phase": "resolved-kernels",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "values": {
+          "fontSize": 16,
+          "lineHeight": 1.4,
+          "tracking": 0,
+          "rowHeight": 83.4285888671875,
+          "rowPadding": 8,
+          "columns": 1,
+          "padding": 20,
+          "gap": 20,
+          "listWidth": 371.42857142857144,
+          "detailWidth": 371.42857142857144
+        },
+        "candidates": [
+          {
+            "id": "compact",
+            "fontSize": 16,
+            "lineHeight": 1.4,
+            "trackingEm": 0
+          },
+          {
+            "id": "open",
+            "fontSize": 18,
+            "lineHeight": 1.5,
+            "trackingEm": 0
+          }
+        ],
+        "boxes": {
+          "filter-all": {
+            "x": 20.190475463867188,
+            "y": 177.90475463867188,
+            "width": 146.6666717529297,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 145,
+            "scrollHeight": 46,
+            "clientWidth": 145,
+            "clientHeight": 46
+          },
+          "filter-review": {
+            "x": 174.85714721679688,
+            "y": 177.90475463867188,
+            "width": 129.90475463867188,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 128,
+            "scrollHeight": 46,
+            "clientWidth": 128,
+            "clientHeight": 46
+          },
+          "enlarge": {
+            "x": 20.190475463867188,
+            "y": 233.90476989746094,
+            "width": 110.09524536132812,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 108,
+            "scrollHeight": 46,
+            "clientWidth": 108,
+            "clientHeight": 46
+          },
+          "long-text": {
+            "x": 138.28570556640625,
+            "y": 233.90476989746094,
+            "width": 114.28570556640625,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 112,
+            "scrollHeight": 46,
+            "clientWidth": 112,
+            "clientHeight": 46
+          },
+          "meta-inlet": {
+            "x": 36.95237731933594,
+            "y": 356.952392578125,
+            "width": 337.5238037109375,
+            "height": 17.142822265625,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 17,
+            "clientWidth": 338,
+            "clientHeight": 17
+          },
+          "title-inlet": {
+            "x": 36.95237731933594,
+            "y": 382.09527587890625,
+            "width": 337.5238037109375,
+            "height": 22.4761962890625,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 22,
+            "clientWidth": 338,
+            "clientHeight": 22
+          },
+          "row-inlet": {
+            "x": 20.190475463867188,
+            "y": 348.19049072265625,
+            "width": 371.4285888671875,
+            "height": 106.28570556640625,
+            "nodeName": "BUTTON",
+            "scrollWidth": 369,
+            "scrollHeight": 104,
+            "clientWidth": 369,
+            "clientHeight": 104
+          },
+          "meta-reservoir": {
+            "x": 36.95237731933594,
+            "y": 475.047607421875,
+            "width": 337.5238037109375,
+            "height": 17.14288330078125,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 17,
+            "clientWidth": 338,
+            "clientHeight": 17
+          },
+          "title-reservoir": {
+            "x": 36.95237731933594,
+            "y": 500.19049072265625,
+            "width": 337.5238037109375,
+            "height": 22.47613525390625,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 22,
+            "clientWidth": 338,
+            "clientHeight": 22
+          },
+          "row-reservoir": {
+            "x": 20.190475463867188,
+            "y": 466.28570556640625,
+            "width": 371.4285888671875,
+            "height": 106.66668701171875,
+            "nodeName": "BUTTON",
+            "scrollWidth": 369,
+            "scrollHeight": 105,
+            "clientWidth": 369,
+            "clientHeight": 105
+          },
+          "meta-station": {
+            "x": 36.95237731933594,
+            "y": 593.5238037109375,
+            "width": 337.5238037109375,
+            "height": 17.14288330078125,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 17,
+            "clientWidth": 338,
+            "clientHeight": 17
+          },
+          "title-station": {
+            "x": 36.95237731933594,
+            "y": 618.6666259765625,
+            "width": 337.5238037109375,
+            "height": 22.4761962890625,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 22,
+            "clientWidth": 338,
+            "clientHeight": 22
+          },
+          "row-station": {
+            "x": 20.190475463867188,
+            "y": 584.7619018554688,
+            "width": 371.4285888671875,
+            "height": 106.28570556640625,
+            "nodeName": "BUTTON",
+            "scrollWidth": 369,
+            "scrollHeight": 104,
+            "clientWidth": 369,
+            "clientHeight": 104
+          },
+          "list": {
+            "x": 20.190475463867188,
+            "y": 301.71429443359375,
+            "width": 371.4285888671875,
+            "height": 389.33331298828125,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 389,
+            "clientWidth": 371,
+            "clientHeight": 389
+          },
+          "detail-text": {
+            "x": 40,
+            "y": 812.5714111328125,
+            "width": 331.4285888671875,
+            "height": 81.142822265625,
+            "nodeName": "P",
+            "scrollWidth": 331,
+            "scrollHeight": 81,
+            "clientWidth": 331,
+            "clientHeight": 81
+          },
+          "detail": {
+            "x": 20.190475463867188,
+            "y": 711.2380981445312,
+            "width": 371.4285888671875,
+            "height": 271.23822021484375,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 271,
+            "clientWidth": 371,
+            "clientHeight": 271
+          },
+          "regions": {
+            "x": 20.190475463867188,
+            "y": 301.71429443359375,
+            "width": 371.4285888671875,
+            "height": 680.7620239257812,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 681,
+            "clientWidth": 371,
+            "clientHeight": 681
+          },
+          "line-height-probe": {
+            "x": 0,
+            "y": -51.809539794921875,
+            "width": 260.19049072265625,
+            "height": 22.4761962890625,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 22,
+            "clientWidth": 260,
+            "clientHeight": 22
+          },
+          "probe-compact": {
+            "x": 0,
+            "y": -29.333343505859375,
+            "width": 260.19049072265625,
+            "height": 67.4285888671875,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 67,
+            "clientWidth": 260,
+            "clientHeight": 67
+          },
+          "probe-open": {
+            "x": 0,
+            "y": 38.095245361328125,
+            "width": 260.19049072265625,
+            "height": 81.14288330078125,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 81,
+            "clientWidth": 260,
+            "clientHeight": 81
+          },
+          "root": {
+            "x": 0,
+            "y": -51.809539794921875,
+            "width": 411.4285583496094,
+            "height": 914.2857666015625,
+            "nodeName": "DIV",
+            "scrollWidth": 411,
+            "scrollHeight": 914,
+            "clientWidth": 411,
+            "clientHeight": 914
+          }
+        },
+        "observedAt": "2026-10-25T14:30:16.282Z",
+        "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / android",
+        "provider": "native-android"
+      },
+      "screenshot": "artifacts/expo-design-theory/native-round2/android-normal.png"
+    },
+    {
+      "name": "enlarged",
+      "receipt": {
+        "deliveredAt": "2026-10-25T14:30:19.472Z",
+        "platform": "native-android",
+        "viewport": {
+          "width": 411.42857142857144,
+          "height": 814.4761904761905,
+          "scale": 2.625,
+          "fontScale": 1
+        },
+        "safeArea": {
+          "left": 0,
+          "bottom": 48,
+          "right": 0,
+          "top": 51.80952453613281
+        },
+        "filter": "all",
+        "selected": null,
+        "reviewed": [
+          "reservoir"
+        ],
+        "enlarged": true,
+        "longText": false,
+        "textScale": 2,
+        "scenario": "native-android-411-2",
+        "phase": "resolved-kernels",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "values": {
+          "fontSize": 32,
+          "lineHeight": 1.4,
+          "tracking": 0,
+          "rowHeight": 240.7618865966797,
+          "rowPadding": 8,
+          "columns": 1,
+          "padding": 20,
+          "gap": 20,
+          "listWidth": 371.42857142857144,
+          "detailWidth": 371.42857142857144
+        },
+        "candidates": [
+          {
+            "id": "compact",
+            "fontSize": 16,
+            "lineHeight": 1.4,
+            "trackingEm": 0
+          },
+          {
+            "id": "open",
+            "fontSize": 18,
+            "lineHeight": 1.5,
+            "trackingEm": 0
+          }
+        ],
+        "boxes": {
+          "filter-all": {
+            "x": 20.190475463867188,
+            "y": 385.5238037109375,
+            "width": 259.047607421875,
+            "height": 61.7142333984375,
+            "nodeName": "BUTTON",
+            "scrollWidth": 257,
+            "scrollHeight": 60,
+            "clientWidth": 257,
+            "clientHeight": 60
+          },
+          "filter-review": {
+            "x": 20.190475463867188,
+            "y": 455.6190185546875,
+            "width": 225.5238037109375,
+            "height": 62.0953369140625,
+            "nodeName": "BUTTON",
+            "scrollWidth": 224,
+            "scrollHeight": 60,
+            "clientWidth": 224,
+            "clientHeight": 60
+          },
+          "enlarge": {
+            "x": 20.190475463867188,
+            "y": 525.7142944335938,
+            "width": 222.4761962890625,
+            "height": 62.09521484375,
+            "nodeName": "BUTTON",
+            "scrollWidth": 220,
+            "scrollHeight": 60,
+            "clientWidth": 220,
+            "clientHeight": 60
+          },
+          "long-text": {
+            "x": 20.190475463867188,
+            "y": 595.4285888671875,
+            "width": 194.2857208251953,
+            "height": 62.09521484375,
+            "nodeName": "BUTTON",
+            "scrollWidth": 192,
+            "scrollHeight": 60,
+            "clientWidth": 192,
+            "clientHeight": 60
+          },
+          "meta-inlet": {
+            "x": 36.95237731933594,
+            "y": 758.4761962890625,
+            "width": 337.5238037109375,
+            "height": 33.90478515625,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 34,
+            "clientWidth": 338,
+            "clientHeight": 34
+          },
+          "title-inlet": {
+            "x": 36.95237731933594,
+            "y": 800.3809814453125,
+            "width": 337.5238037109375,
+            "height": 44.952392578125,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 45,
+            "clientWidth": 338,
+            "clientHeight": 45
+          },
+          "row-inlet": {
+            "x": 20.190475463867188,
+            "y": 749.7142333984375,
+            "width": 371.4285888671875,
+            "height": 240.761962890625,
+            "nodeName": "BUTTON",
+            "scrollWidth": 369,
+            "scrollHeight": 239,
+            "clientWidth": 369,
+            "clientHeight": 239
+          },
+          "meta-reservoir": {
+            "x": 36.95237731933594,
+            "y": 1011.0477294921875,
+            "width": 337.5238037109375,
+            "height": 33.90478515625,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 34,
+            "clientWidth": 338,
+            "clientHeight": 34
+          },
+          "title-reservoir": {
+            "x": 36.95237731933594,
+            "y": 1052.9525146484375,
+            "width": 337.5238037109375,
+            "height": 44.9522705078125,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 45,
+            "clientWidth": 338,
+            "clientHeight": 45
+          },
+          "row-reservoir": {
+            "x": 20.190475463867188,
+            "y": 1002.2857666015625,
+            "width": 371.4285888671875,
+            "height": 240.761962890625,
+            "nodeName": "BUTTON",
+            "scrollWidth": 369,
+            "scrollHeight": 239,
+            "clientWidth": 369,
+            "clientHeight": 239
+          },
+          "meta-station": {
+            "x": 36.95237731933594,
+            "y": 1263.619140625,
+            "width": 337.5238037109375,
+            "height": 33.9046630859375,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 34,
+            "clientWidth": 338,
+            "clientHeight": 34
+          },
+          "title-station": {
+            "x": 36.95237731933594,
+            "y": 1305.52392578125,
+            "width": 337.5238037109375,
+            "height": 44.952392578125,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 45,
+            "clientWidth": 338,
+            "clientHeight": 45
+          },
+          "row-station": {
+            "x": 20.190475463867188,
+            "y": 1254.8572998046875,
+            "width": 371.4285888671875,
+            "height": 240.7618408203125,
+            "nodeName": "BUTTON",
+            "scrollWidth": 369,
+            "scrollHeight": 239,
+            "clientWidth": 369,
+            "clientHeight": 239
+          },
+          "list": {
+            "x": 20.190475463867188,
+            "y": 677.3333129882812,
+            "width": 371.4285888671875,
+            "height": 818.6666870117188,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 819,
+            "clientWidth": 371,
+            "clientHeight": 819
+          },
+          "detail-text": {
+            "x": 40,
+            "y": 1659.8095703125,
+            "width": 331.4285888671875,
+            "height": 324.5714111328125,
+            "nodeName": "P",
+            "scrollWidth": 331,
+            "scrollHeight": 325,
+            "clientWidth": 331,
+            "clientHeight": 325
+          },
+          "detail": {
+            "x": 20.190475463867188,
+            "y": 1515.8095703125,
+            "width": 371.4285888671875,
+            "height": 635.4287109375,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 635,
+            "clientWidth": 371,
+            "clientHeight": 635
+          },
+          "regions": {
+            "x": 20.190475463867188,
+            "y": 677.3333129882812,
+            "width": 371.4285888671875,
+            "height": 1473.90478515625,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 1474,
+            "clientWidth": 371,
+            "clientHeight": 1474
+          },
+          "line-height-probe": {
+            "x": 0,
+            "y": -51.809539794921875,
+            "width": 260.19049072265625,
+            "height": 44.952392578125,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 45,
+            "clientWidth": 260,
+            "clientHeight": 45
+          },
+          "probe-compact": {
+            "x": 0,
+            "y": -6.857147216796875,
+            "width": 260.19049072265625,
+            "height": 224.7619171142578,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 225,
+            "clientWidth": 260,
+            "clientHeight": 225
+          },
+          "probe-open": {
+            "x": 0,
+            "y": 217.90476989746094,
+            "width": 260.19049072265625,
+            "height": 324.5714111328125,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 325,
+            "clientWidth": 260,
+            "clientHeight": 325
+          },
+          "root": {
+            "x": 0,
+            "y": -51.809539794921875,
+            "width": 411.4285583496094,
+            "height": 914.2857666015625,
+            "nodeName": "DIV",
+            "scrollWidth": 411,
+            "scrollHeight": 914,
+            "clientWidth": 411,
+            "clientHeight": 914
+          }
+        },
+        "observedAt": "2026-10-25T14:30:19.544Z",
+        "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / android",
+        "provider": "native-android"
+      },
+      "screenshot": "artifacts/expo-design-theory/native-round2/android-enlarged.png"
+    },
+    {
+      "name": "detail",
+      "receipt": {
+        "deliveredAt": "2026-10-25T14:30:26.820Z",
+        "platform": "native-android",
+        "viewport": {
+          "width": 411.42857142857144,
+          "height": 814.4761904761905,
+          "scale": 2.625,
+          "fontScale": 1
+        },
+        "safeArea": {
+          "left": 0,
+          "bottom": 48,
+          "right": 0,
+          "top": 51.80952453613281
+        },
+        "filter": "review",
+        "selected": "inlet",
+        "reviewed": [
+          "reservoir"
+        ],
+        "enlarged": false,
+        "longText": false,
+        "textScale": 1,
+        "scenario": "native-android-411-1",
+        "phase": "resolved-kernels",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "values": {
+          "fontSize": 16,
+          "lineHeight": 1.4,
+          "tracking": 0,
+          "rowHeight": 83.4285888671875,
+          "rowPadding": 8,
+          "columns": 1,
+          "padding": 20,
+          "gap": 20,
+          "listWidth": 371.42857142857144,
+          "detailWidth": 371.42857142857144
+        },
+        "candidates": [
+          {
+            "id": "compact",
+            "fontSize": 16,
+            "lineHeight": 1.4,
+            "trackingEm": 0
+          },
+          {
+            "id": "open",
+            "fontSize": 18,
+            "lineHeight": 1.5,
+            "trackingEm": 0
+          }
+        ],
+        "boxes": {
+          "filter-all": {
+            "x": 20.190475463867188,
+            "y": 177.90475463867188,
+            "width": 146.6666717529297,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 145,
+            "scrollHeight": 46,
+            "clientWidth": 145,
+            "clientHeight": 46
+          },
+          "filter-review": {
+            "x": 174.85714721679688,
+            "y": 177.90475463867188,
+            "width": 129.90475463867188,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 128,
+            "scrollHeight": 46,
+            "clientWidth": 128,
+            "clientHeight": 46
+          },
+          "enlarge": {
+            "x": 20.190475463867188,
+            "y": 233.90476989746094,
+            "width": 110.09524536132812,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 108,
+            "scrollHeight": 46,
+            "clientWidth": 108,
+            "clientHeight": 46
+          },
+          "long-text": {
+            "x": 138.28570556640625,
+            "y": 233.90476989746094,
+            "width": 114.28570556640625,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 112,
+            "scrollHeight": 46,
+            "clientWidth": 112,
+            "clientHeight": 46
+          },
+          "meta-inlet": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "nodeName": "SPAN",
+            "scrollWidth": 0,
+            "scrollHeight": 0,
+            "clientWidth": 0,
+            "clientHeight": 0
+          },
+          "title-inlet": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "nodeName": "SPAN",
+            "scrollWidth": 0,
+            "scrollHeight": 0,
+            "clientWidth": 0,
+            "clientHeight": 0
+          },
+          "row-inlet": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "nodeName": "BUTTON",
+            "scrollWidth": 0,
+            "scrollHeight": 0,
+            "clientWidth": 0,
+            "clientHeight": 0
+          },
+          "meta-station": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "nodeName": "SPAN",
+            "scrollWidth": 0,
+            "scrollHeight": 0,
+            "clientWidth": 0,
+            "clientHeight": 0
+          },
+          "title-station": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "nodeName": "SPAN",
+            "scrollWidth": 0,
+            "scrollHeight": 0,
+            "clientWidth": 0,
+            "clientHeight": 0
+          },
+          "row-station": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "nodeName": "BUTTON",
+            "scrollWidth": 0,
+            "scrollHeight": 0,
+            "clientWidth": 0,
+            "clientHeight": 0
+          },
+          "list": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "nodeName": "DIV",
+            "scrollWidth": 0,
+            "scrollHeight": 0,
+            "clientWidth": 0,
+            "clientHeight": 0
+          },
+          "detail-text": {
+            "x": 40,
+            "y": 403.047607421875,
+            "width": 331.4285888671875,
+            "height": 54.09521484375,
+            "nodeName": "P",
+            "scrollWidth": 331,
+            "scrollHeight": 54,
+            "clientWidth": 331,
+            "clientHeight": 54
+          },
+          "mark-reviewed": {
+            "x": 40.380950927734375,
+            "y": 475.4285888671875,
+            "width": 331.42852783203125,
+            "height": 48,
+            "nodeName": "BUTTON",
+            "scrollWidth": 329,
+            "scrollHeight": 46,
+            "clientWidth": 329,
+            "clientHeight": 46
+          },
+          "back": {
+            "x": 40.380950927734375,
+            "y": 541.3333740234375,
+            "width": 331.42852783203125,
+            "height": 48,
+            "nodeName": "BUTTON",
+            "scrollWidth": 329,
+            "scrollHeight": 46,
+            "clientWidth": 329,
+            "clientHeight": 46
+          },
+          "detail": {
+            "x": 20.190475463867188,
+            "y": 301.71429443359375,
+            "width": 371.4285888671875,
+            "height": 376.3809814453125,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 376,
+            "clientWidth": 371,
+            "clientHeight": 376
+          },
+          "regions": {
+            "x": 20.190475463867188,
+            "y": 301.71429443359375,
+            "width": 371.4285888671875,
+            "height": 376.3809814453125,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 376,
+            "clientWidth": 371,
+            "clientHeight": 376
+          },
+          "line-height-probe": {
+            "x": 0,
+            "y": -51.809539794921875,
+            "width": 260.19049072265625,
+            "height": 22.4761962890625,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 22,
+            "clientWidth": 260,
+            "clientHeight": 22
+          },
+          "probe-compact": {
+            "x": 0,
+            "y": -29.333343505859375,
+            "width": 260.19049072265625,
+            "height": 67.4285888671875,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 67,
+            "clientWidth": 260,
+            "clientHeight": 67
+          },
+          "probe-open": {
+            "x": 0,
+            "y": 38.095245361328125,
+            "width": 260.19049072265625,
+            "height": 81.14288330078125,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 81,
+            "clientWidth": 260,
+            "clientHeight": 81
+          },
+          "root": {
+            "x": 0,
+            "y": -51.809539794921875,
+            "width": 411.4285583496094,
+            "height": 914.2857666015625,
+            "nodeName": "DIV",
+            "scrollWidth": 411,
+            "scrollHeight": 914,
+            "clientWidth": 411,
+            "clientHeight": 914
+          }
+        },
+        "observedAt": "2026-10-25T14:30:26.893Z",
+        "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / android",
+        "provider": "native-android"
+      },
+      "screenshot": "artifacts/expo-design-theory/native-round2/android-detail.png"
+    },
+    {
+      "name": "reviewed-long-text",
+      "receipt": {
+        "deliveredAt": "2026-10-25T14:30:34.174Z",
+        "platform": "native-android",
+        "viewport": {
+          "width": 411.42857142857144,
+          "height": 814.4761904761905,
+          "scale": 2.625,
+          "fontScale": 1
+        },
+        "safeArea": {
+          "left": 0,
+          "bottom": 48,
+          "right": 0,
+          "top": 51.80952453613281
+        },
+        "filter": "all",
+        "selected": null,
+        "reviewed": [
+          "reservoir",
+          "inlet"
+        ],
+        "enlarged": false,
+        "longText": true,
+        "textScale": 1,
+        "scenario": "native-android-411-1",
+        "phase": "resolved-kernels",
+        "resultIdentity": "b365f97bdbbec88c8b7396c545bf183583db309c70b9f886afcd3b7f388cbe45",
+        "sourceIdentity": "c51150c1a3b2c80819a01cb785932f3cc3861867533e340952b6f2c56a76eff1",
+        "values": {
+          "fontSize": 16,
+          "lineHeight": 1.4,
+          "tracking": 0,
+          "rowHeight": 83.4285888671875,
+          "rowPadding": 8,
+          "columns": 1,
+          "padding": 20,
+          "gap": 20,
+          "listWidth": 371.42857142857144,
+          "detailWidth": 371.42857142857144
+        },
+        "candidates": [
+          {
+            "id": "compact",
+            "fontSize": 16,
+            "lineHeight": 1.4,
+            "trackingEm": 0
+          },
+          {
+            "id": "open",
+            "fontSize": 18,
+            "lineHeight": 1.5,
+            "trackingEm": 0
+          }
+        ],
+        "boxes": {
+          "filter-all": {
+            "x": 20.190475463867188,
+            "y": 177.90475463867188,
+            "width": 146.6666717529297,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 145,
+            "scrollHeight": 46,
+            "clientWidth": 145,
+            "clientHeight": 46
+          },
+          "filter-review": {
+            "x": 174.85714721679688,
+            "y": 177.90475463867188,
+            "width": 129.90475463867188,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 128,
+            "scrollHeight": 46,
+            "clientWidth": 128,
+            "clientHeight": 46
+          },
+          "enlarge": {
+            "x": 20.190475463867188,
+            "y": 233.90476989746094,
+            "width": 110.09524536132812,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 108,
+            "scrollHeight": 46,
+            "clientWidth": 108,
+            "clientHeight": 46
+          },
+          "long-text": {
+            "x": 138.28570556640625,
+            "y": 233.90476989746094,
+            "width": 121.142822265625,
+            "height": 48.00001525878906,
+            "nodeName": "BUTTON",
+            "scrollWidth": 119,
+            "scrollHeight": 46,
+            "clientWidth": 119,
+            "clientHeight": 46
+          },
+          "meta-inlet": {
+            "x": 36.95237731933594,
+            "y": 356.952392578125,
+            "width": 337.5238037109375,
+            "height": 17.142822265625,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 17,
+            "clientWidth": 338,
+            "clientHeight": 17
+          },
+          "title-inlet": {
+            "x": 36.95237731933594,
+            "y": 382.09527587890625,
+            "width": 337.5238037109375,
+            "height": 44.952392578125,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 45,
+            "clientWidth": 338,
+            "clientHeight": 45
+          },
+          "row-inlet": {
+            "x": 20.190475463867188,
+            "y": 348.19049072265625,
+            "width": 371.4285888671875,
+            "height": 128.76190185546875,
+            "nodeName": "BUTTON",
+            "scrollWidth": 369,
+            "scrollHeight": 127,
+            "clientWidth": 369,
+            "clientHeight": 127
+          },
+          "meta-reservoir": {
+            "x": 36.95237731933594,
+            "y": 497.5238037109375,
+            "width": 337.5238037109375,
+            "height": 17.14288330078125,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 17,
+            "clientWidth": 338,
+            "clientHeight": 17
+          },
+          "title-reservoir": {
+            "x": 36.95237731933594,
+            "y": 522.6666870117188,
+            "width": 337.5238037109375,
+            "height": 22.47613525390625,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 22,
+            "clientWidth": 338,
+            "clientHeight": 22
+          },
+          "row-reservoir": {
+            "x": 20.190475463867188,
+            "y": 488.76190185546875,
+            "width": 371.4285888671875,
+            "height": 106.66668701171875,
+            "nodeName": "BUTTON",
+            "scrollWidth": 369,
+            "scrollHeight": 105,
+            "clientWidth": 369,
+            "clientHeight": 105
+          },
+          "meta-station": {
+            "x": 36.95237731933594,
+            "y": 616,
+            "width": 337.5238037109375,
+            "height": 17.142822265625,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 17,
+            "clientWidth": 338,
+            "clientHeight": 17
+          },
+          "title-station": {
+            "x": 36.95237731933594,
+            "y": 641.142822265625,
+            "width": 337.5238037109375,
+            "height": 22.4761962890625,
+            "nodeName": "SPAN",
+            "scrollWidth": 338,
+            "scrollHeight": 22,
+            "clientWidth": 338,
+            "clientHeight": 22
+          },
+          "row-station": {
+            "x": 20.190475463867188,
+            "y": 607.2380981445312,
+            "width": 371.4285888671875,
+            "height": 106.28570556640625,
+            "nodeName": "BUTTON",
+            "scrollWidth": 369,
+            "scrollHeight": 104,
+            "clientWidth": 369,
+            "clientHeight": 104
+          },
+          "list": {
+            "x": 20.190475463867188,
+            "y": 301.71429443359375,
+            "width": 371.4285888671875,
+            "height": 411.80950927734375,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 412,
+            "clientWidth": 371,
+            "clientHeight": 412
+          },
+          "detail-text": {
+            "x": 40,
+            "y": 835.047607421875,
+            "width": 331.4285888671875,
+            "height": 81.142822265625,
+            "nodeName": "P",
+            "scrollWidth": 331,
+            "scrollHeight": 81,
+            "clientWidth": 331,
+            "clientHeight": 81
+          },
+          "detail": {
+            "x": 20.190475463867188,
+            "y": 733.7142333984375,
+            "width": 371.4285888671875,
+            "height": 271.23828125,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 272,
+            "clientWidth": 371,
+            "clientHeight": 271
+          },
+          "regions": {
+            "x": 20.190475463867188,
+            "y": 301.71429443359375,
+            "width": 371.4285888671875,
+            "height": 703.2382202148438,
+            "nodeName": "DIV",
+            "scrollWidth": 371,
+            "scrollHeight": 704,
+            "clientWidth": 371,
+            "clientHeight": 703
+          },
+          "line-height-probe": {
+            "x": 0,
+            "y": -51.809539794921875,
+            "width": 260.19049072265625,
+            "height": 22.4761962890625,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 22,
+            "clientWidth": 260,
+            "clientHeight": 22
+          },
+          "probe-compact": {
+            "x": 0,
+            "y": -29.333343505859375,
+            "width": 260.19049072265625,
+            "height": 67.4285888671875,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 67,
+            "clientWidth": 260,
+            "clientHeight": 67
+          },
+          "probe-open": {
+            "x": 0,
+            "y": 38.095245361328125,
+            "width": 260.19049072265625,
+            "height": 81.14288330078125,
+            "nodeName": "P",
+            "scrollWidth": 260,
+            "scrollHeight": 81,
+            "clientWidth": 260,
+            "clientHeight": 81
+          },
+          "root": {
+            "x": 0,
+            "y": -51.809539794921875,
+            "width": 411.4285583496094,
+            "height": 914.2857666015625,
+            "nodeName": "DIV",
+            "scrollWidth": 411,
+            "scrollHeight": 914,
+            "clientWidth": 411,
+            "clientHeight": 914
+          }
+        },
+        "observedAt": "2026-10-25T14:30:34.244Z",
+        "runtime": "Expo58 / React19.3 / RN0.88 / RSD0.0.55 / android",
+        "provider": "native-android"
+      },
+      "screenshot": "artifacts/expo-design-theory/native-round2/android-reviewed-long-text.png"
+    }
+  ],
+  "checks": [
+    {
+      "name": "normal-source-and-result",
+      "passed": true
+    },
+    {
+      "name": "normal-horizontal-containment",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "normal-actual-region-widths",
+      "passed": true,
+      "measured": {
+        "list": 371.4285888671875,
+        "detail": 371.4285888671875
+      },
+      "expected": {
+        "list": 371.42857142857144,
+        "detail": 371.42857142857144
+      }
+    },
+    {
+      "name": "normal-actual-line-height",
+      "passed": true,
+      "measured": 22.4761962890625,
+      "expected": 22.4
+    },
+    {
+      "name": "normal-row-minimum",
+      "passed": true,
+      "measured": 106.28570556640625,
+      "expectedMinimum": 83.4285888671875
+    },
+    {
+      "name": "enlarged-source-and-result",
+      "passed": true
+    },
+    {
+      "name": "enlarged-horizontal-containment",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "enlarged-actual-region-widths",
+      "passed": true,
+      "measured": {
+        "list": 371.4285888671875,
+        "detail": 371.4285888671875
+      },
+      "expected": {
+        "list": 371.42857142857144,
+        "detail": 371.42857142857144
+      }
+    },
+    {
+      "name": "enlarged-actual-line-height",
+      "passed": true,
+      "measured": 44.952392578125,
+      "expected": 44.8
+    },
+    {
+      "name": "enlarged-row-minimum",
+      "passed": true,
+      "measured": 240.761962890625,
+      "expectedMinimum": 240.7618865966797
+    }
+  ],
+  "error": null,
+  "scope": "Actual native app, native touch injection, actual native host-node rectangles. Declared style values remain distinct from measured geometry. iOS/Android virtual devices, not physical hardware power or full accessibility audit."
+}
