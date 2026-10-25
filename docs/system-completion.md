@@ -1,6 +1,21 @@
 # Engineering acceptance ledger and mission gaps
 
-**Mission status: not achieved.** The missing core is the brief-driven, repeated System 1/tool decision tree that should reduce main-agent reasoning cost while producing stronger complete designs. Interview and art direction are required inputs. Physics/energy means coupled tool-exposed influences; it does not require a separate physics simulator. Music remains an optional theory. Current selection follows a flat candidate batch, and Fieldwork uses a separate heuristic planner. Prior completion and no-art-direction benchmark language misrepresented this target.
+**Current status:** the fast mathematical choice loop, resolved/replayable design machine and complete Vela app are implemented. The current proof and measured limitations are in [the design-machine report](design-machine-report.md). The ledger below is the previous milestone audit, retained to distinguish what the new implementation closes. Award-level preference, neural taste competence and lower end-to-end agent cost remain unproved.
+
+## Current implementation
+
+| Area | Current outcome |
+| --- | --- |
+| Coupled equations and choices | Bounded expression programs, separate hard constraints and attributed preference fields, multiple wells, Pareto evidence, evaluated local-choice graphs and finite-difference pressures. The Vela run explored 1,795 configurations in 1.69 seconds; incomplete search is explicit. |
+| Executable handoff | Content variants, responsive regions, guarded transitions, motion and editable alternatives. XState execution and portable evaluators reject stale policies; cached replay uses zero selector calls. Literal-zero guards and rejected-transition side effects have distinguishing regressions. |
+| Tool access | 39 typed CLI commands through three default MCP tools, lazy schemas and exact result references. Component drawings and motion inspection use the existing optional App resource; headless use remains independent. |
+| Color and dimensions | Pinned Color.js, OKLab/OKLCH, explicit gamut/fallback and alpha uncertainty, joint locked palette repairs; slot/padding/border/baseline/radius contracts with measured versus proposed geometry. |
+| Motion and responsive behavior | Analytic spring extrema, energy and settling; supported browser/native plans and reduced-motion substitution. Flex-only topology, content-fit navigation, semantic compact hierarchy, persistent task docks and unavailable-geometry boundaries. |
+| Complete product evidence | Vela's six screens consume the shared contract on React + StyleX and actual native Text/Yoga. Browser, native scale, task-flow and visual-review evidence retain separate scopes and source identities. The current report records the final collected results. Fieldwork and the original typography fixtures remain available. |
+| Review repairs | Restore failures block writes, saved-data decoding is strict, live observations do not starve during timer updates, Android raw advances remain separate from native trimmed-line measurements, and primary-action proof requires the actual dock. |
+| Research conclusion | Mathematical search and replay are measured. The local neural readout remains slow on CPU; its taste is unvalidated. Human preference, award-level quality and lower end-to-end agent cost remain open. The historical negative efficiency result below is retained. |
+
+## Historical milestone audit
 
 This ledger separates implemented engineering, executed evidence and claims that remain unknown or failed. The [whole-system report](system-report.md) gives measurements and limitations. The expanded Fieldwork composition proof is part of acceptance, not a replacement for the renderer/tool tests.
 
@@ -28,7 +43,7 @@ The scientific conclusion is scoped: the infrastructure is useful for making rel
 
 The whole-app examples were implemented with human direction and explicit Astra review prompts. A realistic interview/brief is intended, not an experimental defect. The matched-brief repeated-System-1-tree experiment has not run; an unbriefed or no-art-direction task is not the acceptance test. The central search state still focuses on two text archetypes; the composition planner and geometry audit are separate tools. No general component catalog, Figma/DTCG import/export or whole-app component compiler is claimed. See [the complete landscape](landscape.md).
 
-## Relationship and component precision audit
+## Previous relationship and component precision audit
 
 | Intended capability                                | Current implementation                                                                                                                                                                                                                                  | Mission disposition                                                                                                          |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -40,3 +55,7 @@ The whole-app examples were implemented with human direction and explicit Astra 
 | Award-caliber output                               | Coherent product examples and synthetic critiques; no blinded human preference evidence.                                                                                                                                                                | Not demonstrated.                                                                                                            |
 
 The dimensional-drawing reference is pinned in [provenance](../research/dimensional-drawing-provenance.json). It supports a more precise inspection representation; it is not itself a component solver or evidence of beauty. The next required architecture is specified as proposed work in [ADR001](adr-001.md#required-component-contract-and-inspection-layer).
+
+## Current closure
+
+ADR002 and the Vela report supersede the previous missing-mechanism rows: weighted search records local choice edges; the handoff carries content/region/transition rules; portable replay recomputes guards; component contracts produce exact technical drawings; Color.js palette tools and motion mathematics are integrated. Vela consumes that shared contract on web and native. The earlier benchmark and licensed-corpus/human-preference gaps remain unchanged. Full machine and rendered evidence are linked in the current report.

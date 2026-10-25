@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Local conditional typography tools; measurements are facts, compatibility is a revisable hypothesis.",
+  "description": "Local tools for coupled typography, layout, color and motion decisions, bounded mathematical search and reusable design machines.",
   "bin": {
     "design": "./dist/cli.js"
   },
@@ -36,7 +36,13 @@
     "fieldwork:build": "npm run build && node scripts/build-fieldwork.mjs",
     "fieldwork:web:proof": "node scripts/prove-fieldwork-web.mjs",
     "fieldwork:native": "node scripts/native-session.mjs --fieldwork",
-    "fieldwork:native:flows": "node scripts/fieldwork-native-flows.mjs"
+    "fieldwork:native:flows": "node scripts/fieldwork-native-flows.mjs",
+    "vela:design": "tsx scripts/vela-design.ts",
+    "vela:build": "npm run build && npm run vela:design && node scripts/build-vela.mjs",
+    "vela:web:proof": "node scripts/prove-vela-web.mjs",
+    "vela:native": "node scripts/native-session.mjs --vela",
+    "vela:native:flows": "node scripts/vela-native-flows.mjs",
+    "design:machine:proof": "node scripts/prove-design-machine.mjs"
   },
   "engines": {
     "node": ">=22"
@@ -47,11 +53,13 @@
     "@modelcontextprotocol/sdk": "1.32.2",
     "@stylexjs/babel-plugin": "0.19.1",
     "@stylexjs/stylex": "0.19.1",
+    "colorjs.io": "0.7.1",
     "esbuild": "0.25.12",
     "fontkit": "2.0.4",
     "playwright": "1.64.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "xstate": "5.33.3",
     "zod": "4.6.7"
   },
   "devDependencies": {

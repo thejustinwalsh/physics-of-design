@@ -2,7 +2,7 @@
 
 2026-10-24, America/Detroit. Engineering verification continued into 2026-10-25 UTC. This supersedes the earlier [spike report](spike-report.md).
 
-**Mission-level correction after the user clarified the architecture:** the engineering milestone is verified, but repeated System 1 decisions over measured tool actions do not yet form a persistent search tree. The system should begin with an interview and product/visual brief. Physics/energy names the coupled influences tools expose; a physical simulator is not required. Music remains an optional theory. Fieldwork still uses a separate heuristic planner. [Explicit mission gaps](system-completion.md#relationship-and-component-precision-audit).
+**Historical milestone report.** The subsequent brief-driven fast search, choice graph, resolved machine, perceptual color/motion tools and complete Vela proof are described in [the current report](design-machine-report.md). This document retains the original core verification and flat-search evaluation; those measurements are not a test of the new loop.
 
 The reusable tool stack is implemented: 24 composable JSON commands, thin MCP wrappers, a typed relational state and dependency graph, real font shaping and browser/native measurement, conditional factors, coupled candidate search, editable responsive flex policies, proof tools, one actual local SemIf/Qwen selector, corpus operations and an evaluation pipeline. The two specimens are executable fixtures for the stack. All typography, color, spacing, responsive anchors, pins and locks remain editable. Complete publication/native-app proofs now supplement the original two text fixtures.
 

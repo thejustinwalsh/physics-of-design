@@ -151,6 +151,14 @@ export async function selectChoice(
       });
     }
   }
+  for (const candidate of viable)
+    if (
+      measurementKey(candidate.state) !==
+      verified.find((v) => v.id === candidate.id)!.inputHash
+    )
+      throw new Error(
+        'candidate font content changed during selection; remeasure before choosing',
+      );
   if (!viable.length)
     return {
       selected: null,
@@ -177,10 +185,6 @@ export async function selectChoice(
     readout === 'balanced'
       ? [...viable].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
       : viable;
-  const ggufHash = createHash('sha256');
-  for await (const chunk of createReadStream(request.gguf))
-    ggufHash.update(chunk);
-  const checkpointHash = ggufHash.digest('hex');
   const payload = {
     state: {
       purpose:
@@ -235,6 +239,64 @@ export async function selectChoice(
       }),
     })),
   };
+  const selected = await selectLocalOptions({
+    payload,
+    gguf: request.gguf,
+    profile: request.profile,
+    readout,
+    maxPromptTokens: request.maxPromptTokens,
+    ...(request.auditDirectory
+      ? { auditDirectory: request.auditDirectory }
+      : {}),
+  });
+  for (const candidate of viable) {
+    if (
+      measurementKey(candidate.state) !==
+      verified.find((v) => v.id === candidate.id)!.inputHash
+    )
+      throw new Error(
+        'candidate font content changed during selection; remeasure before choosing',
+      );
+  }
+  return { ...selected, modelCalled: true, verified, rejected };
+}
+
+export async function checkpointDigest(file: string) {
+  const digest = createHash('sha256');
+  for await (const chunk of createReadStream(file)) digest.update(chunk);
+  return digest.digest('hex');
+}
+
+export interface LocalOptionsPayload {
+  state: unknown;
+  question: string;
+  options: { id: string; description: string }[];
+}
+export async function selectLocalOptions(request: {
+  payload: LocalOptionsPayload;
+  gguf: string;
+  profile: z.infer<typeof SelectorProfileSchema>;
+  readout: 'single' | 'balanced';
+  maxPromptTokens: number;
+  auditDirectory?: string | undefined;
+}) {
+  const profile = selectorProfiles[request.profile],
+    readout = request.readout;
+  if (
+    !request.payload.options.length ||
+    request.payload.options.length > 16 ||
+    new Set(request.payload.options.map((o) => o.id)).size !==
+      request.payload.options.length
+  )
+    throw new Error('Local selector requires 1–16 unique options');
+  if (readout === 'balanced' && request.payload.options.length > 6)
+    throw new Error('Balanced local readout supports at most six options');
+  const ordered =
+    readout === 'balanced'
+      ? [...request.payload.options].sort((a, b) => a.id.localeCompare(b.id))
+      : request.payload.options;
+  const payload = { ...request.payload, options: ordered };
+  const checkpointHash = await checkpointDigest(request.gguf);
   const id = hash({
     algorithm: 'physics-choice-v2',
     checkpointHash,
@@ -347,15 +409,6 @@ export async function selectChoice(
       scores.get(candidate.id)! > scores.get(best.id)! ? candidate : best,
     ).id;
     const result = results[0]!;
-    for (const candidate of viable) {
-      if (
-        measurementKey(candidate.state) !==
-        verified.find((v) => v.id === candidate.id)!.inputHash
-      )
-        throw new Error(
-          'candidate font content changed during selection; remeasure before choosing',
-        );
-    }
     if (request.auditDirectory) {
       await mkdir(request.auditDirectory, { recursive: true });
       await writeFile(
@@ -369,9 +422,6 @@ export async function selectChoice(
     }
     return {
       selected,
-      modelCalled: true,
-      verified,
-      rejected,
       provenance: {
         profile: request.profile,
         readoutMode: readout,

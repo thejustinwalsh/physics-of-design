@@ -30,8 +30,10 @@ function display(result: {
 }) {
   if (typeof result._meta?.proofHtml === 'string') {
     frame.srcdoc = result._meta.proofHtml;
-    status.textContent =
-      'Editable preview. Geometry is verified by renderer tools; this view is not an aesthetic score.';
+    status.textContent = result._meta?.inspection
+      ? String(result._meta.inspection) +
+        ' — exact contract, provenance and pending verification.'
+      : 'Editable preview. Geometry is verified by renderer tools; this view is not an aesthetic score.';
   }
   if (result._meta?.state) state = result._meta.state as DesignState;
   const structured = result._meta?.result ?? result.structuredContent;

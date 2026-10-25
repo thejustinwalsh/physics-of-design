@@ -36,3 +36,13 @@ The evaluation CLI consumes observations; it does not invent rater judgments or 
 The registered protocol remains prospective for human preference and practical acceptance. Twelve same-agent state-decision trials were executed on four projects: tools increased tokens/latency, attempts stayed at one, and all recorded renderer checks passed. No human preferences exist. [Whole-system report](system-report.md) gives exact outcomes and limits. Thresholds were not changed after observing this result.
 
 Two isolated Astra raters inspected 36 original specimen images across phone/tablet/desktop. Their six project-level choices retain synthetic provenance, ties, an exposed-configuration abstention and a preassigned project split. No numerical aesthetic equation was fitted from this small confounded batch. The tiny selector's original probe failed order stability; the balanced follow-up addresses the protocol, not aesthetic validation. Color/composition equations received independent oracle and boundary review. [Color evidence](color-equation-review.md), [synthetic review](tuning-review.md), [selector report](selector-and-training.md).
+
+## Fast design machine, perceptual color and motion update
+
+Pinned implementation dependencies: Color.js0.7.1 (MIT; https://colorjs.io/docs/gamut-mapping.html) and XState5.33.3 (MIT; installed package APIs/types inspected). Stately Agent (https://github.com/statelyai/agent, MIT) informs bounded state/action/observation and reusable-path architecture; its package is not installed. Current online Stately pages may describe v6, so code follows the installed v5 API.
+
+CSS Color4 CRD2026-10-22 supports several gamut-mapping algorithms; the toolkit names its Color.js mapping and emitted fallback explicitly. RGBA8 emission and conservative compositing bounds are distinct from universal compositor parity. WCAG2 contrast supplies thresholds; ARIA semantics determine role applicability, not contrast ratios.
+
+The spring ODE and its energy identity are analytical mechanics, with UI-coordinate units explicitly stated. A brief's nonzero overshoot/settling preference is art direction; reduced motion and property bounds are separate constraints. RN0.88 spring implementation was inspected: overdamped JS behavior cannot be assumed to match the analytic overdamped model, so unsupported direct mappings are reported.
+
+The complete Vela policy uses actual licensed-font advances, nine width/scale scenarios, finite weighted preference bands, task-specific compact typography and declared copy/navigation/phase transitions. These are authored, source-attributed rules refined by synthetic critique and real rendering; they are not an empirical model of beauty. [Current report](design-machine-report.md).

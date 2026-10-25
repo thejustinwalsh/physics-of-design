@@ -23,6 +23,9 @@ const steps = [
   ['consumer', ['node', 'scripts/consumer-check.mjs']],
   ['fieldwork-build', ['node', 'scripts/build-fieldwork.mjs']],
   ['fieldwork-web', ['node', 'scripts/prove-fieldwork-web.mjs']],
+  ['vela-policy', ['npx', 'tsx', 'scripts/vela-design.ts']],
+  ['vela-build', ['node', 'scripts/build-vela.mjs']],
+  ['vela-web', ['node', 'scripts/prove-vela-web.mjs']],
 ];
 if (all) {
   if (!process.env.DESIGN_NATIVE_TOKEN)

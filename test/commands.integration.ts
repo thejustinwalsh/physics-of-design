@@ -35,7 +35,102 @@ const trainingPair = {
     images: [id + '-contract-fixture-not-a-rendered-image'],
   })),
 };
+const velaProblem = JSON.parse(
+  readFileSync('examples/vela/problem.json', 'utf8'),
+);
+const velaDesign = JSON.parse(
+  readFileSync('examples/vela/design.generated.json', 'utf8'),
+);
+const motionFixture = {
+  spring: { mass: 1, stiffness: 170, damping: 18 },
+  coordinate: { unit: 'dp', from: 24, to: 0 },
+  sampleCount: 5,
+};
+const componentFixture = {
+  id: 'contract-fixture',
+  platform: 'web',
+  unit: 'css-px',
+  stateRef: 'fixture',
+  contentRef: 'fixture',
+  viewport: { width: 390, height: 844, textScale: 1 },
+  source: ['fixture'],
+  availableWidth: 320,
+  border: 1,
+  padding: { inline: 16, top: 12, bottom: 12 },
+  gaps: { leading: 8, trailing: 8 },
+  text: {
+    id: 'label',
+    fontRef: 'fixture',
+    minWidth: 100,
+    measuredHeight: null,
+    measurement: null,
+    source: ['fixture'],
+  },
+  minHitSize: 44,
+};
 const inputs: Record<string, unknown> = {
+  'component solve': componentFixture,
+  'component inspect': componentFixture,
+  'motion proof': motionFixture,
+  'energy analyze': {
+    program: velaProblem.program,
+    assignment: velaDesign.handoff.assignment,
+  },
+  'energy search': {
+    program: velaProblem.program,
+    options: { maxEvaluations: 12 },
+  },
+  'composition solve': { ...velaProblem, options: { maxEvaluations: 12 } },
+  'decision handoff': {
+    ...velaProblem,
+    assignment: velaDesign.handoff.assignment,
+  },
+  'decision replay': {
+    ...velaProblem,
+    recipe: velaDesign.handoff,
+    scenario: velaProblem.program.scenarios[0].values,
+  },
+  'color convert': { color: 'oklch(60% 0.2 200)' },
+  'palette ramp': { color: '#3d44e8', lightness: [0.3, 0.6, 0.9] },
+  'palette analyze': {
+    system: {
+      tokens: { canvas: '#fff', ink: '#111' },
+      roles: [
+        {
+          id: 'body',
+          foreground: 'ink',
+          background: 'canvas',
+          use: 'text',
+          source: ['test'],
+        },
+      ],
+    },
+  },
+  'palette candidates': {
+    system: {
+      tokens: { canvas: '#fff', ink: '#aaa' },
+      roles: [
+        {
+          id: 'body',
+          foreground: 'ink',
+          background: 'canvas',
+          use: 'text',
+          source: ['test'],
+        },
+      ],
+    },
+    editableTokens: ['ink'],
+    maxAttempts: 12,
+    limit: 2,
+  },
+  'motion analyze': motionFixture,
+  'motion candidates': { motion: motionFixture, maxAttempts: 8, limit: 2 },
+  'motion emit': {
+    motion: motionFixture,
+    channel: 'translateY',
+    platform: 'web',
+    reducedMotion: false,
+  },
   registry: {},
   'composition plan': { mode: 'app', width: 834 },
   'platform audit': {

@@ -16,11 +16,13 @@ export function renderedColorAnalysis(input: DesignState) {
   const declared = analyzeColors(system);
   const ratio = contrastRatio(system.tokens.ink!, system.tokens.canvas!);
   const text = state.blocks.map((block) => {
+    // Explicit registered axes override CSS font-weight, as they do in fontAt/emission.
+    const effectiveWeight = block.font.axes.wght ?? block.weight;
     // Native points are not inferred to be CSS px: conservatively retain 4.5.
     const large =
       state.platform === 'web' &&
       (block.size >= 24 ||
-        (block.size >= 18.6666666667 && block.weight >= 700));
+        (block.size >= (14 * 96) / 72 && effectiveWeight >= 700));
     const minimum = large ? 3 : 4.5;
     return {
       id: block.id,
@@ -29,6 +31,7 @@ export function renderedColorAnalysis(input: DesignState) {
       passes: ratio >= minimum,
       size: block.size,
       weight: block.weight,
+      effectiveWeight,
       source:
         'https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html',
       scope:

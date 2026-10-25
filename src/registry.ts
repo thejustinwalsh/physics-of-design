@@ -12,6 +12,51 @@ export type Source = {
 };
 export const sources: Source[] = [
   {
+    id: 'colorjs',
+    title: 'Color.js 0.7.1 gamut mapping',
+    url: 'https://colorjs.io/docs/gamut-mapping.html',
+    kind: 'measurement',
+    scope:
+      'Pinned perceptual conversions, explicit sRGB fallback, OKLab distances and named gamut mapping.',
+    limitation:
+      'RGBA8/alpha uncertainty and exact emitted colors are separate from universal browser/native compositor parity.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'spring-mechanics',
+    title: 'MIT 8.03: damped free oscillators',
+    url: 'https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/pages/part-i-mechanical-vibrations-and-waves/lecture-2/',
+    kind: 'measurement',
+    scope:
+      'Analytic stationary-target spring ODE, velocity, acceleration, extrema and mechanical energy identity.',
+    limitation:
+      'UI coordinates do not imply physical joules. Desired overshoot/settling are brief preferences, and platform implementation parity requires verification.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'dimensional-contract',
+    title: 'Dimensional Drawing (pinned Enes Ozturk source)',
+    url: 'https://github.com/enesozturk/dimensional-drawing',
+    kind: 'heuristic',
+    scope:
+      'Attributed technical drawing conventions adapted to one exact component dimension contract.',
+    limitation:
+      'Drawing conventions are not a component solver or evidence of visual beauty; unknown ink and stale measurements remain unknown.',
+    checked: '2026-10-25',
+  },
+  {
+    id: 'brief-energy',
+    title: 'Physics of Design brief-conditioned mathematical search',
+    url: 'https://github.com/thejustinwalsh/physics-of-design/blob/main/docs/adr-002-fast-design-machine.md',
+    kind: 'heuristic',
+    scope:
+      'Editable weighted target bands, coupled expressions, finite differences and bounded choice graphs.',
+    limitation:
+      'No universal beauty score, learned taste calibration, global optimum claim or empirical musical superiority.',
+    checked: '2026-10-25',
+  },
+
+  {
     id: 'wcag-contrast',
     title: 'WCAG 2.2 contrast requirements',
     url: 'https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html',
@@ -28,7 +73,7 @@ export const sources: Source[] = [
     kind: 'measurement',
     scope: 'Perceptual color coordinate descriptors and distances.',
     limitation:
-      'Not a salience, harmony or preference model; opaque sRGB adapter only.',
+      'Not a salience, harmony or preference model. Legacy state uses opaque hex; palette tools add explicit CSS4 fallback and alpha uncertainty.',
     checked: '2026-10-24',
   },
   {
@@ -38,7 +83,7 @@ export const sources: Source[] = [
     kind: 'standard',
     scope: 'Color spaces, powerless hue and gamut terminology.',
     limitation:
-      'Local bounded chroma reduction is not claimed to implement the CSS gamut mapping algorithm.',
+      'Legacy bounded chroma reduction is separate from the Color.js CSS mapping used by palette tools; current CSS draft permits multiple algorithms.',
     checked: '2026-10-24',
   },
   {

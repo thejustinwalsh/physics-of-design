@@ -1,3 +1,4 @@
+import { nativeSourceIdentity } from './native-source-identity.mjs';
 import { spawn, execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { readFile, mkdir, writeFile, open } from 'node:fs/promises';
@@ -11,6 +12,7 @@ const env = {
   ...process.env,
   DESIGN_NATIVE_TOKEN: process.env.DESIGN_NATIVE_TOKEN ?? 'local-spike',
   __UNSAFE_EXPO_HOME_DIRECTORY: path.join(root, 'artifacts/expo-home'),
+  EXPO_PUBLIC_DESIGN_SOURCE_HASH: await nativeSourceIdentity(),
   EXPO_PUBLIC_DESIGN_TOKEN: process.env.DESIGN_NATIVE_TOKEN ?? 'local-spike',
   EXPO_NO_TELEMETRY: '1',
   DOTSLASH_CACHE: path.join(root, 'artifacts/dotslash'),
@@ -19,7 +21,12 @@ const env = {
   ANDROID_AVD_HOME: path.join(runtime, 'android-avd'),
   ANDROID_HOME: path.join(runtime, 'android-sdk'),
 };
-const productMode = process.argv.includes('--fieldwork');
+const product = process.argv.includes('--vela')
+  ? 'vela'
+  : process.argv.includes('--fieldwork')
+    ? 'fieldwork'
+    : null;
+const productMode = Boolean(product);
 const children = [];
 const set = '/private/tmp/physics-design-simulators';
 let bootedPhone;
@@ -104,7 +111,7 @@ try {
   await start(
     'metro',
     'npm',
-    ['run', 'start', '--', '--port', '8087'],
+    ['run', 'start', '--', '--clear', '--port', '8087'],
     path.join(root, 'native'),
   );
   await start('proxy', process.execPath, ['scripts/metro-proxy.mjs']);
@@ -262,7 +269,7 @@ try {
       id,
       'host.exp.Exponent',
       '--initialUrl',
-      `exp://localhost:8087/--/fieldwork?proof=session-ios-${started}`,
+      `exp://localhost:8087/--/${product}?proof=session-ios-${started}`,
       '-EXDevMenuIsOnboardingFinished',
       'YES',
       '-ExpoGoOnboardingFinished',
@@ -280,7 +287,7 @@ try {
         '-a',
         'android.intent.action.VIEW',
         '-d',
-        `exp://127.0.0.1:8088/--/fieldwork?proof=session-android-${started}`,
+        `exp://127.0.0.1:8088/--/${product}?proof=session-android-${started}`,
         '-p',
         'host.exp.exponent',
       ],
@@ -303,9 +310,9 @@ try {
           r.incomplete === false &&
           r.snapshot.hydrated,
       );
-    }, 'both actual Fieldwork app observations');
+    }, `both actual ${product} app observations`);
     console.log(
-      'Fieldwork native apps ready on iPhone and Android. Observer:4321; Metro:8087/proxy:8088. Ctrl-C stops this session’s owned services.',
+      `${product} native apps ready on iPhone and Android. Observer:4321; Metro:8087/proxy:8088. Ctrl-C stops this session’s owned services.`,
     );
   } else {
     console.log(

@@ -14,6 +14,8 @@ import {
 } from 'react-native';
 import * as Font from 'expo-font';
 import FieldworkApp from './FieldworkApp';
+import VelaApp from './VelaApp';
+import { requireOptionalNativeModule } from 'expo';
 
 const endpoint =
   process.env.EXPO_PUBLIC_DESIGN_BRIDGE ?? 'http://127.0.0.1:4319';
@@ -357,6 +359,36 @@ export default function App() {
     );
     return () => listener.remove();
   }, []);
+  useEffect(() => {
+    if (!__DEV__ || !url.includes('proof=')) return;
+    const prefs = requireOptionalNativeModule<{
+      setPreferencesAsync: (value: {
+        showFloatingActionButton: boolean;
+      }) => Promise<void>;
+    }>('DevMenuPreferences');
+    void prefs
+      ?.setPreferencesAsync({ showFloatingActionButton: false })
+      .catch(() => {});
+  }, [url]);
+  if (url.includes('/--/vela')) {
+    const query = new URL(url).searchParams,
+      screen = query.get('screen');
+    return (
+      <VelaApp
+        key={url}
+        initialScreen={
+          screen === 'detail' ||
+          screen === 'active' ||
+          screen === 'complete' ||
+          screen === 'insights' ||
+          screen === 'profile'
+            ? screen
+            : 'today'
+        }
+        proofId={query.get('proof') ?? ''}
+      />
+    );
+  }
   if (url.includes('/--/fieldwork')) {
     const query = new URL(url).searchParams;
     const screen = query.get('screen');

@@ -42,7 +42,12 @@ export async function serveMcp() {
       const resolved = store.resolve(input);
       const result = await execute(command, resolved);
       const ref = store.put(result);
-      const isUi = command === 'proof' || command === 'system relax';
+      const isUi = [
+        'proof',
+        'system relax',
+        'component inspect',
+        'motion proof',
+      ].includes(command);
       const view =
         command === 'proof' || response === 'summary'
           ? summarizeResult(command, result, ref)
@@ -50,6 +55,12 @@ export async function serveMcp() {
       let meta: Record<string, unknown> = {};
       if (isUi)
         meta = { result, state: (resolved as { state?: unknown }).state };
+      if (command === 'component inspect' || command === 'motion proof')
+        meta = {
+          ...meta,
+          proofHtml: (result as { html: string }).html,
+          inspection: command,
+        };
       if (command === 'proof') {
         const proof = result as { html?: string; files?: { html: string } };
         meta.proofHtml =
@@ -140,10 +151,17 @@ export async function serveMcp() {
     'design_specimen',
     {
       description:
-        'Open an editable typography specimen or recompute coupled alternatives in the optional MCP App.',
+        'Inspect typography, exact component drawings or motion fields; recompute coupled alternatives in the optional MCP App.',
       inputSchema: z
         .object({
-          command: z.enum(['proof', 'system relax']).default('proof'),
+          command: z
+            .enum([
+              'proof',
+              'system relax',
+              'component inspect',
+              'motion proof',
+            ])
+            .default('proof'),
           input: z.record(z.string(), z.unknown()),
         })
         .strict(),
@@ -158,7 +176,12 @@ export async function serveMcp() {
   );
   if (profile === 'full')
     for (const command of Object.keys(commandSchemas) as Command[]) {
-      const isUi = command === 'proof' || command === 'system relax';
+      const isUi = [
+        'proof',
+        'system relax',
+        'component inspect',
+        'motion proof',
+      ].includes(command);
       server.registerTool(
         `design_${command.replaceAll(' ', '_')}`,
         {

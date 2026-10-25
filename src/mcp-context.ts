@@ -82,7 +82,71 @@ export function summarizeResult(
 ): { resultRef: string | null; summary: unknown; referenceScope: string } {
   const r = record(result);
   let summary: unknown = result;
-  if (command === 'training export')
+  if (command === 'component inspect')
+    summary = {
+      contract: r.contract,
+      scope:
+        'Full SVG/HTML is available by result reference and optional MCP App.',
+    };
+  else if (command === 'motion proof')
+    summary = {
+      metrics: record(r.analysis).metrics,
+      constraints: record(r.analysis).constraints,
+      scope:
+        'Analytic samples and interactive proof are available by result reference and optional MCP App.',
+    };
+  else if (['energy search', 'composition solve'].includes(command))
+    summary = {
+      status: r.status,
+      statistics: r.statistics,
+      selected: r.selected,
+      handoff:
+        r.handoff && resultRef
+          ? { $designRef: resultRef, pointer: '/handoff' }
+          : null,
+      candidates: rows(r.candidates).map((c) => ({
+        id: c.id,
+        assignment: c.assignment,
+        energy: c.energy,
+        status: c.status,
+      })),
+      scope: r.scope,
+    };
+  else if (command === 'decision handoff')
+    summary = {
+      identity: r.identity,
+      decisions: r.decisions,
+      verification: r.verification,
+      scope: r.scope,
+    };
+  else if(command==='energy analyze') summary={programIdentity:r.programIdentity,baseline:{energy:record(r.baseline).energy,status:record(r.baseline).status},effects:rows(r.effects).map(e=>({variable:e.variable,unit:e.unit,locked:e.locked,negativeEnergySlope:e.negativeEnergySlope})),scope:r.scope};
+  else if(command==='palette analyze') summary={summary:r.summary,measurementRef:r.measurementRef,checks:rows(r.checks).map(c=>({id:c.id,status:c.status,ratio:c.ratio,required:c.required})),capabilities:r.capabilities};
+  else if (command.startsWith('motion '))
+    summary = {
+      supported: r.supported,
+      reason:r.reason,
+      plan:r.plan?{kind:record(r.plan).kind,config:record(r.plan).config}:null,
+      metrics: r.metrics??record(r.analysis).metrics,
+      constraints: r.constraints??record(r.analysis).constraints,
+      candidates: rows(r.candidates).map((c) => ({
+        id: c.id,
+        spring: c.spring??record(c.motion).spring,
+        factors: c.factors,
+      })),
+      scope: r.scope,
+    };
+  else if (command === 'palette candidates')
+    summary = {
+      statistics: r.statistics,
+      candidates: rows(r.candidates).map((c) => ({
+        id: c.id,
+        system: c.system,
+        objective: c.objective,
+        measurementRef: c.measurementRef,
+      })),
+      capabilities: r.capabilities,
+    };
+  else if (command === 'training export')
     summary = {
       counts: r.counts,
       excluded: r.excluded,

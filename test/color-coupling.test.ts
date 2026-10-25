@@ -42,3 +42,36 @@ test('color edits invalidate color facts without inventing changed glyph metrics
   const locked = { ...state, locks: ['/colors'] };
   assert.throws(() => perturb(locked, '/colors', defaultColors), /locked/);
 });
+
+test('large-text contrast uses effective variable weight and includes exact 14pt bold', () => {
+  const state = parseState(
+    JSON.parse(readFileSync('examples/hero.json', 'utf8')),
+  );
+  state.responsive = null;
+  state.colors = {
+    ...defaultColors,
+    tokens: { canvas: '#fff', ink: '#888', accent: '#005599' },
+  };
+  const title = state.blocks[0]!;
+  title.text = 'مرحبا';
+  title.font.file = 'assets/fonts/NotoSansArabic[wdth,wght].ttf';
+  title.font.family = 'Noto Sans Arabic';
+  title.size = 20;
+  title.weight = 700;
+  title.font.axes = { wght: 400 };
+  const regular = renderedColorAnalysis(state).text[0]!;
+  assert.equal(regular.effectiveWeight, 400);
+  assert.equal(regular.minimum, 4.5);
+  assert.equal(regular.passes, false);
+  title.weight = 400;
+  title.font.axes.wght = 700;
+  title.size = (14 * 96) / 72;
+  assert.equal(renderedColorAnalysis(state).text[0]!.minimum, 3);
+  assert.equal(renderedColorAnalysis(state).text[0]!.passes, true);
+  title.size -= 1e-8;
+  assert.equal(renderedColorAnalysis(state).text[0]!.minimum, 4.5);
+  title.font.axes = {};
+  title.weight = 700;
+  title.size = (14 * 96) / 72;
+  assert.equal(renderedColorAnalysis(state).text[0]!.minimum, 3);
+});

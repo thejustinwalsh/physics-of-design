@@ -1,10 +1,21 @@
 # Physics of Design
 
-Local-first TypeScript CLI/MCP tools for **conditional typography, color and spatial relationships**. Real font shaping and React/StyleX or React Native Text/Yoga establish facts. Separate, source-attributed factors propose revisable choices. SemIf selects among freshly verified alternatives using one configured local checkpoint. The provisional 4B profile and an experimental 0.8B memory-fit profile are pinned separately.
+Local-first TypeScript CLI/MCP tools for **brief-driven mathematical design decisions**: coupled typography, perceptual color, responsive composition, precise component geometry and expressive motion. Fast bounded search explores weighted choices; a resolved design machine carries them into React + StyleX and React Native. Real renderers establish facts. Optional SemIf selects a mathematical frontier; it never verifies quality.
 
-This is a typography/layout toolkit with two executable specimens, not a component catalog or UI composer. Compatibility is not beauty, entropy is not quality, and model confidence is not verification.
+Vela is a complete six-screen app built from a generated policy. Fieldwork and the typography specimens remain executable proofs. This is a relational tool stack, not a component catalog or UI composer. Brief preference energy is not universal beauty, and musical ratios remain an optional hypothesis.
 
-[Full system landscape](docs/landscape.md) explains the tools, agents, component/design-system boundaries, skill and unproven autonomy claims.
+[Current implementation and measured limits](docs/design-machine-report.md) · [Full landscape](docs/landscape.md) · [Architecture](docs/adr-002-fast-design-machine.md)
+
+```sh
+npm ci && npm run build
+./dist/cli.js composition solve --input examples/vela/problem.json --output /tmp/vela-choices.json
+npm run vela:build
+npm run vela:web:proof
+# Actual native app, after native provisioning:
+DESIGN_NATIVE_TOKEN=local-spike npm run vela:native
+```
+
+The solver returns an editable handoff, alternatives, factor evidence and an evaluated choice graph. MCP returns compact summaries and exact result references. Saved machines replay without inference; real rendering remains required.
 
 ## Run
 
@@ -21,6 +32,12 @@ Every command reads one JSON object, writes JSON to stdout, and sends errors to 
 
 | Command                                      | Purpose                                                                                     |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `energy search` / `energy analyze` | Bounded weighted search, evaluated choice graph and local finite-difference pressures |
+| `composition solve` | Brief-conditioned search, optional local frontier selection and guarded solver recipes |
+| `decision handoff` / `decision replay` | Resolved content/region/transition machine and zero-inference replay |
+| `color convert` / `palette ramp` / `palette analyze` / `palette candidates` | CSS4/OKLCH, role contrast and joint repair with alpha uncertainty |
+| `motion analyze` / `motion candidates` / `motion emit` / `motion proof` | Analytic spring fields, bounded alternatives, platform plans and inspection |
+| `component solve` / `component inspect` | Source-bound dimension equations and technical drawings |
 | `registry`                                   | Evidence, heuristics, hypotheses, standards, sources and limits                             |
 | `font inspect`                               | Real metrics, axes, features, coverage and font checksum                                    |
 | `text shape`                                 | Glyph positioning/kerning plus actual renderer line breaks                                  |
@@ -87,7 +104,7 @@ Add `select:{criterion,gguf,auditDirectory?}` to `system relax`, or call `choice
 
 ## MCP and optional App
 
-Configure stdio with command `node`, args `[/absolute/path/dist/cli.js,mcp]`, and this repository as working directory. The default profile exposes three tools: `design_catalog` discovers a command/schema, `design_execute` invokes it, and `design_specimen` opens the optional App. Use exact session references such as `{"$designRef":"pod:1","pointer":"/state"}` to reuse returned values. Summary responses retain a full result reference; request `response:"full"` when needed. `DESIGN_MCP_PROFILE=full` enables named wrappers for all 24 commands. No SaaS account is needed for the toolkit. Measured default discovery is 1,735 wire-JSON bytes / 381 Qwen-tokenizer tokens; host framing varies.
+Configure stdio with command `node`, args `[/absolute/path/dist/cli.js,mcp]`, and this repository as working directory. The default profile exposes three tools: `design_catalog` discovers a command/schema, `design_execute` invokes it, and `design_specimen` opens the optional App. Use exact session references such as `{"$designRef":"pod:1","pointer":"/state"}` to reuse returned values. Summary responses retain a full result reference; request `response:"full"` when needed. `DESIGN_MCP_PROFILE=full` enables named wrappers for all 39 commands. No SaaS account is needed for the toolkit. Measured default discovery is the recorded compact wire size; see `npm run context:budget`; host framing varies.
 
 MCP Apps hosts can use `ui://physics-of-design/specimens.html`. The App supports live edits, font comparison, actual browser baseline guides, dependency effects, recomputation, alternatives and an explicit human art-direction tie-break. Headless CLI operation is independent of the UI. The actual MCP SDK host bridge is integration-tested; a host's own UI policies may differ. HTML proof always previews the web renderer; native proof requires its native receipt.
 
@@ -107,7 +124,7 @@ The licensed original corpus pilot and controlled perturbations live in `researc
 
 ## Color, composition and small-model research
 
-State `colors` couples role tokens to actual web/native output and hard text contrast checks. `color analyze` keeps contrast constraints separate from optional hue/chroma/lightness descriptors. `color candidates` respects locks and returns multiple bounded single-token alternatives. `composition analyze` describes supplied rectangles, reading order and groups; it does not infer semantic salience or beauty. Current color inputs are opaque sRGB hex; transparency, wide gamut and verified backdrop sampling are explicit capability gaps. See [color rules](docs/color-rules.md) and [award inspiration provenance](research/inspiration-registry.json).
+State `colors` couples role tokens to actual web/native output and hard text contrast checks. `color analyze` keeps contrast constraints separate from optional hue/chroma/lightness descriptors. `color candidates` respects locks and returns multiple bounded single-token alternatives. `composition analyze` describes supplied rectangles, reading order and groups; it does not infer semantic salience or beauty. The legacy state color API accepts opaque sRGB hex. New `color convert` and `palette` commands add CSS4 inputs, OKLCH ramps, explicit sRGB emission, joint role repair and conservative alpha uncertainty; verified backdrop sampling remains a renderer responsibility. See [color rules](docs/color-rules.md) and [award inspiration provenance](research/inspiration-registry.json).
 
 `npm run selector:provision:tiny` installs the pinned experimental 0.8B checkpoint without downloading 4B weights. Explicitly pass `profile:"qwen3.5-0.8b"` to use it. Its default balanced readout canonicalizes candidates and averages option logits across cyclic answer-slot rotations; this increases inference work and does not validate aesthetic ability. The original single-pass probe was order-sensitive. [Selector and training report](docs/selector-and-training.md) records memory, repeatability and synthetic-teacher evidence. No weight training has been run. `training export` preserves ties/abstentions in raw ratings and exports directional examples with project holdouts; four training projects are insufficient to claim a competent design judge.
 

@@ -22,3 +22,17 @@ export * from './tuning.js';
 
 export * from './composition-plan.js';
 export * from './apple-hig.js';
+
+export * from './energy.js';
+export * from './decision-machine.js';
+export * from './decision-runtime.js';
+export * from './composition-solver.js';
+export * from './palette.js';
+export * from './motion.js';
+
+export * from './component-contract.js';
+export * from './inspection.js';
+
+export * from './typography-flow.js';
+
+export * from './energy-analysis.js';

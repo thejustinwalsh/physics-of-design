@@ -9,7 +9,7 @@ Discover only what is needed: CLI `design --help`, or MCP `design_catalog` follo
 
 Measure before claiming validity. `system perturb` invalidates dependencies; `system relax` recomputes coupled candidates and stress scenarios. Preserve locks, user text enlargement and multiple viable alternatives. Preview edits require fresh measurement. Flex does not establish browser/native shaping parity.
 
-Separate deterministic facts, constraints, attributed practices and uncalibrated priors. No total beauty score, entropy objective or model-confidence verification. SemIf selects among freshly verified choices. Musical and harmony preferences remain experimental.
+Separate deterministic facts, constraints, attributed practices and uncalibrated priors. No total beauty score, entropy objective or model-confidence verification. The legacy `choice select` verifies rendered alternatives first; the new fast composition loop labels its candidates as mathematical proposals and verifies rendered finalists separately. SemIf only selects; it never verifies. Musical and harmony preferences remain experimental.
 
 Compare rendered alternatives at phone, iPad/narrow-window and desktop widths. If the caller authorizes Astra review, retain its ratings as synthetic judgments, with independent project holdout for tuning; never relabel them human observations. Award references are inspiration, not reusable assets or causal evidence.
 
@@ -17,4 +17,4 @@ Read the repository README for execution, docs/factor-engine.md for equations, a
 
 For complete product surfaces, load [the composition workflow](references/composition.md). Use `composition plan`, authored alignment contracts and `platform audit`; require real task transitions and actual native app proof. Keep the main context small by discovering one schema and reading one reference at a time.
 
-The intended efficiency mechanism is repeated local System 1 choices over measured tool actions; music is an optional prior. Physics/energy means coupled tool-exposed effects. Current `system relax` plus `choice select` provides a flat batch and end selection, not a persistent decision-tree controller; do not claim that loop or token savings exist yet. Read [the architecture contract](../../../docs/adr-001.md#brief-driven-system-1-tool-decision-tree) when extending orchestration.
+For fast whole-surface decisions, read [the design-machine workflow](references/design-machine.md). `composition solve` explores a weighted mathematical field and returns a resolved machine; `decision replay` reuses it with zero inference. Keep the full choice graph, renderer evidence and optional neural readout outside the main context by exact result reference. Brief preference energy is allowed; it is not a universal beauty score. Current CPU neural latency and unproven quality/token gains must remain explicit.

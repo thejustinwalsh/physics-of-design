@@ -1,3 +1,43 @@
+import { EnergyAnalyzeSchema, analyzeEnergy } from './energy-analysis.js';
+import {
+  ComponentInspectSchema,
+  inspectComponent,
+  MotionProofSchema,
+  proofMotion,
+} from './inspection.js';
+import {
+  ComponentContractSchema,
+  solveComponentContract,
+} from './component-contract.js';
+import { EnergySearchSchema, searchEnergy } from './energy.js';
+import {
+  DesignHandoffSchema,
+  ReplayHandoffSchema,
+  createDesignHandoff,
+  replayDesignHandoff,
+} from './decision-machine.js';
+import {
+  CompositionSolveSchema,
+  solveComposition,
+} from './composition-solver.js';
+import {
+  ColorConvertSchema,
+  convertColor,
+  PaletteRampSchema,
+  paletteRamp,
+  PaletteAnalyzeSchema,
+  analyzePalette,
+  PaletteCandidateSchema,
+  paletteCandidates,
+} from './palette.js';
+import {
+  MotionAnalyzeSchema,
+  analyzeMotion,
+  MotionCandidatesSchema,
+  motionCandidates,
+  MotionEmitSchema,
+  emitMotion,
+} from './motion.js';
 import { CompositionPlanSchema, planComposition } from './composition-plan.js';
 import { AppleAuditSchema, auditAppleHig } from './apple-hig.js';
 import { mkdir, writeFile } from 'node:fs/promises';
@@ -39,6 +79,21 @@ import {
 const StateInput = z.object({ state: StateSchema });
 export const commandSchemas = {
   registry: z.object({}).strict(),
+  'component solve': ComponentContractSchema,
+  'component inspect': ComponentInspectSchema,
+  'motion proof': MotionProofSchema,
+  'energy search': EnergySearchSchema,
+  'energy analyze': EnergyAnalyzeSchema,
+  'composition solve': CompositionSolveSchema,
+  'decision handoff': DesignHandoffSchema,
+  'decision replay': ReplayHandoffSchema,
+  'color convert': ColorConvertSchema,
+  'palette ramp': PaletteRampSchema,
+  'palette analyze': PaletteAnalyzeSchema,
+  'palette candidates': PaletteCandidateSchema,
+  'motion analyze': MotionAnalyzeSchema,
+  'motion candidates': MotionCandidatesSchema,
+  'motion emit': MotionEmitSchema,
   'composition plan': CompositionPlanSchema,
   'platform audit': AppleAuditSchema,
   'color analyze': z
@@ -145,6 +200,36 @@ export async function execute(
   let renderer: Renderer | undefined;
   try {
     switch (command) {
+      case 'component solve':
+        return solveComponentContract(input);
+      case 'component inspect':
+        return inspectComponent(input);
+      case 'motion proof':
+        return proofMotion(commandSchemas[command].parse(input));
+      case 'energy analyze':
+        return analyzeEnergy(commandSchemas[command].parse(input));
+      case 'energy search':
+        return searchEnergy(commandSchemas[command].parse(input));
+      case 'composition solve':
+        return solveComposition(commandSchemas[command].parse(input));
+      case 'decision handoff':
+        return createDesignHandoff(commandSchemas[command].parse(input));
+      case 'decision replay':
+        return replayDesignHandoff(commandSchemas[command].parse(input));
+      case 'color convert':
+        return convertColor(commandSchemas[command].parse(input));
+      case 'palette ramp':
+        return paletteRamp(commandSchemas[command].parse(input));
+      case 'palette analyze':
+        return analyzePalette(commandSchemas[command].parse(input));
+      case 'palette candidates':
+        return paletteCandidates(commandSchemas[command].parse(input));
+      case 'motion analyze':
+        return analyzeMotion(commandSchemas[command].parse(input));
+      case 'motion candidates':
+        return motionCandidates(commandSchemas[command].parse(input));
+      case 'motion emit':
+        return emitMotion(commandSchemas[command].parse(input));
       case 'composition plan':
         return planComposition(commandSchemas[command].parse(input));
       case 'platform audit':

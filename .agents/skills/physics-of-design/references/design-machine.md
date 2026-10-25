@@ -1,0 +1,16 @@
+# Fast composition spell
+
+Use this when the brief is known and many coupled numeric choices should become an executable design policy. `composition solve` is the high-level entry point; discover its schema only when needed.
+
+1. Preserve product intent, actual content, visual direction, platform requirements and licensed fonts. Interview only material gaps. Author meaningful screen/task priorities and responsive copy equivalents explicitly; never silently substitute user content.
+2. Define finite editable domains, derived expressions, hard constraints and brief-scoped preference bands/weights. Tag every factor as measured/calculated, standard, heuristic, hypothesis or brief. Nonzero tension targets and multiple wells are valid. Musical landmarks are optional.
+3. Run bounded mathematical search. Keep its choice graph and individual factors by result reference. A mathematical proposal is not a renderer receipt. Use `energy analyze` when the direction of a coupled change is unclear; its finite differences can cross discontinuities.
+4. Use one optional configured local SemIf readout for a narrow mathematical frontier. Keep neural inference outside the hot mathematical loop. It must not verify facts, issue accessibility judgments or convert option logits into aesthetic confidence.
+5. Give the build agent the resolved handoff: selected values, alternatives, copy, responsive region bindings, transitions and motion rules. Reuse `decision-runtime` on web/native. Implement React + StyleX and RN flex layouts, preserving natural text height and user enlargement. The machine is a contract, not an arbitrary component compiler.
+6. Replay a matching machine without inference. A solver recipe also binds search/readout options and checkpoint bytes. New brief/factors/domains/content/topology or failed runtime guards require new search. Never trust cached feasible flags.
+7. Verify finalists in actual browser/native renderers. Check phone/iPad/desktop, changed content, large text, task flow, focus, persistence and reduced motion. Geometry containment does not establish task accessibility: an action buried below a promotional heading can still fail the brief.
+8. Convert critique into shared relationships and topology. Prefer semantic heading roles, action priorities, navigation-fit rules and structural reflow to local pixel patches or suppression of text scaling.
+
+Use `palette candidates` for joint token repairs; `palette analyze` preserves role/state/adjacent-surface checks and alpha uncertainty. Unknown backdrops cannot pass. Use `motion analyze`/`motion emit` for analytic springs and platform limits. Use `component solve`/`component inspect` for exact anatomy dimensions and drawings from the same contract; missing ink or stale text measurements remain unknown. `design_specimen` can project component/motion inspections in its optional MCP App.
+
+The executable Vela example is `examples/vela/problem.json`; its authored policy and complete app are a proof, not a universal style template. See `docs/adr-002-fast-design-machine.md` and `docs/design-machine-report.md` for measured costs and open claims. No award-level quality, trained taste or token savings may be inferred from energy or synthetic critique.
