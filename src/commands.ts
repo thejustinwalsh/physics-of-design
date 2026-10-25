@@ -22,7 +22,9 @@ import { MediaAnalyzeSchema, analyzeMediaFile } from './media.js';
 import { DesignContextSchema, inspectDesignContext } from './design-context.js';
 import {
   RelationalKernelCompileSchema,
+  RelationalKernelResolveSchema,
   compileRelationalKernels,
+  resolveKernelSelection,
 } from './relational-kernels.js';
 import {
   OutputBindingsCheckSchema,
@@ -167,6 +169,7 @@ export const commandSchemas = {
   registry: z.object({}).strict(),
   'context inspect': DesignContextSchema,
   'kernel compile': RelationalKernelCompileSchema,
+  'kernel resolve': RelationalKernelResolveSchema,
   'bindings check': OutputBindingsCheckSchema,
   'field measure': z.object({ brief: DesignFieldBriefSchema }).strict(),
   'field run': DesignFieldRunSchema,
@@ -335,6 +338,8 @@ export async function execute(
         return inspectDesignContext(input);
       case 'kernel compile':
         return compileRelationalKernels(commandSchemas[command].parse(input));
+      case 'kernel resolve':
+        return resolveKernelSelection(commandSchemas[command].parse(input));
       case 'bindings check':
         return checkOutputBindings(commandSchemas[command].parse(input));
       case 'field measure':

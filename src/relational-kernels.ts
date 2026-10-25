@@ -150,6 +150,26 @@ export const RelationalKernelCompileSchema = z
 export type RelationalKernelInput = z.input<
   typeof RelationalKernelCompileSchema
 >;
+export const RelationalKernelResolveSchema = z
+  .object({
+    input: RelationalKernelCompileSchema,
+    compilationIdentity: Digest,
+    result: z
+      .object({
+        stages: z.record(
+          z.string(),
+          z
+            .object({
+              status: z.string(),
+              assignment: z.record(z.string(), N).nullable(),
+              evidence: z.unknown(),
+            })
+            .passthrough(),
+        ),
+      })
+      .passthrough(),
+  })
+  .strict();
 type Request = z.infer<typeof RelationalKernelCompileSchema>;
 type Kernel = Request['kernels'][number];
 const ref = (name: string): Expression => ({ ref: name });
@@ -800,4 +820,15 @@ export function resolveRelationalKernelOutputs(
     obligations: compiled.obligations,
     verification: 'pending-current-renderer' as const,
   };
+}
+
+/** CLI/MCP access to the existing resolver; no new search or measurement. */
+export function resolveKernelSelection(
+  input: z.input<typeof RelationalKernelResolveSchema>,
+) {
+  const r = RelationalKernelResolveSchema.parse(input);
+  const compiled = compileRelationalKernels(r.input);
+  if (compiled.identity !== r.compilationIdentity)
+    throw new Error('Kernel input differs from the selected compilation');
+  return resolveRelationalKernelOutputs(compiled, r.result);
 }

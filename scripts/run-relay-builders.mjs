@@ -35,6 +35,10 @@ import {
   validateExpoProof,
   validateTemplateProof,
 } from './expo-proof-contract.mjs';
+import {
+  capabilityKinds,
+  validateCapabilityResult,
+} from './relay-capabilities.mjs';
 
 export const sha256 = (bytes) =>
   createHash('sha256').update(bytes).digest('hex');
@@ -357,14 +361,21 @@ export const COMMON_PROMPT = `Build Relay completely in app/ using the frozen pr
 
 Actual React Native iOS and Android are primary, with Expo web for exactly two documented tuning rounds before final native validation. Use the supplied pinned Expo/RSD integration shell and adapters; it contains no Relay UI. Deliver all primary and secondary flows in the brief, current platform observations, accessible interactions, persistence and recovery. You have no wall-time deadline. Continue until the complete app and its tests/evidence/report are delivered; preserve any genuine blockers or unsupported capabilities explicitly. Do not silently reduce scope.
 
-Use the Design Theory CLI/exported implementation from toolkit. Start with compact catalog/schema discovery, --summary --output files and hash-bound references. Reuse examples/kernels/relay-compact.json as a shared measured starting point, with new real app/native measurements as necessary. The supplied browser cells do not certify native output. Record exact tool inputs/results and selected output pointers; consume them in actual properties on all twelve named surfaces. Preserve alternatives, bounded numeric budgets, actual local System 1 selection when useful, a coupled perturbation and recipe replay. Do not call every command ceremonially. Numeric feasibility, model choices, renderer observations and synthetic critique are different evidence.
+Use the Design Theory CLI/exported implementation from toolkit. Start with compact catalog/schema discovery, --summary --output files and hash-bound references. Reuse examples/kernels/relay-compact.json as a shared measured starting point, with new real app/native measurements as necessary. The supplied browser cells do not certify native output. Run kernel compile -> decision run -> kernel resolve and import the resolved JSON values into actual component properties; kernel resolve takes the original input, compilationIdentity and full result, all available by exact file pointers. Keep full compiled/decision matrices in evidence, not in the imported property file or conversational context. Record exact tool inputs/results and selected output pointers; consume them in actual properties on all twelve named surfaces. Preserve alternatives, bounded numeric budgets, actual local System 1 selection when useful, a coupled perturbation and recipe replay. Do not call every command ceremonially. Numeric feasibility, model choices, renderer observations and synthetic critique are different evidence.
 
 Only your assigned coding model may work on this build. Do not start subagents, other coding models or peer tasks. The toolkit's configured local 4B selector is allowed for its decision readouts; SELECTOR.json is a provenance descriptor binding the common external executable, sources and checkpoint; it is not a selector request. Use the selector schema to construct requests from the needed fields. DESIGN_SEMIF_BIN points to that executable. There is no imposed selector or builder wall-time budget; keep finite candidate domains and mathematical evaluation bounds, and retain real progress/usage. Do not alter host settings, HOME, credentials, frozen toolkit/shared sources or pinned style dependency versions. Do not inspect sibling outputs. app/ is your implementation area; keep evidence there. Use BUILDER.json's ports, unique bundle/storage namespace and explicit devices; stop your Metro/browser/observer processes at completion and record every runtime child in app/evidence/runtime-processes.json. Native iOS/Android runs must be sequential. The orchestrator holds an exclusive runtime/selector lease for your entire run.
+
+CAPABILITIES.json records successful browser, local-selector and native probes through this exact execution environment. Browser launches, the pinned selector and native operating-system access were qualified using normal require_escalated command review. Use that reviewed route when those operations need operating-system services; do not change the sandbox policy or assume a normal-sandbox permission denial proves the host capability is unavailable. Review is per action, and any rejection remains an explicit blocker. Ordinary file/code work stays in the workspace sandbox.
 
 Produce app/BUILD-REPORT.md and app/build-report.json exactly as REPORTING.md requests, including wins, misses, tool friction, improvements and candid synthetic self-critique. Include all requested functionality, failures and unsupported states. Do not estimate token use. usageReceipt is ../metrics/receipt.json. Produce app/evidence/output-bindings.json as {sources:[{identity,path}],rendererReceipts:[{ref,path,sha256}],checks:[{operation:'check',manifest,current,observations}]}; paths are relative to app/, source identities use the toolkit hash of parsed JSON, and renderer receipt identities hash saved bytes. Each observation resultRef must have a saved receipt. Each binding current.sourceIdentity must match the automatic app snapshot from node toolkit/scripts/run-relay-builders.mjs source --app app; current.designIdentity is the frozen DESIGN.md byte hash. Source locations name actual app files with optional :line suffix. See toolkit/docs/relay-experiment.md for the exact contract. Keep generated evidence under app/evidence so it does not invalidate the source snapshot. Record app/evidence/web-tuning-rounds.json as {rounds:[{round:1,changes,receipts},{round:2,changes,receipts}]}. Those files are evidence to be checked, not self-certified pass declarations. Runtime process records are {processes:[{pid,command,port,stopped}]}; write {processes:[]} explicitly if no runtime children were started.
 
 Document fresh setup, web/native launch and proof commands. The orchestrator separately records actual app-server events and cumulative token notifications. No human preference, award quality, universal model ranking or comparative token-savings claim follows from this experiment. Finish with a concise status including any remaining limitations.
 `;
+export const CAPABILITY_PROMPT = `Qualify this prepared execution environment only. Do not implement, design, inspect product content, edit files, start subagents or call another model. Run these exact commands sequentially from the assigned workspace:
+node toolkit/scripts/relay-capabilities.mjs browser
+node toolkit/scripts/relay-capabilities.mjs selector
+node toolkit/scripts/relay-capabilities.mjs native
+For each command request normal require_escalated execution with a clear justification: the user authorized actual browser rendering, a narrow pinned local-selector readout, and the prepared blank native shell's real input/geometry check; this host's ordinary sandbox blocks required operating-system services. Let the configured reviewer decide. Do not alter permission settings or supply approvals yourself. The scripts retain full receipts and print compact status. Wait for each command to finish without imposing a run deadline. If any command fails or review is denied, stop and report the saved receipt; do not repair or retry. After all three succeed, report only that environment checks finished. This is environment qualification, not the Relay build.`;
 function pinnedVersions(root, policy) {
   const pkg = json(path.join(root, 'package.json')),
     lock = json(path.join(root, 'package-lock.json'));
@@ -481,6 +492,7 @@ export function prepareExperiment({
   ])
     read(p);
   mkdirSync(out, { mode: 0o700 });
+  out = realpathSync(out);
   save(path.join(out, 'gate.json'), gate);
   copyFileSync(gate.verification.path, path.join(out, 'verification.json'));
   copyFileSync(gate.platform.path, path.join(out, 'platform.json'));
@@ -604,7 +616,7 @@ function checkRun(out) {
       sha256(readFileSync(fileURLToPath(import.meta.url))),
     'Launcher changed since preparation',
   );
-  if (run.ready)
+  if (run.installedAt)
     fail(
       run.metricsHelperIdentity ===
         sha256(
@@ -710,7 +722,7 @@ export async function qualifyExperiment(
 ) {
   const run = checkRun(out),
     qualifiers = {};
-  fail(!run.ready, 'Run is already qualified');
+  fail(!run.installedAt, 'Run dependencies are already qualified');
   for (const builder of run.policy.order)
     qualifiers[builder] = inspectQualifier(
       receiptDirectories[builder],
@@ -781,7 +793,7 @@ export async function qualifyExperiment(
     };
     visit(emitted);
     b.immutable.push(...sourceSnapshot(b.workspace, emittedFiles));
-    b.state = 'qualified';
+    b.state = 'installed';
   }
   fail(
     digest(run.hostSettings) === digest(hostSettings()),
@@ -790,7 +802,8 @@ export async function qualifyExperiment(
   for (const b of Object.values(run.builders)) assertPreparedApplication(b);
   run.qualifiers = qualifiers;
   run.qualifiedAt = now();
-  run.ready = true;
+  run.installedAt = now();
+  run.ready = false;
   run.metricsHelperIdentity = sha256(
     readFileSync(new URL('./design-builder-metrics.mjs', import.meta.url)),
   );
@@ -809,7 +822,7 @@ export async function qualifyExperiment(
 }
 export function buildSessionSpec(run, builder) {
   const b = run.builders[builder];
-  fail(b && run.ready, 'Unknown builder or unqualified run');
+  fail(b && run.installedAt, 'Unknown builder or dependencies not qualified');
   return {
     cwd: b.workspace,
     prompt: COMMON_PROMPT,
@@ -901,6 +914,301 @@ export function validateResolvedThread(resolved, run, builder) {
       'Resolved local environment differs from assigned workspace',
     );
   }
+}
+export function builderEnvironment(out, run, builder) {
+  const cache = path.join(out, builder, 'cache');
+  return {
+    npm_config_cache: cache,
+    TMPDIR: path.join(cache, 'tmp'),
+    EXPO_NO_TELEMETRY: '1',
+    __UNSAFE_EXPO_HOME_DIRECTORY: path.join(cache, 'expo'),
+    CI: '1',
+    DESIGN_SEMIF_BIN: run.selector.executable.path,
+  };
+}
+function exactCapabilityCommand(command, kind) {
+  const expected = `node toolkit/scripts/relay-capabilities.mjs ${kind}`;
+  return (
+    command === expected ||
+    ['/bin/zsh', '/bin/bash', '/bin/sh'].some(
+      (shell) =>
+        command === `${shell} -lc '${expected}'` ||
+        command === `${shell} -lc "${expected}"`,
+    )
+  );
+}
+export async function inspectCapabilities(out, run, builder) {
+  const b = run.builders[builder],
+    directory = path.join(out, builder, 'capability-metrics');
+  const transport = inspectQualifier(
+    directory,
+    run.policy.models[builder],
+    run.hostSettings['config.toml'],
+    run.policy.cliVersion,
+  );
+  validateResolvedThread(
+    json(path.join(directory, 'thread-start-result.json')),
+    run,
+    builder,
+  );
+  const invocation = json(path.join(directory, 'invocation.json'));
+  const metrics = json(path.join(directory, 'receipt.json'));
+  const spec = { ...buildSessionSpec(run, builder), prompt: CAPABILITY_PROMPT };
+  fail(
+    digest(invocation.spec) === digest(spec),
+    'Capability did not use the exact builder session contract',
+  );
+  fail(
+    digest(invocation.environmentOverrideKeys) ===
+      digest(Object.keys(builderEnvironment(out, run, builder)).sort()),
+    'Capability environment overrides differ from builder',
+  );
+  const trace = await extractToolTrace(path.join(directory, 'stdout.jsonl'));
+  fail(
+    trace.complete &&
+      trace.reroutes.length === 0 &&
+      trace.calls.length === 3 &&
+      trace.calls.every(
+        (c) =>
+          c.type === 'commandExecution' && c.completed && c.item.exitCode === 0,
+      ),
+    'Capability requires exactly three completed probe commands and no edits or other tool actions',
+  );
+  const events = readFileSync(path.join(directory, 'stdout.jsonl'), 'utf8')
+    .trim()
+    .split('\n')
+    .map(JSON.parse);
+  const results = [];
+  for (const [index, kind] of capabilityKinds.entries()) {
+    const call = trace.calls[index];
+    fail(
+      exactCapabilityCommand(call.item.command, kind) &&
+        realpathSync(call.item.cwd) === realpathSync(b.workspace),
+      'Unexpected capability command or cwd',
+    );
+    const review = events.find(
+      (e) =>
+        e.method === 'item/autoApprovalReview/completed' &&
+        e.params?.targetItemId === call.id &&
+        e.params.review?.status === 'approved' &&
+        e.params.action?.type === 'command' &&
+        e.params.action.command === call.item.command &&
+        e.params.action.cwd === call.item.cwd,
+    );
+    fail(
+      review,
+      `Capability ${kind} lacks an actual approved command-review event`,
+    );
+    const output = path.join(out, builder, 'cache/capabilities', kind),
+      file = path.join(output, 'receipt.json'),
+      receipt = json(file);
+    fail(
+      receipt.version === 1 &&
+        receipt.kind === 'relay-execution-capability' &&
+        receipt.capability === kind &&
+        receipt.workspace === b.workspace &&
+        receipt.passed === true &&
+        Number.isSafeInteger(receipt.pid) &&
+        receipt.pid > 1,
+      `Missing successful ${kind} execution receipt`,
+    );
+    fail(
+      processAbsent(receipt.pid) &&
+        Number.isFinite(Date.parse(receipt.startedAt)) &&
+        Number.isFinite(Date.parse(receipt.finishedAt)) &&
+        Date.parse(receipt.startedAt) >= Date.parse(metrics.startedAt) &&
+        Date.parse(receipt.finishedAt) >= Date.parse(receipt.startedAt) &&
+        Date.parse(receipt.finishedAt) <= Date.parse(metrics.finishedAt),
+      'Capability producer remains alive or receipt is outside this session',
+    );
+    const sources = [
+      'relay-capabilities.mjs',
+      ...(kind === 'browser' ? [] : [`relay-${kind}-capability.mjs`]),
+    ].map((f) => path.join(b.workspace, 'toolkit/scripts', f));
+    fail(
+      digest(receipt.sources?.map((s) => s.path)) === digest(sources) &&
+        receipt.sources.every((s) => hashFile(s.path) === s.sha256),
+      'Capability producer source changed',
+    );
+    validateCapabilityResult(kind, receipt.result, output, {
+      metadata: b.metadata,
+      selector: run.selector,
+    });
+    if (kind === 'selector') {
+      const { validateSelectorCapabilityResult } =
+        await import('./relay-selector-capability.mjs');
+      await validateSelectorCapabilityResult(receipt.result, output, {
+        selector: run.selector,
+      });
+    }
+    if (kind === 'native') {
+      const { validateNativeCapabilityResult } =
+        await import('./relay-native-capability.mjs');
+      await validateNativeCapabilityResult(receipt.result, output, {
+        metadata: b.metadata,
+      });
+      const identity = b.actualStartedAt
+        ? b.capabilities?.applicationIdentity
+        : snapshotApplication(path.join(b.workspace, 'app')).identity;
+      fail(
+        receipt.result.sourceIdentityBefore === identity &&
+          receipt.result.sourceIdentityAfter === identity &&
+          receipt.result.platforms.every((p) => p.sourceIdentity === identity),
+        'Native capability does not bind the prepared application',
+      );
+    }
+    results.push({
+      kind,
+      receipt: { path: file, sha256: hashFile(file) },
+      commandId: call.id,
+      reviewId: review.params.reviewId,
+    });
+  }
+  fail(
+    metrics.cancelled !== true &&
+      metrics.processCleanup?.confirmedEmpty === true,
+    'Capability process cleanup is incomplete',
+  );
+  return {
+    promptIdentity: sha256(CAPABILITY_PROMPT),
+    applicationIdentity:
+      b.capabilities?.applicationIdentity ??
+      snapshotApplication(path.join(b.workspace, 'app')).identity,
+    transport,
+    results,
+    metricsReceipt: {
+      path: path.join(directory, 'receipt.json'),
+      sha256: hashFile(path.join(directory, 'receipt.json')),
+    },
+  };
+}
+export async function qualifyCapabilities(
+  out,
+  {
+    authorize = false,
+    session = recordSession,
+    sessionOptions = {},
+    leaseFile = '/private/tmp/design-theory-relay-resources.lock',
+  } = {},
+) {
+  fail(
+    authorize,
+    'Explicit authorization required for actual capability turns',
+  );
+  out = realpathSync(out);
+  const run = checkRun(out);
+  fail(
+    run.installedAt && !run.ready,
+    'Install dependencies first; an existing ready run cannot requalify',
+  );
+  fail(
+    !existsSync(path.join(out, 'cancel-request.json')),
+    'Cancelled preparation requires a new run',
+  );
+  fail(
+    run.policy.order.every((name) => run.builders[name].state === 'installed'),
+    'Capability attempts are immutable; use a new equal preparation after a failure',
+  );
+  const lease = acquireLease(leaseFile, {
+    run: out,
+    resources: ['coding-model', 'browser', 'local-selector', 'ios', 'android'],
+    purpose: 'capabilities',
+  });
+  const controller = new AbortController(),
+    cancel = () => controller.abort();
+  process.once('SIGINT', cancel);
+  process.once('SIGTERM', cancel);
+  const timer = setInterval(() => {
+    if (existsSync(path.join(out, 'cancel-request.json'))) controller.abort();
+  }, 250);
+  let failure = null;
+  const cleanup = {
+    checkedAt: now(),
+    confirmedEmpty: true,
+    failures: [],
+    observations: [],
+  };
+  try {
+    for (const builder of run.policy.order) {
+      const b = run.builders[builder];
+      await portsFree(b.metadata.runtime);
+      b.state = 'checking-capabilities';
+      b.capabilityStartedAt = now();
+      save(path.join(out, 'run.json'), run);
+      const env = builderEnvironment(out, run, builder);
+      mkdirSync(env.TMPDIR, { recursive: true });
+      const output = path.join(out, builder, 'capability-metrics');
+      const metrics = await session(
+        { ...buildSessionSpec(run, builder), prompt: CAPABILITY_PROMPT },
+        output,
+        {
+          ...sessionOptions,
+          env,
+          signal: controller.signal,
+          validateThreadStart: (resolved) => {
+            validateResolvedThread(resolved, run, builder);
+            assertSnapshot(b.workspace, b.immutable);
+            assertPreparedApplication(b);
+          },
+        },
+      );
+      fail(
+        metrics.processCleanup?.confirmedEmpty === true &&
+          (metrics.processCleanup.groupId === null ||
+            processAbsent(-metrics.processCleanup.groupId)),
+        'Capability recorder group remains present or unknown',
+      );
+      b.capabilities = await inspectCapabilities(out, run, builder);
+      assertPreparedApplication(b);
+      assertSnapshot(b.workspace, b.immutable);
+      await portsFree(b.metadata.runtime);
+      save(path.join(b.workspace, 'CAPABILITIES.json'), {
+        version: 1,
+        scope:
+          'Execution environment only; no app-design or functionality certification',
+        route:
+          'Normal require_escalated command review for browser launches, pinned selector and native OS services; ordinary workspace file work remains sandboxed',
+        promptIdentity: sha256(CAPABILITY_PROMPT),
+        results: b.capabilities.results,
+      });
+      b.immutable.push(bytesIdentity(b.workspace, 'CAPABILITIES.json'));
+      b.state = 'qualified';
+      save(path.join(out, 'run.json'), run);
+    }
+    fail(
+      digest(hostSettings()) === digest(run.hostSettings),
+      'Capability changed host settings',
+    );
+    validateSelector(run.selector);
+    run.ready = true;
+    run.capabilitiesQualifiedAt = now();
+  } catch (error) {
+    failure = String(error);
+    run.capabilityError = failure;
+    for (const b of Object.values(run.builders))
+      if (b.state === 'checking-capabilities')
+        b.state = controller.signal.aborted
+          ? 'capability-cancelled'
+          : 'capability-failed';
+  } finally {
+    clearInterval(timer);
+    process.removeListener('SIGINT', cancel);
+    process.removeListener('SIGTERM', cancel);
+    try {
+      Object.assign(cleanup, await verifyRuntimeCleanup(out, run));
+    } catch (error) {
+      cleanup.confirmedEmpty = false;
+      cleanup.failures.push(String(error));
+    }
+    if (!cleanup.confirmedEmpty) run.ready = false;
+    run.capabilityCleanup = cleanup;
+    save(path.join(out, 'run.json'), run);
+    if (cleanup.confirmedEmpty) lease.release(cleanup);
+    else lease.retain(cleanup);
+  }
+  if (failure) throw Error(failure);
+  fail(run.ready, 'Capability cleanup blocked readiness');
+  return run;
 }
 export async function extractToolTrace(rawFile) {
   const calls = new Map(),
@@ -1022,7 +1330,123 @@ function processAbsent(pid) {
     return error.code === 'ESRCH';
   }
 }
-export async function verifyRuntimeCleanup(out, run) {
+export async function inspectOperatorRecovery(out, builder, b, inventory) {
+  const phase = inventory?.phase ?? 'build';
+  fail(
+    phase === 'build' ||
+      (phase === 'capability' && !b.startedAt && b.capabilityStartedAt),
+    'Operator recovery phase does not match the active run',
+  );
+  const metricsDirectory =
+    phase === 'capability' ? 'capability-metrics' : 'metrics';
+  const metricsPath = path.join(out, builder, metricsDirectory, 'receipt.json'),
+    rawPath = path.join(out, builder, metricsDirectory, 'stdout.jsonl'),
+    metrics = json(metricsPath),
+    trace = await extractToolTrace(rawPath);
+  fail(
+    inventory?.version === 1 &&
+      inventory.origin === 'operator-recovery' &&
+      inventory.run === out &&
+      inventory.builder === builder &&
+      typeof inventory.reason === 'string' &&
+      inventory.reason.trim().length > 0,
+    'Operator recovery requires an explicit origin, run, builder and reason',
+  );
+  fail(
+    trace.complete &&
+      inventory.rawSha256 === hashFile(rawPath) &&
+      inventory.metricsReceiptSha256 === hashFile(metricsPath) &&
+      inventory.groupId === metrics.processCleanup?.groupId,
+    'Operator recovery does not bind the final recorder and trace',
+  );
+  const expected = trace.calls.map((c) => c.id).sort();
+  fail(
+    Array.isArray(inventory.reviewedCallIds) &&
+      digest([...inventory.reviewedCallIds].sort()) === digest(expected),
+    'Operator recovery must review every observed tool item exactly once',
+  );
+  const snapshot = inventory.processSnapshot;
+  fail(
+    snapshot?.command === '/bin/ps -axo pid,ppid,pgid,command' &&
+      path.isAbsolute(snapshot.path) &&
+      hashFile(snapshot.path) === snapshot.sha256 &&
+      Number.isFinite(Date.parse(snapshot.capturedAt)) &&
+      Date.parse(snapshot.capturedAt) >= Date.parse(metrics.finishedAt),
+    'Operator recovery requires a hash-bound post-exit process inventory',
+  );
+  const rows = readFileSync(snapshot.path, 'utf8')
+    .split('\n')
+    .flatMap((line) => {
+      const match = line.match(/^\s*(\d+)\s+(\d+)\s+(\d+)\s+(.+)$/);
+      return match
+        ? [
+            {
+              pid: Number(match[1]),
+              parent: Number(match[2]),
+              group: Number(match[3]),
+              command: match[4],
+            },
+          ]
+        : [];
+    });
+  fail(rows.length > 0, 'Operator process inventory is empty or malformed');
+  fail(Array.isArray(inventory.processes), 'Operator PID inventory is missing');
+  const seen = new Set();
+  const rawLines = readFileSync(rawPath, 'utf8').split('\n');
+  for (const item of inventory.processes) {
+    fail(
+      Number.isSafeInteger(item.pid) && item.pid > 1 && !seen.has(item.pid),
+      'Operator runtime PIDs must be unique positive process IDs',
+    );
+    seen.add(item.pid);
+    const traceLine = Number.isSafeInteger(item.traceEvidence?.line)
+      ? rawLines[item.traceEvidence.line - 1]
+      : undefined;
+    const recorded =
+      typeof traceLine === 'string' &&
+      sha256(traceLine) === item.traceEvidence.sha256 &&
+      new RegExp(`(^|[^0-9])${item.pid}([^0-9]|$)`).test(traceLine);
+    fail(
+      rows.some((r) => r.pid === item.pid && r.command === item.command) ||
+        recorded,
+      'Operator PID must name a process-inventory row or hash-bound raw trace evidence',
+    );
+    fail(
+      typeof item.reason === 'string' && item.reason.trim().length > 0,
+      'Operator PID requires a relationship explanation',
+    );
+    fail(
+      processAbsent(item.pid),
+      `Operator runtime PID ${item.pid} is still present or unknown`,
+    );
+  }
+  const relevant = rows.filter(
+    (r) =>
+      r.group === inventory.groupId ||
+      r.command.includes(b.workspace) ||
+      r.command.includes(path.join(out, builder, 'cache')),
+  );
+  fail(
+    relevant.every((r) => seen.has(r.pid)),
+    'Operator inventory omits a process matching the owned group or workspace',
+  );
+  return {
+    origin: inventory.origin,
+    reason: inventory.reason,
+    inventoryIdentity: digest(inventory),
+    processSnapshot: snapshot,
+    reviewedToolItems: expected.length,
+    observedRuntimePidsAbsent: [...seen],
+    missingBuilderManifestPreserved: true,
+    scope:
+      'Operator-reviewed final trace and process inventory plus live PID/group/port absence checks; not builder evidence or authentication.',
+  };
+}
+export async function verifyRuntimeCleanup(
+  out,
+  run,
+  { operatorInventories = {} } = {},
+) {
   const failures = [],
     observations = [];
   for (const [builder, b] of Object.entries(run.builders)) {
@@ -1033,6 +1457,67 @@ export async function verifyRuntimeCleanup(out, run) {
       failures.push(
         `${builder}: reserved runtime ports are not clear: ${error}`,
       );
+    }
+    if (!b.startedAt && b.capabilityStartedAt) {
+      try {
+        const directory = path.join(out, builder, 'capability-metrics'),
+          metrics = json(path.join(directory, 'receipt.json'));
+        const group = metrics.processCleanup;
+        fail(
+          group?.confirmedEmpty === true &&
+            (group.groupId === null ||
+              (Number.isSafeInteger(group.groupId) &&
+                group.groupId > 1 &&
+                processAbsent(-group.groupId))),
+          'Capability recorder process group is present or unknown',
+        );
+        if (operatorInventories[builder]) {
+          fail(
+            operatorInventories[builder].phase === 'capability',
+            'Capability recovery phase required',
+          );
+          observations.push({
+            builder,
+            operatorRecovery: await inspectOperatorRecovery(
+              out,
+              builder,
+              b,
+              operatorInventories[builder],
+            ),
+          });
+        } else {
+          const trace = await extractToolTrace(
+            path.join(directory, 'stdout.jsonl'),
+          );
+          fail(trace.complete, 'Incomplete capability trace');
+          for (const call of trace.calls) {
+            const kind = capabilityKinds.find((k) =>
+              exactCapabilityCommand(call.item.command, k),
+            );
+            fail(
+              call.type === 'commandExecution' && kind,
+              'Unknown capability tool action requires operator recovery',
+            );
+            const receipt = json(
+              path.join(
+                out,
+                builder,
+                'cache/capabilities',
+                kind,
+                'receipt.json',
+              ),
+            );
+            fail(
+              receipt.result?.cleanup?.confirmed === true,
+              `${kind} disposal requires operator recovery`,
+            );
+          }
+          observations.push({ builder, capabilityRuntimeCleanup: true });
+        }
+      } catch (error) {
+        failures.push(`${builder}: ${error}`);
+      }
+      continue;
     }
     if (!b.startedAt) continue;
     const output = path.join(out, builder, 'metrics');
@@ -1074,6 +1559,18 @@ export async function verifyRuntimeCleanup(out, run) {
         });
       } else {
         const trace = await extractToolTrace(path.join(output, 'stdout.jsonl'));
+        if (operatorInventories[builder]) {
+          observations.push({
+            builder,
+            operatorRecovery: await inspectOperatorRecovery(
+              out,
+              builder,
+              b,
+              operatorInventories[builder],
+            ),
+          });
+          continue;
+        }
         fail(
           trace.complete && trace.calls.length === 0,
           'Tool execution requires a runtime process manifest, including an explicit empty list when no external runtime was started',
@@ -1099,7 +1596,10 @@ export async function verifyRuntimeCleanup(out, run) {
 }
 export async function cleanupExperiment(
   out,
-  { leaseFile = '/private/tmp/design-theory-relay-resources.lock' } = {},
+  {
+    leaseFile = '/private/tmp/design-theory-relay-resources.lock',
+    operatorInventories = {},
+  } = {},
 ) {
   out = realpathSync(out);
   const lease = json(leaseFile);
@@ -1107,8 +1607,22 @@ export async function cleanupExperiment(
     lease.run === out && lease.state === 'cleanup-blocked',
     "Only this run's explicitly retained cleanup lease may be inspected for release",
   );
+  if (Object.keys(operatorInventories).length)
+    fail(
+      Number.isSafeInteger(lease.pid) &&
+        lease.pid > 1 &&
+        processAbsent(lease.pid),
+      'Operator recovery cannot release a live or unknown lease owner',
+    );
   const run = json(path.join(out, 'run.json'));
-  const proof = await verifyRuntimeCleanup(out, run);
+  const proof = await verifyRuntimeCleanup(out, run, { operatorInventories });
+  if (Object.keys(operatorInventories).length)
+    save(path.join(out, `operator-recovery-${Date.now()}.json`), {
+      origin: 'operator-recovery',
+      previousLease: lease,
+      inventories: operatorInventories,
+      proof,
+    });
   save(path.join(out, 'cleanup.json'), proof);
   run.resourceCleanup = proof;
   save(path.join(out, 'run.json'), run);
@@ -1363,6 +1877,11 @@ export async function runBuilders(
       if (controller.signal.aborted) break;
       run = checkRun(out);
       const b = run.builders[builder];
+      fail(
+        digest(await inspectCapabilities(out, run, builder)) ===
+          digest(b.capabilities),
+        'Execution capability evidence changed since qualification',
+      );
       await portsFree(b.metadata.runtime);
       fail(
         digest(pinnedVersions(path.join(b.workspace, 'app'), run.policy)) ===
@@ -1397,14 +1916,7 @@ export async function runBuilders(
             b.state = 'running';
             save(path.join(out, 'run.json'), run);
           },
-          env: {
-            npm_config_cache: cache,
-            TMPDIR: path.join(cache, 'tmp'),
-            EXPO_NO_TELEMETRY: '1',
-            __UNSAFE_EXPO_HOME_DIRECTORY: path.join(out, builder, 'cache/expo'),
-            CI: '1',
-            DESIGN_SEMIF_BIN: run.selector.executable.path,
-          },
+          env: builderEnvironment(out, run, builder),
         });
         const resolved = json(path.join(output, 'thread-start-result.json'));
         validateResolvedThread(resolved, run, builder);
@@ -1514,12 +2026,21 @@ export function statusExperiment(out) {
   return {
     commit: run.commit,
     ready: run.ready,
+    installedAt: run.installedAt ?? null,
+    capabilitiesQualifiedAt: run.capabilitiesQualifiedAt ?? null,
+    capabilityError: run.capabilityError ?? null,
+    capabilityCleanup: run.capabilityCleanup ?? null,
     models: run.policy.models,
     sequential: true,
     resourceCleanup: run.resourceCleanup ?? null,
     builders: Object.fromEntries(
       Object.entries(run.builders).map(([name, b]) => {
         const latest = path.join(out, name, 'metrics/usage-latest.json');
+        const capabilityUsage = path.join(
+          out,
+          name,
+          'capability-metrics/usage-latest.json',
+        );
         return [
           name,
           {
@@ -1528,6 +2049,9 @@ export function statusExperiment(out) {
             actualStartedAt: b.actualStartedAt ?? null,
             finishedAt: b.finishedAt ?? null,
             usage: existsSync(latest) ? json(latest) : null,
+            capabilityUsage: existsSync(capabilityUsage)
+              ? json(capabilityUsage)
+              : null,
           },
         ];
       }),
@@ -1561,6 +2085,10 @@ if (
     });
   else if (commandName === 'qualify')
     result = await qualifyExperiment(path.resolve(o.run), json(o.receipts));
+  else if (commandName === 'capabilities')
+    result = await qualifyCapabilities(path.resolve(o.run), {
+      authorize: o.authorize === true,
+    });
   else if (commandName === 'run')
     result = await runBuilders(path.resolve(o.run), o.builder ?? 'all', {
       authorize: o.authorize === true,
@@ -1568,7 +2096,11 @@ if (
   else if (commandName === 'status')
     result = statusExperiment(path.resolve(o.run));
   else if (commandName === 'cleanup')
-    result = await cleanupExperiment(path.resolve(o.run));
+    result = await cleanupExperiment(path.resolve(o.run), {
+      operatorInventories: o['operator-inventory']
+        ? json(o['operator-inventory'])
+        : {},
+    });
   else if (commandName === 'source') {
     const app = path.resolve(o.app),
       snapshot = snapshotApplication(app),
@@ -1589,11 +2121,11 @@ if (
     result = { cancellationRequested: true };
   } else
     throw Error(
-      'prepare --commit SHA --ref refs/heads/BRANCH --out NEW_DIR --gate JSON | qualify --run DIR --receipts JSON | run --run DIR --builder luna|sol|astra|all --authorize | status --run DIR | cancel --run DIR | cleanup --run DIR',
+      'prepare --commit SHA --ref refs/heads/BRANCH --out NEW_DIR --gate JSON | qualify --run DIR --receipts JSON | capabilities --run DIR --authorize | run --run DIR --builder luna|sol|astra|all --authorize | status --run DIR | cancel --run DIR | cleanup --run DIR [--operator-inventory JSON]',
     );
   console.log(
     JSON.stringify(
-      commandName === 'prepare' || commandName === 'qualify'
+      ['prepare', 'qualify', 'capabilities'].includes(commandName)
         ? {
             commit: result.commit,
             ready: result.ready,

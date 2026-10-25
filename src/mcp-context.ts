@@ -282,6 +282,23 @@ export function summarizeResult(
         ? { $designRef: resultRef, pointer: '/workflow' }
         : null,
     };
+  else if (command === 'kernel resolve')
+    summary = {
+      inputIdentity: r.inputIdentity,
+      compilationIdentity: r.compilationIdentity,
+      resultIdentity: r.resultIdentity,
+      scenarios: Object.keys(record(r.values)),
+      valueCount: Object.values(record(r.values)).reduce<number>(
+        (count, value) => count + Object.keys(record(value)).length,
+        0,
+      ),
+      verification: r.verification,
+      values: resultRef
+        ? { $designRef: resultRef, pointer: '/values' }
+        : 'See fullResult /values; import the saved JSON into the app.',
+      scope:
+        'Resolved conditional properties; no search, neural call or new renderer measurement.',
+    };
   else if (command === 'bindings check')
     summary = {
       identity: r.identity ?? r.manifestIdentity,

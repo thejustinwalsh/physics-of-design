@@ -5,9 +5,11 @@ import {
   compileRelationalKernels,
   kernelTextMeasurementIdentity,
   resolveRelationalKernelOutputs,
+  resolveKernelSelection,
   type RelationalKernelInput,
 } from '../src/relational-kernels.js';
 import { runDecisionWorkflow } from '../src/decision-workflow.js';
+import { execute } from '../src/commands.js';
 // Synthetic observations test contracts only; actual browser evidence is a separate recorded fixture.
 function fixture(): RelationalKernelInput {
   const scenarios = [
@@ -301,6 +303,39 @@ test('arbitrary role and region names work without a Relay component catalog', a
       'workspace.actions.width'
     ],
   );
+});
+
+test('CLI/MCP resolver exposes importable values without another search or local readout', async () => {
+  const input = fixture(),
+    compiled = compileRelationalKernels(input);
+  const result = await runDecisionWorkflow({ workflow: compiled.workflow });
+  const before = structuredClone(result.statistics);
+  const request = { input, compilationIdentity: compiled.identity, result };
+  const expected = resolveRelationalKernelOutputs(compiled, result);
+  assert.deepEqual(resolveKernelSelection(request), expected);
+  assert.deepEqual(await execute('kernel resolve', request), expected);
+  assert.deepEqual(result.statistics, before);
+  assert.equal(expected.verification, 'pending-current-renderer');
+  assert.throws(
+    () =>
+      resolveKernelSelection({
+        ...request,
+        compilationIdentity: hash('different'),
+      }),
+    /differs from the selected compilation/,
+  );
+  const failed = structuredClone(result);
+  failed.stages[compiled.workflow.stages[0]!.id]!.status = 'failed';
+  assert.throws(
+    () => resolveKernelSelection({ ...request, result: failed }),
+    /Unresolved kernel/,
+  );
+  const tampered = structuredClone(result);
+  tampered.stages[compiled.workflow.stages[0]!.id]!.assignment = {
+    choice: 999,
+    paddingBlock: 12,
+  };
+  assert.throws(() => resolveKernelSelection({ ...request, result: tampered }));
 });
 
 test('compact frozen Relay input resolves exactly to the source-bound full input', async () => {
