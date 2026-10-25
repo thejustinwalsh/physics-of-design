@@ -1,0 +1,5 @@
+
+> @physics-of-design/toolkit@0.1.0 fieldwork:native
+> node scripts/native-session.mjs --fieldwork
+
+Fieldwork native apps ready on iPhone and Android. Observer:4321; Metro:8087/proxy:8088. Ctrl-C stops this session’s owned services.

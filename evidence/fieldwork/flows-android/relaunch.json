@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "capturedAt": "2026-10-25T03:01:43.408Z",
+  "capturedAt": "2026-10-25T03:24:09.395Z",
   "engine": "react-native/Text+Yoga",
   "platform": "android",
   "snapshot": {
-    "proofId": "flows-relaunch-1792897301816",
+    "proofId": "flows-relaunch-1792898647441",
     "screen": "journal",
     "story": null,
     "saved": [
@@ -13,7 +13,7 @@
     ],
     "query": "",
     "readerSize": 21,
-    "offlineReady": true,
+    "imagesPrefetched": true,
     "hydrated": true,
     "readerPosition": {
       "content": 1155.047607421875,
@@ -48,6 +48,7 @@
       "readingLeading": 1.55,
       "readingMeasure": 371.42857142857144,
       "imageAspect": 1.55,
+      "readerImageAspect": 1.2100840336134455,
       "controlSize": 44,
       "spaces": {
         "inline": 8,
@@ -72,7 +73,8 @@
           "navigation",
           "columns",
           "titleSize",
-          "imageAspect"
+          "imageAspect",
+          "readerImageAspect"
         ],
         "textScale": [
           "navigation",
@@ -144,6 +146,10 @@
       "accent": "#345440",
       "accentBg": "#e3eadb",
       "paper": "#eee5d5"
+    },
+    "keyboard": {
+      "visible": false,
+      "screenCoordinates": null
     }
   },
   "observations": [
@@ -217,78 +223,6 @@
         "y": 661.7142944335938,
         "width": 371.4285888671875,
         "height": 77.33328247070312
-      }
-    },
-    {
-      "id": "control-21",
-      "name": "Read Taking the long way home",
-      "kind": "target",
-      "clipId": "clip-5",
-      "box": {
-        "x": 20.190475463867188,
-        "y": 850.6666259765625,
-        "width": 311.23809814453125,
-        "height": 104
-      },
-      "visibleBox": {
-        "x": 20.190475463867188,
-        "y": 850.6666259765625,
-        "width": 311.23809814453125,
-        "height": 0
-      }
-    },
-    {
-      "id": "control-26",
-      "name": "Remove Taking the long way home",
-      "kind": "target",
-      "clipId": "clip-5",
-      "box": {
-        "x": 347.80950927734375,
-        "y": 850.6666259765625,
-        "width": 44.19049072265625,
-        "height": 43.8094482421875
-      },
-      "visibleBox": {
-        "x": 347.80950927734375,
-        "y": 850.6666259765625,
-        "width": 44.19049072265625,
-        "height": 0
-      }
-    },
-    {
-      "id": "control-27",
-      "name": "Read Notes on noticing",
-      "kind": "target",
-      "clipId": "clip-5",
-      "box": {
-        "x": 20.190475463867188,
-        "y": 995.0477294921875,
-        "width": 311.23809814453125,
-        "height": 104
-      },
-      "visibleBox": {
-        "x": 20.190475463867188,
-        "y": 995.0477294921875,
-        "width": 311.23809814453125,
-        "height": 0
-      }
-    },
-    {
-      "id": "control-32",
-      "name": "Save Notes on noticing",
-      "kind": "target",
-      "clipId": "clip-5",
-      "box": {
-        "x": 347.80950927734375,
-        "y": 995.0477294921875,
-        "width": 44.19049072265625,
-        "height": 43.8094482421875
-      },
-      "visibleBox": {
-        "x": 347.80950927734375,
-        "y": 995.0477294921875,
-        "width": 44.19049072265625,
-        "height": 0
       }
     },
     {
@@ -765,221 +699,6 @@
       }
     },
     {
-      "id": "text-23",
-      "name": "ROUTES & RITUALS",
-      "kind": "text",
-      "clipId": "clip-5",
-      "text": "ROUTES & RITUALS",
-      "lines": [
-        {
-          "text": "ROUTES & RITUALS",
-          "x": 0,
-          "y": 0,
-          "width": 101.71428680419922,
-          "height": 16,
-          "descender": 3.4285714626312256,
-          "capHeight": 8.114285469055176,
-          "ascender": 12.571428298950195,
-          "xHeight": 5.699047565460205
-        }
-      ],
-      "allowsScaling": true,
-      "cap": null,
-      "box": {
-        "x": 128.38095092773438,
-        "y": 850.6666259765625,
-        "width": 203.42855834960938,
-        "height": 16
-      },
-      "visibleBox": {
-        "x": 128.38095092773438,
-        "y": 850.6666259765625,
-        "width": 203.42855834960938,
-        "height": 0
-      }
-    },
-    {
-      "id": "text-24",
-      "name": "Taking the long way home",
-      "kind": "text",
-      "clipId": "clip-5",
-      "text": "Taking the long way home",
-      "lines": [
-        {
-          "text": "Taking the long ",
-          "x": 0,
-          "y": 0,
-          "width": 167.74850463867188,
-          "height": 27.047618865966797,
-          "descender": 6.476190567016602,
-          "capHeight": 15.615239143371582,
-          "ascender": 20.571428298950195,
-          "xHeight": 10.533332824707031
-        },
-        {
-          "text": "way home",
-          "x": 0,
-          "y": 27.047618865966797,
-          "width": 103.00892639160156,
-          "height": 27.047618865966797,
-          "descender": 6.476190567016602,
-          "capHeight": 15.615239143371582,
-          "ascender": 20.571428298950195,
-          "xHeight": 10.533332824707031
-        }
-      ],
-      "allowsScaling": true,
-      "cap": null,
-      "box": {
-        "x": 128.38095092773438,
-        "y": 873.5238037109375,
-        "width": 203.42855834960938,
-        "height": 54.09521484375
-      },
-      "visibleBox": {
-        "x": 128.38095092773438,
-        "y": 873.5238037109375,
-        "width": 203.42855834960938,
-        "height": 0
-      }
-    },
-    {
-      "id": "text-25",
-      "name": "1 min read · Available offline",
-      "kind": "text",
-      "clipId": "clip-5",
-      "text": "1 min read · Available offline",
-      "lines": [
-        {
-          "text": "1 min read · Available offline",
-          "x": 0,
-          "y": 0,
-          "width": 151.23809814453125,
-          "height": 16.761905670166016,
-          "descender": 3.4285714626312256,
-          "capHeight": 8.7619047164917,
-          "ascender": 13.333333015441895,
-          "xHeight": 6.285714149475098
-        }
-      ],
-      "allowsScaling": true,
-      "cap": null,
-      "box": {
-        "x": 128.38095092773438,
-        "y": 934.4761962890625,
-        "width": 203.42855834960938,
-        "height": 16.761962890625
-      },
-      "visibleBox": {
-        "x": 128.38095092773438,
-        "y": 934.4761962890625,
-        "width": 203.42855834960938,
-        "height": 0
-      }
-    },
-    {
-      "id": "text-29",
-      "name": "A FIELD GUIDE",
-      "kind": "text",
-      "clipId": "clip-5",
-      "text": "A FIELD GUIDE",
-      "lines": [
-        {
-          "text": "A FIELD GUIDE",
-          "x": 0,
-          "y": 0,
-          "width": 77.71428680419922,
-          "height": 16,
-          "descender": 3.4285714626312256,
-          "capHeight": 8.114285469055176,
-          "ascender": 12.571428298950195,
-          "xHeight": 5.699047565460205
-        }
-      ],
-      "allowsScaling": true,
-      "cap": null,
-      "box": {
-        "x": 128.38095092773438,
-        "y": 995.0477294921875,
-        "width": 203.42855834960938,
-        "height": 16
-      },
-      "visibleBox": {
-        "x": 128.38095092773438,
-        "y": 995.0477294921875,
-        "width": 203.42855834960938,
-        "height": 0
-      }
-    },
-    {
-      "id": "text-30",
-      "name": "Notes on noticing",
-      "kind": "text",
-      "clipId": "clip-5",
-      "text": "Notes on noticing",
-      "lines": [
-        {
-          "text": "Notes on noticing",
-          "x": 0,
-          "y": 0,
-          "width": 184.3854217529297,
-          "height": 27.047618865966797,
-          "descender": 6.476190567016602,
-          "capHeight": 15.615239143371582,
-          "ascender": 20.571428298950195,
-          "xHeight": 10.533332824707031
-        }
-      ],
-      "allowsScaling": true,
-      "cap": null,
-      "box": {
-        "x": 128.38095092773438,
-        "y": 1017.9049072265625,
-        "width": 203.42855834960938,
-        "height": 27.047607421875
-      },
-      "visibleBox": {
-        "x": 128.38095092773438,
-        "y": 1017.9049072265625,
-        "width": 203.42855834960938,
-        "height": 0
-      }
-    },
-    {
-      "id": "text-31",
-      "name": "1 min read",
-      "kind": "text",
-      "clipId": "clip-5",
-      "text": "1 min read",
-      "lines": [
-        {
-          "text": "1 min read",
-          "x": 0,
-          "y": 0,
-          "width": 56.761905670166016,
-          "height": 16.761905670166016,
-          "descender": 3.4285714626312256,
-          "capHeight": 8.7619047164917,
-          "ascender": 13.333333015441895,
-          "xHeight": 6.285714149475098
-        }
-      ],
-      "allowsScaling": true,
-      "cap": null,
-      "box": {
-        "x": 128.38095092773438,
-        "y": 1051.8095703125,
-        "width": 203.42855834960938,
-        "height": 16.761962890625
-      },
-      "visibleBox": {
-        "x": 128.38095092773438,
-        "y": 1051.8095703125,
-        "width": 203.42855834960938,
-        "height": 0
-      }
-    },
-    {
       "id": "text-33",
       "name": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
       "kind": "text",
@@ -1164,7 +883,240 @@
       }
     },
     {
-      "id": "media-22",
+      "id": "text-60",
+      "name": "ROUTES & RITUALS",
+      "kind": "text",
+      "clipId": "clip-5",
+      "text": "ROUTES & RITUALS",
+      "lines": [
+        {
+          "text": "ROUTES & RITUALS",
+          "x": 0,
+          "y": 0,
+          "width": 101.71428680419922,
+          "height": 16,
+          "descender": 3.4285714626312256,
+          "capHeight": 8.114285469055176,
+          "ascender": 12.571428298950195,
+          "xHeight": 5.699047565460205
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 128.38095092773438,
+        "y": 850.6666259765625,
+        "width": 203.42855834960938,
+        "height": 16
+      },
+      "visibleBox": {
+        "x": 128.38095092773438,
+        "y": 850.6666259765625,
+        "width": 203.42855834960938,
+        "height": 0
+      }
+    },
+    {
+      "id": "text-61",
+      "name": "Taking the long way home",
+      "kind": "text",
+      "clipId": "clip-5",
+      "text": "Taking the long way home",
+      "lines": [
+        {
+          "text": "Taking the long ",
+          "x": 0,
+          "y": 0,
+          "width": 167.74850463867188,
+          "height": 27.047618865966797,
+          "descender": 6.476190567016602,
+          "capHeight": 15.615239143371582,
+          "ascender": 20.571428298950195,
+          "xHeight": 10.533332824707031
+        },
+        {
+          "text": "way home",
+          "x": 0,
+          "y": 27.047618865966797,
+          "width": 103.00892639160156,
+          "height": 27.047618865966797,
+          "descender": 6.476190567016602,
+          "capHeight": 15.615239143371582,
+          "ascender": 20.571428298950195,
+          "xHeight": 10.533332824707031
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 128.38095092773438,
+        "y": 873.5238037109375,
+        "width": 203.42855834960938,
+        "height": 54.09521484375
+      },
+      "visibleBox": {
+        "x": 128.38095092773438,
+        "y": 873.5238037109375,
+        "width": 203.42855834960938,
+        "height": 0
+      }
+    },
+    {
+      "id": "text-62",
+      "name": "1 min read · Saved on this device",
+      "kind": "text",
+      "clipId": "clip-5",
+      "text": "1 min read · Saved on this device",
+      "lines": [
+        {
+          "text": "1 min read · Saved on this device",
+          "x": 0,
+          "y": 0,
+          "width": 174.85714721679688,
+          "height": 16.761905670166016,
+          "descender": 3.4285714626312256,
+          "capHeight": 8.7619047164917,
+          "ascender": 13.333333015441895,
+          "xHeight": 6.285714149475098
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 128.38095092773438,
+        "y": 934.4761962890625,
+        "width": 203.42855834960938,
+        "height": 16.761962890625
+      },
+      "visibleBox": {
+        "x": 128.38095092773438,
+        "y": 934.4761962890625,
+        "width": 203.42855834960938,
+        "height": 0
+      }
+    },
+    {
+      "id": "text-66",
+      "name": "A FIELD GUIDE",
+      "kind": "text",
+      "clipId": "clip-5",
+      "text": "A FIELD GUIDE",
+      "lines": [
+        {
+          "text": "A FIELD GUIDE",
+          "x": 0,
+          "y": 0,
+          "width": 77.71428680419922,
+          "height": 16,
+          "descender": 3.4285714626312256,
+          "capHeight": 8.114285469055176,
+          "ascender": 12.571428298950195,
+          "xHeight": 5.699047565460205
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 128.38095092773438,
+        "y": 995.0477294921875,
+        "width": 203.42855834960938,
+        "height": 16
+      },
+      "visibleBox": {
+        "x": 128.38095092773438,
+        "y": 995.0477294921875,
+        "width": 203.42855834960938,
+        "height": 0
+      }
+    },
+    {
+      "id": "text-67",
+      "name": "Notes on noticing",
+      "kind": "text",
+      "clipId": "clip-5",
+      "text": "Notes on noticing",
+      "lines": [
+        {
+          "text": "Notes on noticing",
+          "x": 0,
+          "y": 0,
+          "width": 184.3854217529297,
+          "height": 27.047618865966797,
+          "descender": 6.476190567016602,
+          "capHeight": 15.615239143371582,
+          "ascender": 20.571428298950195,
+          "xHeight": 10.533332824707031
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 128.38095092773438,
+        "y": 1017.9049072265625,
+        "width": 203.42855834960938,
+        "height": 27.047607421875
+      },
+      "visibleBox": {
+        "x": 128.38095092773438,
+        "y": 1017.9049072265625,
+        "width": 203.42855834960938,
+        "height": 0
+      }
+    },
+    {
+      "id": "text-68",
+      "name": "1 min read",
+      "kind": "text",
+      "clipId": "clip-5",
+      "text": "1 min read",
+      "lines": [
+        {
+          "text": "1 min read",
+          "x": 0,
+          "y": 0,
+          "width": 56.761905670166016,
+          "height": 16.761905670166016,
+          "descender": 3.4285714626312256,
+          "capHeight": 8.7619047164917,
+          "ascender": 13.333333015441895,
+          "xHeight": 6.285714149475098
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 128.38095092773438,
+        "y": 1051.8095703125,
+        "width": 203.42855834960938,
+        "height": 16.761962890625
+      },
+      "visibleBox": {
+        "x": 128.38095092773438,
+        "y": 1051.8095703125,
+        "width": 203.42855834960938,
+        "height": 0
+      }
+    },
+    {
+      "id": "control-58",
+      "name": "Read Taking the long way home",
+      "kind": "target",
+      "clipId": "clip-5",
+      "box": {
+        "x": 20.190475463867188,
+        "y": 850.6666259765625,
+        "width": 311.23809814453125,
+        "height": 104
+      },
+      "visibleBox": {
+        "x": 20.190475463867188,
+        "y": 850.6666259765625,
+        "width": 311.23809814453125,
+        "height": 0
+      }
+    },
+    {
+      "id": "media-59",
       "name": "long-way-home",
       "kind": "media",
       "clipId": "clip-5",
@@ -1183,7 +1135,43 @@
       }
     },
     {
-      "id": "media-28",
+      "id": "control-63",
+      "name": "Remove Taking the long way home",
+      "kind": "target",
+      "clipId": "clip-5",
+      "box": {
+        "x": 347.80950927734375,
+        "y": 850.6666259765625,
+        "width": 44.19049072265625,
+        "height": 43.8094482421875
+      },
+      "visibleBox": {
+        "x": 347.80950927734375,
+        "y": 850.6666259765625,
+        "width": 44.19049072265625,
+        "height": 0
+      }
+    },
+    {
+      "id": "control-64",
+      "name": "Read Notes on noticing",
+      "kind": "target",
+      "clipId": "clip-5",
+      "box": {
+        "x": 20.190475463867188,
+        "y": 995.0477294921875,
+        "width": 311.23809814453125,
+        "height": 104
+      },
+      "visibleBox": {
+        "x": 20.190475463867188,
+        "y": 995.0477294921875,
+        "width": 311.23809814453125,
+        "height": 0
+      }
+    },
+    {
+      "id": "media-65",
       "name": "notes-on-noticing",
       "kind": "media",
       "clipId": "clip-5",
@@ -1198,6 +1186,24 @@
         "x": 20.190475463867188,
         "y": 995.0477294921875,
         "width": 91.80952453613281,
+        "height": 0
+      }
+    },
+    {
+      "id": "control-69",
+      "name": "Save Notes on noticing",
+      "kind": "target",
+      "clipId": "clip-5",
+      "box": {
+        "x": 347.80950927734375,
+        "y": 995.0477294921875,
+        "width": 44.19049072265625,
+        "height": 43.8094482421875
+      },
+      "visibleBox": {
+        "x": 347.80950927734375,
+        "y": 995.0477294921875,
+        "width": 44.19049072265625,
         "height": 0
       }
     }

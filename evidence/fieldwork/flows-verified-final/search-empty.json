@@ -1,0 +1,670 @@
+{
+  "version": 1,
+  "capturedAt": "2026-10-25T03:23:59.578Z",
+  "engine": "react-native/Text+Yoga",
+  "platform": "android",
+  "snapshot": {
+    "proofId": "flows-1792898607082",
+    "screen": "explore",
+    "story": null,
+    "saved": [
+      "long-way-home",
+      "looking-longer"
+    ],
+    "query": "zzunseenquery",
+    "readerSize": 21,
+    "imagesPrefetched": true,
+    "hydrated": true,
+    "readerPosition": {
+      "content": 611.4285888671875,
+      "viewport": 675.047607421875,
+      "offset": 1184
+    },
+    "restoredFor": "looking-longer",
+    "appearance": "light",
+    "highContrast": false,
+    "plan": {
+      "request": {
+        "width": 411.42857142857144,
+        "textScale": 1,
+        "mode": "app",
+        "density": 1,
+        "expression": 1,
+        "readingSize": 21,
+        "readingLeading": 1.55
+      },
+      "gutter": 20,
+      "gap": 20,
+      "sidebarWidth": 220,
+      "contentWidth": 371.42857142857144,
+      "navigation": "tabs",
+      "columns": 1,
+      "sectionGap": 40,
+      "titleSize": 34,
+      "titleLeading": 1.08,
+      "titleTrackingEm": -0.015,
+      "bodySize": 17,
+      "readingSize": 21,
+      "readingLeading": 1.55,
+      "readingMeasure": 371.42857142857144,
+      "imageAspect": 1.55,
+      "readerImageAspect": 1.2100840336134455,
+      "controlSize": 44,
+      "spaces": {
+        "inline": 8,
+        "related": 16,
+        "group": 20,
+        "section": 24,
+        "major": 40
+      },
+      "storyTitleSize": 31,
+      "variables": [
+        "width",
+        "textScale",
+        "density",
+        "expression",
+        "readingSize",
+        "readingLeading"
+      ],
+      "dependencyEffects": {
+        "width": [
+          "gutters",
+          "contentWidth",
+          "navigation",
+          "columns",
+          "titleSize",
+          "imageAspect",
+          "readerImageAspect"
+        ],
+        "textScale": [
+          "navigation",
+          "columns",
+          "renderer wrapping"
+        ],
+        "density": [
+          "gap",
+          "sectionGap"
+        ],
+        "expression": [
+          "titleSize",
+          "titleTrackingEm",
+          "renderer wrapping"
+        ],
+        "readingSize": [
+          "reading geometry",
+          "scroll progress"
+        ],
+        "readingLeading": [
+          "reading geometry",
+          "scroll progress"
+        ]
+      },
+      "provenance": {
+        "kind": "heuristic",
+        "sources": [
+          "apple-layout",
+          "apple-typography",
+          "impeccable-layout",
+          "local-policy"
+        ],
+        "uncertainty": "Uncalibrated geometry proposals; real renderer and task review remain required."
+      },
+      "contract": "Flex topology, natural text heights, no CSS Grid, no cancellation of system text enlargement."
+    },
+    "window": {
+      "width": 411.42857142857144,
+      "height": 814.4761904761905,
+      "scale": 2.625,
+      "fontScale": 1
+    },
+    "coordinateSpace": {
+      "units": "dp",
+      "origin": "window excluding status bar",
+      "screenOffset": {
+        "x": 0,
+        "y": 51.80952453613281
+      },
+      "screen": {
+        "width": 411.42857142857144,
+        "height": 914.2857142857143,
+        "scale": 2.625,
+        "fontScale": 1
+      }
+    },
+    "safeArea": {
+      "left": 0,
+      "bottom": 48,
+      "right": 0,
+      "top": 51.80952453613281
+    },
+    "palette": {
+      "canvas": "#f8f7f2",
+      "surface": "#efeee7",
+      "ink": "#202b25",
+      "muted": "#5e695f",
+      "line": "#d8ddd1",
+      "accent": "#345440",
+      "accentBg": "#e3eadb",
+      "paper": "#eee5d5"
+    },
+    "keyboard": {
+      "visible": false,
+      "screenCoordinates": null
+    }
+  },
+  "observations": [
+    {
+      "id": "text-466",
+      "name": "Journal",
+      "kind": "text",
+      "clipId": null,
+      "text": "Journal",
+      "lines": [
+        {
+          "text": "Journal",
+          "x": 0,
+          "y": 0,
+          "width": 35.42856979370117,
+          "height": 15.2380952835083,
+          "descender": 3.047619104385376,
+          "capHeight": 7.942857265472412,
+          "ascender": 12.190476417541504,
+          "xHeight": 5.699047565460205
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 60.19047546386719,
+        "y": 788.5714111328125,
+        "width": 35.42857360839844,
+        "height": 15.238037109375
+      },
+      "visibleBox": {
+        "x": 60.19047546386719,
+        "y": 788.5714111328125,
+        "width": 35.42857360839844,
+        "height": 15.238037109375
+      }
+    },
+    {
+      "id": "text-468",
+      "name": "Explore",
+      "kind": "text",
+      "clipId": null,
+      "text": "Explore",
+      "lines": [
+        {
+          "text": "Explore",
+          "x": 0,
+          "y": 0,
+          "width": 37.662200927734375,
+          "height": 16,
+          "descender": 3.4285714626312256,
+          "capHeight": 8.114285469055176,
+          "ascender": 12.571428298950195,
+          "xHeight": 5.699047565460205
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 187.04762268066406,
+        "y": 788.1904296875,
+        "width": 37.71427917480469,
+        "height": 16
+      },
+      "visibleBox": {
+        "x": 187.04762268066406,
+        "y": 788.1904296875,
+        "width": 37.71427917480469,
+        "height": 16
+      }
+    },
+    {
+      "id": "text-470",
+      "name": "Saved",
+      "kind": "text",
+      "clipId": null,
+      "text": "Saved",
+      "lines": [
+        {
+          "text": "Saved",
+          "x": 0,
+          "y": 0,
+          "width": 28.8511905670166,
+          "height": 15.2380952835083,
+          "descender": 3.047619104385376,
+          "capHeight": 7.942857265472412,
+          "ascender": 12.190476417541504,
+          "xHeight": 5.699047565460205
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 318.8571472167969,
+        "y": 788.5714111328125,
+        "width": 28.952362060546875,
+        "height": 15.238037109375
+      },
+      "visibleBox": {
+        "x": 318.8571472167969,
+        "y": 788.5714111328125,
+        "width": 28.952362060546875,
+        "height": 15.238037109375
+      }
+    },
+    {
+      "id": "control-435",
+      "name": "Reading and appearance settings",
+      "kind": "target",
+      "clipId": null,
+      "box": {
+        "x": 347.4285583496094,
+        "y": 9.904754638671875,
+        "width": 44.19049072265625,
+        "height": 44.19049072265625
+      },
+      "visibleBox": {
+        "x": 347.4285583496094,
+        "y": 9.904754638671875,
+        "width": 44.19049072265625,
+        "height": 44.19049072265625
+      }
+    },
+    {
+      "id": "control-465",
+      "name": "Journal",
+      "kind": "target",
+      "clipId": null,
+      "box": {
+        "x": 16,
+        "y": 749.333251953125,
+        "width": 123.80952453613281,
+        "height": 65.142822265625
+      },
+      "visibleBox": {
+        "x": 16,
+        "y": 749.333251953125,
+        "width": 123.80952453613281,
+        "height": 65.142822265625
+      }
+    },
+    {
+      "id": "control-467",
+      "name": "Explore",
+      "kind": "target",
+      "clipId": null,
+      "box": {
+        "x": 144,
+        "y": 749.333251953125,
+        "width": 123.80950927734375,
+        "height": 65.142822265625
+      },
+      "visibleBox": {
+        "x": 144,
+        "y": 749.333251953125,
+        "width": 123.80950927734375,
+        "height": 65.142822265625
+      }
+    },
+    {
+      "id": "control-469",
+      "name": "Saved",
+      "kind": "target",
+      "clipId": null,
+      "box": {
+        "x": 271.6190490722656,
+        "y": 749.333251953125,
+        "width": 123.80950927734375,
+        "height": 65.142822265625
+      },
+      "visibleBox": {
+        "x": 271.6190490722656,
+        "y": 749.333251953125,
+        "width": 123.80950927734375,
+        "height": 65.142822265625
+      }
+    },
+    {
+      "id": "text-909",
+      "name": "Fieldwork.",
+      "kind": "text",
+      "clipId": null,
+      "text": "Fieldwork.",
+      "lines": [
+        {
+          "text": "Fieldwork.",
+          "x": 0,
+          "y": 0,
+          "width": 102.85713958740234,
+          "height": 32.761905670166016,
+          "descender": 6.857142925262451,
+          "capHeight": 17.066665649414062,
+          "ascender": 25.904762268066406,
+          "xHeight": 11.984761238098145
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 19.809524536132812,
+        "y": 15.619049072265625,
+        "width": 102.85713958740234,
+        "height": 32.76190185546875
+      },
+      "visibleBox": {
+        "x": 19.809524536132812,
+        "y": 15.619049072265625,
+        "width": 102.85713958740234,
+        "height": 32.76190185546875
+      }
+    },
+    {
+      "id": "text-949",
+      "name": "FOLLOW YOUR CURIOSITY",
+      "kind": "text",
+      "clipId": "clip-948",
+      "text": "FOLLOW YOUR CURIOSITY",
+      "lines": [
+        {
+          "text": "FOLLOW YOUR CURIOSITY",
+          "x": 0,
+          "y": 0,
+          "width": 141.7142791748047,
+          "height": 16,
+          "descender": 3.4285714626312256,
+          "capHeight": 8.114285469055176,
+          "ascender": 12.571428298950195,
+          "xHeight": 5.699047565460205
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 20.190475463867188,
+        "y": 83.80947875976562,
+        "width": 371.4285888671875,
+        "height": 16
+      },
+      "visibleBox": {
+        "x": 20.190475463867188,
+        "y": 83.80947875976562,
+        "width": 371.4285888671875,
+        "height": 16
+      }
+    },
+    {
+      "id": "text-950",
+      "name": "Find your next read",
+      "kind": "text",
+      "clipId": "clip-948",
+      "text": "Find your next read",
+      "lines": [
+        {
+          "text": "Find your next read",
+          "x": 0,
+          "y": 0,
+          "width": 280.3809509277344,
+          "height": 48.380950927734375,
+          "descender": 10.285714149475098,
+          "capHeight": 25.180952072143555,
+          "ascender": 38.095237731933594,
+          "xHeight": 17.68000030517578
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 20.190475463867188,
+        "y": 107.80947875976562,
+        "width": 371.4285888671875,
+        "height": 48.3809814453125
+      },
+      "visibleBox": {
+        "x": 20.190475463867188,
+        "y": 107.80947875976562,
+        "width": 371.4285888671875,
+        "height": 48.3809814453125
+      }
+    },
+    {
+      "id": "text-951",
+      "name": "Places, ideas and things worth noticing.",
+      "kind": "text",
+      "clipId": "clip-948",
+      "text": "Places, ideas and things worth noticing.",
+      "lines": [
+        {
+          "text": "Places, ideas and things worth noticing.",
+          "x": 0,
+          "y": 0,
+          "width": 294.77825927734375,
+          "height": 24,
+          "descender": 5.333333492279053,
+          "capHeight": 12.323808670043945,
+          "ascender": 18.66666603088379,
+          "xHeight": 8.841904640197754
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 20.190475463867188,
+        "y": 164.19046020507812,
+        "width": 371.4285888671875,
+        "height": 24
+      },
+      "visibleBox": {
+        "x": 20.190475463867188,
+        "y": 164.19046020507812,
+        "width": 371.4285888671875,
+        "height": 24
+      }
+    },
+    {
+      "id": "text-971",
+      "name": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
+      "kind": "text",
+      "clipId": "clip-948",
+      "text": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
+      "lines": [
+        {
+          "text": "An original publication concept. Stories and imagined landscapes by ",
+          "x": 0,
+          "y": 0,
+          "width": 329.0699462890625,
+          "height": 16,
+          "descender": 3.4285714626312256,
+          "capHeight": 7.942857265472412,
+          "ascender": 12.571428298950195,
+          "xHeight": 5.699047565460205
+        },
+        {
+          "text": "Fieldwork studio.",
+          "x": 0,
+          "y": 16,
+          "width": 83.43006134033203,
+          "height": 16,
+          "descender": 3.4285714626312256,
+          "capHeight": 7.942857265472412,
+          "ascender": 12.571428298950195,
+          "xHeight": 5.699047565460205
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 19.809524536132812,
+        "y": 595.047607421875,
+        "width": 371.4285888671875,
+        "height": 32
+      },
+      "visibleBox": {
+        "x": 19.809524536132812,
+        "y": 595.047607421875,
+        "width": 371.4285888671875,
+        "height": 32
+      }
+    },
+    {
+      "id": "clip-948",
+      "name": "scroll viewport",
+      "kind": "clip",
+      "clipId": null,
+      "box": {
+        "x": 0,
+        "y": 63.999969482421875,
+        "width": 411.4285583496094,
+        "height": 675.047607421875
+      },
+      "visibleBox": {
+        "x": 0,
+        "y": 63.999969482421875,
+        "width": 411.4285583496094,
+        "height": 675.047607421875
+      }
+    },
+    {
+      "id": "input-952",
+      "name": "Search stories",
+      "kind": "target",
+      "clipId": "clip-948",
+      "box": {
+        "x": 70.85714721679688,
+        "y": 214.47618103027344,
+        "width": 304.76190185546875,
+        "height": 48.00001525878906
+      },
+      "visibleBox": {
+        "x": 70.85714721679688,
+        "y": 214.47618103027344,
+        "width": 304.76190185546875,
+        "height": 48.00001525878906
+      }
+    },
+    {
+      "id": "control-987",
+      "name": "Clear search",
+      "kind": "target",
+      "clipId": "clip-948",
+      "box": {
+        "x": 137.90475463867188,
+        "y": 479.23809814453125,
+        "width": 136,
+        "height": 48
+      },
+      "visibleBox": {
+        "x": 137.90475463867188,
+        "y": 479.23809814453125,
+        "width": 136,
+        "height": 48
+      }
+    },
+    {
+      "id": "text-985",
+      "name": "No stories found.",
+      "kind": "text",
+      "clipId": "clip-948",
+      "text": "No stories found.",
+      "lines": [
+        {
+          "text": "No stories found.",
+          "x": 0,
+          "y": 0,
+          "width": 182.85714721679688,
+          "height": 36.9523811340332,
+          "descender": 11.428571701049805,
+          "capHeight": 16.125715255737305,
+          "ascender": 25.5238094329834,
+          "xHeight": 10.876190185546875
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 114.28571319580078,
+        "y": 382.09527587890625,
+        "width": 182.85714721679688,
+        "height": 36.952392578125
+      },
+      "visibleBox": {
+        "x": 114.28571319580078,
+        "y": 382.09527587890625,
+        "width": 182.85714721679688,
+        "height": 36.952392578125
+      }
+    },
+    {
+      "id": "text-986",
+      "name": "Try architecture, routes or noticing.",
+      "kind": "text",
+      "clipId": "clip-948",
+      "text": "Try architecture, routes or noticing.",
+      "lines": [
+        {
+          "text": "Try architecture, routes or noticing.",
+          "x": 0,
+          "y": 0,
+          "width": 245.66517639160156,
+          "height": 24,
+          "descender": 5.714285850524902,
+          "capHeight": 11.50095272064209,
+          "ascender": 18.285715103149414,
+          "xHeight": 8.251428604125977
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 83.04762268066406,
+        "y": 437.33331298828125,
+        "width": 245.7142791748047,
+        "height": 24
+      },
+      "visibleBox": {
+        "x": 83.04762268066406,
+        "y": 437.33331298828125,
+        "width": 245.7142791748047,
+        "height": 24
+      }
+    },
+    {
+      "id": "text-988",
+      "name": "Clear search",
+      "kind": "text",
+      "clipId": "clip-948",
+      "text": "Clear search",
+      "lines": [
+        {
+          "text": "Clear search",
+          "x": 0,
+          "y": 0,
+          "width": 88,
+          "height": 22.85714340209961,
+          "descender": 4.952381134033203,
+          "capHeight": 11.752381324768066,
+          "ascender": 17.904762268066406,
+          "xHeight": 8.251428604125977
+        }
+      ],
+      "allowsScaling": true,
+      "cap": null,
+      "box": {
+        "x": 161.90476989746094,
+        "y": 491.80950927734375,
+        "width": 88,
+        "height": 22.857177734375
+      },
+      "visibleBox": {
+        "x": 161.90476989746094,
+        "y": 491.80950927734375,
+        "width": 88,
+        "height": 22.857177734375
+      }
+    }
+  ],
+  "incomplete": false,
+  "scope": "Actual native view frames and Text.onTextLayout observations from the product. Declared props are identified separately. Screenshots and task review remain required."
+}

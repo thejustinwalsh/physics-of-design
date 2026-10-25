@@ -1,0 +1,146 @@
+{
+  "passed": true,
+  "events": [
+    {
+      "action": "tap",
+      "name": "Remove The art of looking longer",
+      "started": 1792898610687,
+      "receipt": "2026-10-25T03:23:31.393Z",
+      "accessibilityBounds": [
+        913,
+        1694,
+        1029,
+        1810
+      ],
+      "nativeBoundsErrorPx": 0.00003814697265625
+    },
+    {
+      "action": "tap",
+      "name": "Save The art of looking longer",
+      "started": 1792898613283,
+      "receipt": "2026-10-25T03:23:34.010Z",
+      "accessibilityBounds": [
+        913,
+        1694,
+        1029,
+        1810
+      ],
+      "nativeBoundsErrorPx": 0.00003814697265625
+    },
+    {
+      "action": "tap",
+      "name": "Saved",
+      "started": 1792898616255,
+      "receipt": "2026-10-25T03:23:36.961Z",
+      "accessibilityBounds": [
+        713,
+        2103,
+        1038,
+        2274
+      ],
+      "nativeBoundsErrorPx": 0.0003032684326171875
+    },
+    {
+      "action": "tap",
+      "name": "Read The art of looking longer",
+      "started": 1792898618973,
+      "receipt": "2026-10-25T03:23:39.718Z",
+      "accessibilityBounds": [
+        53,
+        748,
+        870,
+        1021
+      ],
+      "nativeBoundsErrorPx": 0.0000705718994140625
+    },
+    {
+      "action": "tap",
+      "name": "Back to saved stories",
+      "started": 1792898623425,
+      "receipt": "2026-10-25T03:23:44.127Z",
+      "accessibilityBounds": [
+        53,
+        162,
+        168,
+        278
+      ],
+      "nativeBoundsErrorPx": 0.0000209808349609375
+    },
+    {
+      "action": "tap",
+      "name": "Journal",
+      "started": 1792898626002,
+      "receipt": "2026-10-25T03:23:46.710Z",
+      "accessibilityBounds": [
+        42,
+        2103,
+        367,
+        2274
+      ],
+      "nativeBoundsErrorPx": 0.0003032684326171875
+    },
+    {
+      "action": "tap",
+      "name": "Resume reading",
+      "started": 1792898630067,
+      "receipt": "2026-10-25T03:23:50.811Z",
+      "accessibilityBounds": [
+        53,
+        613,
+        1028,
+        932
+      ],
+      "nativeBoundsErrorPx": 0.0000553131103515625
+    },
+    {
+      "action": "resume-observed-offset",
+      "before": 1184,
+      "after": 1184
+    },
+    {
+      "action": "tap",
+      "name": "Back to the journal",
+      "started": 1792898633074,
+      "receipt": "2026-10-25T03:23:53.776Z",
+      "accessibilityBounds": [
+        53,
+        162,
+        168,
+        278
+      ],
+      "nativeBoundsErrorPx": 0.0000209808349609375
+    },
+    {
+      "action": "tap",
+      "name": "Explore",
+      "started": 1792898635672,
+      "receipt": "2026-10-25T03:23:56.395Z",
+      "accessibilityBounds": [
+        378,
+        2103,
+        703,
+        2274
+      ],
+      "nativeBoundsErrorPx": 0.0003032684326171875
+    },
+    {
+      "action": "tap",
+      "name": "Clear search",
+      "started": 1792898642270,
+      "receipt": "2026-10-25T03:24:02.978Z",
+      "accessibilityBounds": [
+        362,
+        1394,
+        719,
+        1520
+      ],
+      "nativeBoundsErrorPx": 0.000019073486328125
+    },
+    {
+      "action": "cold-project-restart-and-warm-app-link",
+      "savedRestored": true,
+      "scope": "Persistent app state verified; cold app-link transport unsupported by this Expo Go run."
+    }
+  ],
+  "scope": "Actual Android native gestures, Text/View observations and process restart. Native iOS screenshots are separate evidence."
+}

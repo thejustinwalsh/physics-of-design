@@ -1,0 +1,6 @@
+{
+  "scope": "Complete successful final Android run; previous failures remain in the historical working directory and frozen review archive.",
+  "flowScriptSha256": "416ed436fad7a68325b890611ab6d2d854a332c861b3df61a6b768417d2dc31f",
+  "keyboard": "Actual show/hide events and endCoordinates; recovery is after dismissal.",
+  "frameOracle": "UIAutomator accessibility bounds independently agree with native frames within 0.001 pixels in this run."
+}

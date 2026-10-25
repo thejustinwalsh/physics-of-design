@@ -1,74 +1,51 @@
 {
-  "error": "Error: No native client after cold project restart",
+  "error": "Error: No expected native transition after 1792898473722: artifacts/fieldwork/native-observations/request-e62cff0dde696c0b179bc629201be999c93cc5dc21bf963304942ec5334474d7.json",
   "events": [
     {
       "action": "tap",
+      "name": "Remove The art of looking longer",
+      "started": 1792898464925,
+      "receipt": "2026-10-25T03:21:05.956Z"
+    },
+    {
+      "action": "tap",
       "name": "Save The art of looking longer",
-      "started": 1792896999242,
-      "receipt": "2026-10-25T02:56:39.572Z"
+      "started": 1792898466053,
+      "receipt": "2026-10-25T03:21:07.052Z"
     },
     {
       "action": "tap",
       "name": "Saved",
-      "started": 1792896999874,
-      "receipt": "2026-10-25T02:56:40.206Z"
+      "started": 1792898467156,
+      "receipt": "2026-10-25T03:21:07.961Z"
     },
     {
       "action": "tap",
       "name": "Read The art of looking longer",
-      "started": 1792897000698,
-      "receipt": "2026-10-25T02:56:41.023Z"
+      "started": 1792898468397,
+      "receipt": "2026-10-25T03:21:09.212Z"
     },
     {
       "action": "tap",
       "name": "Back to saved stories",
-      "started": 1792897003206,
-      "receipt": "2026-10-25T02:56:43.526Z"
+      "started": 1792898471027,
+      "receipt": "2026-10-25T03:21:11.762Z"
     },
     {
       "action": "tap",
       "name": "Journal",
-      "started": 1792897003829,
-      "receipt": "2026-10-25T02:56:44.156Z"
-    },
-    {
-      "action": "tap",
-      "name": "Resume reading",
-      "started": 1792897005911,
-      "receipt": "2026-10-25T02:56:46.273Z"
-    },
-    {
-      "action": "resume-observed-offset",
-      "before": 459.4285583496094,
-      "after": 459.4285583496094
-    },
-    {
-      "action": "tap",
-      "name": "Back to the journal",
-      "started": 1792897006964,
-      "receipt": "2026-10-25T02:56:47.289Z"
-    },
-    {
-      "action": "tap",
-      "name": "Explore",
-      "started": 1792897007587,
-      "receipt": "2026-10-25T02:56:47.905Z"
-    },
-    {
-      "action": "tap",
-      "name": "Clear search",
-      "started": 1792897010422,
-      "receipt": "2026-10-25T02:56:50.773Z"
+      "started": 1792898471667,
+      "receipt": "2026-10-25T03:21:12.376Z"
     }
   ],
   "last": {
     "version": 1,
-    "capturedAt": "2026-10-25T02:56:50.773Z",
+    "capturedAt": "2026-10-25T03:21:13.687Z",
     "engine": "react-native/Text+Yoga",
     "platform": "android",
     "snapshot": {
-      "proofId": "flows-1792896998216",
-      "screen": "explore",
+      "proofId": "flows-1792898463687",
+      "screen": "journal",
       "story": null,
       "saved": [
         "long-way-home",
@@ -76,12 +53,12 @@
       ],
       "query": "",
       "readerSize": 21,
-      "offlineReady": true,
+      "imagesPrefetched": true,
       "hydrated": true,
       "readerPosition": {
-        "content": 749.7142944335938,
+        "content": 1155.047607421875,
         "viewport": 675.047607421875,
-        "offset": 459.4285583496094
+        "offset": 459.80950927734375
       },
       "restoredFor": "looking-longer",
       "appearance": "light",
@@ -111,6 +88,7 @@
         "readingLeading": 1.55,
         "readingMeasure": 371.42857142857144,
         "imageAspect": 1.55,
+        "readerImageAspect": 1.2100840336134455,
         "controlSize": 44,
         "spaces": {
           "inline": 8,
@@ -135,7 +113,8 @@
             "navigation",
             "columns",
             "titleSize",
-            "imageAspect"
+            "imageAspect",
+            "readerImageAspect"
           ],
           "textScale": [
             "navigation",
@@ -207,47 +186,25 @@
         "accent": "#345440",
         "accentBg": "#e3eadb",
         "paper": "#eee5d5"
+      },
+      "keyboard": {
+        "visible": false,
+        "screenCoordinates": null
       }
     },
     "observations": [
       {
-        "id": "text-75",
+        "id": "text-110",
         "name": "Journal",
         "kind": "text",
+        "clipId": null,
         "text": "Journal",
         "lines": [
           {
             "text": "Journal",
             "x": 0,
             "y": 0,
-            "width": 35.42856979370117,
-            "height": 15.2380952835083,
-            "descender": 3.047619104385376,
-            "capHeight": 7.942857265472412,
-            "ascender": 12.190476417541504,
-            "xHeight": 5.699047565460205
-          }
-        ],
-        "allowsScaling": true,
-        "cap": null,
-        "box": {
-          "x": 60.19047546386719,
-          "y": 788.5714111328125,
-          "width": 35.42857360839844,
-          "height": 15.238037109375
-        }
-      },
-      {
-        "id": "text-77",
-        "name": "Explore",
-        "kind": "text",
-        "text": "Explore",
-        "lines": [
-          {
-            "text": "Explore",
-            "x": 0,
-            "y": 0,
-            "width": 37.662200927734375,
+            "width": 36.19047546386719,
             "height": 16,
             "descender": 3.4285714626312256,
             "capHeight": 8.114285469055176,
@@ -258,16 +215,57 @@
         "allowsScaling": true,
         "cap": null,
         "box": {
-          "x": 187.04762268066406,
+          "x": 59.80952453613281,
           "y": 788.1904296875,
-          "width": 37.71427917480469,
+          "width": 36.19047546386719,
+          "height": 16
+        },
+        "visibleBox": {
+          "x": 59.80952453613281,
+          "y": 788.1904296875,
+          "width": 36.19047546386719,
           "height": 16
         }
       },
       {
-        "id": "text-79",
+        "id": "text-112",
+        "name": "Explore",
+        "kind": "text",
+        "clipId": null,
+        "text": "Explore",
+        "lines": [
+          {
+            "text": "Explore",
+            "x": 0,
+            "y": 0,
+            "width": 36.56993865966797,
+            "height": 15.2380952835083,
+            "descender": 3.047619104385376,
+            "capHeight": 7.942857265472412,
+            "ascender": 12.190476417541504,
+            "xHeight": 5.699047565460205
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 187.42857360839844,
+          "y": 788.5714111328125,
+          "width": 36.57142639160156,
+          "height": 15.238037109375
+        },
+        "visibleBox": {
+          "x": 187.42857360839844,
+          "y": 788.5714111328125,
+          "width": 36.57142639160156,
+          "height": 15.238037109375
+        }
+      },
+      {
+        "id": "text-114",
         "name": "Saved",
         "kind": "text",
+        "clipId": null,
         "text": "Saved",
         "lines": [
           {
@@ -289,13 +287,26 @@
           "y": 788.5714111328125,
           "width": 28.952362060546875,
           "height": 15.238037109375
+        },
+        "visibleBox": {
+          "x": 318.8571472167969,
+          "y": 788.5714111328125,
+          "width": 28.952362060546875,
+          "height": 15.238037109375
         }
       },
       {
-        "id": "control-49",
+        "id": "control-79",
         "name": "Reading and appearance settings",
         "kind": "target",
+        "clipId": null,
         "box": {
+          "x": 347.4285583496094,
+          "y": 9.904754638671875,
+          "width": 44.19049072265625,
+          "height": 44.19049072265625
+        },
+        "visibleBox": {
           "x": 347.4285583496094,
           "y": 9.904754638671875,
           "width": 44.19049072265625,
@@ -303,10 +314,17 @@
         }
       },
       {
-        "id": "control-74",
+        "id": "control-109",
         "name": "Journal",
         "kind": "target",
+        "clipId": null,
         "box": {
+          "x": 16,
+          "y": 749.333251953125,
+          "width": 123.80952453613281,
+          "height": 65.142822265625
+        },
+        "visibleBox": {
           "x": 16,
           "y": 749.333251953125,
           "width": 123.80952453613281,
@@ -314,10 +332,17 @@
         }
       },
       {
-        "id": "control-76",
+        "id": "control-111",
         "name": "Explore",
         "kind": "target",
+        "clipId": null,
         "box": {
+          "x": 144,
+          "y": 749.333251953125,
+          "width": 123.80950927734375,
+          "height": 65.142822265625
+        },
+        "visibleBox": {
           "x": 144,
           "y": 749.333251953125,
           "width": 123.80950927734375,
@@ -325,10 +350,17 @@
         }
       },
       {
-        "id": "control-78",
+        "id": "control-113",
         "name": "Saved",
         "kind": "target",
+        "clipId": null,
         "box": {
+          "x": 271.6190490722656,
+          "y": 749.333251953125,
+          "width": 123.80950927734375,
+          "height": 65.142822265625
+        },
+        "visibleBox": {
           "x": 271.6190490722656,
           "y": 749.333251953125,
           "width": 123.80950927734375,
@@ -336,9 +368,10 @@
         }
       },
       {
-        "id": "text-481",
+        "id": "text-371",
         "name": "Fieldwork.",
         "kind": "text",
+        "clipId": null,
         "text": "Fieldwork.",
         "lines": [
           {
@@ -360,19 +393,152 @@
           "y": 15.619049072265625,
           "width": 102.85713958740234,
           "height": 32.76190185546875
+        },
+        "visibleBox": {
+          "x": 19.809524536132812,
+          "y": 15.619049072265625,
+          "width": 102.85713958740234,
+          "height": 32.76190185546875
         }
       },
       {
-        "id": "text-519",
-        "name": "FOLLOW YOUR CURIOSITY",
+        "id": "control-402",
+        "name": "Read The art of looking longer",
+        "kind": "target",
+        "clipId": "clip-398",
+        "box": {
+          "x": 20.190475463867188,
+          "y": -267.4286193847656,
+          "width": 371.4285888671875,
+          "height": 371.04766845703125
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 63.999969482421875,
+          "width": 371.4285888671875,
+          "height": 39.61907958984375
+        }
+      },
+      {
+        "id": "control-408",
+        "name": "Remove The art of looking longer",
+        "kind": "target",
+        "clipId": "clip-398",
+        "box": {
+          "x": 347.80950927734375,
+          "y": 113.52377319335938,
+          "width": 44.19049072265625,
+          "height": 44.19049072265625
+        },
+        "visibleBox": {
+          "x": 347.80950927734375,
+          "y": 113.52377319335938,
+          "width": 44.19049072265625,
+          "height": 44.19049072265625
+        }
+      },
+      {
+        "id": "control-409",
+        "name": "Resume reading",
+        "kind": "target",
+        "clipId": "clip-398",
+        "box": {
+          "x": 20.190475463867188,
+          "y": 181.71426391601562,
+          "width": 371.4285888671875,
+          "height": 121.52383422851562
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 181.71426391601562,
+          "width": 371.4285888671875,
+          "height": 121.52383422851562
+        }
+      },
+      {
+        "id": "control-414",
+        "name": "Read Taking the long way home",
+        "kind": "target",
+        "clipId": "clip-398",
+        "box": {
+          "x": 20.190475463867188,
+          "y": 370.6666259765625,
+          "width": 311.23809814453125,
+          "height": 104
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 370.6666259765625,
+          "width": 311.23809814453125,
+          "height": 104
+        }
+      },
+      {
+        "id": "control-419",
+        "name": "Remove Taking the long way home",
+        "kind": "target",
+        "clipId": "clip-398",
+        "box": {
+          "x": 347.80950927734375,
+          "y": 370.6666259765625,
+          "width": 44.19049072265625,
+          "height": 43.80950927734375
+        },
+        "visibleBox": {
+          "x": 347.80950927734375,
+          "y": 370.6666259765625,
+          "width": 44.19049072265625,
+          "height": 43.80950927734375
+        }
+      },
+      {
+        "id": "control-420",
+        "name": "Read Notes on noticing",
+        "kind": "target",
+        "clipId": "clip-398",
+        "box": {
+          "x": 20.190475463867188,
+          "y": 515.0476684570312,
+          "width": 311.23809814453125,
+          "height": 104
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 515.0476684570312,
+          "width": 311.23809814453125,
+          "height": 104
+        }
+      },
+      {
+        "id": "control-425",
+        "name": "Save Notes on noticing",
+        "kind": "target",
+        "clipId": "clip-398",
+        "box": {
+          "x": 347.80950927734375,
+          "y": 515.0476684570312,
+          "width": 44.19049072265625,
+          "height": 43.8094482421875
+        },
+        "visibleBox": {
+          "x": 347.80950927734375,
+          "y": 515.0476684570312,
+          "width": 44.19049072265625,
+          "height": 43.8094482421875
+        }
+      },
+      {
+        "id": "text-399",
+        "name": "ISSUE 08  /  THE OUTSIDE ISSUE",
         "kind": "text",
-        "text": "FOLLOW YOUR CURIOSITY",
+        "clipId": "clip-398",
+        "text": "ISSUE 08  /  THE OUTSIDE ISSUE",
         "lines": [
           {
-            "text": "FOLLOW YOUR CURIOSITY",
+            "text": "ISSUE 08  /  THE OUTSIDE ISSUE",
             "x": 0,
             "y": 0,
-            "width": 141.7142791748047,
+            "width": 166.4761962890625,
             "height": 16,
             "descender": 3.4285714626312256,
             "capHeight": 8.114285469055176,
@@ -384,22 +550,29 @@
         "cap": null,
         "box": {
           "x": 20.190475463867188,
-          "y": 83.80953979492188,
+          "y": -396.1904602050781,
           "width": 371.4285888671875,
           "height": 16
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 63.999969482421875,
+          "width": 371.4285888671875,
+          "height": 0
         }
       },
       {
-        "id": "text-520",
-        "name": "Find your next read",
+        "id": "text-400",
+        "name": "The journal",
         "kind": "text",
-        "text": "Find your next read",
+        "clipId": "clip-398",
+        "text": "The journal",
         "lines": [
           {
-            "text": "Find your next read",
+            "text": "The journal",
             "x": 0,
             "y": 0,
-            "width": 280.3809509277344,
+            "width": 163.42857360839844,
             "height": 48.380950927734375,
             "descender": 10.285714149475098,
             "capHeight": 25.180952072143555,
@@ -411,22 +584,29 @@
         "cap": null,
         "box": {
           "x": 20.190475463867188,
-          "y": 107.80953979492188,
+          "y": -372.1904602050781,
           "width": 371.4285888671875,
-          "height": 48.38092041015625
+          "height": 48.3809814453125
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 63.999969482421875,
+          "width": 371.4285888671875,
+          "height": 0
         }
       },
       {
-        "id": "text-521",
-        "name": "Places, ideas and things worth noticing.",
+        "id": "text-401",
+        "name": "Stories for a more observant life.",
         "kind": "text",
-        "text": "Places, ideas and things worth noticing.",
+        "clipId": "clip-398",
+        "text": "Stories for a more observant life.",
         "lines": [
           {
-            "text": "Places, ideas and things worth noticing.",
+            "text": "Stories for a more observant life.",
             "x": 0,
             "y": 0,
-            "width": 294.77825927734375,
+            "width": 244.23512268066406,
             "height": 24,
             "descender": 5.333333492279053,
             "capHeight": 12.323808670043945,
@@ -438,137 +618,29 @@
         "cap": null,
         "box": {
           "x": 20.190475463867188,
-          "y": 164.19046020507812,
+          "y": -315.8094787597656,
           "width": 371.4285888671875,
           "height": 24
-        }
-      },
-      {
-        "id": "text-541",
-        "name": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
-        "kind": "text",
-        "text": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
-        "lines": [
-          {
-            "text": "An original publication concept. Stories and imagined landscapes by ",
-            "x": 0,
-            "y": 0,
-            "width": 329.0699462890625,
-            "height": 16,
-            "descender": 3.4285714626312256,
-            "capHeight": 7.942857265472412,
-            "ascender": 12.571428298950195,
-            "xHeight": 5.699047565460205
-          },
-          {
-            "text": "Fieldwork studio.",
-            "x": 0,
-            "y": 16,
-            "width": 83.43006134033203,
-            "height": 16,
-            "descender": 3.4285714626312256,
-            "capHeight": 7.942857265472412,
-            "ascender": 12.571428298950195,
-            "xHeight": 5.699047565460205
-          }
-        ],
-        "allowsScaling": true,
-        "cap": null,
-        "box": {
-          "x": 19.809524536132812,
-          "y": 733.333251953125,
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 63.999969482421875,
           "width": 371.4285888671875,
-          "height": 32
+          "height": 0
         }
       },
       {
-        "id": "input-522",
-        "name": "Search stories",
-        "kind": "target",
-        "box": {
-          "x": 70.85714721679688,
-          "y": 214.47618103027344,
-          "width": 304.76190185546875,
-          "height": 48.00001525878906
-        }
-      },
-      {
-        "id": "control-775",
-        "name": "Read The art of looking longer",
-        "kind": "target",
-        "box": {
-          "x": 20.190475463867188,
-          "y": 300.952392578125,
-          "width": 311.23809814453125,
-          "height": 104
-        }
-      },
-      {
-        "id": "control-780",
-        "name": "Remove The art of looking longer",
-        "kind": "target",
-        "box": {
-          "x": 347.80950927734375,
-          "y": 300.952392578125,
-          "width": 44.19049072265625,
-          "height": 43.80950927734375
-        }
-      },
-      {
-        "id": "control-781",
-        "name": "Read Taking the long way home",
-        "kind": "target",
-        "box": {
-          "x": 20.190475463867188,
-          "y": 445.33331298828125,
-          "width": 311.23809814453125,
-          "height": 104
-        }
-      },
-      {
-        "id": "control-786",
-        "name": "Remove Taking the long way home",
-        "kind": "target",
-        "box": {
-          "x": 347.80950927734375,
-          "y": 445.3333740234375,
-          "width": 44.19049072265625,
-          "height": 43.80950927734375
-        }
-      },
-      {
-        "id": "control-787",
-        "name": "Read Notes on noticing",
-        "kind": "target",
-        "box": {
-          "x": 20.190475463867188,
-          "y": 589.7142944335938,
-          "width": 311.23809814453125,
-          "height": 104
-        }
-      },
-      {
-        "id": "control-792",
-        "name": "Save Notes on noticing",
-        "kind": "target",
-        "box": {
-          "x": 347.80950927734375,
-          "y": 589.7142944335938,
-          "width": 44.19049072265625,
-          "height": 43.80950927734375
-        }
-      },
-      {
-        "id": "text-777",
-        "name": "ARCHITECTURE & ATTENTION",
+        "id": "text-404",
+        "name": "THE COVER STORY",
         "kind": "text",
-        "text": "ARCHITECTURE & ATTENTION",
+        "clipId": "clip-398",
+        "text": "THE COVER STORY",
         "lines": [
           {
-            "text": "ARCHITECTURE & ATTENTION",
+            "text": "THE COVER STORY",
             "x": 0,
             "y": 0,
-            "width": 158.85714721679688,
+            "width": 99.42857360839844,
             "height": 16,
             "descender": 3.4285714626312256,
             "capHeight": 8.114285469055176,
@@ -579,61 +651,109 @@
         "allowsScaling": true,
         "cap": null,
         "box": {
-          "x": 128.38095092773438,
-          "y": 300.952392578125,
-          "width": 203.42855834960938,
+          "x": 20.190475463867188,
+          "y": -9.904815673828125,
+          "width": 371.4285888671875,
           "height": 16
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 63.999969482421875,
+          "width": 371.4285888671875,
+          "height": 0
         }
       },
       {
-        "id": "text-778",
+        "id": "text-405",
         "name": "The art of looking longer",
         "kind": "text",
+        "clipId": "clip-398",
         "text": "The art of looking longer",
         "lines": [
           {
-            "text": "The art of looking ",
+            "text": "The art of looking longer",
             "x": 0,
             "y": 0,
-            "width": 190.89137268066406,
-            "height": 27.047618865966797,
-            "descender": 6.476190567016602,
-            "capHeight": 15.615239143371582,
-            "ascender": 20.571428298950195,
-            "xHeight": 10.533332824707031
-          },
-          {
-            "text": "longer",
-            "x": 0,
-            "y": 27.047618865966797,
-            "width": 65.71428680419922,
-            "height": 27.047618865966797,
-            "descender": 6.476190567016602,
-            "capHeight": 15.615239143371582,
-            "ascender": 20.571428298950195,
-            "xHeight": 10.533332824707031
+            "width": 335.346435546875,
+            "height": 35.0476188659668,
+            "descender": 8,
+            "capHeight": 20.990474700927734,
+            "ascender": 27.047618865966797,
+            "xHeight": 14.156190872192383
           }
         ],
         "allowsScaling": true,
         "cap": null,
         "box": {
-          "x": 128.38095092773438,
-          "y": 323.80950927734375,
-          "width": 203.42855834960938,
-          "height": 54.09521484375
+          "x": 20.190475463867188,
+          "y": 14.095184326171875,
+          "width": 371.4285888671875,
+          "height": 35.047607421875
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 63.999969482421875,
+          "width": 371.4285888671875,
+          "height": 0
         }
       },
       {
-        "id": "text-779",
-        "name": "2 min read · Available offline",
+        "id": "text-406",
+        "name": "A quiet place. A longer look. A different kind of attention.",
         "kind": "text",
-        "text": "2 min read · Available offline",
+        "clipId": "clip-398",
+        "text": "A quiet place. A longer look. A different kind of attention.",
         "lines": [
           {
-            "text": "2 min read · Available offline",
+            "text": "A quiet place. A longer look. A different kind of ",
             "x": 0,
             "y": 0,
-            "width": 151.23809814453125,
+            "width": 332.2425537109375,
+            "height": 23.238094329833984,
+            "descender": 5.333333492279053,
+            "capHeight": 11.50095272064209,
+            "ascender": 17.904762268066406,
+            "xHeight": 8.251428604125977
+          },
+          {
+            "text": "attention.",
+            "x": 0,
+            "y": 23.238094329833984,
+            "width": 67.6264877319336,
+            "height": 23.238094329833984,
+            "descender": 5.333333492279053,
+            "capHeight": 11.50095272064209,
+            "ascender": 17.904762268066406,
+            "xHeight": 8.251428604125977
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 20.190475463867188,
+          "y": 57.142791748046875,
+          "width": 371.4285888671875,
+          "height": 46.4761962890625
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 63.999969482421875,
+          "width": 371.4285888671875,
+          "height": 39.6190185546875
+        }
+      },
+      {
+        "id": "text-407",
+        "name": "Fieldwork studio · 2 min read",
+        "kind": "text",
+        "clipId": "clip-398",
+        "text": "Fieldwork studio · 2 min read",
+        "lines": [
+          {
+            "text": "Fieldwork studio · 2 min read",
+            "x": 0,
+            "y": 0,
+            "width": 155.42857360839844,
             "height": 16.761905670166016,
             "descender": 3.4285714626312256,
             "capHeight": 8.7619047164917,
@@ -644,16 +764,159 @@
         "allowsScaling": true,
         "cap": null,
         "box": {
-          "x": 128.38095092773438,
-          "y": 384.76190185546875,
-          "width": 203.42855834960938,
+          "x": 20.190475463867188,
+          "y": 127.23800659179688,
+          "width": 315.4285888671875,
+          "height": 16.76190185546875
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 127.23800659179688,
+          "width": 315.4285888671875,
           "height": 16.76190185546875
         }
       },
       {
-        "id": "text-783",
+        "id": "text-410",
+        "name": "PICK UP WHERE YOU LEFT OFF",
+        "kind": "text",
+        "clipId": "clip-398",
+        "text": "PICK UP WHERE YOU LEFT OFF",
+        "lines": [
+          {
+            "text": "PICK UP WHERE YOU LEFT OFF",
+            "x": 0,
+            "y": 0,
+            "width": 164.1904754638672,
+            "height": 16,
+            "descender": 3.4285714626312256,
+            "capHeight": 8.114285469055176,
+            "ascender": 12.571428298950195,
+            "xHeight": 5.699047565460205
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 201.52378845214844,
+          "width": 331.4285888671875,
+          "height": 16
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 201.52378845214844,
+          "width": 331.4285888671875,
+          "height": 16
+        }
+      },
+      {
+        "id": "text-411",
+        "name": "The art of looking longer",
+        "kind": "text",
+        "clipId": "clip-398",
+        "text": "The art of looking longer",
+        "lines": [
+          {
+            "text": "The art of looking longer",
+            "x": 0,
+            "y": 0,
+            "width": 235.8095245361328,
+            "height": 32.761905670166016,
+            "descender": 9.904762268066406,
+            "capHeight": 14.335238456726074,
+            "ascender": 22.85714340209961,
+            "xHeight": 9.668571472167969
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 225.52378845214844,
+          "width": 331.4285888671875,
+          "height": 32.76191711425781
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 225.52378845214844,
+          "width": 331.4285888671875,
+          "height": 32.76191711425781
+        }
+      },
+      {
+        "id": "text-412",
+        "name": "Your reading position is saved on this device.",
+        "kind": "text",
+        "clipId": "clip-398",
+        "text": "Your reading position is saved on this device.",
+        "lines": [
+          {
+            "text": "Your reading position is saved on this device.",
+            "x": 0,
+            "y": 0,
+            "width": 238.4761962890625,
+            "height": 16.761905670166016,
+            "descender": 3.4285714626312256,
+            "capHeight": 8.7619047164917,
+            "ascender": 13.333333015441895,
+            "xHeight": 6.285714149475098
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 266.28570556640625,
+          "width": 331.4285888671875,
+          "height": 16.76190185546875
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 266.28570556640625,
+          "width": 331.4285888671875,
+          "height": 16.76190185546875
+        }
+      },
+      {
+        "id": "text-413",
+        "name": "Further afield",
+        "kind": "text",
+        "clipId": "clip-398",
+        "text": "Further afield",
+        "lines": [
+          {
+            "text": "Further afield",
+            "x": 0,
+            "y": 0,
+            "width": 80.76190185546875,
+            "height": 19.047618865966797,
+            "descender": 4.190476417541504,
+            "capHeight": 9.794285774230957,
+            "ascender": 14.857142448425293,
+            "xHeight": 6.876190185546875
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 19.809524536132812,
+          "y": 326.85711669921875,
+          "width": 371.4285888671875,
+          "height": 19.047607421875
+        },
+        "visibleBox": {
+          "x": 19.809524536132812,
+          "y": 326.85711669921875,
+          "width": 371.4285888671875,
+          "height": 19.047607421875
+        }
+      },
+      {
+        "id": "text-416",
         "name": "ROUTES & RITUALS",
         "kind": "text",
+        "clipId": "clip-398",
         "text": "ROUTES & RITUALS",
         "lines": [
           {
@@ -672,15 +935,22 @@
         "cap": null,
         "box": {
           "x": 128.38095092773438,
-          "y": 445.33331298828125,
+          "y": 370.6666259765625,
+          "width": 203.42855834960938,
+          "height": 16
+        },
+        "visibleBox": {
+          "x": 128.38095092773438,
+          "y": 370.6666259765625,
           "width": 203.42855834960938,
           "height": 16
         }
       },
       {
-        "id": "text-784",
+        "id": "text-417",
         "name": "Taking the long way home",
         "kind": "text",
+        "clipId": "clip-398",
         "text": "Taking the long way home",
         "lines": [
           {
@@ -710,22 +980,29 @@
         "cap": null,
         "box": {
           "x": 128.38095092773438,
-          "y": 468.19049072265625,
+          "y": 393.5238037109375,
           "width": 203.42855834960938,
-          "height": 54.09527587890625
+          "height": 54.09521484375
+        },
+        "visibleBox": {
+          "x": 128.38095092773438,
+          "y": 393.5238037109375,
+          "width": 203.42855834960938,
+          "height": 54.09521484375
         }
       },
       {
-        "id": "text-785",
-        "name": "1 min read · Available offline",
+        "id": "text-418",
+        "name": "1 min read · Saved on this device",
         "kind": "text",
-        "text": "1 min read · Available offline",
+        "clipId": "clip-398",
+        "text": "1 min read · Saved on this device",
         "lines": [
           {
-            "text": "1 min read · Available offline",
+            "text": "1 min read · Saved on this device",
             "x": 0,
             "y": 0,
-            "width": 151.23809814453125,
+            "width": 174.85714721679688,
             "height": 16.761905670166016,
             "descender": 3.4285714626312256,
             "capHeight": 8.7619047164917,
@@ -737,15 +1014,22 @@
         "cap": null,
         "box": {
           "x": 128.38095092773438,
-          "y": 529.1428833007812,
+          "y": 454.4761962890625,
+          "width": 203.42855834960938,
+          "height": 16.76190185546875
+        },
+        "visibleBox": {
+          "x": 128.38095092773438,
+          "y": 454.4761962890625,
           "width": 203.42855834960938,
           "height": 16.76190185546875
         }
       },
       {
-        "id": "text-789",
+        "id": "text-422",
         "name": "A FIELD GUIDE",
         "kind": "text",
+        "clipId": "clip-398",
         "text": "A FIELD GUIDE",
         "lines": [
           {
@@ -764,15 +1048,22 @@
         "cap": null,
         "box": {
           "x": 128.38095092773438,
-          "y": 589.7142944335938,
+          "y": 515.0476684570312,
+          "width": 203.42855834960938,
+          "height": 16
+        },
+        "visibleBox": {
+          "x": 128.38095092773438,
+          "y": 515.0476684570312,
           "width": 203.42855834960938,
           "height": 16
         }
       },
       {
-        "id": "text-790",
+        "id": "text-423",
         "name": "Notes on noticing",
         "kind": "text",
+        "clipId": "clip-398",
         "text": "Notes on noticing",
         "lines": [
           {
@@ -791,15 +1082,22 @@
         "cap": null,
         "box": {
           "x": 128.38095092773438,
-          "y": 612.5714111328125,
+          "y": 537.9048461914062,
+          "width": 203.42855834960938,
+          "height": 27.047607421875
+        },
+        "visibleBox": {
+          "x": 128.38095092773438,
+          "y": 537.9048461914062,
           "width": 203.42855834960938,
           "height": 27.047607421875
         }
       },
       {
-        "id": "text-791",
+        "id": "text-424",
         "name": "1 min read",
         "kind": "text",
+        "clipId": "clip-398",
         "text": "1 min read",
         "lines": [
           {
@@ -818,40 +1116,133 @@
         "cap": null,
         "box": {
           "x": 128.38095092773438,
-          "y": 646.4761962890625,
+          "y": 571.8095092773438,
           "width": 203.42855834960938,
-          "height": 16.76190185546875
+          "height": 16.761962890625
+        },
+        "visibleBox": {
+          "x": 128.38095092773438,
+          "y": 571.8095092773438,
+          "width": 203.42855834960938,
+          "height": 16.761962890625
         }
       },
       {
-        "id": "media-776",
+        "id": "text-426",
+        "name": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
+        "kind": "text",
+        "clipId": "clip-398",
+        "text": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
+        "lines": [
+          {
+            "text": "An original publication concept. Stories and imagined landscapes by ",
+            "x": 0,
+            "y": 0,
+            "width": 329.0699462890625,
+            "height": 16,
+            "descender": 3.4285714626312256,
+            "capHeight": 7.942857265472412,
+            "ascender": 12.571428298950195,
+            "xHeight": 5.699047565460205
+          },
+          {
+            "text": "Fieldwork studio.",
+            "x": 0,
+            "y": 16,
+            "width": 83.43006134033203,
+            "height": 16,
+            "descender": 3.4285714626312256,
+            "capHeight": 7.942857265472412,
+            "ascender": 12.571428298950195,
+            "xHeight": 5.699047565460205
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 19.809524536132812,
+          "y": 658.6666870117188,
+          "width": 371.4285888671875,
+          "height": 32
+        },
+        "visibleBox": {
+          "x": 19.809524536132812,
+          "y": 658.6666870117188,
+          "width": 371.4285888671875,
+          "height": 32
+        }
+      },
+      {
+        "id": "clip-398",
+        "name": "scroll viewport",
+        "kind": "clip",
+        "clipId": null,
+        "box": {
+          "x": 0,
+          "y": 63.999969482421875,
+          "width": 411.4285583496094,
+          "height": 675.047607421875
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 63.999969482421875,
+          "width": 411.4285583496094,
+          "height": 675.047607421875
+        }
+      },
+      {
+        "id": "media-403",
         "name": "looking-longer",
         "kind": "media",
+        "clipId": "clip-398",
+        "role": "cover",
         "box": {
           "x": 20.190475463867188,
-          "y": 300.952392578125,
-          "width": 91.80952453613281,
-          "height": 104
+          "y": -267.4286193847656,
+          "width": 371.4285888671875,
+          "height": 239.61907958984375
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 63.999969482421875,
+          "width": 371.4285888671875,
+          "height": 0
         }
       },
       {
-        "id": "media-782",
+        "id": "media-415",
         "name": "long-way-home",
         "kind": "media",
+        "clipId": "clip-398",
+        "role": "thumbnail",
         "box": {
           "x": 20.190475463867188,
-          "y": 445.33331298828125,
+          "y": 370.6666259765625,
+          "width": 91.80952453613281,
+          "height": 104
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 370.6666259765625,
           "width": 91.80952453613281,
           "height": 104
         }
       },
       {
-        "id": "media-788",
+        "id": "media-421",
         "name": "notes-on-noticing",
         "kind": "media",
+        "clipId": "clip-398",
+        "role": "thumbnail",
         "box": {
           "x": 20.190475463867188,
-          "y": 589.7142944335938,
+          "y": 515.0476684570312,
+          "width": 91.80952453613281,
+          "height": 104
+        },
+        "visibleBox": {
+          "x": 20.190475463867188,
+          "y": 515.0476684570312,
           "width": 91.80952453613281,
           "height": 104
         }

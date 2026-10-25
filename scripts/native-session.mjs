@@ -3,6 +3,7 @@ import { promisify } from 'node:util';
 import { readFile, mkdir, writeFile, open } from 'node:fs/promises';
 import path from 'node:path';
 import net from 'node:net';
+import { createHash } from 'node:crypto';
 const exec = promisify(execFile),
   root = process.cwd(),
   runtime = path.join(root, 'artifacts/runtime');
@@ -261,7 +262,7 @@ try {
       id,
       'host.exp.Exponent',
       '--initialUrl',
-      'exp://localhost:8087/--/fieldwork',
+      `exp://localhost:8087/--/fieldwork?proof=session-ios-${started}`,
       '-EXDevMenuIsOnboardingFinished',
       'YES',
       '-ExpoGoOnboardingFinished',
@@ -279,7 +280,7 @@ try {
         '-a',
         'android.intent.action.VIEW',
         '-d',
-        'exp://127.0.0.1:8088/--/fieldwork',
+        `exp://127.0.0.1:8088/--/fieldwork?proof=session-android-${started}`,
         '-p',
         'host.exp.exponent',
       ],
@@ -290,7 +291,7 @@ try {
         ['ios', 'android'].map(async (platform) =>
           JSON.parse(
             await readFile(
-              `artifacts/fieldwork/native-observations/latest-${platform}.json`,
+              `artifacts/fieldwork/native-observations/request-${createHash('sha256').update(`session-${platform}-${started}`).digest('hex')}.json`,
               'utf8',
             ),
           ),

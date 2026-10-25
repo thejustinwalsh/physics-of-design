@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "capturedAt": "2026-10-25T03:01:25.722Z",
+  "capturedAt": "2026-10-25T03:23:36.961Z",
   "engine": "react-native/Text+Yoga",
   "platform": "android",
   "snapshot": {
-    "proofId": "flows-1792897282849",
+    "proofId": "flows-1792898607082",
     "screen": "saved",
     "story": null,
     "saved": [
@@ -13,7 +13,7 @@
     ],
     "query": "",
     "readerSize": 21,
-    "offlineReady": true,
+    "imagesPrefetched": true,
     "hydrated": true,
     "readerPosition": {
       "content": 537.1428833007812,
@@ -48,6 +48,7 @@
       "readingLeading": 1.55,
       "readingMeasure": 371.42857142857144,
       "imageAspect": 1.55,
+      "readerImageAspect": 1.2100840336134455,
       "controlSize": 44,
       "spaces": {
         "inline": 8,
@@ -72,7 +73,8 @@
           "navigation",
           "columns",
           "titleSize",
-          "imageAspect"
+          "imageAspect",
+          "readerImageAspect"
         ],
         "textScale": [
           "navigation",
@@ -144,11 +146,15 @@
       "accent": "#345440",
       "accentBg": "#e3eadb",
       "paper": "#eee5d5"
+    },
+    "keyboard": {
+      "visible": false,
+      "screenCoordinates": null
     }
   },
   "observations": [
     {
-      "id": "text-290",
+      "id": "text-434",
       "name": "Fieldwork.",
       "kind": "text",
       "clipId": null,
@@ -182,7 +188,7 @@
       }
     },
     {
-      "id": "text-322",
+      "id": "text-466",
       "name": "Journal",
       "kind": "text",
       "clipId": null,
@@ -216,7 +222,7 @@
       }
     },
     {
-      "id": "text-324",
+      "id": "text-468",
       "name": "Explore",
       "kind": "text",
       "clipId": null,
@@ -250,7 +256,7 @@
       }
     },
     {
-      "id": "text-326",
+      "id": "text-470",
       "name": "Saved",
       "kind": "text",
       "clipId": null,
@@ -284,7 +290,7 @@
       }
     },
     {
-      "id": "control-291",
+      "id": "control-435",
       "name": "Reading and appearance settings",
       "kind": "target",
       "clipId": null,
@@ -302,7 +308,7 @@
       }
     },
     {
-      "id": "control-321",
+      "id": "control-465",
       "name": "Journal",
       "kind": "target",
       "clipId": null,
@@ -320,7 +326,7 @@
       }
     },
     {
-      "id": "control-323",
+      "id": "control-467",
       "name": "Explore",
       "kind": "target",
       "clipId": null,
@@ -338,7 +344,7 @@
       }
     },
     {
-      "id": "control-325",
+      "id": "control-469",
       "name": "Saved",
       "kind": "target",
       "clipId": null,
@@ -356,10 +362,10 @@
       }
     },
     {
-      "id": "control-444",
+      "id": "control-588",
       "name": "Read The art of looking longer",
       "kind": "target",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "box": {
         "x": 20.190475463867188,
         "y": 233.1428680419922,
@@ -374,10 +380,10 @@
       }
     },
     {
-      "id": "control-449",
+      "id": "control-593",
       "name": "Remove The art of looking longer",
       "kind": "target",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "box": {
         "x": 347.80950927734375,
         "y": 233.1428680419922,
@@ -392,10 +398,10 @@
       }
     },
     {
-      "id": "control-450",
+      "id": "control-594",
       "name": "Read Taking the long way home",
       "kind": "target",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "box": {
         "x": 20.190475463867188,
         "y": 377.5238037109375,
@@ -410,10 +416,10 @@
       }
     },
     {
-      "id": "control-455",
+      "id": "control-599",
       "name": "Remove Taking the long way home",
       "kind": "target",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "box": {
         "x": 347.80950927734375,
         "y": 377.52386474609375,
@@ -428,10 +434,10 @@
       }
     },
     {
-      "id": "text-441",
+      "id": "text-585",
       "name": "YOUR PERSONAL COLLECTION",
       "kind": "text",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "text": "YOUR PERSONAL COLLECTION",
       "lines": [
         {
@@ -462,10 +468,10 @@
       }
     },
     {
-      "id": "text-442",
+      "id": "text-586",
       "name": "Saved for later",
       "kind": "text",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "text": "Saved for later",
       "lines": [
         {
@@ -496,17 +502,17 @@
       }
     },
     {
-      "id": "text-443",
-      "name": "2 stories · Ready wherever you are.",
+      "id": "text-587",
+      "name": "2 stories · Saved on this device.",
       "kind": "text",
-      "clipId": "clip-440",
-      "text": "2 stories · Ready wherever you are.",
+      "clipId": "clip-584",
+      "text": "2 stories · Saved on this device.",
       "lines": [
         {
-          "text": "2 stories · Ready wherever you are.",
+          "text": "2 stories · Saved on this device.",
           "x": 0,
           "y": 0,
-          "width": 263.0877990722656,
+          "width": 234.6458282470703,
           "height": 24,
           "descender": 5.333333492279053,
           "capHeight": 12.323808670043945,
@@ -530,10 +536,10 @@
       }
     },
     {
-      "id": "text-446",
+      "id": "text-590",
       "name": "ARCHITECTURE & ATTENTION",
       "kind": "text",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "text": "ARCHITECTURE & ATTENTION",
       "lines": [
         {
@@ -564,10 +570,10 @@
       }
     },
     {
-      "id": "text-447",
+      "id": "text-591",
       "name": "The art of looking longer",
       "kind": "text",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "text": "The art of looking longer",
       "lines": [
         {
@@ -609,17 +615,17 @@
       }
     },
     {
-      "id": "text-448",
-      "name": "2 min read · Available offline",
+      "id": "text-592",
+      "name": "2 min read · Saved on this device",
       "kind": "text",
-      "clipId": "clip-440",
-      "text": "2 min read · Available offline",
+      "clipId": "clip-584",
+      "text": "2 min read · Saved on this device",
       "lines": [
         {
-          "text": "2 min read · Available offline",
+          "text": "2 min read · Saved on this device",
           "x": 0,
           "y": 0,
-          "width": 151.23809814453125,
+          "width": 174.85714721679688,
           "height": 16.761905670166016,
           "descender": 3.4285714626312256,
           "capHeight": 8.7619047164917,
@@ -643,10 +649,10 @@
       }
     },
     {
-      "id": "text-452",
+      "id": "text-596",
       "name": "ROUTES & RITUALS",
       "kind": "text",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "text": "ROUTES & RITUALS",
       "lines": [
         {
@@ -677,10 +683,10 @@
       }
     },
     {
-      "id": "text-453",
+      "id": "text-597",
       "name": "Taking the long way home",
       "kind": "text",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "text": "Taking the long way home",
       "lines": [
         {
@@ -722,17 +728,17 @@
       }
     },
     {
-      "id": "text-454",
-      "name": "1 min read · Available offline",
+      "id": "text-598",
+      "name": "1 min read · Saved on this device",
       "kind": "text",
-      "clipId": "clip-440",
-      "text": "1 min read · Available offline",
+      "clipId": "clip-584",
+      "text": "1 min read · Saved on this device",
       "lines": [
         {
-          "text": "1 min read · Available offline",
+          "text": "1 min read · Saved on this device",
           "x": 0,
           "y": 0,
-          "width": 151.23809814453125,
+          "width": 174.85714721679688,
           "height": 16.761905670166016,
           "descender": 3.4285714626312256,
           "capHeight": 8.7619047164917,
@@ -756,10 +762,10 @@
       }
     },
     {
-      "id": "text-456",
+      "id": "text-600",
       "name": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
       "kind": "text",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "text": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
       "lines": [
         {
@@ -801,7 +807,7 @@
       }
     },
     {
-      "id": "clip-440",
+      "id": "clip-584",
       "name": "scroll viewport",
       "kind": "clip",
       "clipId": null,
@@ -819,10 +825,10 @@
       }
     },
     {
-      "id": "media-445",
+      "id": "media-589",
       "name": "looking-longer",
       "kind": "media",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "role": "thumbnail",
       "box": {
         "x": 20.190475463867188,
@@ -838,10 +844,10 @@
       }
     },
     {
-      "id": "media-451",
+      "id": "media-595",
       "name": "long-way-home",
       "kind": "media",
-      "clipId": "clip-440",
+      "clipId": "clip-584",
       "role": "thumbnail",
       "box": {
         "x": 20.190475463867188,

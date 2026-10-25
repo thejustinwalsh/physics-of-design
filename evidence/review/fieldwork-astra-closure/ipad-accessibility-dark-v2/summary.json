@@ -1,0 +1,316 @@
+{
+  "observations": [
+    {
+      "screen": "journal",
+      "window": {
+        "fontScale": 3.571,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "targets": 5,
+      "failures": [],
+      "unknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ],
+      "media": [
+        {
+          "id": "media-10",
+          "name": "looking-longer",
+          "kind": "media",
+          "clipId": "clip-5",
+          "role": "cover",
+          "box": {
+            "x": 40,
+            "y": 841.5,
+            "width": 754,
+            "height": 486.5
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 841.5,
+            "width": 754,
+            "height": 241.5
+          }
+        },
+        {
+          "id": "media-51",
+          "name": "long-way-home",
+          "kind": "media",
+          "clipId": "clip-5",
+          "role": "thumbnail",
+          "box": {
+            "x": 40,
+            "y": 1990.5,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 1990.5,
+            "width": 92,
+            "height": 0
+          }
+        },
+        {
+          "id": "media-57",
+          "name": "notes-on-noticing",
+          "kind": "media",
+          "clipId": "clip-5",
+          "role": "thumbnail",
+          "box": {
+            "x": 40,
+            "y": 2397,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 2397,
+            "width": 92,
+            "height": 0
+          }
+        }
+      ],
+      "alignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-51",
+            "media-57"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92×104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-51",
+            "media-57"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92×104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-51",
+            "media-57"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92×104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ]
+    },
+    {
+      "screen": "explore",
+      "window": {
+        "fontScale": 3.571,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "targets": 6,
+      "failures": [],
+      "unknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ],
+      "media": [
+        {
+          "id": "media-43",
+          "name": "looking-longer",
+          "kind": "media",
+          "clipId": "clip-5",
+          "role": "thumbnail",
+          "box": {
+            "x": 40,
+            "y": 951,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 951,
+            "width": 92,
+            "height": 104
+          }
+        },
+        {
+          "id": "media-49",
+          "name": "long-way-home",
+          "kind": "media",
+          "clipId": "clip-5",
+          "role": "thumbnail",
+          "box": {
+            "x": 40,
+            "y": 1357.5,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 1357.5,
+            "width": 92,
+            "height": 0
+          }
+        },
+        {
+          "id": "media-55",
+          "name": "notes-on-noticing",
+          "kind": "media",
+          "clipId": "clip-5",
+          "role": "thumbnail",
+          "box": {
+            "x": 40,
+            "y": 1764,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 1764,
+            "width": 92,
+            "height": 0
+          }
+        }
+      ],
+      "alignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-43",
+            "media-49",
+            "media-55"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92×104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-43",
+            "media-49",
+            "media-55"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92×104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-43",
+            "media-49",
+            "media-55"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92×104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ]
+    },
+    {
+      "screen": "saved",
+      "window": {
+        "fontScale": 3.571,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "targets": 5,
+      "failures": [],
+      "unknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ],
+      "media": [
+        {
+          "id": "media-29",
+          "name": "long-way-home",
+          "kind": "media",
+          "clipId": "clip-5",
+          "role": "thumbnail",
+          "box": {
+            "x": 40,
+            "y": 862,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 862,
+            "width": 92,
+            "height": 104
+          }
+        }
+      ],
+      "alignment": []
+    },
+    {
+      "screen": "reader",
+      "window": {
+        "fontScale": 3.571,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "targets": 6,
+      "failures": [],
+      "unknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ],
+      "media": [
+        {
+          "id": "media-7",
+          "name": "looking-longer",
+          "kind": "media",
+          "clipId": "clip-6",
+          "role": "reader",
+          "box": {
+            "x": 0,
+            "y": 96.5,
+            "width": 834,
+            "height": 281
+          },
+          "visibleBox": {
+            "x": 0,
+            "y": 96.5,
+            "width": 834,
+            "height": 281
+          }
+        }
+      ],
+      "alignment": []
+    }
+  ],
+  "scope": "Actual native screenshots, view frames and text layout callbacks. Separate UI flows establish task transitions; no desktop-native or full HIG-conformance claim."
+}

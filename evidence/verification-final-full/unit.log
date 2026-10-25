@@ -1,0 +1,87 @@
+
+> @physics-of-design/toolkit@0.1.0 test
+> tsx --test test/*.test.ts
+
+(node:89852) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ selector rejects infeasible candidates and bypasses the model for a single viable choice (21.697375ms)
+✔ SemIf CLI adapter validates pinned model and checkpoint provenance; probabilities are not exported (89.196167ms)
+✔ native bridge requires authentication and binds receipts to state, platform and fonts (27.947208ms)
+✔ MCP stdio exposes the same commands and an optional specimen resource (360.79125ms)
+✔ CLI malformed input emits diagnostics only on stderr (248.453709ms)
+✔ balanced selector canonicalizes every prompt sequence, balances slots and rejects incomplete or zero-only transports (214.006042ms)
+✔ an infeasible base receipt remains rejected even when it has no diagnostics (1.923167ms)
+(node:89853) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ color edits invalidate color facts without inventing changed glyph metrics (13.557708ms)
+(node:89854) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ WCAG sRGB reference colors and contrast are symmetric, unrounded and correctly classified (5.828584ms)
+✔ role applicability stays explicit and decorative/no-role declarations are not certified (0.726792ms)
+✔ OKLab known red reference and neutral hue remain separate from WCAG luminance (1.146625ms)
+✔ color schemas reject alpha, unknown references, duplicate roles and missing required tokens (2.457291ms)
+✔ harmony has no result for neutral/duplicate evidence and does not affect contrast status (0.570917ms)
+✔ bounded alternatives preserve input/locks, are deterministic, unique and filtered after hex quantization (24.467792ms)
+✔ empty bounded search reports exhaustion rather than global infeasibility (2.226792ms)
+✔ composition union occupancy and centroid do not double-count overlaps, duplicate coverage or nested boxes (2.757292ms)
+✔ composition clips occupancy to viewport and handles empty/zero-area scenes honestly (0.373584ms)
+✔ composition respects declared reading axis/direction, validates references and exposes group distances (1.949875ms)
+✔ candidate search reports invariant failed roles without spending an unrelated token search (0.144541ms)
+✔ normalized composition descriptors are invariant under uniform scale (0.157875ms)
+(node:89855) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ composition topology follows usable measures and scaling while preserving editable parameters (5.977375ms)
+✔ Apple audit distinguishes minimum, adopted default, safe areas and absent evidence (2.954791ms)
+✔ authored focal cover crops keep finite coverage and concentric radii respect bounds (1.700791ms)
+✔ declared image alignment catches peer jank without treating all regions as equal (6.191791ms)
+✔ Apple coordinate tolerance accepts float32 reconstruction noise, not undersized controls (0.571791ms)
+✔ Apple known failures dominate absent evidence and RN caps retain their actual semantics (1.535834ms)
+✔ crop geometry rejects numerically unrepresentable source dimensions (0.692875ms)
+✔ native capture discards obsolete revisions and bounds missing callbacks (8.389333ms)
+✔ native visible frames use measured scroll clipping and retain unsafe fixed controls (1.593667ms)
+(node:89856) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ bounded result references preserve exact values, clone on read and reject prototype/malformed paths (2.203292ms)
+✔ measurement and candidate summaries retain decisions without duplicating raw content (0.639458ms)
+(node:89857) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ log interval additivity, reversibility, scale invariance and rejection of invalid dimensions (0.719208ms)
+✔ multi-peak curves retain several maxima and off-scale alternatives (3.665041ms)
+✔ zero gaps, motif order and entropy are descriptive; surprise needs an observed source (0.688708ms)
+✔ typed state rejects nonfinite values, bad ids, gaps and unsafe feature tags (3.554583ms)
+✔ title perturbation invalidates downstream geometry, tracking, leading, whitespace and responsive factors (1.417916ms)
+✔ real font inspection and shaped kerning are separate from tracking (68.387291ms)
+✔ coupled proposal responds to heading size while preserving pinned values (66.781458ms)
+✔ Pareto retains trade-offs rather than aggregating beauty (0.130416ms)
+✔ native maps letter spacing in units and explicitly rejects unsupported axes/kerning controls (3.110375ms)
+✔ empty evaluation cannot validate a hypothesis and votes are clustered by project (1.503083ms)
+(node:89858) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ native font transport uses the actual ephemeral port, snapshots bytes, and binds completion to its lease (63.448666ms)
+✔ native timeout cancels its job rather than leaving work in the queue (176.817084ms)
+(node:89859) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ responsive anchors interpolate bounded editable choices and preserve text enlargement (13.322166ms)
+✔ bounded search rejects invalid proposals without measuring them and validates stress domains (235.375291ms)
+✔ optional split uses explicit flex and stacks when text enlargement or a narrow window removes space (1.923042ms)
+(node:89860) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ 1000 seeded interval and curve cases preserve algebra, finite range and scale invariance (11.401833ms)
+✔ every state-variable family invalidates its factual and downstream dependencies without mutating input (16.637833ms)
+✔ registry and licensed font bytes have complete provenance, variable axes really change glyph geometry (82.148791ms)
+✔ local entropy follows spatial neighborhoods and never becomes a quality objective (11.054959ms)
+✔ evaluation matches task/seed pairs, rejects orphan votes, and distinguishes retain, discard, uncertainty (6.411834ms)
+✔ corpus rejects attribution/rights gaps, invented awards, invalid controls and project leakage (2.588ms)
+(node:89861) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ tuning export preserves synthetic provenance, ties and project holdout while rejecting stale/invalid observations (48.392958ms)
+✔ visual ratings bind every declared candidate view, preserving explicit abstentions (34.196333ms)
+✔ explicit evidence roots join basenames to relative paths without accepting traversal or basename collisions (10.549458ms)
+ℹ tests 55
+ℹ suites 0
+ℹ pass 55
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2024.4725

@@ -18,6 +18,7 @@ import {
   Pressable as NativePressable,
   TextInput as NativeTextInput,
   Platform,
+  Keyboard,
   ScrollView as NativeScrollView,
   type LayoutRectangle,
   type TextLayoutEvent,
@@ -81,7 +82,13 @@ export function NativeObservationProvider({
         );
         const batch = await captureObservationBatch({
           records,
-          snapshot: current.current,
+          snapshot: {
+            ...current.current,
+            keyboard: {
+              visible: Keyboard.isVisible(),
+              screenCoordinates: Keyboard.metrics() ?? null,
+            },
+          },
           revision: capturedRevision,
           getRevision: () => (alive.current ? revision.current : -1),
           measure: ([id, record], done) => {
@@ -152,6 +159,15 @@ export function NativeObservationProvider({
   useEffect(() => {
     api.schedule();
   }, [snapshot, api]);
+  useEffect(() => {
+    const subscriptions = ['keyboardDidShow', 'keyboardDidHide'].map((event) =>
+      Keyboard.addListener(
+        event as 'keyboardDidShow' | 'keyboardDidHide',
+        api.schedule,
+      ),
+    );
+    return () => subscriptions.forEach((subscription) => subscription.remove());
+  }, [api]);
   useEffect(() => {
     signals.add(api.schedule);
     return () => {

@@ -7,12 +7,13 @@ import path from 'node:path';
 const exec = promisify(execFile),
   adb = path.resolve('artifacts/runtime/android-sdk/platform-tools/adb'),
   device = 'emulator-5554';
-const directory = 'artifacts/fieldwork/flows-android';
+const runId = `flows-${Date.now()}`;
+const directory = `artifacts/fieldwork/flows-android/${runId}`;
 const metroHost = process.env.FIELDWORK_ANDROID_HOST ?? '127.0.0.1:8088';
 await mkdir(directory, { recursive: true });
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const quote = (value) => "'" + value.replaceAll("'", "'\\''") + "'";
-let proofId = `flows-${Date.now()}`,
+let proofId = runId,
   receipt;
 const events = [];
 async function latest(predicate = () => true, after = 0) {
@@ -57,6 +58,57 @@ async function tap(name, predicate) {
     box.y + box.height / 2 >= 0 && box.y + box.height / 2 <= window.height,
     `Target offscreen: ${name}`,
   );
+  // UIAutomator waits for native accessibility idle and provides an independent
+  // physical-pixel oracle. This prevents a momentum-stopping tap from being
+  // mistaken for a product transition and cross-checks our coordinate adapter.
+  await exec(adb, [
+    '-s',
+    device,
+    'shell',
+    'uiautomator',
+    'dump',
+    '/sdcard/fieldwork-flow.xml',
+  ]);
+  const xml = (
+    await exec(adb, [
+      '-s',
+      device,
+      'exec-out',
+      'cat',
+      '/sdcard/fieldwork-flow.xml',
+    ])
+  ).stdout;
+  const escaped = name
+    .replaceAll('&', '&amp;')
+    .replaceAll('"', '&quot;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;');
+  const node = xml
+    .match(/<node\b[^>]*>/g)
+    ?.find(
+      (node) =>
+        node.includes(`content-desc="${escaped}"`) &&
+        node.includes('clickable="true"'),
+    );
+  assert.ok(node, `Missing accessible native action: ${name}`);
+  const bounds = node
+    .match(/bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"/)
+    .slice(1)
+    .map(Number);
+  const measured = target.visibleBox ?? box;
+  const expected = [
+    (measured.x + origin.x) * window.scale,
+    (measured.y + origin.y) * window.scale,
+    (measured.x + measured.width + origin.x) * window.scale,
+    (measured.y + measured.height + origin.y) * window.scale,
+  ];
+  const error = Math.max(
+    ...bounds.map((value, index) => Math.abs(value - expected[index])),
+  );
+  assert.ok(
+    error <= 2,
+    `Native/accessibility bounds disagree for ${name}: ${JSON.stringify({ bounds, expected, error })}`,
+  );
   const started = Date.now();
   await exec(adb, [
     '-s',
@@ -64,11 +116,18 @@ async function tap(name, predicate) {
     'shell',
     'input',
     'tap',
-    String(Math.round((box.x + box.width / 2 + origin.x) * window.scale)),
-    String(Math.round((box.y + box.height / 2 + origin.y) * window.scale)),
+    String(Math.round((bounds[0] + bounds[2]) / 2)),
+    String(Math.round((bounds[1] + bounds[3]) / 2)),
   ]);
   const result = await latest(predicate, started);
-  events.push({ action: 'tap', name, started, receipt: result.capturedAt });
+  events.push({
+    action: 'tap',
+    name,
+    started,
+    receipt: result.capturedAt,
+    accessibilityBounds: bounds,
+    nativeBoundsErrorPx: error,
+  });
   return result;
 }
 async function swipe() {
@@ -174,18 +233,17 @@ try {
   ]);
   const started = Date.now();
   await exec(adb, ['-s', device, 'shell', 'input', 'text', 'zzunseenquery']);
-  await latest((v) => v.snapshot.query === 'zzunseenquery', started);
+  await latest(
+    (v) => v.snapshot.query === 'zzunseenquery' && v.snapshot.keyboard.visible,
+    started,
+  );
+  await sleep(500);
+  await capture('search-keyboard-open');
   const keyboardDismissed = Date.now();
   await exec(adb, ['-s', device, 'shell', 'input', 'keyevent', '4']);
-  await latest(
-    (v) => v.snapshot.window.height >= w.height - 1,
-    keyboardDismissed,
-  );
+  await latest((v) => v.snapshot.keyboard.visible === false, keyboardDismissed);
   await sleep(600); // Wait for the native keyboard dismissal animation before the pixel capture.
-  await latest(
-    (v) => v.snapshot.window.height >= w.height - 1,
-    keyboardDismissed,
-  );
+  await latest((v) => v.snapshot.keyboard.visible === false, keyboardDismissed);
   await capture('search-empty');
   await tap('Clear search', (v) => v.snapshot.query === '');
   // Cold restart the Expo project, wait for the actual measurement client, then
@@ -253,7 +311,7 @@ try {
     ) + '\n',
   );
   console.log(
-    'Native save, search/empty, reading resume and process persistence flows passed.',
+    `Native save, search/empty, reading resume and process persistence flows passed: ${directory}/summary.json`,
   );
 } catch (error) {
   await writeFile(

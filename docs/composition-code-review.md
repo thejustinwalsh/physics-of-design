@@ -1,5 +1,17 @@
 # Composition and native-observation correctness review
 
+## Reader/session addendum — checkpoint `1ddd212`
+
+Read-only review found no material new defect in `readerImageAspect` or the explicit `--fieldwork` launcher mode. Ten of ten composition-plan tests pass; `node --check scripts/native-session.mjs` passes. Reader aspect is finite and bounded by 1.2–2.97 over the input schema and is used by native reader artwork. Product mode starts its observer within the existing owned-service lifecycle, includes port 4321 in preflight and Android forwarding, waits for both measurement clients before product navigation, and accepts only fresh, complete, hydrated product receipts. The observer participates in owned process-group cleanup; iOS shutdown remains conditional on this helper having booted the phone. The default branch retains measurement-mode behavior.
+
+This is code-path inspection, syntax validation and unit testing. No helper services or devices were launched by this reviewer; the parent task owns the stopped-service-to-ready runtime exercise and cleanup verification.
+
+| File                            | Reviewed SHA-256                                                   |
+| ------------------------------- | ------------------------------------------------------------------ |
+| `src/composition-plan.ts`       | `19f0d9219fdd2d4ef8c545019f7bd90ecb9b8277c2e24ede33ffbe5a086c9840` |
+| `test/composition-plan.test.ts` | `5ace27010b96e2f823e611f05fbd8d2ad37deea4bac0c90fd095493d39649ebb` |
+| `scripts/native-session.mjs`    | `0c5177c76f2934879c100c3e4b7b7019522b74bfff64a9ca4c47dd344187b222` |
+
 ## Final disposition — 2026-10-24
 
 **All supported findings in this review are resolved. No remaining material defect was established within the reviewed boundaries.** Nine of nine composition-plan tests pass. This conclusion concerns deterministic behavior and observation provenance, not visual quality or full platform conformance.

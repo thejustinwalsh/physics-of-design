@@ -2,3 +2,8 @@
 {"platform":"native-android","count":60,"failures":0}
 {"platform":"native-android","count":90,"failures":0}
 {"platform":"native-android","count":120,"failures":0}
+{"platform":"native-android","count":150,"failures":0}
+{"platform":"native-android","count":180,"failures":0}
+{"platform":"native-android","count":210,"failures":0}
+{"platform":"native-android","count":240,"failures":0}
+{"platform":"native-android","contentCases":8,"archetypes":2,"widths":[280,320,390,767,1280],"textScales":[1,1.3,2],"measurements":240,"searches":4,"searchCandidateBudget":9,"runtimes":[{"reactNative":"0.88.0","os":"36","fontScale":1,"pixelRatio":2.625,"windowWidth":411.42857142857144,"windowHeight":814.4761904761905,"deviceType":"android-emulator"}],"rawInfeasibleInputs":1,"recoveries":[{"id":"hero-6-767-1.3","inputIssues":[{"code":"horizontal-overflow","block":"subtitle","severity":"hard","message":"Text exceeds its measure by 1.70 units"}],"viableIds":["5d36cd42c351c5fa","2e2777191f193b6b","31870ec0eb041ee8","c44cd330a2b691b5","01cfe3639c100cbc","e15b19bf0b0eaa15","3de359245179ea9c","758a75505b5681c2"]}],"failures":[]}

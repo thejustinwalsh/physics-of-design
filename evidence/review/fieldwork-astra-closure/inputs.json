@@ -1,0 +1,209 @@
+{
+  "method": "byte copies and SHA256 before closure inspection",
+  "files": [
+    {
+      "source": "examples/fieldwork/site.jsx",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/source/site.jsx",
+      "bytes": 31593,
+      "sha256": "ed47b77af8c4aa188113dd5d6034aba896aef8e550af261899049e1ad34db067"
+    },
+    {
+      "source": "native/FieldworkApp.tsx",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/source/FieldworkApp.tsx",
+      "bytes": 40697,
+      "sha256": "2f1866ff293439da5af4f336b6aa5e28f0bdb418b43ba3093d4a572de59afeab"
+    },
+    {
+      "source": "src/composition-plan.ts",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/source/composition-plan.ts",
+      "bytes": 5931,
+      "sha256": "19f0d9219fdd2d4ef8c545019f7bd90ecb9b8277c2e24ede33ffbe5a086c9840"
+    },
+    {
+      "source": "scripts/prove-fieldwork-web.mjs",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/source/prove-fieldwork-web.mjs",
+      "bytes": 10099,
+      "sha256": "d018812742adba637ee3dab2d19614fa1fafd7b086480f6688dc956ec46123e8"
+    },
+    {
+      "source": "scripts/fieldwork-native-flows.mjs",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/source/fieldwork-native-flows.mjs",
+      "bytes": 8397,
+      "sha256": "8e145d6a8d6f254990cfa8a986bd70175ad38632bbbcb5c4431bb2c9522410c9"
+    },
+    {
+      "source": "docs/fieldwork-design-followup.md",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/source/fieldwork-design-followup.md",
+      "bytes": 17084,
+      "sha256": "7c59ad0ab68795bc079557622e95c037a623aa382d1d5c30340a2b7a993a5328"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/cover-1440-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/cover-1440-1.png",
+      "bytes": 2054552,
+      "sha256": "334a70cf404420e19a4ea47ab41bd2f4608b561d87df8629ae3c05c3b2b31d62"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/cover-1440-2.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/cover-1440-2.png",
+      "bytes": 2313446,
+      "sha256": "26f8b854a525d608e55c20ebc77d0efc85bcebce5e0626a9a7bf89ca09f63bc6"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/cover-390-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/cover-390-1.png",
+      "bytes": 572948,
+      "sha256": "317d3dff29fcfb9763ba0e8930dec89e284a19ad9539faa211859515e1a403cc"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/cover-390-2.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/cover-390-2.png",
+      "bytes": 785212,
+      "sha256": "a8818810becc992ca6e274a2cb0ff10ab08c416d4acebaa7ebd771a06153d009"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/cover-834-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/cover-834-1.png",
+      "bytes": 817717,
+      "sha256": "60c1b3d9521e5c565d66ab49151ca6efb506514d63bd180ae7e34ace1cc410d3"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/cover-834-2.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/cover-834-2.png",
+      "bytes": 2172804,
+      "sha256": "ddd1335d33761eae13c5406000a72cee41936a1995489006c167ff9c5a16076c"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/issue-1440-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/issue-1440-1.png",
+      "bytes": 1434487,
+      "sha256": "39c4bcb83e76ce0004657381832008e48d1c64bed230cad91d24c990317077aa"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/issue-1440-2.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/issue-1440-2.png",
+      "bytes": 1633843,
+      "sha256": "a96cc7c2e23baadc72642149052661f8341e373c9d8944ffc4352eb52c6706fa"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/issue-390-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/issue-390-1.png",
+      "bytes": 454618,
+      "sha256": "bba9a42266b586cb1567a9d5db71172704b95a08a449cc610b03fd0e6c106a1a"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/issue-390-2.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/issue-390-2.png",
+      "bytes": 626490,
+      "sha256": "95f5337ade548642afa325aa068da0e8a5abae3f2e9b173f2d79f901f0be29ac"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/issue-834-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/issue-834-1.png",
+      "bytes": 634078,
+      "sha256": "9633b2ba42ca3ef039686bb9809de3bccf058e51f3df0b575d1e7d0b4d9d4200"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/issue-834-2.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/issue-834-2.png",
+      "bytes": 1746112,
+      "sha256": "6060cf46abc341a8d0e78b3055e8a4459466bcd538c144d7271d5399c1f47f7e"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/story-1440-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/story-1440-1.png",
+      "bytes": 1537032,
+      "sha256": "72e27f261c26393841ed375ca7abb802eda759dd17fc887be6676d90103b2c60"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/story-1440-2.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/story-1440-2.png",
+      "bytes": 1894648,
+      "sha256": "662c9c31d81698bedd70e71bdac9ec0f26d89d973f2d696d2a2a2ed144729f7b"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/story-390-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/story-390-1.png",
+      "bytes": 491597,
+      "sha256": "9ea00d916c20571bd1dbcd3482a86433bf8e7a32cc980c95a7de8f138f3a1e48"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/story-390-2.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/story-390-2.png",
+      "bytes": 822217,
+      "sha256": "d30699b9fd7b8f255cd3f96a5ec337deb65643a376638915a27b7dd26568c97c"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/story-834-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/story-834-1.png",
+      "bytes": 700468,
+      "sha256": "716519e7a34df1216e91ddec52508f23eba59a19d0c4590cfe8b25a8447370b7"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/story-834-2.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/story-834-2.png",
+      "bytes": 1054149,
+      "sha256": "943cb533a84147193d46efb509b703acaac1f503b3567fb859430660ea4b812e"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web-v3/summary.json",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/proof-web-v3/summary.json",
+      "bytes": 346880,
+      "sha256": "f2211452a511d5b508554cc3ea33753b8be87d4dd539ddb810771e5328d87411"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/explore.json",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/ipad-accessibility-dark-v2/explore.json",
+      "bytes": 41911,
+      "sha256": "6d2bd7a62ada471e682959fd2d4051f3e32ccc07c4529a69492c37c58dec24fa"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/explore.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/ipad-accessibility-dark-v2/explore.png",
+      "bytes": 421066,
+      "sha256": "61267365092daee91fbd2f39ee3b0d995fe7bf3c195226b6b58493bd17ec6f6f"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/journal.json",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/ipad-accessibility-dark-v2/journal.json",
+      "bytes": 42527,
+      "sha256": "5d4a933b52d9ea25a209f96f5cc5b305e50242bb0d0413d192e9e8b4ee15199a"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/journal.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/ipad-accessibility-dark-v2/journal.png",
+      "bytes": 1588391,
+      "sha256": "e3e307ea33d5875465b06cab870a8020b33d18daf184838cb52df7eb6a41fc02"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/reader.json",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/ipad-accessibility-dark-v2/reader.json",
+      "bytes": 64333,
+      "sha256": "c66cb352737ce1362f038eed03e4c1ebd096334c3825dbd8a9164d3530f16239"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/reader.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/ipad-accessibility-dark-v2/reader.png",
+      "bytes": 1900672,
+      "sha256": "e3a74473c40940ff65797ba975947a722dce8f41390c9c8432e73c0e88456d87"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/saved.json",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/ipad-accessibility-dark-v2/saved.json",
+      "bytes": 29750,
+      "sha256": "bfbc22137c40118776dfbb9e3424f47edbb049c82c7dd9b9c33821076589c2b9"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/saved.png",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/ipad-accessibility-dark-v2/saved.png",
+      "bytes": 412618,
+      "sha256": "f8de86b89411d479b4c4dd6059b0fa10d87485d976f4d27b42614aa0d6bcc697"
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/summary.json",
+      "snapshot": "artifacts/review/fieldwork-astra-closure/ipad-accessibility-dark-v2/summary.json",
+      "bytes": 7764,
+      "sha256": "5a428de259fd8c8bfaeb247f5f75155b865db4debb8c1712eda6e34632dfd33e"
+    }
+  ]
+}

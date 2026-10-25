@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "capturedAt": "2026-10-25T03:01:35.676Z",
+  "capturedAt": "2026-10-25T03:23:59.578Z",
   "engine": "react-native/Text+Yoga",
   "platform": "android",
   "snapshot": {
-    "proofId": "flows-1792897282849",
+    "proofId": "flows-1792898607082",
     "screen": "explore",
     "story": null,
     "saved": [
@@ -13,12 +13,12 @@
     ],
     "query": "zzunseenquery",
     "readerSize": 21,
-    "offlineReady": true,
+    "imagesPrefetched": true,
     "hydrated": true,
     "readerPosition": {
       "content": 611.4285888671875,
       "viewport": 675.047607421875,
-      "offset": 1381.7142333984375
+      "offset": 1184
     },
     "restoredFor": "looking-longer",
     "appearance": "light",
@@ -48,6 +48,7 @@
       "readingLeading": 1.55,
       "readingMeasure": 371.42857142857144,
       "imageAspect": 1.55,
+      "readerImageAspect": 1.2100840336134455,
       "controlSize": 44,
       "spaces": {
         "inline": 8,
@@ -72,7 +73,8 @@
           "navigation",
           "columns",
           "titleSize",
-          "imageAspect"
+          "imageAspect",
+          "readerImageAspect"
         ],
         "textScale": [
           "navigation",
@@ -144,11 +146,15 @@
       "accent": "#345440",
       "accentBg": "#e3eadb",
       "paper": "#eee5d5"
+    },
+    "keyboard": {
+      "visible": false,
+      "screenCoordinates": null
     }
   },
   "observations": [
     {
-      "id": "text-322",
+      "id": "text-466",
       "name": "Journal",
       "kind": "text",
       "clipId": null,
@@ -182,7 +188,7 @@
       }
     },
     {
-      "id": "text-324",
+      "id": "text-468",
       "name": "Explore",
       "kind": "text",
       "clipId": null,
@@ -216,7 +222,7 @@
       }
     },
     {
-      "id": "text-326",
+      "id": "text-470",
       "name": "Saved",
       "kind": "text",
       "clipId": null,
@@ -250,7 +256,7 @@
       }
     },
     {
-      "id": "control-291",
+      "id": "control-435",
       "name": "Reading and appearance settings",
       "kind": "target",
       "clipId": null,
@@ -268,7 +274,7 @@
       }
     },
     {
-      "id": "control-321",
+      "id": "control-465",
       "name": "Journal",
       "kind": "target",
       "clipId": null,
@@ -286,7 +292,7 @@
       }
     },
     {
-      "id": "control-323",
+      "id": "control-467",
       "name": "Explore",
       "kind": "target",
       "clipId": null,
@@ -304,7 +310,7 @@
       }
     },
     {
-      "id": "control-325",
+      "id": "control-469",
       "name": "Saved",
       "kind": "target",
       "clipId": null,
@@ -322,7 +328,7 @@
       }
     },
     {
-      "id": "text-765",
+      "id": "text-909",
       "name": "Fieldwork.",
       "kind": "text",
       "clipId": null,
@@ -356,10 +362,10 @@
       }
     },
     {
-      "id": "text-805",
+      "id": "text-949",
       "name": "FOLLOW YOUR CURIOSITY",
       "kind": "text",
-      "clipId": "clip-804",
+      "clipId": "clip-948",
       "text": "FOLLOW YOUR CURIOSITY",
       "lines": [
         {
@@ -390,10 +396,10 @@
       }
     },
     {
-      "id": "text-806",
+      "id": "text-950",
       "name": "Find your next read",
       "kind": "text",
-      "clipId": "clip-804",
+      "clipId": "clip-948",
       "text": "Find your next read",
       "lines": [
         {
@@ -424,10 +430,10 @@
       }
     },
     {
-      "id": "text-807",
+      "id": "text-951",
       "name": "Places, ideas and things worth noticing.",
       "kind": "text",
-      "clipId": "clip-804",
+      "clipId": "clip-948",
       "text": "Places, ideas and things worth noticing.",
       "lines": [
         {
@@ -458,10 +464,10 @@
       }
     },
     {
-      "id": "text-827",
+      "id": "text-971",
       "name": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
       "kind": "text",
-      "clipId": "clip-804",
+      "clipId": "clip-948",
       "text": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
       "lines": [
         {
@@ -503,7 +509,7 @@
       }
     },
     {
-      "id": "clip-804",
+      "id": "clip-948",
       "name": "scroll viewport",
       "kind": "clip",
       "clipId": null,
@@ -521,10 +527,10 @@
       }
     },
     {
-      "id": "input-808",
+      "id": "input-952",
       "name": "Search stories",
       "kind": "target",
-      "clipId": "clip-804",
+      "clipId": "clip-948",
       "box": {
         "x": 70.85714721679688,
         "y": 214.47618103027344,
@@ -539,10 +545,10 @@
       }
     },
     {
-      "id": "control-843",
+      "id": "control-987",
       "name": "Clear search",
       "kind": "target",
-      "clipId": "clip-804",
+      "clipId": "clip-948",
       "box": {
         "x": 137.90475463867188,
         "y": 479.23809814453125,
@@ -557,10 +563,10 @@
       }
     },
     {
-      "id": "text-841",
+      "id": "text-985",
       "name": "No stories found.",
       "kind": "text",
-      "clipId": "clip-804",
+      "clipId": "clip-948",
       "text": "No stories found.",
       "lines": [
         {
@@ -591,10 +597,10 @@
       }
     },
     {
-      "id": "text-842",
+      "id": "text-986",
       "name": "Try architecture, routes or noticing.",
       "kind": "text",
-      "clipId": "clip-804",
+      "clipId": "clip-948",
       "text": "Try architecture, routes or noticing.",
       "lines": [
         {
@@ -625,10 +631,10 @@
       }
     },
     {
-      "id": "text-844",
+      "id": "text-988",
       "name": "Clear search",
       "kind": "text",
-      "clipId": "clip-804",
+      "clipId": "clip-948",
       "text": "Clear search",
       "lines": [
         {
