@@ -212,6 +212,23 @@ function passedChecks(value, label, minimum = 1) {
   );
 }
 
+// Match selector.ts's nested SemifResult.model.gguf projection. The raw receipt
+// retains file/size metadata; checkpoint content identity is its SHA-256.
+export function functionalModelProvenance(model) {
+  assert.ok(model && typeof model === 'object' && !Array.isArray(model));
+  assert.ok(
+    model.gguf && typeof model.gguf === 'object' && !Array.isArray(model.gguf),
+  );
+  assert.match(model.gguf.sha256, /^[a-f0-9]{64}$/);
+  return { ...model, gguf: { sha256: model.gguf.sha256 } };
+}
+export function assertFunctionalModelProvenance(raw, curated) {
+  assert.deepEqual(
+    functionalModelProvenance(raw),
+    functionalModelProvenance(curated),
+  );
+}
+
 export async function exportCurrentEvidence() {
   const root = await realpath(process.cwd());
   const observed = new Map();
@@ -337,7 +354,7 @@ export async function exportCurrentEvidence() {
     assert.equal(rows.length, 1);
     assert.equal(rows[0].id, id);
     assert.equal(rows[0].prompt_sha256, provenance.promptHash);
-    assert.deepEqual(rows[0].model, provenance.model);
+    assertFunctionalModelProvenance(rows[0].model, provenance.model);
     const events = (await bytes(`${fieldDirectory}/selector/${id}.stderr.txt`))
       .toString('utf8')
       .split('\n')

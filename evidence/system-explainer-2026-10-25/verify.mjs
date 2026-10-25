@@ -1,7 +1,12 @@
 import {chromium,webkit} from 'playwright';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {resolve} from 'node:path';
+import {createHash} from 'node:crypto';
 const dir=resolve('evidence/system-explainer-2026-10-25');
+const digest=b=>createHash('sha256').update(b).digest('hex');
+const artifactPaths=['explainer.template.html','index.html','report.html','source.html','build.py','verify.mjs'];
+const artifactSources=await Promise.all(artifactPaths.map(async path=>({path,sha256:digest(await readFile(`${dir}/${path}`))})));
+const artifactSourceIdentity=digest(JSON.stringify(artifactSources));
 await mkdir(`${dir}/screenshots`,{recursive:true});
 const checks=[],errors=[];
 function check(name,passed,detail){checks.push({name,passed,detail});}
@@ -14,8 +19,9 @@ for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){
   await page.setViewportSize({width,height:1100});
   for(const panel of ['energy','dependency','workflow','scenario','gate','binding','specialists']){
    await page.locator(`[data-panel="${panel}"]`).click();
-   const geometry=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth,controls:[...document.querySelectorAll('button,input,select')].filter(e=>e.checkVisibility()).map(e=>{const r=e.getBoundingClientRect();return {id:e.id||e.textContent,x:r.x,right:r.right,width:r.width}})}));
+   const geometry=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth,gridElements:[...document.querySelectorAll('body *')].filter(e=>e.checkVisibility()&&['grid','inline-grid'].includes(getComputedStyle(e).display)).map(e=>e.id||e.className),controls:[...document.querySelectorAll('button,input,select')].filter(e=>e.checkVisibility()).map(e=>{const r=e.getBoundingClientRect();return {id:e.id||e.textContent,x:r.x,right:r.right,width:r.width}})}));
    check(`${name}/${width}/${panel}/containment`,geometry.scroll<=width&&geometry.controls.every(c=>c.x>=0&&c.right<=width),geometry);
+   check(`${name}/${width}/${panel}/no-grid-layout`,geometry.gridElements.length===0,geometry.gridElements);
   }
   await page.locator('[data-panel="energy"]').click();
   await page.screenshot({path:`${dir}/screenshots/${name}-${width}.png`,fullPage:true});
@@ -24,7 +30,7 @@ for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){
  await page.locator('#weight').selectOption('4');await page.locator('#cap').selectOption('48');
  check(`${name}/preference-and-hard-cap`,(await page.locator('#energy-result').textContent()).includes('48px'),await page.locator('#energy-result').textContent());
  await page.locator('[data-panel="dependency"]').click();await page.locator('#changed-path').selectOption('/colors');
- check(`${name}/dependency-color-path`,(await page.locator('.depgrid .stale').count())===3,await page.locator('#dependency-result').textContent());
+ check(`${name}/dependency-color-path`,(await page.locator('.dependency-layout .stale').count())===3,await page.locator('#dependency-result').textContent());
  await page.locator('[data-panel="workflow"]').click();
  for(const [mode,text] of [['replay','reuse'],['stale','blocked'],['recompute','720px']]){await page.locator(`[data-mode="${mode}"]`).click();check(`${name}/workflow-${mode}`,(await page.locator('#workflow-result').textContent()).includes(text),await page.locator('#workflow-result').textContent());}
  await page.locator('[data-panel="scenario"]').click();await page.locator('#scenario-mode').selectOption('false-name');
@@ -65,7 +71,9 @@ for(const filename of ['index.html','report.html']){
   check(`link/${filename}/${href}`,exists&&anchorExists,{exists,anchorExists});
  }
 }
-const result={checkedAt:new Date().toISOString(),scope:'This explanatory artifact only. Browser interaction, geometry and reference checks do not rerun historical product proofs or establish full accessibility.',checks,errors,passed:checks.every(c=>c.passed)};
+const artifactSourcesAfter=await Promise.all(artifactPaths.map(async path=>({path,sha256:digest(await readFile(`${dir}/${path}`))})));
+check('artifact-source-stable',JSON.stringify(artifactSources)===JSON.stringify(artifactSourcesAfter),{before:artifactSourceIdentity,after:digest(JSON.stringify(artifactSourcesAfter))});
+const result={checkedAt:new Date().toISOString(),artifactSources,artifactSourceIdentity,scope:'This explanatory artifact only. Browser interaction, geometry, flex-layout and reference checks do not rerun historical product proofs, establish React Native parity or full accessibility.',checks,errors,passed:checks.every(c=>c.passed)};
 await writeFile(`${dir}/browser-verification.json`,JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({passed:result.passed,checks:checks.length,failed:checks.filter(c=>!c.passed)},null,2));
 if(!result.passed)process.exitCode=1;

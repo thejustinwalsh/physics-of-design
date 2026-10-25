@@ -1,0 +1,41 @@
+{
+  "scope": "Actual raw and curated model metadata only; no prompt or model bytes.",
+  "raw": {
+    "source": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "backend": "llamacpp",
+    "dtype": "gguf-quantized",
+    "gguf": {
+      "file": "Qwen3.5-4B-Q4_K_M.gguf",
+      "bytes": 2740937888,
+      "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4"
+    },
+    "vocab_size": 248320,
+    "threads": 8,
+    "n_gpu_layers": 0,
+    "max_prompt_tokens": 8192,
+    "context_tokens": 8448,
+    "decode_chunk": 512,
+    "llama_cpp_python_version": "0.3.35",
+    "transformers_version": "5.17.0",
+    "serving_config": "llamacpp-direct-v1"
+  },
+  "curated": {
+    "source": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "dtype": "gguf-quantized",
+    "backend": "llamacpp",
+    "serving_config": "llamacpp-direct-v1",
+    "gguf": {
+      "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4"
+    },
+    "vocab_size": 248320,
+    "threads": 8,
+    "n_gpu_layers": 0,
+    "max_prompt_tokens": 8192,
+    "context_tokens": 8448,
+    "decode_chunk": 512,
+    "llama_cpp_python_version": "0.3.35",
+    "transformers_version": "5.17.0"
+  }
+}

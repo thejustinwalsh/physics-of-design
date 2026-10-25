@@ -1,0 +1,13 @@
+{
+  "updatedAt": "2026-10-25T15:35:49.393791+00:00",
+  "change": "Convert all multi-column explanatory DOM layout from CSS Grid to explicit flex direction, wrapping and basis. Semantic data tables retain table semantics.",
+  "scope": "Owned explanatory artifact only; no engine/model/native changes or renderer parity claim.",
+  "artifactSourceIdentity": "c8f00192bb146ae968f491d35eb3ed5cbfde40c547eff02d65b5b5ba09118c6b",
+  "browserChecks": 230,
+  "browserPassed": true,
+  "browserReceiptSha256": "b93ce96d285e24d15c7b148a8b527b785997f54590139b442e7bb8f49a37800f",
+  "frozenSnapshotFilesChecked": 34,
+  "frozenSnapshotMismatches": [],
+  "dataSha256": "a9ade6da67056346878514524ecb3ef8964fd00ef5540a162ef96abb9427c4f7",
+  "manifestSha256": "7596b05b858c5d43bb80a773b00f38b8a25d08900d75831418f9246a721958e7"
+}

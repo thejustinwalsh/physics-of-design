@@ -1,6 +1,33 @@
 {
-  "checkedAt": "2026-10-25T15:24:25.459Z",
-  "scope": "This explanatory artifact only. Browser interaction, geometry and reference checks do not rerun historical product proofs or establish full accessibility.",
+  "checkedAt": "2026-10-25T15:35:27.386Z",
+  "artifactSources": [
+    {
+      "path": "explainer.template.html",
+      "sha256": "f59464e1c26f80cdb47603f7b28cb1706dd7cfd1a05283248241e6c592ca3bc0"
+    },
+    {
+      "path": "index.html",
+      "sha256": "c3785443bbf140d66b85081b8bc1cb0f559f2e5351260f6b1bb56f7a7885b50e"
+    },
+    {
+      "path": "report.html",
+      "sha256": "dfc98306801955556344350e544faafde513a8fc6decf02759756f296b085216"
+    },
+    {
+      "path": "source.html",
+      "sha256": "65352d8d94b87c139d75a9b95c6eb7e68e42ac795c7ed508ae6e8d9ec2e9535d"
+    },
+    {
+      "path": "build.py",
+      "sha256": "d51ed2c2985761f4369c74f7211aeb1b8849abdd719f7c8b28c8c93ef496a49f"
+    },
+    {
+      "path": "verify.mjs",
+      "sha256": "15676cbeb54dbc5aaace15d1e709d4963246e05682946724a1d896c9bf27c999"
+    }
+  ],
+  "artifactSourceIdentity": "c8f00192bb146ae968f491d35eb3ed5cbfde40c547eff02d65b5b5ba09118c6b",
+  "scope": "This explanatory artifact only. Browser interaction, geometry, flex-layout and reference checks do not rerun historical product proofs, establish React Native parity or full accessibility.",
   "checks": [
     {
       "name": "chromium/320/energy/containment",
@@ -9,6 +36,7 @@
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -68,12 +96,18 @@
       }
     },
     {
+      "name": "chromium/320/energy/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/320/dependency/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -127,12 +161,18 @@
       }
     },
     {
+      "name": "chromium/320/dependency/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/320/workflow/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -204,12 +244,18 @@
       }
     },
     {
+      "name": "chromium/320/workflow/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/320/scenario/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -263,12 +309,18 @@
       }
     },
     {
+      "name": "chromium/320/scenario/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/320/gate/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -322,12 +374,18 @@
       }
     },
     {
+      "name": "chromium/320/gate/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/320/binding/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -381,12 +439,18 @@
       }
     },
     {
+      "name": "chromium/320/binding/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/320/specialists/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -440,12 +504,18 @@
       }
     },
     {
+      "name": "chromium/320/specialists/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/390/energy/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -505,12 +575,18 @@
       }
     },
     {
+      "name": "chromium/390/energy/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/390/dependency/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -564,12 +640,18 @@
       }
     },
     {
+      "name": "chromium/390/dependency/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/390/workflow/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -641,12 +723,18 @@
       }
     },
     {
+      "name": "chromium/390/workflow/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/390/scenario/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -700,12 +788,18 @@
       }
     },
     {
+      "name": "chromium/390/scenario/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/390/gate/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -759,12 +853,18 @@
       }
     },
     {
+      "name": "chromium/390/gate/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/390/binding/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -818,12 +918,18 @@
       }
     },
     {
+      "name": "chromium/390/binding/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/390/specialists/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -877,12 +983,18 @@
       }
     },
     {
+      "name": "chromium/390/specialists/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/834/energy/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -942,12 +1054,18 @@
       }
     },
     {
+      "name": "chromium/834/energy/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/834/dependency/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1001,12 +1119,18 @@
       }
     },
     {
+      "name": "chromium/834/dependency/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/834/workflow/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1078,12 +1202,18 @@
       }
     },
     {
+      "name": "chromium/834/workflow/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/834/scenario/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1137,12 +1267,18 @@
       }
     },
     {
+      "name": "chromium/834/scenario/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/834/gate/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1196,12 +1332,18 @@
       }
     },
     {
+      "name": "chromium/834/gate/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/834/binding/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1255,12 +1397,18 @@
       }
     },
     {
+      "name": "chromium/834/binding/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/834/specialists/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1314,12 +1462,18 @@
       }
     },
     {
+      "name": "chromium/834/specialists/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/1440/energy/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1379,12 +1533,18 @@
       }
     },
     {
+      "name": "chromium/1440/energy/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/1440/dependency/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1438,12 +1598,18 @@
       }
     },
     {
+      "name": "chromium/1440/dependency/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/1440/workflow/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1515,12 +1681,18 @@
       }
     },
     {
+      "name": "chromium/1440/workflow/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/1440/scenario/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1574,12 +1746,18 @@
       }
     },
     {
+      "name": "chromium/1440/scenario/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/1440/gate/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1633,12 +1811,18 @@
       }
     },
     {
+      "name": "chromium/1440/gate/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/1440/binding/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1692,12 +1876,18 @@
       }
     },
     {
+      "name": "chromium/1440/binding/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "chromium/1440/specialists/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1749,6 +1939,11 @@
           }
         ]
       }
+    },
+    {
+      "name": "chromium/1440/specialists/no-grid-layout",
+      "passed": true,
+      "detail": []
     },
     {
       "name": "chromium/preference-and-hard-cap",
@@ -1845,6 +2040,7 @@
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1904,12 +2100,18 @@
       }
     },
     {
+      "name": "webkit/320/energy/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/320/dependency/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -1963,12 +2165,18 @@
       }
     },
     {
+      "name": "webkit/320/dependency/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/320/workflow/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2040,12 +2248,18 @@
       }
     },
     {
+      "name": "webkit/320/workflow/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/320/scenario/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2099,12 +2313,18 @@
       }
     },
     {
+      "name": "webkit/320/scenario/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/320/gate/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2158,12 +2378,18 @@
       }
     },
     {
+      "name": "webkit/320/gate/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/320/binding/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2217,12 +2443,18 @@
       }
     },
     {
+      "name": "webkit/320/binding/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/320/specialists/containment",
       "passed": true,
       "detail": {
         "width": 320,
         "scroll": 320,
         "body": 320,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2276,12 +2508,18 @@
       }
     },
     {
+      "name": "webkit/320/specialists/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/390/energy/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2341,12 +2579,18 @@
       }
     },
     {
+      "name": "webkit/390/energy/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/390/dependency/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2400,12 +2644,18 @@
       }
     },
     {
+      "name": "webkit/390/dependency/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/390/workflow/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2477,12 +2727,18 @@
       }
     },
     {
+      "name": "webkit/390/workflow/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/390/scenario/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2536,12 +2792,18 @@
       }
     },
     {
+      "name": "webkit/390/scenario/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/390/gate/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2595,12 +2857,18 @@
       }
     },
     {
+      "name": "webkit/390/gate/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/390/binding/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2654,12 +2922,18 @@
       }
     },
     {
+      "name": "webkit/390/binding/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/390/specialists/containment",
       "passed": true,
       "detail": {
         "width": 390,
         "scroll": 390,
         "body": 390,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2713,12 +2987,18 @@
       }
     },
     {
+      "name": "webkit/390/specialists/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/834/energy/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2778,12 +3058,18 @@
       }
     },
     {
+      "name": "webkit/834/energy/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/834/dependency/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2837,12 +3123,18 @@
       }
     },
     {
+      "name": "webkit/834/dependency/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/834/workflow/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2914,12 +3206,18 @@
       }
     },
     {
+      "name": "webkit/834/workflow/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/834/scenario/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -2973,12 +3271,18 @@
       }
     },
     {
+      "name": "webkit/834/scenario/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/834/gate/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -3032,12 +3336,18 @@
       }
     },
     {
+      "name": "webkit/834/gate/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/834/binding/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -3091,12 +3401,18 @@
       }
     },
     {
+      "name": "webkit/834/binding/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/834/specialists/containment",
       "passed": true,
       "detail": {
         "width": 834,
         "scroll": 834,
         "body": 834,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -3150,12 +3466,18 @@
       }
     },
     {
+      "name": "webkit/834/specialists/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/1440/energy/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -3215,12 +3537,18 @@
       }
     },
     {
+      "name": "webkit/1440/energy/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/1440/dependency/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -3274,12 +3602,18 @@
       }
     },
     {
+      "name": "webkit/1440/dependency/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/1440/workflow/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -3351,12 +3685,18 @@
       }
     },
     {
+      "name": "webkit/1440/workflow/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/1440/scenario/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -3410,12 +3750,18 @@
       }
     },
     {
+      "name": "webkit/1440/scenario/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/1440/gate/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -3469,12 +3815,18 @@
       }
     },
     {
+      "name": "webkit/1440/gate/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/1440/binding/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -3528,12 +3880,18 @@
       }
     },
     {
+      "name": "webkit/1440/binding/no-grid-layout",
+      "passed": true,
+      "detail": []
+    },
+    {
       "name": "webkit/1440/specialists/containment",
       "passed": true,
       "detail": {
         "width": 1440,
         "scroll": 1440,
         "body": 1440,
+        "gridElements": [],
         "controls": [
           {
             "id": "1 · Feasibility & preference",
@@ -3585,6 +3943,11 @@
           }
         ]
       }
+    },
+    {
+      "name": "webkit/1440/specialists/no-grid-layout",
+      "passed": true,
+      "detail": []
     },
     {
       "name": "webkit/preference-and-hard-cap",
@@ -4381,6 +4744,14 @@
       "detail": {
         "exists": true,
         "anchorExists": true
+      }
+    },
+    {
+      "name": "artifact-source-stable",
+      "passed": true,
+      "detail": {
+        "before": "c8f00192bb146ae968f491d35eb3ed5cbfde40c547eff02d65b5b5ba09118c6b",
+        "after": "c8f00192bb146ae968f491d35eb3ed5cbfde40c547eff02d65b5b5ba09118c6b"
       }
     }
   ],
