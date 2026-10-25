@@ -8,6 +8,7 @@ import {
   captureDomSurface,
   captureStaticDomSurface,
   observeDomSurfaceMotion,
+  waitForDomSurfacePaint,
 } from './dom-surface-observation.mjs';
 const output =
   process.env.DESIGN_DOM_GPU_OUTPUT ?? 'artifacts/dom-surfaces-gpu';
@@ -322,18 +323,48 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         'Inspecting Matte paper',
       await page.locator('#action-status').textContent(),
     );
-    await page.evaluate(() => {
-      proof.stop();
+    await page.evaluate(() => proof.stop());
+    await waitForDomSurfacePaint(page);
+    const batched = await page.evaluate(() => {
+      const c = proof.controllers[1],
+        before = c.renderer.draws;
+      proof.change(1, { roughness: 0.7, metalness: 1 });
+      c.setOutput('diffuse');
       proof.change(1, {
         roughness: 0.18,
+        metalness: 0,
         textureAmount: 0,
         roughnessVariation: 0,
         light: { x: 0, y: 0, z: 1.4, intensity: 0.8, ambient: 0 },
       });
       proof.pose(0, 0);
-      proof.controllers[1].setOutput('specular');
+      c.setOutput('specular');
+      return { before, immediate: c.renderer.draws };
     });
     const smooth = await pixels(page);
+    const afterBatch = await page.evaluate(() => {
+      const c = proof.controllers[1],
+        draws = c.renderer.draws;
+      for (let i = 0; i < 20; i++) c.sample(0);
+      return draws;
+    });
+    await waitForDomSurfacePaint(page);
+    const afterUnchanged = await page.evaluate(
+      () => proof.controllers[1].renderer.draws,
+    );
+    check(
+      engine,
+      'stopped external clock coalesces recipe/output changes and skips unchanged draws',
+      batched.immediate === batched.before &&
+        afterBatch === batched.before + 1 &&
+        afterUnchanged === afterBatch,
+      {
+        ...batched,
+        afterBatch,
+        afterUnchanged,
+        finalSpecular: compact(smooth),
+      },
+    );
     await page.evaluate(() => proof.change(1, { roughness: 0.7 }));
     const rough = await pixels(page);
     check(
@@ -779,17 +810,30 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       earlyDisposed,
     );
     await earlyPage.close();
-    const disposal = await page.evaluate(() => {
+    await waitForDomSurfacePaint(page);
+    const disposal = await page.evaluate(async () => {
+      const before = proof.controllers.map((c) => c.renderer.draws);
+      proof.change(1, { roughness: 0.63 });
+      proof.controllers[1].setOutput('normal');
+      const queued = proof.controllers.map((c) => c.renderer.draws);
       proof.dispose();
+      await new Promise((resolve) =>
+        requestAnimationFrame(() => requestAnimationFrame(resolve)),
+      );
       return {
+        before,
+        queued,
+        after: proof.controllers.map((c) => c.renderer.draws),
         canvases: document.querySelectorAll('.dt-dom-light-canvas').length,
         statuses: proof.controllers.map((c) => c.status),
       };
     });
     check(
       engine,
-      'disposal removes decorative canvases and stops all controllers',
+      'disposal cancels queued GPU submission and removes decorative canvases',
       disposal.canvases === 0 &&
+        JSON.stringify(disposal.before) === JSON.stringify(disposal.queued) &&
+        JSON.stringify(disposal.before) === JSON.stringify(disposal.after) &&
         disposal.statuses.every((s) => s === 'disposed'),
       disposal,
     );

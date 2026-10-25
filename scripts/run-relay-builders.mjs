@@ -359,7 +359,7 @@ export default function App() { return <SafeAreaProvider><Shell /></SafeAreaProv
 `;
 export const COMMON_PROMPT = `Build Relay completely in app/ using the frozen product brief, shared data and licensed assets in toolkit/experiments/relay/shared/. Read BRIEF.md, DESIGN.md, TOOL-COVERAGE.md and REPORTING.md first. Read toolkit/.agents/skills/design-theory/SKILL.md and only relevant facets. These instructions are identical for all three builders; BUILDER.json records your assigned identity, exact model, pinned settings, source commit, input identity, runtime ports and native device IDs.
 
-Actual React Native iOS and Android are primary, with Expo web for exactly two documented tuning rounds before final native validation. Use the supplied pinned Expo/RSD integration shell and adapters; it contains no Relay UI. Deliver all primary and secondary flows in the brief, current platform observations, accessible interactions, persistence and recovery. You have no wall-time deadline. Continue until the complete app and its tests/evidence/report are delivered; preserve any genuine blockers or unsupported capabilities explicitly. Do not silently reduce scope.
+Actual React Native iOS and Android are primary, with Expo web for exactly two documented tuning rounds before final native validation. Use the supplied pinned Expo/RSD integration shell and adapters; it contains no Relay UI. Use StyleX/RSD for shared styling and flex layout; identify native adapter exceptions explicitly. Deliver all primary and secondary flows in the brief, current platform observations, accessible interactions, persistence and recovery. You have no wall-time deadline. Continue until the complete app and its tests/evidence/report are delivered; preserve any genuine blockers or unsupported capabilities explicitly. Do not silently reduce scope.
 
 Use the Design Theory CLI/exported implementation from toolkit. Start with compact catalog/schema discovery, --summary --output files and hash-bound references. Reuse examples/kernels/relay-compact.json as a shared measured starting point, with new real app/native measurements as necessary. The supplied browser cells do not certify native output. Run kernel compile -> decision run -> kernel resolve and import the resolved JSON values into actual component properties; kernel resolve takes the original input, compilationIdentity and full result, all available by exact file pointers. Keep full compiled/decision matrices in evidence, not in the imported property file or conversational context. Record exact tool inputs/results and selected output pointers; consume them in actual properties on all twelve named surfaces. Preserve alternatives, bounded numeric budgets, actual local System 1 selection when useful, a coupled perturbation and recipe replay. Do not call every command ceremonially. Numeric feasibility, model choices, renderer observations and synthetic critique are different evidence.
 
@@ -1116,12 +1116,17 @@ export async function qualifyCapabilities(
   });
   const controller = new AbortController(),
     cancel = () => controller.abort();
+  const cancelled = () => {
+    if (existsSync(path.join(out, 'cancel-request.json'))) controller.abort();
+    return controller.signal.aborted;
+  };
+  const assertActive = () =>
+    fail(!cancelled(), 'Capability qualification cancelled');
   process.once('SIGINT', cancel);
   process.once('SIGTERM', cancel);
-  const timer = setInterval(() => {
-    if (existsSync(path.join(out, 'cancel-request.json'))) controller.abort();
-  }, 250);
-  let failure = null;
+  const timer = setInterval(cancelled, 250);
+  let failure = null,
+    qualified = false;
   const cleanup = {
     checkedAt: now(),
     confirmedEmpty: true,
@@ -1130,8 +1135,10 @@ export async function qualifyCapabilities(
   };
   try {
     for (const builder of run.policy.order) {
+      assertActive();
       const b = run.builders[builder];
       await portsFree(b.metadata.runtime);
+      assertActive();
       b.state = 'checking-capabilities';
       b.capabilityStartedAt = now();
       save(path.join(out, 'run.json'), run);
@@ -1152,6 +1159,7 @@ export async function qualifyCapabilities(
           },
         },
       );
+      assertActive();
       fail(
         metrics.processCleanup?.confirmedEmpty === true &&
           (metrics.processCleanup.groupId === null ||
@@ -1162,6 +1170,7 @@ export async function qualifyCapabilities(
       assertPreparedApplication(b);
       assertSnapshot(b.workspace, b.immutable);
       await portsFree(b.metadata.runtime);
+      assertActive();
       save(path.join(b.workspace, 'CAPABILITIES.json'), {
         version: 1,
         scope:
@@ -1180,8 +1189,7 @@ export async function qualifyCapabilities(
       'Capability changed host settings',
     );
     validateSelector(run.selector);
-    run.ready = true;
-    run.capabilitiesQualifiedAt = now();
+    qualified = true;
   } catch (error) {
     failure = String(error);
     run.capabilityError = failure;
@@ -1191,20 +1199,30 @@ export async function qualifyCapabilities(
           ? 'capability-cancelled'
           : 'capability-failed';
   } finally {
-    clearInterval(timer);
-    process.removeListener('SIGINT', cancel);
-    process.removeListener('SIGTERM', cancel);
     try {
-      Object.assign(cleanup, await verifyRuntimeCleanup(out, run));
-    } catch (error) {
-      cleanup.confirmedEmpty = false;
-      cleanup.failures.push(String(error));
+      try {
+        Object.assign(cleanup, await verifyRuntimeCleanup(out, run));
+      } catch (error) {
+        cleanup.confirmedEmpty = false;
+        cleanup.failures.push(String(error));
+      }
+      // Cancellation remains observable throughout asynchronous cleanup. Read
+      // the file again immediately before the synchronous readiness commit.
+      if (cancelled()) {
+        failure ??= 'Capability qualification cancelled';
+        run.capabilityError = failure;
+      }
+      run.ready = qualified && !failure && cleanup.confirmedEmpty;
+      if (run.ready) run.capabilitiesQualifiedAt = now();
+      run.capabilityCleanup = cleanup;
+      save(path.join(out, 'run.json'), run);
+      if (cleanup.confirmedEmpty) lease.release(cleanup);
+      else lease.retain(cleanup);
+    } finally {
+      clearInterval(timer);
+      process.removeListener('SIGINT', cancel);
+      process.removeListener('SIGTERM', cancel);
     }
-    if (!cleanup.confirmedEmpty) run.ready = false;
-    run.capabilityCleanup = cleanup;
-    save(path.join(out, 'run.json'), run);
-    if (cleanup.confirmedEmpty) lease.release(cleanup);
-    else lease.retain(cleanup);
   }
   if (failure) throw Error(failure);
   fail(run.ready, 'Capability cleanup blocked readiness');

@@ -629,6 +629,45 @@ test('capability failure or absent artifact fails closed without starting a prod
     assert.equal(after.builders.sol.state, 'installed');
   }
 });
+test('cancellation after the last capability session never commits readiness', async () => {
+  for (const mechanism of ['signal', 'cancel-file']) {
+    const f = fixture(),
+      prepared = f.prepare(),
+      leaseFile = path.join(f.dir, 'capability-lease.json');
+    await qualifyTransport(f.out, qualifiers(f, prepared), {
+      install: fakeInstall,
+    });
+    let sessions = 0;
+    await assert.rejects(
+      qualifyCapabilities(f.out, {
+        authorize: true,
+        leaseFile,
+        session: async (spec, output, options) => {
+          const metrics = await fakeCapabilitySession(spec, output, options);
+          if (++sessions === 3) {
+            assert.equal(options.signal.aborted, false);
+            if (mechanism === 'signal') process.emit('SIGTERM');
+            else
+              write(path.join(f.out, 'cancel-request.json'), {
+                reason: 'Synthetic late cancellation',
+              });
+          }
+          return metrics;
+        },
+      }),
+      /Capability qualification cancelled/,
+    );
+    const after = read(path.join(f.out, 'run.json'));
+    assert.equal(sessions, 3);
+    assert.equal(after.ready, false);
+    assert.equal(after.capabilitiesQualifiedAt, undefined);
+    assert.equal(after.builders.astra.state, 'capability-cancelled');
+    assert.equal(after.capabilityCleanup.confirmedEmpty, true);
+    assert.equal(existsSync(leaseFile), false);
+    assert.match(after.capabilityError, /cancelled/);
+    assert.ok(Object.values(after.builders).every((b) => !b.actualStartedAt));
+  }
+});
 test('successful capability artifacts and approval evidence are rechecked before product launch', async () => {
   const f = fixture(),
     run = f.prepare();

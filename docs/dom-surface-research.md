@@ -39,7 +39,7 @@ const controller = createDomLightController(element, recipe, {
   maxTiltDegrees: 0,
   gpu: { pixelRatio: 1, maxPixels: 500000 },
 });
-// Retain the existing host clock; no second RAF is created.
+// The host clock owns simulation; GPU presentation submits the latest sample on the next frame.
 controller.sample(dtSeconds);
 controller.updateRecipe(nextRecipe); // finish/light/color edits are uniforms
 controller.setLightTarget({ x: 0.6, y: -0.2 }); // optional host target
@@ -173,7 +173,7 @@ controller.refreshBounds();
 controller.dispose();
 ```
 
-With `clock: 'auto'`, the controller owns one requestAnimationFrame loop and stops when its held target settles. With `external`, it never requests RAF. Pointer events replace the latest target. Scroll reads the current scroll position and uses cached document geometry; it does not read element layout in the frame loop. ResizeObserver, window resize and explicit `refreshBounds()` refresh geometry outside `sample()`. A host that moves an element without resizing it must call `refreshBounds()` after that layout change.
+With `clock: 'auto'`, the controller owns one requestAnimationFrame loop and stops when its held target settles. With `external`, the host owns simulation frames; the optional WebGL adapter queues presentation of the latest requested sample on RAF. Pointer events replace the latest target. Scroll reads the current scroll position and uses cached document geometry; it does not read element layout in the frame loop. ResizeObserver, window resize and explicit `refreshBounds()` refresh geometry outside `sample()`. A host that moves an element without resizing it must call `refreshBounds()` after that layout change.
 
 The held-target filter is `current += (target−current) × (1−exp(−rate × dt))`. Its frame-partition invariance is tested for the same held target. Different event schedules remain different inputs. `sample()` accepts 0–1 seconds; the built-in RAF clamps its presentation step to 50 ms and resets hidden-time gaps. This is a first-order decorative response, not a claim about conserved spring energy.
 
@@ -207,8 +207,10 @@ The deliberately unsafe glass control has nominal opaque contrast 21:1 but a ren
 
 The same proof checks no additional `getBoundingClientRect` reads during 120 retained frame samples, recipe updates preserving pose, reduced-motion pause, offscreen pause, disposal, runtime errors, feature support and source identity. Synchronous sample timings are JS arithmetic/style-write measurements only: they exclude paint/compositor completion and do not prove frame pacing or an animation-library ranking. Source hashes reject concurrent edits during the run. Evidence and screenshots are written under `artifacts/dom-surfaces`.
 
-## GPU submission outside animation callbacks
+## GPU submission at the animation frame boundary
 
-The WebGL adapter can draw synchronously when a recipe or output mode changes, including when its external clock is stopped. It now calls nonblocking `gl.flush()` after each submitted draw, following [MDN's guidance for WebGL rendering outside requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices#use_webgl.flush_when_not_using_requestanimationframe). The unchanged-pose guard still skips both drawing and flushing. This submits queued commands; it does not wait for GPU completion or prove that the compositor has presented the new state.
+The WebGL adapter coalesces requested samples and synchronous recipe/output changes into one pending `requestAnimationFrame` submission. That callback uses the latest state and records the render key only after drawing. The external clock still owns simulation; this callback only submits presentation work and does not start a continuous redraw loop. Callers must now observe a frame before expecting `renderer.draws` or displayed pixels to change. Unchanged samples schedule no draw. Suspension, context loss and disposal cancel pending presentation; resume retains the latest requested state.
 
-Linux WebKit CI at `c6fae34` retained two byte-identical screenshots per GGX pose that still showed the preceding state's pixels. Thus waiting for animation callbacks and snapshot stability alone did not resolve the stale output. The flush change is a candidate correction pending the same strict Linux pixel oracles. It is not a performance result, physical Safari evidence, or a reason to introduce blocking GPU completion/readback into production rendering. See the [retained diagnosis](../artifacts/dom-ci-c6-review/README.md).
+Linux WebKit CI at `c6fae34` retained stable screenshots of the preceding state. Adding nonblocking `gl.flush()` in `32785eb` left all six failing checks numerically unchanged in two runs; see the [retained comparison](../artifacts/dom-ci-327-review/README.md). RAF submission is the next candidate correction, with Linux success still unverified. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices#use_webgl.flush_when_not_using_requestanimationframe) distinguishes eager command execution from the frame boundary following RAF. The adapter retains nonblocking flush and `preserveDrawingBuffer:false`; neither submission nor snapshot stability proves fresh pixels. The existing GGX and negative-control oracles remain unchanged, alongside stopped-clock batching, unchanged-input and queued-disposal checks. No GPU completion timing, physical Safari or performance improvement is claimed.
+
+The Mac candidate proof passed all 29 checks in each of Chromium and WebKit, plus the source-freeze check; [the receipt](../artifacts/dom-surfaces-gpu-raf-candidate/proof.json) retains the exact source hashes. That result does not establish the pending Linux correction.
