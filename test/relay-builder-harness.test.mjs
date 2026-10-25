@@ -8,6 +8,7 @@ import {
   readFileSync,
   existsSync,
   rmSync,
+  realpathSync,
 } from 'node:fs';
 import net from 'node:net';
 import path from 'node:path';
@@ -24,7 +25,11 @@ import {
   COMMON_PROMPT,
   validatePolicy,
   prepareExperiment,
-  qualifyExperiment,
+  qualifyExperiment as qualifyTransport,
+  qualifyCapabilities,
+  CAPABILITY_PROMPT,
+  builderEnvironment,
+  inspectCapabilities,
   buildSessionSpec,
   inspectQualifier,
   assertSnapshot,
@@ -38,7 +43,10 @@ import {
   assertPreparedApplication,
   cleanupExperiment,
   validateGate,
+  inspectOperatorRecovery,
 } from '../scripts/run-relay-builders.mjs';
+import { browserFixture, artifact } from '../scripts/relay-capabilities.mjs';
+import { selectorCapabilityPayload } from '../scripts/relay-selector-capability.mjs';
 
 const write = (p, value) => {
   mkdirSync(path.dirname(p), { recursive: true });
@@ -72,7 +80,20 @@ function fixture() {
   git(remote, 'init', '--bare');
   const policy = JSON.parse(readFileSync(policyPath));
   policy.toolkitRoots = ['src', '.agents/skills/design-theory'];
-  policy.toolkitFiles = ['package.json', 'package-lock.json'];
+  policy.toolkitFiles = [
+    'package.json',
+    'package-lock.json',
+    'scripts/relay-capabilities.mjs',
+    'scripts/relay-selector-capability.mjs',
+    'scripts/relay-native-capability.mjs',
+  ];
+  for (const name of policy.toolkitFiles.filter((p) =>
+    p.startsWith('scripts/'),
+  ))
+    write(
+      path.join(repo, name),
+      '// Synthetic immutable capability producer fixture\n',
+    );
   policy.templateFiles = [
     'package.json',
     'package-lock.json',
@@ -167,7 +188,16 @@ function fixture() {
       sha256: sha256(readFileSync(platformPath)),
     },
     verifiedSources: sources,
-    devices: { ios: 'synthetic-simulator', android: 'synthetic-emulator' },
+    devices: {
+      ios: 'synthetic-simulator',
+      android: 'synthetic-emulator',
+      tools: {
+        androidAdb: '/synthetic/adb',
+        iosInputRuntime: '/synthetic/idb',
+        iosInputCompanionAddress: 'localhost:10882',
+        expoGo: { ios: 'synthetic-ios', android: 'synthetic-android' },
+      },
+    },
   });
   const executable = path.join(dir, 'synthetic-selector.sh'),
     checkpoint = path.join(dir, 'synthetic-weights.txt');
@@ -246,6 +276,183 @@ function qualifiers(f, run) {
       return [builder, directory];
     }),
   );
+}
+// Synthetic protocol/renderer receipts only. This helper does not run a model,
+// browser, selector or native runtime and cannot qualify production workspaces.
+async function fakeCapabilitySession(spec, output, options) {
+  const runRoot = realpathSync(path.resolve(spec.cwd, '../..')),
+    run = read(path.join(runRoot, 'run.json'));
+  const metadata = read(path.join(spec.cwd, 'BUILDER.json')),
+    selector = read(path.join(spec.cwd, 'SELECTOR.json'));
+  const resolved = responseFor({ ...spec.threadStart, cwd: spec.cwd });
+  options.validateThreadStart(resolved);
+  const startedAt = new Date().toISOString(),
+    deadPid = Number(
+      execFileSync(process.execPath, ['-e', 'console.log(process.pid)'], {
+        encoding: 'utf8',
+      }),
+    );
+  const events = [];
+  for (const kind of ['browser', 'selector', 'native']) {
+    const directory = path.resolve(spec.cwd, '../cache/capabilities', kind);
+    mkdirSync(directory, { recursive: true });
+    let result;
+    if (kind === 'browser') {
+      write(path.join(directory, 'fixture.html'), browserFixture);
+      const png = Buffer.alloc(128);
+      Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]).copy(png);
+      png.writeUInt32BE(390, 16);
+      png.writeUInt32BE(300, 20);
+      for (const engine of ['chromium', 'webkit'])
+        writeFileSync(path.join(directory, engine + '.png'), png);
+      result = {
+        fixture: artifact(directory, 'fixture.html'),
+        engines: ['chromium', 'webkit'].map((engine) => ({
+          engine,
+          version: 'synthetic',
+          closed: true,
+          observation: {
+            text: 'Measured browser capability',
+            counter: '1',
+            rectangle: { x: 20, y: 20, width: 350, height: 27 },
+            viewport: { width: 390, height: 300 },
+          },
+          screenshot: artifact(directory, engine + '.png'),
+        })),
+        cleanup: { confirmed: true },
+      };
+    } else if (kind === 'selector') {
+      write(path.join(directory, 'result.json'), {
+        selected: 'a',
+        provenance: {
+          readoutPasses: 1,
+          execution: { code: 0, cancelled: false },
+          model: {
+            source: 'Qwen/Qwen3.5-4B',
+            revision: selector.revision,
+            gguf: { sha256: selector.checkpoint.sha256 },
+          },
+        },
+      });
+      write(path.join(directory, 'request.json'), {
+        payload: selectorCapabilityPayload,
+        gguf: selector.checkpoint.path,
+        profile: selector.profile,
+        readout: 'single',
+        maxPromptTokens: 1024,
+        auditDirectory: path.join(directory, 'audit'),
+      });
+      result = {
+        profile: selector.profile,
+        revision: selector.revision,
+        checkpointSha256: selector.checkpoint.sha256,
+        readout: {
+          requested: 1,
+          completed: 1,
+          modelCalls: 1,
+          candidates: 2,
+          selectedId: 'a',
+        },
+        artifact: artifact(directory, 'result.json'),
+        request: artifact(directory, 'request.json'),
+        cleanup: { confirmed: true },
+      };
+    } else {
+      const { createNativeCapabilityFixture } =
+        await import('./fixtures/native-capability.mjs');
+      result = await createNativeCapabilityFixture({
+        workspace: spec.cwd,
+        output: directory,
+        metadata,
+      });
+    }
+    const sources = [
+      'relay-capabilities.mjs',
+      ...(kind === 'browser' ? [] : [`relay-${kind}-capability.mjs`]),
+    ].map((name) => {
+      const p = path.join(spec.cwd, 'toolkit/scripts', name);
+      return { path: p, sha256: sha256(readFileSync(p)) };
+    });
+    write(path.join(directory, 'receipt.json'), {
+      version: 1,
+      kind: 'relay-execution-capability',
+      capability: kind,
+      workspace: spec.cwd,
+      startedAt,
+      finishedAt: new Date().toISOString(),
+      pid: deadPid,
+      sources,
+      passed: true,
+      result,
+    });
+    const command = `node toolkit/scripts/relay-capabilities.mjs ${kind}`,
+      id = 'synthetic-' + kind;
+    events.push({
+      method: 'item/autoApprovalReview/completed',
+      params: {
+        targetItemId: id,
+        reviewId: 'review-' + kind,
+        review: { status: 'approved' },
+        action: { type: 'command', command, cwd: spec.cwd },
+      },
+    });
+    events.push({
+      method: 'item/completed',
+      params: {
+        threadId: 't',
+        turnId: 'u',
+        item: {
+          id,
+          type: 'commandExecution',
+          command,
+          cwd: spec.cwd,
+          exitCode: 0,
+          status: 'completed',
+        },
+      },
+    });
+  }
+  mkdirSync(output, { recursive: true });
+  write(
+    path.join(output, 'stdout.jsonl'),
+    events.map((e) => JSON.stringify(e)).join('\n') + '\n',
+  );
+  write(path.join(output, 'usage.jsonl'), '{}\n');
+  const metrics = {
+    startedAt,
+    finishedAt: new Date().toISOString(),
+    wallTimeLimitMs: null,
+    timedOut: false,
+    cancelled: false,
+    probe: false,
+    protocolError: null,
+    configUnchanged: true,
+    configBefore: run.hostSettings['config.toml'],
+    processCleanup: { groupId: null, confirmedEmpty: true },
+    usage: {
+      completeTurnObserved: true,
+      notificationCount: 1,
+      reportedUsage: { total: { inputTokens: 10 } },
+      regressions: [],
+    },
+    rawSha256: sha256(readFileSync(path.join(output, 'stdout.jsonl'))),
+    usageJournalSha256: sha256(readFileSync(path.join(output, 'usage.jsonl'))),
+  };
+  write(path.join(output, 'receipt.json'), metrics);
+  write(path.join(output, 'invocation.json'), {
+    spec,
+    environmentOverrideKeys: Object.keys(options.env).sort(),
+  });
+  write(path.join(output, 'thread-start-result.json'), resolved);
+  return metrics;
+}
+async function qualifyExperiment(out, receipts, options) {
+  await qualifyTransport(out, receipts, options);
+  return qualifyCapabilities(out, {
+    authorize: true,
+    session: fakeCapabilitySession,
+    leaseFile: path.join(path.dirname(out), 'capability-lease.json'),
+  });
 }
 test('published preparation gives identical immutable inputs and a minimal shell, not the spike UI', () => {
   const f = fixture(),
@@ -348,6 +555,142 @@ test('same exact models, null budget, high effort and permissions are enforced',
       ),
     /model\/effort/,
   );
+});
+test('ACK and installed dependencies never qualify runtime capability or permit a builder turn', async () => {
+  const f = fixture(),
+    prepared = f.prepare();
+  const run = await qualifyTransport(f.out, qualifiers(f, prepared), {
+    install: fakeInstall,
+  });
+  assert.equal(run.ready, false);
+  assert.equal(run.builders.luna.state, 'installed');
+  let called = false;
+  await assert.rejects(
+    runBuilders(f.out, 'luna', {
+      authorize: true,
+      session: async () => {
+        called = true;
+      },
+      leaseFile: path.join(f.dir, 'lease.json'),
+    }),
+    /not qualified/,
+  );
+  assert.equal(called, false);
+  await assert.rejects(qualifyCapabilities(f.out), /authorization/);
+});
+test('capability failure or absent artifact fails closed without starting a product turn', async () => {
+  for (const kind of ['failed-receipt', 'missing-screenshot', 'wrong-review']) {
+    const f = fixture(),
+      prepared = f.prepare();
+    await qualifyTransport(f.out, qualifiers(f, prepared), {
+      install: fakeInstall,
+    });
+    await assert.rejects(
+      qualifyCapabilities(f.out, {
+        authorize: true,
+        leaseFile: path.join(f.dir, 'capability-lease.json'),
+        session: async (spec, out, options) => {
+          const metrics = await fakeCapabilitySession(spec, out, options);
+          const browser = path.resolve(
+            spec.cwd,
+            '../cache/capabilities/browser/receipt.json',
+          );
+          if (kind === 'failed-receipt') {
+            const r = read(browser);
+            r.passed = false;
+            write(browser, r);
+          }
+          if (kind === 'missing-screenshot')
+            rmSync(
+              path.resolve(
+                spec.cwd,
+                '../cache/capabilities/browser/chromium.png',
+              ),
+            );
+          if (kind === 'wrong-review') {
+            const raw = path.join(out, 'stdout.jsonl'),
+              events = readFileSync(raw, 'utf8')
+                .trim()
+                .split('\n')
+                .map(JSON.parse);
+            events[0].params.targetItemId = 'unrelated-command';
+            write(raw, events.map((e) => JSON.stringify(e)).join('\n') + '\n');
+            metrics.rawSha256 = sha256(readFileSync(raw));
+            write(path.join(out, 'receipt.json'), metrics);
+          }
+          return metrics;
+        },
+      }),
+    );
+    const after = read(path.join(f.out, 'run.json'));
+    assert.equal(after.ready, false);
+    assert.equal(after.builders.luna.state, 'capability-failed');
+    assert.equal(after.builders.luna.actualStartedAt, undefined);
+    assert.equal(after.builders.sol.state, 'installed');
+  }
+});
+test('cancellation after the last capability session never commits readiness', async () => {
+  for (const mechanism of ['signal', 'cancel-file']) {
+    const f = fixture(),
+      prepared = f.prepare(),
+      leaseFile = path.join(f.dir, 'capability-lease.json');
+    await qualifyTransport(f.out, qualifiers(f, prepared), {
+      install: fakeInstall,
+    });
+    let sessions = 0;
+    await assert.rejects(
+      qualifyCapabilities(f.out, {
+        authorize: true,
+        leaseFile,
+        session: async (spec, output, options) => {
+          const metrics = await fakeCapabilitySession(spec, output, options);
+          if (++sessions === 3) {
+            assert.equal(options.signal.aborted, false);
+            if (mechanism === 'signal') process.emit('SIGTERM');
+            else
+              write(path.join(f.out, 'cancel-request.json'), {
+                reason: 'Synthetic late cancellation',
+              });
+          }
+          return metrics;
+        },
+      }),
+      /Capability qualification cancelled/,
+    );
+    const after = read(path.join(f.out, 'run.json'));
+    assert.equal(sessions, 3);
+    assert.equal(after.ready, false);
+    assert.equal(after.capabilitiesQualifiedAt, undefined);
+    assert.equal(after.builders.astra.state, 'capability-cancelled');
+    assert.equal(after.capabilityCleanup.confirmedEmpty, true);
+    assert.equal(existsSync(leaseFile), false);
+    assert.match(after.capabilityError, /cancelled/);
+    assert.ok(Object.values(after.builders).every((b) => !b.actualStartedAt));
+  }
+});
+test('successful capability artifacts and approval evidence are rechecked before product launch', async () => {
+  const f = fixture(),
+    run = f.prepare();
+  await qualifyExperiment(f.out, qualifiers(f, run), { install: fakeInstall });
+  const receipt = path.join(
+    f.out,
+    'luna/cache/capabilities/browser/receipt.json',
+  );
+  const r = read(receipt);
+  r.result.engines[0].observation.counter = '0';
+  write(receipt, r);
+  let called = false;
+  await assert.rejects(
+    runBuilders(f.out, 'luna', {
+      authorize: true,
+      session: async () => {
+        called = true;
+      },
+      leaseFile: path.join(f.dir, 'lease.json'),
+    }),
+    /render\/action/,
+  );
+  assert.equal(called, false);
 });
 test('qualification rejects mismatched model receipt, no usage and changed flags', async () => {
   const f = fixture(),
@@ -868,6 +1211,135 @@ test('preflight port failure also retains the lease until all reserved ports are
     (await cleanupExperiment(f.out, { leaseFile })).leaseReleased,
     true,
   );
+});
+
+test('operator recovery preserves a missing builder manifest and verifies final trace, PIDs and dead lease', async () => {
+  const f = fixture(),
+    run = f.prepare(),
+    b = run.builders.luna;
+  f.out = realpathSync(f.out);
+  const deadPid = Number(
+    execFileSync(process.execPath, ['-e', 'console.log(process.pid)'], {
+      encoding: 'utf8',
+    }),
+  );
+  b.startedAt = new Date().toISOString();
+  const metricsDir = path.join(f.out, 'luna/metrics');
+  const raw = {
+    method: 'item/completed',
+    params: {
+      threadId: 't',
+      turnId: 'u',
+      item: {
+        id: 'runtime',
+        type: 'commandExecution',
+        command: 'node observer.mjs',
+        status: 'completed',
+      },
+    },
+  };
+  write(path.join(metricsDir, 'stdout.jsonl'), JSON.stringify(raw) + '\n');
+  write(path.join(metricsDir, 'receipt.json'), {
+    finishedAt: new Date().toISOString(),
+    processCleanup: { groupId: deadPid, confirmedEmpty: true },
+  });
+  const processFile = path.join(f.dir, 'operator-ps.txt');
+  write(
+    processFile,
+    `PID PPID PGID COMMAND\n${deadPid} 1 ${deadPid} node ${b.workspace}/observer.mjs\n`,
+  );
+  const inventory = {
+    version: 1,
+    origin: 'operator-recovery',
+    run: f.out,
+    builder: 'luna',
+    reason: 'Synthetic cancellation before manifest',
+    groupId: deadPid,
+    rawSha256: sha256(readFileSync(path.join(metricsDir, 'stdout.jsonl'))),
+    metricsReceiptSha256: sha256(
+      readFileSync(path.join(metricsDir, 'receipt.json')),
+    ),
+    reviewedCallIds: ['runtime'],
+    processSnapshot: {
+      path: processFile,
+      sha256: sha256(readFileSync(processFile)),
+      capturedAt: new Date().toISOString(),
+      command: '/bin/ps -axo pid,ppid,pgid,command',
+    },
+    processes: [
+      {
+        pid: deadPid,
+        command: `node ${b.workspace}/observer.mjs`,
+        reason: 'Synthetic recorded runtime',
+      },
+    ],
+  };
+  const leaseFile = path.join(f.dir, 'lease.json');
+  write(path.join(f.out, 'run.json'), run);
+  write(leaseFile, {
+    run: f.out,
+    pid: deadPid,
+    state: 'cleanup-blocked',
+    cleanup: { failures: ['missing manifest'] },
+  });
+  assert.equal(
+    (await cleanupExperiment(f.out, { leaseFile })).leaseReleased,
+    false,
+  );
+  for (const change of [
+    (x) => (x.reviewedCallIds = []),
+    (x) => (x.rawSha256 = '0'.repeat(64)),
+    (x) => (x.metricsReceiptSha256 = '0'.repeat(64)),
+    (x) => (x.processes = []),
+    (x) => (x.processSnapshot.capturedAt = '2000-01-01T00:00:00Z'),
+  ]) {
+    const bad = structuredClone(inventory);
+    change(bad);
+    await assert.rejects(inspectOperatorRecovery(f.out, 'luna', b, bad));
+  }
+  const live = structuredClone(inventory);
+  write(
+    processFile,
+    `PID PPID PGID COMMAND\n${process.pid} 1 ${deadPid} node ${b.workspace}/observer.mjs\n`,
+  );
+  live.processSnapshot.sha256 = sha256(readFileSync(processFile));
+  live.processes[0].pid = process.pid;
+  await assert.rejects(
+    inspectOperatorRecovery(f.out, 'luna', b, live),
+    /still present/,
+  );
+  write(
+    processFile,
+    `PID PPID PGID COMMAND\n${deadPid} 1 ${deadPid} node ${b.workspace}/observer.mjs\n`,
+  );
+  write(leaseFile, { run: f.out, pid: process.pid, state: 'cleanup-blocked' });
+  await assert.rejects(
+    cleanupExperiment(f.out, {
+      leaseFile,
+      operatorInventories: { luna: inventory },
+    }),
+    /live or unknown lease/,
+  );
+  write(leaseFile, {
+    run: f.out,
+    pid: deadPid,
+    state: 'cleanup-blocked',
+    cleanup: { failures: ['missing manifest'] },
+  });
+  assert.equal(
+    (
+      await cleanupExperiment(f.out, {
+        leaseFile,
+        operatorInventories: { luna: inventory },
+      })
+    ).leaseReleased,
+    true,
+  );
+  assert.equal(
+    existsSync(path.join(b.workspace, 'app/evidence/runtime-processes.json')),
+    false,
+  );
+  assert.equal(existsSync(leaseFile), false);
 });
 
 test('launch gate requires exact v4 full stage order and matching stable source snapshots', () => {

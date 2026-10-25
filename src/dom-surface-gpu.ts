@@ -78,12 +78,18 @@ export function createDomSurfaceGpu(
     lastKey = '';
   const win = element.ownerDocument.defaultView!;
   let pending = 0,
+    drawFrame = 0,
     pendingIdle = false,
     initializationStart = 0;
   let phase: 'context' | 'link' | 'texture' = 'context';
   let parallel: KHR_parallel_shader_compile | null = null;
   const uniforms = new Map<string, WebGLUniformLocation | null>();
+  function cancelDraw() {
+    if (drawFrame) win.cancelAnimationFrame(drawFrame);
+    drawFrame = 0;
+  }
   function fallback(reason: string) {
+    cancelDraw();
     stats.status = 'fallback';
     stats.reason = reason;
     canvas.hidden = true;
@@ -257,12 +263,30 @@ export function createDomSurfaceGpu(
     latest = sample;
     if (disposed || suspended || !gl || !program || stats.status !== 'ready')
       return;
-    const renderKey = [...sample.normal, ...sample.lightDirection]
+    if (drawFrame || (!dirty && sampleKey(sample) === lastKey)) return;
+    // Coalesce external-clock samples and synchronous recipe/output edits at presentation.
+    drawFrame = win.requestAnimationFrame(() => {
+      drawFrame = 0;
+      if (latest) submit(latest);
+    });
+  }
+  function sampleKey(sample: DomSurfaceLightSample) {
+    return [...sample.normal, ...sample.lightDirection]
       .map((v) => Math.round(v * 100000))
       .join(':');
+  }
+  function submit(sample: DomSurfaceLightSample) {
+    if (
+      disposed ||
+      suspended ||
+      !gl ||
+      !program ||
+      stats.status !== 'ready' ||
+      gl.isContextLost()
+    )
+      return;
+    const renderKey = sampleKey(sample);
     if (!dirty && renderKey === lastKey) return;
-    dirty = false;
-    lastKey = renderKey;
     const r = recipe.input;
     // CSS percentage coordinates use down-positive y; shader world uses up-positive y.
     // Light direction already contains the host's pointer/scroll/tilt target, including maxTilt=0.
@@ -303,6 +327,10 @@ export function createDomSurfaceGpu(
       gl.uniform1f(uniforms.get(name)!, value);
     gl.uniform1i(uniforms.get('Output')!, outputs.indexOf(output));
     gl.drawArrays(gl.TRIANGLES, 0, 3);
+    // Submission is nonblocking; presented pixels remain the renderer proof's responsibility.
+    gl.flush();
+    dirty = false;
+    lastKey = renderKey;
     stats.draws++;
   }
   function onLost(event: Event) {
@@ -340,6 +368,7 @@ export function createDomSurfaceGpu(
     stats,
     setSuspended(value: boolean) {
       suspended = value;
+      if (suspended) cancelDraw();
       if (!suspended) {
         schedule();
         if (stats.status === 'ready' && !tile) upload();
@@ -358,6 +387,7 @@ export function createDomSurfaceGpu(
     dispose() {
       if (disposed) return;
       disposed = true;
+      cancelDraw();
       if (pending) {
         if (pendingIdle) win.cancelIdleCallback(pending);
         else win.clearTimeout(pending);

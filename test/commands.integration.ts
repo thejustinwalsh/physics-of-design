@@ -12,6 +12,8 @@ import {
   parseState,
   hash,
   measurementKey,
+  compileRelationalKernels,
+  runDecisionWorkflow,
 } from '../dist/index.js';
 const state = JSON.parse(readFileSync('examples/hero.json', 'utf8'));
 const fieldBrief = JSON.parse(
@@ -443,6 +445,15 @@ const inputs: Record<string, unknown> = {
     probes: false,
   },
 };
+const contractKernel = compileRelationalKernels(
+  inputs['kernel compile'] as Parameters<typeof compileRelationalKernels>[0],
+);
+inputs['kernel resolve'] = {
+  input: contractKernel.input,
+  compilationIdentity: contractKernel.identity,
+  result: await runDecisionWorkflow({ workflow: contractKernel.workflow }),
+};
+
 async function cli(command: string, input: string, args: string[] = []) {
   const child = spawn(
     process.execPath,
