@@ -303,6 +303,8 @@ export function createDomSurfaceGpu(
       gl.uniform1f(uniforms.get(name)!, value);
     gl.uniform1i(uniforms.get('Output')!, outputs.indexOf(output));
     gl.drawArrays(gl.TRIANGLES, 0, 3);
+    // Recipe/output changes can draw outside RAF; submit without waiting for GPU completion.
+    gl.flush();
     stats.draws++;
   }
   function onLost(event: Event) {
