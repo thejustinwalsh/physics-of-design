@@ -18,6 +18,8 @@ export const nativeSourceFiles = [
   'src/restore-gate.ts',
   'src/native-text-diagnostics.ts',
   'src/native-viewport.ts',
+  'src/native-safe-area.ts',
+  'src/native-root-geometry.ts',
   'examples/vela/design.generated.json',
   'assets/fonts/Lato-Black.ttf',
   'assets/fonts/Lato-Regular.ttf',

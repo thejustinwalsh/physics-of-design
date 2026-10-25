@@ -36,3 +36,7 @@ export * from './inspection.js';
 export * from './typography-flow.js';
 
 export * from './energy-analysis.js';
+export * from './native-safe-area.js';
+export * from './native-text-diagnostics.js';
+export * from './native-viewport.js';
+export * from './native-root-geometry.js';

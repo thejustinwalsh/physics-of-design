@@ -1,3 +1,4 @@
+import { nativeFrameRelativeToRoot } from '../src/native-root-geometry';
 import { createObservationScheduler } from './observation-scheduler';
 import {
   nativeLineProbes,
@@ -73,16 +74,26 @@ function childText(children: React.ReactNode): string {
 export function NativeObservationProvider({
   snapshot,
   children,
+  measurementOrigin,
 }: {
+  measurementOrigin?: { x: number; y: number };
   snapshot: Record<string, unknown>;
   children: React.ReactNode;
 }) {
   const nodes = useRef(new Map<string, NodeRecord>()),
     current = useRef(snapshot),
+    currentOrigin = useRef(measurementOrigin ?? { x: 0, y: 0 }),
     revision = useRef(0),
     alive = useRef(true);
   if (current.current !== snapshot) revision.current++;
   current.current = snapshot;
+  const origin = measurementOrigin ?? { x: 0, y: 0 };
+  if (
+    currentOrigin.current.x !== origin.x ||
+    currentOrigin.current.y !== origin.y
+  )
+    revision.current++;
+  currentOrigin.current = { ...origin };
   const api = useMemo(() => {
     function schedule() {
       revision.current++;
@@ -90,6 +101,7 @@ export function NativeObservationProvider({
     }
     const scheduler = createObservationScheduler(async () => {
       const capturedRevision = revision.current;
+      const capturedOrigin = { ...currentOrigin.current };
       const records = [...nodes.current].map(
         ([id, record]) => [id, { ...record }] as const,
       );
@@ -113,7 +125,10 @@ export function NativeObservationProvider({
               id,
               ...record,
               node: undefined,
-              box: { x, y, width, height },
+              box: nativeFrameRelativeToRoot(
+                { x, y, width, height },
+                capturedOrigin,
+              ),
             }),
           );
         },

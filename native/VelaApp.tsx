@@ -42,12 +42,12 @@ import { emitMotion } from '../src/motion';
 import { evaluateExpression } from '../src/math-expression';
 import policy from '../examples/vela/design.generated.json';
 import { getCoordinateSpace } from './coordinates';
-import { createRestoreGate } from '../src/restore-gate';
 import {
-  advanceNativeViewport,
-  type NativeViewport,
-  type NativeViewportState,
-} from '../src/native-viewport';
+  advanceMeasuredNativeGeometry,
+  type MeasuredNativeGeometry,
+  type MeasuredNativeState,
+} from '../src/native-root-geometry';
+import { createRestoreGate } from '../src/restore-gate';
 import {
   readStored,
   INITIAL_PREFERENCES,
@@ -306,30 +306,80 @@ function ViewportBoundary({
   initialScreen: VelaScreen;
   proofId: string;
 }) {
-  const window = useWindowDimensions(),
-    insets = useSafeAreaInsets();
-  const last = useRef<NativeViewportState | null>(null);
-  const observed = advanceNativeViewport(last.current, { window, insets });
-  last.current = observed;
-  if (!observed.accepted)
-    return (
-      <View
-        style={{ flex: 1, backgroundColor: policy.colors.canvas, padding: 20 }}
-      >
-        <Text style={{ color: policy.colors.ink }}>Preparing the view…</Text>
-      </View>
+  const nominalWindow = useWindowDimensions(),
+    physicalInsets = useSafeAreaInsets();
+  const root = useRef<React.ComponentRef<typeof View> | null>(null);
+  const [measured, setMeasured] = useState<MeasuredNativeState | null>(null);
+  const generation = useRef(0),
+    alive = useRef(true);
+  function measureRoot() {
+    const requested = ++generation.current;
+    setMeasured((previous) =>
+      previous ? { ...previous, status: 'held' } : null,
     );
+    const nominal = { ...nominalWindow },
+      insets = { ...physicalInsets };
+    const baseCoordinateSpace = getCoordinateSpace();
+    root.current?.measureInWindow((x, y, width, height) => {
+      if (!alive.current || requested !== generation.current) return;
+      setMeasured((previous) =>
+        advanceMeasuredNativeGeometry(previous, {
+          nominalWindow: nominal,
+          insets,
+          rootFrame: { x, y, width, height },
+          baseCoordinateSpace,
+        }),
+      );
+    });
+  }
+  useEffect(() => {
+    alive.current = true;
+    const frame = requestAnimationFrame(measureRoot);
+    return () => {
+      cancelAnimationFrame(frame);
+      generation.current++;
+    };
+  }, [
+    nominalWindow.width,
+    nominalWindow.height,
+    nominalWindow.fontScale,
+    nominalWindow.scale,
+    physicalInsets.top,
+    physicalInsets.right,
+    physicalInsets.bottom,
+    physicalInsets.left,
+  ]);
+  useEffect(
+    () => () => {
+      alive.current = false;
+      generation.current++;
+    },
+    [],
+  );
   return (
-    <Vela
-      initialScreen={initialScreen}
-      proofId={proofId}
-      geometry={observed.accepted}
-      viewportGuard={{
-        status: observed.status,
-        rejectedCount: observed.rejectedCount,
-        lastRejection: observed.lastRejection,
-      }}
-    />
+    <View
+      ref={root}
+      collapsable={false}
+      onLayout={measureRoot}
+      style={{ flex: 1, backgroundColor: policy.colors.canvas }}
+    >
+      {measured?.accepted ? (
+        <Vela
+          initialScreen={initialScreen}
+          proofId={proofId}
+          geometry={measured.accepted}
+          viewportGuard={{
+            status: measured.status,
+            rejectedCount: measured.rejectedCount,
+            lastRejection: measured.lastRejection,
+          }}
+        />
+      ) : (
+        <View style={{ flex: 1, padding: 20 }}>
+          <Text style={{ color: policy.colors.ink }}>Preparing the view…</Text>
+        </View>
+      )}
+    </View>
   );
 }
 
@@ -341,10 +391,11 @@ function Vela({
 }: {
   initialScreen: VelaScreen;
   proofId: string;
-  geometry: NativeViewport;
-  viewportGuard: Omit<NativeViewportState, 'accepted'>;
+  geometry: MeasuredNativeGeometry;
+  viewportGuard: Omit<MeasuredNativeState, 'accepted'>;
 }) {
-  const { window, insets } = geometry;
+  const { window, coordinateSpace, windowSafeArea } = geometry;
+  const insets = windowSafeArea;
   const [loaded] = useFonts({
     VelaRegular: require('../assets/fonts/Lato-Regular.ttf'),
     VelaHeavy: require('../assets/fonts/Lato-Black.ttf'),
@@ -397,17 +448,22 @@ function Vela({
   const c = policy.colors;
   const accent = c[preferences.accent],
     onAccent = preferences.accent === 'lime' ? c['on-lime'] : c['on-cobalt'];
-  const rootWidth = window.width - insets.left - insets.right;
+  const designViewport = {
+    width: window.width - insets.left - insets.right,
+    height: window.height - insets.top - insets.bottom,
+    textScale: window.fontScale,
+    reducedMotion: Number(reducedMotion),
+  };
   const isDestination = ['today', 'insights', 'profile'].includes(screen);
   const resolved = useMemo(
     () =>
-      resolveDesignRuntime(policy.handoff as PortableDesign, {
-        width: rootWidth,
-        height: window.height,
-        textScale: window.fontScale,
-        reducedMotion: Number(reducedMotion),
-      }),
-    [rootWidth, window.height, window.fontScale, reducedMotion],
+      resolveDesignRuntime(policy.handoff as PortableDesign, designViewport),
+    [
+      designViewport.width,
+      designViewport.height,
+      window.fontScale,
+      reducedMotion,
+    ],
   );
   const useRail = resolved.values.navRail === 1;
   const railWidth = useRail ? resolved.values.navRailWidth! : 0;
@@ -861,6 +917,7 @@ function Vela({
   if (restoreState === 'failed')
     return (
       <NativeObservationProvider
+        measurementOrigin={geometry.rootFrame}
         snapshot={{
           app: 'vela',
           proofId,
@@ -870,8 +927,12 @@ function Vela({
           designHandoffIdentity: policy.handoff.identity,
           window,
           viewportGuard,
-          coordinateSpace: getCoordinateSpace(),
-          safeArea: insets,
+          coordinateSpace,
+          windowSafeArea,
+          designViewport,
+          safeArea: geometry.insets,
+          nominalWindow: geometry.nominalWindow,
+          measuredRootFrame: geometry.rootFrame,
         }}
       >
         <View
@@ -938,6 +999,7 @@ function Vela({
       }}
     >
       <NativeObservationProvider
+        measurementOrigin={geometry.rootFrame}
         snapshot={{
           app: 'vela',
           designHandoffIdentity: policy.handoff.identity,
@@ -951,7 +1013,9 @@ function Vela({
           restoreState,
           navigationMenuOpen: menuOpen,
           copyMode,
-          coordinateSpace: getCoordinateSpace(),
+          coordinateSpace,
+          windowSafeArea,
+          designViewport,
           running,
           completedSessions: entries.length,
           preferences,
@@ -961,7 +1025,9 @@ function Vela({
           hydrated,
           window,
           viewportGuard,
-          safeArea: insets,
+          safeArea: geometry.insets,
+          nominalWindow: geometry.nominalWindow,
+          measuredRootFrame: geometry.rootFrame,
           palette: c,
           plan: p,
           resolvedAdmissible: resolved.admissible,
@@ -1762,7 +1828,11 @@ function Vela({
                 style={{
                   flexGrow: 0,
                   flexShrink: 0,
-                  maxHeight: n('actionDockMaxHeight'),
+                  maxHeight: Math.max(
+                    0,
+                    n('actionDockMaxHeight') - windowSafeArea.bottom,
+                  ),
+                  marginBottom: windowSafeArea.bottom,
                   borderTopWidth: 1,
                   borderColor: c.surface,
                   backgroundColor: c.canvas,
@@ -1771,7 +1841,7 @@ function Vela({
                   gap: n('gap'),
                   paddingHorizontal: n('pageGutter'),
                   paddingTop: n('gap'),
-                  paddingBottom: Math.max(n('gap'), insets.bottom),
+                  paddingBottom: n('gap'),
                 }}
                 showsVerticalScrollIndicator
               >
