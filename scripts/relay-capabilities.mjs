@@ -291,15 +291,20 @@ if (
   process.argv[1] &&
   path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
 ) {
-  try {
-    if (!(await runCapability(process.argv[2])).passed) process.exitCode = 1;
-  } catch (error) {
-    console.error(
-      JSON.stringify({
-        passed: false,
-        error: String(error.message).slice(0, 500),
-      }),
-    );
-    process.exitCode = 1;
-  }
+  // Finish this module's evaluation before a probe imports it back through
+  // selector helpers or the native launcher's dependency graph.
+  void runCapability(process.argv[2]).then(
+    (receipt) => {
+      if (!receipt.passed) process.exitCode = 1;
+    },
+    (error) => {
+      console.error(
+        JSON.stringify({
+          passed: false,
+          error: String(error.message).slice(0, 500),
+        }),
+      );
+      process.exitCode = 1;
+    },
+  );
 }
