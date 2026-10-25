@@ -1,0 +1,41 @@
+{
+  "repository": "https://github.com/enesozturk/dimensional-drawing",
+  "revision": "5c457437c8c83524308aad3b7443e81adcc13153",
+  "checked": "2026-10-25",
+  "license": "MIT",
+  "copyright": "2026 Enes Ozturk",
+  "kind": "practitioner drawing workflow and reference templates",
+  "status": "researched; not installed or integrated into MCP App",
+  "sources": [
+    {
+      "path": "README.md",
+      "url": "https://github.com/enesozturk/dimensional-drawing/blob/5c457437c8c83524308aad3b7443e81adcc13153/README.md",
+      "sha256": "4b38732c75ed962c4ba3e6b70f210a3bca840591d2d9116905892fbb5ddc3ccf"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://github.com/enesozturk/dimensional-drawing/blob/5c457437c8c83524308aad3b7443e81adcc13153/LICENSE",
+      "sha256": "968f8742d25c4982289e8aa65ccc0910e9bf5e40c55f635e81bafbb8e566c207"
+    },
+    {
+      "path": "skills/dimensional-drawing/SKILL.md",
+      "url": "https://github.com/enesozturk/dimensional-drawing/blob/5c457437c8c83524308aad3b7443e81adcc13153/skills/dimensional-drawing/SKILL.md",
+      "sha256": "b4fce1c4556d22734a13f949da9d914df0436d5f2170191f6ec78a879d0ac5ba"
+    }
+  ],
+  "adopt": [
+    "Source-backed symbolic dimensions and explicit unknowns",
+    "Anatomy, layer and detail views linked to variable tables",
+    "Formula closure and actual renderer inspection"
+  ],
+  "adapt": [
+    "Keep a content-independent anatomy view and a separate actual-content typography view",
+    "Use px, dp or pt with explicit coordinate/runtime provenance",
+    "Generate inspection drawings from the same measured relational state used by search"
+  ],
+  "limits": [
+    "Drawing precision is not aesthetic validation",
+    "Existing toolkit has no complete component-contract graph or implemented energy model",
+    "No third-party source or examples copied into the toolkit"
+  ]
+}

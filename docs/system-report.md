@@ -2,6 +2,8 @@
 
 2026-10-24, America/Detroit. Engineering verification continued into 2026-10-25 UTC. This supersedes the earlier [spike report](spike-report.md).
 
+**Mission-level correction after source tracing:** the engineering milestone is verified, but the intended musical component/energy system is not complete. Music currently changes hierarchy proposals, rhythm does not enter search objectives, no energy model exists, and complete Fieldwork surfaces use a separate heuristic planner. [Explicit mission gaps](system-completion.md#relationship-and-component-precision-audit).
+
 The reusable tool stack is implemented: 24 composable JSON commands, thin MCP wrappers, a typed relational state and dependency graph, real font shaping and browser/native measurement, conditional factors, coupled candidate search, editable responsive flex policies, proof tools, one actual local SemIf/Qwen selector, corpus operations and an evaluation pipeline. The two specimens are executable fixtures for the stack. All typography, color, spacing, responsive anchors, pins and locks remain editable. Complete publication/native-app proofs now supplement the original two text fixtures.
 
 The engineering result does **not** establish the proposed efficiency or aesthetic benefit. The executed four-project coding-agent pilot used more tokens and latency with tools. No human preference observations exist, so musical superiority remains undetermined and smooth priors remain the default. Keeping these conclusions separate is part of the system's contract.

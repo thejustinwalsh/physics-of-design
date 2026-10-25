@@ -2,6 +2,8 @@
 
 This is an implemented local typography/color/geometry toolkit, an evidence and review workflow, and two kinds of runnable proof. It is not yet an autonomous product designer or a complete component/design-system compiler. Fieldwork is a deliberately demanding application of the shared mathematics, implemented by the primary agent and refined through explicit Astra review tasks.
 
+The musical/energy mission remains open: musical hierarchy priors are a narrow intervention, rhythm is descriptive, no energy model exists, and Fieldwork bypasses musical search. [The source-traced acceptance correction](system-completion.md#relationship-and-component-precision-audit) distinguishes these missing mechanisms from the separate lack of human preference validation.
+
 ## System map
 
 ```mermaid
