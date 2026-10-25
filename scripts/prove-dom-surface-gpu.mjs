@@ -4,10 +4,15 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 import { chromium, webkit } from 'playwright';
+import {
+  captureDomSurface,
+  observeDomSurfaceMotion,
+} from './dom-surface-observation.mjs';
 const output =
   process.env.DESIGN_DOM_GPU_OUTPUT ?? 'artifacts/dom-surfaces-gpu';
 await mkdir(output, { recursive: true });
 const files = [
+  'scripts/dom-surface-observation.mjs',
   'src/dom-surface.ts',
   'src/browser-dom-light.ts',
   'src/dom-surface-gpu.ts',
@@ -65,7 +70,7 @@ async function pixels(page, index = 1) {
       height: r.height - 64,
     };
   }, index);
-  const bytes = await page.screenshot({ fullPage: true });
+  const bytes = await captureDomSurface(page, { fullPage: true });
   await page.evaluate(() => proof.hideText(false));
   return page.evaluate(
     async ({ png, rect }) => {
@@ -141,7 +146,7 @@ const compact = ({ rgb, ...metrics }) => metrics;
 async function contrast(page) {
   const regions = await page.evaluate(() => proof.regions());
   await page.evaluate(() => proof.hideText(true));
-  const bytes = await page.screenshot({ fullPage: true });
+  const bytes = await captureDomSurface(page, { fullPage: true });
   await page.evaluate(() => proof.hideText(false));
   return page.evaluate(
     async ({ png, regions }) => {
@@ -229,7 +234,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     );
     if (!startup.every((s) => s.status === 'ready'))
       throw new Error(`${engine}: GPU unavailable ${JSON.stringify(startup)}`);
-    await page.screenshot({ path: `${output}/${engine}-lit.png` });
+    await captureDomSurface(page, { path: `${output}/${engine}-lit.png` });
     const poses = [];
     for (const exposure of [1.2, 1.5, 2])
       for (const [x, y] of [
@@ -401,7 +406,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
               (pass) => proof.oracle(1, pass),
               pass,
             ),
-            png = (await page.screenshot({ fullPage: true })).toString(
+            png = (await captureDomSurface(page, { fullPage: true })).toString(
               'base64',
             );
           const observed = await page.evaluate(
@@ -522,7 +527,9 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       });
       const observed = await pixels(page);
       sequence.push({ step: i, ...compact(observed) });
-      await page.screenshot({ path: `${output}/${engine}-light-${i}.png` });
+      await captureDomSurface(page, {
+        path: `${output}/${engine}-light-${i}.png`,
+      });
     }
     check(
       engine,
@@ -538,7 +545,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       proof.controllers.forEach((c) => c.setOutput('lit'));
       proof.pose(0, 0);
     }, inputs);
-    await page.screenshot({ path: `${output}/${engine}-refined.png` });
+    await captureDomSurface(page, { path: `${output}/${engine}-refined.png` });
     for (const width of [390, 820, 1440]) {
       await page.setViewportSize({ width, height: 1100 });
       await page.waitForTimeout(70);
@@ -557,7 +564,9 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
           layout.cards.every((c) => c.x >= 0 && c.x + c.width <= width + 0.5),
         layout,
       );
-      await page.screenshot({ path: `${output}/${engine}-${width}.png` });
+      await captureDomSurface(page, {
+        path: `${output}/${engine}-${width}.png`,
+      });
     }
     await page.setViewportSize({ width: 1100, height: 1250 });
     const budget = await page.evaluate(() => {
@@ -608,8 +617,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       content.every((c) => c.scroll <= c.width && c.contained),
       content,
     );
-    await page.emulateMedia({ reducedMotion: 'reduce' });
-    await page.waitForTimeout(30);
+    const reducedMedia = await observeDomSurfaceMotion(page, 'reduce');
     const reduced = await page.evaluate(() => {
       const c = proof.controllers[0],
         before = c.renderer.draws;
@@ -627,9 +635,18 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       reduced.status === 'paused' &&
         reduced.before === reduced.after &&
         reduced.transform === 'none',
-      reduced,
+      { ...reduced, media: reducedMedia },
     );
-    await page.emulateMedia({ reducedMotion: 'no-preference' });
+    const resumedMedia = await observeDomSurfaceMotion(page, 'no-preference');
+    check(
+      engine,
+      'CSS, retained media query and controllers observe motion preference restoration',
+      resumedMedia.css === false &&
+        resumedMedia.retained === false &&
+        resumedMedia.fresh === false &&
+        resumedMedia.controllers.every((c) => !c.reduced),
+      resumedMedia,
+    );
     await page.evaluate(() => scrollTo(0, 2500));
     await page.waitForTimeout(100);
     const paused = await page.evaluate(() => {

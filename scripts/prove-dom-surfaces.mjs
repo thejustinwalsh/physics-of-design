@@ -4,10 +4,15 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 import { chromium, webkit } from 'playwright';
+import {
+  captureDomSurface,
+  observeDomSurfaceMotion,
+} from './dom-surface-observation.mjs';
 const output =
   process.env.DESIGN_DOM_SURFACE_OUTPUT ?? 'artifacts/dom-surfaces';
 await mkdir(output, { recursive: true });
 const files = [
+  'scripts/dom-surface-observation.mjs',
   'src/dom-surface.ts',
   'src/browser-dom-light.ts',
   'examples/dom-surfaces/proof-client.js',
@@ -81,7 +86,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
         await page.evaluate(({ x, y }) => proof.pose(x, y), { x, y });
         const regions = await page.evaluate(() => proof.regions());
         await page.evaluate(() => proof.hideText(true));
-        const bytes = await page.screenshot({ fullPage: true });
+        const bytes = await captureDomSurface(page, { fullPage: true });
         await page.evaluate(() => proof.hideText(false));
         const observed = await page.evaluate(
           async ({ png, regions }) => {
@@ -168,7 +173,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
           (x === 0 && y === 0) ||
           (x === 1 && y === 1)
         )
-          await page.screenshot({
+          await captureDomSurface(page, {
             path: `${output}/${engine}-${x}-${y}.png`,
             fullPage: true,
           });
@@ -231,8 +236,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
       'retained motion has no layout reads per frame and recipe updates preserve state',
       motion,
     );
-    await page.emulateMedia({ reducedMotion: 'reduce' });
-    await page.waitForTimeout(50);
+    const reducedMedia = await observeDomSurfaceMotion(page, 'reduce');
     const reduced = await page.evaluate(() => {
       const c = proof.controllers[0],
         before = c.stats.styleWrites;
@@ -247,8 +251,16 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     assert.equal(reduced.status, 'paused');
     assert.equal(reduced.transform, 'none');
     assert.equal(reduced.before, reduced.after);
-    check(engine, 'reduced motion pauses driver and resets transform', reduced);
-    await page.emulateMedia({ reducedMotion: 'no-preference' });
+    check(engine, 'reduced motion pauses driver and resets transform', {
+      ...reduced,
+      media: reducedMedia,
+    });
+    const resumedMedia = await observeDomSurfaceMotion(page, 'no-preference');
+    check(
+      engine,
+      'CSS, retained media query and controllers observe motion preference restoration',
+      resumedMedia,
+    );
     await page.evaluate(() => scrollTo(0, 2400));
     await page.waitForTimeout(100);
     const offscreen = await page.evaluate(() => ({
