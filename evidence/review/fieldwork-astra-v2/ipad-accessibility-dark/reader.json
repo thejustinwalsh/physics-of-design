@@ -1,0 +1,2025 @@
+{
+  "receipt": {
+    "version": 1,
+    "capturedAt": "2026-10-25T03:02:58.141Z",
+    "engine": "react-native/Text+Yoga",
+    "platform": "ios",
+    "snapshot": {
+      "proofId": "ipad-accessibility-dark-reader-1792897375393",
+      "screen": "reader",
+      "story": "looking-longer",
+      "saved": [
+        "long-way-home"
+      ],
+      "query": "",
+      "readerSize": 21,
+      "offlineReady": true,
+      "hydrated": true,
+      "readerPosition": {
+        "content": 11319,
+        "viewport": 983.5,
+        "offset": 0
+      },
+      "restoredFor": "",
+      "appearance": "dark",
+      "highContrast": false,
+      "plan": {
+        "request": {
+          "width": 834,
+          "textScale": 3.571,
+          "mode": "app",
+          "density": 1,
+          "expression": 1,
+          "readingSize": 21,
+          "readingLeading": 1.55
+        },
+        "gutter": 40,
+        "gap": 22.518,
+        "sidebarWidth": 220,
+        "contentWidth": 754,
+        "navigation": "tabs",
+        "columns": 1,
+        "sectionGap": 54.21,
+        "titleSize": 48,
+        "titleLeading": 1.08,
+        "titleTrackingEm": -0.016,
+        "bodySize": 17,
+        "readingSize": 21,
+        "readingLeading": 1.55,
+        "readingMeasure": 640,
+        "imageAspect": 1.55,
+        "controlSize": 44,
+        "spaces": {
+          "inline": 8,
+          "related": 16,
+          "group": 20,
+          "section": 24,
+          "major": 40
+        },
+        "storyTitleSize": 31,
+        "variables": [
+          "width",
+          "textScale",
+          "density",
+          "expression",
+          "readingSize",
+          "readingLeading"
+        ],
+        "dependencyEffects": {
+          "width": [
+            "gutters",
+            "contentWidth",
+            "navigation",
+            "columns",
+            "titleSize",
+            "imageAspect"
+          ],
+          "textScale": [
+            "navigation",
+            "columns",
+            "renderer wrapping"
+          ],
+          "density": [
+            "gap",
+            "sectionGap"
+          ],
+          "expression": [
+            "titleSize",
+            "titleTrackingEm",
+            "renderer wrapping"
+          ],
+          "readingSize": [
+            "reading geometry",
+            "scroll progress"
+          ],
+          "readingLeading": [
+            "reading geometry",
+            "scroll progress"
+          ]
+        },
+        "provenance": {
+          "kind": "heuristic",
+          "sources": [
+            "apple-layout",
+            "apple-typography",
+            "impeccable-layout",
+            "local-policy"
+          ],
+          "uncertainty": "Uncalibrated geometry proposals; real renderer and task review remain required."
+        },
+        "contract": "Flex topology, natural text heights, no CSS Grid, no cancellation of system text enlargement."
+      },
+      "window": {
+        "fontScale": 3.571,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "coordinateSpace": {
+        "units": "dp",
+        "origin": "window",
+        "screenOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "screen": {
+          "fontScale": 3.571,
+          "width": 834,
+          "height": 1210,
+          "scale": 2
+        }
+      },
+      "safeArea": {
+        "top": 32,
+        "right": 0,
+        "bottom": 20,
+        "left": 0
+      },
+      "palette": {
+        "canvas": "#171e1b",
+        "surface": "#242e28",
+        "ink": "#f6f3e9",
+        "muted": "#bec5bb",
+        "line": "#48554c",
+        "accent": "#cad9b6",
+        "accentBg": "#364735",
+        "paper": "#30362b"
+      }
+    },
+    "observations": [
+      {
+        "id": "control-3",
+        "name": "Back to the journal",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 40,
+          "y": 42,
+          "width": 44,
+          "height": 44
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 42,
+          "width": 44,
+          "height": 44
+        }
+      },
+      {
+        "id": "control-4",
+        "name": "Save The art of looking longer",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 694,
+          "y": 42,
+          "width": 44,
+          "height": 44
+        },
+        "visibleBox": {
+          "x": 694,
+          "y": 42,
+          "width": 44,
+          "height": 44
+        }
+      },
+      {
+        "id": "control-5",
+        "name": "Reading and appearance settings",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 750,
+          "y": 42,
+          "width": 44,
+          "height": 44
+        },
+        "visibleBox": {
+          "x": 750,
+          "y": 42,
+          "width": 44,
+          "height": 44
+        }
+      },
+      {
+        "id": "control-19",
+        "name": "Back to the journal",
+        "kind": "target",
+        "clipId": "clip-6",
+        "box": {
+          "x": 97,
+          "y": 11274.5,
+          "width": 640,
+          "height": 69
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 11274.5,
+          "width": 640,
+          "height": 0
+        }
+      },
+      {
+        "id": "control-21",
+        "name": "Journal",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 16,
+          "y": 1093.5,
+          "width": 264.5,
+          "height": 96.5
+        },
+        "visibleBox": {
+          "x": 16,
+          "y": 1093.5,
+          "width": 264.5,
+          "height": 96.5
+        }
+      },
+      {
+        "id": "control-23",
+        "name": "Explore",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 284.5,
+          "y": 1093.5,
+          "width": 265,
+          "height": 96.5
+        },
+        "visibleBox": {
+          "x": 284.5,
+          "y": 1093.5,
+          "width": 265,
+          "height": 96.5
+        }
+      },
+      {
+        "id": "control-25",
+        "name": "Saved",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 553.5,
+          "y": 1093.5,
+          "width": 264.5,
+          "height": 96.5
+        },
+        "visibleBox": {
+          "x": 553.5,
+          "y": 1093.5,
+          "width": 264.5,
+          "height": 96.5
+        }
+      },
+      {
+        "id": "text-8",
+        "name": "ARCHITECTURE & ATTENTION",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "ARCHITECTURE & ATTENTION",
+        "lines": [
+          {
+            "text": "ARCHITECTURE & ATTENTION",
+            "x": 0,
+            "y": 0,
+            "width": 562.4057331204415,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.498366291522977,
+            "ascender": 38.77034807682037,
+            "xHeight": 20.24935606241226
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 831.5,
+          "width": 640,
+          "height": 47.5
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 831.5,
+          "width": 640,
+          "height": 47.5
+        }
+      },
+      {
+        "id": "text-9",
+        "name": "The art of looking longer",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "The art of looking longer",
+        "lines": [
+          {
+            "text": "The art ",
+            "x": 0,
+            "y": 0,
+            "width": 637.8198450927736,
+            "height": 195.40512542724608,
+            "descender": 85.71085870056152,
+            "capHeight": 122.17962579345705,
+            "ascender": 109.69426672668456,
+            "xHeight": 83.30429031372071
+          },
+          {
+            "text": "of ",
+            "x": 0,
+            "y": 195.40512542724608,
+            "width": 207.15657030029303,
+            "height": 195.40512542724608,
+            "descender": 85.71085870056152,
+            "capHeight": 122.17962579345705,
+            "ascender": 109.69426672668456,
+            "xHeight": 83.30429031372071
+          },
+          {
+            "text": "looking ",
+            "x": 0,
+            "y": 390.81025085449215,
+            "width": 640,
+            "height": 195.4051254272461,
+            "descender": 85.71085870056152,
+            "capHeight": 122.17962579345705,
+            "ascender": 109.69426672668456,
+            "xHeight": 83.30429031372071
+          },
+          {
+            "text": "longer",
+            "x": 0,
+            "y": 586.2153762817383,
+            "width": 518.7211844604493,
+            "height": 195.40512542724605,
+            "descender": 85.71085870056152,
+            "capHeight": 122.17962579345705,
+            "ascender": 109.69426672668456,
+            "xHeight": 83.30429031372071
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 899,
+          "width": 640,
+          "height": 782
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 899,
+          "width": 640,
+          "height": 181
+        }
+      },
+      {
+        "id": "text-10",
+        "name": "On a quiet headland, a small observatory asks a larger question: what changes when we give a place our undivided attention?",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "On a quiet headland, a small observatory asks a larger question: what changes when we give a place our undivided attention?",
+        "lines": [
+          {
+            "text": "On a quiet headland, a ",
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 96.41700267791748,
+            "descender": 23.332914648056033,
+            "capHeight": 46.05518827915191,
+            "ascender": 73.08408802986145,
+            "xHeight": 32.55680790424347
+          },
+          {
+            "text": "small observatory asks ",
+            "x": 0,
+            "y": 96.41700267791748,
+            "width": 640,
+            "height": 96.41700267791748,
+            "descender": 23.332914648056033,
+            "capHeight": 46.05518827915191,
+            "ascender": 73.08408802986145,
+            "xHeight": 32.55680790424347
+          },
+          {
+            "text": "a larger question: ",
+            "x": 0,
+            "y": 192.83400535583496,
+            "width": 500.24354889392845,
+            "height": 96.41700267791748,
+            "descender": 23.332914648056033,
+            "capHeight": 46.05518827915191,
+            "ascender": 73.08408802986145,
+            "xHeight": 32.55680790424347
+          },
+          {
+            "text": "what changes when ",
+            "x": 0,
+            "y": 289.25100803375244,
+            "width": 572.877690911293,
+            "height": 96.41700267791748,
+            "descender": 23.332914648056033,
+            "capHeight": 46.05518827915191,
+            "ascender": 73.08408802986145,
+            "xHeight": 32.55680790424347
+          },
+          {
+            "text": "we give a place our ",
+            "x": 0,
+            "y": 385.6680107116699,
+            "width": 554.7834334087372,
+            "height": 96.41700267791748,
+            "descender": 23.332914648056033,
+            "capHeight": 46.05518827915191,
+            "ascender": 73.08408802986145,
+            "xHeight": 32.55680790424347
+          },
+          {
+            "text": "undivided attention?",
+            "x": 0,
+            "y": 482.0850133895874,
+            "width": 577.9235140514373,
+            "height": 96.41700267791748,
+            "descender": 23.332914648056033,
+            "capHeight": 46.05518827915191,
+            "ascender": 73.08408802986145,
+            "xHeight": 32.55680790424347
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 1701,
+          "width": 640,
+          "height": 579
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 1701,
+          "width": 640,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-11",
+        "name": "Fieldwork studio · 2 min read",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "Fieldwork studio · 2 min read",
+        "lines": [
+          {
+            "text": "Fieldwork studio · 2 min read",
+            "x": 0,
+            "y": 0,
+            "width": 545.505975151062,
+            "height": 51.422401428222656,
+            "descender": 9.12747625350952,
+            "capHeight": 30.703458852767945,
+            "ascender": 42.294925174713136,
+            "xHeight": 21.70453860282898
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 2300,
+          "width": 640,
+          "height": 51.5
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 2300,
+          "width": 640,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-12",
+        "name": "There is a kind of architecture that asks very little of the landscape. It offers a place to stand, a frame for the weather, perhaps a patch of shade. Everything else was already there.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "There is a kind of architecture that asks very little of the landscape. It offers a place to stand, a frame for the weather, perhaps a patch of shade. Everything else was already there.",
+        "lines": [
+          {
+            "text": "There is a kind of ",
+            "x": 0,
+            "y": 0,
+            "width": 598.3532056188584,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "architecture that ",
+            "x": 0,
+            "y": 116.23605322837831,
+            "width": 573.0812379169464,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "asks very little of ",
+            "x": 0,
+            "y": 232.47210645675662,
+            "width": 577.95565305233,
+            "height": 116.23605322837832,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "the landscape. It ",
+            "x": 0,
+            "y": 348.70815968513494,
+            "width": 564.9822096920013,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "offers a place to ",
+            "x": 0,
+            "y": 464.94421291351324,
+            "width": 542.4099180650711,
+            "height": 116.23605322837835,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "stand, a frame for ",
+            "x": 0,
+            "y": 581.1802661418916,
+            "width": 600.3779626750946,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "the weather, ",
+            "x": 0,
+            "y": 697.4163193702699,
+            "width": 425.0489998054504,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "perhaps a patch of ",
+            "x": 0,
+            "y": 813.6523725986482,
+            "width": 627.2997324228287,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "shade. Everything ",
+            "x": 0,
+            "y": 929.8884258270265,
+            "width": 610.501747956276,
+            "height": 116.23605322837841,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "else was already ",
+            "x": 0,
+            "y": 1046.124479055405,
+            "width": 548.1842252254486,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "there.",
+            "x": 0,
+            "y": 1162.3605322837832,
+            "width": 190.5521362924576,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 2408.5,
+          "width": 640,
+          "height": 1279
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 2408.5,
+          "width": 640,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-13",
+        "name": "The observatory on our imagined headland is one such place. A square of concrete, a narrow opening, a long view. From a distance it seems almost incidental. Up close, its restraint becomes the point.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "The observatory on our imagined headland is one such place. A square of concrete, a narrow opening, a long view. From a distance it seems almost incidental. Up close, its restraint becomes the point.",
+        "lines": [
+          {
+            "text": "The observatory on ",
+            "x": 0,
+            "y": 0,
+            "width": 640,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "our imagined ",
+            "x": 0,
+            "y": 116.23605322837831,
+            "width": 459.99480677604674,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "headland is one ",
+            "x": 0,
+            "y": 232.47210645675662,
+            "width": 535.7357188796998,
+            "height": 116.23605322837832,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "such place. A ",
+            "x": 0,
+            "y": 348.70815968513494,
+            "width": 457.9700497198105,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "square of concrete, ",
+            "x": 0,
+            "y": 464.94421291351324,
+            "width": 640,
+            "height": 116.23605322837835,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "a narrow opening, ",
+            "x": 0,
+            "y": 581.1802661418916,
+            "width": 616.501028122902,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "a long view. From ",
+            "x": 0,
+            "y": 697.4163193702699,
+            "width": 605.7023238229751,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "a distance it seems ",
+            "x": 0,
+            "y": 813.6523725986482,
+            "width": 639.6732477664947,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "almost incidental. ",
+            "x": 0,
+            "y": 929.8884258270265,
+            "width": 611.0266849708556,
+            "height": 116.23605322837841,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "Up close, its ",
+            "x": 0,
+            "y": 1046.124479055405,
+            "width": 426.2488558387757,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "restraint becomes ",
+            "x": 0,
+            "y": 1162.3605322837832,
+            "width": 611.6266129875183,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "the point.",
+            "x": 0,
+            "y": 1278.5965855121615,
+            "width": 321.03647991657255,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 3707.5,
+          "width": 640,
+          "height": 1395
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 3707.5,
+          "width": 640,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-14",
+        "name": "We tend to think of attention as something we give. A resource to spend carefully, an effort to sustain. But a good place can return it to us. The sound of wind in dry grass. The small change in the water when a cloud passes. The line where stone becomes sky.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "We tend to think of attention as something we give. A resource to spend carefully, an effort to sustain. But a good place can return it to us. The sound of wind in dry grass. The small change in the water when a cloud passes. The line where stone becomes sky.",
+        "lines": [
+          {
+            "text": "We tend to think ",
+            "x": 0,
+            "y": 0,
+            "width": 577.5806980419159,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "of attention as ",
+            "x": 0,
+            "y": 116.23605322837831,
+            "width": 495.3155687570572,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "something we give. ",
+            "x": 0,
+            "y": 232.47210645675662,
+            "width": 640,
+            "height": 116.23605322837832,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "A resource to ",
+            "x": 0,
+            "y": 348.70815968513494,
+            "width": 462.5445008468628,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "spend carefully, an ",
+            "x": 0,
+            "y": 464.94421291351324,
+            "width": 635.9236976623536,
+            "height": 116.23605322837835,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "effort to sustain. ",
+            "x": 0,
+            "y": 581.1802661418916,
+            "width": 562.8824616336822,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "But a good place ",
+            "x": 0,
+            "y": 697.4163193702699,
+            "width": 566.9319757461548,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "can return it to us. ",
+            "x": 0,
+            "y": 813.6523725986482,
+            "width": 627.5996964311599,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "The sound of wind ",
+            "x": 0,
+            "y": 929.8884258270265,
+            "width": 637.6484907102586,
+            "height": 116.23605322837841,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "in dry grass. The ",
+            "x": 0,
+            "y": 1046.124479055405,
+            "width": 569.7066428232192,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "small change in ",
+            "x": 0,
+            "y": 1162.3605322837832,
+            "width": 535.8857008838653,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "the water when a ",
+            "x": 0,
+            "y": 1278.5965855121615,
+            "width": 583.9549332189561,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "cloud passes. The ",
+            "x": 0,
+            "y": 1394.8326387405398,
+            "width": 599.4780706501007,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "line where stone ",
+            "x": 0,
+            "y": 1511.068691968918,
+            "width": 562.8074706315994,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "becomes sky.",
+            "x": 0,
+            "y": 1627.3047451972964,
+            "width": 432.9980460262298,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 5122.5,
+          "width": 640,
+          "height": 1744
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 5122.5,
+          "width": 640,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-15",
+        "name": "For this issue, we began with a simple practice: stay a little longer. Take the slower road. Return to the same window at a different hour. Let the familiar become specific again.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "For this issue, we began with a simple practice: stay a little longer. Take the slower road. Return to the same window at a different hour. Let the familiar become specific again.",
+        "lines": [
+          {
+            "text": "For this issue, we ",
+            "x": 0,
+            "y": 0,
+            "width": 592.1289524459838,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "began with a ",
+            "x": 0,
+            "y": 116.23605322837831,
+            "width": 442.22193928241734,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "simple practice: ",
+            "x": 0,
+            "y": 232.47210645675662,
+            "width": 545.3345671463012,
+            "height": 116.23605322837832,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "stay a little longer. ",
+            "x": 0,
+            "y": 348.70815968513494,
+            "width": 626.1748673915863,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "Take the slower ",
+            "x": 0,
+            "y": 464.94421291351324,
+            "width": 540.6851250171661,
+            "height": 116.23605322837835,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "road. Return to the ",
+            "x": 0,
+            "y": 581.1802661418916,
+            "width": 640,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "same window at a ",
+            "x": 0,
+            "y": 697.4163193702699,
+            "width": 607.2021438646316,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "different hour. Let ",
+            "x": 0,
+            "y": 813.6523725986482,
+            "width": 626.6998044061661,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "the familiar ",
+            "x": 0,
+            "y": 929.8884258270265,
+            "width": 405.8513032722473,
+            "height": 116.23605322837841,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "become specific ",
+            "x": 0,
+            "y": 1046.124479055405,
+            "width": 549.3840812587739,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "again.",
+            "x": 0,
+            "y": 1162.3605322837832,
+            "width": 199.02611952781675,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 6886.5,
+          "width": 640,
+          "height": 1279
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 6886.5,
+          "width": 640,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-16",
+        "name": "The useful lesson is not that every building should disappear, or that quiet is always better than noise. It is that a place can hold more than our first impression of it. Design can make room for that second look.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "The useful lesson is not that every building should disappear, or that quiet is always better than noise. It is that a place can hold more than our first impression of it. Design can make room for that second look.",
+        "lines": [
+          {
+            "text": "The useful lesson ",
+            "x": 0,
+            "y": 0,
+            "width": 593.778754491806,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "is not that every ",
+            "x": 0,
+            "y": 116.23605322837831,
+            "width": 548.9341352462768,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "building should ",
+            "x": 0,
+            "y": 232.47210645675662,
+            "width": 539.2602959775925,
+            "height": 116.23605322837832,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "disappear, or that ",
+            "x": 0,
+            "y": 348.70815968513494,
+            "width": 597.5283045959472,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "quiet is always ",
+            "x": 0,
+            "y": 464.94421291351324,
+            "width": 501.83978593826293,
+            "height": 116.23605322837835,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "better than noise. ",
+            "x": 0,
+            "y": 581.1802661418916,
+            "width": 598.503187623024,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "It is that a place ",
+            "x": 0,
+            "y": 697.4163193702699,
+            "width": 548.5591802358628,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "can hold more ",
+            "x": 0,
+            "y": 813.6523725986482,
+            "width": 491.6410096549988,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "than our first ",
+            "x": 0,
+            "y": 929.8884258270265,
+            "width": 455.7953106594085,
+            "height": 116.23605322837841,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "impression of it. ",
+            "x": 0,
+            "y": 1046.124479055405,
+            "width": 559.3578845357895,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "Design can make ",
+            "x": 0,
+            "y": 1162.3605322837832,
+            "width": 583.6549692106246,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "room for that ",
+            "x": 0,
+            "y": 1278.5965855121615,
+            "width": 460.81970779895784,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "second look.",
+            "x": 0,
+            "y": 1394.8326387405398,
+            "width": 411.9255744409561,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 8185.5,
+          "width": 640,
+          "height": 1511.5
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 8185.5,
+          "width": 640,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-17",
+        "name": "We left without a photograph that could explain the whole afternoon. That felt like a reasonable outcome. Some things are better carried as an inclination: to look a little more closely next time.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "We left without a photograph that could explain the whole afternoon. That felt like a reasonable outcome. Some things are better carried as an inclination: to look a little more closely next time.",
+        "lines": [
+          {
+            "text": "We left without a ",
+            "x": 0,
+            "y": 0,
+            "width": 589.8042313814163,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "photograph that ",
+            "x": 0,
+            "y": 116.23605322837831,
+            "width": 557.7830734920502,
+            "height": 116.23605322837831,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "could explain the ",
+            "x": 0,
+            "y": 232.47210645675662,
+            "width": 586.2796542835235,
+            "height": 116.23605322837832,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "whole afternoon. ",
+            "x": 0,
+            "y": 348.70815968513494,
+            "width": 578.0306440544128,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "That felt like a ",
+            "x": 0,
+            "y": 464.94421291351324,
+            "width": 501.38983992576595,
+            "height": 116.23605322837835,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "reasonable ",
+            "x": 0,
+            "y": 581.1802661418916,
+            "width": 374.65504640579223,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "outcome. Some ",
+            "x": 0,
+            "y": 697.4163193702699,
+            "width": 524.4120775651932,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "things are better ",
+            "x": 0,
+            "y": 813.6523725986482,
+            "width": 565.9570927190781,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "carried as an ",
+            "x": 0,
+            "y": 929.8884258270265,
+            "width": 439.44727220535276,
+            "height": 116.23605322837841,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "inclination: to look ",
+            "x": 0,
+            "y": 1046.124479055405,
+            "width": 640,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "a little more ",
+            "x": 0,
+            "y": 1162.3605322837832,
+            "width": 420.9244946908951,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          },
+          {
+            "text": "closely next time.",
+            "x": 0,
+            "y": 1278.5965855121615,
+            "width": 574.4310759544372,
+            "height": 116.2360532283783,
+            "descender": 35.7707079935074,
+            "capHeight": 49.494061374664305,
+            "ascender": 80.46534523487091,
+            "xHeight": 33.74595093727112
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 9717,
+          "width": 640,
+          "height": 1395
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 9717,
+          "width": 640,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-18",
+        "name": "An imagined coastal observatory. Original generated editorial image.",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "An imagined coastal observatory. Original generated editorial image.",
+        "lines": [
+          {
+            "text": "An imagined coastal observatory. ",
+            "x": 0,
+            "y": 0,
+            "width": 578.6287865710259,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.144837281703946,
+            "ascender": 38.77034807682037,
+            "xHeight": 19.89582705259323
+          },
+          {
+            "text": "Original generated editorial image.",
+            "x": 0,
+            "y": 47.137201309204094,
+            "width": 591.3165499234199,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.144837281703946,
+            "ascender": 38.77034807682037,
+            "xHeight": 19.89582705259323
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 11148,
+          "width": 640,
+          "height": 94.5
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 11148,
+          "width": 640,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-20",
+        "name": "Back to the journal",
+        "kind": "text",
+        "clipId": "clip-6",
+        "text": "Back to the journal",
+        "lines": [
+          {
+            "text": "Back to the journal",
+            "x": 0,
+            "y": 0,
+            "width": 483.0848934173584,
+            "height": 68.56320190429688,
+            "descender": 12.169968338012694,
+            "capHeight": 41.45216915130615,
+            "ascender": 56.39323356628418,
+            "xHeight": 29.4536088180542
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 97,
+          "y": 11274.5,
+          "width": 483.5,
+          "height": 69
+        },
+        "visibleBox": {
+          "x": 97,
+          "y": 11274.5,
+          "width": 483.5,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-22",
+        "name": "Journal",
+        "kind": "text",
+        "clipId": null,
+        "text": "Journal",
+        "lines": [
+          {
+            "text": "Journal",
+            "x": 0,
+            "y": 0,
+            "width": 128.44887356758116,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.498366291522977,
+            "ascender": 38.77034807682037,
+            "xHeight": 20.24935606241226
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 84,
+          "y": 1132.5,
+          "width": 128.5,
+          "height": 47.5
+        },
+        "visibleBox": {
+          "x": 84,
+          "y": 1132.5,
+          "width": 128.5,
+          "height": 47.5
+        }
+      },
+      {
+        "id": "text-24",
+        "name": "Explore",
+        "kind": "text",
+        "clipId": null,
+        "text": "Explore",
+        "lines": [
+          {
+            "text": "Explore",
+            "x": 0,
+            "y": 0,
+            "width": 130.03975411176683,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.144837281703946,
+            "ascender": 38.77034807682037,
+            "xHeight": 19.89582705259323
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 351.5,
+          "y": 1132.5,
+          "width": 130.5,
+          "height": 47.5
+        },
+        "visibleBox": {
+          "x": 351.5,
+          "y": 1132.5,
+          "width": 130.5,
+          "height": 47.5
+        }
+      },
+      {
+        "id": "text-26",
+        "name": "Saved",
+        "kind": "text",
+        "clipId": null,
+        "text": "Saved",
+        "lines": [
+          {
+            "text": "Saved",
+            "x": 0,
+            "y": 0,
+            "width": 102.60197484970092,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.144837281703946,
+            "ascender": 38.77034807682037,
+            "xHeight": 19.89582705259323
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 634,
+          "y": 1132.5,
+          "width": 103,
+          "height": 47.5
+        },
+        "visibleBox": {
+          "x": 634,
+          "y": 1132.5,
+          "width": 103,
+          "height": 47.5
+        }
+      },
+      {
+        "id": "clip-6",
+        "name": "scroll viewport",
+        "kind": "clip",
+        "clipId": null,
+        "box": {
+          "x": 0,
+          "y": 96.5,
+          "width": 834,
+          "height": 983.5
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 96.5,
+          "width": 834,
+          "height": 983.5
+        }
+      },
+      {
+        "id": "media-7",
+        "name": "looking-longer",
+        "kind": "media",
+        "clipId": "clip-6",
+        "role": "reader",
+        "box": {
+          "x": 0,
+          "y": 96.5,
+          "width": 834,
+          "height": 695
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 96.5,
+          "width": 834,
+          "height": 695
+        }
+      }
+    ],
+    "incomplete": false,
+    "scope": "Actual native view frames and Text.onTextLayout observations from the product. Declared props are identified separately. Screenshots and task review remain required."
+  },
+  "audit": {
+    "platform": "ipados",
+    "geometryTolerance": 0.0011539459228515625,
+    "geometryToleranceBasis": "Eight float32 relative epsilons at viewport magnitude for native coordinate reconstruction; does not alter the authored 28/44pt guidance.",
+    "checks": [
+      {
+        "id": "control-minimum",
+        "subject": "control-3",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-3",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-3",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-3",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-5",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-5",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-5",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-5",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-21",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-21",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-21",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-21",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-23",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-23",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-23",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-23",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-25",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-25",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-25",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-25",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "dynamic-type",
+        "status": "unknown",
+        "source": "apple-typography",
+        "meaning": "Product acceptance requires uncancelled scaling, at least 200% recorded stress, and preserved content. This is not a claim of testing all Dynamic Type categories."
+      },
+      {
+        "id": "navigation-continuity",
+        "status": "unknown",
+        "source": "apple-tab-bars",
+        "meaning": "Declared destinations, selection and task state survive adaptation; event evidence is required."
+      },
+      {
+        "id": "native-affordance-and-visual-order",
+        "status": "unknown",
+        "source": "apple-layout",
+        "meaning": "Requires rendered task, platform and assistive-technology review; geometry cannot certify familiarity or hierarchy."
+      }
+    ],
+    "failures": [],
+    "unknown": [
+      "dynamic-type",
+      "navigation-continuity",
+      "native-affordance-and-visual-order"
+    ],
+    "evidence": {
+      "engine": "react-native/Text+Yoga",
+      "receipt": "ipad-accessibility-dark/reader.json"
+    },
+    "sources": [
+      {
+        "id": "apple-accessibility",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "iOS/iPadOS default controls 44pt; minimum 28pt; support enlargement, contrast and accessible alternatives."
+      },
+      {
+        "id": "apple-layout",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Safe areas, importance/reading order, recognizable adaptation and function continuity."
+      },
+      {
+        "id": "apple-typography",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Text styles, Dynamic Type and growing/reflowing content."
+      },
+      {
+        "id": "apple-tab-bars",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Stable top-level destinations, labels, selection; preserve availability."
+      },
+      {
+        "id": "apple-sidebars",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/sidebars",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Hierarchical navigation and adaptation to available space."
+      },
+      {
+        "id": "apple-color",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/color",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Semantic colors, light/dark/increased-contrast variants, content/control distinction."
+      }
+    ],
+    "overallConformance": null,
+    "scope": "Checks the supplied observations and product policies, not all of Apple HIG, full accessibility, or aesthetic quality."
+  },
+  "alignment": {
+    "constraints": [],
+    "viewport": {
+      "width": 834,
+      "height": 1210
+    },
+    "context": {
+      "direction": "ltr",
+      "flow": "column",
+      "alignmentTolerance": 4,
+      "source": "renderer-supplied rectangles"
+    },
+    "rectangleCount": 1,
+    "zeroAreaRectangles": [],
+    "outsideViewport": [],
+    "alignment": {
+      "tolerance": 4,
+      "kind": "calculation",
+      "pairs": [],
+      "preferenceSource": "caller tolerance; no universal alignment target is inferred"
+    },
+    "proximity": [],
+    "hierarchy": {
+      "kind": "descriptor",
+      "areaRanking": [
+        {
+          "id": "media-7",
+          "area": 579630
+        }
+      ],
+      "largestToMedianArea": 1,
+      "declaredPriority": [],
+      "interpretation": "box area and declared priority are not font weight, perceived emphasis, comprehension or task importance"
+    },
+    "balance": {
+      "kind": "descriptor",
+      "occupiedUnionCentroid": {
+        "x": 417,
+        "y": 444
+      },
+      "normalizedOffset": {
+        "x": 0,
+        "y": -0.13305785123966943
+      },
+      "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+    },
+    "whitespace": {
+      "kind": "calculation",
+      "occupiedUnionArea": 579630,
+      "viewportArea": 1009140,
+      "unoccupiedArea": 429510,
+      "unoccupiedFraction": 0.4256198347107438,
+      "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+    },
+    "overlap": {
+      "kind": "calculation",
+      "pairs": [],
+      "interpretation": "pairwise intersections; intentional layering and parent/child containment are not automatically errors"
+    },
+    "readingOrder": {
+      "declared": [],
+      "steps": [],
+      "kind": "descriptor",
+      "interpretation": "geometric reversals relative to declared axis/direction only; not DOM, focus, screen-reader or multi-column order validation"
+    },
+    "provenance": {
+      "measurements": "renderer-supplied rectangles",
+      "geometry": "deterministic axis-aligned rectangle calculations; source measurement quality remains the caller responsibility",
+      "judgment": "none: no preference rating, universal beauty score, or optimization target"
+    },
+    "limitations": [
+      "Supply comparable semantic regions; including a full-surface container makes its area occupied by definition.",
+      "Union occupancy/centroid are invariant to duplicate nested coverage; pairwise alignment/proximity and area hierarchy are not.",
+      "No glyph ink, color salience, occlusion order, gaze, semantics, motion or interaction is inferred from boxes.",
+      "Geometry can describe grouping and rhythm, but human task context determines whether they work.",
+      "No layout is emitted; any downstream implementation must preserve the project flex/Yoga-only contract."
+    ]
+  }
+}

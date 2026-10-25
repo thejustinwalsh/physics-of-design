@@ -1,0 +1,645 @@
+{
+  "provenance": "Independent synthetic probe, including separate raster oracle; no human validation",
+  "sourceHash": "cca652f9ffa34a5f06738427bb976ca93cb679e6115a10501d757fbc792d1229",
+  "observations": [
+    {
+      "id": "parent-child",
+      "expectation": "Union10000 centroid50/50; parent child overlap400 only describes nesting",
+      "observed": {
+        "whitespace": {
+          "kind": "calculation",
+          "occupiedUnionArea": 10000,
+          "viewportArea": 10000,
+          "unoccupiedArea": 0,
+          "unoccupiedFraction": 0,
+          "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+        },
+        "balance": {
+          "kind": "descriptor",
+          "occupiedUnionCentroid": {
+            "x": 50,
+            "y": 50
+          },
+          "normalizedOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+        },
+        "overlap": [
+          {
+            "a": "parent",
+            "b": "child",
+            "area": 400
+          }
+        ],
+        "outside": [],
+        "zero": [],
+        "order": []
+      }
+    },
+    {
+      "id": "duplicate-coverage",
+      "expectation": "Duplicate coverage leaves occupancy and centroid unchanged",
+      "observed": {
+        "one": {
+          "whitespace": {
+            "kind": "calculation",
+            "occupiedUnionArea": 400,
+            "viewportArea": 10000,
+            "unoccupiedArea": 9600,
+            "unoccupiedFraction": 0.96,
+            "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+          },
+          "balance": {
+            "kind": "descriptor",
+            "occupiedUnionCentroid": {
+              "x": 10,
+              "y": 10
+            },
+            "normalizedOffset": {
+              "x": -0.4,
+              "y": -0.4
+            },
+            "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+          },
+          "overlap": [],
+          "outside": [],
+          "zero": [],
+          "order": []
+        },
+        "two": {
+          "whitespace": {
+            "kind": "calculation",
+            "occupiedUnionArea": 400,
+            "viewportArea": 10000,
+            "unoccupiedArea": 9600,
+            "unoccupiedFraction": 0.96,
+            "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+          },
+          "balance": {
+            "kind": "descriptor",
+            "occupiedUnionCentroid": {
+              "x": 10,
+              "y": 10
+            },
+            "normalizedOffset": {
+              "x": -0.4,
+              "y": -0.4
+            },
+            "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+          },
+          "overlap": [
+            {
+              "a": "one",
+              "b": "two",
+              "area": 400
+            }
+          ],
+          "outside": [],
+          "zero": [],
+          "order": []
+        }
+      }
+    },
+    {
+      "id": "offscreen-clip",
+      "expectation": "Half-width visible area5000 centroid25/50",
+      "observed": {
+        "whitespace": {
+          "kind": "calculation",
+          "occupiedUnionArea": 5000,
+          "viewportArea": 10000,
+          "unoccupiedArea": 5000,
+          "unoccupiedFraction": 0.5,
+          "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+        },
+        "balance": {
+          "kind": "descriptor",
+          "occupiedUnionCentroid": {
+            "x": 25,
+            "y": 50
+          },
+          "normalizedOffset": {
+            "x": -0.25,
+            "y": 0
+          },
+          "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+        },
+        "overlap": [],
+        "outside": [
+          "part"
+        ],
+        "zero": [],
+        "order": []
+      }
+    },
+    {
+      "id": "overlap-union",
+      "expectation": "Union10000; pair intersection2000; never occupancy12000",
+      "observed": {
+        "whitespace": {
+          "kind": "calculation",
+          "occupiedUnionArea": 10000,
+          "viewportArea": 10000,
+          "unoccupiedArea": 0,
+          "unoccupiedFraction": 0,
+          "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+        },
+        "balance": {
+          "kind": "descriptor",
+          "occupiedUnionCentroid": {
+            "x": 50,
+            "y": 50
+          },
+          "normalizedOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+        },
+        "overlap": [
+          {
+            "a": "left",
+            "b": "right",
+            "area": 2000
+          }
+        ],
+        "outside": [],
+        "zero": [],
+        "order": []
+      }
+    },
+    {
+      "id": "edge-touch",
+      "expectation": "Edge touch is not positive-area overlap",
+      "observed": {
+        "whitespace": {
+          "kind": "calculation",
+          "occupiedUnionArea": 10000,
+          "viewportArea": 10000,
+          "unoccupiedArea": 0,
+          "unoccupiedFraction": 0,
+          "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+        },
+        "balance": {
+          "kind": "descriptor",
+          "occupiedUnionCentroid": {
+            "x": 50,
+            "y": 50
+          },
+          "normalizedOffset": {
+            "x": 0,
+            "y": 0
+          },
+          "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+        },
+        "overlap": [],
+        "outside": [],
+        "zero": [],
+        "order": []
+      }
+    },
+    {
+      "id": "empty-zero",
+      "expectation": "No active area gives null centroid and empty overlap",
+      "observed": {
+        "whitespace": {
+          "kind": "calculation",
+          "occupiedUnionArea": 0,
+          "viewportArea": 10000,
+          "unoccupiedArea": 10000,
+          "unoccupiedFraction": 1,
+          "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+        },
+        "balance": {
+          "kind": "descriptor",
+          "occupiedUnionCentroid": null,
+          "normalizedOffset": null,
+          "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+        },
+        "overlap": [],
+        "outside": [],
+        "zero": [
+          "zero"
+        ],
+        "order": []
+      }
+    },
+    {
+      "id": "rtl-declared-flow",
+      "expectation": "Declared right-to-left row advances without geometric reversal",
+      "observed": {
+        "declared": [
+          "first",
+          "second"
+        ],
+        "steps": [
+          {
+            "from": "first",
+            "to": "second",
+            "primaryDelta": 60,
+            "secondaryDelta": 0,
+            "geometricReversal": false
+          }
+        ],
+        "kind": "descriptor",
+        "interpretation": "geometric reversals relative to declared axis/direction only; not DOM, focus, screen-reader or multi-column order validation"
+      }
+    },
+    {
+      "id": "scale-invariance",
+      "expectation": "Uniform2x scale preserves fractions normalized centroid, with2x tolerance; raw distances double",
+      "observed": {
+        "one": {
+          "viewport": {
+            "width": 100,
+            "height": 100
+          },
+          "context": {
+            "direction": "ltr",
+            "flow": "column",
+            "alignmentTolerance": 4,
+            "source": "renderer-supplied rectangles"
+          },
+          "rectangleCount": 2,
+          "zeroAreaRectangles": [],
+          "outsideViewport": [],
+          "alignment": {
+            "tolerance": 4,
+            "kind": "calculation",
+            "pairs": [
+              {
+                "a": "a",
+                "b": "b",
+                "distances": {
+                  "left": 3,
+                  "centerX": 13,
+                  "right": 23,
+                  "top": 30,
+                  "centerY": 35,
+                  "bottom": 40
+                },
+                "withinTolerance": [
+                  "left"
+                ]
+              }
+            ],
+            "preferenceSource": "caller tolerance; no universal alignment target is inferred"
+          },
+          "proximity": [
+            {
+              "id": "g",
+              "members": [
+                "a",
+                "b"
+              ],
+              "source": [
+                "synthetic"
+              ],
+              "withinMedianGap": 20,
+              "nearestOutsideGap": null,
+              "withinPairs": 1,
+              "outsidePairs": 0,
+              "kind": "calculation",
+              "interpretation": "semantic grouping is caller supplied; near is not automatically related, and touching/overlapping boxes have zero gap"
+            }
+          ],
+          "hierarchy": {
+            "kind": "descriptor",
+            "areaRanking": [
+              {
+                "id": "b",
+                "area": 800
+              },
+              {
+                "id": "a",
+                "area": 200
+              }
+            ],
+            "largestToMedianArea": 1.6,
+            "declaredPriority": [],
+            "interpretation": "box area and declared priority are not font weight, perceived emphasis, comprehension or task importance"
+          },
+          "balance": {
+            "kind": "descriptor",
+            "occupiedUnionCentroid": {
+              "x": 30.4,
+              "y": 53
+            },
+            "normalizedOffset": {
+              "x": -0.196,
+              "y": 0.03
+            },
+            "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+          },
+          "whitespace": {
+            "kind": "calculation",
+            "occupiedUnionArea": 1000,
+            "viewportArea": 10000,
+            "unoccupiedArea": 9000,
+            "unoccupiedFraction": 0.9,
+            "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+          },
+          "overlap": {
+            "kind": "calculation",
+            "pairs": [],
+            "interpretation": "pairwise intersections; intentional layering and parent/child containment are not automatically errors"
+          },
+          "readingOrder": {
+            "declared": [],
+            "steps": [],
+            "kind": "descriptor",
+            "interpretation": "geometric reversals relative to declared axis/direction only; not DOM, focus, screen-reader or multi-column order validation"
+          },
+          "provenance": {
+            "measurements": "renderer-supplied rectangles",
+            "geometry": "deterministic axis-aligned rectangle calculations; source measurement quality remains the caller responsibility",
+            "judgment": "none: no preference rating, universal beauty score, or optimization target"
+          },
+          "limitations": [
+            "Supply comparable semantic regions; including a full-surface container makes its area occupied by definition.",
+            "Union occupancy/centroid are invariant to duplicate nested coverage; pairwise alignment/proximity and area hierarchy are not.",
+            "No glyph ink, color salience, occlusion order, gaze, semantics, motion or interaction is inferred from boxes.",
+            "Geometry can describe grouping and rhythm, but human task context determines whether they work.",
+            "No layout is emitted; any downstream implementation must preserve the project flex/Yoga-only contract."
+          ]
+        },
+        "two": {
+          "viewport": {
+            "width": 200,
+            "height": 200
+          },
+          "context": {
+            "direction": "ltr",
+            "flow": "column",
+            "alignmentTolerance": 8,
+            "source": "renderer-supplied rectangles"
+          },
+          "rectangleCount": 2,
+          "zeroAreaRectangles": [],
+          "outsideViewport": [],
+          "alignment": {
+            "tolerance": 8,
+            "kind": "calculation",
+            "pairs": [
+              {
+                "a": "a",
+                "b": "b",
+                "distances": {
+                  "left": 6,
+                  "centerX": 26,
+                  "right": 46,
+                  "top": 60,
+                  "centerY": 70,
+                  "bottom": 80
+                },
+                "withinTolerance": [
+                  "left"
+                ]
+              }
+            ],
+            "preferenceSource": "caller tolerance; no universal alignment target is inferred"
+          },
+          "proximity": [
+            {
+              "id": "g",
+              "members": [
+                "a",
+                "b"
+              ],
+              "source": [
+                "synthetic"
+              ],
+              "withinMedianGap": 40,
+              "nearestOutsideGap": null,
+              "withinPairs": 1,
+              "outsidePairs": 0,
+              "kind": "calculation",
+              "interpretation": "semantic grouping is caller supplied; near is not automatically related, and touching/overlapping boxes have zero gap"
+            }
+          ],
+          "hierarchy": {
+            "kind": "descriptor",
+            "areaRanking": [
+              {
+                "id": "b",
+                "area": 3200
+              },
+              {
+                "id": "a",
+                "area": 800
+              }
+            ],
+            "largestToMedianArea": 1.6,
+            "declaredPriority": [],
+            "interpretation": "box area and declared priority are not font weight, perceived emphasis, comprehension or task importance"
+          },
+          "balance": {
+            "kind": "descriptor",
+            "occupiedUnionCentroid": {
+              "x": 60.8,
+              "y": 106
+            },
+            "normalizedOffset": {
+              "x": -0.196,
+              "y": 0.03
+            },
+            "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+          },
+          "whitespace": {
+            "kind": "calculation",
+            "occupiedUnionArea": 4000,
+            "viewportArea": 40000,
+            "unoccupiedArea": 36000,
+            "unoccupiedFraction": 0.9,
+            "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+          },
+          "overlap": {
+            "kind": "calculation",
+            "pairs": [],
+            "interpretation": "pairwise intersections; intentional layering and parent/child containment are not automatically errors"
+          },
+          "readingOrder": {
+            "declared": [],
+            "steps": [],
+            "kind": "descriptor",
+            "interpretation": "geometric reversals relative to declared axis/direction only; not DOM, focus, screen-reader or multi-column order validation"
+          },
+          "provenance": {
+            "measurements": "renderer-supplied rectangles",
+            "geometry": "deterministic axis-aligned rectangle calculations; source measurement quality remains the caller responsibility",
+            "judgment": "none: no preference rating, universal beauty score, or optimization target"
+          },
+          "limitations": [
+            "Supply comparable semantic regions; including a full-surface container makes its area occupied by definition.",
+            "Union occupancy/centroid are invariant to duplicate nested coverage; pairwise alignment/proximity and area hierarchy are not.",
+            "No glyph ink, color salience, occlusion order, gaze, semantics, motion or interaction is inferred from boxes.",
+            "Geometry can describe grouping and rhythm, but human task context determines whether they work.",
+            "No layout is emitted; any downstream implementation must preserve the project flex/Yoga-only contract."
+          ]
+        }
+      }
+    },
+    {
+      "id": "group-relabel",
+      "expectation": "Geometry unchanged while caller partition alters gap aggregation",
+      "observed": [
+        {
+          "members": [
+            "a",
+            "b"
+          ],
+          "whitespace": {
+            "kind": "calculation",
+            "occupiedUnionArea": 300,
+            "viewportArea": 10000,
+            "unoccupiedArea": 9700,
+            "unoccupiedFraction": 0.97,
+            "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+          },
+          "proximity": [
+            {
+              "id": "g",
+              "members": [
+                "a",
+                "b"
+              ],
+              "source": [
+                "synthetic-partition"
+              ],
+              "withinMedianGap": 10,
+              "nearestOutsideGap": 60,
+              "withinPairs": 1,
+              "outsidePairs": 2,
+              "kind": "calculation",
+              "interpretation": "semantic grouping is caller supplied; near is not automatically related, and touching/overlapping boxes have zero gap"
+            }
+          ]
+        },
+        {
+          "members": [
+            "a",
+            "c"
+          ],
+          "whitespace": {
+            "kind": "calculation",
+            "occupiedUnionArea": 300,
+            "viewportArea": 10000,
+            "unoccupiedArea": 9700,
+            "unoccupiedFraction": 0.97,
+            "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+          },
+          "proximity": [
+            {
+              "id": "g",
+              "members": [
+                "a",
+                "c"
+              ],
+              "source": [
+                "synthetic-partition"
+              ],
+              "withinMedianGap": 80,
+              "nearestOutsideGap": 10,
+              "withinPairs": 1,
+              "outsidePairs": 2,
+              "kind": "calculation",
+              "interpretation": "semantic grouping is caller supplied; near is not automatically related, and touching/overlapping boxes have zero gap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "invalid-references",
+      "expectation": "Unknown and duplicate references rejected",
+      "observed": {
+        "unknown": false,
+        "duplicate": false
+      }
+    },
+    {
+      "id": "subnormal-viewport",
+      "expectation": "Either reject numerically degenerate viewport or keep outputs finite",
+      "observed": {
+        "result": {
+          "viewport": {
+            "width": 5e-324,
+            "height": 5e-324
+          },
+          "context": {
+            "direction": "ltr",
+            "flow": "column",
+            "alignmentTolerance": 4,
+            "source": "renderer-supplied rectangles"
+          },
+          "rectangleCount": 0,
+          "zeroAreaRectangles": [],
+          "outsideViewport": [],
+          "alignment": {
+            "tolerance": 4,
+            "kind": "calculation",
+            "pairs": [],
+            "preferenceSource": "caller tolerance; no universal alignment target is inferred"
+          },
+          "proximity": [],
+          "hierarchy": {
+            "kind": "descriptor",
+            "areaRanking": [],
+            "largestToMedianArea": null,
+            "declaredPriority": [],
+            "interpretation": "box area and declared priority are not font weight, perceived emphasis, comprehension or task importance"
+          },
+          "balance": {
+            "kind": "descriptor",
+            "occupiedUnionCentroid": null,
+            "normalizedOffset": null,
+            "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+          },
+          "whitespace": {
+            "kind": "calculation",
+            "occupiedUnionArea": 0,
+            "viewportArea": 0,
+            "unoccupiedArea": 0,
+            "unoccupiedFraction": null,
+            "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+          },
+          "overlap": {
+            "kind": "calculation",
+            "pairs": [],
+            "interpretation": "pairwise intersections; intentional layering and parent/child containment are not automatically errors"
+          },
+          "readingOrder": {
+            "declared": [],
+            "steps": [],
+            "kind": "descriptor",
+            "interpretation": "geometric reversals relative to declared axis/direction only; not DOM, focus, screen-reader or multi-column order validation"
+          },
+          "provenance": {
+            "measurements": "renderer-supplied rectangles",
+            "geometry": "deterministic axis-aligned rectangle calculations; source measurement quality remains the caller responsibility",
+            "judgment": "none: no preference rating, universal beauty score, or optimization target"
+          },
+          "limitations": [
+            "Supply comparable semantic regions; including a full-surface container makes its area occupied by definition.",
+            "Union occupancy/centroid are invariant to duplicate nested coverage; pairwise alignment/proximity and area hierarchy are not.",
+            "No glyph ink, color salience, occlusion order, gaze, semantics, motion or interaction is inferred from boxes.",
+            "Geometry can describe grouping and rhythm, but human task context determines whether they work.",
+            "No layout is emitted; any downstream implementation must preserve the project flex/Yoga-only contract."
+          ]
+        },
+        "unoccupiedFractionFinite": false,
+        "schemaAccepted": true
+      }
+    },
+    {
+      "id": "integer-union-oracle",
+      "expectation": "Exact integration agrees with independent20x20 unit-cell raster oracle for100 seeded integer cases",
+      "observed": {
+        "checked": 100,
+        "failures": []
+      }
+    }
+  ]
+}

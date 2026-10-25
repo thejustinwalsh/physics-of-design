@@ -1,0 +1,1694 @@
+[
+  {
+    "inputHash": "d09db7067f979c10617263bc8242903a757b9160eab341fe1051433b1245ec80",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 272,
+          "height": 75.5
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 23,
+            "width": 198.484375,
+            "height": 39,
+            "start": 0,
+            "end": 16,
+            "text": "A library after "
+          },
+          {
+            "x": 24,
+            "y": 60.75,
+            "width": 168.046875,
+            "height": 39,
+            "start": 16,
+            "end": 28,
+            "text": "closing time"
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 23,
+          "width": 191.203125,
+          "height": 76.75
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 24,
+          "y": 123.5,
+          "width": 272,
+          "height": 457.4375
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 124.5,
+            "width": 277.09375,
+            "height": 33,
+            "start": 0,
+            "end": 30,
+            "text": "When the last visitor leaves, "
+          },
+          {
+            "x": 24,
+            "y": 159.6875,
+            "width": 271.796875,
+            "height": 33,
+            "start": 30,
+            "end": 57,
+            "text": "the room becomes easier to "
+          },
+          {
+            "x": 24,
+            "y": 194.875,
+            "width": 264.1875,
+            "height": 33,
+            "start": 57,
+            "end": 85,
+            "text": "hear. The ventilation turns "
+          },
+          {
+            "x": 24,
+            "y": 230.0625,
+            "width": 268.578125,
+            "height": 33,
+            "start": 85,
+            "end": 111,
+            "text": "a page somewhere near the "
+          },
+          {
+            "x": 24,
+            "y": 265.25,
+            "width": 232.3125,
+            "height": 33,
+            "start": 111,
+            "end": 135,
+            "text": "window. A chair settles "
+          },
+          {
+            "x": 24,
+            "y": 300.4375,
+            "width": 234.109375,
+            "height": 33,
+            "start": 135,
+            "end": 160,
+            "text": "against the floor. Books "
+          },
+          {
+            "x": 24,
+            "y": 335.625,
+            "width": 273.25,
+            "height": 33,
+            "start": 160,
+            "end": 188,
+            "text": "that seemed like answers in "
+          },
+          {
+            "x": 24,
+            "y": 370.8125,
+            "width": 217.515625,
+            "height": 33,
+            "start": 188,
+            "end": 209,
+            "text": "the afternoon become "
+          },
+          {
+            "x": 24,
+            "y": 406,
+            "width": 173.71875,
+            "height": 33,
+            "start": 209,
+            "end": 228,
+            "text": "invitations again. "
+          },
+          {
+            "x": 24,
+            "y": 441.1875,
+            "width": 276.328125,
+            "height": 33,
+            "start": 228,
+            "end": 256,
+            "text": "Tomorrow the room will fill "
+          },
+          {
+            "x": 24,
+            "y": 476.375,
+            "width": 272.078125,
+            "height": 33,
+            "start": 256,
+            "end": 284,
+            "text": "with questions, but for now "
+          },
+          {
+            "x": 24,
+            "y": 511.5625,
+            "width": 277.359375,
+            "height": 33,
+            "start": 284,
+            "end": 315,
+            "text": "it holds the quiet possibility "
+          },
+          {
+            "x": 24,
+            "y": 546.75,
+            "width": 209.515625,
+            "height": 33,
+            "start": 315,
+            "end": 336,
+            "text": "of another beginning."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 124.5,
+          "width": 271.859375,
+          "height": 455.25
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "9b73eddc538610e26191291900aea68ed0662e108e4997c8f1458dbdc4601764",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 272,
+          "height": 302.0625
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 23,
+            "width": 249.296875,
+            "height": 77,
+            "start": 0,
+            "end": 10,
+            "text": "A library "
+          },
+          {
+            "x": 24,
+            "y": 98.515625,
+            "width": 147.6875,
+            "height": 77,
+            "start": 10,
+            "end": 16,
+            "text": "after "
+          },
+          {
+            "x": 24,
+            "y": 174.03125,
+            "width": 209.546875,
+            "height": 77,
+            "start": 16,
+            "end": 24,
+            "text": "closing "
+          },
+          {
+            "x": 24,
+            "y": 249.546875,
+            "width": 126.53125,
+            "height": 77,
+            "start": 24,
+            "end": 28,
+            "text": "time"
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 23,
+          "width": 234.734375,
+          "height": 303.546875
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 24,
+          "y": 350.0625,
+          "width": 272,
+          "height": 2182.109375
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 351.0625,
+            "width": 279.765625,
+            "height": 67,
+            "start": 0,
+            "end": 14,
+            "text": "When the last "
+          },
+          {
+            "x": 24,
+            "y": 421.453125,
+            "width": 274.4375,
+            "height": 67,
+            "start": 14,
+            "end": 30,
+            "text": "visitor leaves, "
+          },
+          {
+            "x": 24,
+            "y": 491.84375,
+            "width": 187.53125,
+            "height": 67,
+            "start": 30,
+            "end": 39,
+            "text": "the room "
+          },
+          {
+            "x": 24,
+            "y": 562.234375,
+            "width": 180.140625,
+            "height": 67,
+            "start": 39,
+            "end": 47,
+            "text": "becomes "
+          },
+          {
+            "x": 24,
+            "y": 632.625,
+            "width": 281.828125,
+            "height": 67,
+            "start": 47,
+            "end": 63,
+            "text": "easier to hear. "
+          },
+          {
+            "x": 24,
+            "y": 703.015625,
+            "width": 87.5625,
+            "height": 67,
+            "start": 63,
+            "end": 67,
+            "text": "The "
+          },
+          {
+            "x": 24,
+            "y": 773.40625,
+            "width": 221.546875,
+            "height": 67,
+            "start": 67,
+            "end": 79,
+            "text": "ventilation "
+          },
+          {
+            "x": 24,
+            "y": 843.796875,
+            "width": 248.21875,
+            "height": 67,
+            "start": 79,
+            "end": 92,
+            "text": "turns a page "
+          },
+          {
+            "x": 24,
+            "y": 914.1875,
+            "width": 231.71875,
+            "height": 67,
+            "start": 92,
+            "end": 102,
+            "text": "somewhere "
+          },
+          {
+            "x": 24,
+            "y": 984.578125,
+            "width": 170.59375,
+            "height": 67,
+            "start": 102,
+            "end": 111,
+            "text": "near the "
+          },
+          {
+            "x": 24,
+            "y": 1054.96875,
+            "width": 218.6875,
+            "height": 67,
+            "start": 111,
+            "end": 121,
+            "text": "window. A "
+          },
+          {
+            "x": 24,
+            "y": 1125.359375,
+            "width": 245.921875,
+            "height": 67,
+            "start": 121,
+            "end": 135,
+            "text": "chair settles "
+          },
+          {
+            "x": 24,
+            "y": 1195.75,
+            "width": 224.40625,
+            "height": 67,
+            "start": 135,
+            "end": 147,
+            "text": "against the "
+          },
+          {
+            "x": 24,
+            "y": 1266.140625,
+            "width": 243.8125,
+            "height": 67,
+            "start": 147,
+            "end": 160,
+            "text": "floor. Books "
+          },
+          {
+            "x": 24,
+            "y": 1336.53125,
+            "width": 245.390625,
+            "height": 67,
+            "start": 160,
+            "end": 172,
+            "text": "that seemed "
+          },
+          {
+            "x": 24,
+            "y": 1406.921875,
+            "width": 250.71875,
+            "height": 67,
+            "start": 172,
+            "end": 185,
+            "text": "like answers "
+          },
+          {
+            "x": 24,
+            "y": 1477.3125,
+            "width": 123.875,
+            "height": 67,
+            "start": 185,
+            "end": 192,
+            "text": "in the "
+          },
+          {
+            "x": 24,
+            "y": 1547.703125,
+            "width": 200.421875,
+            "height": 67,
+            "start": 192,
+            "end": 202,
+            "text": "afternoon "
+          },
+          {
+            "x": 24,
+            "y": 1618.09375,
+            "width": 161.140625,
+            "height": 67,
+            "start": 202,
+            "end": 209,
+            "text": "become "
+          },
+          {
+            "x": 24,
+            "y": 1688.484375,
+            "width": 219.65625,
+            "height": 67,
+            "start": 209,
+            "end": 221,
+            "text": "invitations "
+          },
+          {
+            "x": 24,
+            "y": 1758.875,
+            "width": 127.78125,
+            "height": 67,
+            "start": 221,
+            "end": 228,
+            "text": "again. "
+          },
+          {
+            "x": 24,
+            "y": 1829.265625,
+            "width": 215.65625,
+            "height": 67,
+            "start": 228,
+            "end": 237,
+            "text": "Tomorrow "
+          },
+          {
+            "x": 24,
+            "y": 1899.65625,
+            "width": 271.3125,
+            "height": 67,
+            "start": 237,
+            "end": 251,
+            "text": "the room will "
+          },
+          {
+            "x": 24,
+            "y": 1970.046875,
+            "width": 164.78125,
+            "height": 67,
+            "start": 251,
+            "end": 261,
+            "text": "fill with "
+          },
+          {
+            "x": 24,
+            "y": 2040.4375,
+            "width": 208.390625,
+            "height": 67,
+            "start": 261,
+            "end": 272,
+            "text": "questions, "
+          },
+          {
+            "x": 24,
+            "y": 2110.828125,
+            "width": 277.03125,
+            "height": 67,
+            "start": 272,
+            "end": 287,
+            "text": "but for now it "
+          },
+          {
+            "x": 24,
+            "y": 2181.21875,
+            "width": 190.390625,
+            "height": 67,
+            "start": 287,
+            "end": 297,
+            "text": "holds the "
+          },
+          {
+            "x": 24,
+            "y": 2251.609375,
+            "width": 110.890625,
+            "height": 67,
+            "start": 297,
+            "end": 303,
+            "text": "quiet "
+          },
+          {
+            "x": 24,
+            "y": 2322,
+            "width": 262.90625,
+            "height": 67,
+            "start": 303,
+            "end": 318,
+            "text": "possibility of "
+          },
+          {
+            "x": 24,
+            "y": 2392.390625,
+            "width": 161.84375,
+            "height": 67,
+            "start": 318,
+            "end": 326,
+            "text": "another "
+          },
+          {
+            "x": 24,
+            "y": 2462.78125,
+            "width": 207.375,
+            "height": 67,
+            "start": 326,
+            "end": 336,
+            "text": "beginning."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 351.0625,
+          "width": 270.828125,
+          "height": 2178.71875
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "18f62290c73f5a0e634355f7192a6515189917bdf8eeabc219e5761bf8baa6fc",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 342,
+          "height": 75.5
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 23,
+            "width": 303.25,
+            "height": 39,
+            "start": 0,
+            "end": 24,
+            "text": "A library after closing "
+          },
+          {
+            "x": 24,
+            "y": 60.75,
+            "width": 63.265625,
+            "height": 39,
+            "start": 24,
+            "end": 28,
+            "text": "time"
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 23,
+          "width": 295.96875,
+          "height": 76.75
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 24,
+          "y": 123.5,
+          "width": 342,
+          "height": 387.0625
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 124.5,
+            "width": 313.84375,
+            "height": 33,
+            "start": 0,
+            "end": 34,
+            "text": "When the last visitor leaves, the "
+          },
+          {
+            "x": 24,
+            "y": 159.6875,
+            "width": 331.796875,
+            "height": 33,
+            "start": 34,
+            "end": 67,
+            "text": "room becomes easier to hear. The "
+          },
+          {
+            "x": 24,
+            "y": 194.875,
+            "width": 234.875,
+            "height": 33,
+            "start": 67,
+            "end": 92,
+            "text": "ventilation turns a page "
+          },
+          {
+            "x": 24,
+            "y": 230.0625,
+            "width": 310.5,
+            "height": 33,
+            "start": 92,
+            "end": 121,
+            "text": "somewhere near the window. A "
+          },
+          {
+            "x": 24,
+            "y": 265.25,
+            "width": 291.65625,
+            "height": 33,
+            "start": 121,
+            "end": 154,
+            "text": "chair settles against the floor. "
+          },
+          {
+            "x": 24,
+            "y": 300.4375,
+            "width": 338.65625,
+            "height": 33,
+            "start": 154,
+            "end": 188,
+            "text": "Books that seemed like answers in "
+          },
+          {
+            "x": 24,
+            "y": 335.625,
+            "width": 327.34375,
+            "height": 33,
+            "start": 188,
+            "end": 221,
+            "text": "the afternoon become invitations "
+          },
+          {
+            "x": 24,
+            "y": 370.8125,
+            "width": 340.21875,
+            "height": 33,
+            "start": 221,
+            "end": 256,
+            "text": "again. Tomorrow the room will fill "
+          },
+          {
+            "x": 24,
+            "y": 406,
+            "width": 292.25,
+            "height": 33,
+            "start": 256,
+            "end": 287,
+            "text": "with questions, but for now it "
+          },
+          {
+            "x": 24,
+            "y": 441.1875,
+            "width": 282.09375,
+            "height": 33,
+            "start": 287,
+            "end": 318,
+            "text": "holds the quiet possibility of "
+          },
+          {
+            "x": 24,
+            "y": 476.375,
+            "width": 184.609375,
+            "height": 33,
+            "start": 318,
+            "end": 336,
+            "text": "another beginning."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 124.5,
+          "width": 334.71875,
+          "height": 384.875
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "f306edc3e95dc64c99e1fab2a6e3841c6aaa5e639d5325e13cd772d7551b5f54",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 342,
+          "height": 226.546875
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 23,
+            "width": 249.296875,
+            "height": 77,
+            "start": 0,
+            "end": 10,
+            "text": "A library "
+          },
+          {
+            "x": 24,
+            "y": 98.515625,
+            "width": 147.6875,
+            "height": 77,
+            "start": 10,
+            "end": 16,
+            "text": "after "
+          },
+          {
+            "x": 24,
+            "y": 174.03125,
+            "width": 336.078125,
+            "height": 77,
+            "start": 16,
+            "end": 28,
+            "text": "closing time"
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 23,
+          "width": 336.078125,
+          "height": 228.03125
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 24,
+          "y": 274.546875,
+          "width": 342,
+          "height": 1689.375
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 275.546875,
+            "width": 279.765625,
+            "height": 67,
+            "start": 0,
+            "end": 14,
+            "text": "When the last "
+          },
+          {
+            "x": 24,
+            "y": 345.9375,
+            "width": 347.921875,
+            "height": 67,
+            "start": 14,
+            "end": 34,
+            "text": "visitor leaves, the "
+          },
+          {
+            "x": 24,
+            "y": 416.328125,
+            "width": 294.1875,
+            "height": 67,
+            "start": 34,
+            "end": 47,
+            "text": "room becomes "
+          },
+          {
+            "x": 24,
+            "y": 486.71875,
+            "width": 281.828125,
+            "height": 67,
+            "start": 47,
+            "end": 63,
+            "text": "easier to hear. "
+          },
+          {
+            "x": 24,
+            "y": 557.109375,
+            "width": 309.109375,
+            "height": 67,
+            "start": 63,
+            "end": 79,
+            "text": "The ventilation "
+          },
+          {
+            "x": 24,
+            "y": 627.5,
+            "width": 248.21875,
+            "height": 67,
+            "start": 79,
+            "end": 92,
+            "text": "turns a page "
+          },
+          {
+            "x": 24,
+            "y": 697.890625,
+            "width": 328.8125,
+            "height": 67,
+            "start": 92,
+            "end": 107,
+            "text": "somewhere near "
+          },
+          {
+            "x": 24,
+            "y": 768.28125,
+            "width": 292.171875,
+            "height": 67,
+            "start": 107,
+            "end": 121,
+            "text": "the window. A "
+          },
+          {
+            "x": 24,
+            "y": 838.671875,
+            "width": 245.921875,
+            "height": 67,
+            "start": 121,
+            "end": 135,
+            "text": "chair settles "
+          },
+          {
+            "x": 24,
+            "y": 909.0625,
+            "width": 337.40625,
+            "height": 67,
+            "start": 135,
+            "end": 154,
+            "text": "against the floor. "
+          },
+          {
+            "x": 24,
+            "y": 979.453125,
+            "width": 219.875,
+            "height": 67,
+            "start": 154,
+            "end": 165,
+            "text": "Books that "
+          },
+          {
+            "x": 24,
+            "y": 1049.84375,
+            "width": 239.015625,
+            "height": 67,
+            "start": 165,
+            "end": 177,
+            "text": "seemed like "
+          },
+          {
+            "x": 24,
+            "y": 1120.234375,
+            "width": 291.90625,
+            "height": 67,
+            "start": 177,
+            "end": 192,
+            "text": "answers in the "
+          },
+          {
+            "x": 24,
+            "y": 1190.625,
+            "width": 200.421875,
+            "height": 67,
+            "start": 192,
+            "end": 202,
+            "text": "afternoon "
+          },
+          {
+            "x": 24,
+            "y": 1261.015625,
+            "width": 161.140625,
+            "height": 67,
+            "start": 202,
+            "end": 209,
+            "text": "become "
+          },
+          {
+            "x": 24,
+            "y": 1331.40625,
+            "width": 347.4375,
+            "height": 67,
+            "start": 209,
+            "end": 228,
+            "text": "invitations again. "
+          },
+          {
+            "x": 24,
+            "y": 1401.796875,
+            "width": 289.125,
+            "height": 67,
+            "start": 228,
+            "end": 241,
+            "text": "Tomorrow the "
+          },
+          {
+            "x": 24,
+            "y": 1472.1875,
+            "width": 263.53125,
+            "height": 67,
+            "start": 241,
+            "end": 256,
+            "text": "room will fill "
+          },
+          {
+            "x": 24,
+            "y": 1542.578125,
+            "width": 307.484375,
+            "height": 67,
+            "start": 256,
+            "end": 272,
+            "text": "with questions, "
+          },
+          {
+            "x": 24,
+            "y": 1612.96875,
+            "width": 277.03125,
+            "height": 67,
+            "start": 272,
+            "end": 287,
+            "text": "but for now it "
+          },
+          {
+            "x": 24,
+            "y": 1683.359375,
+            "width": 301.28125,
+            "height": 67,
+            "start": 287,
+            "end": 303,
+            "text": "holds the quiet "
+          },
+          {
+            "x": 24,
+            "y": 1753.75,
+            "width": 262.90625,
+            "height": 67,
+            "start": 303,
+            "end": 318,
+            "text": "possibility of "
+          },
+          {
+            "x": 24,
+            "y": 1824.140625,
+            "width": 161.84375,
+            "height": 67,
+            "start": 318,
+            "end": 326,
+            "text": "another "
+          },
+          {
+            "x": 24,
+            "y": 1894.53125,
+            "width": 207.375,
+            "height": 67,
+            "start": 326,
+            "end": 336,
+            "text": "beginning."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 275.546875,
+          "width": 336.921875,
+          "height": 1685.984375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "8ecc171259e3d778457249fb7f339876bc625ace7e805eb22886adee89a191c8",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 620,
+          "height": 37.75
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 23,
+            "width": 366.515625,
+            "height": 39,
+            "start": 0,
+            "end": 28,
+            "text": "A library after closing time"
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 23,
+          "width": 366.515625,
+          "height": 39
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 24,
+          "y": 85.75,
+          "width": 620,
+          "height": 211.125
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 86.75,
+            "width": 601.84375,
+            "height": 33,
+            "start": 0,
+            "end": 63,
+            "text": "When the last visitor leaves, the room becomes easier to hear. "
+          },
+          {
+            "x": 24,
+            "y": 121.9375,
+            "width": 589.140625,
+            "height": 33,
+            "start": 63,
+            "end": 121,
+            "text": "The ventilation turns a page somewhere near the window. A "
+          },
+          {
+            "x": 24,
+            "y": 157.125,
+            "width": 605.125,
+            "height": 33,
+            "start": 121,
+            "end": 185,
+            "text": "chair settles against the floor. Books that seemed like answers "
+          },
+          {
+            "x": 24,
+            "y": 192.3125,
+            "width": 618.015625,
+            "height": 33,
+            "start": 185,
+            "end": 246,
+            "text": "in the afternoon become invitations again. Tomorrow the room "
+          },
+          {
+            "x": 24,
+            "y": 227.5,
+            "width": 624.171875,
+            "height": 33,
+            "start": 246,
+            "end": 315,
+            "text": "will fill with questions, but for now it holds the quiet possibility "
+          },
+          {
+            "x": 24,
+            "y": 262.6875,
+            "width": 209.515625,
+            "height": 33,
+            "start": 315,
+            "end": 336,
+            "text": "of another beginning."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 86.75,
+          "width": 618.671875,
+          "height": 208.9375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "8f6becdb8bdb4ff9dc5880cdaac7746931902a97d23885b681f56b8f2cbffe9a",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 620,
+          "height": 151.03125
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 23,
+            "width": 606.5,
+            "height": 77,
+            "start": 0,
+            "end": 24,
+            "text": "A library after closing "
+          },
+          {
+            "x": 24,
+            "y": 98.515625,
+            "width": 126.53125,
+            "height": 77,
+            "start": 24,
+            "end": 28,
+            "text": "time"
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 23,
+          "width": 591.9375,
+          "height": 152.515625
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 24,
+          "y": 199.03125,
+          "width": 620,
+          "height": 844.6875
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 200.03125,
+            "width": 627.671875,
+            "height": 67,
+            "start": 0,
+            "end": 34,
+            "text": "When the last visitor leaves, the "
+          },
+          {
+            "x": 24,
+            "y": 270.421875,
+            "width": 576.015625,
+            "height": 67,
+            "start": 34,
+            "end": 63,
+            "text": "room becomes easier to hear. "
+          },
+          {
+            "x": 24,
+            "y": 340.8125,
+            "width": 557.3125,
+            "height": 67,
+            "start": 63,
+            "end": 92,
+            "text": "The ventilation turns a page "
+          },
+          {
+            "x": 24,
+            "y": 411.203125,
+            "width": 620.984375,
+            "height": 67,
+            "start": 92,
+            "end": 121,
+            "text": "somewhere near the window. A "
+          },
+          {
+            "x": 24,
+            "y": 481.59375,
+            "width": 583.3125,
+            "height": 67,
+            "start": 121,
+            "end": 154,
+            "text": "chair settles against the floor. "
+          },
+          {
+            "x": 24,
+            "y": 551.984375,
+            "width": 626.921875,
+            "height": 67,
+            "start": 154,
+            "end": 185,
+            "text": "Books that seemed like answers "
+          },
+          {
+            "x": 24,
+            "y": 622.375,
+            "width": 485.421875,
+            "height": 67,
+            "start": 185,
+            "end": 209,
+            "text": "in the afternoon become "
+          },
+          {
+            "x": 24,
+            "y": 692.765625,
+            "width": 563.078125,
+            "height": 67,
+            "start": 209,
+            "end": 237,
+            "text": "invitations again. Tomorrow "
+          },
+          {
+            "x": 24,
+            "y": 763.15625,
+            "width": 436.09375,
+            "height": 67,
+            "start": 237,
+            "end": 261,
+            "text": "the room will fill with "
+          },
+          {
+            "x": 24,
+            "y": 833.546875,
+            "width": 602.328125,
+            "height": 67,
+            "start": 261,
+            "end": 293,
+            "text": "questions, but for now it holds "
+          },
+          {
+            "x": 24,
+            "y": 903.9375,
+            "width": 609.09375,
+            "height": 67,
+            "start": 293,
+            "end": 326,
+            "text": "the quiet possibility of another "
+          },
+          {
+            "x": 24,
+            "y": 974.328125,
+            "width": 207.375,
+            "height": 67,
+            "start": 326,
+            "end": 336,
+            "text": "beginning."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 200.03125,
+          "width": 616.671875,
+          "height": 841.296875
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "d91e0f211d1780e7f2a4e8c117753701f71166d01a9aa0e84e5b91347a793c24",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 620,
+          "height": 37.75
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 23,
+            "width": 366.515625,
+            "height": 39,
+            "start": 0,
+            "end": 28,
+            "text": "A library after closing time"
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 23,
+          "width": 366.515625,
+          "height": 39
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 24,
+          "y": 85.75,
+          "width": 620,
+          "height": 211.125
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 86.75,
+            "width": 601.84375,
+            "height": 33,
+            "start": 0,
+            "end": 63,
+            "text": "When the last visitor leaves, the room becomes easier to hear. "
+          },
+          {
+            "x": 24,
+            "y": 121.9375,
+            "width": 589.140625,
+            "height": 33,
+            "start": 63,
+            "end": 121,
+            "text": "The ventilation turns a page somewhere near the window. A "
+          },
+          {
+            "x": 24,
+            "y": 157.125,
+            "width": 605.125,
+            "height": 33,
+            "start": 121,
+            "end": 185,
+            "text": "chair settles against the floor. Books that seemed like answers "
+          },
+          {
+            "x": 24,
+            "y": 192.3125,
+            "width": 618.015625,
+            "height": 33,
+            "start": 185,
+            "end": 246,
+            "text": "in the afternoon become invitations again. Tomorrow the room "
+          },
+          {
+            "x": 24,
+            "y": 227.5,
+            "width": 624.171875,
+            "height": 33,
+            "start": 246,
+            "end": 315,
+            "text": "will fill with questions, but for now it holds the quiet possibility "
+          },
+          {
+            "x": 24,
+            "y": 262.6875,
+            "width": 209.515625,
+            "height": 33,
+            "start": 315,
+            "end": 336,
+            "text": "of another beginning."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 86.75,
+          "width": 618.671875,
+          "height": 208.9375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "0dbb540bc959198600fac2c70c1e1141ba7410727768559766a4aec5b34e6ff7",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 620,
+          "height": 151.03125
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 23,
+            "width": 606.5,
+            "height": 77,
+            "start": 0,
+            "end": 24,
+            "text": "A library after closing "
+          },
+          {
+            "x": 24,
+            "y": 98.515625,
+            "width": 126.53125,
+            "height": 77,
+            "start": 24,
+            "end": 28,
+            "text": "time"
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 23,
+          "width": 591.9375,
+          "height": 152.515625
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 24,
+          "y": 199.03125,
+          "width": 620,
+          "height": 844.6875
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 200.03125,
+            "width": 627.671875,
+            "height": 67,
+            "start": 0,
+            "end": 34,
+            "text": "When the last visitor leaves, the "
+          },
+          {
+            "x": 24,
+            "y": 270.421875,
+            "width": 576.015625,
+            "height": 67,
+            "start": 34,
+            "end": 63,
+            "text": "room becomes easier to hear. "
+          },
+          {
+            "x": 24,
+            "y": 340.8125,
+            "width": 557.3125,
+            "height": 67,
+            "start": 63,
+            "end": 92,
+            "text": "The ventilation turns a page "
+          },
+          {
+            "x": 24,
+            "y": 411.203125,
+            "width": 620.984375,
+            "height": 67,
+            "start": 92,
+            "end": 121,
+            "text": "somewhere near the window. A "
+          },
+          {
+            "x": 24,
+            "y": 481.59375,
+            "width": 583.3125,
+            "height": 67,
+            "start": 121,
+            "end": 154,
+            "text": "chair settles against the floor. "
+          },
+          {
+            "x": 24,
+            "y": 551.984375,
+            "width": 626.921875,
+            "height": 67,
+            "start": 154,
+            "end": 185,
+            "text": "Books that seemed like answers "
+          },
+          {
+            "x": 24,
+            "y": 622.375,
+            "width": 485.421875,
+            "height": 67,
+            "start": 185,
+            "end": 209,
+            "text": "in the afternoon become "
+          },
+          {
+            "x": 24,
+            "y": 692.765625,
+            "width": 563.078125,
+            "height": 67,
+            "start": 209,
+            "end": 237,
+            "text": "invitations again. Tomorrow "
+          },
+          {
+            "x": 24,
+            "y": 763.15625,
+            "width": 436.09375,
+            "height": 67,
+            "start": 237,
+            "end": 261,
+            "text": "the room will fill with "
+          },
+          {
+            "x": 24,
+            "y": 833.546875,
+            "width": 602.328125,
+            "height": 67,
+            "start": 261,
+            "end": 293,
+            "text": "questions, but for now it holds "
+          },
+          {
+            "x": 24,
+            "y": 903.9375,
+            "width": 609.09375,
+            "height": 67,
+            "start": 293,
+            "end": 326,
+            "text": "the quiet possibility of another "
+          },
+          {
+            "x": 24,
+            "y": 974.328125,
+            "width": 207.375,
+            "height": 67,
+            "start": 326,
+            "end": 336,
+            "text": "beginning."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 200.03125,
+          "width": 616.671875,
+          "height": 841.296875
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  }
+]

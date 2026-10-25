@@ -1,0 +1,35 @@
+{
+  "sourceHashes": {
+    "src/color.ts": "ac7529b50b9940f2ff31492163d47c29c5efecaeca8f14fe27c9cf72acf3ff51",
+    "src/composition.ts": "980721120d3f659b39c3f46cdeda7e45d032faef1ea2b60f4e3894890de0a03e"
+  },
+  "subnormalViewport": {
+    "schemaRejected": true,
+    "callRejected": true
+  },
+  "normalEmptyViewport": {
+    "fraction": 1,
+    "finite": true
+  },
+  "invariantFailure": {
+    "attempted": 0,
+    "count": 0,
+    "invariantFailedRoles": [
+      "bad"
+    ],
+    "notes": [
+      "Includes the unchanged original if it meets declared role constraints.",
+      "Alternatives edit one unlocked token at a time; multi-token repairs and unsampled colors may be missed.",
+      "An empty/exhausted search is not proof that the constraints are mathematically infeasible.",
+      "invariantFailedRoles names failed pairs whose two tokens cannot change under this editable/locked set; search is skipped for that scoped reason.",
+      "Out-of-sRGB proposals reduce chroma at fixed requested lightness/hue, then quantize to 8-bit sRGB and recheck contrast.",
+      "This simple chroma reduction is a local search policy, not the CSS Color 4 gamut-mapping algorithm.",
+      "Sampling angles/deltas describe search coverage only; they are not empirically optimal hue or lightness constants."
+    ]
+  },
+  "repairableControl": {
+    "attempted": 361,
+    "count": 4,
+    "invariantFailedRoles": []
+  }
+}

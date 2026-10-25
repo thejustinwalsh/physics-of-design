@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "events": [
+    {
+      "action": "tap",
+      "name": "Remove The art of looking longer",
+      "started": 1792897283809,
+      "receipt": "2026-10-25T03:01:24.175Z"
+    },
+    {
+      "action": "tap",
+      "name": "Save The art of looking longer",
+      "started": 1792897284757,
+      "receipt": "2026-10-25T03:01:25.089Z"
+    },
+    {
+      "action": "tap",
+      "name": "Saved",
+      "started": 1792897285393,
+      "receipt": "2026-10-25T03:01:25.722Z"
+    },
+    {
+      "action": "tap",
+      "name": "Read The art of looking longer",
+      "started": 1792897286227,
+      "receipt": "2026-10-25T03:01:26.594Z"
+    },
+    {
+      "action": "tap",
+      "name": "Back to saved stories",
+      "started": 1792897289183,
+      "receipt": "2026-10-25T03:01:29.506Z"
+    },
+    {
+      "action": "tap",
+      "name": "Journal",
+      "started": 1792897289813,
+      "receipt": "2026-10-25T03:01:30.140Z"
+    },
+    {
+      "action": "tap",
+      "name": "Resume reading",
+      "started": 1792897292200,
+      "receipt": "2026-10-25T03:01:32.555Z"
+    },
+    {
+      "action": "resume-observed-offset",
+      "before": 1381.7142333984375,
+      "after": 1381.7142333984375
+    },
+    {
+      "action": "tap",
+      "name": "Back to the journal",
+      "started": 1792897293257,
+      "receipt": "2026-10-25T03:01:33.574Z"
+    },
+    {
+      "action": "tap",
+      "name": "Explore",
+      "started": 1792897293882,
+      "receipt": "2026-10-25T03:01:34.239Z"
+    },
+    {
+      "action": "tap",
+      "name": "Clear search",
+      "started": 1792897296305,
+      "receipt": "2026-10-25T03:01:36.674Z"
+    },
+    {
+      "action": "cold-project-restart-and-warm-app-link",
+      "savedRestored": true,
+      "scope": "Persistent app state verified; cold app-link transport unsupported by this Expo Go run."
+    }
+  ],
+  "scope": "Actual Android native gestures, Text/View observations and process restart. Native iOS screenshots are separate evidence."
+}

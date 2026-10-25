@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "kind": "synthetic-rating-validation",
+  "inputFilesChecked": 37,
+  "inputsUnchanged": true,
+  "ratingSchemaValid": true,
+  "imagesReferencedPerRater": 36,
+  "pairs": [
+    {
+      "pairId": "tuning-1",
+      "split": "train",
+      "a": "abstain",
+      "b": "right",
+      "exactAgreement": false
+    },
+    {
+      "pairId": "tuning-2",
+      "split": "train",
+      "a": "right",
+      "b": "tie",
+      "exactAgreement": false
+    },
+    {
+      "pairId": "tuning-3",
+      "split": "train",
+      "a": "left",
+      "b": "left",
+      "exactAgreement": true
+    },
+    {
+      "pairId": "tuning-4",
+      "split": "train",
+      "a": "tie",
+      "b": "right",
+      "exactAgreement": false
+    },
+    {
+      "pairId": "tuning-5",
+      "split": "held-out",
+      "a": "left",
+      "b": "left",
+      "exactAgreement": true
+    },
+    {
+      "pairId": "tuning-6",
+      "split": "held-out",
+      "a": "right",
+      "b": "right",
+      "exactAgreement": true
+    }
+  ],
+  "agreement": {
+    "all": {
+      "pairs": 6,
+      "exactMatches": 3,
+      "nonAbstainingPairs": 5,
+      "nonAbstainingExactMatches": 3
+    },
+    "train": {
+      "pairs": 4,
+      "exactMatches": 1,
+      "nonAbstainingPairs": 3,
+      "nonAbstainingExactMatches": 1
+    },
+    "heldOut": {
+      "pairs": 2,
+      "exactMatches": 2,
+      "nonAbstainingPairs": 2,
+      "nonAbstainingExactMatches": 2
+    }
+  },
+  "labelSha256": {
+    "ratings-a.json": "3e0569a3894495ef804b870f00288840f001ccf750a127cad50ce0cbf8697318",
+    "ratings-b.json": "509a193e7a8ba298b6853b120528bc8968974cf798723c5df3af9839f775f27f"
+  },
+  "limits": "Counts describe this synthetic batch only. No fitted constants, human agreement, preference probabilities or generalization estimates."
+}

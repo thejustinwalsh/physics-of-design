@@ -1,0 +1,28 @@
+{
+  "semif": {
+    "repository": "https://github.com/TheoLeeCJ/SemIf-OpenJev",
+    "commit": "23cf1f39fc9534fe81437200959b6dfc7106e45a",
+    "license": "MIT"
+  },
+  "model": {
+    "source": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "license": "Apache-2.0"
+  },
+  "quantization": {
+    "source": "unsloth/Qwen3.5-4B-GGUF",
+    "revision": "e87f176479d0855a907a41277aca2f8ee7a09523",
+    "file": "Qwen3.5-4B-Q4_K_M.gguf",
+    "bytes": 2740937888,
+    "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+    "license": "Apache-2.0"
+  },
+  "runtime": {
+    "backend": "llamacpp",
+    "llamaCppPython": "0.3.35",
+    "transformers": "5.17.0",
+    "threads": 8,
+    "generatedTokens": 0
+  },
+  "limits": "Checkpoint provenance is recorded from the publishers; a checksum does not independently establish training history. Option readouts select only among deterministically viable alternatives."
+}

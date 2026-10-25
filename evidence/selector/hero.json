@@ -1,0 +1,4072 @@
+{
+  "version": 1,
+  "policy": {
+    "prior": "smooth",
+    "curves": {},
+    "targets": {
+      "heroHierarchy": 3.2,
+      "editorialHierarchy": 2,
+      "proseCharacters": 62,
+      "subtitleCharacters": 46,
+      "proseLeading": 1.5,
+      "subtitleLeading": 1.35,
+      "titleLeading": 1.04,
+      "gapEm": 0.9
+    }
+  },
+  "candidates": [
+    {
+      "id": "3861a289e8a9c994",
+      "state": {
+        "version": 1,
+        "archetype": "hero",
+        "platform": "web",
+        "viewport": {
+          "width": 1280,
+          "height": 900,
+          "textScale": 1
+        },
+        "padding": 64,
+        "blocks": [
+          {
+            "id": "title",
+            "role": "title",
+            "text": "Make room for what matters.",
+            "font": {
+              "file": "assets/fonts/Lato-Black.ttf",
+              "family": "Lato Black",
+              "axes": {},
+              "opticalSizing": "none"
+            },
+            "size": 88,
+            "weight": 900,
+            "kerning": "auto",
+            "features": {},
+            "trackingEm": -0.0275,
+            "leading": 1.027,
+            "measure": 1072.124,
+            "align": "left",
+            "direction": "auto",
+            "language": "en",
+            "maxHeight": null
+          },
+          {
+            "id": "subtitle",
+            "role": "subtitle",
+            "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+            "font": {
+              "file": "assets/fonts/Lato-Regular.ttf",
+              "family": "Lato",
+              "axes": {},
+              "opticalSizing": "none"
+            },
+            "size": 24,
+            "weight": 400,
+            "kerning": "auto",
+            "features": {},
+            "trackingEm": 0.001,
+            "leading": 1.35,
+            "measure": 543.635,
+            "align": "left",
+            "direction": "auto",
+            "language": "en",
+            "maxHeight": null
+          }
+        ],
+        "gaps": [
+          25.12
+        ],
+        "locks": [],
+        "responsive": {
+          "source": "astra-responsive-review-2026-10-24",
+          "anchors": [
+            {
+              "width": 360,
+              "padding": 24,
+              "gapScale": 0.7142857142857143,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 0.5909090909090909,
+                  "leadingDelta": 0.06000000000000005,
+                  "trackingDelta": 0.009000000000000001,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 0.9166666666666666,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 390,
+              "padding": 24,
+              "gapScale": 0.7857142857142857,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 0.6363636363636364,
+                  "leadingDelta": 0.06000000000000005,
+                  "trackingDelta": 0.009000000000000001,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 0.9166666666666666,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 834,
+              "padding": 40,
+              "gapScale": 1,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 0.9090909090909091,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 1024,
+              "padding": 48,
+              "gapScale": 1,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 1440,
+              "padding": 64,
+              "gapScale": 1.1428571428571428,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 1.0909090909090908,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            }
+          ],
+          "split": {
+            "titleMinWidth": 240,
+            "textMinWidth": 360,
+            "gap": 40
+          }
+        },
+        "colors": null
+      },
+      "measurement": {
+        "inputHash": "423564f4140ec683d142ee8960f23213d56e93a81d6438c8c8122a9329b18d5f",
+        "platform": "web",
+        "engine": "chromium/react/stylex",
+        "runtime": {
+          "chromium": "156.0.8078.4",
+          "deviceScaleFactor": 1
+        },
+        "blocks": [
+          {
+            "id": "title",
+            "box": {
+              "x": 57.84375,
+              "y": 57.84375,
+              "width": 992.703125,
+              "height": 190.84375
+            },
+            "lines": [
+              {
+                "x": 57.84375,
+                "y": 48.84375,
+                "width": 819.703125,
+                "height": 112,
+                "start": 0,
+                "end": 19,
+                "text": "Make room for what "
+              },
+              {
+                "x": 57.84375,
+                "y": 144.265625,
+                "width": 322.53125,
+                "height": 112,
+                "start": 19,
+                "end": 27,
+                "text": "matters."
+              }
+            ],
+            "inlineBounds": {
+              "x": 57.84375,
+              "y": 48.84375,
+              "width": 800.1875,
+              "height": 207.421875
+            },
+            "inkBounds": null,
+            "overflowX": 0,
+            "overflowY": 0
+          },
+          {
+            "id": "subtitle",
+            "box": {
+              "x": 57.84375,
+              "y": 276.015625,
+              "width": 543.625,
+              "height": 64.78125
+            },
+            "lines": [
+              {
+                "x": 57.84375,
+                "y": 277.015625,
+                "width": 486.53125,
+                "height": 29,
+                "start": 0,
+                "end": 49,
+                "text": "A quieter place to collect your ideas, find your "
+              },
+              {
+                "x": 57.84375,
+                "y": 309.40625,
+                "width": 444.140625,
+                "height": 29,
+                "start": 49,
+                "end": 89,
+                "text": "focus, and begin something worth making."
+              }
+            ],
+            "inlineBounds": {
+              "x": 57.84375,
+              "y": 277.015625,
+              "width": 480.335375,
+              "height": 61.390625
+            },
+            "inkBounds": null,
+            "overflowX": 0,
+            "overflowY": 0
+          }
+        ],
+        "issues": [],
+        "feasible": true,
+        "textSpacing": {
+          "tested": true,
+          "issues": []
+        },
+        "scope": [
+          "Only this specimen and viewport were verified.",
+          "Inline bounds are DOM range bounds, not glyph ink bounds.",
+          "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+          "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+        ]
+      },
+      "responsive": [
+        {
+          "inputHash": "397332f1d7ee51b06e1059addddae22d5acc3dbff938e67c521d7a5041f8451d",
+          "platform": "web",
+          "engine": "chromium/react/stylex",
+          "runtime": {
+            "chromium": "156.0.8078.4",
+            "deviceScaleFactor": 1
+          },
+          "blocks": [
+            {
+              "id": "title",
+              "box": {
+                "x": 24,
+                "y": 24,
+                "width": 312,
+                "height": 169.546875
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 21,
+                  "width": 268.40625,
+                  "height": 62,
+                  "start": 0,
+                  "end": 10,
+                  "text": "Make room "
+                },
+                {
+                  "x": 24,
+                  "y": 77.515625,
+                  "width": 199.21875,
+                  "height": 62,
+                  "start": 10,
+                  "end": 19,
+                  "text": "for what "
+                },
+                {
+                  "x": 24,
+                  "y": 134.03125,
+                  "width": 184.25,
+                  "height": 62,
+                  "start": 19,
+                  "end": 27,
+                  "text": "matters."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 21,
+                "width": 257.015625,
+                "height": 175.03125
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            },
+            {
+              "id": "subtitle",
+              "box": {
+                "x": 24,
+                "y": 211.484375,
+                "width": 312,
+                "height": 89.0625
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 212.484375,
+                  "width": 293.6875,
+                  "height": 27,
+                  "start": 0,
+                  "end": 32,
+                  "text": "A quieter place to collect your "
+                },
+                {
+                  "x": 24,
+                  "y": 242.171875,
+                  "width": 315.140625,
+                  "height": 27,
+                  "start": 32,
+                  "end": 66,
+                  "text": "ideas, find your focus, and begin "
+                },
+                {
+                  "x": 24,
+                  "y": 271.859375,
+                  "width": 244.28125,
+                  "height": 27,
+                  "start": 66,
+                  "end": 89,
+                  "text": "something worth making."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 212.484375,
+                "width": 309.462375,
+                "height": 86.375
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            }
+          ],
+          "issues": [],
+          "feasible": true,
+          "textSpacing": {
+            "tested": true,
+            "issues": []
+          },
+          "scope": [
+            "Only this specimen and viewport were verified.",
+            "Inline bounds are DOM range bounds, not glyph ink bounds.",
+            "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+            "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+          ]
+        },
+        {
+          "inputHash": "b3518969ea95eddb87c71ec27f72361d24f46921bb62ac216bedfa0b28f7bc27",
+          "platform": "web",
+          "engine": "chromium/react/stylex",
+          "runtime": {
+            "chromium": "156.0.8078.4",
+            "deviceScaleFactor": 1
+          },
+          "blocks": [
+            {
+              "id": "title",
+              "box": {
+                "x": 24,
+                "y": 24,
+                "width": 312,
+                "height": 678.28125
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 18,
+                  "width": 275.921875,
+                  "height": 125,
+                  "start": 0,
+                  "end": 5,
+                  "text": "Make "
+                },
+                {
+                  "x": 24,
+                  "y": 131.046875,
+                  "width": 260.890625,
+                  "height": 125,
+                  "start": 5,
+                  "end": 10,
+                  "text": "room "
+                },
+                {
+                  "x": 24,
+                  "y": 244.09375,
+                  "width": 148.46875,
+                  "height": 125,
+                  "start": 10,
+                  "end": 14,
+                  "text": "for "
+                },
+                {
+                  "x": 24,
+                  "y": 357.140625,
+                  "width": 249.984375,
+                  "height": 125,
+                  "start": 14,
+                  "end": 19,
+                  "text": "what "
+                },
+                {
+                  "x": 24,
+                  "y": 470.1875,
+                  "width": 301.65625,
+                  "height": 125,
+                  "start": 19,
+                  "end": 25,
+                  "text": "matter"
+                },
+                {
+                  "x": 24,
+                  "y": 583.234375,
+                  "width": 66.9375,
+                  "height": 125,
+                  "start": 25,
+                  "end": 27,
+                  "text": "s."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 18,
+                "width": 301.65625,
+                "height": 690.234375
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            },
+            {
+              "id": "subtitle",
+              "box": {
+                "x": 24,
+                "y": 720.21875,
+                "width": 312,
+                "height": 415.734375
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 723.21875,
+                  "width": 300.375,
+                  "height": 52,
+                  "start": 0,
+                  "end": 16,
+                  "text": "A quieter place "
+                },
+                {
+                  "x": 24,
+                  "y": 782.609375,
+                  "width": 287,
+                  "height": 52,
+                  "start": 16,
+                  "end": 32,
+                  "text": "to collect your "
+                },
+                {
+                  "x": 24,
+                  "y": 842,
+                  "width": 304.609375,
+                  "height": 52,
+                  "start": 32,
+                  "end": 49,
+                  "text": "ideas, find your "
+                },
+                {
+                  "x": 24,
+                  "y": 901.390625,
+                  "width": 208.3125,
+                  "height": 52,
+                  "start": 49,
+                  "end": 60,
+                  "text": "focus, and "
+                },
+                {
+                  "x": 24,
+                  "y": 960.78125,
+                  "width": 117.40625,
+                  "height": 52,
+                  "start": 60,
+                  "end": 66,
+                  "text": "begin "
+                },
+                {
+                  "x": 24,
+                  "y": 1020.171875,
+                  "width": 212.390625,
+                  "height": 52,
+                  "start": 66,
+                  "end": 76,
+                  "text": "something "
+                },
+                {
+                  "x": 24,
+                  "y": 1079.5625,
+                  "width": 276.171875,
+                  "height": 52,
+                  "start": 76,
+                  "end": 89,
+                  "text": "worth making."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 723.21875,
+                "width": 293.252875,
+                "height": 408.34375
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            }
+          ],
+          "issues": [],
+          "feasible": true,
+          "textSpacing": {
+            "tested": true,
+            "issues": []
+          },
+          "scope": [
+            "Only this specimen and viewport were verified.",
+            "Inline bounds are DOM range bounds, not glyph ink bounds.",
+            "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+            "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+          ]
+        },
+        {
+          "inputHash": "8e63fa48a22e96061818060ca0a15f3ae5904f637bdeda0e1dfd90f199bfcb0c",
+          "platform": "web",
+          "engine": "chromium/react/stylex",
+          "runtime": {
+            "chromium": "156.0.8078.4",
+            "deviceScaleFactor": 1
+          },
+          "blocks": [
+            {
+              "id": "title",
+              "box": {
+                "x": 57.84375,
+                "y": 57.84375,
+                "width": 992.703125,
+                "height": 572.578125
+              },
+              "lines": [
+                {
+                  "x": 57.84375,
+                  "y": 40.84375,
+                  "width": 942.5,
+                  "height": 223,
+                  "start": 0,
+                  "end": 10,
+                  "text": "Make room "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 231.703125,
+                  "width": 696.90625,
+                  "height": 223,
+                  "start": 10,
+                  "end": 19,
+                  "text": "for what "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 422.5625,
+                  "width": 645.0625,
+                  "height": 223,
+                  "start": 19,
+                  "end": 27,
+                  "text": "matters."
+                }
+              ],
+              "inlineBounds": {
+                "x": 57.84375,
+                "y": 40.84375,
+                "width": 903.46875,
+                "height": 604.71875
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            },
+            {
+              "id": "subtitle",
+              "box": {
+                "x": 57.84375,
+                "y": 657.75,
+                "width": 543.625,
+                "height": 259.1875
+              },
+              "lines": [
+                {
+                  "x": 57.84375,
+                  "y": 660.75,
+                  "width": 533.71875,
+                  "height": 57,
+                  "start": 0,
+                  "end": 27,
+                  "text": "A quieter place to collect "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 725.546875,
+                  "width": 439.328125,
+                  "height": 57,
+                  "start": 27,
+                  "end": 49,
+                  "text": "your ideas, find your "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 790.34375,
+                  "width": 355.3125,
+                  "height": 57,
+                  "start": 49,
+                  "end": 66,
+                  "text": "focus, and begin "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 855.140625,
+                  "width": 532.96875,
+                  "height": 57,
+                  "start": 66,
+                  "end": 89,
+                  "text": "something worth making."
+                }
+              ],
+              "inlineBounds": {
+                "x": 57.84375,
+                "y": 660.75,
+                "width": 532.92075,
+                "height": 251.390625
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            }
+          ],
+          "issues": [],
+          "feasible": true,
+          "textSpacing": {
+            "tested": true,
+            "issues": []
+          },
+          "scope": [
+            "Only this specimen and viewport were verified.",
+            "Inline bounds are DOM range bounds, not glyph ink bounds.",
+            "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+            "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+          ]
+        }
+      ],
+      "relations": {
+        "colors": {
+          "declared": {
+            "system": {
+              "tokens": {
+                "canvas": "#f6f4ed",
+                "ink": "#171918",
+                "accent": "#22745d"
+              },
+              "roles": [],
+              "harmony": "free"
+            },
+            "context": {
+              "contrastLevel": "AA",
+              "chromaRange": null,
+              "lightnessRange": null,
+              "hueReference": null
+            },
+            "tokens": {
+              "canvas": {
+                "hex": "#f6f4ed",
+                "srgb": {
+                  "r": 0.9647058823529412,
+                  "g": 0.9568627450980393,
+                  "b": 0.9294117647058824
+                },
+                "luminance": 0.9040862218841148,
+                "oklab": {
+                  "L": 0.966762439675821,
+                  "a": -0.0005923444369465014,
+                  "b": 0.009498074276032886
+                },
+                "oklch": {
+                  "L": 0.966762439675821,
+                  "C": 0.009516527039052593,
+                  "h": 93.56861165874062
+                },
+                "gamut": "sRGB",
+                "alpha": 1,
+                "provenance": [
+                  "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              },
+              "ink": {
+                "hex": "#171918",
+                "srgb": {
+                  "r": 0.09019607843137255,
+                  "g": 0.09803921568627451,
+                  "b": 0.09411764705882353
+                },
+                "luminance": 0.009433677172135986,
+                "oklab": {
+                  "L": 0.21083982257829417,
+                  "a": -0.0035077241058973224,
+                  "b": 0.0009606663474576727
+                },
+                "oklch": {
+                  "L": 0.21083982257829417,
+                  "C": 0.0036368954115056475,
+                  "h": 164.68386796440905
+                },
+                "gamut": "sRGB",
+                "alpha": 1,
+                "provenance": [
+                  "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              },
+              "accent": {
+                "hex": "#22745d",
+                "srgb": {
+                  "r": 0.13333333333333333,
+                  "g": 0.4549019607843137,
+                  "b": 0.36470588235294116
+                },
+                "luminance": 0.13621177058217498,
+                "oklab": {
+                  "L": 0.5037015788351594,
+                  "a": -0.08506367152123545,
+                  "b": 0.014446492966392999
+                },
+                "oklch": {
+                  "L": 0.5037015788351594,
+                  "C": 0.08628168618948454,
+                  "h": 170.36133677721114
+                },
+                "gamut": "sRGB",
+                "alpha": 1,
+                "provenance": [
+                  "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              }
+            },
+            "roles": [],
+            "hardConstraintsPass": true,
+            "constrainedRoles": 0,
+            "factors": {
+              "harmony": {
+                "preference": "free",
+                "reference": "accent",
+                "kind": "heuristic",
+                "source": [
+                  "local-policy: configurable hue-wheel convention; not preference data"
+                ],
+                "uncertainty": "high; depends on area, adjacency, lightness, chroma, culture and task",
+                "chromaticCutoff": 0.02,
+                "distinctChromaticColors": 1,
+                "meanAngularError": null,
+                "status": "not-requested"
+              },
+              "chroma": {
+                "canvas": {
+                  "value": 0.009516527039052593,
+                  "distance": null
+                },
+                "ink": {
+                  "value": 0.0036368954115056475,
+                  "distance": null
+                },
+                "accent": {
+                  "value": 0.08628168618948454,
+                  "distance": null
+                }
+              },
+              "lightness": {
+                "canvas": {
+                  "value": 0.966762439675821,
+                  "distance": null
+                },
+                "ink": {
+                  "value": 0.21083982257829417,
+                  "distance": null
+                },
+                "accent": {
+                  "value": 0.5037015788351594,
+                  "distance": null
+                }
+              }
+            },
+            "provenance": {
+              "contrast": {
+                "kind": "standard",
+                "source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/"
+              },
+              "descriptors": {
+                "kind": "calculation",
+                "source": [
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              },
+              "preferences": {
+                "kind": "heuristic",
+                "source": "caller ranges and local hue-wheel convention",
+                "uncertainty": "uncalibrated; no human preference evidence"
+              }
+            },
+            "assumptions": [
+              "Opaque encoded sRGB inputs; no alpha, blending, gradients, images, HDR or Display P3.",
+              "WCAG luminance is not OKLab lightness. Contrast is not a complete accessibility audit.",
+              "No role declarations means no contrast obligations were checked; it is not an accessibility pass.",
+              "Hue-wheel preferences are optional descriptors, not physical constraints or a beauty score."
+            ]
+          },
+          "text": [
+            {
+              "id": "title",
+              "ratio": 16.05295629144438,
+              "minimum": 3,
+              "passes": true,
+              "size": 92.9230769230769,
+              "weight": 900,
+              "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+              "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
+            },
+            {
+              "id": "subtitle",
+              "ratio": 16.05295629144438,
+              "minimum": 3,
+              "passes": true,
+              "size": 24,
+              "weight": 400,
+              "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+              "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
+            }
+          ],
+          "hardConstraintsPass": true
+        },
+        "composition": {
+          "constraints": [],
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "context": {
+            "direction": "ltr",
+            "flow": "column",
+            "alignmentTolerance": 4,
+            "source": "chromium/react/stylex measured peer text boxes"
+          },
+          "rectangleCount": 2,
+          "zeroAreaRectangles": [],
+          "outsideViewport": [],
+          "alignment": {
+            "tolerance": 4,
+            "kind": "calculation",
+            "pairs": [
+              {
+                "a": "title",
+                "b": "subtitle",
+                "distances": {
+                  "left": 0,
+                  "centerX": 224.5390625,
+                  "right": 449.078125,
+                  "top": 218.171875,
+                  "centerY": 155.140625,
+                  "bottom": 92.109375
+                },
+                "withinTolerance": [
+                  "left"
+                ]
+              }
+            ],
+            "preferenceSource": "caller tolerance; no universal alignment target is inferred"
+          },
+          "proximity": [],
+          "hierarchy": {
+            "kind": "descriptor",
+            "areaRanking": [
+              {
+                "id": "title",
+                "area": 189451.18701171875
+              },
+              {
+                "id": "subtitle",
+                "area": 35216.70703125
+              }
+            ],
+            "largestToMedianArea": 1.686499869674172,
+            "declaredPriority": [],
+            "interpretation": "box area and declared priority are not font weight, perceived emphasis, comprehension or task importance"
+          },
+          "balance": {
+            "kind": "descriptor",
+            "occupiedUnionCentroid": {
+              "x": 518.9987998215054,
+              "y": 177.5839280781652
+            },
+            "normalizedOffset": {
+              "x": -0.09453218763944893,
+              "y": -0.30268452435759424
+            },
+            "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+          },
+          "whitespace": {
+            "kind": "calculation",
+            "occupiedUnionArea": 224667.89404296875,
+            "viewportArea": 1152000,
+            "unoccupiedArea": 927332.1059570312,
+            "unoccupiedFraction": 0.8049757864210341,
+            "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+          },
+          "overlap": {
+            "kind": "calculation",
+            "pairs": [],
+            "interpretation": "pairwise intersections; intentional layering and parent/child containment are not automatically errors"
+          },
+          "readingOrder": {
+            "declared": [
+              "title",
+              "subtitle"
+            ],
+            "steps": [
+              {
+                "from": "title",
+                "to": "subtitle",
+                "primaryDelta": 218.171875,
+                "secondaryDelta": 0,
+                "geometricReversal": false
+              }
+            ],
+            "kind": "descriptor",
+            "interpretation": "geometric reversals relative to declared axis/direction only; not DOM, focus, screen-reader or multi-column order validation"
+          },
+          "provenance": {
+            "measurements": "chromium/react/stylex measured peer text boxes",
+            "geometry": "deterministic axis-aligned rectangle calculations; source measurement quality remains the caller responsibility",
+            "judgment": "none: no preference rating, universal beauty score, or optimization target"
+          },
+          "limitations": [
+            "Supply comparable semantic regions; including a full-surface container makes its area occupied by definition.",
+            "Union occupancy/centroid are invariant to duplicate nested coverage; pairwise alignment/proximity and area hierarchy are not.",
+            "No glyph ink, color salience, occlusion order, gaze, semantics, motion or interaction is inferred from boxes.",
+            "Geometry can describe grouping and rhythm, but human task context determines whether they work.",
+            "No layout is emitted; any downstream implementation must preserve the project flex/Yoga-only contract."
+          ]
+        },
+        "inputHash": "423564f4140ec683d142ee8960f23213d56e93a81d6438c8c8122a9329b18d5f",
+        "feasible": true,
+        "prior": "smooth",
+        "factors": [
+          {
+            "id": "tracking:title",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "high; no font/script-specific fitted coefficients",
+            "value": -0.0275,
+            "compatibility": 0.9992697598574188,
+            "curve": null,
+            "evidence": {
+              "target": -0.028455580254207836,
+              "weight": 900,
+              "size": 92.9230769230769,
+              "kerning": "auto",
+              "lineCount": 2
+            },
+            "alternatives": [
+              -0.03645558025420784,
+              -0.028455580254207836,
+              -0.020455580254207836
+            ]
+          },
+          {
+            "id": "leading:title",
+            "kind": "heuristic",
+            "source": [
+              "leading-study",
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 1.027,
+            "compatibility": 0.9988603237730611,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 1.04,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "lineCount": 2,
+              "measure": 992.7074074074075,
+              "fontMetrics": {
+                "xHeight": 1031,
+                "unitsPerEm": 2000
+              }
+            },
+            "alternatives": [
+              0.98,
+              1.04,
+              1.1
+            ]
+          },
+          {
+            "id": "measure:title",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 13,
+            "compatibility": 0.06659845255302084,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 24,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "width": 992.703125,
+              "lineLengths": [
+                18,
+                8
+              ],
+              "lastLine": 8,
+              "note": "UTF-16 lengths describe this content; not a language-independent readability measure"
+            },
+            "alternatives": [
+              893.4366666666667,
+              992.7074074074075,
+              1091.9781481481482
+            ]
+          },
+          {
+            "id": "tracking:subtitle",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "high; no font/script-specific fitted coefficients",
+            "value": 0.001,
+            "compatibility": 0.999999694237776,
+            "curve": null,
+            "evidence": {
+              "target": 0.0009804499913461254,
+              "weight": 400,
+              "size": 24,
+              "kerning": "auto",
+              "lineCount": 2
+            },
+            "alternatives": [
+              -0.007019550008653875,
+              0.0009804499913461254,
+              0.008980449991346125
+            ]
+          },
+          {
+            "id": "leading:subtitle",
+            "kind": "heuristic",
+            "source": [
+              "leading-study",
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 1.35,
+            "compatibility": 1,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 1.35,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "lineCount": 2,
+              "measure": 543.635,
+              "fontMetrics": {
+                "xHeight": 1013,
+                "unitsPerEm": 2000
+              }
+            },
+            "alternatives": [
+              1.29,
+              1.35,
+              1.4100000000000001
+            ]
+          },
+          {
+            "id": "measure:subtitle",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 44,
+            "compatibility": 0.9858602668782243,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 46,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "width": 543.625,
+              "lineLengths": [
+                48,
+                40
+              ],
+              "lastLine": 40,
+              "note": "UTF-16 lengths describe this content; not a language-independent readability measure"
+            },
+            "alternatives": [
+              489.2715,
+              543.635,
+              597.9985
+            ]
+          },
+          {
+            "id": "hierarchy",
+            "kind": "heuristic",
+            "source": [
+              "harvard",
+              "gregory",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 3.871794871794871,
+            "compatibility": 0.7697209005991651,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 3.2,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "titleSize": 92.9230769230769,
+              "proseSize": 24,
+              "titleWeight": 900,
+              "proseWeight": 400
+            },
+            "alternatives": [
+              3.6394871794871784,
+              3.871794871794871,
+              4.104102564102563
+            ]
+          },
+          {
+            "id": "whitespace:0",
+            "kind": "heuristic",
+            "source": [
+              "local-policy",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 1.1386813186813185,
+            "compatibility": 0.671132790561167,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 0.9,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "gap": 27.328351648351646,
+              "nextSize": 24,
+              "aboveLines": 2,
+              "geometry": "inline boxes; optical whitespace needs glyph ink verification"
+            },
+            "alternatives": [
+              14.399999999999999,
+              21.6,
+              28.799999999999997
+            ]
+          }
+        ],
+        "rhythm": {
+          "normalizer": 27.328351648351646,
+          "binWidth": 0.25,
+          "bins": [
+            "0"
+          ],
+          "entropyBits": 0,
+          "localEntropy": [
+            {
+              "start": 0,
+              "end": 1,
+              "entropyBits": 0
+            }
+          ],
+          "motifs": [],
+          "intervalSequence": [],
+          "surpriseBits": null,
+          "surpriseSource": null,
+          "caveat": "Entropy measures variation, not quality. Null surprise means no empirical distribution or an unseen bin. Preserve spatial order and semantic grouping."
+        },
+        "issues": [],
+        "interpretation": "Separate conditional compatibility factors. No sum, global beauty score, calibrated preference probability or SemIf-derived validity.",
+        "objectives": {
+          "tracking:title": 0.9992697598574188,
+          "leading:title": 0.9988603237730611,
+          "measure:title": 0.06659845255302084,
+          "tracking:subtitle": 0.999999694237776,
+          "leading:subtitle": 1,
+          "measure:subtitle": 0.9858602668782243,
+          "hierarchy": 0.7697209005991651,
+          "whitespace:0": 0.671132790561167
+        }
+      },
+      "viable": true,
+      "pareto": false,
+      "changes": [
+        "/blocks/0/size",
+        "/blocks/1/size",
+        "/blocks/0/trackingEm",
+        "/blocks/0/leading",
+        "/blocks/0/measure",
+        "/blocks/1/trackingEm",
+        "/blocks/1/leading",
+        "/blocks/1/measure",
+        "/gaps/0"
+      ]
+    },
+    {
+      "id": "1d2aa5bdf70f1d6b",
+      "state": {
+        "version": 1,
+        "archetype": "hero",
+        "platform": "web",
+        "viewport": {
+          "width": 1280,
+          "height": 900,
+          "textScale": 1
+        },
+        "padding": 64,
+        "blocks": [
+          {
+            "id": "title",
+            "role": "title",
+            "text": "Make room for what matters.",
+            "font": {
+              "file": "assets/fonts/Lato-Black.ttf",
+              "family": "Lato Black",
+              "axes": {},
+              "opticalSizing": "none"
+            },
+            "size": 88,
+            "weight": 900,
+            "kerning": "auto",
+            "features": {},
+            "trackingEm": -0.0275,
+            "leading": 1.027,
+            "measure": 1072.124,
+            "align": "left",
+            "direction": "auto",
+            "language": "en",
+            "maxHeight": null
+          },
+          {
+            "id": "subtitle",
+            "role": "subtitle",
+            "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+            "font": {
+              "file": "assets/fonts/Lato-Regular.ttf",
+              "family": "Lato",
+              "axes": {},
+              "opticalSizing": "none"
+            },
+            "size": 25.532,
+            "weight": 400,
+            "kerning": "auto",
+            "features": {},
+            "trackingEm": -0.0001,
+            "leading": 1.35,
+            "measure": 578.337,
+            "align": "left",
+            "direction": "auto",
+            "language": "en",
+            "maxHeight": null
+          }
+        ],
+        "gaps": [
+          26.499
+        ],
+        "locks": [],
+        "responsive": {
+          "source": "astra-responsive-review-2026-10-24",
+          "anchors": [
+            {
+              "width": 360,
+              "padding": 24,
+              "gapScale": 0.7142857142857143,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 0.5909090909090909,
+                  "leadingDelta": 0.06000000000000005,
+                  "trackingDelta": 0.009000000000000001,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 0.9166666666666666,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 390,
+              "padding": 24,
+              "gapScale": 0.7857142857142857,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 0.6363636363636364,
+                  "leadingDelta": 0.06000000000000005,
+                  "trackingDelta": 0.009000000000000001,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 0.9166666666666666,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 834,
+              "padding": 40,
+              "gapScale": 1,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 0.9090909090909091,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 1024,
+              "padding": 48,
+              "gapScale": 1,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 1440,
+              "padding": 64,
+              "gapScale": 1.1428571428571428,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 1.0909090909090908,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            }
+          ],
+          "split": {
+            "titleMinWidth": 240,
+            "textMinWidth": 360,
+            "gap": 40
+          }
+        },
+        "colors": null
+      },
+      "measurement": {
+        "inputHash": "fe6269aba020db654949a17514f3efc87e702eeb390e2a5d6efe61bb02e8b4e0",
+        "platform": "web",
+        "engine": "chromium/react/stylex",
+        "runtime": {
+          "chromium": "156.0.8078.4",
+          "deviceScaleFactor": 1
+        },
+        "blocks": [
+          {
+            "id": "title",
+            "box": {
+              "x": 57.84375,
+              "y": 57.84375,
+              "width": 992.703125,
+              "height": 190.84375
+            },
+            "lines": [
+              {
+                "x": 57.84375,
+                "y": 48.84375,
+                "width": 819.703125,
+                "height": 112,
+                "start": 0,
+                "end": 19,
+                "text": "Make room for what "
+              },
+              {
+                "x": 57.84375,
+                "y": 144.265625,
+                "width": 322.53125,
+                "height": 112,
+                "start": 19,
+                "end": 27,
+                "text": "matters."
+              }
+            ],
+            "inlineBounds": {
+              "x": 57.84375,
+              "y": 48.84375,
+              "width": 800.1875,
+              "height": 207.421875
+            },
+            "inkBounds": null,
+            "overflowX": 0,
+            "overflowY": 0
+          },
+          {
+            "id": "subtitle",
+            "box": {
+              "x": 57.84375,
+              "y": 277.515625,
+              "width": 578.328125,
+              "height": 68.90625
+            },
+            "lines": [
+              {
+                "x": 57.84375,
+                "y": 279.515625,
+                "width": 516.171875,
+                "height": 30,
+                "start": 0,
+                "end": 49,
+                "text": "A quieter place to collect your ideas, find your "
+              },
+              {
+                "x": 57.84375,
+                "y": 313.96875,
+                "width": 471.328125,
+                "height": 30,
+                "start": 49,
+                "end": 89,
+                "text": "focus, and begin something worth making."
+              }
+            ],
+            "inlineBounds": {
+              "x": 57.84375,
+              "y": 279.515625,
+              "width": 509.625,
+              "height": 64.453125
+            },
+            "inkBounds": null,
+            "overflowX": 0,
+            "overflowY": 0
+          }
+        ],
+        "issues": [],
+        "feasible": true,
+        "textSpacing": {
+          "tested": true,
+          "issues": []
+        },
+        "scope": [
+          "Only this specimen and viewport were verified.",
+          "Inline bounds are DOM range bounds, not glyph ink bounds.",
+          "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+          "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+        ]
+      },
+      "responsive": [
+        {
+          "inputHash": "8774dcaf5604ce60485607b7661def27cbf2901d16b6a5144c134010252f20bc",
+          "platform": "web",
+          "engine": "chromium/react/stylex",
+          "runtime": {
+            "chromium": "156.0.8078.4",
+            "deviceScaleFactor": 1
+          },
+          "blocks": [
+            {
+              "id": "title",
+              "box": {
+                "x": 24,
+                "y": 24,
+                "width": 312,
+                "height": 169.546875
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 21,
+                  "width": 268.40625,
+                  "height": 62,
+                  "start": 0,
+                  "end": 10,
+                  "text": "Make room "
+                },
+                {
+                  "x": 24,
+                  "y": 77.515625,
+                  "width": 199.21875,
+                  "height": 62,
+                  "start": 10,
+                  "end": 19,
+                  "text": "for what "
+                },
+                {
+                  "x": 24,
+                  "y": 134.03125,
+                  "width": 184.25,
+                  "height": 62,
+                  "start": 19,
+                  "end": 27,
+                  "text": "matters."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 21,
+                "width": 257.015625,
+                "height": 175.03125
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            },
+            {
+              "id": "subtitle",
+              "box": {
+                "x": 24,
+                "y": 212.46875,
+                "width": 312,
+                "height": 126.375
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 213.46875,
+                  "width": 311.5625,
+                  "height": 28,
+                  "start": 0,
+                  "end": 32,
+                  "text": "A quieter place to collect your "
+                },
+                {
+                  "x": 24,
+                  "y": 245.0625,
+                  "width": 272.0625,
+                  "height": 28,
+                  "start": 32,
+                  "end": 60,
+                  "text": "ideas, find your focus, and "
+                },
+                {
+                  "x": 24,
+                  "y": 276.65625,
+                  "width": 242.421875,
+                  "height": 28,
+                  "start": 60,
+                  "end": 82,
+                  "text": "begin something worth "
+                },
+                {
+                  "x": 24,
+                  "y": 308.25,
+                  "width": 79.125,
+                  "height": 28,
+                  "start": 82,
+                  "end": 89,
+                  "text": "making."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 213.46875,
+                "width": 305.5625,
+                "height": 122.78125
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            }
+          ],
+          "issues": [],
+          "feasible": true,
+          "textSpacing": {
+            "tested": true,
+            "issues": []
+          },
+          "scope": [
+            "Only this specimen and viewport were verified.",
+            "Inline bounds are DOM range bounds, not glyph ink bounds.",
+            "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+            "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+          ]
+        },
+        {
+          "inputHash": "786067a59143a3c72181224fd4f2e72dcd201f8c6514a20ab7b97ae0e0991822",
+          "platform": "web",
+          "engine": "chromium/react/stylex",
+          "runtime": {
+            "chromium": "156.0.8078.4",
+            "deviceScaleFactor": 1
+          },
+          "blocks": [
+            {
+              "id": "title",
+              "box": {
+                "x": 24,
+                "y": 24,
+                "width": 312,
+                "height": 678.28125
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 18,
+                  "width": 275.921875,
+                  "height": 125,
+                  "start": 0,
+                  "end": 5,
+                  "text": "Make "
+                },
+                {
+                  "x": 24,
+                  "y": 131.046875,
+                  "width": 260.890625,
+                  "height": 125,
+                  "start": 5,
+                  "end": 10,
+                  "text": "room "
+                },
+                {
+                  "x": 24,
+                  "y": 244.09375,
+                  "width": 148.46875,
+                  "height": 125,
+                  "start": 10,
+                  "end": 14,
+                  "text": "for "
+                },
+                {
+                  "x": 24,
+                  "y": 357.140625,
+                  "width": 249.984375,
+                  "height": 125,
+                  "start": 14,
+                  "end": 19,
+                  "text": "what "
+                },
+                {
+                  "x": 24,
+                  "y": 470.1875,
+                  "width": 301.65625,
+                  "height": 125,
+                  "start": 19,
+                  "end": 25,
+                  "text": "matter"
+                },
+                {
+                  "x": 24,
+                  "y": 583.234375,
+                  "width": 66.9375,
+                  "height": 125,
+                  "start": 25,
+                  "end": 27,
+                  "text": "s."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 18,
+                "width": 301.65625,
+                "height": 690.234375
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            },
+            {
+              "id": "subtitle",
+              "box": {
+                "x": 24,
+                "y": 721.203125,
+                "width": 312,
+                "height": 442.3125
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 724.203125,
+                  "width": 318.671875,
+                  "height": 56,
+                  "start": 0,
+                  "end": 16,
+                  "text": "A quieter place "
+                },
+                {
+                  "x": 24,
+                  "y": 787.390625,
+                  "width": 304.453125,
+                  "height": 56,
+                  "start": 16,
+                  "end": 32,
+                  "text": "to collect your "
+                },
+                {
+                  "x": 24,
+                  "y": 850.578125,
+                  "width": 323.109375,
+                  "height": 56,
+                  "start": 32,
+                  "end": 49,
+                  "text": "ideas, find your "
+                },
+                {
+                  "x": 24,
+                  "y": 913.765625,
+                  "width": 221,
+                  "height": 56,
+                  "start": 49,
+                  "end": 60,
+                  "text": "focus, and "
+                },
+                {
+                  "x": 24,
+                  "y": 976.953125,
+                  "width": 124.5625,
+                  "height": 56,
+                  "start": 60,
+                  "end": 66,
+                  "text": "begin "
+                },
+                {
+                  "x": 24,
+                  "y": 1040.140625,
+                  "width": 225.40625,
+                  "height": 56,
+                  "start": 66,
+                  "end": 76,
+                  "text": "something "
+                },
+                {
+                  "x": 24,
+                  "y": 1103.328125,
+                  "width": 293.078125,
+                  "height": 56,
+                  "start": 76,
+                  "end": 89,
+                  "text": "worth making."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 724.203125,
+                "width": 311.125,
+                "height": 435.125
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            }
+          ],
+          "issues": [],
+          "feasible": true,
+          "textSpacing": {
+            "tested": true,
+            "issues": []
+          },
+          "scope": [
+            "Only this specimen and viewport were verified.",
+            "Inline bounds are DOM range bounds, not glyph ink bounds.",
+            "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+            "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+          ]
+        },
+        {
+          "inputHash": "c3d707eaaf615237b5e6682ed803f2222f3bfe5648f0d0437ad2999329b1f24d",
+          "platform": "web",
+          "engine": "chromium/react/stylex",
+          "runtime": {
+            "chromium": "156.0.8078.4",
+            "deviceScaleFactor": 1
+          },
+          "blocks": [
+            {
+              "id": "title",
+              "box": {
+                "x": 57.84375,
+                "y": 57.84375,
+                "width": 992.703125,
+                "height": 572.578125
+              },
+              "lines": [
+                {
+                  "x": 57.84375,
+                  "y": 40.84375,
+                  "width": 942.5,
+                  "height": 223,
+                  "start": 0,
+                  "end": 10,
+                  "text": "Make room "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 231.703125,
+                  "width": 696.90625,
+                  "height": 223,
+                  "start": 10,
+                  "end": 19,
+                  "text": "for what "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 422.5625,
+                  "width": 645.0625,
+                  "height": 223,
+                  "start": 19,
+                  "end": 27,
+                  "text": "matters."
+                }
+              ],
+              "inlineBounds": {
+                "x": 57.84375,
+                "y": 40.84375,
+                "width": 903.46875,
+                "height": 604.71875
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            },
+            {
+              "id": "subtitle",
+              "box": {
+                "x": 57.84375,
+                "y": 659.25,
+                "width": 578.328125,
+                "height": 275.6875
+              },
+              "lines": [
+                {
+                  "x": 57.84375,
+                  "y": 662.25,
+                  "width": 566.234375,
+                  "height": 61,
+                  "start": 0,
+                  "end": 27,
+                  "text": "A quieter place to collect "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 731.171875,
+                  "width": 466.109375,
+                  "height": 61,
+                  "start": 27,
+                  "end": 49,
+                  "text": "your ideas, find your "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 800.09375,
+                  "width": 377.015625,
+                  "height": 61,
+                  "start": 49,
+                  "end": 66,
+                  "text": "focus, and begin "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 869.015625,
+                  "width": 565.65625,
+                  "height": 61,
+                  "start": 66,
+                  "end": 89,
+                  "text": "something worth making."
+                }
+              ],
+              "inlineBounds": {
+                "x": 57.84375,
+                "y": 662.25,
+                "width": 565.65625,
+                "height": 267.765625
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            }
+          ],
+          "issues": [],
+          "feasible": true,
+          "textSpacing": {
+            "tested": true,
+            "issues": []
+          },
+          "scope": [
+            "Only this specimen and viewport were verified.",
+            "Inline bounds are DOM range bounds, not glyph ink bounds.",
+            "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+            "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+          ]
+        }
+      ],
+      "relations": {
+        "colors": {
+          "declared": {
+            "system": {
+              "tokens": {
+                "canvas": "#f6f4ed",
+                "ink": "#171918",
+                "accent": "#22745d"
+              },
+              "roles": [],
+              "harmony": "free"
+            },
+            "context": {
+              "contrastLevel": "AA",
+              "chromaRange": null,
+              "lightnessRange": null,
+              "hueReference": null
+            },
+            "tokens": {
+              "canvas": {
+                "hex": "#f6f4ed",
+                "srgb": {
+                  "r": 0.9647058823529412,
+                  "g": 0.9568627450980393,
+                  "b": 0.9294117647058824
+                },
+                "luminance": 0.9040862218841148,
+                "oklab": {
+                  "L": 0.966762439675821,
+                  "a": -0.0005923444369465014,
+                  "b": 0.009498074276032886
+                },
+                "oklch": {
+                  "L": 0.966762439675821,
+                  "C": 0.009516527039052593,
+                  "h": 93.56861165874062
+                },
+                "gamut": "sRGB",
+                "alpha": 1,
+                "provenance": [
+                  "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              },
+              "ink": {
+                "hex": "#171918",
+                "srgb": {
+                  "r": 0.09019607843137255,
+                  "g": 0.09803921568627451,
+                  "b": 0.09411764705882353
+                },
+                "luminance": 0.009433677172135986,
+                "oklab": {
+                  "L": 0.21083982257829417,
+                  "a": -0.0035077241058973224,
+                  "b": 0.0009606663474576727
+                },
+                "oklch": {
+                  "L": 0.21083982257829417,
+                  "C": 0.0036368954115056475,
+                  "h": 164.68386796440905
+                },
+                "gamut": "sRGB",
+                "alpha": 1,
+                "provenance": [
+                  "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              },
+              "accent": {
+                "hex": "#22745d",
+                "srgb": {
+                  "r": 0.13333333333333333,
+                  "g": 0.4549019607843137,
+                  "b": 0.36470588235294116
+                },
+                "luminance": 0.13621177058217498,
+                "oklab": {
+                  "L": 0.5037015788351594,
+                  "a": -0.08506367152123545,
+                  "b": 0.014446492966392999
+                },
+                "oklch": {
+                  "L": 0.5037015788351594,
+                  "C": 0.08628168618948454,
+                  "h": 170.36133677721114
+                },
+                "gamut": "sRGB",
+                "alpha": 1,
+                "provenance": [
+                  "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              }
+            },
+            "roles": [],
+            "hardConstraintsPass": true,
+            "constrainedRoles": 0,
+            "factors": {
+              "harmony": {
+                "preference": "free",
+                "reference": "accent",
+                "kind": "heuristic",
+                "source": [
+                  "local-policy: configurable hue-wheel convention; not preference data"
+                ],
+                "uncertainty": "high; depends on area, adjacency, lightness, chroma, culture and task",
+                "chromaticCutoff": 0.02,
+                "distinctChromaticColors": 1,
+                "meanAngularError": null,
+                "status": "not-requested"
+              },
+              "chroma": {
+                "canvas": {
+                  "value": 0.009516527039052593,
+                  "distance": null
+                },
+                "ink": {
+                  "value": 0.0036368954115056475,
+                  "distance": null
+                },
+                "accent": {
+                  "value": 0.08628168618948454,
+                  "distance": null
+                }
+              },
+              "lightness": {
+                "canvas": {
+                  "value": 0.966762439675821,
+                  "distance": null
+                },
+                "ink": {
+                  "value": 0.21083982257829417,
+                  "distance": null
+                },
+                "accent": {
+                  "value": 0.5037015788351594,
+                  "distance": null
+                }
+              }
+            },
+            "provenance": {
+              "contrast": {
+                "kind": "standard",
+                "source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/"
+              },
+              "descriptors": {
+                "kind": "calculation",
+                "source": [
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              },
+              "preferences": {
+                "kind": "heuristic",
+                "source": "caller ranges and local hue-wheel convention",
+                "uncertainty": "uncalibrated; no human preference evidence"
+              }
+            },
+            "assumptions": [
+              "Opaque encoded sRGB inputs; no alpha, blending, gradients, images, HDR or Display P3.",
+              "WCAG luminance is not OKLab lightness. Contrast is not a complete accessibility audit.",
+              "No role declarations means no contrast obligations were checked; it is not an accessibility pass.",
+              "Hue-wheel preferences are optional descriptors, not physical constraints or a beauty score."
+            ]
+          },
+          "text": [
+            {
+              "id": "title",
+              "ratio": 16.05295629144438,
+              "minimum": 3,
+              "passes": true,
+              "size": 92.9230769230769,
+              "weight": 900,
+              "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+              "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
+            },
+            {
+              "id": "subtitle",
+              "ratio": 16.05295629144438,
+              "minimum": 3,
+              "passes": true,
+              "size": 25.532,
+              "weight": 400,
+              "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+              "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
+            }
+          ],
+          "hardConstraintsPass": true
+        },
+        "composition": {
+          "constraints": [],
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "context": {
+            "direction": "ltr",
+            "flow": "column",
+            "alignmentTolerance": 4,
+            "source": "chromium/react/stylex measured peer text boxes"
+          },
+          "rectangleCount": 2,
+          "zeroAreaRectangles": [],
+          "outsideViewport": [],
+          "alignment": {
+            "tolerance": 4,
+            "kind": "calculation",
+            "pairs": [
+              {
+                "a": "title",
+                "b": "subtitle",
+                "distances": {
+                  "left": 0,
+                  "centerX": 207.1875,
+                  "right": 414.375,
+                  "top": 219.671875,
+                  "centerY": 158.703125,
+                  "bottom": 97.734375
+                },
+                "withinTolerance": [
+                  "left"
+                ]
+              }
+            ],
+            "preferenceSource": "caller tolerance; no universal alignment target is inferred"
+          },
+          "proximity": [],
+          "hierarchy": {
+            "kind": "descriptor",
+            "areaRanking": [
+              {
+                "id": "title",
+                "area": 189451.18701171875
+              },
+              {
+                "id": "subtitle",
+                "area": 39850.42236328125
+              }
+            ],
+            "largestToMedianArea": 1.6524191655531746,
+            "declaredPriority": [],
+            "interpretation": "box area and declared priority are not font weight, perceived emphasis, comprehension or task importance"
+          },
+          "balance": {
+            "kind": "descriptor",
+            "occupiedUnionCentroid": {
+              "x": 518.1881104315241,
+              "y": 180.8467073084094
+            },
+            "normalizedOffset": {
+              "x": -0.09516553872537177,
+              "y": -0.29905921410176733
+            },
+            "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+          },
+          "whitespace": {
+            "kind": "calculation",
+            "occupiedUnionArea": 229301.609375,
+            "viewportArea": 1152000,
+            "unoccupiedArea": 922698.390625,
+            "unoccupiedFraction": 0.8009534640842014,
+            "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+          },
+          "overlap": {
+            "kind": "calculation",
+            "pairs": [],
+            "interpretation": "pairwise intersections; intentional layering and parent/child containment are not automatically errors"
+          },
+          "readingOrder": {
+            "declared": [
+              "title",
+              "subtitle"
+            ],
+            "steps": [
+              {
+                "from": "title",
+                "to": "subtitle",
+                "primaryDelta": 219.671875,
+                "secondaryDelta": 0,
+                "geometricReversal": false
+              }
+            ],
+            "kind": "descriptor",
+            "interpretation": "geometric reversals relative to declared axis/direction only; not DOM, focus, screen-reader or multi-column order validation"
+          },
+          "provenance": {
+            "measurements": "chromium/react/stylex measured peer text boxes",
+            "geometry": "deterministic axis-aligned rectangle calculations; source measurement quality remains the caller responsibility",
+            "judgment": "none: no preference rating, universal beauty score, or optimization target"
+          },
+          "limitations": [
+            "Supply comparable semantic regions; including a full-surface container makes its area occupied by definition.",
+            "Union occupancy/centroid are invariant to duplicate nested coverage; pairwise alignment/proximity and area hierarchy are not.",
+            "No glyph ink, color salience, occlusion order, gaze, semantics, motion or interaction is inferred from boxes.",
+            "Geometry can describe grouping and rhythm, but human task context determines whether they work.",
+            "No layout is emitted; any downstream implementation must preserve the project flex/Yoga-only contract."
+          ]
+        },
+        "inputHash": "fe6269aba020db654949a17514f3efc87e702eeb390e2a5d6efe61bb02e8b4e0",
+        "feasible": true,
+        "prior": "smooth",
+        "factors": [
+          {
+            "id": "tracking:title",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "high; no font/script-specific fitted coefficients",
+            "value": -0.0275,
+            "compatibility": 0.9992697598574188,
+            "curve": null,
+            "evidence": {
+              "target": -0.028455580254207836,
+              "weight": 900,
+              "size": 92.9230769230769,
+              "kerning": "auto",
+              "lineCount": 2
+            },
+            "alternatives": [
+              -0.03645558025420784,
+              -0.028455580254207836,
+              -0.020455580254207836
+            ]
+          },
+          {
+            "id": "leading:title",
+            "kind": "heuristic",
+            "source": [
+              "leading-study",
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 1.027,
+            "compatibility": 0.9988603237730611,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 1.04,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "lineCount": 2,
+              "measure": 992.7074074074075,
+              "fontMetrics": {
+                "xHeight": 1031,
+                "unitsPerEm": 2000
+              }
+            },
+            "alternatives": [
+              0.98,
+              1.04,
+              1.1
+            ]
+          },
+          {
+            "id": "measure:title",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 13,
+            "compatibility": 0.06659845255302084,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 24,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "width": 992.703125,
+              "lineLengths": [
+                18,
+                8
+              ],
+              "lastLine": 8,
+              "note": "UTF-16 lengths describe this content; not a language-independent readability measure"
+            },
+            "alternatives": [
+              893.4366666666667,
+              992.7074074074075,
+              1091.9781481481482
+            ]
+          },
+          {
+            "id": "tracking:subtitle",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "high; no font/script-specific fitted coefficients",
+            "value": -0.0001,
+            "compatibility": 0.9999999325199895,
+            "curve": null,
+            "evidence": {
+              "target": -0.00009081577352437926,
+              "weight": 400,
+              "size": 25.532,
+              "kerning": "auto",
+              "lineCount": 2
+            },
+            "alternatives": [
+              -0.00809081577352438,
+              -0.00009081577352437926,
+              0.007909184226475621
+            ]
+          },
+          {
+            "id": "leading:subtitle",
+            "kind": "heuristic",
+            "source": [
+              "leading-study",
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 1.35,
+            "compatibility": 1,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 1.35,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "lineCount": 2,
+              "measure": 578.337,
+              "fontMetrics": {
+                "xHeight": 1013,
+                "unitsPerEm": 2000
+              }
+            },
+            "alternatives": [
+              1.29,
+              1.35,
+              1.4100000000000001
+            ]
+          },
+          {
+            "id": "measure:subtitle",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 44,
+            "compatibility": 0.9858602668782243,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 46,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "width": 578.328125,
+              "lineLengths": [
+                48,
+                40
+              ],
+              "lastLine": 40,
+              "note": "UTF-16 lengths describe this content; not a language-independent readability measure"
+            },
+            "alternatives": [
+              520.5033,
+              578.337,
+              636.1707
+            ]
+          },
+          {
+            "id": "hierarchy",
+            "kind": "heuristic",
+            "source": [
+              "harvard",
+              "gregory",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 3.639475047903686,
+            "compatibility": 0.887494704397586,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 3.2,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "titleSize": 92.9230769230769,
+              "proseSize": 25.532,
+              "titleWeight": 900,
+              "proseWeight": 400
+            },
+            "alternatives": [
+              3.4211065450294647,
+              3.639475047903686,
+              3.857843550777907
+            ]
+          },
+          {
+            "id": "whitespace:0",
+            "kind": "heuristic",
+            "source": [
+              "local-policy",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 1.1291157143029302,
+            "compatibility": 0.6902525420329074,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 0.9,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "gap": 28.828582417582414,
+              "nextSize": 25.532,
+              "aboveLines": 2,
+              "geometry": "inline boxes; optical whitespace needs glyph ink verification"
+            },
+            "alternatives": [
+              15.319199999999999,
+              22.9788,
+              30.638399999999997
+            ]
+          }
+        ],
+        "rhythm": {
+          "normalizer": 28.828582417582414,
+          "binWidth": 0.25,
+          "bins": [
+            "0"
+          ],
+          "entropyBits": 0,
+          "localEntropy": [
+            {
+              "start": 0,
+              "end": 1,
+              "entropyBits": 0
+            }
+          ],
+          "motifs": [],
+          "intervalSequence": [],
+          "surpriseBits": null,
+          "surpriseSource": null,
+          "caveat": "Entropy measures variation, not quality. Null surprise means no empirical distribution or an unseen bin. Preserve spatial order and semantic grouping."
+        },
+        "issues": [],
+        "interpretation": "Separate conditional compatibility factors. No sum, global beauty score, calibrated preference probability or SemIf-derived validity.",
+        "objectives": {
+          "tracking:title": 0.9992697598574188,
+          "leading:title": 0.9988603237730611,
+          "measure:title": 0.06659845255302084,
+          "tracking:subtitle": 0.9999999325199895,
+          "leading:subtitle": 1,
+          "measure:subtitle": 0.9858602668782243,
+          "hierarchy": 0.887494704397586,
+          "whitespace:0": 0.6902525420329074
+        }
+      },
+      "viable": true,
+      "pareto": true,
+      "changes": [
+        "/blocks/0/size",
+        "/blocks/1/size",
+        "/blocks/0/trackingEm",
+        "/blocks/0/leading",
+        "/blocks/0/measure",
+        "/blocks/1/trackingEm",
+        "/blocks/1/leading",
+        "/blocks/1/measure",
+        "/gaps/0"
+      ]
+    },
+    {
+      "id": "9c464e03926de7ea",
+      "state": {
+        "version": 1,
+        "archetype": "hero",
+        "platform": "web",
+        "viewport": {
+          "width": 1280,
+          "height": 900,
+          "textScale": 1
+        },
+        "padding": 64,
+        "blocks": [
+          {
+            "id": "title",
+            "role": "title",
+            "text": "Make room for what matters.",
+            "font": {
+              "file": "assets/fonts/Lato-Black.ttf",
+              "family": "Lato Black",
+              "axes": {},
+              "opticalSizing": "none"
+            },
+            "size": 88,
+            "weight": 900,
+            "kerning": "auto",
+            "features": {},
+            "trackingEm": -0.0275,
+            "leading": 1.027,
+            "measure": 1072.124,
+            "align": "left",
+            "direction": "auto",
+            "language": "en",
+            "maxHeight": null
+          },
+          {
+            "id": "subtitle",
+            "role": "subtitle",
+            "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+            "font": {
+              "file": "assets/fonts/Lato-Regular.ttf",
+              "family": "Lato",
+              "axes": {},
+              "opticalSizing": "none"
+            },
+            "size": 22.642,
+            "weight": 400,
+            "kerning": "auto",
+            "features": {},
+            "trackingEm": 0.002,
+            "leading": 1.35,
+            "measure": 512.874,
+            "align": "left",
+            "direction": "auto",
+            "language": "en",
+            "maxHeight": null
+          }
+        ],
+        "gaps": [
+          23.898
+        ],
+        "locks": [],
+        "responsive": {
+          "source": "astra-responsive-review-2026-10-24",
+          "anchors": [
+            {
+              "width": 360,
+              "padding": 24,
+              "gapScale": 0.7142857142857143,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 0.5909090909090909,
+                  "leadingDelta": 0.06000000000000005,
+                  "trackingDelta": 0.009000000000000001,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 0.9166666666666666,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 390,
+              "padding": 24,
+              "gapScale": 0.7857142857142857,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 0.6363636363636364,
+                  "leadingDelta": 0.06000000000000005,
+                  "trackingDelta": 0.009000000000000001,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 0.9166666666666666,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 834,
+              "padding": 40,
+              "gapScale": 1,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 0.9090909090909091,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 1024,
+              "padding": 48,
+              "gapScale": 1,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            },
+            {
+              "width": 1440,
+              "padding": 64,
+              "gapScale": 1.1428571428571428,
+              "contentMaxWidth": 1280,
+              "pattern": "stack",
+              "blocks": {
+                "title": {
+                  "sizeScale": 1.0909090909090908,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 0.9259259259259259
+                },
+                "subtitle": {
+                  "sizeScale": 1,
+                  "leadingDelta": 0,
+                  "trackingDelta": 0,
+                  "measureScale": 1
+                }
+              }
+            }
+          ],
+          "split": {
+            "titleMinWidth": 240,
+            "textMinWidth": 360,
+            "gap": 40
+          }
+        },
+        "colors": null
+      },
+      "measurement": {
+        "inputHash": "86f53ec3bbd675b0f7209a8af3415f93510147bc5e85c5f4c256f945850b1ecf",
+        "platform": "web",
+        "engine": "chromium/react/stylex",
+        "runtime": {
+          "chromium": "156.0.8078.4",
+          "deviceScaleFactor": 1
+        },
+        "blocks": [
+          {
+            "id": "title",
+            "box": {
+              "x": 57.84375,
+              "y": 57.84375,
+              "width": 992.703125,
+              "height": 190.84375
+            },
+            "lines": [
+              {
+                "x": 57.84375,
+                "y": 48.84375,
+                "width": 819.703125,
+                "height": 112,
+                "start": 0,
+                "end": 19,
+                "text": "Make room for what "
+              },
+              {
+                "x": 57.84375,
+                "y": 144.265625,
+                "width": 322.53125,
+                "height": 112,
+                "start": 19,
+                "end": 27,
+                "text": "matters."
+              }
+            ],
+            "inlineBounds": {
+              "x": 57.84375,
+              "y": 48.84375,
+              "width": 800.1875,
+              "height": 207.421875
+            },
+            "inkBounds": null,
+            "overflowX": 0,
+            "overflowY": 0
+          },
+          {
+            "id": "subtitle",
+            "box": {
+              "x": 57.84375,
+              "y": 274.671875,
+              "width": 512.859375,
+              "height": 61.125
+            },
+            "lines": [
+              {
+                "x": 57.84375,
+                "y": 275.671875,
+                "width": 460.0625,
+                "height": 27,
+                "start": 0,
+                "end": 49,
+                "text": "A quieter place to collect your ideas, find your "
+              },
+              {
+                "x": 57.84375,
+                "y": 306.234375,
+                "width": 419.875,
+                "height": 27,
+                "start": 49,
+                "end": 89,
+                "text": "focus, and begin something worth making."
+              }
+            ],
+            "inlineBounds": {
+              "x": 57.84375,
+              "y": 275.671875,
+              "width": 454.17346599999996,
+              "height": 57.5625
+            },
+            "inkBounds": null,
+            "overflowX": 0,
+            "overflowY": 0
+          }
+        ],
+        "issues": [],
+        "feasible": true,
+        "textSpacing": {
+          "tested": true,
+          "issues": []
+        },
+        "scope": [
+          "Only this specimen and viewport were verified.",
+          "Inline bounds are DOM range bounds, not glyph ink bounds.",
+          "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+          "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+        ]
+      },
+      "responsive": [
+        {
+          "inputHash": "34301ebe05a3d1db09b6b5cfa457a91ab2122be718a68820a01c15ced47ca5f2",
+          "platform": "web",
+          "engine": "chromium/react/stylex",
+          "runtime": {
+            "chromium": "156.0.8078.4",
+            "deviceScaleFactor": 1
+          },
+          "blocks": [
+            {
+              "id": "title",
+              "box": {
+                "x": 24,
+                "y": 24,
+                "width": 312,
+                "height": 169.546875
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 21,
+                  "width": 268.40625,
+                  "height": 62,
+                  "start": 0,
+                  "end": 10,
+                  "text": "Make room "
+                },
+                {
+                  "x": 24,
+                  "y": 77.515625,
+                  "width": 199.21875,
+                  "height": 62,
+                  "start": 10,
+                  "end": 19,
+                  "text": "for what "
+                },
+                {
+                  "x": 24,
+                  "y": 134.03125,
+                  "width": 184.25,
+                  "height": 62,
+                  "start": 19,
+                  "end": 27,
+                  "text": "matters."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 21,
+                "width": 257.015625,
+                "height": 175.03125
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            },
+            {
+              "id": "subtitle",
+              "box": {
+                "x": 24,
+                "y": 210.609375,
+                "width": 312,
+                "height": 84
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 212.609375,
+                  "width": 277.671875,
+                  "height": 24,
+                  "start": 0,
+                  "end": 32,
+                  "text": "A quieter place to collect your "
+                },
+                {
+                  "x": 24,
+                  "y": 240.609375,
+                  "width": 297.953125,
+                  "height": 24,
+                  "start": 32,
+                  "end": 66,
+                  "text": "ideas, find your focus, and begin "
+                },
+                {
+                  "x": 24,
+                  "y": 268.609375,
+                  "width": 230.875,
+                  "height": 24,
+                  "start": 66,
+                  "end": 89,
+                  "text": "something worth making."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 212.609375,
+                "width": 292.5522397,
+                "height": 80
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            }
+          ],
+          "issues": [],
+          "feasible": true,
+          "textSpacing": {
+            "tested": true,
+            "issues": []
+          },
+          "scope": [
+            "Only this specimen and viewport were verified.",
+            "Inline bounds are DOM range bounds, not glyph ink bounds.",
+            "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+            "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+          ]
+        },
+        {
+          "inputHash": "05dbc835d50d853ece02592a19084f624f4eb587fb03c2c9e6378ce3ada23fcf",
+          "platform": "web",
+          "engine": "chromium/react/stylex",
+          "runtime": {
+            "chromium": "156.0.8078.4",
+            "deviceScaleFactor": 1
+          },
+          "blocks": [
+            {
+              "id": "title",
+              "box": {
+                "x": 24,
+                "y": 24,
+                "width": 312,
+                "height": 678.28125
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 18,
+                  "width": 275.921875,
+                  "height": 125,
+                  "start": 0,
+                  "end": 5,
+                  "text": "Make "
+                },
+                {
+                  "x": 24,
+                  "y": 131.046875,
+                  "width": 260.890625,
+                  "height": 125,
+                  "start": 5,
+                  "end": 10,
+                  "text": "room "
+                },
+                {
+                  "x": 24,
+                  "y": 244.09375,
+                  "width": 148.46875,
+                  "height": 125,
+                  "start": 10,
+                  "end": 14,
+                  "text": "for "
+                },
+                {
+                  "x": 24,
+                  "y": 357.140625,
+                  "width": 249.984375,
+                  "height": 125,
+                  "start": 14,
+                  "end": 19,
+                  "text": "what "
+                },
+                {
+                  "x": 24,
+                  "y": 470.1875,
+                  "width": 301.65625,
+                  "height": 125,
+                  "start": 19,
+                  "end": 25,
+                  "text": "matter"
+                },
+                {
+                  "x": 24,
+                  "y": 583.234375,
+                  "width": 66.9375,
+                  "height": 125,
+                  "start": 25,
+                  "end": 27,
+                  "text": "s."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 18,
+                "width": 301.65625,
+                "height": 690.234375
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            },
+            {
+              "id": "subtitle",
+              "box": {
+                "x": 24,
+                "y": 719.34375,
+                "width": 312,
+                "height": 336.1875
+              },
+              "lines": [
+                {
+                  "x": 24,
+                  "y": 722.34375,
+                  "width": 284.046875,
+                  "height": 50,
+                  "start": 0,
+                  "end": 16,
+                  "text": "A quieter place "
+                },
+                {
+                  "x": 24,
+                  "y": 778.375,
+                  "width": 271.4375,
+                  "height": 50,
+                  "start": 16,
+                  "end": 32,
+                  "text": "to collect your "
+                },
+                {
+                  "x": 24,
+                  "y": 834.40625,
+                  "width": 288.078125,
+                  "height": 50,
+                  "start": 32,
+                  "end": 49,
+                  "text": "ideas, find your "
+                },
+                {
+                  "x": 24,
+                  "y": 890.4375,
+                  "width": 307.984375,
+                  "height": 50,
+                  "start": 49,
+                  "end": 66,
+                  "text": "focus, and begin "
+                },
+                {
+                  "x": 24,
+                  "y": 946.46875,
+                  "width": 320.9375,
+                  "height": 50,
+                  "start": 66,
+                  "end": 82,
+                  "text": "something worth "
+                },
+                {
+                  "x": 24,
+                  "y": 1002.5,
+                  "width": 140.953125,
+                  "height": 50,
+                  "start": 82,
+                  "end": 89,
+                  "text": "making."
+                }
+              ],
+              "inlineBounds": {
+                "x": 24,
+                "y": 722.34375,
+                "width": 310.1357293,
+                "height": 330.15625
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            }
+          ],
+          "issues": [],
+          "feasible": true,
+          "textSpacing": {
+            "tested": true,
+            "issues": []
+          },
+          "scope": [
+            "Only this specimen and viewport were verified.",
+            "Inline bounds are DOM range bounds, not glyph ink bounds.",
+            "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+            "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+          ]
+        },
+        {
+          "inputHash": "81b044c2161244b9eac9444c20d1f2e9c70facc686ba1891a3ab59925d5e3740",
+          "platform": "web",
+          "engine": "chromium/react/stylex",
+          "runtime": {
+            "chromium": "156.0.8078.4",
+            "deviceScaleFactor": 1
+          },
+          "blocks": [
+            {
+              "id": "title",
+              "box": {
+                "x": 57.84375,
+                "y": 57.84375,
+                "width": 992.703125,
+                "height": 572.578125
+              },
+              "lines": [
+                {
+                  "x": 57.84375,
+                  "y": 40.84375,
+                  "width": 942.5,
+                  "height": 223,
+                  "start": 0,
+                  "end": 10,
+                  "text": "Make room "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 231.703125,
+                  "width": 696.90625,
+                  "height": 223,
+                  "start": 10,
+                  "end": 19,
+                  "text": "for what "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 422.5625,
+                  "width": 645.0625,
+                  "height": 223,
+                  "start": 19,
+                  "end": 27,
+                  "text": "matters."
+                }
+              ],
+              "inlineBounds": {
+                "x": 57.84375,
+                "y": 40.84375,
+                "width": 903.46875,
+                "height": 604.71875
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            },
+            {
+              "id": "subtitle",
+              "box": {
+                "x": 57.84375,
+                "y": 656.40625,
+                "width": 512.859375,
+                "height": 244.5
+              },
+              "lines": [
+                {
+                  "x": 57.84375,
+                  "y": 659.40625,
+                  "width": 504.703125,
+                  "height": 55,
+                  "start": 0,
+                  "end": 27,
+                  "text": "A quieter place to collect "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 720.53125,
+                  "width": 415.4375,
+                  "height": 55,
+                  "start": 27,
+                  "end": 49,
+                  "text": "your ideas, find your "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 781.65625,
+                  "width": 335.9375,
+                  "height": 55,
+                  "start": 49,
+                  "end": 66,
+                  "text": "focus, and begin "
+                },
+                {
+                  "x": 57.84375,
+                  "y": 842.78125,
+                  "width": 503.8125,
+                  "height": 55,
+                  "start": 66,
+                  "end": 89,
+                  "text": "something worth making."
+                }
+              ],
+              "inlineBounds": {
+                "x": 57.84375,
+                "y": 659.40625,
+                "width": 503.72193200000004,
+                "height": 238.375
+              },
+              "inkBounds": null,
+              "overflowX": 0,
+              "overflowY": 0
+            }
+          ],
+          "issues": [],
+          "feasible": true,
+          "textSpacing": {
+            "tested": true,
+            "issues": []
+          },
+          "scope": [
+            "Only this specimen and viewport were verified.",
+            "Inline bounds are DOM range bounds, not glyph ink bounds.",
+            "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+            "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+          ]
+        }
+      ],
+      "relations": {
+        "colors": {
+          "declared": {
+            "system": {
+              "tokens": {
+                "canvas": "#f6f4ed",
+                "ink": "#171918",
+                "accent": "#22745d"
+              },
+              "roles": [],
+              "harmony": "free"
+            },
+            "context": {
+              "contrastLevel": "AA",
+              "chromaRange": null,
+              "lightnessRange": null,
+              "hueReference": null
+            },
+            "tokens": {
+              "canvas": {
+                "hex": "#f6f4ed",
+                "srgb": {
+                  "r": 0.9647058823529412,
+                  "g": 0.9568627450980393,
+                  "b": 0.9294117647058824
+                },
+                "luminance": 0.9040862218841148,
+                "oklab": {
+                  "L": 0.966762439675821,
+                  "a": -0.0005923444369465014,
+                  "b": 0.009498074276032886
+                },
+                "oklch": {
+                  "L": 0.966762439675821,
+                  "C": 0.009516527039052593,
+                  "h": 93.56861165874062
+                },
+                "gamut": "sRGB",
+                "alpha": 1,
+                "provenance": [
+                  "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              },
+              "ink": {
+                "hex": "#171918",
+                "srgb": {
+                  "r": 0.09019607843137255,
+                  "g": 0.09803921568627451,
+                  "b": 0.09411764705882353
+                },
+                "luminance": 0.009433677172135986,
+                "oklab": {
+                  "L": 0.21083982257829417,
+                  "a": -0.0035077241058973224,
+                  "b": 0.0009606663474576727
+                },
+                "oklch": {
+                  "L": 0.21083982257829417,
+                  "C": 0.0036368954115056475,
+                  "h": 164.68386796440905
+                },
+                "gamut": "sRGB",
+                "alpha": 1,
+                "provenance": [
+                  "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              },
+              "accent": {
+                "hex": "#22745d",
+                "srgb": {
+                  "r": 0.13333333333333333,
+                  "g": 0.4549019607843137,
+                  "b": 0.36470588235294116
+                },
+                "luminance": 0.13621177058217498,
+                "oklab": {
+                  "L": 0.5037015788351594,
+                  "a": -0.08506367152123545,
+                  "b": 0.014446492966392999
+                },
+                "oklch": {
+                  "L": 0.5037015788351594,
+                  "C": 0.08628168618948454,
+                  "h": 170.36133677721114
+                },
+                "gamut": "sRGB",
+                "alpha": 1,
+                "provenance": [
+                  "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              }
+            },
+            "roles": [],
+            "hardConstraintsPass": true,
+            "constrainedRoles": 0,
+            "factors": {
+              "harmony": {
+                "preference": "free",
+                "reference": "accent",
+                "kind": "heuristic",
+                "source": [
+                  "local-policy: configurable hue-wheel convention; not preference data"
+                ],
+                "uncertainty": "high; depends on area, adjacency, lightness, chroma, culture and task",
+                "chromaticCutoff": 0.02,
+                "distinctChromaticColors": 1,
+                "meanAngularError": null,
+                "status": "not-requested"
+              },
+              "chroma": {
+                "canvas": {
+                  "value": 0.009516527039052593,
+                  "distance": null
+                },
+                "ink": {
+                  "value": 0.0036368954115056475,
+                  "distance": null
+                },
+                "accent": {
+                  "value": 0.08628168618948454,
+                  "distance": null
+                }
+              },
+              "lightness": {
+                "canvas": {
+                  "value": 0.966762439675821,
+                  "distance": null
+                },
+                "ink": {
+                  "value": 0.21083982257829417,
+                  "distance": null
+                },
+                "accent": {
+                  "value": 0.5037015788351594,
+                  "distance": null
+                }
+              }
+            },
+            "provenance": {
+              "contrast": {
+                "kind": "standard",
+                "source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/"
+              },
+              "descriptors": {
+                "kind": "calculation",
+                "source": [
+                  "https://bottosson.github.io/posts/oklab/",
+                  "https://www.w3.org/TR/2026/CRD-css-color-4-20261022/"
+                ]
+              },
+              "preferences": {
+                "kind": "heuristic",
+                "source": "caller ranges and local hue-wheel convention",
+                "uncertainty": "uncalibrated; no human preference evidence"
+              }
+            },
+            "assumptions": [
+              "Opaque encoded sRGB inputs; no alpha, blending, gradients, images, HDR or Display P3.",
+              "WCAG luminance is not OKLab lightness. Contrast is not a complete accessibility audit.",
+              "No role declarations means no contrast obligations were checked; it is not an accessibility pass.",
+              "Hue-wheel preferences are optional descriptors, not physical constraints or a beauty score."
+            ]
+          },
+          "text": [
+            {
+              "id": "title",
+              "ratio": 16.05295629144438,
+              "minimum": 3,
+              "passes": true,
+              "size": 92.9230769230769,
+              "weight": 900,
+              "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+              "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
+            },
+            {
+              "id": "subtitle",
+              "ratio": 16.05295629144438,
+              "minimum": 4.5,
+              "passes": true,
+              "size": 22.642,
+              "weight": 400,
+              "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+              "scope": "Opaque declared sRGB text/canvas; authored CSS size before user enlargement."
+            }
+          ],
+          "hardConstraintsPass": true
+        },
+        "composition": {
+          "constraints": [],
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "context": {
+            "direction": "ltr",
+            "flow": "column",
+            "alignmentTolerance": 4,
+            "source": "chromium/react/stylex measured peer text boxes"
+          },
+          "rectangleCount": 2,
+          "zeroAreaRectangles": [],
+          "outsideViewport": [],
+          "alignment": {
+            "tolerance": 4,
+            "kind": "calculation",
+            "pairs": [
+              {
+                "a": "title",
+                "b": "subtitle",
+                "distances": {
+                  "left": 0,
+                  "centerX": 239.921875,
+                  "right": 479.84375,
+                  "top": 216.828125,
+                  "centerY": 151.96875,
+                  "bottom": 87.109375
+                },
+                "withinTolerance": [
+                  "left"
+                ]
+              }
+            ],
+            "preferenceSource": "caller tolerance; no universal alignment target is inferred"
+          },
+          "proximity": [],
+          "hierarchy": {
+            "kind": "descriptor",
+            "areaRanking": [
+              {
+                "id": "title",
+                "area": 189451.18701171875
+              },
+              {
+                "id": "subtitle",
+                "area": 31348.529296875
+              }
+            ],
+            "largestToMedianArea": 1.7160455654475415,
+            "declaredPriority": [],
+            "interpretation": "box area and declared priority are not font weight, perceived emphasis, comprehension or task importance"
+          },
+          "balance": {
+            "kind": "descriptor",
+            "occupiedUnionCentroid": {
+              "x": 520.1318723238047,
+              "y": 174.84172523794697
+            },
+            "normalizedOffset": {
+              "x": -0.09364697474702757,
+              "y": -0.30573141640228113
+            },
+            "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+          },
+          "whitespace": {
+            "kind": "calculation",
+            "occupiedUnionArea": 220799.71630859375,
+            "viewportArea": 1152000,
+            "unoccupiedArea": 931200.2836914062,
+            "unoccupiedFraction": 0.8083335795932346,
+            "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+          },
+          "overlap": {
+            "kind": "calculation",
+            "pairs": [],
+            "interpretation": "pairwise intersections; intentional layering and parent/child containment are not automatically errors"
+          },
+          "readingOrder": {
+            "declared": [
+              "title",
+              "subtitle"
+            ],
+            "steps": [
+              {
+                "from": "title",
+                "to": "subtitle",
+                "primaryDelta": 216.828125,
+                "secondaryDelta": 0,
+                "geometricReversal": false
+              }
+            ],
+            "kind": "descriptor",
+            "interpretation": "geometric reversals relative to declared axis/direction only; not DOM, focus, screen-reader or multi-column order validation"
+          },
+          "provenance": {
+            "measurements": "chromium/react/stylex measured peer text boxes",
+            "geometry": "deterministic axis-aligned rectangle calculations; source measurement quality remains the caller responsibility",
+            "judgment": "none: no preference rating, universal beauty score, or optimization target"
+          },
+          "limitations": [
+            "Supply comparable semantic regions; including a full-surface container makes its area occupied by definition.",
+            "Union occupancy/centroid are invariant to duplicate nested coverage; pairwise alignment/proximity and area hierarchy are not.",
+            "No glyph ink, color salience, occlusion order, gaze, semantics, motion or interaction is inferred from boxes.",
+            "Geometry can describe grouping and rhythm, but human task context determines whether they work.",
+            "No layout is emitted; any downstream implementation must preserve the project flex/Yoga-only contract."
+          ]
+        },
+        "inputHash": "86f53ec3bbd675b0f7209a8af3415f93510147bc5e85c5f4c256f945850b1ecf",
+        "feasible": true,
+        "prior": "smooth",
+        "factors": [
+          {
+            "id": "tracking:title",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "high; no font/script-specific fitted coefficients",
+            "value": -0.0275,
+            "compatibility": 0.9992697598574188,
+            "curve": null,
+            "evidence": {
+              "target": -0.028455580254207836,
+              "weight": 900,
+              "size": 92.9230769230769,
+              "kerning": "auto",
+              "lineCount": 2
+            },
+            "alternatives": [
+              -0.03645558025420784,
+              -0.028455580254207836,
+              -0.020455580254207836
+            ]
+          },
+          {
+            "id": "leading:title",
+            "kind": "heuristic",
+            "source": [
+              "leading-study",
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 1.027,
+            "compatibility": 0.9988603237730611,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 1.04,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "lineCount": 2,
+              "measure": 992.7074074074075,
+              "fontMetrics": {
+                "xHeight": 1031,
+                "unitsPerEm": 2000
+              }
+            },
+            "alternatives": [
+              0.98,
+              1.04,
+              1.1
+            ]
+          },
+          {
+            "id": "measure:title",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 13,
+            "compatibility": 0.06659845255302084,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 24,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "width": 992.703125,
+              "lineLengths": [
+                18,
+                8
+              ],
+              "lastLine": 8,
+              "note": "UTF-16 lengths describe this content; not a language-independent readability measure"
+            },
+            "alternatives": [
+              893.4366666666667,
+              992.7074074074075,
+              1091.9781481481482
+            ]
+          },
+          {
+            "id": "tracking:subtitle",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "high; no font/script-specific fitted coefficients",
+            "value": 0.002,
+            "compatibility": 0.99999990047192,
+            "curve": null,
+            "evidence": {
+              "target": 0.001988846072160721,
+              "weight": 400,
+              "size": 22.642,
+              "kerning": "auto",
+              "lineCount": 2
+            },
+            "alternatives": [
+              -0.006011153927839279,
+              0.001988846072160721,
+              0.009988846072160721
+            ]
+          },
+          {
+            "id": "leading:subtitle",
+            "kind": "heuristic",
+            "source": [
+              "leading-study",
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 1.35,
+            "compatibility": 1,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 1.35,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "lineCount": 2,
+              "measure": 512.874,
+              "fontMetrics": {
+                "xHeight": 1013,
+                "unitsPerEm": 2000
+              }
+            },
+            "alternatives": [
+              1.29,
+              1.35,
+              1.4100000000000001
+            ]
+          },
+          {
+            "id": "measure:subtitle",
+            "kind": "heuristic",
+            "source": [
+              "uswds",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 44,
+            "compatibility": 0.9858602668782243,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 46,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "width": 512.859375,
+              "lineLengths": [
+                48,
+                40
+              ],
+              "lastLine": 40,
+              "note": "UTF-16 lengths describe this content; not a language-independent readability measure"
+            },
+            "alternatives": [
+              461.58660000000003,
+              512.874,
+              564.1614000000001
+            ]
+          },
+          {
+            "id": "hierarchy",
+            "kind": "heuristic",
+            "source": [
+              "harvard",
+              "gregory",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 4.104013643806947,
+            "compatibility": 0.6400727648207066,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 3.2,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "titleSize": 92.9230769230769,
+              "proseSize": 22.642,
+              "titleWeight": 900,
+              "proseWeight": 400
+            },
+            "alternatives": [
+              3.8577728251785306,
+              4.104013643806947,
+              4.350254462435364
+            ]
+          },
+          {
+            "id": "whitespace:0",
+            "kind": "heuristic",
+            "source": [
+              "local-policy",
+              "local-policy"
+            ],
+            "uncertainty": "uncalibrated numerical prior; compatibility is not probability or aesthetic validation",
+            "value": 1.1482608902448137,
+            "compatibility": 0.6520073382376582,
+            "curve": {
+              "kind": "heuristic",
+              "source": "local-policy",
+              "peaks": [
+                {
+                  "ratio": 0.9,
+                  "weight": 1,
+                  "sigma": 0.38,
+                  "label": "contextual broad target"
+                }
+              ]
+            },
+            "evidence": {
+              "gap": 25.998923076923074,
+              "nextSize": 22.642,
+              "aboveLines": 2,
+              "geometry": "inline boxes; optical whitespace needs glyph ink verification"
+            },
+            "alternatives": [
+              13.585199999999999,
+              20.3778,
+              27.170399999999997
+            ]
+          }
+        ],
+        "rhythm": {
+          "normalizer": 25.998923076923074,
+          "binWidth": 0.25,
+          "bins": [
+            "0"
+          ],
+          "entropyBits": 0,
+          "localEntropy": [
+            {
+              "start": 0,
+              "end": 1,
+              "entropyBits": 0
+            }
+          ],
+          "motifs": [],
+          "intervalSequence": [],
+          "surpriseBits": null,
+          "surpriseSource": null,
+          "caveat": "Entropy measures variation, not quality. Null surprise means no empirical distribution or an unseen bin. Preserve spatial order and semantic grouping."
+        },
+        "issues": [],
+        "interpretation": "Separate conditional compatibility factors. No sum, global beauty score, calibrated preference probability or SemIf-derived validity.",
+        "objectives": {
+          "tracking:title": 0.9992697598574188,
+          "leading:title": 0.9988603237730611,
+          "measure:title": 0.06659845255302084,
+          "tracking:subtitle": 0.99999990047192,
+          "leading:subtitle": 1,
+          "measure:subtitle": 0.9858602668782243,
+          "hierarchy": 0.6400727648207066,
+          "whitespace:0": 0.6520073382376582
+        }
+      },
+      "viable": true,
+      "pareto": false,
+      "changes": [
+        "/blocks/0/size",
+        "/blocks/1/size",
+        "/blocks/0/trackingEm",
+        "/blocks/0/leading",
+        "/blocks/0/measure",
+        "/blocks/1/trackingEm",
+        "/blocks/1/leading",
+        "/blocks/1/measure",
+        "/gaps/0"
+      ]
+    }
+  ],
+  "rejectedProposals": [],
+  "viableIds": [
+    "3861a289e8a9c994",
+    "1d2aa5bdf70f1d6b",
+    "9c464e03926de7ea"
+  ],
+  "paretoIds": [
+    "1d2aa5bdf70f1d6b"
+  ],
+  "selection": {
+    "selected": "3861a289e8a9c994",
+    "modelCalled": true,
+    "verified": [
+      {
+        "id": "3861a289e8a9c994",
+        "inputHash": "423564f4140ec683d142ee8960f23213d56e93a81d6438c8c8122a9329b18d5f",
+        "engine": "chromium/react/stylex",
+        "scenarios": 5
+      },
+      {
+        "id": "1d2aa5bdf70f1d6b",
+        "inputHash": "fe6269aba020db654949a17514f3efc87e702eeb390e2a5d6efe61bb02e8b4e0",
+        "engine": "chromium/react/stylex",
+        "scenarios": 5
+      },
+      {
+        "id": "9c464e03926de7ea",
+        "inputHash": "86f53ec3bbd675b0f7209a8af3415f93510147bc5e85c5f4c256f945850b1ecf",
+        "engine": "chromium/react/stylex",
+        "scenarios": 5
+      }
+    ],
+    "rejected": [],
+    "provenance": {
+      "profile": "qwen3.5-4b",
+      "readoutMode": "single",
+      "readoutPasses": 1,
+      "aggregation": "single restricted-option readout",
+      "promptHashes": [
+        "9f73b5d4deba877aa2bac480af9caa7b375b4fcdb08b0e863da6195ba52bf869"
+      ],
+      "experimental": false,
+      "model": {
+        "source": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "dtype": "gguf-quantized",
+        "backend": "llamacpp",
+        "serving_config": "llamacpp-direct-v1",
+        "gguf": {
+          "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4"
+        },
+        "vocab_size": 248320,
+        "threads": 8,
+        "n_gpu_layers": 0,
+        "max_prompt_tokens": 4096,
+        "context_tokens": 4352,
+        "decode_chunk": 512,
+        "llama_cpp_python_version": "0.3.35",
+        "transformers_version": "5.17.0"
+      },
+      "promptHash": "9f73b5d4deba877aa2bac480af9caa7b375b4fcdb08b0e863da6195ba52bf869",
+      "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+      "latencyMs": 39257.054749999996
+    },
+    "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+  },
+  "search": {
+    "seedCount": 3,
+    "relationshipRatios": [
+      3.6666666666666665,
+      3.4466666666666663,
+      3.8866666666666667
+    ],
+    "relationshipEditable": true,
+    "refinementPasses": 2,
+    "widths": [
+      360,
+      1280
+    ],
+    "textScales": [
+      1,
+      2
+    ],
+    "pinned": [],
+    "method": "bounded discrete candidate search with renderer-guided continuous refinement; Pareto factors remain separate"
+  },
+  "caveat": "No automatic aesthetic acceptance. Coverage is limited to the returned stress scenarios. SemIf can select only among currently viable candidates."
+}

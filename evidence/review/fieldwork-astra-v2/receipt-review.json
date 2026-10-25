@@ -1,0 +1,1197 @@
+{
+  "iphone-v3": [
+    {
+      "state": "journal",
+      "capturedAt": "2026-10-25T03:00:48.757Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 1,
+        "width": 402,
+        "height": 874,
+        "scale": 3
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 20,
+            "y": 264.6666717529297,
+            "width": 362,
+            "height": 233.66668701171875
+          },
+          "visibleBox": {
+            "x": 20,
+            "y": 264.6666717529297,
+            "width": 362,
+            "height": 233.66668701171875
+          }
+        },
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 20,
+            "y": 745.3333339691162,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20,
+            "y": 745.3333339691162,
+            "width": 92,
+            "height": 21.99997901916504
+          }
+        },
+        {
+          "name": "notes-on-noticing",
+          "box": {
+            "x": 20,
+            "y": 889.6666469573975,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20,
+            "y": 889.6666469573975,
+            "width": 92,
+            "height": 0
+          }
+        }
+      ],
+      "authoredAlignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-51",
+            "media-57"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-51",
+            "media-57"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-51",
+            "media-57"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    },
+    {
+      "state": "explore",
+      "capturedAt": "2026-10-25T03:00:52.195Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 1,
+        "width": 402,
+        "height": 874,
+        "scale": 3
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 20,
+            "y": 353.0000057220459,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20,
+            "y": 353.0000057220459,
+            "width": 92,
+            "height": 104
+          }
+        },
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 20,
+            "y": 497.3333339691162,
+            "width": 92,
+            "height": 103.99996948242188
+          },
+          "visibleBox": {
+            "x": 20,
+            "y": 497.3333339691162,
+            "width": 92,
+            "height": 103.99996948242188
+          }
+        },
+        {
+          "name": "notes-on-noticing",
+          "box": {
+            "x": 20,
+            "y": 641.6666774749756,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20,
+            "y": 641.6666774749756,
+            "width": 92,
+            "height": 104
+          }
+        }
+      ],
+      "authoredAlignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-43",
+            "media-49",
+            "media-55"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-43",
+            "media-49",
+            "media-55"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-43",
+            "media-49",
+            "media-55"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 3.0517578125e-05,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    },
+    {
+      "state": "saved",
+      "capturedAt": "2026-10-25T03:00:55.709Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 1,
+        "width": 402,
+        "height": 874,
+        "scale": 3
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 20,
+            "y": 285.0000057220459,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20,
+            "y": 285.0000057220459,
+            "width": 92,
+            "height": 104
+          }
+        }
+      ],
+      "authoredAlignment": [],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    },
+    {
+      "state": "reader",
+      "capturedAt": "2026-10-25T03:00:59.293Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 1,
+        "width": 402,
+        "height": 874,
+        "scale": 3
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 0,
+            "y": 126.33333587646484,
+            "width": 402,
+            "height": 335
+          },
+          "visibleBox": {
+            "x": 0,
+            "y": 126.33333587646484,
+            "width": 402,
+            "height": 335
+          }
+        }
+      ],
+      "authoredAlignment": [],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    }
+  ],
+  "ipad-v3": [
+    {
+      "state": "journal",
+      "capturedAt": "2026-10-25T03:01:16.274Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 260,
+            "y": 243,
+            "width": 534,
+            "height": 344.5
+          },
+          "visibleBox": {
+            "x": 260,
+            "y": 243,
+            "width": 534,
+            "height": 344.5
+          }
+        },
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 260,
+            "y": 812.5,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 260,
+            "y": 812.5,
+            "width": 92,
+            "height": 104
+          }
+        },
+        {
+          "name": "notes-on-noticing",
+          "box": {
+            "x": 260,
+            "y": 957,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 260,
+            "y": 957,
+            "width": 92,
+            "height": 104
+          }
+        }
+      ],
+      "authoredAlignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-63",
+            "media-69"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-63",
+            "media-69"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-63",
+            "media-69"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    },
+    {
+      "state": "explore",
+      "capturedAt": "2026-10-25T03:01:21.207Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 260,
+            "y": 331.5,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 260,
+            "y": 331.5,
+            "width": 92,
+            "height": 104
+          }
+        },
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 260,
+            "y": 476,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 260,
+            "y": 476,
+            "width": 92,
+            "height": 104
+          }
+        },
+        {
+          "name": "notes-on-noticing",
+          "box": {
+            "x": 260,
+            "y": 620.5,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 260,
+            "y": 620.5,
+            "width": 92,
+            "height": 104
+          }
+        }
+      ],
+      "authoredAlignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-55",
+            "media-61",
+            "media-67"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-55",
+            "media-61",
+            "media-67"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-55",
+            "media-61",
+            "media-67"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    },
+    {
+      "state": "saved",
+      "capturedAt": "2026-10-25T03:01:25.508Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 260,
+            "y": 263.5,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 260,
+            "y": 263.5,
+            "width": 92,
+            "height": 104
+          }
+        }
+      ],
+      "authoredAlignment": [],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    },
+    {
+      "state": "reader",
+      "capturedAt": "2026-10-25T03:01:30.156Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 220,
+            "y": 96.5,
+            "width": 614,
+            "height": 323
+          },
+          "visibleBox": {
+            "x": 220,
+            "y": 96.5,
+            "width": 614,
+            "height": 323
+          }
+        }
+      ],
+      "authoredAlignment": [],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    }
+  ],
+  "android-v5": [
+    {
+      "state": "journal",
+      "capturedAt": "2026-10-25T03:01:16.929Z",
+      "incomplete": false,
+      "window": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 20.190475463867188,
+            "y": 212.57139587402344,
+            "width": 371.4285888671875,
+            "height": 239.6190948486328
+          },
+          "visibleBox": {
+            "x": 20.190475463867188,
+            "y": 212.57139587402344,
+            "width": 371.4285888671875,
+            "height": 239.6190948486328
+          }
+        },
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 20.190475463867188,
+            "y": 850.6666259765625,
+            "width": 91.80952453613281,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20.190475463867188,
+            "y": 850.6666259765625,
+            "width": 91.80952453613281,
+            "height": 0
+          }
+        },
+        {
+          "name": "notes-on-noticing",
+          "box": {
+            "x": 20.190475463867188,
+            "y": 995.0477294921875,
+            "width": 91.80952453613281,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20.190475463867188,
+            "y": 995.0477294921875,
+            "width": 91.80952453613281,
+            "height": 0
+          }
+        }
+      ],
+      "authoredAlignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-106",
+            "media-112"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-106",
+            "media-112"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-106",
+            "media-112"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ],
+      "auditFailures": null,
+      "auditUnknown": null
+    },
+    {
+      "state": "explore",
+      "capturedAt": "2026-10-25T03:01:18.523Z",
+      "incomplete": false,
+      "window": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 20.190475463867188,
+            "y": 300.952392578125,
+            "width": 91.80952453613281,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20.190475463867188,
+            "y": 300.952392578125,
+            "width": 91.80952453613281,
+            "height": 104
+          }
+        },
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 20.190475463867188,
+            "y": 445.33331298828125,
+            "width": 91.80952453613281,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20.190475463867188,
+            "y": 445.33331298828125,
+            "width": 91.80952453613281,
+            "height": 104
+          }
+        },
+        {
+          "name": "notes-on-noticing",
+          "box": {
+            "x": 20.190475463867188,
+            "y": 589.7142944335938,
+            "width": 91.80952453613281,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20.190475463867188,
+            "y": 589.7142944335938,
+            "width": 91.80952453613281,
+            "height": 104
+          }
+        }
+      ],
+      "authoredAlignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-165",
+            "media-171",
+            "media-177"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-165",
+            "media-171",
+            "media-177"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-165",
+            "media-171",
+            "media-177"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ],
+      "auditFailures": null,
+      "auditUnknown": null
+    },
+    {
+      "state": "saved",
+      "capturedAt": "2026-10-25T03:01:20.410Z",
+      "incomplete": false,
+      "window": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 20.190475463867188,
+            "y": 233.1428680419922,
+            "width": 91.80952453613281,
+            "height": 104.00001525878906
+          },
+          "visibleBox": {
+            "x": 20.190475463867188,
+            "y": 233.1428680419922,
+            "width": 91.80952453613281,
+            "height": 104.00001525878906
+          }
+        },
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 20.190475463867188,
+            "y": 377.5238037109375,
+            "width": 91.80952453613281,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 20.190475463867188,
+            "y": 377.5238037109375,
+            "width": 91.80952453613281,
+            "height": 104
+          }
+        }
+      ],
+      "authoredAlignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-222",
+            "media-228"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-222",
+            "media-228"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-222",
+            "media-228"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 1.52587890625e-05,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ],
+      "auditFailures": null,
+      "auditUnknown": null
+    },
+    {
+      "state": "reader",
+      "capturedAt": "2026-10-25T03:01:21.706Z",
+      "incomplete": false,
+      "window": {
+        "width": 411.42857142857144,
+        "height": 814.4761904761905,
+        "scale": 2.625,
+        "fontScale": 1
+      },
+      "appearance": "light",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 0,
+            "y": -857.90478515625,
+            "width": 411.4285583496094,
+            "height": 342.857177734375
+          },
+          "visibleBox": {
+            "x": 0,
+            "y": 64.38095092773438,
+            "width": 411.4285583496094,
+            "height": 0
+          }
+        }
+      ],
+      "authoredAlignment": [],
+      "auditFailures": null,
+      "auditUnknown": null
+    }
+  ],
+  "ipad-accessibility-dark": [
+    {
+      "state": "journal",
+      "capturedAt": "2026-10-25T03:02:44.540Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 3.571,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "appearance": "dark",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 40,
+            "y": 841.5,
+            "width": 754,
+            "height": 486.5
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 841.5,
+            "width": 754,
+            "height": 241.5
+          }
+        },
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 40,
+            "y": 1990.5,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 1990.5,
+            "width": 92,
+            "height": 0
+          }
+        },
+        {
+          "name": "notes-on-noticing",
+          "box": {
+            "x": 40,
+            "y": 2397,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 2397,
+            "width": 92,
+            "height": 0
+          }
+        }
+      ],
+      "authoredAlignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-51",
+            "media-57"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-51",
+            "media-57"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-51",
+            "media-57"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    },
+    {
+      "state": "explore",
+      "capturedAt": "2026-10-25T03:02:49.625Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 3.571,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "appearance": "dark",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 40,
+            "y": 951,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 951,
+            "width": 92,
+            "height": 104
+          }
+        },
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 40,
+            "y": 1357.5,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 1357.5,
+            "width": 92,
+            "height": 0
+          }
+        },
+        {
+          "name": "notes-on-noticing",
+          "box": {
+            "x": 40,
+            "y": 1764,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 1764,
+            "width": 92,
+            "height": 0
+          }
+        }
+      ],
+      "authoredAlignment": [
+        {
+          "id": "thumbnail-left",
+          "members": [
+            "media-43",
+            "media-49",
+            "media-55"
+          ],
+          "axis": "left",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-width",
+          "members": [
+            "media-43",
+            "media-49",
+            "media-55"
+          ],
+          "axis": "width",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        },
+        {
+          "id": "thumbnail-height",
+          "members": [
+            "media-43",
+            "media-49",
+            "media-55"
+          ],
+          "axis": "height",
+          "tolerance": 0.5,
+          "source": "Fieldwork authored thumbnail rail and 92\u00d7104dp frame contract",
+          "deviation": 0,
+          "pass": true,
+          "scope": "Authored peer-alignment contract, not a universal aesthetic rule."
+        }
+      ],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    },
+    {
+      "state": "saved",
+      "capturedAt": "2026-10-25T03:02:53.508Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 3.571,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "appearance": "dark",
+      "media": [
+        {
+          "name": "long-way-home",
+          "box": {
+            "x": 40,
+            "y": 862,
+            "width": 92,
+            "height": 104
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 862,
+            "width": 92,
+            "height": 104
+          }
+        }
+      ],
+      "authoredAlignment": [],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    },
+    {
+      "state": "reader",
+      "capturedAt": "2026-10-25T03:02:58.141Z",
+      "incomplete": false,
+      "window": {
+        "fontScale": 3.571,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "appearance": "dark",
+      "media": [
+        {
+          "name": "looking-longer",
+          "box": {
+            "x": 0,
+            "y": 96.5,
+            "width": 834,
+            "height": 695
+          },
+          "visibleBox": {
+            "x": 0,
+            "y": 96.5,
+            "width": 834,
+            "height": 695
+          }
+        }
+      ],
+      "authoredAlignment": [],
+      "auditFailures": [],
+      "auditUnknown": [
+        "dynamic-type",
+        "navigation-continuity",
+        "native-affordance-and-visual-order"
+      ]
+    }
+  ]
+}

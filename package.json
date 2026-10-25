@@ -1,0 +1,68 @@
+{
+  "name": "@physics-of-design/toolkit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local conditional typography tools; measurements are facts, compatibility is a revisable hypothesis.",
+  "bin": {
+    "design": "./dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/cli.js",
+    "design": "node dist/cli.js",
+    "test": "tsx --test test/*.test.ts",
+    "test:browser": "npm run build && tsx --test test/browser.integration.ts",
+    "test:native": "npm run build && tsx --test test/native.integration.ts",
+    "typecheck": "tsc --noEmit",
+    "spike": "npm run build && tsx scripts/spike.ts",
+    "fonts": "node scripts/fetch-fonts.mjs",
+    "check": "npm run verify",
+    "verify": "node scripts/verify.mjs",
+    "verify:all": "node scripts/verify.mjs --all",
+    "native:provision": "sh scripts/provision-native.sh",
+    "native:start": "node scripts/native-session.mjs",
+    "selector:provision": "sh scripts/provision-selector.sh",
+    "selector:smoke": "DESIGN_SEMIF_BIN=./scripts/semif-local.sh node scripts/selector-smoke.mjs",
+    "evaluate:agent": "DESIGN_SEMIF_BIN=./scripts/semif-local.sh node scripts/evaluate-agent.mjs",
+    "evaluate:ratings": "node scripts/prepare-ratings.mjs artifacts/evaluation-v2",
+    "selector:provision:tiny": "sh scripts/provision-tiny-selector.sh",
+    "selector:probe": "DESIGN_SEMIF_BIN=./scripts/semif-local.sh DESIGN_PROBE_READOUT=balanced node scripts/probe-selector.mjs",
+    "tuning:specimens": "node scripts/tuning-specimens.mjs",
+    "context:budget": "node scripts/context-budget.mjs",
+    "evidence:export": "node scripts/export-evidence.mjs",
+    "fieldwork:build": "npm run build && node scripts/build-fieldwork.mjs",
+    "fieldwork:web:proof": "node scripts/prove-fieldwork-web.mjs",
+    "fieldwork:native": "node scripts/native-session.mjs --fieldwork",
+    "fieldwork:native:flows": "node scripts/fieldwork-native-flows.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@babel/core": "7.29.7",
+    "@modelcontextprotocol/ext-apps": "2.0.3",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@stylexjs/babel-plugin": "0.19.1",
+    "@stylexjs/stylex": "0.19.1",
+    "esbuild": "0.25.12",
+    "fontkit": "2.0.4",
+    "playwright": "1.64.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/babel__core": "7.20.5",
+    "@types/fontkit": "2.0.9",
+    "@types/node": "24.10.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "prettier": "3.9.10",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "license": "MIT"
+}

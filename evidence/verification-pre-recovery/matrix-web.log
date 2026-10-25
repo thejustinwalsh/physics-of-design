@@ -1,0 +1,9 @@
+{"platform":"web","count":30,"failures":0}
+{"platform":"web","count":60,"failures":0}
+{"platform":"web","count":90,"failures":0}
+{"platform":"web","count":120,"failures":0}
+{"platform":"web","count":150,"failures":0}
+{"platform":"web","count":180,"failures":0}
+{"platform":"web","count":210,"failures":0}
+{"platform":"web","count":240,"failures":0}
+{"platform":"web","contentCases":8,"archetypes":2,"widths":[280,320,390,767,1280],"textScales":[1,1.3,2],"measurements":240,"searches":4,"searchCandidateBudget":9,"runtimes":[{"chromium":"156.0.8078.4","deviceScaleFactor":1}],"failures":[]}

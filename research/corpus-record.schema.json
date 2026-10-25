@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Attributed design corpus record",
+  "type": "object",
+  "required": [
+    "projectId",
+    "sourceUrl",
+    "author",
+    "year",
+    "genre",
+    "platform",
+    "audience",
+    "license",
+    "permissionEvidence",
+    "awardStatus",
+    "viewports",
+    "fontLicenses",
+    "split"
+  ],
+  "properties": {
+    "projectId": {
+      "type": "string"
+    },
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "author": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "genre": {
+      "type": "string"
+    },
+    "platform": {
+      "enum": ["web", "ios", "android", "print"]
+    },
+    "audience": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "permissionEvidence": {
+      "type": "string"
+    },
+    "fontLicenses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "awardStatus": {
+      "enum": ["award", "matched-production-control", "owned-perturbation"]
+    },
+    "parentProject": {
+      "type": ["string", "null"]
+    },
+    "viewports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["width", "height", "renderer", "textScale"],
+        "properties": {
+          "width": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "height": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "renderer": {
+            "type": "string"
+          },
+          "textScale": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "geometryFile": {
+            "type": "string"
+          },
+          "screenshotFile": {
+            "type": ["string", "null"]
+          }
+        }
+      }
+    },
+    "split": {
+      "enum": ["train", "calibration", "held-out"]
+    }
+  },
+  "description": "Keep all viewports and perturbations of a project in one split. A public URL or design award does not grant screenshot/font redistribution rights. Store computed geometry only where collection is permitted."
+}

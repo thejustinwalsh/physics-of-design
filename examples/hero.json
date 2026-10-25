@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "archetype": "hero",
+  "platform": "web",
+  "viewport": {
+    "width": 1280,
+    "height": 900,
+    "textScale": 1
+  },
+  "padding": 64,
+  "blocks": [
+    {
+      "id": "title",
+      "role": "title",
+      "text": "Make room for what matters.",
+      "font": {
+        "file": "assets/fonts/Lato-Black.ttf",
+        "family": "Lato Black"
+      },
+      "size": 88,
+      "weight": 900,
+      "trackingEm": -0.024,
+      "leading": 1.02,
+      "measure": 1080
+    },
+    {
+      "id": "subtitle",
+      "role": "subtitle",
+      "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+      "font": {
+        "file": "assets/fonts/Lato-Regular.ttf",
+        "family": "Lato"
+      },
+      "size": 24,
+      "weight": 400,
+      "trackingEm": 0,
+      "leading": 1.45,
+      "measure": 660
+    }
+  ],
+  "gaps": [28],
+  "responsive": {
+    "source": "astra-responsive-review-2026-10-24",
+    "anchors": [
+      {
+        "width": 360,
+        "padding": 24,
+        "gapScale": 0.7142857142857143,
+        "contentMaxWidth": 1280,
+        "pattern": "stack",
+        "blocks": {
+          "title": {
+            "sizeScale": 0.5909090909090909,
+            "leadingDelta": 0.06000000000000005,
+            "trackingDelta": 0.009000000000000001,
+            "measureScale": 0.9259259259259259
+          },
+          "subtitle": {
+            "sizeScale": 0.9166666666666666,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 1
+          }
+        }
+      },
+      {
+        "width": 390,
+        "padding": 24,
+        "gapScale": 0.7857142857142857,
+        "contentMaxWidth": 1280,
+        "pattern": "stack",
+        "blocks": {
+          "title": {
+            "sizeScale": 0.6363636363636364,
+            "leadingDelta": 0.06000000000000005,
+            "trackingDelta": 0.009000000000000001,
+            "measureScale": 0.9259259259259259
+          },
+          "subtitle": {
+            "sizeScale": 0.9166666666666666,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 1
+          }
+        }
+      },
+      {
+        "width": 834,
+        "padding": 40,
+        "gapScale": 1,
+        "contentMaxWidth": 1280,
+        "pattern": "stack",
+        "blocks": {
+          "title": {
+            "sizeScale": 0.9090909090909091,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 0.9259259259259259
+          },
+          "subtitle": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 1
+          }
+        }
+      },
+      {
+        "width": 1024,
+        "padding": 48,
+        "gapScale": 1,
+        "contentMaxWidth": 1280,
+        "pattern": "stack",
+        "blocks": {
+          "title": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 0.9259259259259259
+          },
+          "subtitle": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 1
+          }
+        }
+      },
+      {
+        "width": 1440,
+        "padding": 64,
+        "gapScale": 1.1428571428571428,
+        "contentMaxWidth": 1280,
+        "pattern": "stack",
+        "blocks": {
+          "title": {
+            "sizeScale": 1.0909090909090908,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 0.9259259259259259
+          },
+          "subtitle": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 1
+          }
+        }
+      }
+    ],
+    "split": {
+      "titleMinWidth": 240,
+      "textMinWidth": 360,
+      "gap": 40
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "generated": "2026-10-24",
+  "assets": [
+    {
+      "path": "native/assets/fieldwork/headland.png",
+      "sha256": "8fee5f6272e740a888eb4212c52223758a7c94a2db4c234aa9b2ab389ce639a3",
+      "width": 1536,
+      "height": 1024,
+      "method": "built-in imagegen",
+      "scene": "original imagined editorial landscape",
+      "prompt": "research/fieldwork-image-prompts.md#headland"
+    },
+    {
+      "path": "native/assets/fieldwork/forest.png",
+      "sha256": "aa9e6227b30909f491858645985d5b6d0e1f9995e102a89059cc9a901244b1fe",
+      "width": 1536,
+      "height": 1024,
+      "method": "built-in imagegen",
+      "scene": "original imagined editorial landscape",
+      "prompt": "research/fieldwork-image-prompts.md#forest"
+    }
+  ],
+  "scope": "Generated imagery illustrates a fictional publication/app; no identified real location or reporting claim. Source output remains at its original generated-images location and the project uses these workspace copies."
+}

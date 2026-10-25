@@ -1,0 +1,11 @@
+# Fieldwork raster assets
+
+Generated with the built-in imagegen tool on 2026-10-24 and copied into `native/assets/fieldwork`. These are imagined scenes, not documentary evidence of identified places. No external photograph was used as an input. The deterministic concentric-circle guide artwork is authored SVG in the example source.
+
+## Headland
+
+Use case: photorealistic-natural. Asset type: original cover photograph for an independent design-and-place journal called Fieldwork. Create one extraordinary editorial landscape photograph, horizontal 3:2 composition, no text or graphic overlays. A solitary small concrete modernist observatory perched on a vast dramatic pale limestone headland above a deep Mediterranean sea. The structure is small in the right third, the landscape dominates; sweeping ochre and chalk cliffs trace a curved diagonal toward the horizon. Wind-bent dry grasses at the lower edge, dark cypress silhouettes far away, richly detailed geology. Shot on medium-format film, afternoon sun, warm amber rock contrasting dark petrol-blue water and washed ivory sky, restrained documentary realism and slight organic grain. Sophisticated architectural travel photography, quiet and tactile. No people, no boats, no brand marks, no watermark, no invented typography, not a website mockup. Render at high landscape resolution so it can be cropped both vertically on mobile and wide on desktop.
+
+## Forest
+
+Use case: photorealistic-natural. Asset type: second story photograph for Fieldwork, an independent architecture-and-place journal. Make a refined documentary photograph of a narrow winding mountain road disappearing into dense dark green cypress and pine forest, a tiny warm terracotta-roofed stone house partially concealed in the trees. Horizontal 3:2 photograph, strong diagonal composition, topographic layers, warm slanted late-afternoon sunlight on the road, tactile fine film grain and authentic botanical detail. Italian Alpine foothills atmosphere, quiet human traces, no people or cars, no text, no logos, no watermark, no interface. Deep forest green with subdued ochre and warm limestone highlights; sophisticated medium-format magazine photography. Original imagined scene, not an identifiable real property.

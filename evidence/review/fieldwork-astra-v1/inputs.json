@@ -1,0 +1,107 @@
+{
+  "method": "byte copies of supplied evidence before visual inspection",
+  "files": [
+    {
+      "source": "artifacts/fieldwork/proof-web/cover-1440-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/web-cover-1440-1.png",
+      "sha256": "b8c546a2d9f679aef7ea6873253acaf3065ab1d76d2da9948891c4741175e78e",
+      "bytes": 2489968
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web/cover-390-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/web-cover-390-1.png",
+      "sha256": "77f4a7e52d6be18be258cd3c55413039a1e992731f99415b700a0c9abee20f85",
+      "bytes": 708975
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web/cover-834-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/web-cover-834-1.png",
+      "sha256": "7048a594ec5277129037c4da325303554b85d703d147f4c23619d51736550499",
+      "bytes": 956294
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web/issue-1440-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/web-issue-1440-1.png",
+      "sha256": "4d1c2d5396225ef826e2208d9c71a48998b40c260bc8f01a99b4447dbea95ba7",
+      "bytes": 1683082
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web/issue-390-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/web-issue-390-1.png",
+      "sha256": "198479275e1ebb001aeb3fa5c4b777cec32da956deba520103766360ba3409e7",
+      "bytes": 586690
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web/issue-834-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/web-issue-834-1.png",
+      "sha256": "174f75977747626b8f2bcce232b74ae9e4f07a8ae496ed8cc36dd596eefcaaaf",
+      "bytes": 663120
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web/story-1440-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/web-story-1440-1.png",
+      "sha256": "29b262fbbae7d9cbff41d80506a71fbbf2e0fc9876e05e693131fbc75bb3cd1f",
+      "bytes": 1537063
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web/story-390-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/web-story-390-1.png",
+      "sha256": "b8f6b52f9a150fdab77aefc6ed486c117841a8a3474aebb9a6098cb7d877b1de",
+      "bytes": 495595
+    },
+    {
+      "source": "artifacts/fieldwork/proof-web/story-834-1.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/web-story-834-1.png",
+      "sha256": "444e8020f2247d105fc53ffa2777f580ee2e7a669f4ff67a6635aafb2c602c0a",
+      "bytes": 700517
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad/journal.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/ipad-journal.png",
+      "sha256": "0286aa465bc6c959daf170e823aed67f8fe2eee4325ea326584393a5672897ea",
+      "bytes": 2080634
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad/journal.json",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/ipad-journal.json",
+      "sha256": "4b7fac08fb003c5146d6ec422c1ced9deb03e6dfd84ed3a2078816d00a70120c",
+      "bytes": 34711
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad/explore.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/ipad-explore.png",
+      "sha256": "bca47bd524a374f4dfd69d553c76da81ccef3293a97dc173fcf9678a586033b9",
+      "bytes": 562200
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad/explore.json",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/ipad-explore.json",
+      "sha256": "c865e45c61996fbd270311b6392f9ab3f74e19db473bc1399cad7b0eb12bda0f",
+      "bytes": 33035
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad/saved.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/ipad-saved.png",
+      "sha256": "2b90e98966ac70cb574e513ebc57970086e3aa8a8c71041a88548c8efa10ca8d",
+      "bytes": 323310
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad/saved.json",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/ipad-saved.json",
+      "sha256": "ec593b2b563cb132c2b061a02fa4473407072601c7c93f699714b6a714f3b29e",
+      "bytes": 23861
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad/reader.png",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/ipad-reader.png",
+      "sha256": "248f70fa28318e54e41fe6aa339f41ad6d2347326c1ca2de564d4ac4a2a2147f",
+      "bytes": 1879403
+    },
+    {
+      "source": "artifacts/fieldwork/proof-native/ipad/reader.json",
+      "snapshot": "artifacts/review/fieldwork-astra-v1/ipad-reader.json",
+      "sha256": "8ddde4df35f6633cd7ca0ae92917038b3f1c2851a3ed4a24a1ea42608fd6d246",
+      "bytes": 37917
+    }
+  ]
+}

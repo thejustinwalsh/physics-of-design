@@ -1,0 +1,24 @@
+{
+  "status": "experimental fit probe; design preference quality unvalidated",
+  "model": {
+    "source": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "license": "Apache-2.0"
+  },
+  "quantization": {
+    "source": "unsloth/Qwen3.5-0.8B-GGUF",
+    "revision": "6ab461498e2023f6e3c1baea90a8f0fe38ab64d0",
+    "file": "Qwen3.5-0.8B-Q4_K_M.gguf",
+    "bytes": 532517120,
+    "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517",
+    "license": "Apache-2.0"
+  },
+  "selectionReason": "One sub-billion candidate for task-specific forward readout/possible future tuning on a 16 GiB host. Not selected through a multi-model benchmark.",
+  "primaryModelCard": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+  "publisherMetrics": {
+    "nonThinkingMMLUPro": 29.7,
+    "nonThinkingIFEval": 52.1,
+    "caveat": "Publisher general benchmarks do not establish candidate-design preference, quantized performance or probe quality."
+  },
+  "policy": "One configured selector per run. 4B remains the original provisional baseline; tiny is an explicit experimental profile. Deterministic measurement remains unchanged."
+}

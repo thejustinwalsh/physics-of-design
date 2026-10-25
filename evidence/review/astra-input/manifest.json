@@ -1,0 +1,2492 @@
+[
+  {
+    "id": "hero-original-360",
+    "archetype": "hero",
+    "variant": "original",
+    "width": 360,
+    "state": {
+      "version": 1,
+      "archetype": "hero",
+      "platform": "web",
+      "viewport": {
+        "width": 360,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 64,
+      "blocks": [
+        {
+          "id": "title",
+          "role": "title",
+          "text": "Make room for what matters.",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 88,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.024,
+          "leading": 1.02,
+          "measure": 1080,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "subtitle",
+          "role": "subtitle",
+          "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+          "font": {
+            "file": "assets/fonts/Lato-Regular.ttf",
+            "family": "Lato",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.45,
+          "measure": 660,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        28
+      ],
+      "locks": [],
+      "responsive": {
+        "source": "astra-responsive-review-2026-10-24",
+        "anchors": [
+          {
+            "width": 360,
+            "padding": 24,
+            "gapScale": 0.7142857142857143,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.5909090909090909,
+                "leadingDelta": 0.06000000000000005,
+                "trackingDelta": 0.009000000000000001,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 0.9166666666666666,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 390,
+            "padding": 24,
+            "gapScale": 0.7857142857142857,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.6363636363636364,
+                "leadingDelta": 0.06000000000000005,
+                "trackingDelta": 0.009000000000000001,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 0.9166666666666666,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 834,
+            "padding": 40,
+            "gapScale": 1,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.9090909090909091,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1024,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1440,
+            "padding": 64,
+            "gapScale": 1.1428571428571428,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 1.0909090909090908,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          }
+        ],
+        "split": {
+          "titleMinWidth": 240,
+          "textMinWidth": 360,
+          "gap": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "hero-original-390",
+    "archetype": "hero",
+    "variant": "original",
+    "width": 390,
+    "state": {
+      "version": 1,
+      "archetype": "hero",
+      "platform": "web",
+      "viewport": {
+        "width": 390,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 64,
+      "blocks": [
+        {
+          "id": "title",
+          "role": "title",
+          "text": "Make room for what matters.",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 88,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.024,
+          "leading": 1.02,
+          "measure": 1080,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "subtitle",
+          "role": "subtitle",
+          "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+          "font": {
+            "file": "assets/fonts/Lato-Regular.ttf",
+            "family": "Lato",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.45,
+          "measure": 660,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        28
+      ],
+      "locks": [],
+      "responsive": {
+        "source": "astra-responsive-review-2026-10-24",
+        "anchors": [
+          {
+            "width": 360,
+            "padding": 24,
+            "gapScale": 0.7142857142857143,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.5909090909090909,
+                "leadingDelta": 0.06000000000000005,
+                "trackingDelta": 0.009000000000000001,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 0.9166666666666666,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 390,
+            "padding": 24,
+            "gapScale": 0.7857142857142857,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.6363636363636364,
+                "leadingDelta": 0.06000000000000005,
+                "trackingDelta": 0.009000000000000001,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 0.9166666666666666,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 834,
+            "padding": 40,
+            "gapScale": 1,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.9090909090909091,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1024,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1440,
+            "padding": 64,
+            "gapScale": 1.1428571428571428,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 1.0909090909090908,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          }
+        ],
+        "split": {
+          "titleMinWidth": 240,
+          "textMinWidth": 360,
+          "gap": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "hero-original-834",
+    "archetype": "hero",
+    "variant": "original",
+    "width": 834,
+    "state": {
+      "version": 1,
+      "archetype": "hero",
+      "platform": "web",
+      "viewport": {
+        "width": 834,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 64,
+      "blocks": [
+        {
+          "id": "title",
+          "role": "title",
+          "text": "Make room for what matters.",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 88,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.024,
+          "leading": 1.02,
+          "measure": 1080,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "subtitle",
+          "role": "subtitle",
+          "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+          "font": {
+            "file": "assets/fonts/Lato-Regular.ttf",
+            "family": "Lato",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.45,
+          "measure": 660,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        28
+      ],
+      "locks": [],
+      "responsive": {
+        "source": "astra-responsive-review-2026-10-24",
+        "anchors": [
+          {
+            "width": 360,
+            "padding": 24,
+            "gapScale": 0.7142857142857143,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.5909090909090909,
+                "leadingDelta": 0.06000000000000005,
+                "trackingDelta": 0.009000000000000001,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 0.9166666666666666,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 390,
+            "padding": 24,
+            "gapScale": 0.7857142857142857,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.6363636363636364,
+                "leadingDelta": 0.06000000000000005,
+                "trackingDelta": 0.009000000000000001,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 0.9166666666666666,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 834,
+            "padding": 40,
+            "gapScale": 1,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.9090909090909091,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1024,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1440,
+            "padding": 64,
+            "gapScale": 1.1428571428571428,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 1.0909090909090908,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          }
+        ],
+        "split": {
+          "titleMinWidth": 240,
+          "textMinWidth": 360,
+          "gap": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "hero-original-1024",
+    "archetype": "hero",
+    "variant": "original",
+    "width": 1024,
+    "state": {
+      "version": 1,
+      "archetype": "hero",
+      "platform": "web",
+      "viewport": {
+        "width": 1024,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 64,
+      "blocks": [
+        {
+          "id": "title",
+          "role": "title",
+          "text": "Make room for what matters.",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 88,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.024,
+          "leading": 1.02,
+          "measure": 1080,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "subtitle",
+          "role": "subtitle",
+          "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+          "font": {
+            "file": "assets/fonts/Lato-Regular.ttf",
+            "family": "Lato",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.45,
+          "measure": 660,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        28
+      ],
+      "locks": [],
+      "responsive": {
+        "source": "astra-responsive-review-2026-10-24",
+        "anchors": [
+          {
+            "width": 360,
+            "padding": 24,
+            "gapScale": 0.7142857142857143,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.5909090909090909,
+                "leadingDelta": 0.06000000000000005,
+                "trackingDelta": 0.009000000000000001,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 0.9166666666666666,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 390,
+            "padding": 24,
+            "gapScale": 0.7857142857142857,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.6363636363636364,
+                "leadingDelta": 0.06000000000000005,
+                "trackingDelta": 0.009000000000000001,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 0.9166666666666666,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 834,
+            "padding": 40,
+            "gapScale": 1,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.9090909090909091,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1024,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1440,
+            "padding": 64,
+            "gapScale": 1.1428571428571428,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 1.0909090909090908,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          }
+        ],
+        "split": {
+          "titleMinWidth": 240,
+          "textMinWidth": 360,
+          "gap": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "hero-original-1440",
+    "archetype": "hero",
+    "variant": "original",
+    "width": 1440,
+    "state": {
+      "version": 1,
+      "archetype": "hero",
+      "platform": "web",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 64,
+      "blocks": [
+        {
+          "id": "title",
+          "role": "title",
+          "text": "Make room for what matters.",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 88,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.024,
+          "leading": 1.02,
+          "measure": 1080,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "subtitle",
+          "role": "subtitle",
+          "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+          "font": {
+            "file": "assets/fonts/Lato-Regular.ttf",
+            "family": "Lato",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.45,
+          "measure": 660,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        28
+      ],
+      "locks": [],
+      "responsive": {
+        "source": "astra-responsive-review-2026-10-24",
+        "anchors": [
+          {
+            "width": 360,
+            "padding": 24,
+            "gapScale": 0.7142857142857143,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.5909090909090909,
+                "leadingDelta": 0.06000000000000005,
+                "trackingDelta": 0.009000000000000001,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 0.9166666666666666,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 390,
+            "padding": 24,
+            "gapScale": 0.7857142857142857,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.6363636363636364,
+                "leadingDelta": 0.06000000000000005,
+                "trackingDelta": 0.009000000000000001,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 0.9166666666666666,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 834,
+            "padding": 40,
+            "gapScale": 1,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 0.9090909090909091,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1024,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1440,
+            "padding": 64,
+            "gapScale": 1.1428571428571428,
+            "contentMaxWidth": 1280,
+            "pattern": "stack",
+            "blocks": {
+              "title": {
+                "sizeScale": 1.0909090909090908,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 0.9259259259259259
+              },
+              "subtitle": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          }
+        ],
+        "split": {
+          "titleMinWidth": 240,
+          "textMinWidth": 360,
+          "gap": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "hero-relaxed-360",
+    "archetype": "hero",
+    "variant": "relaxed",
+    "width": 360,
+    "state": {
+      "version": 1,
+      "archetype": "hero",
+      "platform": "web",
+      "viewport": {
+        "width": 360,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 24,
+      "blocks": [
+        {
+          "id": "title",
+          "role": "title",
+          "text": "Make room for what matters.",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 114.4,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.0321,
+          "leading": 1.021,
+          "measure": 1232,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "subtitle",
+          "role": "subtitle",
+          "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+          "font": {
+            "file": "assets/fonts/Lato-Regular.ttf",
+            "family": "Lato",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0.001,
+          "leading": 1.35,
+          "measure": 543.635,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        26.176
+      ],
+      "locks": []
+    }
+  },
+  {
+    "id": "hero-relaxed-390",
+    "archetype": "hero",
+    "variant": "relaxed",
+    "width": 390,
+    "state": {
+      "version": 1,
+      "archetype": "hero",
+      "platform": "web",
+      "viewport": {
+        "width": 390,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 24,
+      "blocks": [
+        {
+          "id": "title",
+          "role": "title",
+          "text": "Make room for what matters.",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 114.4,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.0321,
+          "leading": 1.021,
+          "measure": 1232,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "subtitle",
+          "role": "subtitle",
+          "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+          "font": {
+            "file": "assets/fonts/Lato-Regular.ttf",
+            "family": "Lato",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0.001,
+          "leading": 1.35,
+          "measure": 543.635,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        26.176
+      ],
+      "locks": []
+    }
+  },
+  {
+    "id": "hero-relaxed-834",
+    "archetype": "hero",
+    "variant": "relaxed",
+    "width": 834,
+    "state": {
+      "version": 1,
+      "archetype": "hero",
+      "platform": "web",
+      "viewport": {
+        "width": 834,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 24,
+      "blocks": [
+        {
+          "id": "title",
+          "role": "title",
+          "text": "Make room for what matters.",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 114.4,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.0321,
+          "leading": 1.021,
+          "measure": 1232,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "subtitle",
+          "role": "subtitle",
+          "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+          "font": {
+            "file": "assets/fonts/Lato-Regular.ttf",
+            "family": "Lato",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0.001,
+          "leading": 1.35,
+          "measure": 543.635,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        26.176
+      ],
+      "locks": []
+    }
+  },
+  {
+    "id": "hero-relaxed-1024",
+    "archetype": "hero",
+    "variant": "relaxed",
+    "width": 1024,
+    "state": {
+      "version": 1,
+      "archetype": "hero",
+      "platform": "web",
+      "viewport": {
+        "width": 1024,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 24,
+      "blocks": [
+        {
+          "id": "title",
+          "role": "title",
+          "text": "Make room for what matters.",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 114.4,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.0321,
+          "leading": 1.021,
+          "measure": 1232,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "subtitle",
+          "role": "subtitle",
+          "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+          "font": {
+            "file": "assets/fonts/Lato-Regular.ttf",
+            "family": "Lato",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0.001,
+          "leading": 1.35,
+          "measure": 543.635,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        26.176
+      ],
+      "locks": []
+    }
+  },
+  {
+    "id": "hero-relaxed-1440",
+    "archetype": "hero",
+    "variant": "relaxed",
+    "width": 1440,
+    "state": {
+      "version": 1,
+      "archetype": "hero",
+      "platform": "web",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 24,
+      "blocks": [
+        {
+          "id": "title",
+          "role": "title",
+          "text": "Make room for what matters.",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 114.4,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.0321,
+          "leading": 1.021,
+          "measure": 1232,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "subtitle",
+          "role": "subtitle",
+          "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+          "font": {
+            "file": "assets/fonts/Lato-Regular.ttf",
+            "family": "Lato",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 24,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0.001,
+          "leading": 1.35,
+          "measure": 543.635,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        26.176
+      ],
+      "locks": []
+    }
+  },
+  {
+    "id": "editorial-original-360",
+    "archetype": "editorial",
+    "variant": "original",
+    "width": 360,
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 360,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 48,
+      "blocks": [
+        {
+          "id": "heading",
+          "role": "title",
+          "text": "The shape of a thoughtful pause",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 44,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.012,
+          "leading": 1.12,
+          "measure": 760,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "prose",
+          "role": "prose",
+          "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+          "font": {
+            "file": "assets/fonts/Spectral-Regular.ttf",
+            "family": "Spectral",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 21,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.55,
+          "measure": 650,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        24
+      ],
+      "locks": [],
+      "responsive": {
+        "source": "astra-responsive-review-2026-10-24",
+        "anchors": [
+          {
+            "width": 360,
+            "padding": 20,
+            "gapScale": 0.8333333333333334,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 0.8181818181818182,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 390,
+            "padding": 24,
+            "gapScale": 0.9166666666666666,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 0.8636363636363636,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 834,
+            "padding": 40,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1024,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1440,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          }
+        ],
+        "split": {
+          "titleMinWidth": 240,
+          "textMinWidth": 360,
+          "gap": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "editorial-original-390",
+    "archetype": "editorial",
+    "variant": "original",
+    "width": 390,
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 390,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 48,
+      "blocks": [
+        {
+          "id": "heading",
+          "role": "title",
+          "text": "The shape of a thoughtful pause",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 44,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.012,
+          "leading": 1.12,
+          "measure": 760,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "prose",
+          "role": "prose",
+          "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+          "font": {
+            "file": "assets/fonts/Spectral-Regular.ttf",
+            "family": "Spectral",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 21,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.55,
+          "measure": 650,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        24
+      ],
+      "locks": [],
+      "responsive": {
+        "source": "astra-responsive-review-2026-10-24",
+        "anchors": [
+          {
+            "width": 360,
+            "padding": 20,
+            "gapScale": 0.8333333333333334,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 0.8181818181818182,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 390,
+            "padding": 24,
+            "gapScale": 0.9166666666666666,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 0.8636363636363636,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 834,
+            "padding": 40,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1024,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1440,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          }
+        ],
+        "split": {
+          "titleMinWidth": 240,
+          "textMinWidth": 360,
+          "gap": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "editorial-original-834",
+    "archetype": "editorial",
+    "variant": "original",
+    "width": 834,
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 834,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 48,
+      "blocks": [
+        {
+          "id": "heading",
+          "role": "title",
+          "text": "The shape of a thoughtful pause",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 44,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.012,
+          "leading": 1.12,
+          "measure": 760,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "prose",
+          "role": "prose",
+          "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+          "font": {
+            "file": "assets/fonts/Spectral-Regular.ttf",
+            "family": "Spectral",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 21,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.55,
+          "measure": 650,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        24
+      ],
+      "locks": [],
+      "responsive": {
+        "source": "astra-responsive-review-2026-10-24",
+        "anchors": [
+          {
+            "width": 360,
+            "padding": 20,
+            "gapScale": 0.8333333333333334,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 0.8181818181818182,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 390,
+            "padding": 24,
+            "gapScale": 0.9166666666666666,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 0.8636363636363636,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 834,
+            "padding": 40,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1024,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1440,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          }
+        ],
+        "split": {
+          "titleMinWidth": 240,
+          "textMinWidth": 360,
+          "gap": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "editorial-original-1024",
+    "archetype": "editorial",
+    "variant": "original",
+    "width": 1024,
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 1024,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 48,
+      "blocks": [
+        {
+          "id": "heading",
+          "role": "title",
+          "text": "The shape of a thoughtful pause",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 44,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.012,
+          "leading": 1.12,
+          "measure": 760,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "prose",
+          "role": "prose",
+          "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+          "font": {
+            "file": "assets/fonts/Spectral-Regular.ttf",
+            "family": "Spectral",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 21,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.55,
+          "measure": 650,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        24
+      ],
+      "locks": [],
+      "responsive": {
+        "source": "astra-responsive-review-2026-10-24",
+        "anchors": [
+          {
+            "width": 360,
+            "padding": 20,
+            "gapScale": 0.8333333333333334,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 0.8181818181818182,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 390,
+            "padding": 24,
+            "gapScale": 0.9166666666666666,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 0.8636363636363636,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 834,
+            "padding": 40,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1024,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1440,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          }
+        ],
+        "split": {
+          "titleMinWidth": 240,
+          "textMinWidth": 360,
+          "gap": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "editorial-original-1440",
+    "archetype": "editorial",
+    "variant": "original",
+    "width": 1440,
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 48,
+      "blocks": [
+        {
+          "id": "heading",
+          "role": "title",
+          "text": "The shape of a thoughtful pause",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 44,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.012,
+          "leading": 1.12,
+          "measure": 760,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "prose",
+          "role": "prose",
+          "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+          "font": {
+            "file": "assets/fonts/Spectral-Regular.ttf",
+            "family": "Spectral",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 21,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0,
+          "leading": 1.55,
+          "measure": 650,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        24
+      ],
+      "locks": [],
+      "responsive": {
+        "source": "astra-responsive-review-2026-10-24",
+        "anchors": [
+          {
+            "width": 360,
+            "padding": 20,
+            "gapScale": 0.8333333333333334,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 0.8181818181818182,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 390,
+            "padding": 24,
+            "gapScale": 0.9166666666666666,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 0.8636363636363636,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 834,
+            "padding": 40,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1024,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          },
+          {
+            "width": 1440,
+            "padding": 48,
+            "gapScale": 1,
+            "contentMaxWidth": 816,
+            "pattern": "stack",
+            "blocks": {
+              "heading": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0.002,
+                "measureScale": 0.9473684210526315
+              },
+              "prose": {
+                "sizeScale": 1,
+                "leadingDelta": 0,
+                "trackingDelta": 0,
+                "measureScale": 1
+              }
+            }
+          }
+        ],
+        "split": {
+          "titleMinWidth": 240,
+          "textMinWidth": 360,
+          "gap": 40
+        }
+      }
+    }
+  },
+  {
+    "id": "editorial-relaxed-360",
+    "archetype": "editorial",
+    "variant": "relaxed",
+    "width": 360,
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 360,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 24,
+      "blocks": [
+        {
+          "id": "heading",
+          "role": "title",
+          "text": "The shape of a thoughtful pause",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 57.2,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.0201,
+          "leading": 1.036,
+          "measure": 929.174,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "prose",
+          "role": "prose",
+          "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+          "font": {
+            "file": "assets/fonts/Spectral-Regular.ttf",
+            "family": "Spectral",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 21,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0.0033,
+          "leading": 1.495,
+          "measure": 652.602,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        21.188
+      ],
+      "locks": []
+    }
+  },
+  {
+    "id": "editorial-relaxed-390",
+    "archetype": "editorial",
+    "variant": "relaxed",
+    "width": 390,
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 390,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 24,
+      "blocks": [
+        {
+          "id": "heading",
+          "role": "title",
+          "text": "The shape of a thoughtful pause",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 57.2,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.0201,
+          "leading": 1.036,
+          "measure": 929.174,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "prose",
+          "role": "prose",
+          "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+          "font": {
+            "file": "assets/fonts/Spectral-Regular.ttf",
+            "family": "Spectral",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 21,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0.0033,
+          "leading": 1.495,
+          "measure": 652.602,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        21.188
+      ],
+      "locks": []
+    }
+  },
+  {
+    "id": "editorial-relaxed-834",
+    "archetype": "editorial",
+    "variant": "relaxed",
+    "width": 834,
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 834,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 24,
+      "blocks": [
+        {
+          "id": "heading",
+          "role": "title",
+          "text": "The shape of a thoughtful pause",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 57.2,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.0201,
+          "leading": 1.036,
+          "measure": 929.174,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "prose",
+          "role": "prose",
+          "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+          "font": {
+            "file": "assets/fonts/Spectral-Regular.ttf",
+            "family": "Spectral",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 21,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0.0033,
+          "leading": 1.495,
+          "measure": 652.602,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        21.188
+      ],
+      "locks": []
+    }
+  },
+  {
+    "id": "editorial-relaxed-1024",
+    "archetype": "editorial",
+    "variant": "relaxed",
+    "width": 1024,
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 1024,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 24,
+      "blocks": [
+        {
+          "id": "heading",
+          "role": "title",
+          "text": "The shape of a thoughtful pause",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 57.2,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.0201,
+          "leading": 1.036,
+          "measure": 929.174,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "prose",
+          "role": "prose",
+          "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+          "font": {
+            "file": "assets/fonts/Spectral-Regular.ttf",
+            "family": "Spectral",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 21,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0.0033,
+          "leading": 1.495,
+          "measure": 652.602,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        21.188
+      ],
+      "locks": []
+    }
+  },
+  {
+    "id": "editorial-relaxed-1440",
+    "archetype": "editorial",
+    "variant": "relaxed",
+    "width": 1440,
+    "state": {
+      "version": 1,
+      "archetype": "editorial",
+      "platform": "web",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "textScale": 1
+      },
+      "padding": 24,
+      "blocks": [
+        {
+          "id": "heading",
+          "role": "title",
+          "text": "The shape of a thoughtful pause",
+          "font": {
+            "file": "assets/fonts/Lato-Black.ttf",
+            "family": "Lato Black",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 57.2,
+          "weight": 900,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": -0.0201,
+          "leading": 1.036,
+          "measure": 929.174,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        },
+        {
+          "id": "prose",
+          "role": "prose",
+          "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+          "font": {
+            "file": "assets/fonts/Spectral-Regular.ttf",
+            "family": "Spectral",
+            "axes": {},
+            "opticalSizing": "none"
+          },
+          "size": 21,
+          "weight": 400,
+          "kerning": "auto",
+          "features": {},
+          "trackingEm": 0.0033,
+          "leading": 1.495,
+          "measure": 652.602,
+          "align": "left",
+          "direction": "auto",
+          "language": "en",
+          "maxHeight": null
+        }
+      ],
+      "gaps": [
+        21.188
+      ],
+      "locks": []
+    }
+  }
+]

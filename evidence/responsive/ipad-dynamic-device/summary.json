@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "observations": [
+    {
+      "archetype": "hero",
+      "width": 834,
+      "height": 1210,
+      "runtime": {
+        "reactNative": "0.88.0",
+        "os": "26.5",
+        "fontScale": 2.643,
+        "pixelRatio": 2,
+        "windowWidth": 834,
+        "windowHeight": 1210,
+        "deviceType": "tablet"
+      },
+      "issues": []
+    },
+    {
+      "archetype": "editorial",
+      "width": 834,
+      "height": 1210,
+      "runtime": {
+        "reactNative": "0.88.0",
+        "os": "26.5",
+        "fontScale": 2.643,
+        "pixelRatio": 2,
+        "windowWidth": 834,
+        "windowHeight": 1210,
+        "deviceType": "tablet"
+      },
+      "issues": []
+    }
+  ],
+  "scope": "Actual native window and renderer; simulator/emulator, not physical hardware. Screenshots include the measurement harness."
+}

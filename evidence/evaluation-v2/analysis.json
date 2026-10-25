@@ -1,0 +1,74 @@
+{
+  "metrics": [
+    {
+      "condition": "guidance-only",
+      "n": 4,
+      "meanTokens": 16168.25,
+      "meanLatencyMs": 15652.746500000003,
+      "meanAttempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "condition": "tools-smooth",
+      "n": 4,
+      "meanTokens": 18992.75,
+      "meanLatencyMs": 56930.394729,
+      "meanAttempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "condition": "tools-musical",
+      "n": 4,
+      "meanTokens": 19563.25,
+      "meanLatencyMs": 54742.17747899999,
+      "meanAttempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison": "guidance-vs-tools",
+      "matchedPairs": 4,
+      "unmatchedTrials": 0,
+      "projects": 0,
+      "decisiveProjects": 0,
+      "tiedProjects": 0,
+      "rightWins": 0,
+      "projectLevelWilson95": null,
+      "decision": "insufficient-data",
+      "tokenReduction": -0.17469166088672017,
+      "attemptReduction": 0,
+      "rightFailures": 0
+    },
+    {
+      "comparison": "smooth-vs-musical",
+      "matchedPairs": 4,
+      "unmatchedTrials": 0,
+      "projects": 0,
+      "decisiveProjects": 0,
+      "tiedProjects": 0,
+      "rightWins": 0,
+      "projectLevelWilson95": null,
+      "decision": "insufficient-data",
+      "tokenReduction": -0.029768574825001698,
+      "attemptReduction": 0,
+      "rightFailures": 0
+    }
+  ],
+  "productScreening": {
+    "tokenReduction": -0.17469166088672017,
+    "attemptReduction": 0,
+    "acceptance": "insufficient-data"
+  },
+  "musicalPriorDecision": "undetermined; default remains smooth",
+  "aestheticValidation": false,
+  "caveats": [
+    "Only matched task/seed pairs enter comparative metrics. Unmatched trials are reported separately.",
+    "Project-level votes are a preregistered screening analysis, not a hierarchical causal model.",
+    "The experiment runner must preserve agent, budgets, random assignment, blinding and project holdout.",
+    "No human observations means no aesthetic conclusion; no deterministic score or selector confidence substitutes for them."
+  ]
+}

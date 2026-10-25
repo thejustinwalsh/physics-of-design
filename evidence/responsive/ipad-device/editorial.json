@@ -1,0 +1,354 @@
+{
+  "state": {
+    "version": 1,
+    "archetype": "editorial",
+    "platform": "native-ios",
+    "viewport": {
+      "width": 834,
+      "height": 1210,
+      "textScale": 1
+    },
+    "padding": 48,
+    "blocks": [
+      {
+        "id": "heading",
+        "role": "title",
+        "text": "The shape of a thoughtful pause",
+        "font": {
+          "file": "assets/fonts/Lato-Black.ttf",
+          "family": "Lato Black",
+          "axes": {},
+          "opticalSizing": "none"
+        },
+        "size": 44,
+        "weight": 900,
+        "kerning": "auto",
+        "features": {},
+        "trackingEm": -0.012,
+        "leading": 1.12,
+        "measure": 760,
+        "align": "left",
+        "direction": "auto",
+        "language": "en",
+        "maxHeight": null
+      },
+      {
+        "id": "prose",
+        "role": "prose",
+        "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+        "font": {
+          "file": "assets/fonts/Spectral-Regular.ttf",
+          "family": "Spectral",
+          "axes": {},
+          "opticalSizing": "none"
+        },
+        "size": 21,
+        "weight": 400,
+        "kerning": "auto",
+        "features": {},
+        "trackingEm": 0,
+        "leading": 1.55,
+        "measure": 650,
+        "align": "left",
+        "direction": "auto",
+        "language": "en",
+        "maxHeight": null
+      }
+    ],
+    "gaps": [
+      24
+    ],
+    "locks": [],
+    "responsive": {
+      "source": "astra-responsive-review-2026-10-24",
+      "anchors": [
+        {
+          "width": 360,
+          "padding": 20,
+          "gapScale": 0.8333333333333334,
+          "contentMaxWidth": 816,
+          "pattern": "stack",
+          "blocks": {
+            "heading": {
+              "sizeScale": 0.8181818181818182,
+              "leadingDelta": 0,
+              "trackingDelta": 0.002,
+              "measureScale": 0.9473684210526315
+            },
+            "prose": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 390,
+          "padding": 24,
+          "gapScale": 0.9166666666666666,
+          "contentMaxWidth": 816,
+          "pattern": "stack",
+          "blocks": {
+            "heading": {
+              "sizeScale": 0.8636363636363636,
+              "leadingDelta": 0,
+              "trackingDelta": 0.002,
+              "measureScale": 0.9473684210526315
+            },
+            "prose": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 834,
+          "padding": 40,
+          "gapScale": 1,
+          "contentMaxWidth": 816,
+          "pattern": "stack",
+          "blocks": {
+            "heading": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0.002,
+              "measureScale": 0.9473684210526315
+            },
+            "prose": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 1024,
+          "padding": 48,
+          "gapScale": 1,
+          "contentMaxWidth": 816,
+          "pattern": "stack",
+          "blocks": {
+            "heading": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0.002,
+              "measureScale": 0.9473684210526315
+            },
+            "prose": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 1440,
+          "padding": 48,
+          "gapScale": 1,
+          "contentMaxWidth": 816,
+          "pattern": "stack",
+          "blocks": {
+            "heading": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0.002,
+              "measureScale": 0.9473684210526315
+            },
+            "prose": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        }
+      ],
+      "split": {
+        "titleMinWidth": 240,
+        "textMinWidth": 360,
+        "gap": 40
+      }
+    }
+  },
+  "measurement": {
+    "inputHash": "6c3337eba0fb529b9dfb4599e269e4ad5605e5824abedf806b89be1ec6969deb",
+    "platform": "native-ios",
+    "engine": "react-native/Text+Yoga",
+    "runtime": {
+      "reactNative": "0.88.0",
+      "os": "26.5",
+      "fontScale": 1,
+      "pixelRatio": 2,
+      "windowWidth": 834,
+      "windowHeight": 1210,
+      "deviceType": "tablet"
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 49,
+          "y": 40,
+          "width": 720,
+          "height": 49.5
+        },
+        "lines": [
+          {
+            "x": 49,
+            "y": 40,
+            "width": 614.7019999999983,
+            "height": 49.28,
+            "text": "The shape of a thoughtful pause",
+            "start": 0,
+            "end": 31
+          }
+        ],
+        "inlineBounds": {
+          "x": 49,
+          "y": 40,
+          "width": 614.7019999999983,
+          "height": 49.28
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 49,
+          "y": 113.5,
+          "width": 650,
+          "height": 358.5
+        },
+        "lines": [
+          {
+            "x": 49,
+            "y": 113.5,
+            "width": 643.6710000000002,
+            "height": 32.55000000000001,
+            "text": "A page begins to speak before we read its first sentence. The width of ",
+            "start": 0,
+            "end": 71
+          },
+          {
+            "x": 49,
+            "y": 146.05,
+            "width": 648.9000000000001,
+            "height": 32.55000000000001,
+            "text": "a column, the space between lines, and the quiet around a heading tell ",
+            "start": 71,
+            "end": 142
+          },
+          {
+            "x": 49,
+            "y": 178.60000000000002,
+            "width": 615.1950000000002,
+            "height": 32.55000000000001,
+            "text": "us how to approach it. Those relationships change with the words, ",
+            "start": 142,
+            "end": 208
+          },
+          {
+            "x": 49,
+            "y": 211.15000000000003,
+            "width": 623.889,
+            "height": 32.55000000000001,
+            "text": "the typeface, and the screen. A useful tool should make that change ",
+            "start": 208,
+            "end": 276
+          },
+          {
+            "x": 49,
+            "y": 243.70000000000005,
+            "width": 375.18600000000004,
+            "height": 32.55000000000001,
+            "text": "visible while leaving room for judgment.\n",
+            "start": 276,
+            "end": 317
+          },
+          {
+            "x": 49,
+            "y": 276.25000000000006,
+            "width": 0,
+            "height": 32.550000000000004,
+            "text": "\n",
+            "start": 317,
+            "end": 318
+          },
+          {
+            "x": 49,
+            "y": 308.80000000000007,
+            "width": 642.894,
+            "height": 32.55000000000001,
+            "text": "Consider a heading enlarged by a few points. It may cross a wrapping ",
+            "start": 318,
+            "end": 387
+          },
+          {
+            "x": 49,
+            "y": 341.3500000000001,
+            "width": 635.6700000000001,
+            "height": 32.55000000000001,
+            "text": "threshold, add a line, and pull the paragraph below it down the page. ",
+            "start": 387,
+            "end": 457
+          },
+          {
+            "x": 49,
+            "y": 373.9000000000001,
+            "width": 610.7220000000001,
+            "height": 32.55000000000001,
+            "text": "The right response may involve a wider measure, a smaller gap, or ",
+            "start": 457,
+            "end": 523
+          },
+          {
+            "x": 49,
+            "y": 406.4500000000001,
+            "width": 594.2370000000001,
+            "height": 32.55000000000001,
+            "text": "simply accepting the new rhythm. No single ratio can settle that ",
+            "start": 523,
+            "end": 588
+          },
+          {
+            "x": 49,
+            "y": 439.0000000000001,
+            "width": 65.667,
+            "height": 32.55000000000001,
+            "text": "choice.",
+            "start": 588,
+            "end": 595
+          }
+        ],
+        "inlineBounds": {
+          "x": 49,
+          "y": 113.5,
+          "width": 648.9000000000001,
+          "height": 358.0500000000001
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": false,
+      "issues": []
+    },
+    "scope": [
+      "Actual Text.onTextLayout and View.onLayout from React Native/Yoga.",
+      "No glyph ink bounds or complete WCAG audit.",
+      "Native user font scaling is reported separately from requested textScale.",
+      "Only this platform/version/device/viewport was measured."
+    ]
+  }
+}

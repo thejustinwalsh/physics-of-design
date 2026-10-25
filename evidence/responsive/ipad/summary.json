@@ -1,0 +1,20 @@
+{
+  "platform": "native-ios",
+  "label": "ipad",
+  "completedAt": "2026-10-25T00:19:02.659Z",
+  "passed": true,
+  "measurements": 28,
+  "searches": 2,
+  "runtimes": [
+    {
+      "reactNative": "0.88.0",
+      "os": "26.5",
+      "fontScale": 1,
+      "pixelRatio": 2,
+      "windowWidth": 834,
+      "windowHeight": 1210,
+      "deviceType": "tablet"
+    }
+  ],
+  "scope": "Actual renderer; widths are virtual artboards unless they equal the recorded native window. Device rotation and physical hardware are not inferred."
+}

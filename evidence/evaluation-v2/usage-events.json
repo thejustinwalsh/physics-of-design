@@ -1,0 +1,206 @@
+[
+  {
+    "project": "field-notes",
+    "condition": "guidance-only",
+    "sourceSha256": "7592e6deb901980104c0997c72a9f7cfff57c362e7a8f5e732f45ef8d62cb475",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 15707,
+          "cached_input_tokens": 11520,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 492,
+          "reasoning_output_tokens": 236
+        }
+      }
+    ]
+  },
+  {
+    "project": "field-notes",
+    "condition": "tools-smooth",
+    "sourceSha256": "8af3cf939879d4ca00b21eb69d0459249fd7f5e9474108ea7eb298dd7e60cbbb",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 18459,
+          "cached_input_tokens": 11520,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 383,
+          "reasoning_output_tokens": 127
+        }
+      }
+    ]
+  },
+  {
+    "project": "field-notes",
+    "condition": "tools-musical",
+    "sourceSha256": "3b73e804f1aad7206ef5154430b89ed6086d9e6efd71f0a752f477ed5f46baa1",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 18990,
+          "cached_input_tokens": 11520,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 388,
+          "reasoning_output_tokens": 132
+        }
+      }
+    ]
+  },
+  {
+    "project": "library-after-hours",
+    "condition": "guidance-only",
+    "sourceSha256": "eab92075ae15d257dfedb93c50f16188b9ee342ce3b4cbfb657330e32503e0ea",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 15755,
+          "cached_input_tokens": 13952,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 354,
+          "reasoning_output_tokens": 52
+        }
+      }
+    ]
+  },
+  {
+    "project": "library-after-hours",
+    "condition": "tools-smooth",
+    "sourceSha256": "bb945963517d04da97326a12546f120fdb83b176ca1780d408d23913a0ed2ed1",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 18712,
+          "cached_input_tokens": 13952,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 355,
+          "reasoning_output_tokens": 53
+        }
+      }
+    ]
+  },
+  {
+    "project": "library-after-hours",
+    "condition": "tools-musical",
+    "sourceSha256": "e546e2368f8a64f2d38e72392dc576e5c1146740294ceed4cafb96b8f3b7f62a",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 19955,
+          "cached_input_tokens": 11520,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 300,
+          "reasoning_output_tokens": 0
+        }
+      }
+    ]
+  },
+  {
+    "project": "night-workshop",
+    "condition": "guidance-only",
+    "sourceSha256": "c5ce127be76f926d805a854edd259395bb33f136a9535dce69add6f3539ab3b5",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 15719,
+          "cached_input_tokens": 11520,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 373,
+          "reasoning_output_tokens": 117
+        }
+      }
+    ]
+  },
+  {
+    "project": "night-workshop",
+    "condition": "tools-smooth",
+    "sourceSha256": "acc2d6620b978812d928e2179f2e369af7c3ddc612c0c7411575a40fb9355dc7",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 18461,
+          "cached_input_tokens": 11520,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 373,
+          "reasoning_output_tokens": 117
+        }
+      }
+    ]
+  },
+  {
+    "project": "night-workshop",
+    "condition": "tools-musical",
+    "sourceSha256": "e42af618a40a2e6a123c5a550df8df128c4c754c247bf98847edb858af765b3f",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 17734,
+          "cached_input_tokens": 11520,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 457,
+          "reasoning_output_tokens": 201
+        }
+      }
+    ]
+  },
+  {
+    "project": "river-observatory",
+    "condition": "guidance-only",
+    "sourceSha256": "9ac424daef4607f2ee50bdfcdcf2f7010327b6c3fdccff1b34b59e1e6bd004f1",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 15748,
+          "cached_input_tokens": 11520,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 525,
+          "reasoning_output_tokens": 222
+        }
+      }
+    ]
+  },
+  {
+    "project": "river-observatory",
+    "condition": "tools-smooth",
+    "sourceSha256": "0370406b66442d1b09dd31272b4236617edb3fdbe1d954e1ab07d1778c11399c",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 18716,
+          "cached_input_tokens": 11520,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 512,
+          "reasoning_output_tokens": 209
+        }
+      }
+    ]
+  },
+  {
+    "project": "river-observatory",
+    "condition": "tools-musical",
+    "sourceSha256": "0f120efbbbf470a9e5987527126f203f104696310cb5b3cd299b1b6871635d93",
+    "events": [
+      {
+        "type": "turn.completed",
+        "usage": {
+          "input_tokens": 19964,
+          "cached_input_tokens": 15232,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 465,
+          "reasoning_output_tokens": 162
+        }
+      }
+    ]
+  }
+]

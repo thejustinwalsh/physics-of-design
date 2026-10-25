@@ -1,0 +1,22 @@
+{
+  "tokens": { "canvas": "#101d32", "ink": "#f8f3e8", "accent": "#e7b553" },
+  "roles": [
+    {
+      "id": "reading",
+      "foreground": "ink",
+      "background": "canvas",
+      "use": "text",
+      "source": ["Editable example art direction; opaque sRGB role"]
+    },
+    {
+      "id": "accent-cue",
+      "foreground": "accent",
+      "background": "canvas",
+      "use": "non-text",
+      "source": [
+        "Editable example art direction; meaningful cue if actually used"
+      ]
+    }
+  ],
+  "harmony": "free"
+}

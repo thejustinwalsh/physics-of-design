@@ -1,0 +1,42 @@
+{
+  "id": "physics-of-design-spike-v1",
+  "registered": "2026-10-24",
+  "status": "prospective human protocol; four-project coding-agent pilot executed; see docs/system-report.md",
+  "archetypes": ["marketing hero/title/subtitle", "editorial heading/prose"],
+  "conditions": ["guidance-only", "tools-smooth", "tools-musical"],
+  "selector": "One fixed quantized Qwen3.5-4B/SemIf configuration in both tool conditions; never a verifier or scorer.",
+  "controls": [
+    "same coding agent and revision",
+    "same prompts, content and fonts",
+    "same initial states, candidate budgets and time/token budgets",
+    "paired task/seed assignments",
+    "held-out projects and unseen content/widths",
+    "blinded randomized left/right display and recorded decoding of condition order"
+  ],
+  "units": {
+    "independent": "held-out project",
+    "nested": ["task", "seed", "rater", "viewport", "text scaling"]
+  },
+  "minimumDecisiveProjects": 20,
+  "rightPreferenceThreshold": 0.55,
+  "preferenceDecision": "Project-majority decisive votes, Wilson 95% lower bound > .55 to retain experimentally. With adequate data, upper bound <= .55 discards the musical prior. Otherwise inconclusive; smooth remains default.",
+  "productAcceptance": {
+    "humanPreference": "tools-smooth beats guidance-only under the same screening rule",
+    "meanTokensReduction": 0.2,
+    "meanAttemptsReduction": 0.2,
+    "latency": "report tool startup, renderer and selector time separately; no undeclared latency win",
+    "hardFailures": 0,
+    "responsiveFailures": 0
+  },
+  "metrics": [
+    "blind first-pass preference including ties",
+    "attempts to human acceptance",
+    "agent input/output tokens",
+    "wall-clock and tool latency",
+    "clipping/collision/missing content/font failures",
+    "unseen-content and responsive failures"
+  ],
+  "analysis": "Project-cluster bootstrap or hierarchical preference model for final inference; supplied CLI offers a transparent project-level screening summary. Declare exclusions before unblinding.",
+  "note": "Thresholds are prospective engineering/research decisions, not empirical constants. No benchmark comparing multiple models. Tools can remain useful after discarding the musical prior.",
+  "executionRecord": "evidence/evaluation-v2/analysis.json; zero human ratings; thresholds unchanged"
+}

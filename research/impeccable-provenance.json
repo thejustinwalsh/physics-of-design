@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/pbakaus/impeccable",
+  "revision": "936867543ac2576920d663cc9803597f6044f3ac",
+  "skill": ".agents/skills/impeccable/SKILL.md",
+  "license": "Apache-2.0",
+  "engine": "0.1.17",
+  "workflow": "Independent Astra design judgment plus isolated detector/browser evidence, then independent post-refinement verification",
+  "scope": "Qualitative guidance and design-review evidence only; no empirical aesthetic calibration or human-preference substitution"
+}

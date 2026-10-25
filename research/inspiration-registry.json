@@ -1,0 +1,526 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "purpose": "Attributed starting points for color, composition, hierarchy, and platform adaptation; not a benchmark dataset.",
+  "selection": "Six purposively selected official award entries: three websites and three native apps. Not representative or statistically sampled.",
+  "evidencePolicy": {
+    "allowedEvidenceScopes": [
+      "official screenshot",
+      "official description",
+      "live inspected"
+    ],
+    "usedEvidenceScopes": ["official description", "official screenshot"],
+    "awards": "Status verified against the awarding organization's page; award scores intentionally excluded from design factors.",
+    "observations": "Official descriptions are attributed paraphrases. Four historical official screenshot assets were also inspected by isolated Astra reviewers; pixel observations are individually scoped. Transfer hypotheses are synthetic reviewer judgments, not awarding-body claims or human validation.",
+    "geometry": "No screenshot-derived sizes, spacing, ratios, breakpoints, or cross-device geometry.",
+    "deviceCoverage": "Only the two Apple iPhone presentations are visually observed as historical official screenshots. No live device behavior was tested. Website asset dimensions are not CSS viewports; mobile, iPad, and desktop behavior remain unknown.",
+    "rights": "Metadata-only deliverables. Official images were temporarily downloaded for inspection and deleted; no third-party assets are retained or licensed for reuse."
+  },
+  "retrievalNotes": [
+    "Awwwards detail pages were read from official HTML after the web extractor timed out.",
+    "Apple and CSS Design Awards descriptions were read from official award pages.",
+    "Four official image assets were visually inspected: Crouton, Bears Gratitude, Seasoned, and Editorial New. No live award website/app session was inspected.",
+    "Apple award announcement date is corroborated by https://developer.apple.com/news/?id=6qt455k0",
+    "Visual inspections occurred 2026-10-24 America/Detroit (2026-10-25 UTC); source image publication dates are historical and current app/site freshness is unknown."
+  ],
+  "entries": [
+    {
+      "id": "into-the-amazon-2025",
+      "title": "Into The Amazon",
+      "url": "https://www.nationalgeographic.com/into-the-amazon/",
+      "award": "Awwwards Site of the Day",
+      "sourceUrl": "https://www.awwwards.com/sites/into-the-amazon",
+      "year": 2025,
+      "awardDate": "2025-04-21",
+      "category": "Magazine / Newspaper / Blog; Web & Interactive; Photography",
+      "kind": "editorial website",
+      "mode": "Read / Experience",
+      "creators": ["Gladeye"],
+      "observations": [
+        {
+          "evidenceScope": "official description",
+          "text": "The official listing describes a water-drop journey through the Amazon, drawing on local, scientific, and explorer perspectives. It identifies map and LiDAR interaction highlights.",
+          "sourceUrl": "https://www.awwwards.com/sites/into-the-amazon",
+          "limitation": "Description/metadata only; no live interaction, screenshot geometry, or accessibility audit."
+        },
+        {
+          "evidenceScope": "official description",
+          "text": "The listing publishes yellow (#FFD800) and near-black (#111111) palette metadata. This is not a complete measured palette or a contrast audit.",
+          "sourceUrl": "https://www.awwwards.com/sites/into-the-amazon",
+          "limitation": "Description/metadata only; no live interaction, screenshot geometry, or accessibility audit."
+        }
+      ],
+      "deviceCoverage": {
+        "mobile": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "No device rendering or interaction was inspected; declared support is not verification."
+        },
+        "ipad": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "No device rendering or interaction was inspected; declared support is not verification."
+        },
+        "desktop": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "No device rendering or interaction was inspected; declared support is not verification."
+        }
+      },
+      "transferableRules": [
+        {
+          "rule": "Let a narrative sequence determine section order.",
+          "rationale": "A coherent subject can organize a long reading experience.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        },
+        {
+          "rule": "Keep a small set of high-emphasis colors tied to meaningful roles.",
+          "rationale": "Test this inference in the local brand and reading context; do not import the listed colors as defaults.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        }
+      ],
+      "antiGoals": [
+        "Do not infer device breakpoints, spacing, or safe-area behavior from the award listing.",
+        "Do not copy scroll-driven spectacle into a quiet reading specimen without a task reason.",
+        "Do not adopt a documentary's imagery, brand colors, or assets without separate authorization and rights."
+      ],
+      "rights": {
+        "use": "metadata-only",
+        "assetsCopied": false,
+        "license": "No asset license established.",
+        "restrictions": [
+          "Do not copy screenshots, imagery, fonts, app icons, branding, or source code from this registry.",
+          "Award attribution does not grant a license; obtain rights separately before asset reuse."
+        ]
+      }
+    },
+    {
+      "id": "seasoned-2025",
+      "title": "Seasoned",
+      "url": "https://seasoned.koto.studio",
+      "award": "Awwwards Site of the Day",
+      "sourceUrl": "https://www.awwwards.com/sites/seasoned",
+      "year": 2025,
+      "awardDate": "2025-03-21",
+      "category": "Magazine / Newspaper / Blog; Culture & Education; Web & Interactive",
+      "kind": "editorial learning website",
+      "mode": "Read / Experience",
+      "creators": ["Koto", "Good City"],
+      "observations": [
+        {
+          "evidenceScope": "official description",
+          "text": "The listing describes a brand-learning hub with e-books and expert material and identifies book/page-flip transitions. It lists desktop and mobile thumbnails; only the specifically identified official submission image below was inspected.",
+          "sourceUrl": "https://www.awwwards.com/sites/seasoned",
+          "limitation": "Description/metadata only; no live interaction, screenshot geometry, or accessibility audit."
+        },
+        {
+          "evidenceScope": "official description",
+          "text": "Published palette metadata identifies yellow (#FFEC3F) and cyan (#9DF9F9); these labels are not an audited role-pair palette.",
+          "sourceUrl": "https://www.awwwards.com/sites/seasoned",
+          "limitation": "Description/metadata only; no live interaction, screenshot geometry, or accessibility audit."
+        },
+        {
+          "evidenceScope": "official screenshot",
+          "text": "A dark teal/green photographic scene surrounds a dominant framed display. Cream heavy capitals and overlapping pink script contrast with small white labels. Texture and photographic color extend beyond a flat token palette.",
+          "sourceUrl": "https://www.awwwards.com/sites/seasoned",
+          "assetUrl": "https://assets.awwwards.com/awards/submissions/2025/03/67dd13858490f516807463.jpg",
+          "assetSha256": "3f02ee58fd4341c5718e7d3d391f5b03272169c82e18ec947cd2b339a40bab88",
+          "inspectedAt": "2026-10-24 America/Detroit",
+          "reviewer": {
+            "kind": "synthetic-astra",
+            "agent": "assessment_b",
+            "model": "gpt-6-astra"
+          },
+          "report": "artifacts/review/inspiration/web-visual-inspection.md",
+          "limitation": "Complete official historical image inspected. No current runtime, responsive behavior, screenshot-derived geometry, exact colors/fonts, contrast audit, human preference or equation validation."
+        }
+      ],
+      "deviceCoverage": {
+        "mobile": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "Official static website image inspected, but CSS viewport/device is not established. No live device rendering or interaction tested."
+        },
+        "ipad": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "Official static website image inspected, but CSS viewport/device is not established. No live device rendering or interaction tested."
+        },
+        "desktop": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "Official static website image inspected, but CSS viewport/device is not established. No live device rendering or interaction tested."
+        }
+      },
+      "transferableRules": [
+        {
+          "rule": "Let a publication metaphor organize related content.",
+          "rationale": "Use a clear grouping idea without depending on a copied animation.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        },
+        {
+          "rule": "Give expressive color an authored purpose.",
+          "rationale": "A learning surface can have character while maintaining readable text and stable navigation.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        }
+      ],
+      "antiGoals": [
+        "Do not impose page-flip animation or loading sequences on basic reading.",
+        "Do not mistake the existence of a mobile thumbnail for observed mobile or iPad behavior.",
+        "Do not assume two listed brand colors contrast sufficiently for text."
+      ],
+      "rights": {
+        "use": "metadata-only",
+        "assetsCopied": false,
+        "license": "No asset license established.",
+        "restrictions": [
+          "Do not copy screenshots, imagery, fonts, app icons, branding, or source code from this registry.",
+          "Award attribution does not grant a license; obtain rights separately before asset reuse."
+        ],
+        "temporaryInspectionDownload": true,
+        "assetsRetained": false,
+        "assetsCopiedScope": "No assets copied into the repository or project deliverables; temporary inspection files were deleted."
+      }
+    },
+    {
+      "id": "editorial-new-2019",
+      "title": "Editorial New",
+      "url": "https://editorialnew.com",
+      "award": "CSS Design Awards Website of the Day",
+      "sourceUrl": "https://www.cssdesignawards.com/sites/editorial-new/36144",
+      "year": 2019,
+      "awardDate": "2019-11-29",
+      "category": "Graphic design",
+      "kind": "typography specimen website",
+      "mode": "Experience",
+      "creators": ["Locomotive"],
+      "observations": [
+        {
+          "evidenceScope": "official description",
+          "text": "The official description presents a narrow serif variable font intended for long copy and expressive titles; the entry is tagged typographic, animated, and one-page.",
+          "sourceUrl": "https://www.cssdesignawards.com/sites/editorial-new/36144",
+          "limitation": "Description/metadata only; no live interaction, screenshot geometry, or accessibility audit."
+        },
+        {
+          "evidenceScope": "official screenshot",
+          "text": "A predominantly neutral dark/light presentation uses a tilted light plane, dramatically large narrow serif title, quieter specimen labels, small horizontal navigation and a separate arrow. Shape, scale and negative space carry distinction without a visible chromatic accent.",
+          "sourceUrl": "https://www.cssdesignawards.com/sites/editorial-new/36144",
+          "assetUrl": "https://www.cssdesignawards.com/cdasites/2019/201911/20191113233643.jpg",
+          "assetSha256": "6e25ef937dfa514a42343abc988fc81feddcf9291fb0f3788f61193c0ab18233",
+          "inspectedAt": "2026-10-24 America/Detroit",
+          "reviewer": {
+            "kind": "synthetic-astra",
+            "agent": "assessment_b",
+            "model": "gpt-6-astra"
+          },
+          "report": "artifacts/review/inspiration/web-visual-inspection.md",
+          "limitation": "Complete official historical image inspected. No current runtime, responsive behavior, screenshot-derived geometry, exact colors/fonts, contrast audit, human preference or equation validation."
+        }
+      ],
+      "deviceCoverage": {
+        "mobile": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "Official static website image inspected, but CSS viewport/device is not established. No live device rendering or interaction tested."
+        },
+        "ipad": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "Official static website image inspected, but CSS viewport/device is not established. No live device rendering or interaction tested."
+        },
+        "desktop": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "Official static website image inspected, but CSS viewport/device is not established. No live device rendering or interaction tested."
+        }
+      },
+      "transferableRules": [
+        {
+          "rule": "Give an established type family distinct reading and display roles.",
+          "rationale": "Role contrast may come from size, weight, spacing, and measure; additional families are optional.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        },
+        {
+          "rule": "Judge typography with real content.",
+          "rationale": "A type specimen can inspire comparison of shapes and roles, not prove a universal size ratio.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        }
+      ],
+      "antiGoals": [
+        "Do not replace the project's pinned fonts just because the reference won an award.",
+        "Do not copy the variable font without a suitable license.",
+        "Do not transfer unknown display proportions to long-form reading or mobile by assumption."
+      ],
+      "rights": {
+        "use": "metadata-only",
+        "assetsCopied": false,
+        "license": "No asset license established.",
+        "restrictions": [
+          "Do not copy screenshots, imagery, fonts, app icons, branding, or source code from this registry.",
+          "Award attribution does not grant a license; obtain rights separately before asset reuse."
+        ],
+        "temporaryInspectionDownload": true,
+        "assetsRetained": false,
+        "assetsCopiedScope": "No assets copied into the repository or project deliverables; temporary inspection files were deleted."
+      }
+    },
+    {
+      "id": "bears-gratitude-2024",
+      "title": "Bears Gratitude",
+      "url": "https://apps.apple.com/us/app/bears-gratitude/id6443609622",
+      "award": "Apple Design Award",
+      "sourceUrl": "https://developer.apple.com/design/awards/2024/",
+      "year": 2024,
+      "awardDate": "2024-06-06",
+      "category": "Delight and Fun — App",
+      "kind": "native journaling app",
+      "mode": "Operate / Read",
+      "creators": ["Isuru Wanasinghe"],
+      "observations": [
+        {
+          "evidenceScope": "official description",
+          "text": "Apple highlights welcoming characters and considered touchpoints that support a daily gratitude practice.",
+          "sourceUrl": "https://developer.apple.com/design/awards/2024/",
+          "limitation": "Description/metadata only; no live interaction, screenshot geometry, or accessibility audit."
+        },
+        {
+          "evidenceScope": "official screenshot",
+          "text": "A cream/peach foundation, dark brown labels, tan prose, localized saturated illustration, and a warm multicolor heading establish an inviting article presentation. Heading and prose are closely grouped below a larger interval from the thumbnail row.",
+          "sourceUrl": "https://www.apple.com/newsroom/2024/06/apple-announces-winners-of-the-2024-apple-design-awards/",
+          "assetUrl": "https://www.apple.com/newsroom/images/2024/06/apple-announces-winners-of-the-2024-apple-design-awards/article/Apple-WWDC24-Design-Awards-Bears-Gratitude-240606_inline.jpg.large_2x.jpg",
+          "assetSha256": "172d1e1542b982a249be7374cb4777823f6dc6ed471a3047c1545cbd33b0c080",
+          "inspectedAt": "2026-10-24 America/Detroit",
+          "reviewer": {
+            "kind": "synthetic-astra",
+            "agent": "assessment_a",
+            "model": "gpt-6-astra"
+          },
+          "report": "artifacts/review/inspiration/apple-visual-inspection.md",
+          "limitation": "Complete official historical image inspected. No current runtime, responsive behavior, screenshot-derived geometry, exact colors/fonts, contrast audit, human preference or equation validation."
+        }
+      ],
+      "deviceCoverage": {
+        "mobile": {
+          "observed": true,
+          "status": "official screenshot only",
+          "declaredSupport": "iPhone listed on the 2024 award page",
+          "note": "Historical official iPhone 15 Pro presentation visually inspected; no app runtime, interaction, rotation, text scaling or accessibility behavior tested."
+        },
+        "ipad": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "iPad listed on the 2024 award page",
+          "note": "No device rendering or interaction was inspected; declared support is not verification."
+        },
+        "desktop": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "Mac listed on the 2024 award page",
+          "note": "No device rendering or interaction was inspected; declared support is not verification."
+        }
+      },
+      "transferableRules": [
+        {
+          "rule": "Attach warmth to a meaningful recurring moment.",
+          "rationale": "A journaling task can use reassurance without increasing choices.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        },
+        {
+          "rule": "Let illustration support the entry into content.",
+          "rationale": "Preserve a clear reading or writing path when adding personality.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        }
+      ],
+      "antiGoals": [
+        "Do not copy characters or assume their emotional effect generalizes to another audience.",
+        "Do not add mascots to the current typography specimens solely to imitate award recognition.",
+        "Do not claim the listed platforms were tested."
+      ],
+      "rights": {
+        "use": "metadata-only",
+        "assetsCopied": false,
+        "license": "No asset license established.",
+        "restrictions": [
+          "Do not copy screenshots, imagery, fonts, app icons, branding, or source code from this registry.",
+          "Award attribution does not grant a license; obtain rights separately before asset reuse."
+        ],
+        "temporaryInspectionDownload": true,
+        "assetsRetained": false,
+        "assetsCopiedScope": "No assets copied into the repository or project deliverables; temporary inspection files were deleted."
+      }
+    },
+    {
+      "id": "crouton-2024",
+      "title": "Crouton",
+      "url": "https://apps.apple.com/us/app/crouton-recipe-manager/id1461650987",
+      "award": "Apple Design Award",
+      "sourceUrl": "https://developer.apple.com/design/awards/2024/",
+      "year": 2024,
+      "awardDate": "2024-06-06",
+      "category": "Interaction — App",
+      "kind": "native recipe and cooking app",
+      "mode": "Operate / Read",
+      "creators": ["Devin Davies"],
+      "observations": [
+        {
+          "evidenceScope": "official description",
+          "text": "Apple highlights recipe organization, grocery lists, and step-by-step cooking instructions with clear information hierarchy.",
+          "sourceUrl": "https://developer.apple.com/design/awards/2024/",
+          "limitation": "Description/metadata only; no live interaction, screenshot geometry, or accessibility audit."
+        },
+        {
+          "evidenceScope": "official screenshot",
+          "text": "A light neutral foundation and prominent dark All Recipes heading support a pale search field, repeated photo cards with consistent labels, and blue emphasis on a limited set of controls/navigation. Food photography supplies much of the visible saturation.",
+          "sourceUrl": "https://www.apple.com/newsroom/2024/06/apple-announces-winners-of-the-2024-apple-design-awards/",
+          "assetUrl": "https://www.apple.com/newsroom/images/2024/06/apple-announces-winners-of-the-2024-apple-design-awards/article/Apple-WWDC24-Design-Awards-Crouton-240606_inline.jpg.large_2x.jpg",
+          "assetSha256": "6059be4f5c6cd2f31cbffffe9efa5245df0c3f431ff03f50621dbc0a95b2401a",
+          "inspectedAt": "2026-10-24 America/Detroit",
+          "reviewer": {
+            "kind": "synthetic-astra",
+            "agent": "assessment_a",
+            "model": "gpt-6-astra"
+          },
+          "report": "artifacts/review/inspiration/apple-visual-inspection.md",
+          "limitation": "Complete official historical image inspected. No current runtime, responsive behavior, screenshot-derived geometry, exact colors/fonts, contrast audit, human preference or equation validation."
+        }
+      ],
+      "deviceCoverage": {
+        "mobile": {
+          "observed": true,
+          "status": "official screenshot only",
+          "declaredSupport": "iPhone listed on the 2024 award page",
+          "note": "Historical official iPhone 15 Pro presentation visually inspected; no app runtime, interaction, rotation, text scaling or accessibility behavior tested."
+        },
+        "ipad": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "iPad listed on the 2024 award page",
+          "note": "No device rendering or interaction was inspected; declared support is not verification."
+        },
+        "desktop": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "Mac listed on the 2024 award page",
+          "note": "No device rendering or interaction was inspected; declared support is not verification."
+        }
+      },
+      "transferableRules": [
+        {
+          "rule": "Prioritize the information needed for the current step.",
+          "rationale": "Sequential tasks benefit from a clear foreground/background hierarchy.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        },
+        {
+          "rule": "Keep repeated practical actions easy to locate.",
+          "rationale": "Use stable role-based emphasis instead of decoration competing with instructions.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        }
+      ],
+      "antiGoals": [
+        "Do not infer exact touch target sizes or native layout constraints from the award description.",
+        "Do not introduce recipe-specific card or step structures into an unrelated specimen.",
+        "Do not interpret the award as measured task-completion evidence."
+      ],
+      "rights": {
+        "use": "metadata-only",
+        "assetsCopied": false,
+        "license": "No asset license established.",
+        "restrictions": [
+          "Do not copy screenshots, imagery, fonts, app icons, branding, or source code from this registry.",
+          "Award attribution does not grant a license; obtain rights separately before asset reuse."
+        ],
+        "temporaryInspectionDownload": true,
+        "assetsRetained": false,
+        "assetsCopiedScope": "No assets copied into the repository or project deliverables; temporary inspection files were deleted."
+      }
+    },
+    {
+      "id": "procreate-dreams-2024",
+      "title": "Procreate Dreams",
+      "url": "https://apps.apple.com/us/app/procreate-dreams/id1595520602",
+      "award": "Apple Design Award",
+      "sourceUrl": "https://developer.apple.com/design/awards/2024/",
+      "year": 2024,
+      "awardDate": "2024-06-06",
+      "category": "Innovation — App",
+      "kind": "native creative tool",
+      "mode": "Operate / Experience",
+      "creators": ["Savage Interactive Pty Ltd"],
+      "observations": [
+        {
+          "evidenceScope": "official description",
+          "text": "Apple highlights familiar drawing behaviors, multitouch, and Apple Pencil support in an iPad animation tool.",
+          "sourceUrl": "https://developer.apple.com/design/awards/2024/",
+          "limitation": "Description/metadata only; no live interaction, screenshot geometry, or accessibility audit."
+        }
+      ],
+      "deviceCoverage": {
+        "mobile": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "No device rendering or interaction was inspected; declared support is not verification."
+        },
+        "ipad": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "iPad listed on the 2024 award page",
+          "note": "No device rendering or interaction was inspected; declared support is not verification."
+        },
+        "desktop": {
+          "observed": false,
+          "status": "unknown",
+          "declaredSupport": "unknown",
+          "note": "No device rendering or interaction was inspected; declared support is not verification."
+        }
+      },
+      "transferableRules": [
+        {
+          "rule": "Make the work surface primary and group supporting tools by task.",
+          "rationale": "Spatial priority should follow what the person manipulates.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        },
+        {
+          "rule": "Adapt to input capabilities without hiding essential alternatives.",
+          "rationale": "A gesture-oriented inspiration still needs an explicit accessibility and discoverability review.",
+          "evidenceClass": "reviewer inference",
+          "validated": false
+        }
+      ],
+      "antiGoals": [
+        "Do not transplant Pencil or multitouch interactions into a mouse-only context unchanged.",
+        "Do not assume an iPad award establishes narrow split-window, iPhone, or desktop coverage.",
+        "Do not treat animation-tool chrome as a reading-layout template."
+      ],
+      "rights": {
+        "use": "metadata-only",
+        "assetsCopied": false,
+        "license": "No asset license established.",
+        "restrictions": [
+          "Do not copy screenshots, imagery, fonts, app icons, branding, or source code from this registry.",
+          "Award attribution does not grant a license; obtain rights separately before asset reuse."
+        ]
+      }
+    }
+  ]
+}

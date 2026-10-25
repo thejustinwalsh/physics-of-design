@@ -1,0 +1,359 @@
+{
+  "provenance": "Isolated synthetic implementation probes; expected ratings are reviewing-model judgments, not human validation",
+  "sourceHash": "1d5429e29dabb63c6199e6c9530149be59362a0ae40b2dc89206bb597cf867d6",
+  "observations": [
+    {
+      "id": "threshold-#767676-text-AA",
+      "expectation": "Boundary decisions use full precision",
+      "observed": {
+        "id": "pair",
+        "foreground": "ink",
+        "background": "canvas",
+        "use": "text",
+        "source": [
+          "synthetic-review"
+        ],
+        "ratio": 4.542224959605253,
+        "minimum": 4.5,
+        "passes": true,
+        "kind": "standard",
+        "standard": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+        "applicability": "caller-declared role; large-text size/weight, meaningful non-text cue, adjacency and rendered backdrop must be verified"
+      }
+    },
+    {
+      "id": "threshold-#777777-text-AA",
+      "expectation": "Boundary decisions use full precision",
+      "observed": {
+        "id": "pair",
+        "foreground": "ink",
+        "background": "canvas",
+        "use": "text",
+        "source": [
+          "synthetic-review"
+        ],
+        "ratio": 4.478089453577214,
+        "minimum": 4.5,
+        "passes": false,
+        "kind": "standard",
+        "standard": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+        "applicability": "caller-declared role; large-text size/weight, meaningful non-text cue, adjacency and rendered backdrop must be verified"
+      }
+    },
+    {
+      "id": "threshold-#595959-text-AAA",
+      "expectation": "Boundary decisions use full precision",
+      "observed": {
+        "id": "pair",
+        "foreground": "ink",
+        "background": "canvas",
+        "use": "text",
+        "source": [
+          "synthetic-review"
+        ],
+        "ratio": 7.004729208035935,
+        "minimum": 7,
+        "passes": true,
+        "kind": "standard",
+        "standard": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+        "applicability": "caller-declared role; large-text size/weight, meaningful non-text cue, adjacency and rendered backdrop must be verified"
+      }
+    },
+    {
+      "id": "threshold-#5a5a5a-text-AAA",
+      "expectation": "Boundary decisions use full precision",
+      "observed": {
+        "id": "pair",
+        "foreground": "ink",
+        "background": "canvas",
+        "use": "text",
+        "source": [
+          "synthetic-review"
+        ],
+        "ratio": 6.896926215312931,
+        "minimum": 7,
+        "passes": false,
+        "kind": "standard",
+        "standard": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+        "applicability": "caller-declared role; large-text size/weight, meaningful non-text cue, adjacency and rendered backdrop must be verified"
+      }
+    },
+    {
+      "id": "threshold-#949494-non-text-AA",
+      "expectation": "Boundary decisions use full precision",
+      "observed": {
+        "id": "pair",
+        "foreground": "ink",
+        "background": "canvas",
+        "use": "non-text",
+        "source": [
+          "synthetic-review"
+        ],
+        "ratio": 3.0334698257384747,
+        "minimum": 3,
+        "passes": true,
+        "kind": "standard",
+        "standard": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+        "applicability": "caller-declared role; large-text size/weight, meaningful non-text cue, adjacency and rendered backdrop must be verified"
+      }
+    },
+    {
+      "id": "threshold-#959595-non-text-AA",
+      "expectation": "Boundary decisions use full precision",
+      "observed": {
+        "id": "pair",
+        "foreground": "ink",
+        "background": "canvas",
+        "use": "non-text",
+        "source": [
+          "synthetic-review"
+        ],
+        "ratio": 2.9953461357088114,
+        "minimum": 3,
+        "passes": false,
+        "kind": "standard",
+        "standard": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+        "applicability": "caller-declared role; large-text size/weight, meaningful non-text cue, adjacency and rendered backdrop must be verified"
+      }
+    },
+    {
+      "id": "neutral-gray-sweep",
+      "expectation": "Every 8-bit gray has null numerical hue",
+      "observed": {
+        "checked": 256,
+        "failures": []
+      }
+    },
+    {
+      "id": "alpha-rejected",
+      "expectation": "Alpha/named/css colors rejected",
+      "observed": {
+        "#fff0": "rejected",
+        "#ffffffff": "rejected",
+        "transparent": "rejected",
+        "rgb(0 0 0 / .5)": "rejected"
+      }
+    },
+    {
+      "id": "canonical-aliases",
+      "expectation": "Same color in #rgb/#rrggbb/case cannot create triad",
+      "observed": {
+        "preference": "triadic",
+        "reference": "accent",
+        "kind": "heuristic",
+        "source": [
+          "local-policy: configurable hue-wheel convention; not preference data"
+        ],
+        "uncertainty": "high; depends on area, adjacency, lightness, chroma, culture and task",
+        "chromaticCutoff": 0.02,
+        "distinctChromaticColors": 1,
+        "meanAngularError": null,
+        "status": "insufficient-chromatic-colors"
+      }
+    },
+    {
+      "id": "neutral-harmony",
+      "expectation": "Neutral palette insufficient for requested harmony",
+      "observed": {
+        "preference": "complementary",
+        "reference": "accent",
+        "kind": "heuristic",
+        "source": [
+          "local-policy: configurable hue-wheel convention; not preference data"
+        ],
+        "uncertainty": "high; depends on area, adjacency, lightness, chroma, culture and task",
+        "chromaticCutoff": 0.02,
+        "distinctChromaticColors": 0,
+        "meanAngularError": null,
+        "status": "insufficient-chromatic-colors"
+      }
+    },
+    {
+      "id": "triad-missing-branch",
+      "expectation": "Three reddish colors insufficient for a triad",
+      "observed": {
+        "preference": "triadic",
+        "reference": "accent",
+        "kind": "heuristic",
+        "source": [
+          "local-policy: configurable hue-wheel convention; not preference data"
+        ],
+        "uncertainty": "high; depends on area, adjacency, lightness, chroma, culture and task",
+        "chromaticCutoff": 0.02,
+        "distinctChromaticColors": 3,
+        "meanAngularError": null,
+        "status": "missing-triad-branch"
+      }
+    },
+    {
+      "id": "free-no-roles",
+      "expectation": "Unconstrained means no obligations checked, not accessibility certification",
+      "observed": {
+        "hardConstraintsPass": true,
+        "constrainedRoles": 0,
+        "assumptions": [
+          "Opaque encoded sRGB inputs; no alpha, blending, gradients, images, HDR or Display P3.",
+          "WCAG luminance is not OKLab lightness. Contrast is not a complete accessibility audit.",
+          "No role declarations means no contrast obligations were checked; it is not an accessibility pass.",
+          "Hue-wheel preferences are optional descriptors, not physical constraints or a beauty score."
+        ]
+      }
+    },
+    {
+      "id": "unknown-role-token",
+      "expectation": "Unknown token rejected",
+      "observed": false
+    },
+    {
+      "id": "dual-background-AA",
+      "expectation": "Feasible gray exists; grid may miss it",
+      "observed": {
+        "knownGrayRatios": [
+          4.607518093747377,
+          4.557768319672582
+        ],
+        "candidates": [
+          {
+            "hex": "#00883a",
+            "ratios": [
+              4.58238994327598,
+              4.582761454165327
+            ]
+          },
+          {
+            "hex": "#2c8545",
+            "ratios": [
+              4.6173733512977,
+              4.548040282273905
+            ]
+          }
+        ],
+        "attempted": 361,
+        "rejected": 128,
+        "duplicates": 231,
+        "exhausted": true,
+        "provenance": {
+          "kind": "heuristic",
+          "source": "local-policy: bounded deterministic OKLCH perturbation grid",
+          "uncertainty": "not ranked by beauty, not exhaustive, no empirical preference calibration"
+        },
+        "notes": [
+          "Includes the unchanged original if it meets declared role constraints.",
+          "Alternatives edit one unlocked token at a time; multi-token repairs and unsampled colors may be missed.",
+          "An empty/exhausted search is not proof that the constraints are mathematically infeasible.",
+          "Out-of-sRGB proposals reduce chroma at fixed requested lightness/hue, then quantize to 8-bit sRGB and recheck contrast.",
+          "This simple chroma reduction is a local search policy, not the CSS Color 4 gamut-mapping algorithm.",
+          "Sampling angles/deltas describe search coverage only; they are not empirically optimal hue or lightness constants."
+        ]
+      }
+    },
+    {
+      "id": "dual-background-AAA",
+      "expectation": "No color satisfies contradictory luminance constraints",
+      "observed": {
+        "knownGrayRatios": [
+          4.607518093747377,
+          4.557768319672582
+        ],
+        "candidates": [],
+        "attempted": 361,
+        "rejected": 130,
+        "duplicates": 231,
+        "exhausted": true,
+        "provenance": {
+          "kind": "heuristic",
+          "source": "local-policy: bounded deterministic OKLCH perturbation grid",
+          "uncertainty": "not ranked by beauty, not exhaustive, no empirical preference calibration"
+        },
+        "notes": [
+          "Includes the unchanged original if it meets declared role constraints.",
+          "Alternatives edit one unlocked token at a time; multi-token repairs and unsampled colors may be missed.",
+          "An empty/exhausted search is not proof that the constraints are mathematically infeasible.",
+          "Out-of-sRGB proposals reduce chroma at fixed requested lightness/hue, then quantize to 8-bit sRGB and recheck contrast.",
+          "This simple chroma reduction is a local search policy, not the CSS Color 4 gamut-mapping algorithm.",
+          "Sampling angles/deltas describe search coverage only; they are not empirically optimal hue or lightness constants."
+        ]
+      }
+    },
+    {
+      "id": "locked-invariant-failure",
+      "expectation": "Editable accent cannot repair failing locked ink/canvas",
+      "observed": {
+        "count": 0,
+        "attempted": 361,
+        "exhausted": true
+      }
+    },
+    {
+      "id": "locked-accent",
+      "expectation": "All locked returns only unchanged feasible original",
+      "observed": {
+        "inputUnmodified": true,
+        "candidates": [
+          {
+            "id": "original",
+            "changes": [],
+            "accent": "#ff0000"
+          }
+        ],
+        "attempted": 1
+      }
+    },
+    {
+      "id": "gamut-quantization-contract",
+      "expectation": "Every candidate describes actual quantized hex; hard roles hold; no duplicate palettes",
+      "observed": {
+        "count": 24,
+        "unique": 24,
+        "mapped": 23,
+        "failures": 0,
+        "examples": [
+          {
+            "hex": "#d900d9",
+            "changes": [
+              {
+                "token": "accent",
+                "before": "#ff00ff",
+                "after": "#d900d9",
+                "gamutMapped": true,
+                "requested": {
+                  "L": 0.6216738558717925,
+                  "C": 0.3224909647751644,
+                  "h": 328.3634179234514
+                },
+                "mappedChroma": 0.2857228860777522
+              }
+            ],
+            "actual": {
+              "L": 0.6211955933281305,
+              "C": 0.28550296484621074,
+              "h": 328.36341792345144
+            }
+          },
+          {
+            "hex": "#ff7dfc",
+            "changes": [
+              {
+                "token": "accent",
+                "before": "#ff00ff",
+                "after": "#ff7dfc",
+                "gamutMapped": true,
+                "requested": {
+                  "L": 0.7816738558717924,
+                  "C": 0.3224909647751644,
+                  "h": 328.3634179234514
+                },
+                "mappedChroma": 0.2160847906760533
+              }
+            ],
+            "actual": {
+              "L": 0.7818815735973386,
+              "C": 0.21627512674991395,
+              "h": 328.2716605529486
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

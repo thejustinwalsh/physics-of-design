@@ -1,0 +1,22 @@
+(node:59794) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ selector rejects infeasible candidates and bypasses the model for a single viable choice (21.885125ms)
+✔ SemIf CLI adapter validates pinned model and checkpoint provenance; probabilities are not exported (62.495958ms)
+✔ native bridge requires authentication and binds receipts to state, platform and fonts (38.31525ms)
+✔ MCP stdio exposes the same commands and an optional specimen resource (603.641334ms)
+✔ CLI malformed input emits diagnostics only on stderr (441.88ms)
+✔ balanced selector canonicalizes every prompt sequence, balances slots and rejects incomplete or zero-only transports (360.031375ms)
+✔ an infeasible base receipt remains rejected even when it has no diagnostics (2.166791ms)
+(node:59795) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ tuning export preserves synthetic provenance, ties and project holdout while rejecting stale/invalid observations (72.779584ms)
+✔ visual ratings bind every declared candidate view, preserving explicit abstentions (40.084667ms)
+✔ explicit evidence roots join basenames to relative paths without accepting traversal or basename collisions (11.293125ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2952.583291

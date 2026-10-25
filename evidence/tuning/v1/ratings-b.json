@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "rater": {
+    "kind": "synthetic-astra",
+    "agent": "/root/astra_design_review/assessment_b",
+    "model": "gpt-6-astra",
+    "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+  },
+  "ratings": [
+    {
+      "pairId": "tuning-1",
+      "choice": "right",
+      "reason": "Both keep words intact at 390, 834 and 1440. The right gives the heading stronger presence while the subtitle stays clearly secondary; at 834, “better questions.” stays together. Its dark field visibly groups the hero and gives the surrounding light space a clearer boundary across widths.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-1-left-390.png",
+        "artifacts/tuning/v1/tuning-1-left-834.png",
+        "artifacts/tuning/v1/tuning-1-left-1440.png",
+        "artifacts/tuning/v1/tuning-1-right-390.png",
+        "artifacts/tuning/v1/tuning-1-right-834.png",
+        "artifacts/tuning/v1/tuning-1-right-1440.png"
+      ]
+    },
+    {
+      "pairId": "tuning-2",
+      "choice": "tie",
+      "reason": "Both retain whole words and a clearly secondary subtitle at all three widths. The left groups the hero with a pale field and gives the subtitle more balanced lines at 834 and 1440; the right has stronger headline presence and more separation, but leaves a short final subtitle line at those widths. Neither consistently wins the full criterion.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-2-left-390.png",
+        "artifacts/tuning/v1/tuning-2-left-834.png",
+        "artifacts/tuning/v1/tuning-2-left-1440.png",
+        "artifacts/tuning/v1/tuning-2-right-390.png",
+        "artifacts/tuning/v1/tuning-2-right-834.png",
+        "artifacts/tuning/v1/tuning-2-right-1440.png"
+      ]
+    },
+    {
+      "pairId": "tuning-3",
+      "choice": "left",
+      "reason": "At 390, both keep a compact two-line heading and readable paragraph groups, but the left uses visibly lighter prose and a quieter heading. At 834 and 1440 its continuous light background and less emphatic text sustain a calmer reading rhythm; the right’s heavier-looking reversed text and dark band feel more assertive than the supplied editorial criterion.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-3-left-390.png",
+        "artifacts/tuning/v1/tuning-3-left-834.png",
+        "artifacts/tuning/v1/tuning-3-left-1440.png",
+        "artifacts/tuning/v1/tuning-3-right-390.png",
+        "artifacts/tuning/v1/tuning-3-right-834.png",
+        "artifacts/tuning/v1/tuning-3-right-1440.png"
+      ]
+    },
+    {
+      "pairId": "tuning-4",
+      "choice": "right",
+      "reason": "The right gives the two-line mobile heading and opening prose a clearer pause at 390; the left feels more compressed at that transition. At 834 and 1440 the right keeps a restrained single-line heading, visibly open line spacing and distinct paragraph groups on a continuous light field. That pacing better matches calm reading across the set.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-4-left-390.png",
+        "artifacts/tuning/v1/tuning-4-left-834.png",
+        "artifacts/tuning/v1/tuning-4-left-1440.png",
+        "artifacts/tuning/v1/tuning-4-right-390.png",
+        "artifacts/tuning/v1/tuning-4-right-834.png",
+        "artifacts/tuning/v1/tuning-4-right-1440.png"
+      ]
+    },
+    {
+      "pairId": "tuning-5",
+      "choice": "left",
+      "reason": "At 390, the left keeps the heading in two complete, readable phrases while the right spreads it over four short lines; the subtitle remains subordinate in both. The right has a better balanced heading at 834, but both leave “point.” alone at 1440. The left’s steadier mobile hierarchy and continuous space make it the more coherent set overall.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-5-left-390.png",
+        "artifacts/tuning/v1/tuning-5-left-834.png",
+        "artifacts/tuning/v1/tuning-5-left-1440.png",
+        "artifacts/tuning/v1/tuning-5-right-390.png",
+        "artifacts/tuning/v1/tuning-5-right-834.png",
+        "artifacts/tuning/v1/tuning-5-right-1440.png"
+      ]
+    },
+    {
+      "pairId": "tuning-6",
+      "choice": "right",
+      "reason": "At 390, the right keeps “small decision” together and gives the opening prose a clearer pause below the heading. At 834 and 1440 its final paragraph fits on one line, while the left strands “reader.” below it. The right’s open paragraph spacing and continuous light field give the more deliberate reading rhythm, although its heading is slightly more assertive.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-6-left-390.png",
+        "artifacts/tuning/v1/tuning-6-left-834.png",
+        "artifacts/tuning/v1/tuning-6-left-1440.png",
+        "artifacts/tuning/v1/tuning-6-right-390.png",
+        "artifacts/tuning/v1/tuning-6-right-834.png",
+        "artifacts/tuning/v1/tuning-6-right-1440.png"
+      ]
+    }
+  ]
+}

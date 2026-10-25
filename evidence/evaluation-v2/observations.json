@@ -1,0 +1,149 @@
+{
+  "trials": [
+    {
+      "projectId": "field-notes",
+      "taskId": "hero",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "tools-musical",
+      "tokens": 19378,
+      "latencyMs": 48999.814042,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "field-notes",
+      "taskId": "hero",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "guidance-only",
+      "tokens": 16199,
+      "latencyMs": 17030.18,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "field-notes",
+      "taskId": "hero",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "tools-smooth",
+      "tokens": 18842,
+      "latencyMs": 52074.24983300001,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "night-workshop",
+      "taskId": "hero",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "tools-musical",
+      "tokens": 18191,
+      "latencyMs": 51607.457708,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "night-workshop",
+      "taskId": "hero",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "guidance-only",
+      "tokens": 16092,
+      "latencyMs": 11962.307583000016,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "night-workshop",
+      "taskId": "hero",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "tools-smooth",
+      "tokens": 18834,
+      "latencyMs": 51896.14974999998,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "river-observatory",
+      "taskId": "editorial",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "tools-smooth",
+      "tokens": 19228,
+      "latencyMs": 59722.49587499999,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "river-observatory",
+      "taskId": "editorial",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "tools-musical",
+      "tokens": 20429,
+      "latencyMs": 54609.63283299998,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "river-observatory",
+      "taskId": "editorial",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "guidance-only",
+      "tokens": 16273,
+      "latencyMs": 22349.747417000006,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "library-after-hours",
+      "taskId": "editorial",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "tools-musical",
+      "tokens": 20255,
+      "latencyMs": 63751.80533299997,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "library-after-hours",
+      "taskId": "editorial",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "guidance-only",
+      "tokens": 16109,
+      "latencyMs": 11268.75099999999,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    },
+    {
+      "projectId": "library-after-hours",
+      "taskId": "editorial",
+      "agentId": "codex-cli-configured-default-constant-run",
+      "seed": 20261024,
+      "condition": "tools-smooth",
+      "tokens": 19067,
+      "latencyMs": 64028.683458000014,
+      "attempts": 1,
+      "hardFailures": 0,
+      "responsiveFailures": 0
+    }
+  ],
+  "preferences": []
+}

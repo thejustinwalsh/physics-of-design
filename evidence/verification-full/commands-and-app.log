@@ -1,0 +1,18 @@
+(node:34369) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ real MCP App SDK host bridge renders, edits, recomputes, compares and records a human tie-break (5804.387709ms)
+(node:34370) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ every public command executes through CLI and MCP with matching result contracts (17459.951667ms)
+✔ Unix streams handle files, JSONL, invalid commands and caller errors without polluting stdout (1545.973833ms)
+(node:34371) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ compact MCP discovers one schema and reuses exact states without repeated input context (397.492208ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19639.720042

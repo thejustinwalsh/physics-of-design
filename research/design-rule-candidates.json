@@ -1,0 +1,885 @@
+{
+  "schemaVersion": 1,
+  "kind": "conditional-design-rule-candidates",
+  "status": "proposed; not installed as universal engine constraints",
+  "reviewer": {
+    "kind": "synthetic-astra",
+    "agent": "/root/astra_design_review",
+    "model": "gpt-6-astra"
+  },
+  "sources": {
+    "elaya": {
+      "title": "Elaya landing-page-design",
+      "url": "https://github.com/elayadesign/ai-design-skills/blob/1c1e97cb9878e236552c772092dda7adcdddbcb2/skills/landing-page-design/SKILL.md",
+      "commit": "1c1e97cb9878e236552c772092dda7adcdddbcb2",
+      "localArtifact": "artifacts/review/elayadesign-landing-page.md",
+      "license": "MIT",
+      "evidenceClass": "practitioner prescription; no conversion experiment supplied",
+      "sha256": "3aae79f3d33ea293491fe6251f9fee56ee0cbb7aa66d41b3f29cfc662e4bbdd6"
+    },
+    "impeccable": {
+      "title": "Impeccable 4.7.1",
+      "url": "https://github.com/pbakaus/impeccable/blob/936867543ac2576920d663cc9803597f6044f3ac/.agents/skills/impeccable/SKILL.md",
+      "commit": "936867543ac2576920d663cc9803597f6044f3ac",
+      "localArtifact": "artifacts/runtime/impeccable/.agents/skills/impeccable/SKILL.md",
+      "references": [
+        "reference/layout.md",
+        "reference/typeset.md",
+        "reference/colorize.md",
+        "reference/operate.md",
+        "reference/adapt.md",
+        "reference/adapt.native.md"
+      ],
+      "evidenceClass": "practitioner guidance; no calibrated preference model",
+      "sha256": "c26d6963fe2278f570930ea083ec89609ba094ee93b1ae825719ff5d29b9ac3c"
+    },
+    "wcag-reflow": {
+      "title": "W3C Understanding SC1.4.10",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "evidenceClass": "informative explanation of normative WCAG2.2 AA criterion"
+    },
+    "wcag-resize": {
+      "title": "W3C Understanding SC1.4.4",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+      "evidenceClass": "informative explanation of normative WCAG2.2 AA criterion"
+    },
+    "wcag-target": {
+      "title": "W3C Understanding SC2.5.8",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "evidenceClass": "informative explanation of normative WCAG2.2 AA criterion"
+    },
+    "brief": {
+      "title": "User and parent task brief",
+      "url": null,
+      "evidenceClass": "project requirement",
+      "summary": "Demanding complete Fieldwork website and real React Native companion app; flex/Yoga portability; no component catalog/composer; original fictional sample publication."
+    }
+  },
+  "rules": [
+    {
+      "id": "mode-priority",
+      "title": "Set task and information priority before style",
+      "decision": "adopt",
+      "condition": "Every surface declares Read, Operate or Persuade from its immediate task, not its product category.",
+      "equation": null,
+      "observable": [
+        "Declare primary task, three ordered information priorities, supporting regions and necessary actions.",
+        "Reviewers identify dominant region and next step from full rendering before seeing priority labels."
+      ],
+      "evidenceClass": ["practitioner heuristic", "project requirement"],
+      "source": [
+        {
+          "id": "impeccable",
+          "section": "Modes"
+        },
+        {
+          "id": "elaya",
+          "section": "A1-A4"
+        },
+        {
+          "id": "brief",
+          "section": "Fieldwork"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/composition.ts",
+          "api": "analyzeComposition",
+          "coverage": "descriptive rectangles only; semantic input required"
+        }
+      ],
+      "limits": [
+        "Priority metadata and rectangle size cannot establish perceived hierarchy or task success.",
+        "A publication cover may invite reading; a reader surface must not inherit conversion-page structure."
+      ]
+    },
+    {
+      "id": "claim-proof",
+      "title": "Keep supporting evidence connected to the claim",
+      "decision": "adapt",
+      "condition": "A cover/issue preview makes a factual, editorial or product claim.",
+      "equation": null,
+      "observable": [
+        "Record claim-to-source/caption/detail relations.",
+        "Supporting detail remains available and unambiguously attached after reflow."
+      ],
+      "evidenceClass": ["practitioner heuristic"],
+      "source": [
+        {
+          "id": "elaya",
+          "section": "A4"
+        },
+        {
+          "id": "impeccable",
+          "section": "reference/layout.md"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/composition.ts",
+          "api": "analyzeComposition",
+          "coverage": "descriptive rectangles only; semantic input required"
+        },
+        {
+          "module": "src/graph.ts",
+          "api": "existing typography factor graph",
+          "coverage": "not a general editorial evidence graph"
+        }
+      ],
+      "limits": [
+        "Adjacency does not verify truth.",
+        "Do not add testimonials, usage statistics or guarantees merely to fill a template."
+      ]
+    },
+    {
+      "id": "semantic-proximity",
+      "title": "Measure declared relationships rather than arbitrary card spacing",
+      "decision": "adapt",
+      "condition": "Comparable sibling regions have declared group/relationship IDs.",
+      "equation": "gap(A,B)=hypot(max(A.left-B.right,B.left-A.right,0),max(A.top-B.bottom,B.top-A.bottom,0)); separationMargin=nearestUnrelatedGap-relatedGap",
+      "observable": [
+        "Report per declared relation; inspect caption/image, label/value, issue/story and status/action bindings.",
+        "Unrelated neighbors should not appear more closely attached without a deliberate visible cue."
+      ],
+      "evidenceClass": ["geometric calculation", "practitioner heuristic"],
+      "source": [
+        {
+          "id": "impeccable",
+          "section": "reference/layout.md"
+        },
+        {
+          "id": "elaya",
+          "section": "A4,B2"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/composition.ts",
+          "api": "analyzeComposition",
+          "coverage": "descriptive rectangles only; semantic input required"
+        }
+      ],
+      "limits": [
+        "No universal positive-margin threshold; overlapping, nested and bridging regions require interpretation.",
+        "Do not average every within-group pair when only a caption-to-image dependency matters."
+      ]
+    },
+    {
+      "id": "content-fit",
+      "title": "Switch composition when content stops fitting",
+      "decision": "adapt",
+      "condition": "A proposed row, rail, list/detail or ancillary column has measured minimum usable child widths.",
+      "equation": "rowFits = sum(minUsableWidth_i(textScale,locale)) + sum(gap_i) <= containerWidth - insetLeading - insetTrailing - paddingLeading - paddingTrailing",
+      "observable": [
+        "Use explicit flex direction/wrap/grow/shrink/basis.",
+        "Choose split/stack/disclosure from task relations; remeasure actual text and preserve priority."
+      ],
+      "evidenceClass": [
+        "geometric necessary condition",
+        "practitioner heuristic",
+        "project requirement"
+      ],
+      "source": [
+        {
+          "id": "impeccable",
+          "section": "reference/layout.md; reference/adapt.native.md"
+        },
+        {
+          "id": "brief",
+          "section": "Flex/Yoga"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/responsive.ts",
+          "api": "resolveLayout",
+          "coverage": "partial: current stack/split typography resolver; no general navigation/state model"
+        }
+      ],
+      "limits": [
+        "Fit is necessary, not sufficient for readability, hierarchy or a useful two-pane task.",
+        "No universal two-column iPad or always-visible desktop sidebar. Height/keyboard constraints also matter."
+      ]
+    },
+    {
+      "id": "type-rhythm",
+      "title": "Tune roles to face, language and task",
+      "decision": "adapt",
+      "condition": "A surface mixes headline, deck, prose, labels, metadata and numeric roles.",
+      "equation": null,
+      "observable": [
+        "Compare role contrast, phrase grouping, paragraph cadence, cap measures, caption rhythm and meaningful emphasis.",
+        "Record default-scale short tails/word fractures separately from enlarged-text failures.",
+        "Preserve actual copy/fonts; treat line-break intervention as a scoped variant."
+      ],
+      "evidenceClass": ["practitioner heuristic"],
+      "source": [
+        {
+          "id": "impeccable",
+          "section": "reference/typeset.md"
+        },
+        {
+          "id": "elaya",
+          "section": "B1,B5"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/measurement.ts",
+          "api": "Renderer.measure",
+          "coverage": "line/box evidence"
+        },
+        {
+          "module": "src/responsive.ts",
+          "api": "resolveLayout",
+          "coverage": "partial: current stack/split typography resolver; no general navigation/state model"
+        }
+      ],
+      "limits": [
+        "45–75-character prose guidance is a starting hypothesis, not a universal limit for every script, table or display headline.",
+        "Browser balance/pretty wrapping is optional enhancement, not a native portability dependency."
+      ]
+    },
+    {
+      "id": "type-prescriptions",
+      "title": "Reject global font and scale bans",
+      "decision": "reject",
+      "condition": "Elaya B1 is proposed as a universal constraint.",
+      "equation": null,
+      "observable": [
+        "Do not ban italics, hyphens, 900 weight, system fonts or a justified second family.",
+        "Do not force Tailwind scale or downward snapping with inherited leading.",
+        "Retain a single-family preset only where appropriate; permit editorial emphasis and platform-native text roles."
+      ],
+      "evidenceClass": ["unsupported universal practitioner prescription"],
+      "source": [
+        {
+          "id": "elaya",
+          "section": "B1"
+        },
+        {
+          "id": "impeccable",
+          "section": "reference/typeset.md; reference/operate.md; reference/adapt.native.md"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/fonts.ts",
+          "api": "font inspection and pinned assets",
+          "coverage": "supports authored fonts"
+        },
+        {
+          "module": "src/responsive.ts",
+          "api": "resolveLayout",
+          "coverage": "partial: current stack/split typography resolver; no general navigation/state model"
+        }
+      ],
+      "limits": [
+        "A preset may restrict values intentionally, but must be named/editable and subordinate to the brief."
+      ]
+    },
+    {
+      "id": "density",
+      "title": "Describe density by semantic region and task",
+      "decision": "adapt",
+      "condition": "A full composition contains multiple content groups.",
+      "equation": "occupancy = area(union(clippedComparableLeafRegions))/viewportArea; textLoad = renderedLineCount/regionArea",
+      "observable": [
+        "Compare distribution of reading load, action count and quiet intervals by region.",
+        "Operate surfaces retain useful scan density; stories retain reading cadence; cover emphasis should not make every story equally loud."
+      ],
+      "evidenceClass": ["descriptive geometry", "synthetic review hypothesis"],
+      "source": [
+        {
+          "id": "impeccable",
+          "section": "reference/layout.md; reference/operate.md"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/composition.ts",
+          "api": "analyzeComposition",
+          "coverage": "descriptive rectangles only; semantic input required"
+        }
+      ],
+      "limits": [
+        "Occupancy is not information density or a beauty score. Container backgrounds must not count as content occupancy.",
+        "No fixed desirable whitespace percentage; do not minimize information or maximize empty area."
+      ]
+    },
+    {
+      "id": "contrast-dosage",
+      "title": "Allocate visual emphasis to semantic roles",
+      "decision": "adapt",
+      "condition": "The surface contains actions, current selection, statuses, imagery and editorial emphasis.",
+      "equation": "roleCoverage = unionArea(visibleRegionsWithRole)/visibleSurfaceArea; only when role ownership and occlusion are known",
+      "observable": [
+        "Inspect where strongest color/contrast appears, competing focal regions and consistency across states.",
+        "Check actual role-pair contrast independently; image/gradient text needs resolved background evidence."
+      ],
+      "evidenceClass": ["descriptive geometry", "practitioner heuristic"],
+      "source": [
+        {
+          "id": "impeccable",
+          "section": "reference/colorize.md"
+        },
+        {
+          "id": "elaya",
+          "section": "B4-B5"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/color.ts",
+          "api": "analyzeColors",
+          "coverage": "opaque sRGB declared-role contrast and perceptual descriptors"
+        },
+        {
+          "module": "src/composition.ts",
+          "api": "analyzeComposition",
+          "coverage": "descriptive rectangles only; semantic input required"
+        }
+      ],
+      "limits": [
+        "Current color analyzer does not infer role areas, salience, occlusion or image contrast.",
+        "No 60/30/10 law; high chroma and neutral palettes are both legitimate conditional choices."
+      ]
+    },
+    {
+      "id": "nested-radius",
+      "title": "Use concentric-radius geometry only when it applies",
+      "decision": "adapt",
+      "condition": "A rounded rectangle has a uniformly inset rounded child and the intended curves are concentric.",
+      "equation": "rInner = max(0, rOuterEffective - inset); inset and rOuterEffective refer to the same contour, with border offsets included",
+      "observable": [
+        "Inspect equal corner spacing using actual rendered effective radii.",
+        "Declare square or intentionally nonconcentric exceptions."
+      ],
+      "evidenceClass": ["geometric construction", "practitioner heuristic"],
+      "source": [
+        {
+          "id": "elaya",
+          "section": "B3"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/composition.ts",
+          "api": "analyzeComposition",
+          "coverage": "missing: radius/contour metadata; rectangles alone are insufficient"
+        }
+      ],
+      "limits": [
+        "No universal gap<32 or result>2 cutoff.",
+        "CSS/renderer radius clamping, unequal inset, elliptical corners and borders need explicit geometry; constant-radius subtraction is not a general optical law."
+      ]
+    },
+    {
+      "id": "decorative-presets",
+      "title": "Reject mandatory decorative recipes",
+      "decision": "reject",
+      "condition": "Fixed gradient, dark palette, icon library, border or island-navigation rules are proposed for all surfaces.",
+      "equation": null,
+      "observable": [
+        "Evaluate a selected visual direction and platform conventions instead.",
+        "Use separators where they clarify related rows; gradients only when authored and contrast-verified; no mandatory gradient heading."
+      ],
+      "evidenceClass": ["unsupported universal practitioner prescription"],
+      "source": [
+        {
+          "id": "elaya",
+          "section": "B4-B7"
+        },
+        {
+          "id": "impeccable",
+          "section": "The brief wins; reference/colorize.md; reference/adapt.native.md"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/color.ts",
+          "api": "analyzeColors",
+          "coverage": "opaque sRGB declared-role contrast and perceptual descriptors"
+        },
+        {
+          "module": "src/composition.ts",
+          "api": "analyzeComposition",
+          "coverage": "descriptive rectangles only; semantic input required"
+        }
+      ],
+      "limits": [
+        "A named preset can encode these choices, but they cannot define design quality or accessibility."
+      ]
+    },
+    {
+      "id": "motion",
+      "title": "Make motion optional and task-related",
+      "decision": "adapt",
+      "condition": "Navigation, saving, downloads or reading transitions change state.",
+      "equation": null,
+      "observable": [
+        "Content is readable at initial/static/reduced-motion state.",
+        "Use motion to explain continuity or feedback; verify interruption and reduced-motion behavior.",
+        "Reject mandatory word reveals and >=800ms entrance delays."
+      ],
+      "evidenceClass": ["practitioner heuristic", "project requirement"],
+      "source": [
+        {
+          "id": "elaya",
+          "section": "B7,B11"
+        },
+        {
+          "id": "impeccable",
+          "section": "reference/operate.md"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/composition.ts",
+          "api": "analyzeComposition",
+          "coverage": "missing: temporal/interaction evidence"
+        }
+      ],
+      "limits": [
+        "A cubic Bezier is an easing curve, not proof of a mass-spring model.",
+        "IntersectionObserver and requestAnimationFrame are implementation choices, not evidence that motion is performant or necessary."
+      ]
+    },
+    {
+      "id": "state-completeness",
+      "title": "Prove necessary states and recovery",
+      "decision": "adapt",
+      "condition": "A real Fieldwork control performs navigation/search/save/download/reading.",
+      "equation": null,
+      "observable": [
+        "Exercise default/focus/active/selected/disabled/loading/empty/error states when applicable.",
+        "Use a proportionate progress indicator or skeleton according to operation; preserve entered query and recovery path.",
+        "No dead controls or misleading offline success."
+      ],
+      "evidenceClass": ["practitioner heuristic", "project requirement"],
+      "source": [
+        {
+          "id": "elaya",
+          "section": "B9-B10"
+        },
+        {
+          "id": "impeccable",
+          "section": "reference/operate.md"
+        },
+        {
+          "id": "brief",
+          "section": "Native app"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/native.ts",
+          "api": "native receipts/bridge",
+          "coverage": "partial: measurement receipts, not a complete interaction harness"
+        }
+      ],
+      "limits": [
+        "Not every element needs every state; hover is not a required touch affordance.",
+        "Screenshot presence does not demonstrate an action works."
+      ]
+    },
+    {
+      "id": "content-truth",
+      "title": "Use original truthful sample content",
+      "decision": "adopt",
+      "condition": "Proof artifacts contain editorial copy, names, metrics, imagery or claims.",
+      "equation": null,
+      "observable": [
+        "Label Fieldwork as an original fictional/sample publication.",
+        "Mark generated visual provenance and avoid unverified real-location captions.",
+        "Use authored sample datasets with units/source notes; never invent organic-looking conversion figures, readers, awards or testimonials as proof."
+      ],
+      "evidenceClass": ["project requirement", "evidence discipline"],
+      "source": [
+        {
+          "id": "elaya",
+          "section": "A1,A4,B8"
+        },
+        {
+          "id": "impeccable",
+          "section": "Refinement preserves; product truth"
+        },
+        {
+          "id": "brief",
+          "section": "Original publication"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/tuning.ts",
+          "api": "exportTuning",
+          "coverage": "preserves declared rights/provenance, does not establish factual truth"
+        }
+      ],
+      "limits": [
+        "Specificity is useful only when the claim is supported.",
+        "Reject Elaya organic fake-number examples as a rule for credibility."
+      ]
+    },
+    {
+      "id": "accessibility-scope",
+      "title": "Separate scoped accessibility checks from taste",
+      "decision": "adopt",
+      "condition": "Web content or native controls are claimed to meet a specific accessibility/platform requirement.",
+      "equation": null,
+      "observable": [
+        "For applicable web content, test reflow at320CSSpx and resize to200% without loss, respecting criterion exceptions.",
+        "Evaluate WCAG2.2 AA pointer-target24x24CSSpx or applicable exceptions; do not call44px the universal AA minimum.",
+        "Native target sizes, safe areas, Dynamic Type and platform units require separate platform evidence."
+      ],
+      "evidenceClass": [
+        "standard-derived scoped requirement",
+        "platform-specific requirement"
+      ],
+      "source": [
+        {
+          "id": "wcag-reflow",
+          "section": "SC1.4.10"
+        },
+        {
+          "id": "wcag-resize",
+          "section": "SC1.4.4"
+        },
+        {
+          "id": "wcag-target",
+          "section": "SC2.5.8"
+        },
+        {
+          "id": "impeccable",
+          "section": "reference/adapt.native.md"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/measurement.ts",
+          "api": "Renderer.measure",
+          "coverage": "partial geometry/spacing evidence"
+        },
+        {
+          "module": "src/color.ts",
+          "api": "analyzeColors",
+          "coverage": "opaque sRGB declared-role contrast and perceptual descriptors"
+        },
+        {
+          "module": "src/native.ts",
+          "api": "native bridge",
+          "coverage": "target-renderer receipts; no complete conformance claim"
+        }
+      ],
+      "limits": [
+        "These checks are not a complete accessibility audit.",
+        "Browser viewport resizing alone does not prove zoom, screen-reader order, native text scaling or touch gestures."
+      ]
+    },
+    {
+      "id": "native-authenticity",
+      "title": "Require actual native runtime evidence",
+      "decision": "adopt",
+      "condition": "A proof is called an app design.",
+      "equation": null,
+      "observable": [
+        "Capture running React Native controls/layout on actual iOS/Android runtime, with engine/version/state hashes.",
+        "Exercise native navigation, search, save/offline and reading resume.",
+        "Phone tabs/tablet sidebar are candidate idioms; retain them only when task/window fit supports them."
+      ],
+      "evidenceClass": [
+        "project requirement",
+        "practitioner platform guidance"
+      ],
+      "source": [
+        {
+          "id": "brief",
+          "section": "Real App"
+        },
+        {
+          "id": "impeccable",
+          "section": "reference/adapt.native.md"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/native.ts",
+          "api": "native bridge",
+          "coverage": "available renderer receipts; app flow coverage must be added"
+        },
+        {
+          "module": "src/responsive.ts",
+          "api": "resolveLayout",
+          "coverage": "partial: current stack/split typography resolver; no general navigation/state model"
+        }
+      ],
+      "limits": [
+        "A browser screenshot inside a phone frame is not native evidence.",
+        "Simulator evidence is valid as simulator evidence; hardware, gesture, performance and device-behavior gaps remain explicit."
+      ]
+    },
+    {
+      "id": "order-continuity",
+      "title": "Preserve semantic order and task state during adaptation",
+      "decision": "adopt",
+      "condition": "Composition changes topology or navigation as window size/input/context changes.",
+      "equation": null,
+      "observable": [
+        "Selected issue/story, search query, scroll/reading position and saved state survive appropriate transitions.",
+        "Visual order, traversal order and spoken order remain coherent.",
+        "No required feature disappears at narrow width; disclosure provides an accessible path."
+      ],
+      "evidenceClass": ["practitioner heuristic", "project requirement"],
+      "source": [
+        {
+          "id": "impeccable",
+          "section": "reference/layout.md; reference/adapt.native.md"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/composition.ts",
+          "api": "analyzeComposition",
+          "coverage": "descriptive rectangles only; semantic input required"
+        },
+        {
+          "module": "src/responsive.ts",
+          "api": "resolveLayout",
+          "coverage": "partial: current stack/split typography resolver; no general navigation/state model"
+        }
+      ],
+      "limits": [
+        "Current geometric reversals do not verify DOM/focus/accessibility order.",
+        "Scrolling/selection continuity needs executable actions and state receipts, not screenshots alone."
+      ]
+    },
+    {
+      "id": "complete-proof",
+      "title": "Judge complete connected compositions",
+      "decision": "adopt",
+      "condition": "Toolkit changes claim improved design quality.",
+      "equation": null,
+      "observable": [
+        "Use the six connected Fieldwork surfaces and transitions defined in proofSuite.",
+        "Inspect full-page and viewport crops, including lower sections, not only title/prose.",
+        "Reviewers may reject all candidates or abstain; geometric feasibility is only entry to visual critique."
+      ],
+      "evidenceClass": ["project requirement", "synthetic review protocol"],
+      "source": [
+        {
+          "id": "brief",
+          "section": "Raise judging bar"
+        },
+        {
+          "id": "impeccable",
+          "section": "Verify by looking; Modes"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/selector.ts",
+          "api": "selectChoice",
+          "coverage": "viable-option selector; no visual quality certification"
+        },
+        {
+          "module": "src/tuning.ts",
+          "api": "exportTuning",
+          "coverage": "synthetic labels/provenance and project split"
+        }
+      ],
+      "limits": [
+        "A larger screenshot count is not a100x quality measurement.",
+        "Same-model Astra labels remain synthetic and correlated, not human empirical validation."
+      ]
+    },
+    {
+      "id": "provenance-holdout",
+      "title": "Keep evidence and evaluation boundaries intact",
+      "decision": "adopt",
+      "condition": "Rules or selection policies are proposed from rendered alternatives.",
+      "equation": null,
+      "observable": [
+        "Freeze project/surface/state hashes, source assets and train/heldout allocation before labels.",
+        "Keep all widths and states of one connected issue/story family together in a split.",
+        "Separate equation correctness probes, synthetic visual judgments and human outcomes."
+      ],
+      "evidenceClass": ["engineering evidence contract"],
+      "source": [
+        {
+          "id": "brief",
+          "section": "Do not change frozen evidence"
+        },
+        {
+          "id": "impeccable",
+          "section": "Visual authority is evidence"
+        }
+      ],
+      "currentToolMapping": [
+        {
+          "module": "src/tuning.ts",
+          "api": "exportTuning",
+          "coverage": "project split and evidence binding"
+        },
+        {
+          "module": "src/evaluation.ts",
+          "api": "evaluate",
+          "coverage": "human-vs-synthetic evaluation boundary"
+        }
+      ],
+      "limits": [
+        "The existing six-pair title/prose dataset cannot validate the new full compositions.",
+        "Reference awards and model agreement do not demonstrate conversion, comprehension or task success."
+      ]
+    }
+  ],
+  "proofSuite": {
+    "product": "Fieldwork",
+    "truth": "Original fictional/sample publication about architecture, place and fieldnotes. Generated imagery retains provenance.",
+    "surfaces": [
+      {
+        "id": "fieldwork-web-cover",
+        "platform": "web",
+        "mode": ["Persuade", "Read"],
+        "task": "Understand the publication and open the current issue or lead story.",
+        "requiredRegions": [
+          "masthead and working navigation",
+          "issue identity/date/theme",
+          "dominant lead story and original observatory/cliff visual",
+          "caption/provenance",
+          "two differentiated secondary story treatments",
+          "editorial introduction",
+          "archive path",
+          "subscription/information area if functional",
+          "footer and publication/sample disclosure"
+        ],
+        "acceptance": [
+          "Lead story is unmistakable without making secondary stories look disabled.",
+          "Image crop preserves its editorial subject across widths; caption remains attached.",
+          "Next reading action is clear; no fabricated proof or decorative generic-card repetition."
+        ]
+      },
+      {
+        "id": "fieldwork-web-issue",
+        "platform": "web",
+        "mode": ["Read"],
+        "task": "Scan a complete issue, understand its structure, choose a story and return.",
+        "requiredRegions": [
+          "issue masthead/number/theme",
+          "contents hierarchy",
+          "lead feature",
+          "short fieldnotes with metadata",
+          "image/caption pair",
+          "section/editor note",
+          "previous/next issue navigation"
+        ],
+        "acceptance": [
+          "Story rank and section membership remain legible at every width.",
+          "Repeated metadata aligns while unequal story importance remains unequal.",
+          "Filters/contents links, if shown, work and preserve context."
+        ]
+      },
+      {
+        "id": "fieldwork-web-story",
+        "platform": "web",
+        "mode": ["Read"],
+        "task": "Read an extended feature, inspect a figure/note, navigate sections and continue reading.",
+        "requiredRegions": [
+          "headline/deck/byline/date",
+          "hero/caption",
+          "multiple prose sections",
+          "inline figure or map with meaningful original data/labels",
+          "pull quote if justified",
+          "footnote/source relationship",
+          "related reading",
+          "issue return path"
+        ],
+        "acceptance": [
+          "Sustained prose rhythm survives full article length; no repeated disconnected text cards.",
+          "Caption/quote/notes remain visually distinct from narrative.",
+          "Ancillary desktop column collapses without interrupting the article or losing reference relationships."
+        ]
+      },
+      {
+        "id": "fieldwork-native-library-search",
+        "platform": "react-native-ios-and-android",
+        "mode": ["Operate", "Read"],
+        "task": "Browse issues, search for a story, open it, return with query and position intact.",
+        "requiredRegions": [
+          "native navigation and current destination",
+          "issue/library structure",
+          "story previews with actual metadata",
+          "search input/results",
+          "selected issue/story state",
+          "search empty state and recovery"
+        ],
+        "acceptance": [
+          "A running native app demonstrates the flow; keyboard does not conceal query/results or trap navigation.",
+          "Phone and tablet composition supports its task; library/reader relationships survive resizing.",
+          "Search results retain query context and meaningful differentiation."
+        ]
+      },
+      {
+        "id": "fieldwork-native-saved-offline",
+        "platform": "react-native-ios-and-android",
+        "mode": ["Operate"],
+        "task": "Save a story, download it, inspect status, handle failure and reopen available content offline.",
+        "requiredRegions": [
+          "saved stories",
+          "download status per item",
+          "progress/cancel/retry when relevant",
+          "available/offline distinction",
+          "empty saved state",
+          "error explanation and recovery"
+        ],
+        "acceptance": [
+          "Saved is not confused with downloaded.",
+          "Offline availability is backed by actual local content behavior; unsupported states are disclosed, not painted as success.",
+          "State changes remain clear through labels/shape as well as color, without shifting the entire list unexpectedly."
+        ]
+      },
+      {
+        "id": "fieldwork-native-reader",
+        "platform": "react-native-ios-and-android",
+        "mode": ["Read"],
+        "task": "Read, change supported text settings, save and resume the same story.",
+        "requiredRegions": [
+          "native back and context",
+          "title/byline/deck",
+          "long-form content",
+          "figure/caption",
+          "reading controls only as needed",
+          "saved/offline state",
+          "return/resume mechanism"
+        ],
+        "acceptance": [
+          "Content leads; controls recede while remaining discoverable.",
+          "Text enlargement, safe areas and tablet measure support sustained reading.",
+          "Reading position and appropriate state survive return, rotation/window change and offline reopen."
+        ]
+      }
+    ],
+    "variants": "Two credible coherent art directions for the connected publication, plus a deliberately plausible feasible failure variant for diagnosis. Freeze each complete composition before labeling.",
+    "webWidths": [360, 390, 600, 834, 1024, 1440],
+    "webStressWidth": 320,
+    "nativeCoverage": "Genuine React Native phone runtime on iOS and Android; iPad portrait/landscape and supported narrow window where available. Native desktop is not claimed.",
+    "stateStress": [
+      "200% applicable web text enlargement and native supported accessibility text settings",
+      "long title/byline and expanded labels",
+      "RTL fixture with declared translation/fallback provenance",
+      "keyboard open",
+      "reduced motion",
+      "loading/empty/error",
+      "offline availability",
+      "focus and reading order",
+      "resize/rotation with selected story/query/reading position retained"
+    ],
+    "acceptanceProtocol": "All scoped hard checks must pass or have justified explicit exceptions; whole-composition critique independently assesses purpose, hierarchy, grouping, rhythm, imagery, density, responsive structure and native affordances. No average score can hide an unresolved severe issue.",
+    "evidence": "Full-page/screen captures plus targeted crops, serialized semantic regions/relations, runtime receipts, actual interaction traces and source/state/asset hashes. Identify unavailable hardware and untested claims."
+  },
+  "globalLimits": [
+    "No universal beauty score, optimal color ratio, conversion guarantee or claim of100x measured improvement.",
+    "Adopt/adapt/reject records extraction decisions, not empirical validation.",
+    "Only flex/flex-wrap and explicit grow/shrink/basis layouts; no CSS Grid dependency.",
+    "General relations/constraints and proof fixtures are in scope; component catalog or UI composer is not."
+  ]
+}

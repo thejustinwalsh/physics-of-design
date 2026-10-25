@@ -1,0 +1,20 @@
+{
+  "platform": "native-android",
+  "label": "android-system-scale",
+  "completedAt": "2026-10-25T00:23:49.058Z",
+  "passed": true,
+  "measurements": 28,
+  "searches": 2,
+  "runtimes": [
+    {
+      "reactNative": "0.88.0",
+      "os": "36",
+      "fontScale": 1.2999999523162842,
+      "pixelRatio": 2.625,
+      "windowWidth": 411.42857142857144,
+      "windowHeight": 814.4761904761905,
+      "deviceType": "android-emulator"
+    }
+  ],
+  "scope": "Actual renderer; widths are virtual artboards unless they equal the recorded native window. Device rotation and physical hardware are not inferred."
+}

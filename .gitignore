@@ -1,0 +1,11 @@
+node_modules/
+dist/
+artifacts/
+.venv/
+native/node_modules/
+native/.expo/
+native/ios/
+native/android/
+*.tsbuildinfo
+.DS_Store
+.impeccable/

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "rater": {
+    "kind": "synthetic-astra",
+    "agent": "/root/astra_design_review/assessment_a",
+    "model": "gpt-6-astra",
+    "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+  },
+  "ratings": [
+    {
+      "pairId": "tuning-1",
+      "choice": "abstain",
+      "reason": "All three widths show intact words and subordinate subtitles on both sides; the right has more balanced heading lines at 834, while both retain clear hierarchy at 390 and 1440. I abstain because the initial manifest preview accidentally exposed part of tuning-1 left state before pixel inspection, compromising configuration blindness for this pair.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-1-left-390.png",
+        "artifacts/tuning/v1/tuning-1-left-834.png",
+        "artifacts/tuning/v1/tuning-1-left-1440.png",
+        "artifacts/tuning/v1/tuning-1-right-390.png",
+        "artifacts/tuning/v1/tuning-1-right-834.png",
+        "artifacts/tuning/v1/tuning-1-right-1440.png"
+      ]
+    },
+    {
+      "pairId": "tuning-2",
+      "choice": "right",
+      "reason": "At 390 the right gives the three-line heading and subtitle more breathing room while keeping the subtitle clearly subordinate. At 834 its two heading lines are more balanced than the left single-word final line. At 1440 both preserve intact words and hierarchy; the right retains the stronger display emphasis and clearer heading-to-subtitle interval. This is a modest visual preference.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-2-left-390.png",
+        "artifacts/tuning/v1/tuning-2-left-834.png",
+        "artifacts/tuning/v1/tuning-2-left-1440.png",
+        "artifacts/tuning/v1/tuning-2-right-390.png",
+        "artifacts/tuning/v1/tuning-2-right-834.png",
+        "artifacts/tuning/v1/tuning-2-right-1440.png"
+      ]
+    },
+    {
+      "pairId": "tuning-3",
+      "choice": "left",
+      "reason": "At 390 the left heading is less dominant while the prose remains clearly separated and readable. At 834 and 1440 its smaller heading and less visually heavy prose better support the requested calm rhythm; the capped reading column and paragraph separation remain coherent. Both candidates preserve the text, so this is a preference for restraint rather than a breakage finding.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-3-left-390.png",
+        "artifacts/tuning/v1/tuning-3-left-834.png",
+        "artifacts/tuning/v1/tuning-3-left-1440.png",
+        "artifacts/tuning/v1/tuning-3-right-390.png",
+        "artifacts/tuning/v1/tuning-3-right-834.png",
+        "artifacts/tuning/v1/tuning-3-right-1440.png"
+      ]
+    },
+    {
+      "pairId": "tuning-4",
+      "choice": "tie",
+      "reason": "At 390 both keep a two-line heading, readable prose, and distinct paragraphs. The left is more compact and restrains the heading more; the right gives the heading and prose more breathing room. At 834 and 1440 both retain a contained reading column and clear paragraph rhythm. Neither tradeoff produces a decisive advantage against the full criterion.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-4-left-390.png",
+        "artifacts/tuning/v1/tuning-4-left-834.png",
+        "artifacts/tuning/v1/tuning-4-left-1440.png",
+        "artifacts/tuning/v1/tuning-4-right-390.png",
+        "artifacts/tuning/v1/tuning-4-right-834.png",
+        "artifacts/tuning/v1/tuning-4-right-1440.png"
+      ]
+    },
+    {
+      "pairId": "tuning-5",
+      "choice": "left",
+      "reason": "At 390 the left communicates the heading in two coherent lines, whereas the right expands it into four short lines and gives it much greater vertical dominance. At 834 the right has better-balanced heading lines, but both remain intact and clearly separate the subtitle; at 1440 both have a short final heading line and subordinate subtitle. The left mobile coherence outweighs its weaker intermediate-width line balance.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-5-left-390.png",
+        "artifacts/tuning/v1/tuning-5-left-834.png",
+        "artifacts/tuning/v1/tuning-5-left-1440.png",
+        "artifacts/tuning/v1/tuning-5-right-390.png",
+        "artifacts/tuning/v1/tuning-5-right-834.png",
+        "artifacts/tuning/v1/tuning-5-right-1440.png"
+      ]
+    },
+    {
+      "pairId": "tuning-6",
+      "choice": "right",
+      "reason": "At 390 the right keeps small decision together in a balanced two-line heading and gives the transition into prose more breathing room. At 834 and 1440 its heading remains contained, paragraph separation is clear, and the second sentence reads as one complete line. The left is also readable and has a more restrained heading, but its tighter overall rhythm is less calm to this synthetic rater.",
+      "evidenceImages": [
+        "artifacts/tuning/v1/tuning-6-left-390.png",
+        "artifacts/tuning/v1/tuning-6-left-834.png",
+        "artifacts/tuning/v1/tuning-6-left-1440.png",
+        "artifacts/tuning/v1/tuning-6-right-390.png",
+        "artifacts/tuning/v1/tuning-6-right-834.png",
+        "artifacts/tuning/v1/tuning-6-right-1440.png"
+      ]
+    }
+  ]
+}

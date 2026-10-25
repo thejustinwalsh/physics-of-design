@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "archetype": "hero",
+  "platform": "web",
+  "viewport": {
+    "width": 1280,
+    "height": 900,
+    "textScale": 1
+  },
+  "padding": 24,
+  "blocks": [
+    {
+      "id": "title",
+      "role": "title",
+      "text": "Good work takes the time it needs.",
+      "font": {
+        "file": "assets/fonts/Lato-Black.ttf",
+        "family": "Lato Black",
+        "axes": {},
+        "opticalSizing": "none"
+      },
+      "size": 48,
+      "weight": 900,
+      "kerning": "auto",
+      "features": {},
+      "trackingEm": -0.018,
+      "leading": 1.12,
+      "measure": 720,
+      "align": "left",
+      "direction": "auto",
+      "language": "en",
+      "maxHeight": null
+    },
+    {
+      "id": "subtitle",
+      "role": "subtitle",
+      "text": "An independent workshop for people who care about materials, process, and making fewer things well.",
+      "font": {
+        "file": "assets/fonts/Lato-Regular.ttf",
+        "family": "Lato",
+        "axes": {},
+        "opticalSizing": "none"
+      },
+      "size": 22,
+      "weight": 400,
+      "kerning": "auto",
+      "features": {},
+      "trackingEm": 0,
+      "leading": 1.5,
+      "measure": 580,
+      "align": "left",
+      "direction": "auto",
+      "language": "en",
+      "maxHeight": null
+    }
+  ],
+  "gaps": [
+    24
+  ],
+  "locks": []
+}

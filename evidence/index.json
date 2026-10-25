@@ -1,0 +1,2246 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-25T03:11:51.247Z",
+  "files": [
+    {
+      "path": "context/budget.json",
+      "source": "artifacts/context/budget.json",
+      "bytes": 338,
+      "sha256": "475bd3bb01eafefd5b6907ba0f4dfcdfb1b731cc1fa5b63eeb4b10b84b986595"
+    },
+    {
+      "path": "context/token-counts.json",
+      "source": "artifacts/context/token-counts.json",
+      "bytes": 488,
+      "sha256": "b7956823b1f445c6f1f0d36fa5b7d8a7942962277afa8a928079462bdd5920b1"
+    },
+    {
+      "path": "evaluation-v2/analysis.json",
+      "source": "artifacts/evaluation-v2/analysis.json",
+      "bytes": 2139,
+      "sha256": "d17c79a72ebb0150bf017367b5153a2be0e1a737b6f26012dcf9c1fe7aaf0a89"
+    },
+    {
+      "path": "evaluation-v2/field-notes/guidance-only/measurements.json",
+      "source": "artifacts/evaluation-v2/field-notes/guidance-only/measurements.json",
+      "bytes": 24549,
+      "sha256": "246d7994452dbc54ab172680cf9d295f16ce6b1dcdf56e1a1995a7c39ebdec9b"
+    },
+    {
+      "path": "evaluation-v2/field-notes/guidance-only/prompt.txt",
+      "source": "artifacts/evaluation-v2/field-notes/guidance-only/prompt.txt",
+      "bytes": 2079,
+      "sha256": "f9b3baee6ed2c7c2dcf62d5c26bca1162578280ab68d63299aa42a0a617f3834"
+    },
+    {
+      "path": "evaluation-v2/field-notes/guidance-only/state.json",
+      "source": "artifacts/evaluation-v2/field-notes/guidance-only/state.json",
+      "bytes": 1329,
+      "sha256": "f094fbca060a29f2e5d85c6ae53827b2781436e5572ed0f6f353330c2f4e4260"
+    },
+    {
+      "path": "evaluation-v2/field-notes/tools-musical/measurements.json",
+      "source": "artifacts/evaluation-v2/field-notes/tools-musical/measurements.json",
+      "bytes": 25085,
+      "sha256": "48e59ebdc9930f9c07424a5f33e065d0965f7164fd080a7c0bf8aecb35b37c93"
+    },
+    {
+      "path": "evaluation-v2/field-notes/tools-musical/prompt.txt",
+      "source": "artifacts/evaluation-v2/field-notes/tools-musical/prompt.txt",
+      "bytes": 9286,
+      "sha256": "8e3dd0ae2ec4108a8bca2241c9540d6accce9b66dda3c75eb19010817bb14b5d"
+    },
+    {
+      "path": "evaluation-v2/field-notes/tools-musical/state.json",
+      "source": "artifacts/evaluation-v2/field-notes/tools-musical/state.json",
+      "bytes": 1329,
+      "sha256": "6642f9277952216c9bd845ce47f1818e1c1257594ab155490c9c7c99893d542a"
+    },
+    {
+      "path": "evaluation-v2/field-notes/tools-smooth/measurements.json",
+      "source": "artifacts/evaluation-v2/field-notes/tools-smooth/measurements.json",
+      "bytes": 25226,
+      "sha256": "ba1c8d7b488817910a80420dc0a63067e78a64d613bde08660bea0f77c239a41"
+    },
+    {
+      "path": "evaluation-v2/field-notes/tools-smooth/prompt.txt",
+      "source": "artifacts/evaluation-v2/field-notes/tools-smooth/prompt.txt",
+      "bytes": 11952,
+      "sha256": "dcc003acefef2cf16a24a88fdbfcdc1303299c0c6503a21c6ddf6e994198651d"
+    },
+    {
+      "path": "evaluation-v2/field-notes/tools-smooth/state.json",
+      "source": "artifacts/evaluation-v2/field-notes/tools-smooth/state.json",
+      "bytes": 1329,
+      "sha256": "ae68f765b803d84bc0bc7b6e633e0410787fe8961036a26bb8a169b7732c4db8"
+    },
+    {
+      "path": "evaluation-v2/library-after-hours/guidance-only/measurements.json",
+      "source": "artifacts/evaluation-v2/library-after-hours/guidance-only/measurements.json",
+      "bytes": 40384,
+      "sha256": "386fb3be231df6d9d505a14eec9ae7a729ccfa7360dbb7ee864d6ccb493ef189"
+    },
+    {
+      "path": "evaluation-v2/library-after-hours/guidance-only/prompt.txt",
+      "source": "artifacts/evaluation-v2/library-after-hours/guidance-only/prompt.txt",
+      "bytes": 2322,
+      "sha256": "6073248ea33b94a7a458be692191008975ddb5de3ccf5c65409a70ca1675adb0"
+    },
+    {
+      "path": "evaluation-v2/library-after-hours/guidance-only/state.json",
+      "source": "artifacts/evaluation-v2/library-after-hours/guidance-only/state.json",
+      "bytes": 1560,
+      "sha256": "d9654c0e29bba08e538a5855226411dff93a199ab77241a1810eed1fc91e4afe"
+    },
+    {
+      "path": "evaluation-v2/library-after-hours/tools-musical/measurements.json",
+      "source": "artifacts/evaluation-v2/library-after-hours/tools-musical/measurements.json",
+      "bytes": 42082,
+      "sha256": "55ace9ec873ff163a493eb127cca9ebfaa844176be1d0797c41a432b172b0d7f"
+    },
+    {
+      "path": "evaluation-v2/library-after-hours/tools-musical/prompt.txt",
+      "source": "artifacts/evaluation-v2/library-after-hours/tools-musical/prompt.txt",
+      "bytes": 13114,
+      "sha256": "a6e0e624c77348d8dc9a928b8fddbec9b14e6de32a8400a024b1e6c054e6d3ca"
+    },
+    {
+      "path": "evaluation-v2/library-after-hours/tools-musical/state.json",
+      "source": "artifacts/evaluation-v2/library-after-hours/tools-musical/state.json",
+      "bytes": 1559,
+      "sha256": "c859ecfed9936ce113f3fe15c11aaf676c86469eb34207a88db87f068fb7668f"
+    },
+    {
+      "path": "evaluation-v2/library-after-hours/tools-smooth/measurements.json",
+      "source": "artifacts/evaluation-v2/library-after-hours/tools-smooth/measurements.json",
+      "bytes": 42222,
+      "sha256": "d4ecd3b8cfb339acdbfb7ad936189632c75e51c558733784ca0c3dbd775ef7b7"
+    },
+    {
+      "path": "evaluation-v2/library-after-hours/tools-smooth/prompt.txt",
+      "source": "artifacts/evaluation-v2/library-after-hours/tools-smooth/prompt.txt",
+      "bytes": 13144,
+      "sha256": "160d2b34194995b275d06e7918ea91317c78eb42e466f0000763817afb59cd17"
+    },
+    {
+      "path": "evaluation-v2/library-after-hours/tools-smooth/state.json",
+      "source": "artifacts/evaluation-v2/library-after-hours/tools-smooth/state.json",
+      "bytes": 1558,
+      "sha256": "db63d4e1dbe5e1e5f4b2d3cf3d5f9f645b60a3f72891257ac24fa9a44b78600e"
+    },
+    {
+      "path": "evaluation-v2/night-workshop/guidance-only/measurements.json",
+      "source": "artifacts/evaluation-v2/night-workshop/guidance-only/measurements.json",
+      "bytes": 24904,
+      "sha256": "7ca1c2937f05076ffe329d1d045a48a489dc0e501e97c9a741abacaa0eeb67f6"
+    },
+    {
+      "path": "evaluation-v2/night-workshop/guidance-only/prompt.txt",
+      "source": "artifacts/evaluation-v2/night-workshop/guidance-only/prompt.txt",
+      "bytes": 2050,
+      "sha256": "dc0dababaa3bedc4e6544e0af6aaf7c82c25ab036d6cb4cf22568dfa4ebbee0c"
+    },
+    {
+      "path": "evaluation-v2/night-workshop/guidance-only/state.json",
+      "source": "artifacts/evaluation-v2/night-workshop/guidance-only/state.json",
+      "bytes": 1319,
+      "sha256": "b17a5548af3d57503013f34577a1bf31afd7463222c4058192299ee980a7e5f6"
+    },
+    {
+      "path": "evaluation-v2/night-workshop/tools-musical/measurements.json",
+      "source": "artifacts/evaluation-v2/night-workshop/tools-musical/measurements.json",
+      "bytes": 26013,
+      "sha256": "c49f837ce148fc851368530eea63473c070d495455619364a49312723fb9d24d"
+    },
+    {
+      "path": "evaluation-v2/night-workshop/tools-musical/prompt.txt",
+      "source": "artifacts/evaluation-v2/night-workshop/tools-musical/prompt.txt",
+      "bytes": 9230,
+      "sha256": "76bea55a5bd4782f62db0c633f9317cd1a0c0f06ce90b45ce3608f52daf214b5"
+    },
+    {
+      "path": "evaluation-v2/night-workshop/tools-musical/state.json",
+      "source": "artifacts/evaluation-v2/night-workshop/tools-musical/state.json",
+      "bytes": 1318,
+      "sha256": "73b8bfb8175257845da8684452c02a7b03d54ca7da8c68f803861aee0aae5f5f"
+    },
+    {
+      "path": "evaluation-v2/night-workshop/tools-smooth/measurements.json",
+      "source": "artifacts/evaluation-v2/night-workshop/tools-smooth/measurements.json",
+      "bytes": 25554,
+      "sha256": "e3dc670564b6784ba694aacbfe321cff1959ac0cd4ce0f5fd1a6889d65979971"
+    },
+    {
+      "path": "evaluation-v2/night-workshop/tools-smooth/prompt.txt",
+      "source": "artifacts/evaluation-v2/night-workshop/tools-smooth/prompt.txt",
+      "bytes": 11889,
+      "sha256": "cfaf864fcdd92c63e9d757c4baf40cc0e3dbb120b69842d03a1e016af0ea2bf2"
+    },
+    {
+      "path": "evaluation-v2/night-workshop/tools-smooth/state.json",
+      "source": "artifacts/evaluation-v2/night-workshop/tools-smooth/state.json",
+      "bytes": 1319,
+      "sha256": "fcef3b47d25bd27e978ed3ec6785ba7202f19ccb5223d1a93303f2a907c240fd"
+    },
+    {
+      "path": "evaluation-v2/observations.json",
+      "source": "artifacts/evaluation-v2/observations.json",
+      "bytes": 4062,
+      "sha256": "c2852a80594512728823b6c1671a3e41d5256091909ba3227e2c8a815c604eb1"
+    },
+    {
+      "path": "evaluation-v2/river-observatory/guidance-only/measurements.json",
+      "source": "artifacts/evaluation-v2/river-observatory/guidance-only/measurements.json",
+      "bytes": 35219,
+      "sha256": "a3791b6266b8c6ab79b93a7a17a920415fae2296f5b2d02a3e94451ad4563ea4"
+    },
+    {
+      "path": "evaluation-v2/river-observatory/guidance-only/prompt.txt",
+      "source": "artifacts/evaluation-v2/river-observatory/guidance-only/prompt.txt",
+      "bytes": 2275,
+      "sha256": "cae46458c9a2c76e9c47677843f1499ccd3b189e01a95a2765916b90491198f7"
+    },
+    {
+      "path": "evaluation-v2/river-observatory/guidance-only/state.json",
+      "source": "artifacts/evaluation-v2/river-observatory/guidance-only/state.json",
+      "bytes": 1531,
+      "sha256": "eb60f41a35bbad4d71b074748b263a2e679e37b33255415fb308f80706156073"
+    },
+    {
+      "path": "evaluation-v2/river-observatory/tools-musical/measurements.json",
+      "source": "artifacts/evaluation-v2/river-observatory/tools-musical/measurements.json",
+      "bytes": 35898,
+      "sha256": "dc5a18b3b5689df2e2054082a912d90083bce2b04517fafa621b8f4332ee4c95"
+    },
+    {
+      "path": "evaluation-v2/river-observatory/tools-musical/prompt.txt",
+      "source": "artifacts/evaluation-v2/river-observatory/tools-musical/prompt.txt",
+      "bytes": 12928,
+      "sha256": "c78f2b5259c4795748267431a9f2256be250c2b91e1991ba0e246c3e63134d98"
+    },
+    {
+      "path": "evaluation-v2/river-observatory/tools-musical/state.json",
+      "source": "artifacts/evaluation-v2/river-observatory/tools-musical/state.json",
+      "bytes": 1531,
+      "sha256": "550eab9a340489ed8624934ef947106c9d325e5acd132e6cf9d0eff3c2c8d486"
+    },
+    {
+      "path": "evaluation-v2/river-observatory/tools-smooth/measurements.json",
+      "source": "artifacts/evaluation-v2/river-observatory/tools-smooth/measurements.json",
+      "bytes": 36211,
+      "sha256": "aaf6b702d103d442d79981a01437ffa628cd7218de43d09fa3523041befcd4ea"
+    },
+    {
+      "path": "evaluation-v2/river-observatory/tools-smooth/prompt.txt",
+      "source": "artifacts/evaluation-v2/river-observatory/tools-smooth/prompt.txt",
+      "bytes": 12954,
+      "sha256": "c83abc7a262654e201735f03ec30fd0ab2f4d9b5b501e42031805ddb7ba94c11"
+    },
+    {
+      "path": "evaluation-v2/river-observatory/tools-smooth/state.json",
+      "source": "artifacts/evaluation-v2/river-observatory/tools-smooth/state.json",
+      "bytes": 1532,
+      "sha256": "65123e68d981ed7adc0b5f835817a99a943af1ce914afb9213a55a6e01a9d2f5"
+    },
+    {
+      "path": "fieldwork/flows-android/failure.json",
+      "source": "artifacts/fieldwork/flows-android/failure.json",
+      "bytes": 23411,
+      "sha256": "2613305c57f1a40b9063f4ca88d20e2da2b2a4d7a10cccf392a662664f8205b5"
+    },
+    {
+      "path": "fieldwork/flows-android/reading.json",
+      "source": "artifacts/fieldwork/flows-android/reading.json",
+      "bytes": 35891,
+      "sha256": "4975b93a95b25258cfa1b284dafc2e6d3f3752989a02b6cf28d21273e6330b1a"
+    },
+    {
+      "path": "fieldwork/flows-android/reading.png",
+      "source": "artifacts/fieldwork/flows-android/reading.png",
+      "bytes": 301889,
+      "sha256": "1c81f8bf2542d2136397946512be9e4bea3c967267666c8302c15d5772e6f607"
+    },
+    {
+      "path": "fieldwork/flows-android/relaunch.json",
+      "source": "artifacts/fieldwork/flows-android/relaunch.json",
+      "bytes": 30874,
+      "sha256": "3652ce34d73fe124e793a14558102243e7ab38ab44764590d6b58019c4216b58"
+    },
+    {
+      "path": "fieldwork/flows-android/relaunch.png",
+      "source": "artifacts/fieldwork/flows-android/relaunch.png",
+      "bytes": 1433539,
+      "sha256": "acb0ea8403dbfae75f1b72d3c149ea6a8cc28d6425ca47e284adbcd645f94e6f"
+    },
+    {
+      "path": "fieldwork/flows-android/resumed.json",
+      "source": "artifacts/fieldwork/flows-android/resumed.json",
+      "bytes": 35890,
+      "sha256": "e7e5e103869613b23e7a408ffcfc6dd845c8f02d6b8c5edc9b52a244ce3259dc"
+    },
+    {
+      "path": "fieldwork/flows-android/resumed.png",
+      "source": "artifacts/fieldwork/flows-android/resumed.png",
+      "bytes": 301506,
+      "sha256": "5f4079877d629b3b3c6285b57f2361f8b239f0cfc88205aefa6b5bd5ccbc4d10"
+    },
+    {
+      "path": "fieldwork/flows-android/saved.json",
+      "source": "artifacts/fieldwork/flows-android/saved.json",
+      "bytes": 22172,
+      "sha256": "fabdf6869a84f662f50d1bfc7c4469cbb7c8bac6084d09c18346e18fce6239b4"
+    },
+    {
+      "path": "fieldwork/flows-android/saved.png",
+      "source": "artifacts/fieldwork/flows-android/saved.png",
+      "bytes": 524432,
+      "sha256": "46bed3867baa4855fdd3282909e254032a892e6472c5ce3d0ac93f3db50dc221"
+    },
+    {
+      "path": "fieldwork/flows-android/search-empty.json",
+      "source": "artifacts/fieldwork/flows-android/search-empty.json",
+      "bytes": 16813,
+      "sha256": "ba71698b1d4ae2987ed23477f546f14e739cd97acc869d1df4f1b1d2140cc927"
+    },
+    {
+      "path": "fieldwork/flows-android/search-empty.png",
+      "source": "artifacts/fieldwork/flows-android/search-empty.png",
+      "bytes": 179522,
+      "sha256": "99e6df6118af40eda7de84100b546ccbc1ff5733ac3f4d753b2a911861f2ba8b"
+    },
+    {
+      "path": "fieldwork/flows-android/summary.json",
+      "source": "artifacts/fieldwork/flows-android/summary.json",
+      "bytes": 1982,
+      "sha256": "86c4ae3ae0ad62d8dc111494da81b25d21dc72896131eb09960f164747cc724f"
+    },
+    {
+      "path": "fieldwork/proof-native/android-v5/explore.json",
+      "source": "artifacts/fieldwork/proof-native/android-v5/explore.json",
+      "bytes": 34430,
+      "sha256": "491293c18d99ea1527689063c65c3685644d6004278e5a6036eb372450273e98"
+    },
+    {
+      "path": "fieldwork/proof-native/android-v5/explore.png",
+      "source": "artifacts/fieldwork/proof-native/android-v5/explore.png",
+      "bytes": 553022,
+      "sha256": "1af29c6b0092616ace7e2389db65217d25609323c11b8c75db8d9f9f11e6c08a"
+    },
+    {
+      "path": "fieldwork/proof-native/android-v5/journal.json",
+      "source": "artifacts/fieldwork/proof-native/android-v5/journal.json",
+      "bytes": 39076,
+      "sha256": "fd6b9d713eff5fef9e568573c25a907e10e3a0e68adcb65bac4b508274578125"
+    },
+    {
+      "path": "fieldwork/proof-native/android-v5/journal.png",
+      "source": "artifacts/fieldwork/proof-native/android-v5/journal.png",
+      "bytes": 1429251,
+      "sha256": "66849b3445075469fe5d8250b656c03a44a33148e1c58c28484c06c551a276d0"
+    },
+    {
+      "path": "fieldwork/proof-native/android-v5/reader.json",
+      "source": "artifacts/fieldwork/proof-native/android-v5/reader.json",
+      "bytes": 41159,
+      "sha256": "1d214c238a92b986a7c791ddca2f4a39d6e6863636651abcb9a68aa5044334bf"
+    },
+    {
+      "path": "fieldwork/proof-native/android-v5/reader.png",
+      "source": "artifacts/fieldwork/proof-native/android-v5/reader.png",
+      "bytes": 334826,
+      "sha256": "b3acdfa238caeee746214069cb8e73fd23ac624f9fd6fbff7c99ef3f1316b204"
+    },
+    {
+      "path": "fieldwork/proof-native/android-v5/saved.json",
+      "source": "artifacts/fieldwork/proof-native/android-v5/saved.json",
+      "bytes": 28731,
+      "sha256": "e8879e158a662b776ff8c8629afa0503e0891434d25db15921e28283a87e2376"
+    },
+    {
+      "path": "fieldwork/proof-native/android-v5/saved.png",
+      "source": "artifacts/fieldwork/proof-native/android-v5/saved.png",
+      "bytes": 524432,
+      "sha256": "46bed3867baa4855fdd3282909e254032a892e6472c5ce3d0ac93f3db50dc221"
+    },
+    {
+      "path": "fieldwork/proof-native/android-v5/summary.json",
+      "source": "artifacts/fieldwork/proof-native/android-v5/summary.json",
+      "bytes": 10013,
+      "sha256": "264424895f6d121cbab675bfccd31b69dac5430f5f4a78fe4068e7f52d6a0d63"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-accessibility-dark-v2/explore.json",
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/explore.json",
+      "bytes": 41911,
+      "sha256": "6d2bd7a62ada471e682959fd2d4051f3e32ccc07c4529a69492c37c58dec24fa"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-accessibility-dark-v2/explore.png",
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/explore.png",
+      "bytes": 421066,
+      "sha256": "61267365092daee91fbd2f39ee3b0d995fe7bf3c195226b6b58493bd17ec6f6f"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-accessibility-dark-v2/journal.json",
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/journal.json",
+      "bytes": 42527,
+      "sha256": "5d4a933b52d9ea25a209f96f5cc5b305e50242bb0d0413d192e9e8b4ee15199a"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-accessibility-dark-v2/journal.png",
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/journal.png",
+      "bytes": 1588391,
+      "sha256": "e3e307ea33d5875465b06cab870a8020b33d18daf184838cb52df7eb6a41fc02"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-accessibility-dark-v2/reader.json",
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/reader.json",
+      "bytes": 64333,
+      "sha256": "c66cb352737ce1362f038eed03e4c1ebd096334c3825dbd8a9164d3530f16239"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-accessibility-dark-v2/reader.png",
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/reader.png",
+      "bytes": 1900672,
+      "sha256": "e3a74473c40940ff65797ba975947a722dce8f41390c9c8432e73c0e88456d87"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-accessibility-dark-v2/saved.json",
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/saved.json",
+      "bytes": 29750,
+      "sha256": "bfbc22137c40118776dfbb9e3424f47edbb049c82c7dd9b9c33821076589c2b9"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-accessibility-dark-v2/saved.png",
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/saved.png",
+      "bytes": 412618,
+      "sha256": "f8de86b89411d479b4c4dd6059b0fa10d87485d976f4d27b42614aa0d6bcc697"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-accessibility-dark-v2/summary.json",
+      "source": "artifacts/fieldwork/proof-native/ipad-accessibility-dark-v2/summary.json",
+      "bytes": 7764,
+      "sha256": "5a428de259fd8c8bfaeb247f5f75155b865db4debb8c1712eda6e34632dfd33e"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-v3/explore.json",
+      "source": "artifacts/fieldwork/proof-native/ipad-v3/explore.json",
+      "bytes": 47003,
+      "sha256": "ed0df4ba331fac71cb9853e68729ebdb932a304b9da40f9de134e180a3f2aa52"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-v3/explore.png",
+      "source": "artifacts/fieldwork/proof-native/ipad-v3/explore.png",
+      "bytes": 476603,
+      "sha256": "ef8d1e3b7b7d924fb13d6879e0a7edb998d3fdf02c1545834cbd7dcb30f72304"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-v3/journal.json",
+      "source": "artifacts/fieldwork/proof-native/ipad-v3/journal.json",
+      "bytes": 47248,
+      "sha256": "98bb9f344c454dc1b2a2bad6f8c7fe6ca707df4dea9b911f617541f3c8d1c94c"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-v3/journal.png",
+      "source": "artifacts/fieldwork/proof-native/ipad-v3/journal.png",
+      "bytes": 1988019,
+      "sha256": "4478c0832866d0142a284a9c6e4f9205199a634a0cc1c0218d84c2b38b65c94f"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-v3/reader.json",
+      "source": "artifacts/fieldwork/proof-native/ipad-v3/reader.json",
+      "bytes": 46145,
+      "sha256": "fe6a1320edd7042a971a3514879e4b8f9ac857b5f17dd998f3cc96277fe81f2c"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-v3/reader.png",
+      "source": "artifacts/fieldwork/proof-native/ipad-v3/reader.png",
+      "bytes": 1878669,
+      "sha256": "f8b0d0887cf8c6b145a020370dbcb654b6116d020735dc2e8c81606b9ced16bf"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-v3/saved.json",
+      "source": "artifacts/fieldwork/proof-native/ipad-v3/saved.json",
+      "bytes": 31528,
+      "sha256": "531c17c5b3994eefa64eb7adf205509ab9784f9d4d83e1bfad5d1d35936a9ead"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-v3/saved.png",
+      "source": "artifacts/fieldwork/proof-native/ipad-v3/saved.png",
+      "bytes": 320997,
+      "sha256": "497a387660c36c3b841f039dc2257c4f4326c2c7b69a68f967898a5ec6c19c8f"
+    },
+    {
+      "path": "fieldwork/proof-native/ipad-v3/summary.json",
+      "source": "artifacts/fieldwork/proof-native/ipad-v3/summary.json",
+      "bytes": 7781,
+      "sha256": "0b8e17d0128d79f895e97956d2d28289c530a02af9016a4191d75c2b55e0ad13"
+    },
+    {
+      "path": "fieldwork/proof-native/iphone-v3/explore.json",
+      "source": "artifacts/fieldwork/proof-native/iphone-v3/explore.json",
+      "bytes": 46949,
+      "sha256": "d4dd2eafed514fa0a638ee494e1dd3fcd1cabfd7fd689aa826d70f074c8cae82"
+    },
+    {
+      "path": "fieldwork/proof-native/iphone-v3/explore.png",
+      "source": "artifacts/fieldwork/proof-native/iphone-v3/explore.png",
+      "bytes": 747447,
+      "sha256": "8139b12186bf93feb3c81f8f8914485d86d822c12da5976268fd46dde429910b"
+    },
+    {
+      "path": "fieldwork/proof-native/iphone-v3/journal.json",
+      "source": "artifacts/fieldwork/proof-native/iphone-v3/journal.json",
+      "bytes": 44900,
+      "sha256": "09c79673351326eb6c553717151ff73b45fe9b9c8fe5debc1250bd6f63ae6fb9"
+    },
+    {
+      "path": "fieldwork/proof-native/iphone-v3/journal.png",
+      "source": "artifacts/fieldwork/proof-native/iphone-v3/journal.png",
+      "bytes": 1772189,
+      "sha256": "f3fb48237c4b68fec321cbdb265e7a55055f23ca1daeb06dc1213e584f01e10d"
+    },
+    {
+      "path": "fieldwork/proof-native/iphone-v3/reader.json",
+      "source": "artifacts/fieldwork/proof-native/iphone-v3/reader.json",
+      "bytes": 48638,
+      "sha256": "2ed1e7b6c69a54600c44c31d606705bdd74c7c8b13ceaeaafb96091018010d92"
+    },
+    {
+      "path": "fieldwork/proof-native/iphone-v3/reader.png",
+      "source": "artifacts/fieldwork/proof-native/iphone-v3/reader.png",
+      "bytes": 2637774,
+      "sha256": "fa59ebcb36030dd7c9f8786baa7587ce115d711d87cf17106166360be4d23629"
+    },
+    {
+      "path": "fieldwork/proof-native/iphone-v3/saved.json",
+      "source": "artifacts/fieldwork/proof-native/iphone-v3/saved.json",
+      "bytes": 30435,
+      "sha256": "b5e6e9c46fe3afbc3e7da3a6b21f8e325c6447f976cf3cc4cc37068ad033815d"
+    },
+    {
+      "path": "fieldwork/proof-native/iphone-v3/saved.png",
+      "source": "artifacts/fieldwork/proof-native/iphone-v3/saved.png",
+      "bytes": 463773,
+      "sha256": "76da26538284036f165f50247730be05ac674897538e854ceba37fe5d9b552b6"
+    },
+    {
+      "path": "fieldwork/proof-native/iphone-v3/summary.json",
+      "source": "artifacts/fieldwork/proof-native/iphone-v3/summary.json",
+      "bytes": 8041,
+      "sha256": "91e7dee65b5139dcf4595c69bd667c0cefbd6d9f230b2c408c26b7164c41c762"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/cover-1440-1.png",
+      "source": "artifacts/fieldwork/proof-web-v3/cover-1440-1.png",
+      "bytes": 2054552,
+      "sha256": "334a70cf404420e19a4ea47ab41bd2f4608b561d87df8629ae3c05c3b2b31d62"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/cover-1440-2.png",
+      "source": "artifacts/fieldwork/proof-web-v3/cover-1440-2.png",
+      "bytes": 2313446,
+      "sha256": "26f8b854a525d608e55c20ebc77d0efc85bcebce5e0626a9a7bf89ca09f63bc6"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/cover-390-1.png",
+      "source": "artifacts/fieldwork/proof-web-v3/cover-390-1.png",
+      "bytes": 572948,
+      "sha256": "317d3dff29fcfb9763ba0e8930dec89e284a19ad9539faa211859515e1a403cc"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/cover-390-2.png",
+      "source": "artifacts/fieldwork/proof-web-v3/cover-390-2.png",
+      "bytes": 785212,
+      "sha256": "a8818810becc992ca6e274a2cb0ff10ab08c416d4acebaa7ebd771a06153d009"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/cover-834-1.png",
+      "source": "artifacts/fieldwork/proof-web-v3/cover-834-1.png",
+      "bytes": 817717,
+      "sha256": "60c1b3d9521e5c565d66ab49151ca6efb506514d63bd180ae7e34ace1cc410d3"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/cover-834-2.png",
+      "source": "artifacts/fieldwork/proof-web-v3/cover-834-2.png",
+      "bytes": 2172804,
+      "sha256": "ddd1335d33761eae13c5406000a72cee41936a1995489006c167ff9c5a16076c"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/issue-1440-1.png",
+      "source": "artifacts/fieldwork/proof-web-v3/issue-1440-1.png",
+      "bytes": 1434487,
+      "sha256": "39c4bcb83e76ce0004657381832008e48d1c64bed230cad91d24c990317077aa"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/issue-1440-2.png",
+      "source": "artifacts/fieldwork/proof-web-v3/issue-1440-2.png",
+      "bytes": 1633843,
+      "sha256": "a96cc7c2e23baadc72642149052661f8341e373c9d8944ffc4352eb52c6706fa"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/issue-390-1.png",
+      "source": "artifacts/fieldwork/proof-web-v3/issue-390-1.png",
+      "bytes": 454618,
+      "sha256": "bba9a42266b586cb1567a9d5db71172704b95a08a449cc610b03fd0e6c106a1a"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/issue-390-2.png",
+      "source": "artifacts/fieldwork/proof-web-v3/issue-390-2.png",
+      "bytes": 626490,
+      "sha256": "95f5337ade548642afa325aa068da0e8a5abae3f2e9b173f2d79f901f0be29ac"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/issue-834-1.png",
+      "source": "artifacts/fieldwork/proof-web-v3/issue-834-1.png",
+      "bytes": 634078,
+      "sha256": "9633b2ba42ca3ef039686bb9809de3bccf058e51f3df0b575d1e7d0b4d9d4200"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/issue-834-2.png",
+      "source": "artifacts/fieldwork/proof-web-v3/issue-834-2.png",
+      "bytes": 1746112,
+      "sha256": "6060cf46abc341a8d0e78b3055e8a4459466bcd538c144d7271d5399c1f47f7e"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/story-1440-1.png",
+      "source": "artifacts/fieldwork/proof-web-v3/story-1440-1.png",
+      "bytes": 1537032,
+      "sha256": "72e27f261c26393841ed375ca7abb802eda759dd17fc887be6676d90103b2c60"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/story-1440-2.png",
+      "source": "artifacts/fieldwork/proof-web-v3/story-1440-2.png",
+      "bytes": 1894648,
+      "sha256": "662c9c31d81698bedd70e71bdac9ec0f26d89d973f2d696d2a2a2ed144729f7b"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/story-390-1.png",
+      "source": "artifacts/fieldwork/proof-web-v3/story-390-1.png",
+      "bytes": 491597,
+      "sha256": "9ea00d916c20571bd1dbcd3482a86433bf8e7a32cc980c95a7de8f138f3a1e48"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/story-390-2.png",
+      "source": "artifacts/fieldwork/proof-web-v3/story-390-2.png",
+      "bytes": 822217,
+      "sha256": "d30699b9fd7b8f255cd3f96a5ec337deb65643a376638915a27b7dd26568c97c"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/story-834-1.png",
+      "source": "artifacts/fieldwork/proof-web-v3/story-834-1.png",
+      "bytes": 700468,
+      "sha256": "716519e7a34df1216e91ddec52508f23eba59a19d0c4590cfe8b25a8447370b7"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/story-834-2.png",
+      "source": "artifacts/fieldwork/proof-web-v3/story-834-2.png",
+      "bytes": 1054149,
+      "sha256": "943cb533a84147193d46efb509b703acaac1f503b3567fb859430660ea4b812e"
+    },
+    {
+      "path": "fieldwork/proof-web-v3/summary.json",
+      "source": "artifacts/fieldwork/proof-web-v3/summary.json",
+      "bytes": 346880,
+      "sha256": "f2211452a511d5b508554cc3ea33753b8be87d4dd539ddb810771e5328d87411"
+    },
+    {
+      "path": "model-fit/4b-memory.log",
+      "source": "artifacts/model-fit/4b-memory.log",
+      "bytes": 86740,
+      "sha256": "10064c37a1d33a0272fc124eb651245d5aa694d0100e826847b39de31ea8baa1"
+    },
+    {
+      "path": "model-fit/4b-output.jsonl",
+      "source": "artifacts/model-fit/4b-output.jsonl",
+      "bytes": 1373,
+      "sha256": "76b5189aab9c808324e6a9eccd739cbbea28a475bb83dc4643e94dbfa58ff1d1"
+    },
+    {
+      "path": "model-fit/tiny-memory.log",
+      "source": "artifacts/model-fit/tiny-memory.log",
+      "bytes": 69134,
+      "sha256": "83646d72e4fd5470a1ba2a6312949b180ffc313b2ce82b6d140ab6b5fbb7e0c7"
+    },
+    {
+      "path": "model-fit/tiny-output.jsonl",
+      "source": "artifacts/model-fit/tiny-output.jsonl",
+      "bytes": 1378,
+      "sha256": "44265facff25bae03b0eb08c223796c2c7fc7af395b44fd96bcc0594b52f54df"
+    },
+    {
+      "path": "responsive/android-palette-device/editorial.json",
+      "source": "artifacts/responsive/android-palette-device/editorial.json",
+      "bytes": 13211,
+      "sha256": "514e5e39b5b1e52bbdcb5974dec126945b9ee7b21f3b1903f49f36f5b7282504"
+    },
+    {
+      "path": "responsive/android-palette-device/editorial.png",
+      "source": "artifacts/responsive/android-palette-device/editorial.png",
+      "bytes": 362004,
+      "sha256": "4acdefeb7598f7ddff91afecb0bc454cca5f180a98754a30dd26e5e6ce48e7c4"
+    },
+    {
+      "path": "responsive/android-palette-device/hero.json",
+      "source": "artifacts/responsive/android-palette-device/hero.json",
+      "bytes": 8813,
+      "sha256": "ee2fd2566df60f416fc9ce95be3a0c985931d658b0a6beab3f43913f4ae4465b"
+    },
+    {
+      "path": "responsive/android-palette-device/hero.png",
+      "source": "artifacts/responsive/android-palette-device/hero.png",
+      "bytes": 141107,
+      "sha256": "bf070a0a7e36259309c334081be787569cabb9d30b916c60b81026101b090659"
+    },
+    {
+      "path": "responsive/android-palette-device/summary.json",
+      "source": "artifacts/responsive/android-palette-device/summary.json",
+      "bytes": 967,
+      "sha256": "2a8c32a412aac47922820ab68fa4309efae6cf0a20cbf4fccf6ffe64e5970c7d"
+    },
+    {
+      "path": "responsive/android-system-device/editorial.json",
+      "source": "artifacts/responsive/android-system-device/editorial.json",
+      "bytes": 13057,
+      "sha256": "f71022d570c478d276e4e6e68987f1be116153dcf487fdbb98cb0215e975ca1e"
+    },
+    {
+      "path": "responsive/android-system-device/editorial.png",
+      "source": "artifacts/responsive/android-system-device/editorial.png",
+      "bytes": 390228,
+      "sha256": "e313dcd17ab862c2b699fdabd305a2615a06431ce5a710d15d943b820a595203"
+    },
+    {
+      "path": "responsive/android-system-device/hero.json",
+      "source": "artifacts/responsive/android-system-device/hero.json",
+      "bytes": 8144,
+      "sha256": "4455c0336cf472c3ac526608a3bdc80b88ec9f8ee6becc465335bb3bb0ce240c"
+    },
+    {
+      "path": "responsive/android-system-device/hero.png",
+      "source": "artifacts/responsive/android-system-device/hero.png",
+      "bytes": 149755,
+      "sha256": "0aa545879a9f8f15791b21a3701f7e3e18b358d4aa7ce02a8a4d294fe648f711"
+    },
+    {
+      "path": "responsive/android-system-device/summary.json",
+      "source": "artifacts/responsive/android-system-device/summary.json",
+      "bytes": 1001,
+      "sha256": "725a026f7a7b9a9e3684ab8f6d7b008ff178b47052eb2e0405a44cf3a9f1828b"
+    },
+    {
+      "path": "responsive/android-system-scale/summary.json",
+      "source": "artifacts/responsive/android-system-scale/summary.json",
+      "bytes": 603,
+      "sha256": "444a19fd2bbabcb3f5370dc0125708e335fcec17352266f7f03d11aa1477e276"
+    },
+    {
+      "path": "responsive/ipad-device/editorial.json",
+      "source": "artifacts/responsive/ipad-device/editorial.json",
+      "bytes": 9982,
+      "sha256": "f72df3ab2f22bee2379da9cc16fd2af61c4e97966ee9d9e517407f549c7fea97"
+    },
+    {
+      "path": "responsive/ipad-device/editorial.png",
+      "source": "artifacts/responsive/ipad-device/editorial.png",
+      "bytes": 274452,
+      "sha256": "b186eddb44cc4c78ac98fe9346a476a3da88e6d51c88e6d6278a77e5dab0805c"
+    },
+    {
+      "path": "responsive/ipad-device/hero.json",
+      "source": "artifacts/responsive/ipad-device/hero.json",
+      "bytes": 7173,
+      "sha256": "2f02fcdbfb718c246ecb5d5fdac439bbae405377504d0673e8bf5f39d0678d7b"
+    },
+    {
+      "path": "responsive/ipad-device/hero.png",
+      "source": "artifacts/responsive/ipad-device/hero.png",
+      "bytes": 204462,
+      "sha256": "313e43c13841b414a1f48d603cb5155ab96f43040ecb327adfeddb945007f5ae"
+    },
+    {
+      "path": "responsive/ipad-device/summary.json",
+      "source": "artifacts/responsive/ipad-device/summary.json",
+      "bytes": 831,
+      "sha256": "686d692d30c300be30a96086c89fb8e4b03ad20b0ba7bb1420536b34f9149035"
+    },
+    {
+      "path": "responsive/ipad-dynamic-device/editorial.json",
+      "source": "artifacts/responsive/ipad-dynamic-device/editorial.json",
+      "bytes": 14290,
+      "sha256": "04801abcfd583cf20dfe43ba74ab1521cdfea6153f09a7149fbd7bf63549d019"
+    },
+    {
+      "path": "responsive/ipad-dynamic-device/editorial.png",
+      "source": "artifacts/responsive/ipad-dynamic-device/editorial.png",
+      "bytes": 354240,
+      "sha256": "3dec2434396fb24c2aaf11e187d4df564650b3868199457ba8f42cd22b78b398"
+    },
+    {
+      "path": "responsive/ipad-dynamic-device/hero.json",
+      "source": "artifacts/responsive/ipad-dynamic-device/hero.json",
+      "bytes": 8942,
+      "sha256": "6873433a7b9126410a247f6540a00d586998abf20f0d91b1d07399ef36310916"
+    },
+    {
+      "path": "responsive/ipad-dynamic-device/hero.png",
+      "source": "artifacts/responsive/ipad-dynamic-device/hero.png",
+      "bytes": 266375,
+      "sha256": "419fdd79dc31baea3ecdc126a0e5f2b197df2f860c51d656085f5b6db298e9a0"
+    },
+    {
+      "path": "responsive/ipad-dynamic-device/summary.json",
+      "source": "artifacts/responsive/ipad-dynamic-device/summary.json",
+      "bytes": 839,
+      "sha256": "18bab7504b34580620866e96748b4b3357e3b8319fdab3d3661ffa7716f15ed3"
+    },
+    {
+      "path": "responsive/ipad-dynamic-type/summary.json",
+      "source": "artifacts/responsive/ipad-dynamic-type/summary.json",
+      "bytes": 543,
+      "sha256": "8c1218b8ce098e4351c7681a3edf9cdfc98f88d13810b7104fd8767716db459c"
+    },
+    {
+      "path": "responsive/ipad/summary.json",
+      "source": "artifacts/responsive/ipad/summary.json",
+      "bytes": 526,
+      "sha256": "6b3f3a5a324e1bd2435aaaebadcdc7ef7cc0c234cb6cb833ba920584e55e9a08"
+    },
+    {
+      "path": "responsive/iphone-palette-device/editorial.json",
+      "source": "artifacts/responsive/iphone-palette-device/editorial.json",
+      "bytes": 12889,
+      "sha256": "f6dfd6d0d60884d377d74a0d475ec32a8b1c81ba715742c471f86ac5c97167f2"
+    },
+    {
+      "path": "responsive/iphone-palette-device/editorial.png",
+      "source": "artifacts/responsive/iphone-palette-device/editorial.png",
+      "bytes": 413513,
+      "sha256": "754549e42be2f2609a52acb3322e42463fbb0f5456d70b0fd2574caba44900c1"
+    },
+    {
+      "path": "responsive/iphone-palette-device/hero.json",
+      "source": "artifacts/responsive/iphone-palette-device/hero.json",
+      "bytes": 8666,
+      "sha256": "f718cdf923df81d3b4fd5b0495a7eddb9a084cdcd1d396d3dc05b3cc904d9c14"
+    },
+    {
+      "path": "responsive/iphone-palette-device/hero.png",
+      "source": "artifacts/responsive/iphone-palette-device/hero.png",
+      "bytes": 247470,
+      "sha256": "4c693200a38cf506df81d55ecd03faf1595ddbe4849599925efa8435f620dc56"
+    },
+    {
+      "path": "responsive/iphone-palette-device/summary.json",
+      "source": "artifacts/responsive/iphone-palette-device/summary.json",
+      "bytes": 825,
+      "sha256": "7f597cddbec0fa6e9d30d918dd02be06ca943357f6e1dd56cd99861807d60d82"
+    },
+    {
+      "path": "responsive/web/summary.json",
+      "source": "artifacts/responsive/web/summary.json",
+      "bytes": 402,
+      "sha256": "23f3daeb496afab02ee09e1f236c4c1b0e1d5d9cf2ebe9bc4147937e48b555a5"
+    },
+    {
+      "path": "review/astra-after/manifest.json",
+      "source": "artifacts/review/astra-after/manifest.json",
+      "bytes": 52639,
+      "sha256": "686360a67023159bdad34623c8cc033237d376c2071bec0cb6ccd73256a3e9c3"
+    },
+    {
+      "path": "review/astra-input/manifest.json",
+      "source": "artifacts/review/astra-input/manifest.json",
+      "bytes": 72156,
+      "sha256": "cb3569e6ecdb1998e64111d4dd7d09f383a3f6e9e40ad19408101232a70758f5"
+    },
+    {
+      "path": "review/astra/after-browser-measurements.json",
+      "source": "artifacts/review/astra/after-browser-measurements.json",
+      "bytes": 23074,
+      "sha256": "787e4cd5dd1680c9a01d5439f3a53c9867157e4605f7c95614676e4825dc66d8"
+    },
+    {
+      "path": "review/astra/after-detector.json",
+      "source": "artifacts/review/astra/after-detector.json",
+      "bytes": 10671,
+      "sha256": "d207875822390826d4879842da1e7fe289fd28d818f67833afc8a143c97a736b"
+    },
+    {
+      "path": "review/astra/after-frozen-hashes.json",
+      "source": "artifacts/review/astra/after-frozen-hashes.json",
+      "bytes": 2142,
+      "sha256": "3a5caf03ca150fb46b7429b458785a1ad502f69d679bc0f4a38c3f060f4f560e"
+    },
+    {
+      "path": "review/astra/artifact-regeneration-note.md",
+      "source": "artifacts/review/astra/artifact-regeneration-note.md",
+      "bytes": 675,
+      "sha256": "246bddf7484eb71143afde14c7645c39ae15a313b2ef372d15b1e1119127de2f"
+    },
+    {
+      "path": "review/astra/assessment-a-followup.md",
+      "source": "artifacts/review/astra/assessment-a-followup.md",
+      "bytes": 6510,
+      "sha256": "fa45d9060a87d230766dec7d2a678d1ce510d698ff936259edf73992541c8ee0"
+    },
+    {
+      "path": "review/astra/assessment-a.md",
+      "source": "artifacts/review/astra/assessment-a.md",
+      "bytes": 20289,
+      "sha256": "28fc2fd45a6120b8cf25cab104c9fc76fef8027c0fc74d67e7b5e8cff47f6373"
+    },
+    {
+      "path": "review/astra/assessment-b-followup.md",
+      "source": "artifacts/review/astra/assessment-b-followup.md",
+      "bytes": 8230,
+      "sha256": "0d056f28cf58a968e4dc233245903c0fd5df4b0114559129cf6bc3fc0dd07ef2"
+    },
+    {
+      "path": "review/astra/assessment-b.md",
+      "source": "artifacts/review/astra/assessment-b.md",
+      "bytes": 10784,
+      "sha256": "122ca315ff9560ebc63f84c2fa77fb12a2dd06b5989dd35b0792c6cc0375a62a"
+    },
+    {
+      "path": "review/astra/browser-measurements.json",
+      "source": "artifacts/review/astra/browser-measurements.json",
+      "bytes": 3452,
+      "sha256": "832462c88d6de863ef4433d662bd1e35b8fe1df8b3ebac0ce771ad634e8e601e"
+    },
+    {
+      "path": "review/astra/frozen-hashes.json",
+      "source": "artifacts/review/astra/frozen-hashes.json",
+      "bytes": 2055,
+      "sha256": "2a182ad238fba25ddd119b8085e98cc7c99e078c8ab86b373669f8f282165b1a"
+    },
+    {
+      "path": "review/astra/measure-after.mjs",
+      "source": "artifacts/review/astra/measure-after.mjs",
+      "bytes": 3022,
+      "sha256": "bdaa07957dfa98dde125c1426cc60f9d7232bb2768a13fc8bbd9c5ca03fda454"
+    },
+    {
+      "path": "review/astra/responsive-research.md",
+      "source": "artifacts/review/astra/responsive-research.md",
+      "bytes": 4894,
+      "sha256": "e8b1980d3e44d5d3c12a04940ba72fb5ba436be760836fb2fd8fa7edd73974e2"
+    },
+    {
+      "path": "review/color-equations/color-observations-initial.json",
+      "source": "artifacts/review/color-equations/color-observations-initial.json",
+      "bytes": 12348,
+      "sha256": "cc2e0d9c841c0717bf81e127a4eea3eb2a8c0d3efddaa9fd028ec11cf7a8430b"
+    },
+    {
+      "path": "review/color-equations/color-observations.json",
+      "source": "artifacts/review/color-equations/color-observations.json",
+      "bytes": 12348,
+      "sha256": "cc2e0d9c841c0717bf81e127a4eea3eb2a8c0d3efddaa9fd028ec11cf7a8430b"
+    },
+    {
+      "path": "review/color-equations/composition-observations-initial.json",
+      "source": "artifacts/review/color-equations/composition-observations-initial.json",
+      "bytes": 22750,
+      "sha256": "8175eb778ec578ca8c1a835ca5c2741ba22cbdce87f418d148443a1ede793c51"
+    },
+    {
+      "path": "review/color-equations/composition-observations.json",
+      "source": "artifacts/review/color-equations/composition-observations.json",
+      "bytes": 22750,
+      "sha256": "8175eb778ec578ca8c1a835ca5c2741ba22cbdce87f418d148443a1ede793c51"
+    },
+    {
+      "path": "review/color-equations/fix-verification.json",
+      "source": "artifacts/review/color-equations/fix-verification.json",
+      "bytes": 1404,
+      "sha256": "419c74354e154a964f27ae5482f9e4d05552f37d1f5d667d731ead2ecb31dc4d"
+    },
+    {
+      "path": "review/color-equations/probe-color.ts",
+      "source": "artifacts/review/color-equations/probe-color.ts",
+      "bytes": 5482,
+      "sha256": "e288d3fb9929ed71c3705b8f0a5a41414061fdf33175a055dd79a1b2c59c13dc"
+    },
+    {
+      "path": "review/color-equations/probe-composition.ts",
+      "source": "artifacts/review/color-equations/probe-composition.ts",
+      "bytes": 5089,
+      "sha256": "b13dec28962bd0434193be914e2cf9a740200f529ab998e4388b3a7db053e8e6"
+    },
+    {
+      "path": "review/color-equations/reference-oracle.json",
+      "source": "artifacts/review/color-equations/reference-oracle.json",
+      "bytes": 1383,
+      "sha256": "29c1bdd5df102cb21722bfb220847d7d401a8e8524866c40c40a967d9792439d"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/apple-layout.md",
+      "source": "artifacts/review/fieldwork-astra-v1/apple-layout.md",
+      "bytes": 27426,
+      "sha256": "92406570a1137346a45d9fa11bd277095661231d5041f7e1b143c18c81340b70"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/apple-navigation-and-search.md",
+      "source": "artifacts/review/fieldwork-astra-v1/apple-navigation-and-search.md",
+      "bytes": 2176,
+      "sha256": "597bb2519c478a7734eb4405c355e728e90580f0d415a65eaaa5706ff48bc2c6"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/apple-sidebars.md",
+      "source": "artifacts/review/fieldwork-astra-v1/apple-sidebars.md",
+      "bytes": 9958,
+      "sha256": "8d47049ecdda956911f39287ba73ca0bfa2334b04f34f5f7d3a91ea0c97a6b08"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/apple-typography.md",
+      "source": "artifacts/review/fieldwork-astra-v1/apple-typography.md",
+      "bytes": 75396,
+      "sha256": "f3131c3bf075cca8b7c010051ac36784f91c4770f7efc7f0d5863fb7ad1dd043"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/assessment-a.md",
+      "source": "artifacts/review/fieldwork-astra-v1/assessment-a.md",
+      "bytes": 1711,
+      "sha256": "fc1b852b578bcd5b30472401a19a331fbe440c371d007b92082e3f5d8f6dcc0e"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/detector.json",
+      "source": "artifacts/review/fieldwork-astra-v1/detector.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/inputs.json",
+      "source": "artifacts/review/fieldwork-astra-v1/inputs.json",
+      "bytes": 4541,
+      "sha256": "1addfd56c81e29876a6a33a277c530763f20f23a4283ef0b7c2e65b4ac1f79f1"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/ipad-explore.json",
+      "source": "artifacts/review/fieldwork-astra-v1/ipad-explore.json",
+      "bytes": 33035,
+      "sha256": "c865e45c61996fbd270311b6392f9ab3f74e19db473bc1399cad7b0eb12bda0f"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/ipad-explore.png",
+      "source": "artifacts/review/fieldwork-astra-v1/ipad-explore.png",
+      "bytes": 562200,
+      "sha256": "bca47bd524a374f4dfd69d553c76da81ccef3293a97dc173fcf9678a586033b9"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/ipad-journal.json",
+      "source": "artifacts/review/fieldwork-astra-v1/ipad-journal.json",
+      "bytes": 34711,
+      "sha256": "4b7fac08fb003c5146d6ec422c1ced9deb03e6dfd84ed3a2078816d00a70120c"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/ipad-journal.png",
+      "source": "artifacts/review/fieldwork-astra-v1/ipad-journal.png",
+      "bytes": 2080634,
+      "sha256": "0286aa465bc6c959daf170e823aed67f8fe2eee4325ea326584393a5672897ea"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/ipad-reader.json",
+      "source": "artifacts/review/fieldwork-astra-v1/ipad-reader.json",
+      "bytes": 37917,
+      "sha256": "8ddde4df35f6633cd7ca0ae92917038b3f1c2851a3ed4a24a1ea42608fd6d246"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/ipad-reader.png",
+      "source": "artifacts/review/fieldwork-astra-v1/ipad-reader.png",
+      "bytes": 1879403,
+      "sha256": "248f70fa28318e54e41fe6aa339f41ad6d2347326c1ca2de564d4ac4a2a2147f"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/ipad-saved.json",
+      "source": "artifacts/review/fieldwork-astra-v1/ipad-saved.json",
+      "bytes": 23861,
+      "sha256": "ec593b2b563cb132c2b061a02fa4473407072601c7c93f699714b6a714f3b29e"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/ipad-saved.png",
+      "source": "artifacts/review/fieldwork-astra-v1/ipad-saved.png",
+      "bytes": 323310,
+      "sha256": "2b90e98966ac70cb574e513ebc57970086e3aa8a8c71041a88548c8efa10ca8d"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/source-FieldworkApp.tsx",
+      "source": "artifacts/review/fieldwork-astra-v1/source-FieldworkApp.tsx",
+      "bytes": 21582,
+      "sha256": "65125ec1eb93d8d1b80e815fedf8c2738a39b2da019ebe5025f75e78a35ebf6c"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/source-inputs.json",
+      "source": "artifacts/review/fieldwork-astra-v1/source-inputs.json",
+      "bytes": 644,
+      "sha256": "de8e851b5a69e9ee0a19fee9720706276412329b2094939cb4956b008a8a7829"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/source-site.jsx",
+      "source": "artifacts/review/fieldwork-astra-v1/source-site.jsx",
+      "bytes": 15760,
+      "sha256": "1ab2d53990b871bbaf13bca99f57afdf0f5ad511c5a74691e7f314e29a7a5990"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/source-summary.json",
+      "source": "artifacts/review/fieldwork-astra-v1/source-summary.json",
+      "bytes": 242969,
+      "sha256": "c81b42844a683c70e5be0b50c0e9975af3177cd40384989edc3869e485d3157a"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/web-cover-1440-1.png",
+      "source": "artifacts/review/fieldwork-astra-v1/web-cover-1440-1.png",
+      "bytes": 2489968,
+      "sha256": "b8c546a2d9f679aef7ea6873253acaf3065ab1d76d2da9948891c4741175e78e"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/web-cover-390-1.png",
+      "source": "artifacts/review/fieldwork-astra-v1/web-cover-390-1.png",
+      "bytes": 708975,
+      "sha256": "77f4a7e52d6be18be258cd3c55413039a1e992731f99415b700a0c9abee20f85"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/web-cover-834-1.png",
+      "source": "artifacts/review/fieldwork-astra-v1/web-cover-834-1.png",
+      "bytes": 956294,
+      "sha256": "7048a594ec5277129037c4da325303554b85d703d147f4c23619d51736550499"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/web-issue-1440-1.png",
+      "source": "artifacts/review/fieldwork-astra-v1/web-issue-1440-1.png",
+      "bytes": 1683082,
+      "sha256": "4d1c2d5396225ef826e2208d9c71a48998b40c260bc8f01a99b4447dbea95ba7"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/web-issue-390-1.png",
+      "source": "artifacts/review/fieldwork-astra-v1/web-issue-390-1.png",
+      "bytes": 586690,
+      "sha256": "198479275e1ebb001aeb3fa5c4b777cec32da956deba520103766360ba3409e7"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/web-issue-834-1.png",
+      "source": "artifacts/review/fieldwork-astra-v1/web-issue-834-1.png",
+      "bytes": 663120,
+      "sha256": "174f75977747626b8f2bcce232b74ae9e4f07a8ae496ed8cc36dd596eefcaaaf"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/web-story-1440-1.png",
+      "source": "artifacts/review/fieldwork-astra-v1/web-story-1440-1.png",
+      "bytes": 1537063,
+      "sha256": "29b262fbbae7d9cbff41d80506a71fbbf2e0fc9876e05e693131fbc75bb3cd1f"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/web-story-390-1.png",
+      "source": "artifacts/review/fieldwork-astra-v1/web-story-390-1.png",
+      "bytes": 495595,
+      "sha256": "b8f6b52f9a150fdab77aefc6ed486c117841a8a3474aebb9a6098cb7d877b1de"
+    },
+    {
+      "path": "review/fieldwork-astra-v1/web-story-834-1.png",
+      "source": "artifacts/review/fieldwork-astra-v1/web-story-834-1.png",
+      "bytes": 700517,
+      "sha256": "444e8020f2247d105fc53ffa2777f580ee2e7a669f4ff67a6635aafb2c602c0a"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/android-v5/explore.json",
+      "source": "artifacts/review/fieldwork-astra-v2/android-v5/explore.json",
+      "bytes": 34430,
+      "sha256": "491293c18d99ea1527689063c65c3685644d6004278e5a6036eb372450273e98"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/android-v5/explore.png",
+      "source": "artifacts/review/fieldwork-astra-v2/android-v5/explore.png",
+      "bytes": 553022,
+      "sha256": "1af29c6b0092616ace7e2389db65217d25609323c11b8c75db8d9f9f11e6c08a"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/android-v5/journal.json",
+      "source": "artifacts/review/fieldwork-astra-v2/android-v5/journal.json",
+      "bytes": 39076,
+      "sha256": "fd6b9d713eff5fef9e568573c25a907e10e3a0e68adcb65bac4b508274578125"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/android-v5/journal.png",
+      "source": "artifacts/review/fieldwork-astra-v2/android-v5/journal.png",
+      "bytes": 1429251,
+      "sha256": "66849b3445075469fe5d8250b656c03a44a33148e1c58c28484c06c551a276d0"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/android-v5/reader.json",
+      "source": "artifacts/review/fieldwork-astra-v2/android-v5/reader.json",
+      "bytes": 41159,
+      "sha256": "1d214c238a92b986a7c791ddca2f4a39d6e6863636651abcb9a68aa5044334bf"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/android-v5/reader.png",
+      "source": "artifacts/review/fieldwork-astra-v2/android-v5/reader.png",
+      "bytes": 334826,
+      "sha256": "b3acdfa238caeee746214069cb8e73fd23ac624f9fd6fbff7c99ef3f1316b204"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/android-v5/saved.json",
+      "source": "artifacts/review/fieldwork-astra-v2/android-v5/saved.json",
+      "bytes": 28731,
+      "sha256": "e8879e158a662b776ff8c8629afa0503e0891434d25db15921e28283a87e2376"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/android-v5/saved.png",
+      "source": "artifacts/review/fieldwork-astra-v2/android-v5/saved.png",
+      "bytes": 524432,
+      "sha256": "46bed3867baa4855fdd3282909e254032a892e6472c5ce3d0ac93f3db50dc221"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/android-v5/summary.json",
+      "source": "artifacts/review/fieldwork-astra-v2/android-v5/summary.json",
+      "bytes": 10013,
+      "sha256": "264424895f6d121cbab675bfccd31b69dac5430f5f4a78fe4068e7f52d6a0d63"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/assessment-a.md",
+      "source": "artifacts/review/fieldwork-astra-v2/assessment-a.md",
+      "bytes": 1732,
+      "sha256": "f722ab8491c3b7541150586bea6ee2aae28c2914bbba1a46c236d9453c6152a4"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/detector.json",
+      "source": "artifacts/review/fieldwork-astra-v2/detector.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/failure.json",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/failure.json",
+      "bytes": 23411,
+      "sha256": "2613305c57f1a40b9063f4ca88d20e2da2b2a4d7a10cccf392a662664f8205b5"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/reading.json",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/reading.json",
+      "bytes": 35891,
+      "sha256": "4975b93a95b25258cfa1b284dafc2e6d3f3752989a02b6cf28d21273e6330b1a"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/reading.png",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/reading.png",
+      "bytes": 301889,
+      "sha256": "1c81f8bf2542d2136397946512be9e4bea3c967267666c8302c15d5772e6f607"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/relaunch.json",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/relaunch.json",
+      "bytes": 30874,
+      "sha256": "3652ce34d73fe124e793a14558102243e7ab38ab44764590d6b58019c4216b58"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/relaunch.png",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/relaunch.png",
+      "bytes": 1433539,
+      "sha256": "acb0ea8403dbfae75f1b72d3c149ea6a8cc28d6425ca47e284adbcd645f94e6f"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/resumed.json",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/resumed.json",
+      "bytes": 35890,
+      "sha256": "e7e5e103869613b23e7a408ffcfc6dd845c8f02d6b8c5edc9b52a244ce3259dc"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/resumed.png",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/resumed.png",
+      "bytes": 301506,
+      "sha256": "5f4079877d629b3b3c6285b57f2361f8b239f0cfc88205aefa6b5bd5ccbc4d10"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/saved.json",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/saved.json",
+      "bytes": 22172,
+      "sha256": "fabdf6869a84f662f50d1bfc7c4469cbb7c8bac6084d09c18346e18fce6239b4"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/saved.png",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/saved.png",
+      "bytes": 524432,
+      "sha256": "46bed3867baa4855fdd3282909e254032a892e6472c5ce3d0ac93f3db50dc221"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/search-empty.json",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/search-empty.json",
+      "bytes": 16813,
+      "sha256": "ba71698b1d4ae2987ed23477f546f14e739cd97acc869d1df4f1b1d2140cc927"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/search-empty.png",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/search-empty.png",
+      "bytes": 179522,
+      "sha256": "99e6df6118af40eda7de84100b546ccbc1ff5733ac3f4d753b2a911861f2ba8b"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/flows-android/summary.json",
+      "source": "artifacts/review/fieldwork-astra-v2/flows-android/summary.json",
+      "bytes": 1982,
+      "sha256": "86c4ae3ae0ad62d8dc111494da81b25d21dc72896131eb09960f164747cc724f"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/inputs.json",
+      "source": "artifacts/review/fieldwork-astra-v2/inputs.json",
+      "bytes": 19039,
+      "sha256": "adbd3b4e91bb6ee6504e50de8e2d42d2650659789ebca3b041b4b423dd850458"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-accessibility-dark/explore.json",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-accessibility-dark/explore.json",
+      "bytes": 41813,
+      "sha256": "12e5babde984618d844d4d46ca436962770d0d39f0389cede2b53ba52cc28488"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-accessibility-dark/explore.png",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-accessibility-dark/explore.png",
+      "bytes": 421141,
+      "sha256": "375c703d62d1395333c26f32ee4285c00a9cef8a59e958836e2284e6f6cfbf56"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-accessibility-dark/journal.json",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-accessibility-dark/journal.json",
+      "bytes": 42429,
+      "sha256": "6c07941c12968c496fe53cdfd6383a03482743be5e884f6817487dc0c10c6248"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-accessibility-dark/journal.png",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-accessibility-dark/journal.png",
+      "bytes": 1588530,
+      "sha256": "f56409231c7ebce875b737251966064fe8c98a9c5d809f244fca9c714afef17f"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-accessibility-dark/reader.json",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-accessibility-dark/reader.json",
+      "bytes": 64245,
+      "sha256": "4f3733e8fc463d8765bfbcf192bfa0bdff0b31f9745be43e02f9d916b564992f"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-accessibility-dark/reader.png",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-accessibility-dark/reader.png",
+      "bytes": 4452438,
+      "sha256": "d1a1e702c61a345b75d78a6be51b0179ad8f6816780732693f80835459b258b3"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-accessibility-dark/saved.json",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-accessibility-dark/saved.json",
+      "bytes": 29659,
+      "sha256": "257153b22c3f318a19ed92c845f7a57ef5904e399364b445eabe52285b9e6c94"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-accessibility-dark/saved.png",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-accessibility-dark/saved.png",
+      "bytes": 416129,
+      "sha256": "ce4aa576217f56d2e4985e7292305cb759aeef4195374b76e6f415c5f37664c9"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-accessibility-dark/summary.json",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-accessibility-dark/summary.json",
+      "bytes": 7764,
+      "sha256": "70162ded73c39a788864ec38b41909571f21ac80bab0219fe057dda1e6258c99"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-v3/explore.json",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-v3/explore.json",
+      "bytes": 47003,
+      "sha256": "ed0df4ba331fac71cb9853e68729ebdb932a304b9da40f9de134e180a3f2aa52"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-v3/explore.png",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-v3/explore.png",
+      "bytes": 476603,
+      "sha256": "ef8d1e3b7b7d924fb13d6879e0a7edb998d3fdf02c1545834cbd7dcb30f72304"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-v3/journal.json",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-v3/journal.json",
+      "bytes": 47248,
+      "sha256": "98bb9f344c454dc1b2a2bad6f8c7fe6ca707df4dea9b911f617541f3c8d1c94c"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-v3/journal.png",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-v3/journal.png",
+      "bytes": 1988019,
+      "sha256": "4478c0832866d0142a284a9c6e4f9205199a634a0cc1c0218d84c2b38b65c94f"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-v3/reader.json",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-v3/reader.json",
+      "bytes": 46145,
+      "sha256": "fe6a1320edd7042a971a3514879e4b8f9ac857b5f17dd998f3cc96277fe81f2c"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-v3/reader.png",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-v3/reader.png",
+      "bytes": 1878669,
+      "sha256": "f8b0d0887cf8c6b145a020370dbcb654b6116d020735dc2e8c81606b9ced16bf"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-v3/saved.json",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-v3/saved.json",
+      "bytes": 31528,
+      "sha256": "531c17c5b3994eefa64eb7adf205509ab9784f9d4d83e1bfad5d1d35936a9ead"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-v3/saved.png",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-v3/saved.png",
+      "bytes": 320997,
+      "sha256": "497a387660c36c3b841f039dc2257c4f4326c2c7b69a68f967898a5ec6c19c8f"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/ipad-v3/summary.json",
+      "source": "artifacts/review/fieldwork-astra-v2/ipad-v3/summary.json",
+      "bytes": 7781,
+      "sha256": "0b8e17d0128d79f895e97956d2d28289c530a02af9016a4191d75c2b55e0ad13"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/iphone-v3/explore.json",
+      "source": "artifacts/review/fieldwork-astra-v2/iphone-v3/explore.json",
+      "bytes": 46949,
+      "sha256": "d4dd2eafed514fa0a638ee494e1dd3fcd1cabfd7fd689aa826d70f074c8cae82"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/iphone-v3/explore.png",
+      "source": "artifacts/review/fieldwork-astra-v2/iphone-v3/explore.png",
+      "bytes": 747447,
+      "sha256": "8139b12186bf93feb3c81f8f8914485d86d822c12da5976268fd46dde429910b"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/iphone-v3/journal.json",
+      "source": "artifacts/review/fieldwork-astra-v2/iphone-v3/journal.json",
+      "bytes": 44900,
+      "sha256": "09c79673351326eb6c553717151ff73b45fe9b9c8fe5debc1250bd6f63ae6fb9"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/iphone-v3/journal.png",
+      "source": "artifacts/review/fieldwork-astra-v2/iphone-v3/journal.png",
+      "bytes": 1772189,
+      "sha256": "f3fb48237c4b68fec321cbdb265e7a55055f23ca1daeb06dc1213e584f01e10d"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/iphone-v3/reader.json",
+      "source": "artifacts/review/fieldwork-astra-v2/iphone-v3/reader.json",
+      "bytes": 48638,
+      "sha256": "2ed1e7b6c69a54600c44c31d606705bdd74c7c8b13ceaeaafb96091018010d92"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/iphone-v3/reader.png",
+      "source": "artifacts/review/fieldwork-astra-v2/iphone-v3/reader.png",
+      "bytes": 2637774,
+      "sha256": "fa59ebcb36030dd7c9f8786baa7587ce115d711d87cf17106166360be4d23629"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/iphone-v3/saved.json",
+      "source": "artifacts/review/fieldwork-astra-v2/iphone-v3/saved.json",
+      "bytes": 30435,
+      "sha256": "b5e6e9c46fe3afbc3e7da3a6b21f8e325c6447f976cf3cc4cc37068ad033815d"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/iphone-v3/saved.png",
+      "source": "artifacts/review/fieldwork-astra-v2/iphone-v3/saved.png",
+      "bytes": 463773,
+      "sha256": "76da26538284036f165f50247730be05ac674897538e854ceba37fe5d9b552b6"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/iphone-v3/summary.json",
+      "source": "artifacts/review/fieldwork-astra-v2/iphone-v3/summary.json",
+      "bytes": 8041,
+      "sha256": "91e7dee65b5139dcf4595c69bd667c0cefbd6d9f230b2c408c26b7164c41c762"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/cover-1440-1.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/cover-1440-1.png",
+      "bytes": 2054552,
+      "sha256": "334a70cf404420e19a4ea47ab41bd2f4608b561d87df8629ae3c05c3b2b31d62"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/cover-1440-2.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/cover-1440-2.png",
+      "bytes": 2313017,
+      "sha256": "6f08f6a2000a751fb25b08cd8c46e241d786a28f2a38432147e110ff984d1ee4"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/cover-390-1.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/cover-390-1.png",
+      "bytes": 572948,
+      "sha256": "317d3dff29fcfb9763ba0e8930dec89e284a19ad9539faa211859515e1a403cc"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/cover-390-2.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/cover-390-2.png",
+      "bytes": 784817,
+      "sha256": "38eb643cf1d10bf681135923a3cfea9125aa9ad1fae5dd2dce520a93f046e039"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/cover-834-1.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/cover-834-1.png",
+      "bytes": 817717,
+      "sha256": "60c1b3d9521e5c565d66ab49151ca6efb506514d63bd180ae7e34ace1cc410d3"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/cover-834-2.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/cover-834-2.png",
+      "bytes": 2172833,
+      "sha256": "43ece3d83d9c9f04251aacb721be3b7b750b224688add018ae25c6ce7252f0c1"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/issue-1440-1.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/issue-1440-1.png",
+      "bytes": 1434487,
+      "sha256": "39c4bcb83e76ce0004657381832008e48d1c64bed230cad91d24c990317077aa"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/issue-1440-2.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/issue-1440-2.png",
+      "bytes": 1633843,
+      "sha256": "a96cc7c2e23baadc72642149052661f8341e373c9d8944ffc4352eb52c6706fa"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/issue-390-1.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/issue-390-1.png",
+      "bytes": 454618,
+      "sha256": "bba9a42266b586cb1567a9d5db71172704b95a08a449cc610b03fd0e6c106a1a"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/issue-390-2.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/issue-390-2.png",
+      "bytes": 626490,
+      "sha256": "95f5337ade548642afa325aa068da0e8a5abae3f2e9b173f2d79f901f0be29ac"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/issue-834-1.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/issue-834-1.png",
+      "bytes": 634078,
+      "sha256": "9633b2ba42ca3ef039686bb9809de3bccf058e51f3df0b575d1e7d0b4d9d4200"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/issue-834-2.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/issue-834-2.png",
+      "bytes": 1746112,
+      "sha256": "6060cf46abc341a8d0e78b3055e8a4459466bcd538c144d7271d5399c1f47f7e"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/story-1440-1.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/story-1440-1.png",
+      "bytes": 1537032,
+      "sha256": "72e27f261c26393841ed375ca7abb802eda759dd17fc887be6676d90103b2c60"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/story-1440-2.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/story-1440-2.png",
+      "bytes": 1894648,
+      "sha256": "662c9c31d81698bedd70e71bdac9ec0f26d89d973f2d696d2a2a2ed144729f7b"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/story-390-1.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/story-390-1.png",
+      "bytes": 491597,
+      "sha256": "9ea00d916c20571bd1dbcd3482a86433bf8e7a32cc980c95a7de8f138f3a1e48"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/story-390-2.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/story-390-2.png",
+      "bytes": 822190,
+      "sha256": "f7748db8a2cd8dcc9fee0ea67645423e01127bcb15001f62839ef877cfa7486b"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/story-834-1.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/story-834-1.png",
+      "bytes": 700468,
+      "sha256": "716519e7a34df1216e91ddec52508f23eba59a19d0c4590cfe8b25a8447370b7"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/story-834-2.png",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/story-834-2.png",
+      "bytes": 1054149,
+      "sha256": "943cb533a84147193d46efb509b703acaac1f503b3567fb859430660ea4b812e"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/proof-web-v2/summary.json",
+      "source": "artifacts/review/fieldwork-astra-v2/proof-web-v2/summary.json",
+      "bytes": 345461,
+      "sha256": "82efbc6f3943f3f3a3706780c850a353a889cddf189b8bc51df4656950e99c8c"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/receipt-review.json",
+      "source": "artifacts/review/fieldwork-astra-v2/receipt-review.json",
+      "bytes": 30792,
+      "sha256": "d19fc2eece4753de07dc0fb49c8deb0faa0723767b3eb5020b33fa258a5f8a18"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/source-FieldworkApp.tsx",
+      "source": "artifacts/review/fieldwork-astra-v2/source-FieldworkApp.tsx",
+      "bytes": 40645,
+      "sha256": "9580cd42090fc01c041334ddd3ad9f5c3e98e63686c25fa8e4926b18990f12ff"
+    },
+    {
+      "path": "review/fieldwork-astra-v2/source-site.jsx",
+      "source": "artifacts/review/fieldwork-astra-v2/source-site.jsx",
+      "bytes": 30639,
+      "sha256": "c409e1de94cf264194c0729aa0eb2cfbdcf326426cfb9fcbf80ceabd6043c923"
+    },
+    {
+      "path": "review/inspiration/apple-visual-inspection.md",
+      "source": "artifacts/review/inspiration/apple-visual-inspection.md",
+      "bytes": 7335,
+      "sha256": "f92031395ece04f4c20a9b9efaab9ec8fbc05dce8d95cb4a2f16433265ce6cc4"
+    },
+    {
+      "path": "review/inspiration/web-visual-inspection.md",
+      "source": "artifacts/review/inspiration/web-visual-inspection.md",
+      "bytes": 7406,
+      "sha256": "85f1e745e12a206ddbbf124ca98d8b1652dea639626a807204b311305ffca826"
+    },
+    {
+      "path": "review/native-audit.json",
+      "source": "artifacts/review/native-audit.json",
+      "bytes": 3663,
+      "sha256": "85d93b90656b80ee599e725ab589e888e1cdfa9c90934f8c85a8f89dde30417c"
+    },
+    {
+      "path": "review/root-audit.json",
+      "source": "artifacts/review/root-audit.json",
+      "bytes": 364,
+      "sha256": "3dab187d5787f90b12e94fd3c693eddc70d9b32c37a3cd204a7cd284eea6d963"
+    },
+    {
+      "path": "review/selector-review-regressions.log",
+      "source": "artifacts/review/selector-review-regressions.log",
+      "bytes": 1572,
+      "sha256": "c0b51e3e749e89fda7a5ee1e30d413c5a18ca5b82d478708efc220a737c10961"
+    },
+    {
+      "path": "selector/editorial.json",
+      "source": "artifacts/selector/editorial.json",
+      "bytes": 212987,
+      "sha256": "62568bdce26a70de96118201935a22099c001bd06a67820e6e92b86293483426"
+    },
+    {
+      "path": "selector/hero.json",
+      "source": "artifacts/selector/hero.json",
+      "bytes": 131071,
+      "sha256": "724cf7a3b6db15e968b67f0693d713ebe4b644f21c2119bf6f81b9bb6765953d"
+    },
+    {
+      "path": "system/android-longword-failure.json",
+      "source": "artifacts/system/android-longword-failure.json",
+      "bytes": 3411,
+      "sha256": "511520ecd998756f60223e771e55b22d78a0b4ed6f3ff13fba23cafb4c53c8a3"
+    },
+    {
+      "path": "system/android-longword-recovery.json",
+      "source": "artifacts/system/android-longword-recovery.json",
+      "bytes": 680818,
+      "sha256": "bac3f1a18e4763e040040698af6baf862793810e91fe4ff011968c6d79a48906"
+    },
+    {
+      "path": "system/native-android/observations.jsonl",
+      "source": "artifacts/system/native-android/observations.jsonl",
+      "bytes": 776971,
+      "sha256": "8ba3b4ca894eb1d16efee403f4b162eac160a7e113b1ca9e7a31dc71e3153ac5"
+    },
+    {
+      "path": "system/native-android/summary.json",
+      "source": "artifacts/system/native-android/summary.json",
+      "bytes": 1085,
+      "sha256": "fadf581402b24edc98cccd587fa63c9a8c91b1dbf79685155af7b76e03493c73"
+    },
+    {
+      "path": "system/native-ios/observations.jsonl",
+      "source": "artifacts/system/native-ios/observations.jsonl",
+      "bytes": 1489363,
+      "sha256": "7d1491584e8de3f197034fb31aa66693df6d92559e11efb92d776a651981d656"
+    },
+    {
+      "path": "system/native-ios/summary.json",
+      "source": "artifacts/system/native-ios/summary.json",
+      "bytes": 526,
+      "sha256": "63ea9672a7392021eb8fc4d0462e2121bfa8082243ef6822053cf3858b622a2a"
+    },
+    {
+      "path": "system/web/observations.jsonl",
+      "source": "artifacts/system/web/observations.jsonl",
+      "bytes": 1430920,
+      "sha256": "3c31d111ca200c750fd15e1b801f56b999d9bc7a4d2cd1af82339125c835bab0"
+    },
+    {
+      "path": "system/web/summary.json",
+      "source": "artifacts/system/web/summary.json",
+      "bytes": 405,
+      "sha256": "281889dce60d29d3cff694f2258da08b8ff3e0a1c87e907ca19b83be75345170"
+    },
+    {
+      "path": "tuning/probe-balanced-v2/dataset.json",
+      "source": "artifacts/tuning/probe-balanced-v2/dataset.json",
+      "bytes": 132513,
+      "sha256": "9ff56def30e0a72e2255942ee20b5e6a9345efcb3dbdc3bf7a5f9408135721d0"
+    },
+    {
+      "path": "tuning/probe-balanced-v2/held-out.jsonl",
+      "source": "artifacts/tuning/probe-balanced-v2/held-out.jsonl",
+      "bytes": 27926,
+      "sha256": "a091914b83b1d796c6841754c6459ff8a061da0b63d46372ee997fd498414820"
+    },
+    {
+      "path": "tuning/probe-balanced-v2/predictions.json",
+      "source": "artifacts/tuning/probe-balanced-v2/predictions.json",
+      "bytes": 29722,
+      "sha256": "26a1cb80c588b6a771b6256206395b1e956e2c2ceef57981dd186471a9fb666c"
+    },
+    {
+      "path": "tuning/probe-balanced-v2/report.json",
+      "source": "artifacts/tuning/probe-balanced-v2/report.json",
+      "bytes": 3813,
+      "sha256": "3407fe75f3f0395c66bddf78a3df8f9f74ae5e18411c4b5128c036f3245ec676"
+    },
+    {
+      "path": "tuning/probe-balanced-v2/train.jsonl",
+      "source": "artifacts/tuning/probe-balanced-v2/train.jsonl",
+      "bytes": 34702,
+      "sha256": "1e6586629789be38a25d51dba07ca8a9204b1f3fd3d9692307f60a363b0fbc0e"
+    },
+    {
+      "path": "tuning/probe-tiny-v1/predictions.json",
+      "source": "artifacts/tuning/probe-tiny-v1/predictions.json",
+      "bytes": 25200,
+      "sha256": "c30eebeb1971115157db994b672b3a8e8dbe522839dc0445795bacbfc9e846cc"
+    },
+    {
+      "path": "tuning/probe-tiny-v1/report.json",
+      "source": "artifacts/tuning/probe-tiny-v1/report.json",
+      "bytes": 3784,
+      "sha256": "76f0c05c5664606aa10f786ebbcf8a17ff0cffe7953d18cb50cc401821292258"
+    },
+    {
+      "path": "tuning/v1/manifest.json",
+      "source": "artifacts/tuning/v1/manifest.json",
+      "bytes": 232317,
+      "sha256": "a20d84388f1aee0148966643206b6ba306cd2bbf0a5aad8cd19d6452eb686e1b"
+    },
+    {
+      "path": "tuning/v1/ratings-a.json",
+      "source": "artifacts/tuning/v1/ratings-a.json",
+      "bytes": 5167,
+      "sha256": "3e0569a3894495ef804b870f00288840f001ccf750a127cad50ce0cbf8697318"
+    },
+    {
+      "path": "tuning/v1/ratings-b.json",
+      "source": "artifacts/tuning/v1/ratings-b.json",
+      "bytes": 4946,
+      "sha256": "509a193e7a8ba298b6853b120528bc8968974cf798723c5df3af9839f775f27f"
+    },
+    {
+      "path": "tuning/v1/review-input-hashes.json",
+      "source": "artifacts/tuning/v1/review-input-hashes.json",
+      "bytes": 4476,
+      "sha256": "a348458a204e5aec2226baabe68620f1ca62edd46b4b713a03422c969cfb59cb"
+    },
+    {
+      "path": "tuning/v1/review-validation.json",
+      "source": "artifacts/tuning/v1/review-validation.json",
+      "bytes": 1780,
+      "sha256": "b3d8f41fdc6a2cb98886ea3d914bf01e54481eb7563bcd7fff4212b12c01a441"
+    },
+    {
+      "path": "tuning/v1/tuning-1-left-1440.png",
+      "source": "artifacts/tuning/v1/tuning-1-left-1440.png",
+      "bytes": 46732,
+      "sha256": "ba3186a528877b55b7cae270463e13fd8e86ff561954bda68a5cda86f96c8873"
+    },
+    {
+      "path": "tuning/v1/tuning-1-left-390.png",
+      "source": "artifacts/tuning/v1/tuning-1-left-390.png",
+      "bytes": 35513,
+      "sha256": "04d105fe2120b7083ea535c6a86837207c26619a58178fe43d5b8eb8b8d6de13"
+    },
+    {
+      "path": "tuning/v1/tuning-1-left-834.png",
+      "source": "artifacts/tuning/v1/tuning-1-left-834.png",
+      "bytes": 42001,
+      "sha256": "d183a56a53558cebad47a4d2088e6feb0acf319700476fa1a9cff41da2157e3d"
+    },
+    {
+      "path": "tuning/v1/tuning-1-right-1440.png",
+      "source": "artifacts/tuning/v1/tuning-1-right-1440.png",
+      "bytes": 51789,
+      "sha256": "e375a618ecba0c050ea8d14520209164675ca13c709898ff139044b73f934f20"
+    },
+    {
+      "path": "tuning/v1/tuning-1-right-390.png",
+      "source": "artifacts/tuning/v1/tuning-1-right-390.png",
+      "bytes": 35892,
+      "sha256": "6491917f627f2f81af441acc2781a4ce1c8c660047ec5d1cf52805c9639da0ba"
+    },
+    {
+      "path": "tuning/v1/tuning-1-right-834.png",
+      "source": "artifacts/tuning/v1/tuning-1-right-834.png",
+      "bytes": 45062,
+      "sha256": "c97e47b072d9672f8caa24082b0e627a3ec5e69321570944fbcacc52df9ebc14"
+    },
+    {
+      "path": "tuning/v1/tuning-2-left-1440.png",
+      "source": "artifacts/tuning/v1/tuning-2-left-1440.png",
+      "bytes": 39646,
+      "sha256": "d86da2f4e1ec02383a06630a9df23f26775421f23f5ed529655dda8c43bfbc12"
+    },
+    {
+      "path": "tuning/v1/tuning-2-left-390.png",
+      "source": "artifacts/tuning/v1/tuning-2-left-390.png",
+      "bytes": 28150,
+      "sha256": "6fcb1279952fdb8ceaef8c4da908770f7b28420ce3cfaebdd3ca33187c38d9c8"
+    },
+    {
+      "path": "tuning/v1/tuning-2-left-834.png",
+      "source": "artifacts/tuning/v1/tuning-2-left-834.png",
+      "bytes": 35548,
+      "sha256": "94ab371c1c543bd6f854a3c1ecc5edd71a401fbc9c693a31b34313e1d58e9ebb"
+    },
+    {
+      "path": "tuning/v1/tuning-2-right-1440.png",
+      "source": "artifacts/tuning/v1/tuning-2-right-1440.png",
+      "bytes": 41282,
+      "sha256": "bca92b6772c6a9bfec59bd191c8e465bff249265b12bd30c2f4369d32973363e"
+    },
+    {
+      "path": "tuning/v1/tuning-2-right-390.png",
+      "source": "artifacts/tuning/v1/tuning-2-right-390.png",
+      "bytes": 28349,
+      "sha256": "8d0b39dd57c09df162d21c260a9f3133e11490333f6925391c3c8f6fc1e6df5c"
+    },
+    {
+      "path": "tuning/v1/tuning-2-right-834.png",
+      "source": "artifacts/tuning/v1/tuning-2-right-834.png",
+      "bytes": 36814,
+      "sha256": "4d5add87ea1b291d554e03b970604d72a36d102219a5cc2fbe107f23021e93b1"
+    },
+    {
+      "path": "tuning/v1/tuning-3-left-1440.png",
+      "source": "artifacts/tuning/v1/tuning-3-left-1440.png",
+      "bytes": 45312,
+      "sha256": "e6db100e799b74e5538316dc1163b84b632a7eda60e1d5b944608284a78f21c7"
+    },
+    {
+      "path": "tuning/v1/tuning-3-left-390.png",
+      "source": "artifacts/tuning/v1/tuning-3-left-390.png",
+      "bytes": 43766,
+      "sha256": "76d3a06191252eb0b9268d12cdb06187718fa782dcdb5ef28d69a7ccfb05eae8"
+    },
+    {
+      "path": "tuning/v1/tuning-3-left-834.png",
+      "source": "artifacts/tuning/v1/tuning-3-left-834.png",
+      "bytes": 42776,
+      "sha256": "3354c4aafb9d4b96f1b07f738ce99fd7c3fc70505be93fdab3ee9fd0a65666b8"
+    },
+    {
+      "path": "tuning/v1/tuning-3-right-1440.png",
+      "source": "artifacts/tuning/v1/tuning-3-right-1440.png",
+      "bytes": 44940,
+      "sha256": "47e52529b196027aacf02b9d33bde03d26a57d7f29af0f863f6305cc58c61139"
+    },
+    {
+      "path": "tuning/v1/tuning-3-right-390.png",
+      "source": "artifacts/tuning/v1/tuning-3-right-390.png",
+      "bytes": 43086,
+      "sha256": "921a0901cb7abdc84030403c38dcfae803c79624681c08765fe6ff58830dd879"
+    },
+    {
+      "path": "tuning/v1/tuning-3-right-834.png",
+      "source": "artifacts/tuning/v1/tuning-3-right-834.png",
+      "bytes": 42330,
+      "sha256": "ad5f3c8dbba677bdfce341bc1f23d184fef8b69d730559f1d55d68f08556f2c7"
+    },
+    {
+      "path": "tuning/v1/tuning-4-left-1440.png",
+      "source": "artifacts/tuning/v1/tuning-4-left-1440.png",
+      "bytes": 49531,
+      "sha256": "8db7bcf0148b88c6d7a6aed7a776e0bcbd57a8e09effe36d24921fd0e72a6a6d"
+    },
+    {
+      "path": "tuning/v1/tuning-4-left-390.png",
+      "source": "artifacts/tuning/v1/tuning-4-left-390.png",
+      "bytes": 47832,
+      "sha256": "0884f1acd84cf6ab07fd2e43520c2a2c175926dd23455204382b0a4de3357be0"
+    },
+    {
+      "path": "tuning/v1/tuning-4-left-834.png",
+      "source": "artifacts/tuning/v1/tuning-4-left-834.png",
+      "bytes": 46921,
+      "sha256": "bf5e676d16acc4b0c599d39f7e6b3d1c19470885f3720fa4fcc9443fc74d1347"
+    },
+    {
+      "path": "tuning/v1/tuning-4-right-1440.png",
+      "source": "artifacts/tuning/v1/tuning-4-right-1440.png",
+      "bytes": 48914,
+      "sha256": "322d0f585003d51c5969967d8da5ae4a1d3db2b43b251066cda2ccfe3ef4f8dd"
+    },
+    {
+      "path": "tuning/v1/tuning-4-right-390.png",
+      "source": "artifacts/tuning/v1/tuning-4-right-390.png",
+      "bytes": 48575,
+      "sha256": "a3572c257184f44216650f3bbbe7279eef49ed900363b6393dc5ffed5c390644"
+    },
+    {
+      "path": "tuning/v1/tuning-4-right-834.png",
+      "source": "artifacts/tuning/v1/tuning-4-right-834.png",
+      "bytes": 46276,
+      "sha256": "180cda3dc545aec552ceef1f42e8e277bf2e05e5bc7ac4d1d37d5523e183ac15"
+    },
+    {
+      "path": "tuning/v1/tuning-5-left-1440.png",
+      "source": "artifacts/tuning/v1/tuning-5-left-1440.png",
+      "bytes": 44054,
+      "sha256": "2d2b9ad8043f7b5f8ea1a4219b3cb117c86e4c12d60ff3a46142d6423891323f"
+    },
+    {
+      "path": "tuning/v1/tuning-5-left-390.png",
+      "source": "artifacts/tuning/v1/tuning-5-left-390.png",
+      "bytes": 31918,
+      "sha256": "f27433a291bbaca4f9c38ca67e13d681fe4a1af5a6d7c3d9a063c221793e66b1"
+    },
+    {
+      "path": "tuning/v1/tuning-5-left-834.png",
+      "source": "artifacts/tuning/v1/tuning-5-left-834.png",
+      "bytes": 38710,
+      "sha256": "3fcf6e99cb752c91979d6e4197d649a8533bb66b1b15b386a6010e95cbef4575"
+    },
+    {
+      "path": "tuning/v1/tuning-5-right-1440.png",
+      "source": "artifacts/tuning/v1/tuning-5-right-1440.png",
+      "bytes": 45416,
+      "sha256": "c2bc703704bbbb1f96e4ba035c46c08ef3bd891e99379f260c63d97d5d2d0f53"
+    },
+    {
+      "path": "tuning/v1/tuning-5-right-390.png",
+      "source": "artifacts/tuning/v1/tuning-5-right-390.png",
+      "bytes": 33775,
+      "sha256": "e24a5a2a4b0aa524ced8387f8ca5d75fb7ecd3c2e2bdf97cd0e1a63140d5d9a9"
+    },
+    {
+      "path": "tuning/v1/tuning-5-right-834.png",
+      "source": "artifacts/tuning/v1/tuning-5-right-834.png",
+      "bytes": 40183,
+      "sha256": "3f765ee004c2dcb5e536681221272219906047955049a82365934cca2e2b3591"
+    },
+    {
+      "path": "tuning/v1/tuning-6-left-1440.png",
+      "source": "artifacts/tuning/v1/tuning-6-left-1440.png",
+      "bytes": 48309,
+      "sha256": "edfad0921fd7ccf438cb8ed544cb0489db1566473c5e4d0239f08a75368da6fd"
+    },
+    {
+      "path": "tuning/v1/tuning-6-left-390.png",
+      "source": "artifacts/tuning/v1/tuning-6-left-390.png",
+      "bytes": 45580,
+      "sha256": "8ac9e1734e38b6f87f89e08e73612695ed072e0135fd4fcb8adeb7a20f609bc9"
+    },
+    {
+      "path": "tuning/v1/tuning-6-left-834.png",
+      "source": "artifacts/tuning/v1/tuning-6-left-834.png",
+      "bytes": 45743,
+      "sha256": "cc9e72231a84a79347b113453f3c452f0b284fa456d5ea48ae790b2efab525cb"
+    },
+    {
+      "path": "tuning/v1/tuning-6-right-1440.png",
+      "source": "artifacts/tuning/v1/tuning-6-right-1440.png",
+      "bytes": 47372,
+      "sha256": "acf3dca89b8249f5f9fdace7b105939a065fe72e95b1d05df4d9850ce3f031fd"
+    },
+    {
+      "path": "tuning/v1/tuning-6-right-390.png",
+      "source": "artifacts/tuning/v1/tuning-6-right-390.png",
+      "bytes": 45736,
+      "sha256": "88f1ed26909573087ccc5b298a7a1aed7c2d11a9867389293134b671bdf7640c"
+    },
+    {
+      "path": "tuning/v1/tuning-6-right-834.png",
+      "source": "artifacts/tuning/v1/tuning-6-right-834.png",
+      "bytes": 44636,
+      "sha256": "1ecc4362fa2781f291b5e2f10c2ddb430f200f8896444321c34801e4c4338b7a"
+    },
+    {
+      "path": "verification-full/browser.log",
+      "source": "artifacts/verification-full/browser.log",
+      "bytes": 1026,
+      "sha256": "71faccb2ef5b980f4d399f9f800ffea7f1274abda10dbfa6dac2bc475c5dc3b5"
+    },
+    {
+      "path": "verification-full/build.log",
+      "source": "artifacts/verification-full/build.log",
+      "bytes": 73,
+      "sha256": "542b040ef78d19df67e5d7ba63fa53bf33d738ef95ee8dd3cd53d4b81c5da5bc"
+    },
+    {
+      "path": "verification-full/commands-and-app.log",
+      "source": "artifacts/verification-full/commands-and-app.log",
+      "bytes": 1129,
+      "sha256": "b1a422cd9b16d52409c375ecad6b3a4014e316f9d9c5dcbef74a6a14a032ee35"
+    },
+    {
+      "path": "verification-full/consumer.log",
+      "source": "artifacts/verification-full/consumer.log",
+      "bytes": 90,
+      "sha256": "3b222533128938d98807124aa94aed358204562c0c453f7ecd9b6cb98e554e7f"
+    },
+    {
+      "path": "verification-full/matrix-native-android.log",
+      "source": "artifacts/verification-full/matrix-native-android.log",
+      "bytes": 1169,
+      "sha256": "3ad5fed1074b44a53b6518bd5952b771ac2aade05d4701cc7f8b31aeb3ea879f"
+    },
+    {
+      "path": "verification-full/matrix-native-ios.log",
+      "source": "artifacts/verification-full/matrix-native-ios.log",
+      "bytes": 767,
+      "sha256": "33c959a98625aa73e93dff1e7d081fadeabc55aa299e4565d696432f215f3ebb"
+    },
+    {
+      "path": "verification-full/matrix-web.log",
+      "source": "artifacts/verification-full/matrix-web.log",
+      "bytes": 630,
+      "sha256": "16279309884c39283f53106f2f8696ca1fa727d9d7acb14a6534c30ed84d3fdb"
+    },
+    {
+      "path": "verification-full/native-android.log",
+      "source": "artifacts/verification-full/native-android.log",
+      "bytes": 411,
+      "sha256": "00382f4990e216e5d172405d9223ee6e6272129a434fd71d1c8463bb99353c45"
+    },
+    {
+      "path": "verification-full/native-ios.log",
+      "source": "artifacts/verification-full/native-ios.log",
+      "bytes": 411,
+      "sha256": "102202db57768d76bc8d52daf5db290872d89d61c960dfe2a0081a1fe21b9f60"
+    },
+    {
+      "path": "verification-full/native-types.log",
+      "source": "artifacts/verification-full/native-types.log",
+      "bytes": 72,
+      "sha256": "6679293f34eaacf488f82600e44ea811d1cb6b1514979004f41999537e059b87"
+    },
+    {
+      "path": "verification-full/selector.log",
+      "source": "artifacts/verification-full/selector.log",
+      "bytes": 2832,
+      "sha256": "e4a83fe667f6ecc9b1004460fab959565400a64fc6f35451f38a1c0fa30125b6"
+    },
+    {
+      "path": "verification-full/summary.json",
+      "source": "artifacts/verification-full/summary.json",
+      "bytes": 2531,
+      "sha256": "c925b89a0a9d49417f4363c4e1f176882488851bc6d75db50ad9c98e446a3377"
+    },
+    {
+      "path": "verification-full/types.log",
+      "source": "artifacts/verification-full/types.log",
+      "bytes": 62,
+      "sha256": "1f4673840d3baf9d7edd04f7c4a30f6f8b0435280ba9c0970b196897d97abd1b"
+    },
+    {
+      "path": "verification-full/unit.log",
+      "source": "artifacts/verification-full/unit.log",
+      "bytes": 5981,
+      "sha256": "5aa05093dec3aab2c93c7fc840592a299c265f9223b5c5f8cd84ac3174d3dadc"
+    },
+    {
+      "path": "verification-interrupted/runner.log",
+      "source": "artifacts/verification-interrupted/runner.log",
+      "bytes": 9356,
+      "sha256": "6e4a92c4ceec6224c557a6f3e24ec5011ffc0bdfb7e3ba6a8484964f1f0ac383"
+    },
+    {
+      "path": "verification-interrupted/summary.json",
+      "source": "artifacts/verification-interrupted/summary.json",
+      "bytes": 1402,
+      "sha256": "dbcdbffcd1fbe65b0fe737cc4b5187ba59ecbb740d94ab3fd02e86ac6a47a981"
+    },
+    {
+      "path": "verification-pre-recovery/browser.log",
+      "source": "artifacts/verification-pre-recovery/browser.log",
+      "bytes": 910,
+      "sha256": "38b49f81164a615208a24342e9ec3e4bd07684534eaf96bbaf4a940dbbb333cb"
+    },
+    {
+      "path": "verification-pre-recovery/build.log",
+      "source": "artifacts/verification-pre-recovery/build.log",
+      "bytes": 73,
+      "sha256": "542b040ef78d19df67e5d7ba63fa53bf33d738ef95ee8dd3cd53d4b81c5da5bc"
+    },
+    {
+      "path": "verification-pre-recovery/commands-and-app.log",
+      "source": "artifacts/verification-pre-recovery/commands-and-app.log",
+      "bytes": 827,
+      "sha256": "2a05ccc3608abaed44005c1b7887da04c457503b1d9028d72f0d79064b448751"
+    },
+    {
+      "path": "verification-pre-recovery/consumer.log",
+      "source": "artifacts/verification-pre-recovery/consumer.log",
+      "bytes": 90,
+      "sha256": "3b222533128938d98807124aa94aed358204562c0c453f7ecd9b6cb98e554e7f"
+    },
+    {
+      "path": "verification-pre-recovery/matrix-native-android.log",
+      "source": "artifacts/verification-pre-recovery/matrix-native-android.log",
+      "bytes": 1027,
+      "sha256": "5fe5b2a04d99289f56121c62cfbe3e40ad55b45482c429fe9564ff0dbe5d36f3"
+    },
+    {
+      "path": "verification-pre-recovery/matrix-native-ios.log",
+      "source": "artifacts/verification-pre-recovery/matrix-native-ios.log",
+      "bytes": 727,
+      "sha256": "4dff0321b5deb8e1e6f7ef51f70ffd6f08b8dbc4c81dd32a1ae3181a0431ca7c"
+    },
+    {
+      "path": "verification-pre-recovery/matrix-web.log",
+      "source": "artifacts/verification-pre-recovery/matrix-web.log",
+      "bytes": 590,
+      "sha256": "ca581f485547a7502b4035dda180b8a646a3a2050f7850c5f8cd81084556de8c"
+    },
+    {
+      "path": "verification-pre-recovery/native-android.log",
+      "source": "artifacts/verification-pre-recovery/native-android.log",
+      "bytes": 404,
+      "sha256": "ebdced8102d17ed3c18fbfb52dff84c416d2ac678f7a423fca2930df2e632683"
+    },
+    {
+      "path": "verification-pre-recovery/native-ios.log",
+      "source": "artifacts/verification-pre-recovery/native-ios.log",
+      "bytes": 410,
+      "sha256": "f6e7750bf0250f7489e511de84e47004a354a93f8892fd61bf0dc8bdcf6e5535"
+    },
+    {
+      "path": "verification-pre-recovery/native-types.log",
+      "source": "artifacts/verification-pre-recovery/native-types.log",
+      "bytes": 72,
+      "sha256": "6679293f34eaacf488f82600e44ea811d1cb6b1514979004f41999537e059b87"
+    },
+    {
+      "path": "verification-pre-recovery/selector.log",
+      "source": "artifacts/verification-pre-recovery/selector.log",
+      "bytes": 2740,
+      "sha256": "84e8f00376eb44d04828b9296d8ea02410cce10245cd613c984bcc11b08e73ba"
+    },
+    {
+      "path": "verification-pre-recovery/summary.json",
+      "source": "artifacts/verification-pre-recovery/summary.json",
+      "bytes": 2449,
+      "sha256": "501ee885bd11ad0effc12e3676f4506f952a1643e1144eb6b6723ac4e000342d"
+    },
+    {
+      "path": "verification-pre-recovery/types.log",
+      "source": "artifacts/verification-pre-recovery/types.log",
+      "bytes": 62,
+      "sha256": "1f4673840d3baf9d7edd04f7c4a30f6f8b0435280ba9c0970b196897d97abd1b"
+    },
+    {
+      "path": "verification-pre-recovery/unit.log",
+      "source": "artifacts/verification-pre-recovery/unit.log",
+      "bytes": 3704,
+      "sha256": "4c16a2945ae90c7fa6ae763fed40d7a08571ddc150dd1232d36d0a004bb43bdf"
+    },
+    {
+      "path": "verification/browser.log",
+      "source": "artifacts/verification/browser.log",
+      "bytes": 1026,
+      "sha256": "81fa5718dbf245a7338b9fe8e6547d4d78994e25c49292aecd99b46815210d55"
+    },
+    {
+      "path": "verification/build.log",
+      "source": "artifacts/verification/build.log",
+      "bytes": 73,
+      "sha256": "542b040ef78d19df67e5d7ba63fa53bf33d738ef95ee8dd3cd53d4b81c5da5bc"
+    },
+    {
+      "path": "verification/commands-and-app.log",
+      "source": "artifacts/verification/commands-and-app.log",
+      "bytes": 1127,
+      "sha256": "d9812f531b88b536a73dfb96525238da67ba89d875f04c3da70b55077e391126"
+    },
+    {
+      "path": "verification/consumer.log",
+      "source": "artifacts/verification/consumer.log",
+      "bytes": 90,
+      "sha256": "3b222533128938d98807124aa94aed358204562c0c453f7ecd9b6cb98e554e7f"
+    },
+    {
+      "path": "verification/fieldwork-build.log",
+      "source": "artifacts/verification/fieldwork-build.log",
+      "bytes": 24,
+      "sha256": "94029fede5a7c946d01bda75585b06395c4b1f17d5515dd2f2857831352efae6"
+    },
+    {
+      "path": "verification/fieldwork-web.log",
+      "source": "artifacts/verification/fieldwork-web.log",
+      "bytes": 72,
+      "sha256": "ec2de3d5b27435e512184cb50e8a4627139af31ff121373960b1fc09f581d4d2"
+    },
+    {
+      "path": "verification/matrix-native-android.log",
+      "source": "artifacts/verification/matrix-native-android.log",
+      "bytes": 217,
+      "sha256": "9b9486a2a14673f1d861d2fa9f9155a92f25d822745a2c887af5854e9d678cc1"
+    },
+    {
+      "path": "verification/matrix-native-ios.log",
+      "source": "artifacts/verification/matrix-native-ios.log",
+      "bytes": 767,
+      "sha256": "33c959a98625aa73e93dff1e7d081fadeabc55aa299e4565d696432f215f3ebb"
+    },
+    {
+      "path": "verification/matrix-web.log",
+      "source": "artifacts/verification/matrix-web.log",
+      "bytes": 630,
+      "sha256": "16279309884c39283f53106f2f8696ca1fa727d9d7acb14a6534c30ed84d3fdb"
+    },
+    {
+      "path": "verification/native-android.log",
+      "source": "artifacts/verification/native-android.log",
+      "bytes": 410,
+      "sha256": "7af0c8a166da7102b9b77e69453447b0d3fb570788a4cb6615ca977adb4f712b"
+    },
+    {
+      "path": "verification/native-ios.log",
+      "source": "artifacts/verification/native-ios.log",
+      "bytes": 411,
+      "sha256": "127d7e935639d94a75d98df89affb45620660f4bb8c058eb32d60ee0e02dd783"
+    },
+    {
+      "path": "verification/native-types.log",
+      "source": "artifacts/verification/native-types.log",
+      "bytes": 72,
+      "sha256": "6679293f34eaacf488f82600e44ea811d1cb6b1514979004f41999537e059b87"
+    },
+    {
+      "path": "verification/selector.log",
+      "source": "artifacts/verification/selector.log",
+      "bytes": 3186,
+      "sha256": "d66b3f21b4fe07410a18337e9ac2c58bfc9e699772f816c878bf4a0723a4977b"
+    },
+    {
+      "path": "verification/summary.json",
+      "source": "artifacts/verification/summary.json",
+      "bytes": 2670,
+      "sha256": "d07b0cb22a554a6c7320a44429748ae18f6ab151d6f467b2eeedf21c8a62e6b2"
+    },
+    {
+      "path": "verification/types.log",
+      "source": "artifacts/verification/types.log",
+      "bytes": 62,
+      "sha256": "1f4673840d3baf9d7edd04f7c4a30f6f8b0435280ba9c0970b196897d97abd1b"
+    },
+    {
+      "path": "verification/unit.log",
+      "source": "artifacts/verification/unit.log",
+      "bytes": 7845,
+      "sha256": "5fe5e434a4d8e347e6a27cec3c3d864afe5b6061f2eb2b4c9a082fc036f3e6e0"
+    }
+  ],
+  "derived": [
+    "evaluation-v2/usage-events.json"
+  ],
+  "limits": [
+    "Machine-specific paths and runtime receipts are historical evidence, not portable runtime dependencies.",
+    "Model readouts and Astra labels are not human aesthetic validation.",
+    "External award images, model weights, runtime caches and full agent transcripts are excluded."
+  ]
+}

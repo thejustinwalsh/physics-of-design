@@ -1,0 +1,1182 @@
+{
+  "receipt": {
+    "version": 1,
+    "capturedAt": "2026-10-25T02:16:49.788Z",
+    "engine": "react-native/Text+Yoga",
+    "platform": "ios",
+    "snapshot": {
+      "screen": "explore",
+      "story": null,
+      "saved": [
+        "long-way-home"
+      ],
+      "query": "",
+      "readerSize": 21,
+      "appearance": "light",
+      "highContrast": false,
+      "plan": {
+        "request": {
+          "width": 834,
+          "textScale": 1,
+          "mode": "app",
+          "density": 1,
+          "expression": 1,
+          "readingSize": 20,
+          "readingLeading": 1.55
+        },
+        "gutter": 40,
+        "gap": 22.518,
+        "sidebarWidth": 220,
+        "contentWidth": 534,
+        "navigation": "sidebar",
+        "columns": 1,
+        "sectionGap": 54.21,
+        "titleSize": 40.583999999999996,
+        "titleLeading": 1.08,
+        "titleTrackingEm": -0.015,
+        "bodySize": 17,
+        "readingSize": 20,
+        "readingLeading": 1.55,
+        "readingMeasure": 534,
+        "imageAspect": 1.55,
+        "controlSize": 44,
+        "variables": [
+          "width",
+          "textScale",
+          "density",
+          "expression",
+          "readingSize",
+          "readingLeading"
+        ],
+        "dependencyEffects": {
+          "width": [
+            "gutters",
+            "contentWidth",
+            "navigation",
+            "columns",
+            "titleSize",
+            "imageAspect"
+          ],
+          "textScale": [
+            "navigation",
+            "columns",
+            "renderer wrapping"
+          ],
+          "density": [
+            "gap",
+            "sectionGap"
+          ],
+          "expression": [
+            "titleSize",
+            "titleTrackingEm",
+            "renderer wrapping"
+          ],
+          "readingSize": [
+            "reading geometry",
+            "scroll progress"
+          ],
+          "readingLeading": [
+            "reading geometry",
+            "scroll progress"
+          ]
+        },
+        "provenance": {
+          "kind": "heuristic",
+          "sources": [
+            "apple-layout",
+            "apple-typography",
+            "impeccable-layout",
+            "local-policy"
+          ],
+          "uncertainty": "Uncalibrated geometry proposals; real renderer and task review remain required."
+        },
+        "contract": "Flex topology, natural text heights, no CSS Grid, no cancellation of system text enlargement."
+      },
+      "window": {
+        "fontScale": 1,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "safeArea": {
+        "top": 32,
+        "right": 0,
+        "bottom": 20,
+        "left": 0
+      },
+      "palette": {
+        "canvas": "#f8f7f2",
+        "surface": "#efeee7",
+        "ink": "#202b25",
+        "muted": "#5e695f",
+        "line": "#d8ddd1",
+        "accent": "#345440",
+        "accentBg": "#e3eadb",
+        "paper": "#eee5d5"
+      }
+    },
+    "observations": [
+      {
+        "id": "text-2",
+        "name": "Fieldwork.",
+        "kind": "text",
+        "text": "Fieldwork.",
+        "lines": [
+          {
+            "text": "Fieldwork.",
+            "x": 0,
+            "y": 0,
+            "width": 131.74999999999997,
+            "height": 36,
+            "descender": 6.390000000000001,
+            "capHeight": 21.765,
+            "ascender": 29.61,
+            "xHeight": 15.465
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 32,
+          "y": 62,
+          "width": 169.5,
+          "height": 36.5
+        }
+      },
+      {
+        "id": "text-3",
+        "name": "A little further outside.",
+        "kind": "text",
+        "text": "A little further outside.",
+        "lines": [
+          {
+            "text": "A little further outside.",
+            "x": 0,
+            "y": 0,
+            "width": 118.48800000000001,
+            "height": 14.399999999999999,
+            "descender": 2.555999999999999,
+            "capHeight": 8.598,
+            "ascender": 11.844,
+            "xHeight": 6.078
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 32,
+          "y": 122.5,
+          "width": 155.5,
+          "height": 14.5
+        }
+      },
+      {
+        "id": "text-5",
+        "name": "Journal",
+        "kind": "text",
+        "text": "Journal",
+        "lines": [
+          {
+            "text": "Journal",
+            "x": 0,
+            "y": 0,
+            "width": 50.944,
+            "height": 19.2,
+            "descender": 3.4079999999999995,
+            "capHeight": 11.464,
+            "ascender": 15.792,
+            "xHeight": 8.104000000000001
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 63,
+          "y": 191,
+          "width": 51,
+          "height": 19.5
+        }
+      },
+      {
+        "id": "text-7",
+        "name": "Explore",
+        "kind": "text",
+        "text": "Explore",
+        "lines": [
+          {
+            "text": "Explore",
+            "x": 0,
+            "y": 0,
+            "width": 54.55200000000001,
+            "height": 19.2,
+            "descender": 3.4079999999999995,
+            "capHeight": 11.608,
+            "ascender": 15.792,
+            "xHeight": 8.248
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 63,
+          "y": 245,
+          "width": 55,
+          "height": 19.5
+        }
+      },
+      {
+        "id": "text-9",
+        "name": "Saved",
+        "kind": "text",
+        "text": "Saved",
+        "lines": [
+          {
+            "text": "Saved",
+            "x": 0,
+            "y": 0,
+            "width": 41.792,
+            "height": 19.2,
+            "descender": 3.4079999999999995,
+            "capHeight": 11.464,
+            "ascender": 15.792,
+            "xHeight": 8.104000000000001
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 63,
+          "y": 299,
+          "width": 42,
+          "height": 19.5
+        }
+      },
+      {
+        "id": "text-10",
+        "name": "ISSUE 08\nThe outside issue",
+        "kind": "text",
+        "text": "ISSUE 08\nThe outside issue",
+        "lines": [
+          {
+            "text": "ISSUE 08\n",
+            "x": 0,
+            "y": 0,
+            "width": 49.128,
+            "height": 14.399999999999999,
+            "descender": 2.555999999999999,
+            "capHeight": 8.598,
+            "ascender": 11.844,
+            "xHeight": 6.078
+          },
+          {
+            "text": "The outside issue",
+            "x": 0,
+            "y": 14.399999999999999,
+            "width": 91.386,
+            "height": 14.399999999999999,
+            "descender": 2.555999999999999,
+            "capHeight": 8.598,
+            "ascender": 11.844,
+            "xHeight": 6.078
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 32,
+          "y": 1131,
+          "width": 155.5,
+          "height": 29
+        }
+      },
+      {
+        "id": "text-11",
+        "name": "The outside issue",
+        "kind": "text",
+        "text": "The outside issue",
+        "lines": [
+          {
+            "text": "The outside issue",
+            "x": 0,
+            "y": 0,
+            "width": 164.68449999999982,
+            "height": 27.6,
+            "descender": 4.899000000000001,
+            "capHeight": 16.6865,
+            "ascender": 22.701,
+            "xHeight": 11.8565
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 260,
+          "y": 50,
+          "width": 165,
+          "height": 28
+        }
+      },
+      {
+        "id": "text-13",
+        "name": "FOLLOW YOUR CURIOSITY",
+        "kind": "text",
+        "text": "FOLLOW YOUR CURIOSITY",
+        "lines": [
+          {
+            "text": "FOLLOW YOUR CURIOSITY",
+            "x": 0,
+            "y": 0,
+            "width": 140.5635,
+            "height": 13.2,
+            "descender": 2.343,
+            "capHeight": 7.980499999999999,
+            "ascender": 10.857,
+            "xHeight": 5.6705
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 260,
+          "y": 116,
+          "width": 534,
+          "height": 13.5
+        }
+      },
+      {
+        "id": "text-14",
+        "name": "Find your next read",
+        "kind": "text",
+        "text": "Find your next read",
+        "lines": [
+          {
+            "text": "Find your next read",
+            "x": 0,
+            "y": 0,
+            "width": 332.25451999999996,
+            "height": 48.700799999999994,
+            "descender": 8.644391999999996,
+            "capHeight": 29.443691999999995,
+            "ascender": 40.056408,
+            "xHeight": 20.921051999999996
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 260,
+          "y": 137.5,
+          "width": 534,
+          "height": 49
+        }
+      },
+      {
+        "id": "text-15",
+        "name": "Places, ideas and things worth noticing.",
+        "kind": "text",
+        "text": "Places, ideas and things worth noticing.",
+        "lines": [
+          {
+            "text": "Places, ideas and things worth noticing.",
+            "x": 0,
+            "y": 0,
+            "width": 292.0005,
+            "height": 24,
+            "descender": 5.420999999999999,
+            "capHeight": 12.1805,
+            "ascender": 18.579,
+            "xHeight": 8.6105
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 260,
+          "y": 194.5,
+          "width": 534,
+          "height": 24.5
+        }
+      },
+      {
+        "id": "text-17",
+        "name": "ARCHITECTURE & ATTENTION",
+        "kind": "text",
+        "text": "ARCHITECTURE & ATTENTION",
+        "lines": [
+          {
+            "text": "ARCHITECTURE & ATTENTION",
+            "x": 0,
+            "y": 0,
+            "width": 157.4925,
+            "height": 13.2,
+            "descender": 2.343,
+            "capHeight": 7.980499999999999,
+            "ascender": 10.857,
+            "xHeight": 5.6705
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 368,
+          "y": 331.5,
+          "width": 366,
+          "height": 13.5
+        }
+      },
+      {
+        "id": "text-18",
+        "name": "The art of looking longer",
+        "kind": "text",
+        "text": "The art of looking longer",
+        "lines": [
+          {
+            "text": "The art of looking longer",
+            "x": 0,
+            "y": 0,
+            "width": 253.989,
+            "height": 27,
+            "descender": 10.649000000000001,
+            "capHeight": 15.18,
+            "ascender": 16.351,
+            "xHeight": 10.35
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 368,
+          "y": 352,
+          "width": 366,
+          "height": 27.5
+        }
+      },
+      {
+        "id": "text-19",
+        "name": "8 min read",
+        "kind": "text",
+        "text": "8 min read",
+        "lines": [
+          {
+            "text": "8 min read",
+            "x": 0,
+            "y": 0,
+            "width": 55.69199999999999,
+            "height": 14.399999999999999,
+            "descender": 2.555999999999999,
+            "capHeight": 8.598,
+            "ascender": 11.844,
+            "xHeight": 6.078
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 368,
+          "y": 386.5,
+          "width": 366,
+          "height": 14.5
+        }
+      },
+      {
+        "id": "text-22",
+        "name": "ROUTES & RITUALS",
+        "kind": "text",
+        "text": "ROUTES & RITUALS",
+        "lines": [
+          {
+            "text": "ROUTES & RITUALS",
+            "x": 0,
+            "y": 0,
+            "width": 101.03499999999998,
+            "height": 13.2,
+            "descender": 2.343,
+            "capHeight": 7.980499999999999,
+            "ascender": 10.857,
+            "xHeight": 5.6705
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 368,
+          "y": 476,
+          "width": 366,
+          "height": 13.5
+        }
+      },
+      {
+        "id": "text-23",
+        "name": "Taking the long way home",
+        "kind": "text",
+        "text": "Taking the long way home",
+        "lines": [
+          {
+            "text": "Taking the long way home",
+            "x": 0,
+            "y": 0,
+            "width": 267.996,
+            "height": 27,
+            "descender": 10.649000000000001,
+            "capHeight": 15.18,
+            "ascender": 16.351,
+            "xHeight": 10.35
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 368,
+          "y": 496.5,
+          "width": 366,
+          "height": 27.5
+        }
+      },
+      {
+        "id": "text-24",
+        "name": "6 min read · Available offline",
+        "kind": "text",
+        "text": "6 min read · Available offline",
+        "lines": [
+          {
+            "text": "6 min read · Available offline",
+            "x": 0,
+            "y": 0,
+            "width": 148.29000000000005,
+            "height": 14.399999999999999,
+            "descender": 2.555999999999999,
+            "capHeight": 8.598,
+            "ascender": 11.844,
+            "xHeight": 6.078
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 368,
+          "y": 531,
+          "width": 366,
+          "height": 14.5
+        }
+      },
+      {
+        "id": "text-27",
+        "name": "A FIELD GUIDE",
+        "kind": "text",
+        "text": "A FIELD GUIDE",
+        "lines": [
+          {
+            "text": "A FIELD GUIDE",
+            "x": 0,
+            "y": 0,
+            "width": 76.74699999999999,
+            "height": 13.2,
+            "descender": 2.343,
+            "capHeight": 7.980499999999999,
+            "ascender": 10.857,
+            "xHeight": 5.6705
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 368,
+          "y": 620.5,
+          "width": 366,
+          "height": 13.5
+        }
+      },
+      {
+        "id": "text-28",
+        "name": "Notes on noticing",
+        "kind": "text",
+        "text": "Notes on noticing",
+        "lines": [
+          {
+            "text": "Notes on noticing",
+            "x": 0,
+            "y": 0,
+            "width": 182.505,
+            "height": 27,
+            "descender": 10.649000000000001,
+            "capHeight": 15.18,
+            "ascender": 16.351,
+            "xHeight": 10.35
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 368,
+          "y": 641,
+          "width": 366,
+          "height": 27.5
+        }
+      },
+      {
+        "id": "text-29",
+        "name": "4 min read",
+        "kind": "text",
+        "text": "4 min read",
+        "lines": [
+          {
+            "text": "4 min read",
+            "x": 0,
+            "y": 0,
+            "width": 55.69199999999999,
+            "height": 14.399999999999999,
+            "descender": 2.555999999999999,
+            "capHeight": 8.598,
+            "ascender": 11.844,
+            "xHeight": 6.078
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 368,
+          "y": 675.5,
+          "width": 366,
+          "height": 14.5
+        }
+      },
+      {
+        "id": "text-31",
+        "name": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
+        "kind": "text",
+        "text": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
+        "lines": [
+          {
+            "text": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
+            "x": 0,
+            "y": 0,
+            "width": 410.52000000000004,
+            "height": 16,
+            "descender": 3.7430000000000003,
+            "capHeight": 7.8815,
+            "ascender": 12.257,
+            "xHeight": 5.5714999999999995
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 260,
+          "y": 764.5,
+          "width": 534,
+          "height": 16.5
+        }
+      },
+      {
+        "id": "control-4",
+        "name": "Journal",
+        "kind": "target",
+        "box": {
+          "x": 18,
+          "y": 179,
+          "width": 183.5,
+          "height": 44
+        }
+      },
+      {
+        "id": "control-6",
+        "name": "Explore",
+        "kind": "target",
+        "box": {
+          "x": 18,
+          "y": 233,
+          "width": 183.5,
+          "height": 44
+        }
+      },
+      {
+        "id": "control-8",
+        "name": "Saved",
+        "kind": "target",
+        "box": {
+          "x": 18,
+          "y": 287,
+          "width": 183.5,
+          "height": 44
+        }
+      },
+      {
+        "id": "control-12",
+        "name": "Reading and appearance settings",
+        "kind": "target",
+        "box": {
+          "x": 750,
+          "y": 42,
+          "width": 44,
+          "height": 44
+        }
+      },
+      {
+        "id": "control-16",
+        "name": "Read The art of looking longer",
+        "kind": "target",
+        "box": {
+          "x": 260,
+          "y": 331.5,
+          "width": 474,
+          "height": 104
+        }
+      },
+      {
+        "id": "control-20",
+        "name": "Save The art of looking longer",
+        "kind": "target",
+        "box": {
+          "x": 750,
+          "y": 331.5,
+          "width": 44,
+          "height": 44
+        }
+      },
+      {
+        "id": "control-21",
+        "name": "Read Taking the long way home",
+        "kind": "target",
+        "box": {
+          "x": 260,
+          "y": 476,
+          "width": 474,
+          "height": 104
+        }
+      },
+      {
+        "id": "control-25",
+        "name": "Remove Taking the long way home",
+        "kind": "target",
+        "box": {
+          "x": 750,
+          "y": 476,
+          "width": 44,
+          "height": 44
+        }
+      },
+      {
+        "id": "control-26",
+        "name": "Read Notes on noticing",
+        "kind": "target",
+        "box": {
+          "x": 260,
+          "y": 620.5,
+          "width": 474,
+          "height": 104
+        }
+      },
+      {
+        "id": "control-30",
+        "name": "Save Notes on noticing",
+        "kind": "target",
+        "box": {
+          "x": 750,
+          "y": 620.5,
+          "width": 44,
+          "height": 44
+        }
+      }
+    ],
+    "scope": "Actual native view frames and Text.onTextLayout observations from the product. Declared props are identified separately. Screenshots and task review remain required."
+  },
+  "audit": {
+    "platform": "ipados",
+    "checks": [
+      {
+        "id": "control-minimum",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-6",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-6",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-6",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-6",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-8",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-8",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-8",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-8",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-12",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-12",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-12",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-12",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-16",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 104,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-16",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 104,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-16",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-16",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-20",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-20",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-20",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-20",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-21",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 104,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-21",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 104,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-21",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-21",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-25",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-25",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-25",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-25",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-26",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 104,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-26",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 104,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-26",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-26",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-30",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-30",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-30",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-30",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "dynamic-type",
+        "status": "unknown",
+        "source": "apple-typography",
+        "meaning": "Product acceptance requires uncancelled scaling, at least 200% recorded stress, and preserved content. This is not a claim of testing all Dynamic Type categories."
+      },
+      {
+        "id": "navigation-continuity",
+        "status": "unknown",
+        "source": "apple-tabs",
+        "meaning": "Declared destinations, selection and task state survive adaptation; event evidence is required."
+      },
+      {
+        "id": "native-affordance-and-visual-order",
+        "status": "unknown",
+        "source": "apple-layout",
+        "meaning": "Requires rendered task, platform and assistive-technology review; geometry cannot certify familiarity or hierarchy."
+      }
+    ],
+    "failures": [],
+    "unknown": [
+      "dynamic-type",
+      "navigation-continuity",
+      "native-affordance-and-visual-order"
+    ],
+    "evidence": {
+      "engine": "react-native/Text+Yoga",
+      "receipt": "ipad/explore.json"
+    },
+    "sources": [
+      {
+        "id": "apple-accessibility",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "iOS/iPadOS default controls 44pt; minimum 28pt; support enlargement, contrast and accessible alternatives."
+      },
+      {
+        "id": "apple-layout",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Safe areas, importance/reading order, recognizable adaptation and function continuity."
+      },
+      {
+        "id": "apple-typography",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Text styles, Dynamic Type and growing/reflowing content."
+      },
+      {
+        "id": "apple-tabs",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Stable top-level destinations, labels, selection; preserve availability."
+      },
+      {
+        "id": "apple-sidebars",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/sidebars",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Hierarchical navigation and adaptation to available space."
+      },
+      {
+        "id": "apple-color",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/color",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Semantic colors, light/dark/increased-contrast variants, content/control distinction."
+      }
+    ],
+    "overallConformance": null,
+    "scope": "Checks the supplied observations and product policies, not all of Apple HIG, full accessibility, or aesthetic quality."
+  }
+}

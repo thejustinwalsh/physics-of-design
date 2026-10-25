@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "archetype": "editorial",
+  "platform": "web",
+  "viewport": {
+    "width": 1000,
+    "height": 1000,
+    "textScale": 1
+  },
+  "padding": 48,
+  "blocks": [
+    {
+      "id": "heading",
+      "role": "title",
+      "text": "The shape of a thoughtful pause",
+      "font": {
+        "file": "assets/fonts/Lato-Black.ttf",
+        "family": "Lato Black"
+      },
+      "size": 44,
+      "weight": 900,
+      "trackingEm": -0.012,
+      "leading": 1.12,
+      "measure": 760
+    },
+    {
+      "id": "prose",
+      "role": "prose",
+      "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+      "font": {
+        "file": "assets/fonts/Spectral-Regular.ttf",
+        "family": "Spectral"
+      },
+      "size": 21,
+      "weight": 400,
+      "trackingEm": 0,
+      "leading": 1.55,
+      "measure": 650
+    }
+  ],
+  "gaps": [24],
+  "responsive": {
+    "source": "astra-responsive-review-2026-10-24",
+    "anchors": [
+      {
+        "width": 360,
+        "padding": 20,
+        "gapScale": 0.8333333333333334,
+        "contentMaxWidth": 816,
+        "pattern": "stack",
+        "blocks": {
+          "heading": {
+            "sizeScale": 0.8181818181818182,
+            "leadingDelta": 0,
+            "trackingDelta": 0.002,
+            "measureScale": 0.9473684210526315
+          },
+          "prose": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 1
+          }
+        }
+      },
+      {
+        "width": 390,
+        "padding": 24,
+        "gapScale": 0.9166666666666666,
+        "contentMaxWidth": 816,
+        "pattern": "stack",
+        "blocks": {
+          "heading": {
+            "sizeScale": 0.8636363636363636,
+            "leadingDelta": 0,
+            "trackingDelta": 0.002,
+            "measureScale": 0.9473684210526315
+          },
+          "prose": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 1
+          }
+        }
+      },
+      {
+        "width": 834,
+        "padding": 40,
+        "gapScale": 1,
+        "contentMaxWidth": 816,
+        "pattern": "stack",
+        "blocks": {
+          "heading": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0.002,
+            "measureScale": 0.9473684210526315
+          },
+          "prose": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 1
+          }
+        }
+      },
+      {
+        "width": 1024,
+        "padding": 48,
+        "gapScale": 1,
+        "contentMaxWidth": 816,
+        "pattern": "stack",
+        "blocks": {
+          "heading": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0.002,
+            "measureScale": 0.9473684210526315
+          },
+          "prose": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 1
+          }
+        }
+      },
+      {
+        "width": 1440,
+        "padding": 48,
+        "gapScale": 1,
+        "contentMaxWidth": 816,
+        "pattern": "stack",
+        "blocks": {
+          "heading": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0.002,
+            "measureScale": 0.9473684210526315
+          },
+          "prose": {
+            "sizeScale": 1,
+            "leadingDelta": 0,
+            "trackingDelta": 0,
+            "measureScale": 1
+          }
+        }
+      }
+    ],
+    "split": {
+      "titleMinWidth": 240,
+      "textMinWidth": 360,
+      "gap": 40
+    }
+  }
+}

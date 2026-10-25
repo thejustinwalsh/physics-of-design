@@ -1,0 +1,727 @@
+{
+  "profile": "qwen3.5-0.8b",
+  "readout": "balanced",
+  "manifestHash": "4e5473582296885b2ac8e7a4a0b1251a388af24d87f3fa7fe655e44b581d790d",
+  "predictions": [
+    {
+      "pairId": "tuning-1",
+      "projectId": "tuning-1",
+      "split": "train",
+      "selected": "left",
+      "reversedSelected": "left",
+      "orderStable": true,
+      "results": [
+        {
+          "reverse": false,
+          "result": {
+            "selected": "left",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "left",
+                "inputHash": "04bf3fbfd0a34498939bcb4ce31ea1f700a72016801606b429eb746f6e79f75a",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "right",
+                "inputHash": "28685846c60ce5cdfe80b648284ce46b8e764f9ec95b88881e4681527f8a8f63",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "b9880bdbead8eef839e816d63bb8b20b5eb9cab5cd0c4220510e231499c7349c",
+                "4ff108a95e5c27890bf11cba8550a84de9a05894e8b5b54c39419c750692da14"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "b9880bdbead8eef839e816d63bb8b20b5eb9cab5cd0c4220510e231499c7349c",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 31979.614959
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        },
+        {
+          "reverse": true,
+          "result": {
+            "selected": "left",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "right",
+                "inputHash": "28685846c60ce5cdfe80b648284ce46b8e764f9ec95b88881e4681527f8a8f63",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "left",
+                "inputHash": "04bf3fbfd0a34498939bcb4ce31ea1f700a72016801606b429eb746f6e79f75a",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "b9880bdbead8eef839e816d63bb8b20b5eb9cab5cd0c4220510e231499c7349c",
+                "4ff108a95e5c27890bf11cba8550a84de9a05894e8b5b54c39419c750692da14"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "b9880bdbead8eef839e816d63bb8b20b5eb9cab5cd0c4220510e231499c7349c",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 53840.227125000005
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        }
+      ]
+    },
+    {
+      "pairId": "tuning-2",
+      "projectId": "tuning-2",
+      "split": "train",
+      "selected": "right",
+      "reversedSelected": "right",
+      "orderStable": true,
+      "results": [
+        {
+          "reverse": false,
+          "result": {
+            "selected": "right",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "left",
+                "inputHash": "0f47e9b4c0779109091495ab7c636ac19221bf8b35ce3128b31d251e02ae5d64",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "right",
+                "inputHash": "411769371d155594ffddb7bab46414852684a251a0cc9c831ce61ccd37b8c0bd",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "0eceb252af8a27bd05f2fea2082a07e9878dd20fec0c4b6a3228b305fbefcd7c",
+                "b330805baa353d859d9bfbf7861f0f64de355ee9499752b64bea1538241d308c"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "0eceb252af8a27bd05f2fea2082a07e9878dd20fec0c4b6a3228b305fbefcd7c",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 22980.81925
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        },
+        {
+          "reverse": true,
+          "result": {
+            "selected": "right",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "right",
+                "inputHash": "411769371d155594ffddb7bab46414852684a251a0cc9c831ce61ccd37b8c0bd",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "left",
+                "inputHash": "0f47e9b4c0779109091495ab7c636ac19221bf8b35ce3128b31d251e02ae5d64",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "0eceb252af8a27bd05f2fea2082a07e9878dd20fec0c4b6a3228b305fbefcd7c",
+                "b330805baa353d859d9bfbf7861f0f64de355ee9499752b64bea1538241d308c"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "0eceb252af8a27bd05f2fea2082a07e9878dd20fec0c4b6a3228b305fbefcd7c",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 17208.69012500001
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        }
+      ]
+    },
+    {
+      "pairId": "tuning-3",
+      "projectId": "tuning-3",
+      "split": "train",
+      "selected": "right",
+      "reversedSelected": "right",
+      "orderStable": true,
+      "results": [
+        {
+          "reverse": false,
+          "result": {
+            "selected": "right",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "left",
+                "inputHash": "fb5d0169b65558899f1c1e6552fc82155fd5f2163c6fd0978e3c53e193542cc7",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "right",
+                "inputHash": "f35bf933bc18765748671e209ddf5bd3d09e38be061a9e918e923c03b5621122",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "bf6f24b6e7cbba3339c573653c909103996e08d981830857efadb2af9d68cf46",
+                "bef7f3bfc5b205fc73026b99b833756e4bc078d241183ee52a42bfe6df494362"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "bf6f24b6e7cbba3339c573653c909103996e08d981830857efadb2af9d68cf46",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 18529.746165999997
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        },
+        {
+          "reverse": true,
+          "result": {
+            "selected": "right",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "right",
+                "inputHash": "f35bf933bc18765748671e209ddf5bd3d09e38be061a9e918e923c03b5621122",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "left",
+                "inputHash": "fb5d0169b65558899f1c1e6552fc82155fd5f2163c6fd0978e3c53e193542cc7",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "bf6f24b6e7cbba3339c573653c909103996e08d981830857efadb2af9d68cf46",
+                "bef7f3bfc5b205fc73026b99b833756e4bc078d241183ee52a42bfe6df494362"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "bf6f24b6e7cbba3339c573653c909103996e08d981830857efadb2af9d68cf46",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 13679.010167
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        }
+      ]
+    },
+    {
+      "pairId": "tuning-4",
+      "projectId": "tuning-4",
+      "split": "train",
+      "selected": "right",
+      "reversedSelected": "right",
+      "orderStable": true,
+      "results": [
+        {
+          "reverse": false,
+          "result": {
+            "selected": "right",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "left",
+                "inputHash": "248d26aff77d95f662530e49d814c63c6a9aceac561d3123ea3d9ccab47c3dc1",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "right",
+                "inputHash": "1cbf3b81bfdebbb22102bf633895c19f4e2be511f3606fac841866e60cb10954",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "ee6ba18f2faa9baf072f4e4b21fdf895b74ff3de867b0892619601ce135e3ce6",
+                "4e1961bd4673284e3f29301891aafa0a3def5600cd916eb1f9ff819461547ea1"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "ee6ba18f2faa9baf072f4e4b21fdf895b74ff3de867b0892619601ce135e3ce6",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 14982.382666999998
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        },
+        {
+          "reverse": true,
+          "result": {
+            "selected": "right",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "right",
+                "inputHash": "1cbf3b81bfdebbb22102bf633895c19f4e2be511f3606fac841866e60cb10954",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "left",
+                "inputHash": "248d26aff77d95f662530e49d814c63c6a9aceac561d3123ea3d9ccab47c3dc1",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "ee6ba18f2faa9baf072f4e4b21fdf895b74ff3de867b0892619601ce135e3ce6",
+                "4e1961bd4673284e3f29301891aafa0a3def5600cd916eb1f9ff819461547ea1"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "ee6ba18f2faa9baf072f4e4b21fdf895b74ff3de867b0892619601ce135e3ce6",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 19833.810915999988
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        }
+      ]
+    },
+    {
+      "pairId": "tuning-5",
+      "projectId": "tuning-5",
+      "split": "held-out",
+      "selected": "right",
+      "reversedSelected": "right",
+      "orderStable": true,
+      "results": [
+        {
+          "reverse": false,
+          "result": {
+            "selected": "right",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "left",
+                "inputHash": "93857bf00416455572ac01ceb8277a2fc65ec70d16752e0aa6d85ac7dddc0ed0",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "right",
+                "inputHash": "546583b21315cfcd317a53f4c5099996f2f5ae7b0c0a8be01fe139bf2f18657e",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "040e1b7af9d35a8fd4df63c0ad790bafb9f119467230be3f8744101fde98af8b",
+                "68cc6d6a00c2b605ffcbe9fa8fa1f9d6a47f56d6c7ee741bcde59d976b800513"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "040e1b7af9d35a8fd4df63c0ad790bafb9f119467230be3f8744101fde98af8b",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 24243.97533300001
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        },
+        {
+          "reverse": true,
+          "result": {
+            "selected": "right",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "right",
+                "inputHash": "546583b21315cfcd317a53f4c5099996f2f5ae7b0c0a8be01fe139bf2f18657e",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "left",
+                "inputHash": "93857bf00416455572ac01ceb8277a2fc65ec70d16752e0aa6d85ac7dddc0ed0",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "040e1b7af9d35a8fd4df63c0ad790bafb9f119467230be3f8744101fde98af8b",
+                "68cc6d6a00c2b605ffcbe9fa8fa1f9d6a47f56d6c7ee741bcde59d976b800513"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "040e1b7af9d35a8fd4df63c0ad790bafb9f119467230be3f8744101fde98af8b",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 16704.403583999985
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        }
+      ]
+    },
+    {
+      "pairId": "tuning-6",
+      "projectId": "tuning-6",
+      "split": "held-out",
+      "selected": "left",
+      "reversedSelected": "left",
+      "orderStable": true,
+      "results": [
+        {
+          "reverse": false,
+          "result": {
+            "selected": "left",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "left",
+                "inputHash": "72e6d1ee377e2aa7063b2d23b6a69faa66a2f664aae73f298606c27c3e1d1737",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "right",
+                "inputHash": "5af987b4a8382e03a4bbdc08c5f0ab02ab2856403b81849479b607a5f37ac7e6",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "227d07e7835ef59629d2cd22657a6874431d4ed746aa13894927b810ecbf2b2f",
+                "6504e91e58fdf7ce8bc55bec97210c6099d210386b24b28d753df3ebbf0081e0"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "227d07e7835ef59629d2cd22657a6874431d4ed746aa13894927b810ecbf2b2f",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 13753.576208999963
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        },
+        {
+          "reverse": true,
+          "result": {
+            "selected": "left",
+            "modelCalled": true,
+            "verified": [
+              {
+                "id": "right",
+                "inputHash": "5af987b4a8382e03a4bbdc08c5f0ab02ab2856403b81849479b607a5f37ac7e6",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              },
+              {
+                "id": "left",
+                "inputHash": "72e6d1ee377e2aa7063b2d23b6a69faa66a2f664aae73f298606c27c3e1d1737",
+                "engine": "chromium/react/stylex",
+                "scenarios": 4
+              }
+            ],
+            "rejected": [],
+            "provenance": {
+              "profile": "qwen3.5-0.8b",
+              "readoutMode": "balanced",
+              "readoutPasses": 2,
+              "aggregation": "mean option logits across canonical cyclic rotations",
+              "promptHashes": [
+                "227d07e7835ef59629d2cd22657a6874431d4ed746aa13894927b810ecbf2b2f",
+                "6504e91e58fdf7ce8bc55bec97210c6099d210386b24b28d753df3ebbf0081e0"
+              ],
+              "experimental": true,
+              "model": {
+                "source": "Qwen/Qwen3.5-0.8B",
+                "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+                "dtype": "gguf-quantized",
+                "gguf": {
+                  "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+                },
+                "backend": "llamacpp",
+                "vocab_size": 248320,
+                "threads": 8,
+                "n_gpu_layers": 0,
+                "max_prompt_tokens": 4096,
+                "context_tokens": 4352,
+                "decode_chunk": 512,
+                "llama_cpp_python_version": "0.3.35",
+                "transformers_version": "5.17.0",
+                "serving_config": "llamacpp-direct-v1"
+              },
+              "promptHash": "227d07e7835ef59629d2cd22657a6874431d4ed746aa13894927b810ecbf2b2f",
+              "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
+              "latencyMs": 18343.44962500001
+            },
+            "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed."
+          }
+        }
+      ]
+    }
+  ]
+}

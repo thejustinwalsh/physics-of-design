@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "archetype": "editorial",
+  "platform": "web",
+  "viewport": {
+    "width": 1000,
+    "height": 1000,
+    "textScale": 1
+  },
+  "padding": 16,
+  "blocks": [
+    {
+      "id": "heading",
+      "role": "title",
+      "text": "What the river remembers",
+      "font": {
+        "file": "assets/fonts/Lato-Black.ttf",
+        "family": "Lato Black",
+        "axes": {},
+        "opticalSizing": "none"
+      },
+      "size": 29,
+      "weight": 900,
+      "kerning": "auto",
+      "features": {},
+      "trackingEm": -0.012,
+      "leading": 1.14,
+      "measure": 620,
+      "align": "left",
+      "direction": "auto",
+      "language": "en",
+      "maxHeight": null
+    },
+    {
+      "id": "prose",
+      "role": "prose",
+      "text": "At the edge of the old bridge, the water carries a record of the hills. Every bend changes the current; every season changes the shore. Looking closely reveals a place that is always moving, even when it appears still. The task of observation is to notice those small changes without hurrying them into a story.",
+      "font": {
+        "file": "assets/fonts/Spectral-Regular.ttf",
+        "family": "Spectral",
+        "axes": {},
+        "opticalSizing": "none"
+      },
+      "size": 20,
+      "weight": 400,
+      "kerning": "auto",
+      "features": {},
+      "trackingEm": 0,
+      "leading": 1.55,
+      "measure": 620,
+      "align": "left",
+      "direction": "auto",
+      "language": "en",
+      "maxHeight": null
+    }
+  ],
+  "gaps": [
+    20
+  ],
+  "locks": []
+}

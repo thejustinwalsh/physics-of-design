@@ -1,0 +1,1055 @@
+[
+  {
+    "inputHash": "29f56eefdc9a4e2c9ca15e769d9f04a62760bdddbdc62b5b3c56f89c0f47c826",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 272,
+          "height": 215
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 22,
+            "width": 240.984375,
+            "height": 57,
+            "start": 0,
+            "end": 10,
+            "text": "Good work "
+          },
+          {
+            "x": 24,
+            "y": 75.75,
+            "width": 199.890625,
+            "height": 57,
+            "start": 10,
+            "end": 20,
+            "text": "takes the "
+          },
+          {
+            "x": 24,
+            "y": 129.5,
+            "width": 143.328125,
+            "height": 57,
+            "start": 20,
+            "end": 28,
+            "text": "time it "
+          },
+          {
+            "x": 24,
+            "y": 183.25,
+            "width": 133.5625,
+            "height": 57,
+            "start": 28,
+            "end": 34,
+            "text": "needs."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 22,
+          "width": 230.4375,
+          "height": 218.25
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 24,
+          "y": 263,
+          "width": 272,
+          "height": 132
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 266,
+            "width": 260.640625,
+            "height": 27,
+            "start": 0,
+            "end": 24,
+            "text": "An independent workshop "
+          },
+          {
+            "x": 24,
+            "y": 299,
+            "width": 259.171875,
+            "height": 27,
+            "start": 24,
+            "end": 50,
+            "text": "for people who care about "
+          },
+          {
+            "x": 24,
+            "y": 332,
+            "width": 223.046875,
+            "height": 27,
+            "start": 50,
+            "end": 74,
+            "text": "materials, process, and "
+          },
+          {
+            "x": 24,
+            "y": 365,
+            "width": 243.796875,
+            "height": 27,
+            "start": 74,
+            "end": 99,
+            "text": "making fewer things well."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 266,
+          "width": 255,
+          "height": 126
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "c6e4314625ae3a0abd5849a8afaf6701d2c0175dae2bf052aaa0c1c3fab6305d",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 272,
+          "height": 645.09375
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 20,
+            "width": 246.921875,
+            "height": 115,
+            "start": 0,
+            "end": 5,
+            "text": "Good "
+          },
+          {
+            "x": 24,
+            "y": 127.515625,
+            "width": 235.015625,
+            "height": 115,
+            "start": 5,
+            "end": 10,
+            "text": "work "
+          },
+          {
+            "x": 24,
+            "y": 235.03125,
+            "width": 241.734375,
+            "height": 115,
+            "start": 10,
+            "end": 16,
+            "text": "takes "
+          },
+          {
+            "x": 24,
+            "y": 342.546875,
+            "width": 158.03125,
+            "height": 115,
+            "start": 16,
+            "end": 20,
+            "text": "the "
+          },
+          {
+            "x": 24,
+            "y": 450.0625,
+            "width": 286.625,
+            "height": 115,
+            "start": 20,
+            "end": 28,
+            "text": "time it "
+          },
+          {
+            "x": 24,
+            "y": 557.578125,
+            "width": 267.125,
+            "height": 115,
+            "start": 28,
+            "end": 34,
+            "text": "needs."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 20,
+          "width": 267.125,
+          "height": 652.578125
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 24,
+          "y": 693.09375,
+          "width": 272,
+          "height": 594
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 700.09375,
+            "width": 65.53125,
+            "height": 52,
+            "start": 0,
+            "end": 3,
+            "text": "An "
+          },
+          {
+            "x": 24,
+            "y": 766.09375,
+            "width": 253.703125,
+            "height": 52,
+            "start": 3,
+            "end": 15,
+            "text": "independent "
+          },
+          {
+            "x": 24,
+            "y": 832.09375,
+            "width": 268.0625,
+            "height": 52,
+            "start": 15,
+            "end": 28,
+            "text": "workshop for "
+          },
+          {
+            "x": 24,
+            "y": 898.09375,
+            "width": 236.8125,
+            "height": 52,
+            "start": 28,
+            "end": 39,
+            "text": "people who "
+          },
+          {
+            "x": 24,
+            "y": 964.09375,
+            "width": 215.515625,
+            "height": 52,
+            "start": 39,
+            "end": 50,
+            "text": "care about "
+          },
+          {
+            "x": 24,
+            "y": 1030.09375,
+            "width": 195.8125,
+            "height": 52,
+            "start": 50,
+            "end": 61,
+            "text": "materials, "
+          },
+          {
+            "x": 24,
+            "y": 1096.09375,
+            "width": 250.265625,
+            "height": 52,
+            "start": 61,
+            "end": 74,
+            "text": "process, and "
+          },
+          {
+            "x": 24,
+            "y": 1162.09375,
+            "width": 271.21875,
+            "height": 52,
+            "start": 74,
+            "end": 87,
+            "text": "making fewer "
+          },
+          {
+            "x": 24,
+            "y": 1228.09375,
+            "width": 216.375,
+            "height": 52,
+            "start": 87,
+            "end": 99,
+            "text": "things well."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 700.09375,
+          "width": 259.953125,
+          "height": 580
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "f5415490d0b83d918e119feee9202cc0edad343ac02dfada356177c8f4d9f44f",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 342,
+          "height": 161.25
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 22,
+            "width": 240.984375,
+            "height": 57,
+            "start": 0,
+            "end": 10,
+            "text": "Good work "
+          },
+          {
+            "x": 24,
+            "y": 75.75,
+            "width": 343.1875,
+            "height": 57,
+            "start": 10,
+            "end": 28,
+            "text": "takes the time it "
+          },
+          {
+            "x": 24,
+            "y": 129.5,
+            "width": 133.5625,
+            "height": 57,
+            "start": 28,
+            "end": 34,
+            "text": "needs."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 22,
+          "width": 332.640625,
+          "height": 164.5
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 24,
+          "y": 209.25,
+          "width": 342,
+          "height": 132
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 212.25,
+            "width": 293.640625,
+            "height": 27,
+            "start": 0,
+            "end": 28,
+            "text": "An independent workshop for "
+          },
+          {
+            "x": 24,
+            "y": 245.25,
+            "width": 324.078125,
+            "height": 27,
+            "start": 28,
+            "end": 61,
+            "text": "people who care about materials, "
+          },
+          {
+            "x": 24,
+            "y": 278.25,
+            "width": 324.609375,
+            "height": 27,
+            "start": 61,
+            "end": 94,
+            "text": "process, and making fewer things "
+          },
+          {
+            "x": 24,
+            "y": 311.25,
+            "width": 44.328125,
+            "height": 27,
+            "start": 94,
+            "end": 99,
+            "text": "well."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 212.25,
+          "width": 319.421875,
+          "height": 126
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "34305d37ccb1e42c66dc42112036f8b1670d288901b0f1edf6c74af943855b25",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 342,
+          "height": 645.09375
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 20,
+            "width": 246.921875,
+            "height": 115,
+            "start": 0,
+            "end": 5,
+            "text": "Good "
+          },
+          {
+            "x": 24,
+            "y": 127.515625,
+            "width": 235.015625,
+            "height": 115,
+            "start": 5,
+            "end": 10,
+            "text": "work "
+          },
+          {
+            "x": 24,
+            "y": 235.03125,
+            "width": 241.734375,
+            "height": 115,
+            "start": 10,
+            "end": 16,
+            "text": "takes "
+          },
+          {
+            "x": 24,
+            "y": 342.546875,
+            "width": 158.03125,
+            "height": 115,
+            "start": 16,
+            "end": 20,
+            "text": "the "
+          },
+          {
+            "x": 24,
+            "y": 450.0625,
+            "width": 286.625,
+            "height": 115,
+            "start": 20,
+            "end": 28,
+            "text": "time it "
+          },
+          {
+            "x": 24,
+            "y": 557.578125,
+            "width": 267.125,
+            "height": 115,
+            "start": 28,
+            "end": 34,
+            "text": "needs."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 20,
+          "width": 267.125,
+          "height": 652.578125
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 24,
+          "y": 693.09375,
+          "width": 342,
+          "height": 462
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 700.09375,
+            "width": 319.21875,
+            "height": 52,
+            "start": 0,
+            "end": 15,
+            "text": "An independent "
+          },
+          {
+            "x": 24,
+            "y": 766.09375,
+            "width": 268.0625,
+            "height": 52,
+            "start": 15,
+            "end": 28,
+            "text": "workshop for "
+          },
+          {
+            "x": 24,
+            "y": 832.09375,
+            "width": 329.3125,
+            "height": 52,
+            "start": 28,
+            "end": 44,
+            "text": "people who care "
+          },
+          {
+            "x": 24,
+            "y": 898.09375,
+            "width": 318.828125,
+            "height": 52,
+            "start": 44,
+            "end": 61,
+            "text": "about materials, "
+          },
+          {
+            "x": 24,
+            "y": 964.09375,
+            "width": 250.265625,
+            "height": 52,
+            "start": 61,
+            "end": 74,
+            "text": "process, and "
+          },
+          {
+            "x": 24,
+            "y": 1030.09375,
+            "width": 271.21875,
+            "height": 52,
+            "start": 74,
+            "end": 87,
+            "text": "making fewer "
+          },
+          {
+            "x": 24,
+            "y": 1096.09375,
+            "width": 216.375,
+            "height": 52,
+            "start": 87,
+            "end": 99,
+            "text": "things well."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 700.09375,
+          "width": 318.046875,
+          "height": 448
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "91b17a6b7b81809d33a964dd6217e89c18b9a9db7c3eb80884840c5d87ba20b3",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 719,
+          "height": 53.75
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 22,
+            "width": 717.703125,
+            "height": 57,
+            "start": 0,
+            "end": 34,
+            "text": "Good work takes the time it needs."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 22,
+          "width": 717.703125,
+          "height": 57
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 24,
+          "y": 101.75,
+          "width": 580,
+          "height": 66
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 104.75,
+            "width": 519.796875,
+            "height": 27,
+            "start": 0,
+            "end": 50,
+            "text": "An independent workshop for people who care about "
+          },
+          {
+            "x": 24,
+            "y": 137.75,
+            "width": 466.828125,
+            "height": 27,
+            "start": 50,
+            "end": 99,
+            "text": "materials, process, and making fewer things well."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 104.75,
+          "width": 514.15625,
+          "height": 60
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "5a78b4ed8c1009c92848711ad118b8018dbba4c5c6bf71fada10060843348050",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 719,
+          "height": 215.03125
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 20,
+            "width": 723.65625,
+            "height": 115,
+            "start": 0,
+            "end": 16,
+            "text": "Good work takes "
+          },
+          {
+            "x": 24,
+            "y": 127.515625,
+            "width": 711.75,
+            "height": 115,
+            "start": 16,
+            "end": 34,
+            "text": "the time it needs."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 20,
+          "width": 711.75,
+          "height": 222.515625
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 24,
+          "y": 263.03125,
+          "width": 580,
+          "height": 264
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 270.03125,
+            "width": 587.25,
+            "height": 52,
+            "start": 0,
+            "end": 28,
+            "text": "An independent workshop for "
+          },
+          {
+            "x": 24,
+            "y": 336.03125,
+            "width": 452.328125,
+            "height": 52,
+            "start": 28,
+            "end": 50,
+            "text": "people who care about "
+          },
+          {
+            "x": 24,
+            "y": 402.03125,
+            "width": 446.0625,
+            "height": 52,
+            "start": 50,
+            "end": 74,
+            "text": "materials, process, and "
+          },
+          {
+            "x": 24,
+            "y": 468.03125,
+            "width": 487.59375,
+            "height": 52,
+            "start": 74,
+            "end": 99,
+            "text": "making fewer things well."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 270.03125,
+          "width": 575.984375,
+          "height": 250
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "0d81a07ba7d8896bb0e6f186d579516ece96af91400fec71fd3967869e757682",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 720,
+          "height": 53.75
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 22,
+            "width": 717.703125,
+            "height": 57,
+            "start": 0,
+            "end": 34,
+            "text": "Good work takes the time it needs."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 22,
+          "width": 717.703125,
+          "height": 57
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 24,
+          "y": 101.75,
+          "width": 580,
+          "height": 66
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 104.75,
+            "width": 519.796875,
+            "height": 27,
+            "start": 0,
+            "end": 50,
+            "text": "An independent workshop for people who care about "
+          },
+          {
+            "x": 24,
+            "y": 137.75,
+            "width": 466.828125,
+            "height": 27,
+            "start": 50,
+            "end": 99,
+            "text": "materials, process, and making fewer things well."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 104.75,
+          "width": 514.15625,
+          "height": 60
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "a5ab6ea7b7dd8105ac62bda35ced372851433611fb8b99d8d52838dd3f993328",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 24,
+          "y": 24,
+          "width": 720,
+          "height": 215.03125
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 20,
+            "width": 723.65625,
+            "height": 115,
+            "start": 0,
+            "end": 16,
+            "text": "Good work takes "
+          },
+          {
+            "x": 24,
+            "y": 127.515625,
+            "width": 711.75,
+            "height": 115,
+            "start": 16,
+            "end": 34,
+            "text": "the time it needs."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 20,
+          "width": 711.75,
+          "height": 222.515625
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 24,
+          "y": 263.03125,
+          "width": 580,
+          "height": 264
+        },
+        "lines": [
+          {
+            "x": 24,
+            "y": 270.03125,
+            "width": 587.25,
+            "height": 52,
+            "start": 0,
+            "end": 28,
+            "text": "An independent workshop for "
+          },
+          {
+            "x": 24,
+            "y": 336.03125,
+            "width": 452.328125,
+            "height": 52,
+            "start": 28,
+            "end": 50,
+            "text": "people who care about "
+          },
+          {
+            "x": 24,
+            "y": 402.03125,
+            "width": 446.0625,
+            "height": 52,
+            "start": 50,
+            "end": 74,
+            "text": "materials, process, and "
+          },
+          {
+            "x": 24,
+            "y": 468.03125,
+            "width": 487.59375,
+            "height": 52,
+            "start": 74,
+            "end": 99,
+            "text": "making fewer things well."
+          }
+        ],
+        "inlineBounds": {
+          "x": 24,
+          "y": 270.03125,
+          "width": 575.984375,
+          "height": 250
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  }
+]

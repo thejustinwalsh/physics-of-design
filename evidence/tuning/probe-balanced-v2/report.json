@@ -1,0 +1,136 @@
+{
+  "profile": "qwen3.5-0.8b",
+  "readout": "balanced",
+  "pairs": 6,
+  "orderStable": 6,
+  "directionalJudgments": 9,
+  "matches": 2,
+  "bySplit": [
+    {
+      "split": "train",
+      "judgments": 5,
+      "matches": 2
+    },
+    {
+      "split": "held-out",
+      "judgments": 4,
+      "matches": 0
+    }
+  ],
+  "directional": [
+    {
+      "pairId": "tuning-2",
+      "split": "train",
+      "teacher": {
+        "kind": "synthetic-astra",
+        "agent": "/root/astra_design_review/assessment_a",
+        "model": "gpt-6-astra",
+        "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+      },
+      "chosen": "right",
+      "predicted": "right"
+    },
+    {
+      "pairId": "tuning-3",
+      "split": "train",
+      "teacher": {
+        "kind": "synthetic-astra",
+        "agent": "/root/astra_design_review/assessment_a",
+        "model": "gpt-6-astra",
+        "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+      },
+      "chosen": "left",
+      "predicted": "right"
+    },
+    {
+      "pairId": "tuning-5",
+      "split": "held-out",
+      "teacher": {
+        "kind": "synthetic-astra",
+        "agent": "/root/astra_design_review/assessment_a",
+        "model": "gpt-6-astra",
+        "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+      },
+      "chosen": "left",
+      "predicted": "right"
+    },
+    {
+      "pairId": "tuning-6",
+      "split": "held-out",
+      "teacher": {
+        "kind": "synthetic-astra",
+        "agent": "/root/astra_design_review/assessment_a",
+        "model": "gpt-6-astra",
+        "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+      },
+      "chosen": "right",
+      "predicted": "left"
+    },
+    {
+      "pairId": "tuning-1",
+      "split": "train",
+      "teacher": {
+        "kind": "synthetic-astra",
+        "agent": "/root/astra_design_review/assessment_b",
+        "model": "gpt-6-astra",
+        "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+      },
+      "chosen": "right",
+      "predicted": "left"
+    },
+    {
+      "pairId": "tuning-3",
+      "split": "train",
+      "teacher": {
+        "kind": "synthetic-astra",
+        "agent": "/root/astra_design_review/assessment_b",
+        "model": "gpt-6-astra",
+        "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+      },
+      "chosen": "left",
+      "predicted": "right"
+    },
+    {
+      "pairId": "tuning-4",
+      "split": "train",
+      "teacher": {
+        "kind": "synthetic-astra",
+        "agent": "/root/astra_design_review/assessment_b",
+        "model": "gpt-6-astra",
+        "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+      },
+      "chosen": "right",
+      "predicted": "right"
+    },
+    {
+      "pairId": "tuning-5",
+      "split": "held-out",
+      "teacher": {
+        "kind": "synthetic-astra",
+        "agent": "/root/astra_design_review/assessment_b",
+        "model": "gpt-6-astra",
+        "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+      },
+      "chosen": "left",
+      "predicted": "right"
+    },
+    {
+      "pairId": "tuning-6",
+      "split": "held-out",
+      "teacher": {
+        "kind": "synthetic-astra",
+        "agent": "/root/astra_design_review/assessment_b",
+        "model": "gpt-6-astra",
+        "skillCommit": "936867543ac2576920d663cc9803597f6044f3ac"
+      },
+      "chosen": "right",
+      "predicted": "left"
+    }
+  ],
+  "limits": [
+    "A small confounded synthetic-teacher batch; judgments within a pair are not independent projects.",
+    "This measures pipeline behavior and teacher agreement, not human design preference or calibrated quality.",
+    "Option-order changes are a diagnostic; no weights, prompts, equations or model selection were tuned using these labels.",
+    "Training/held-out JSONL remain separate. No training was performed."
+  ]
+}

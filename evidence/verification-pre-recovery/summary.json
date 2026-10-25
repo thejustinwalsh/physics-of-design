@@ -1,0 +1,140 @@
+{
+  "completedAt": "2026-10-25T00:21:44.742Z",
+  "results": [
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "code": 0,
+      "latencyMs": 1180
+    },
+    {
+      "name": "types",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "code": 0,
+      "latencyMs": 1042
+    },
+    {
+      "name": "native-types",
+      "command": [
+        "npm",
+        "run",
+        "typecheck",
+        "--prefix",
+        "native"
+      ],
+      "code": 0,
+      "latencyMs": 742
+    },
+    {
+      "name": "unit",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "code": 0,
+      "latencyMs": 2242
+    },
+    {
+      "name": "browser",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/browser.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 7174
+    },
+    {
+      "name": "commands-and-app",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/commands.integration.ts",
+        "test/app.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 15419
+    },
+    {
+      "name": "consumer",
+      "command": [
+        "node",
+        "scripts/consumer-check.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 496
+    },
+    {
+      "name": "native-ios",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/native.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 11621
+    },
+    {
+      "name": "native-android",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/native.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 12025
+    },
+    {
+      "name": "selector",
+      "command": [
+        "node",
+        "scripts/selector-smoke.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 103035
+    },
+    {
+      "name": "matrix-web",
+      "command": [
+        "node",
+        "scripts/system-matrix.mjs",
+        "web"
+      ],
+      "code": 0,
+      "latencyMs": 111850
+    },
+    {
+      "name": "matrix-native-ios",
+      "command": [
+        "node",
+        "scripts/system-matrix.mjs",
+        "native-ios"
+      ],
+      "code": 0,
+      "latencyMs": 158108
+    },
+    {
+      "name": "matrix-native-android",
+      "command": [
+        "node",
+        "scripts/system-matrix.mjs",
+        "native-android"
+      ],
+      "code": 1,
+      "latencyMs": 201014
+    }
+  ],
+  "passed": false
+}

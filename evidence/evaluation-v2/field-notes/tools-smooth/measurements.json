@@ -1,0 +1,1037 @@
+[
+  {
+    "inputHash": "20dd74b79830e80436b89fd846449bbf8a0ea8faba9839e47cc88cd24cf396ac",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 288,
+          "height": 117.28125
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 290.703125,
+            "height": 41,
+            "start": 0,
+            "end": 19,
+            "text": "Keep the questions "
+          },
+          {
+            "x": 16,
+            "y": 54.09375,
+            "width": 253.0625,
+            "height": 41,
+            "start": 19,
+            "end": 36,
+            "text": "that change your "
+          },
+          {
+            "x": 16,
+            "y": 93.1875,
+            "width": 83.765625,
+            "height": 41,
+            "start": 36,
+            "end": 41,
+            "text": "work."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 283.125,
+          "height": 119.1875
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 16,
+          "y": 157.28125,
+          "width": 288,
+          "height": 120
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 160.28125,
+            "width": 247.421875,
+            "height": 24,
+            "start": 0,
+            "end": 29,
+            "text": "A field notebook for patient "
+          },
+          {
+            "x": 16,
+            "y": 190.28125,
+            "width": 289.46875,
+            "height": 24,
+            "start": 29,
+            "end": 62,
+            "text": "observation, useful experiments, "
+          },
+          {
+            "x": 16,
+            "y": 220.28125,
+            "width": 236.125,
+            "height": 24,
+            "start": 62,
+            "end": 89,
+            "text": "and the ideas that deserve "
+          },
+          {
+            "x": 16,
+            "y": 250.28125,
+            "width": 115.421875,
+            "height": 24,
+            "start": 89,
+            "end": 102,
+            "text": "another look."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 160.28125,
+          "width": 284.34375,
+          "height": 114
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "2a98dd72d16d6b723ffcf32835b0cc4b012fdd8f8dac1d4e2d22e2471a73bcb4",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 288,
+          "height": 469.125
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 14,
+            "width": 280.3125,
+            "height": 81,
+            "start": 0,
+            "end": 9,
+            "text": "Keep the "
+          },
+          {
+            "x": 16,
+            "y": 92.1875,
+            "width": 301.09375,
+            "height": 81,
+            "start": 9,
+            "end": 19,
+            "text": "questions "
+          },
+          {
+            "x": 16,
+            "y": 170.375,
+            "width": 135.265625,
+            "height": 81,
+            "start": 19,
+            "end": 24,
+            "text": "that "
+          },
+          {
+            "x": 16,
+            "y": 248.5625,
+            "width": 224.109375,
+            "height": 81,
+            "start": 24,
+            "end": 31,
+            "text": "change "
+          },
+          {
+            "x": 16,
+            "y": 326.75,
+            "width": 146.765625,
+            "height": 81,
+            "start": 31,
+            "end": 36,
+            "text": "your "
+          },
+          {
+            "x": 16,
+            "y": 404.9375,
+            "width": 167.53125,
+            "height": 81,
+            "start": 36,
+            "end": 41,
+            "text": "work."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 14,
+          "width": 285.953125,
+          "height": 471.9375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 16,
+          "y": 509.125,
+          "width": 288,
+          "height": 540
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 515.125,
+            "width": 122.09375,
+            "height": 48,
+            "start": 0,
+            "end": 8,
+            "text": "A field "
+          },
+          {
+            "x": 16,
+            "y": 575.125,
+            "width": 238.34375,
+            "height": 48,
+            "start": 8,
+            "end": 21,
+            "text": "notebook for "
+          },
+          {
+            "x": 16,
+            "y": 635.125,
+            "width": 134.4375,
+            "height": 48,
+            "start": 21,
+            "end": 29,
+            "text": "patient "
+          },
+          {
+            "x": 16,
+            "y": 695.125,
+            "width": 226.875,
+            "height": 48,
+            "start": 29,
+            "end": 42,
+            "text": "observation, "
+          },
+          {
+            "x": 16,
+            "y": 755.125,
+            "width": 116.5625,
+            "height": 48,
+            "start": 42,
+            "end": 49,
+            "text": "useful "
+          },
+          {
+            "x": 16,
+            "y": 815.125,
+            "width": 235.53125,
+            "height": 48,
+            "start": 49,
+            "end": 62,
+            "text": "experiments, "
+          },
+          {
+            "x": 16,
+            "y": 875.125,
+            "width": 243.4375,
+            "height": 48,
+            "start": 62,
+            "end": 76,
+            "text": "and the ideas "
+          },
+          {
+            "x": 16,
+            "y": 935.125,
+            "width": 228.84375,
+            "height": 48,
+            "start": 76,
+            "end": 89,
+            "text": "that deserve "
+          },
+          {
+            "x": 16,
+            "y": 995.125,
+            "width": 230.828125,
+            "height": 48,
+            "start": 89,
+            "end": 102,
+            "text": "another look."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 515.125,
+          "width": 233.1875,
+          "height": 528
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "ca1a03e8b71ab0d8edd4c80275903025383eec9d5053577cf05cd85fe85ace96",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 358,
+          "height": 78.1875
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 358.328125,
+            "height": 41,
+            "start": 0,
+            "end": 24,
+            "text": "Keep the questions that "
+          },
+          {
+            "x": 16,
+            "y": 54.09375,
+            "width": 269.1875,
+            "height": 41,
+            "start": 24,
+            "end": 41,
+            "text": "change your work."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 350.75,
+          "height": 80.09375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 16,
+          "y": 118.1875,
+          "width": 358,
+          "height": 90
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 121.1875,
+            "width": 360.859375,
+            "height": 24,
+            "start": 0,
+            "end": 42,
+            "text": "A field notebook for patient observation, "
+          },
+          {
+            "x": 16,
+            "y": 151.1875,
+            "width": 338.1875,
+            "height": 24,
+            "start": 42,
+            "end": 81,
+            "text": "useful experiments, and the ideas that "
+          },
+          {
+            "x": 16,
+            "y": 181.1875,
+            "width": 189.390625,
+            "height": 24,
+            "start": 81,
+            "end": 102,
+            "text": "deserve another look."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 121.1875,
+          "width": 355.734375,
+          "height": 84
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "e9cb93e01aa9f69a70444917ccfe0fe4f47f0d51db55495d056d8670d5e2e7c8",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 358,
+          "height": 312.75
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 14,
+            "width": 280.3125,
+            "height": 81,
+            "start": 0,
+            "end": 9,
+            "text": "Keep the "
+          },
+          {
+            "x": 16,
+            "y": 92.1875,
+            "width": 301.09375,
+            "height": 81,
+            "start": 9,
+            "end": 19,
+            "text": "questions "
+          },
+          {
+            "x": 16,
+            "y": 170.375,
+            "width": 359.359375,
+            "height": 81,
+            "start": 19,
+            "end": 31,
+            "text": "that change "
+          },
+          {
+            "x": 16,
+            "y": 248.5625,
+            "width": 314.265625,
+            "height": 81,
+            "start": 31,
+            "end": 41,
+            "text": "your work."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 14,
+          "width": 345.921875,
+          "height": 315.5625
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 16,
+          "y": 352.75,
+          "width": 358,
+          "height": 360
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 358.75,
+            "width": 360.421875,
+            "height": 48,
+            "start": 0,
+            "end": 21,
+            "text": "A field notebook for "
+          },
+          {
+            "x": 16,
+            "y": 418.75,
+            "width": 361.296875,
+            "height": 48,
+            "start": 21,
+            "end": 42,
+            "text": "patient observation, "
+          },
+          {
+            "x": 16,
+            "y": 478.75,
+            "width": 352.078125,
+            "height": 48,
+            "start": 42,
+            "end": 62,
+            "text": "useful experiments, "
+          },
+          {
+            "x": 16,
+            "y": 538.75,
+            "width": 324.296875,
+            "height": 48,
+            "start": 62,
+            "end": 81,
+            "text": "and the ideas that "
+          },
+          {
+            "x": 16,
+            "y": 598.75,
+            "width": 294.234375,
+            "height": 48,
+            "start": 81,
+            "end": 97,
+            "text": "deserve another "
+          },
+          {
+            "x": 16,
+            "y": 658.75,
+            "width": 84.5625,
+            "height": 48,
+            "start": 97,
+            "end": 102,
+            "text": "look."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 358.75,
+          "width": 351.046875,
+          "height": 348
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "d80e32e811193022efca0fdbee73b458efd261f406357905f644e806bce83927",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 620,
+          "height": 78.1875
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 543.734375,
+            "height": 41,
+            "start": 0,
+            "end": 36,
+            "text": "Keep the questions that change your "
+          },
+          {
+            "x": 16,
+            "y": 54.09375,
+            "width": 83.765625,
+            "height": 41,
+            "start": 36,
+            "end": 41,
+            "text": "work."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 536.84375,
+          "height": 80.09375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 16,
+          "y": 118.1875,
+          "width": 540,
+          "height": 60
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 121.1875,
+            "width": 536.875,
+            "height": 24,
+            "start": 0,
+            "end": 62,
+            "text": "A field notebook for patient observation, useful experiments, "
+          },
+          {
+            "x": 16,
+            "y": 151.1875,
+            "width": 351.53125,
+            "height": 24,
+            "start": 62,
+            "end": 102,
+            "text": "and the ideas that deserve another look."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 121.1875,
+          "width": 531.75,
+          "height": 54
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "1a8bf242ea7dde355c96a435bf954495ae489ff3c3430e7a90663bc43e862919",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 620,
+          "height": 234.5625
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 14,
+            "width": 581.390625,
+            "height": 81,
+            "start": 0,
+            "end": 19,
+            "text": "Keep the questions "
+          },
+          {
+            "x": 16,
+            "y": 92.1875,
+            "width": 506.109375,
+            "height": 81,
+            "start": 19,
+            "end": 36,
+            "text": "that change your "
+          },
+          {
+            "x": 16,
+            "y": 170.375,
+            "width": 167.53125,
+            "height": 81,
+            "start": 36,
+            "end": 41,
+            "text": "work."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 14,
+          "width": 566.25,
+          "height": 237.375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 16,
+          "y": 274.5625,
+          "width": 540,
+          "height": 240
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 280.5625,
+            "width": 494.84375,
+            "height": 48,
+            "start": 0,
+            "end": 29,
+            "text": "A field notebook for patient "
+          },
+          {
+            "x": 16,
+            "y": 340.5625,
+            "width": 343.421875,
+            "height": 48,
+            "start": 29,
+            "end": 49,
+            "text": "observation, useful "
+          },
+          {
+            "x": 16,
+            "y": 400.5625,
+            "width": 478.953125,
+            "height": 48,
+            "start": 49,
+            "end": 76,
+            "text": "experiments, and the ideas "
+          },
+          {
+            "x": 16,
+            "y": 460.5625,
+            "width": 459.640625,
+            "height": 48,
+            "start": 76,
+            "end": 102,
+            "text": "that deserve another look."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 280.5625,
+          "width": 484.59375,
+          "height": 228
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "2ed6859554409c5674b2bcbb571d39a6464eb4bdf64734d5ba851a59359bd8aa",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 620,
+          "height": 78.1875
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 543.734375,
+            "height": 41,
+            "start": 0,
+            "end": 36,
+            "text": "Keep the questions that change your "
+          },
+          {
+            "x": 16,
+            "y": 54.09375,
+            "width": 83.765625,
+            "height": 41,
+            "start": 36,
+            "end": 41,
+            "text": "work."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 536.84375,
+          "height": 80.09375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 16,
+          "y": 118.1875,
+          "width": 540,
+          "height": 60
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 121.1875,
+            "width": 536.875,
+            "height": 24,
+            "start": 0,
+            "end": 62,
+            "text": "A field notebook for patient observation, useful experiments, "
+          },
+          {
+            "x": 16,
+            "y": 151.1875,
+            "width": 351.53125,
+            "height": 24,
+            "start": 62,
+            "end": 102,
+            "text": "and the ideas that deserve another look."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 121.1875,
+          "width": 531.75,
+          "height": 54
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "f0e49aa383e076694fb949a1e540d49d99a291f6541e706c5f87b18be58c977a",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 620,
+          "height": 234.5625
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 14,
+            "width": 581.390625,
+            "height": 81,
+            "start": 0,
+            "end": 19,
+            "text": "Keep the questions "
+          },
+          {
+            "x": 16,
+            "y": 92.1875,
+            "width": 506.109375,
+            "height": 81,
+            "start": 19,
+            "end": 36,
+            "text": "that change your "
+          },
+          {
+            "x": 16,
+            "y": 170.375,
+            "width": 167.53125,
+            "height": 81,
+            "start": 36,
+            "end": 41,
+            "text": "work."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 14,
+          "width": 566.25,
+          "height": 237.375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 16,
+          "y": 274.5625,
+          "width": 540,
+          "height": 240
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 280.5625,
+            "width": 494.84375,
+            "height": 48,
+            "start": 0,
+            "end": 29,
+            "text": "A field notebook for patient "
+          },
+          {
+            "x": 16,
+            "y": 340.5625,
+            "width": 343.421875,
+            "height": 48,
+            "start": 29,
+            "end": 49,
+            "text": "observation, useful "
+          },
+          {
+            "x": 16,
+            "y": 400.5625,
+            "width": 478.953125,
+            "height": 48,
+            "start": 49,
+            "end": 76,
+            "text": "experiments, and the ideas "
+          },
+          {
+            "x": 16,
+            "y": 460.5625,
+            "width": 459.640625,
+            "height": 48,
+            "start": 76,
+            "end": 102,
+            "text": "that deserve another look."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 280.5625,
+          "width": 484.59375,
+          "height": 228
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  }
+]

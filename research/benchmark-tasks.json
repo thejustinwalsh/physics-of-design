@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "seed": 20261024,
+  "scope": "Four original held-out decision tasks; first pass only. No human acceptance or award-design claim.",
+  "tasks": [
+    {
+      "projectId": "field-notes",
+      "taskId": "hero",
+      "archetype": "hero",
+      "title": "Keep the questions that change your work.",
+      "prose": "A field notebook for patient observation, useful experiments, and the ideas that deserve another look.",
+      "criterion": "A bold, inviting title, a clearly subordinate subtitle, and deliberate breathing room."
+    },
+    {
+      "projectId": "night-workshop",
+      "taskId": "hero",
+      "archetype": "hero",
+      "title": "Good work takes the time it needs.",
+      "prose": "An independent workshop for people who care about materials, process, and making fewer things well.",
+      "criterion": "An assertive marketing title and a warm, readable supporting voice."
+    },
+    {
+      "projectId": "river-observatory",
+      "taskId": "editorial",
+      "archetype": "editorial",
+      "title": "What the river remembers",
+      "prose": "At the edge of the old bridge, the water carries a record of the hills. Every bend changes the current; every season changes the shore. Looking closely reveals a place that is always moving, even when it appears still. The task of observation is to notice those small changes without hurrying them into a story.",
+      "criterion": "A confident editorial heading and calm prose with a comfortable reading rhythm."
+    },
+    {
+      "projectId": "library-after-hours",
+      "taskId": "editorial",
+      "archetype": "editorial",
+      "title": "A library after closing time",
+      "prose": "When the last visitor leaves, the room becomes easier to hear. The ventilation turns a page somewhere near the window. A chair settles against the floor. Books that seemed like answers in the afternoon become invitations again. Tomorrow the room will fill with questions, but for now it holds the quiet possibility of another beginning.",
+      "criterion": "A distinct heading and generous, unhurried editorial text without an oversized display treatment."
+    }
+  ]
+}

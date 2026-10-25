@@ -1,0 +1,90 @@
+{
+  "name": "Fieldwork",
+  "description": "An independent journal of place, practice and paying attention.",
+  "issue": "08",
+  "theme": "The outside issue",
+  "provenance": "Original fictional publication and sample writing. Photographs are generated imagined scenes, not reportage or identified real places.",
+  "stories": [
+    {
+      "id": "looking-longer",
+      "category": "Architecture & attention",
+      "title": "The art of looking longer",
+      "deck": "On a quiet headland, a small observatory asks a larger question: what changes when we give a place our undivided attention?",
+      "image": "headland",
+      "minutes": 2,
+      "byline": "Fieldwork studio",
+      "caption": "An imagined coastal observatory. Original generated editorial image.",
+      "paragraphs": [
+        "There is a kind of architecture that asks very little of the landscape. It offers a place to stand, a frame for the weather, perhaps a patch of shade. Everything else was already there.",
+        "The observatory on our imagined headland is one such place. A square of concrete, a narrow opening, a long view. From a distance it seems almost incidental. Up close, its restraint becomes the point.",
+        "We tend to think of attention as something we give. A resource to spend carefully, an effort to sustain. But a good place can return it to us. The sound of wind in dry grass. The small change in the water when a cloud passes. The line where stone becomes sky.",
+        "For this issue, we began with a simple practice: stay a little longer. Take the slower road. Return to the same window at a different hour. Let the familiar become specific again.",
+        "The useful lesson is not that every building should disappear, or that quiet is always better than noise. It is that a place can hold more than our first impression of it. Design can make room for that second look.",
+        "We left without a photograph that could explain the whole afternoon. That felt like a reasonable outcome. Some things are better carried as an inclination: to look a little more closely next time."
+      ],
+      "focal": {
+        "x": 0.82,
+        "y": 0.19
+      },
+      "format": "feature",
+      "readingEstimate": {
+        "words": 224,
+        "wordsPerMinute": 180,
+        "kind": "heuristic estimate, individual reading speeds vary"
+      }
+    },
+    {
+      "id": "long-way-home",
+      "category": "Routes & rituals",
+      "title": "Taking the long way home",
+      "deck": "A winding road, a familiar landscape, and the small discoveries that arrive when efficiency stops being the destination.",
+      "image": "forest",
+      "minutes": 1,
+      "byline": "Fieldwork studio",
+      "caption": "An imagined mountain route. Original generated editorial image.",
+      "paragraphs": [
+        "The shorter road would have brought us home before the light changed. We took the other one: the route through the trees, past the house with the weathered roof and the turn where the valley opens.",
+        "A detour changes more than the distance. It gives familiar things a different order. The mountain appears before the town. A sound arrives before its source. You notice the stone wall that someone has repaired, carefully, for years.",
+        "There is no argument here against getting somewhere on time. Only a reminder that a journey can hold a little more than its destination, when the day allows it.",
+        "We stopped at the last bend. Below us the lake had become a strip of pale metal. The road continued into shadow. We would arrive home slightly later, carrying a better account of where we had been."
+      ],
+      "focal": {
+        "x": 0.55,
+        "y": 0.4
+      },
+      "format": "essay",
+      "readingEstimate": {
+        "words": 140,
+        "wordsPerMinute": 180,
+        "kind": "heuristic estimate, individual reading speeds vary"
+      }
+    },
+    {
+      "id": "notes-on-noticing",
+      "category": "A field guide",
+      "title": "Notes on noticing",
+      "deck": "Five small practices for seeing the everyday with fresh eyes.",
+      "image": "headland",
+      "minutes": 1,
+      "byline": "Fieldwork studio",
+      "caption": "Detail from an imagined coastal landscape.",
+      "paragraphs": [
+        "Choose one thing to notice on your next walk: doorways, shadows, the spaces between buildings. A small constraint can make a familiar route feel surprisingly new.",
+        "Write down one detail before you reach for a camera. Give it a shape in language. You may discover that the thing you noticed was a relationship rather than an object.",
+        "Return once. A place is never quite the same at another hour. Pay attention to what changed, and to what you missed the first time.",
+        "Listen for a moment without deciding what the sound means. The useful detail may be the space between sounds: a pause in traffic, a room settling, a bird heard before it is seen.",
+        "Compare two things that seem the same. Notice where they differ. A repeated doorway, a line of trees, or the light on two neighboring walls can turn repetition into a small lesson in attention."
+      ],
+      "focal": {
+        "x": 0.82,
+        "y": 0.19
+      },
+      "format": "guide",
+      "readingEstimate": {
+        "words": 149,
+        "wordsPerMinute": 180,
+        "kind": "heuristic estimate, individual reading speeds vary"
+      }
+    }
+  ]
+}

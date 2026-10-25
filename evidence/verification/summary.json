@@ -1,0 +1,151 @@
+{
+  "completedAt": "2026-10-25T03:10:37.641Z",
+  "complete": false,
+  "expectedStages": 15,
+  "results": [
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "code": 0,
+      "latencyMs": 1903
+    },
+    {
+      "name": "types",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "code": 0,
+      "latencyMs": 1044
+    },
+    {
+      "name": "native-types",
+      "command": [
+        "npm",
+        "run",
+        "typecheck",
+        "--prefix",
+        "native"
+      ],
+      "code": 0,
+      "latencyMs": 851
+    },
+    {
+      "name": "unit",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "code": 0,
+      "latencyMs": 2209
+    },
+    {
+      "name": "browser",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/browser.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 7560
+    },
+    {
+      "name": "commands-and-app",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/commands.integration.ts",
+        "test/app.integration.ts",
+        "test/context.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 15746
+    },
+    {
+      "name": "consumer",
+      "command": [
+        "node",
+        "scripts/consumer-check.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 449
+    },
+    {
+      "name": "fieldwork-build",
+      "command": [
+        "node",
+        "scripts/build-fieldwork.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 211
+    },
+    {
+      "name": "fieldwork-web",
+      "command": [
+        "node",
+        "scripts/prove-fieldwork-web.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 4565
+    },
+    {
+      "name": "native-ios",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/native.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 12179
+    },
+    {
+      "name": "native-android",
+      "command": [
+        "npx",
+        "tsx",
+        "--test",
+        "test/native.integration.ts"
+      ],
+      "code": 0,
+      "latencyMs": 12223
+    },
+    {
+      "name": "selector",
+      "command": [
+        "node",
+        "scripts/selector-smoke.mjs"
+      ],
+      "code": 0,
+      "latencyMs": 91867
+    },
+    {
+      "name": "matrix-web",
+      "command": [
+        "node",
+        "scripts/system-matrix.mjs",
+        "web"
+      ],
+      "code": 0,
+      "latencyMs": 115983
+    },
+    {
+      "name": "matrix-native-ios",
+      "command": [
+        "node",
+        "scripts/system-matrix.mjs",
+        "native-ios"
+      ],
+      "code": 0,
+      "latencyMs": 156124
+    }
+  ],
+  "passed": false
+}

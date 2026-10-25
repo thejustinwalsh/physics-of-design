@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "Physics of Design Measurement",
+    "slug": "physics-of-design-measurement",
+    "version": "0.1.0",
+    "ios": {
+      "bundleIdentifier": "local.physicsdesign.measurement",
+      "infoPlist": {
+        "NSAppTransportSecurity": { "NSAllowsLocalNetworking": true }
+      }
+    },
+    "android": { "package": "local.physicsdesign.measurement" },
+    "plugins": ["expo-font"]
+  }
+}

@@ -1,0 +1,1036 @@
+{
+  "receipt": {
+    "version": 1,
+    "capturedAt": "2026-10-25T03:02:53.508Z",
+    "engine": "react-native/Text+Yoga",
+    "platform": "ios",
+    "snapshot": {
+      "proofId": "ipad-accessibility-dark-saved-1792897370791",
+      "screen": "saved",
+      "story": null,
+      "saved": [
+        "long-way-home"
+      ],
+      "query": "",
+      "readerSize": 21,
+      "offlineReady": true,
+      "hydrated": true,
+      "readerPosition": {
+        "content": 1279.5,
+        "viewport": 932,
+        "offset": 0
+      },
+      "restoredFor": "",
+      "appearance": "dark",
+      "highContrast": false,
+      "plan": {
+        "request": {
+          "width": 834,
+          "textScale": 3.571,
+          "mode": "app",
+          "density": 1,
+          "expression": 1,
+          "readingSize": 21,
+          "readingLeading": 1.55
+        },
+        "gutter": 40,
+        "gap": 22.518,
+        "sidebarWidth": 220,
+        "contentWidth": 754,
+        "navigation": "tabs",
+        "columns": 1,
+        "sectionGap": 54.21,
+        "titleSize": 48,
+        "titleLeading": 1.08,
+        "titleTrackingEm": -0.016,
+        "bodySize": 17,
+        "readingSize": 21,
+        "readingLeading": 1.55,
+        "readingMeasure": 640,
+        "imageAspect": 1.55,
+        "controlSize": 44,
+        "spaces": {
+          "inline": 8,
+          "related": 16,
+          "group": 20,
+          "section": 24,
+          "major": 40
+        },
+        "storyTitleSize": 31,
+        "variables": [
+          "width",
+          "textScale",
+          "density",
+          "expression",
+          "readingSize",
+          "readingLeading"
+        ],
+        "dependencyEffects": {
+          "width": [
+            "gutters",
+            "contentWidth",
+            "navigation",
+            "columns",
+            "titleSize",
+            "imageAspect"
+          ],
+          "textScale": [
+            "navigation",
+            "columns",
+            "renderer wrapping"
+          ],
+          "density": [
+            "gap",
+            "sectionGap"
+          ],
+          "expression": [
+            "titleSize",
+            "titleTrackingEm",
+            "renderer wrapping"
+          ],
+          "readingSize": [
+            "reading geometry",
+            "scroll progress"
+          ],
+          "readingLeading": [
+            "reading geometry",
+            "scroll progress"
+          ]
+        },
+        "provenance": {
+          "kind": "heuristic",
+          "sources": [
+            "apple-layout",
+            "apple-typography",
+            "impeccable-layout",
+            "local-policy"
+          ],
+          "uncertainty": "Uncalibrated geometry proposals; real renderer and task review remain required."
+        },
+        "contract": "Flex topology, natural text heights, no CSS Grid, no cancellation of system text enlargement."
+      },
+      "window": {
+        "fontScale": 3.571,
+        "width": 834,
+        "height": 1210,
+        "scale": 2
+      },
+      "coordinateSpace": {
+        "units": "dp",
+        "origin": "window",
+        "screenOffset": {
+          "x": 0,
+          "y": 0
+        },
+        "screen": {
+          "fontScale": 3.571,
+          "width": 834,
+          "height": 1210,
+          "scale": 2
+        }
+      },
+      "safeArea": {
+        "top": 32,
+        "right": 0,
+        "bottom": 20,
+        "left": 0
+      },
+      "palette": {
+        "canvas": "#171e1b",
+        "surface": "#242e28",
+        "ink": "#f6f3e9",
+        "muted": "#bec5bb",
+        "line": "#48554c",
+        "accent": "#cad9b6",
+        "accentBg": "#364735",
+        "paper": "#30362b"
+      }
+    },
+    "observations": [
+      {
+        "id": "control-4",
+        "name": "Reading and appearance settings",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 750,
+          "y": 69.5,
+          "width": 44,
+          "height": 44
+        },
+        "visibleBox": {
+          "x": 750,
+          "y": 69.5,
+          "width": 44,
+          "height": 44
+        }
+      },
+      {
+        "id": "control-16",
+        "name": "Journal",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 16,
+          "y": 1093.5,
+          "width": 264.5,
+          "height": 96.5
+        },
+        "visibleBox": {
+          "x": 16,
+          "y": 1093.5,
+          "width": 264.5,
+          "height": 96.5
+        }
+      },
+      {
+        "id": "control-18",
+        "name": "Explore",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 284.5,
+          "y": 1093.5,
+          "width": 265,
+          "height": 96.5
+        },
+        "visibleBox": {
+          "x": 284.5,
+          "y": 1093.5,
+          "width": 265,
+          "height": 96.5
+        }
+      },
+      {
+        "id": "control-20",
+        "name": "Saved",
+        "kind": "target",
+        "clipId": null,
+        "box": {
+          "x": 553.5,
+          "y": 1093.5,
+          "width": 264.5,
+          "height": 96.5
+        },
+        "visibleBox": {
+          "x": 553.5,
+          "y": 1093.5,
+          "width": 264.5,
+          "height": 96.5
+        }
+      },
+      {
+        "id": "text-3",
+        "name": "Fieldwork.",
+        "kind": "text",
+        "clipId": null,
+        "text": "Fieldwork.",
+        "lines": [
+          {
+            "text": "Fieldwork.",
+            "x": 0,
+            "y": 0,
+            "width": 380.07843577861786,
+            "height": 98.55960273742676,
+            "descender": 17.494329485893246,
+            "capHeight": 59.5874931550026,
+            "ascender": 81.06527325153351,
+            "xHeight": 42.33956267595291
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 42,
+          "width": 380.5,
+          "height": 99
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 42,
+          "width": 380.5,
+          "height": 99
+        }
+      },
+      {
+        "id": "text-6",
+        "name": "YOUR PERSONAL COLLECTION",
+        "kind": "text",
+        "clipId": "clip-5",
+        "text": "YOUR PERSONAL COLLECTION",
+        "lines": [
+          {
+            "text": "YOUR PERSONAL COLLECTION",
+            "x": 0,
+            "y": 0,
+            "width": 576.7432985186576,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.498366291522977,
+            "ascender": 38.77034807682037,
+            "xHeight": 20.24935606241226
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 171,
+          "width": 754,
+          "height": 47.5
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 171,
+          "width": 754,
+          "height": 47.5
+        }
+      },
+      {
+        "id": "text-7",
+        "name": "Saved for later",
+        "kind": "text",
+        "clipId": "clip-5",
+        "text": "Saved for later",
+        "lines": [
+          {
+            "text": "Saved for ",
+            "x": 0,
+            "y": 0,
+            "width": 748.651829071045,
+            "height": 205.68960571289062,
+            "descender": 36.50990501403808,
+            "capHeight": 124.35650745391847,
+            "ascender": 169.17970069885254,
+            "xHeight": 88.3608264541626
+          },
+          {
+            "text": "later",
+            "x": 0,
+            "y": 205.68960571289062,
+            "width": 345.4436657333374,
+            "height": 205.68960571289062,
+            "descender": 36.50990501403808,
+            "capHeight": 124.35650745391847,
+            "ascender": 169.17970069885254,
+            "xHeight": 88.3608264541626
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 226.5,
+          "width": 754,
+          "height": 411.5
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 226.5,
+          "width": 754,
+          "height": 411.5
+        }
+      },
+      {
+        "id": "text-8",
+        "name": "1 story · Ready wherever you are.",
+        "kind": "text",
+        "clipId": "clip-5",
+        "text": "1 story · Ready wherever you are.",
+        "lines": [
+          {
+            "text": "1 story · Ready wherever ",
+            "x": 0,
+            "y": 0,
+            "width": 671.4497921490669,
+            "height": 85.7040023803711,
+            "descender": 19.35839153766632,
+            "capHeight": 43.49656670808792,
+            "ascender": 66.34561084270477,
+            "xHeight": 30.74809635400772
+          },
+          {
+            "text": "you are.",
+            "x": 0,
+            "y": 85.7040023803711,
+            "width": 211.65496137857434,
+            "height": 85.7040023803711,
+            "descender": 19.35839153766632,
+            "capHeight": 43.49656670808792,
+            "ascender": 66.34561084270477,
+            "xHeight": 30.74809635400772
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 646,
+          "width": 754,
+          "height": 171.5
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 646,
+          "width": 754,
+          "height": 171.5
+        }
+      },
+      {
+        "id": "text-15",
+        "name": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
+        "kind": "text",
+        "clipId": "clip-5",
+        "text": "An original publication concept. Stories and imagined landscapes by Fieldwork studio.",
+        "lines": [
+          {
+            "text": "An original publication concept. Stories and ",
+            "x": 0,
+            "y": 0,
+            "width": 754,
+            "height": 57.13600158691406,
+            "descender": 13.366253371238713,
+            "capHeight": 28.144837281703946,
+            "ascender": 43.76974821567535,
+            "xHeight": 19.89582705259323
+          },
+          {
+            "text": "imagined landscapes by Fieldwork studio.",
+            "x": 0,
+            "y": 57.13600158691406,
+            "width": 711.1628842520713,
+            "height": 57.13600158691406,
+            "descender": 13.366253371238713,
+            "capHeight": 28.144837281703946,
+            "ascender": 43.76974821567535,
+            "xHeight": 19.89582705259323
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 40,
+          "y": 1268,
+          "width": 754,
+          "height": 114.5
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 1268,
+          "width": 754,
+          "height": 0
+        }
+      },
+      {
+        "id": "text-17",
+        "name": "Journal",
+        "kind": "text",
+        "clipId": null,
+        "text": "Journal",
+        "lines": [
+          {
+            "text": "Journal",
+            "x": 0,
+            "y": 0,
+            "width": 125.07070747375488,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.144837281703946,
+            "ascender": 38.77034807682037,
+            "xHeight": 19.89582705259323
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 85.5,
+          "y": 1132.5,
+          "width": 125.5,
+          "height": 47.5
+        },
+        "visibleBox": {
+          "x": 85.5,
+          "y": 1132.5,
+          "width": 125.5,
+          "height": 47.5
+        }
+      },
+      {
+        "id": "text-19",
+        "name": "Explore",
+        "kind": "text",
+        "clipId": null,
+        "text": "Explore",
+        "lines": [
+          {
+            "text": "Explore",
+            "x": 0,
+            "y": 0,
+            "width": 130.03975411176683,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.144837281703946,
+            "ascender": 38.77034807682037,
+            "xHeight": 19.89582705259323
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 351.5,
+          "y": 1132.5,
+          "width": 130.5,
+          "height": 47.5
+        },
+        "visibleBox": {
+          "x": 351.5,
+          "y": 1132.5,
+          "width": 130.5,
+          "height": 47.5
+        }
+      },
+      {
+        "id": "text-21",
+        "name": "Saved",
+        "kind": "text",
+        "clipId": null,
+        "text": "Saved",
+        "lines": [
+          {
+            "text": "Saved",
+            "x": 0,
+            "y": 0,
+            "width": 104.7624299097061,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.498366291522977,
+            "ascender": 38.77034807682037,
+            "xHeight": 20.24935606241226
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 633,
+          "y": 1132.5,
+          "width": 105,
+          "height": 47.5
+        },
+        "visibleBox": {
+          "x": 633,
+          "y": 1132.5,
+          "width": 105,
+          "height": 47.5
+        }
+      },
+      {
+        "id": "clip-5",
+        "name": "scroll viewport",
+        "kind": "clip",
+        "clipId": null,
+        "box": {
+          "x": 0,
+          "y": 151,
+          "width": 834,
+          "height": 932
+        },
+        "visibleBox": {
+          "x": 0,
+          "y": 151,
+          "width": 834,
+          "height": 932
+        }
+      },
+      {
+        "id": "text-30",
+        "name": "ROUTES & RITUALS",
+        "kind": "text",
+        "clipId": "clip-5",
+        "text": "ROUTES & RITUALS",
+        "lines": [
+          {
+            "text": "ROUTES & RITUALS",
+            "x": 0,
+            "y": 0,
+            "width": 360.79599502086637,
+            "height": 47.137201309204094,
+            "descender": 8.366853232383725,
+            "capHeight": 28.498366291522977,
+            "ascender": 38.77034807682037,
+            "xHeight": 20.24935606241226
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 148,
+          "y": 862,
+          "width": 646,
+          "height": 47.5
+        },
+        "visibleBox": {
+          "x": 148,
+          "y": 862,
+          "width": 646,
+          "height": 47.5
+        }
+      },
+      {
+        "id": "text-31",
+        "name": "Taking the long way home",
+        "kind": "text",
+        "clipId": "clip-5",
+        "text": "Taking the long way home",
+        "lines": [
+          {
+            "text": "Taking the long ",
+            "x": 0,
+            "y": 0,
+            "width": 592.9181434679032,
+            "height": 96.41700267791748,
+            "descender": 38.0275800561905,
+            "capHeight": 54.20778150558472,
+            "ascender": 58.38942262172698,
+            "xHeight": 36.959851026535034
+          },
+          {
+            "text": "way home",
+            "x": 0,
+            "y": 96.41700267791748,
+            "width": 364.09559911251074,
+            "height": 96.41700267791748,
+            "descender": 38.0275800561905,
+            "capHeight": 54.20778150558472,
+            "ascender": 58.38942262172698,
+            "xHeight": 36.959851026535034
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 148,
+          "y": 916.5,
+          "width": 646,
+          "height": 193
+        },
+        "visibleBox": {
+          "x": 148,
+          "y": 916.5,
+          "width": 646,
+          "height": 166.5
+        }
+      },
+      {
+        "id": "text-32",
+        "name": "1 min read · Available offline",
+        "kind": "text",
+        "clipId": "clip-5",
+        "text": "1 min read · Available offline",
+        "lines": [
+          {
+            "text": "1 min read · Available offline",
+            "x": 0,
+            "y": 0,
+            "width": 529.543604707718,
+            "height": 51.422401428222656,
+            "descender": 9.12747625350952,
+            "capHeight": 30.703458852767945,
+            "ascender": 42.294925174713136,
+            "xHeight": 21.70453860282898
+          }
+        ],
+        "allowsScaling": true,
+        "cap": null,
+        "box": {
+          "x": 148,
+          "y": 1116.5,
+          "width": 646,
+          "height": 51.5
+        },
+        "visibleBox": {
+          "x": 148,
+          "y": 1116.5,
+          "width": 646,
+          "height": 0
+        }
+      },
+      {
+        "id": "control-28",
+        "name": "Read Taking the long way home",
+        "kind": "target",
+        "clipId": "clip-5",
+        "box": {
+          "x": 40,
+          "y": 862,
+          "width": 754,
+          "height": 306
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 862,
+          "width": 754,
+          "height": 221
+        }
+      },
+      {
+        "id": "media-29",
+        "name": "long-way-home",
+        "kind": "media",
+        "clipId": "clip-5",
+        "role": "thumbnail",
+        "box": {
+          "x": 40,
+          "y": 862,
+          "width": 92,
+          "height": 104
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 862,
+          "width": 92,
+          "height": 104
+        }
+      },
+      {
+        "id": "control-33",
+        "name": "Remove Taking the long way home",
+        "kind": "target",
+        "clipId": "clip-5",
+        "box": {
+          "x": 40,
+          "y": 1184,
+          "width": 44,
+          "height": 44
+        },
+        "visibleBox": {
+          "x": 40,
+          "y": 1184,
+          "width": 44,
+          "height": 0
+        }
+      }
+    ],
+    "incomplete": false,
+    "scope": "Actual native view frames and Text.onTextLayout observations from the product. Declared props are identified separately. Screenshots and task review remain required."
+  },
+  "audit": {
+    "platform": "ipados",
+    "geometryTolerance": 0.0011539459228515625,
+    "geometryToleranceBasis": "Eight float32 relative epsilons at viewport magnitude for native coordinate reconstruction; does not alter the authored 28/44pt guidance.",
+    "checks": [
+      {
+        "id": "control-minimum",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 44,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-4",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-16",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-16",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-16",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-16",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-18",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-18",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-18",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-18",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-20",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-20",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 96.5,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-20",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-20",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "control-minimum",
+        "subject": "control-28",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 306,
+        "threshold": 28,
+        "meaning": "Current iOS/iPadOS HIG minimum; not the recommended default."
+      },
+      {
+        "id": "control-default",
+        "subject": "control-28",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "measured": 306,
+        "threshold": 44,
+        "meaning": "HIG default adopted as Fieldwork product policy; larger text may need larger controls."
+      },
+      {
+        "id": "control-label",
+        "subject": "control-28",
+        "status": "pass",
+        "source": "apple-accessibility",
+        "meaning": "Declared accessible name is present; spoken clarity needs assistive-technology review."
+      },
+      {
+        "id": "safe-area",
+        "subject": "control-28",
+        "status": "pass",
+        "source": "apple-layout",
+        "meaning": "Interactive frame fits declared safe area. Background imagery may extend beyond it."
+      },
+      {
+        "id": "dynamic-type",
+        "status": "unknown",
+        "source": "apple-typography",
+        "meaning": "Product acceptance requires uncancelled scaling, at least 200% recorded stress, and preserved content. This is not a claim of testing all Dynamic Type categories."
+      },
+      {
+        "id": "navigation-continuity",
+        "status": "unknown",
+        "source": "apple-tab-bars",
+        "meaning": "Declared destinations, selection and task state survive adaptation; event evidence is required."
+      },
+      {
+        "id": "native-affordance-and-visual-order",
+        "status": "unknown",
+        "source": "apple-layout",
+        "meaning": "Requires rendered task, platform and assistive-technology review; geometry cannot certify familiarity or hierarchy."
+      }
+    ],
+    "failures": [],
+    "unknown": [
+      "dynamic-type",
+      "navigation-continuity",
+      "native-affordance-and-visual-order"
+    ],
+    "evidence": {
+      "engine": "react-native/Text+Yoga",
+      "receipt": "ipad-accessibility-dark/saved.json"
+    },
+    "sources": [
+      {
+        "id": "apple-accessibility",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "iOS/iPadOS default controls 44pt; minimum 28pt; support enlargement, contrast and accessible alternatives."
+      },
+      {
+        "id": "apple-layout",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Safe areas, importance/reading order, recognizable adaptation and function continuity."
+      },
+      {
+        "id": "apple-typography",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Text styles, Dynamic Type and growing/reflowing content."
+      },
+      {
+        "id": "apple-tab-bars",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Stable top-level destinations, labels, selection; preserve availability."
+      },
+      {
+        "id": "apple-sidebars",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/sidebars",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Hierarchical navigation and adaptation to available space."
+      },
+      {
+        "id": "apple-color",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/color",
+        "checked": "2026-10-24",
+        "kind": "platform-guidance",
+        "scope": "Semantic colors, light/dark/increased-contrast variants, content/control distinction."
+      }
+    ],
+    "overallConformance": null,
+    "scope": "Checks the supplied observations and product policies, not all of Apple HIG, full accessibility, or aesthetic quality."
+  },
+  "alignment": {
+    "constraints": [],
+    "viewport": {
+      "width": 834,
+      "height": 1210
+    },
+    "context": {
+      "direction": "ltr",
+      "flow": "column",
+      "alignmentTolerance": 4,
+      "source": "renderer-supplied rectangles"
+    },
+    "rectangleCount": 1,
+    "zeroAreaRectangles": [],
+    "outsideViewport": [],
+    "alignment": {
+      "tolerance": 4,
+      "kind": "calculation",
+      "pairs": [],
+      "preferenceSource": "caller tolerance; no universal alignment target is inferred"
+    },
+    "proximity": [],
+    "hierarchy": {
+      "kind": "descriptor",
+      "areaRanking": [
+        {
+          "id": "media-29",
+          "area": 9568
+        }
+      ],
+      "largestToMedianArea": 1,
+      "declaredPriority": [],
+      "interpretation": "box area and declared priority are not font weight, perceived emphasis, comprehension or task importance"
+    },
+    "balance": {
+      "kind": "descriptor",
+      "occupiedUnionCentroid": {
+        "x": 86,
+        "y": 914
+      },
+      "normalizedOffset": {
+        "x": -0.39688249400479614,
+        "y": 0.2553719008264463
+      },
+      "interpretation": "geometric occupied-area center, not salience-weighted visual balance; asymmetry is not a defect"
+    },
+    "whitespace": {
+      "kind": "calculation",
+      "occupiedUnionArea": 9568,
+      "viewportArea": 1009140,
+      "unoccupiedArea": 999572,
+      "unoccupiedFraction": 0.9905186594526032,
+      "interpretation": "unoccupied supplied rectangle area, not glyph-ink whitespace; clipping and union prevent double counting"
+    },
+    "overlap": {
+      "kind": "calculation",
+      "pairs": [],
+      "interpretation": "pairwise intersections; intentional layering and parent/child containment are not automatically errors"
+    },
+    "readingOrder": {
+      "declared": [],
+      "steps": [],
+      "kind": "descriptor",
+      "interpretation": "geometric reversals relative to declared axis/direction only; not DOM, focus, screen-reader or multi-column order validation"
+    },
+    "provenance": {
+      "measurements": "renderer-supplied rectangles",
+      "geometry": "deterministic axis-aligned rectangle calculations; source measurement quality remains the caller responsibility",
+      "judgment": "none: no preference rating, universal beauty score, or optimization target"
+    },
+    "limitations": [
+      "Supply comparable semantic regions; including a full-surface container makes its area occupied by definition.",
+      "Union occupancy/centroid are invariant to duplicate nested coverage; pairwise alignment/proximity and area hierarchy are not.",
+      "No glyph ink, color salience, occlusion order, gaze, semantics, motion or interaction is inferred from boxes.",
+      "Geometry can describe grouping and rhythm, but human task context determines whether they work.",
+      "No layout is emitted; any downstream implementation must preserve the project flex/Yoga-only contract."
+    ]
+  }
+}

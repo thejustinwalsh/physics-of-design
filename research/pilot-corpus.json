@@ -1,0 +1,365 @@
+{
+  "records": [
+    {
+      "id": "pilot-hero",
+      "projectId": "pilot-hero",
+      "designer": "Physics of Design project",
+      "source": "examples/hero.json",
+      "attribution": "Original specimen text and arrangement created for this project; bundled fonts retain their OFL licenses.",
+      "year": 2026,
+      "genre": "marketing",
+      "audience": "general English readers",
+      "stratum": "original-pilot",
+      "split": "calibration",
+      "rights": {
+        "basis": "original",
+        "license": "CC0-1.0 for specimen text and arrangement; fonts separately OFL-1.1",
+        "evidence": "research/pilot-rights.md"
+      },
+      "state": {
+        "version": 1,
+        "archetype": "hero",
+        "platform": "web",
+        "viewport": {
+          "width": 1280,
+          "height": 900,
+          "textScale": 1
+        },
+        "padding": 64,
+        "blocks": [
+          {
+            "id": "title",
+            "role": "title",
+            "text": "Make room for what matters.",
+            "font": {
+              "file": "assets/fonts/Lato-Black.ttf",
+              "family": "Lato Black"
+            },
+            "size": 88,
+            "weight": 900,
+            "trackingEm": -0.024,
+            "leading": 1.02,
+            "measure": 1080
+          },
+          {
+            "id": "subtitle",
+            "role": "subtitle",
+            "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+            "font": {
+              "file": "assets/fonts/Lato-Regular.ttf",
+              "family": "Lato"
+            },
+            "size": 24,
+            "weight": 400,
+            "trackingEm": 0,
+            "leading": 1.45,
+            "measure": 660
+          }
+        ],
+        "gaps": [28]
+      }
+    },
+    {
+      "id": "pilot-hero-0.85",
+      "projectId": "pilot-hero",
+      "designer": "Physics of Design project",
+      "source": "examples/hero.json",
+      "attribution": "Original specimen text and arrangement created for this project; bundled fonts retain their OFL licenses.",
+      "year": 2026,
+      "genre": "marketing",
+      "audience": "general English readers",
+      "stratum": "controlled-perturbation",
+      "split": "calibration",
+      "rights": {
+        "basis": "original",
+        "license": "CC0-1.0 for specimen text and arrangement; fonts separately OFL-1.1",
+        "evidence": "research/pilot-rights.md"
+      },
+      "state": {
+        "version": 1,
+        "archetype": "hero",
+        "platform": "web",
+        "viewport": {
+          "width": 1280,
+          "height": 900,
+          "textScale": 1
+        },
+        "padding": 64,
+        "blocks": [
+          {
+            "id": "title",
+            "role": "title",
+            "text": "Make room for what matters.",
+            "font": {
+              "file": "assets/fonts/Lato-Black.ttf",
+              "family": "Lato Black"
+            },
+            "size": 74.8,
+            "weight": 900,
+            "trackingEm": -0.024,
+            "leading": 1.02,
+            "measure": 1080
+          },
+          {
+            "id": "subtitle",
+            "role": "subtitle",
+            "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+            "font": {
+              "file": "assets/fonts/Lato-Regular.ttf",
+              "family": "Lato"
+            },
+            "size": 24,
+            "weight": 400,
+            "trackingEm": 0,
+            "leading": 1.45,
+            "measure": 660
+          }
+        ],
+        "gaps": [28]
+      },
+      "controlOf": "pilot-hero"
+    },
+    {
+      "id": "pilot-hero-1.3",
+      "projectId": "pilot-hero",
+      "designer": "Physics of Design project",
+      "source": "examples/hero.json",
+      "attribution": "Original specimen text and arrangement created for this project; bundled fonts retain their OFL licenses.",
+      "year": 2026,
+      "genre": "marketing",
+      "audience": "general English readers",
+      "stratum": "controlled-perturbation",
+      "split": "calibration",
+      "rights": {
+        "basis": "original",
+        "license": "CC0-1.0 for specimen text and arrangement; fonts separately OFL-1.1",
+        "evidence": "research/pilot-rights.md"
+      },
+      "state": {
+        "version": 1,
+        "archetype": "hero",
+        "platform": "web",
+        "viewport": {
+          "width": 1280,
+          "height": 900,
+          "textScale": 1
+        },
+        "padding": 64,
+        "blocks": [
+          {
+            "id": "title",
+            "role": "title",
+            "text": "Make room for what matters.",
+            "font": {
+              "file": "assets/fonts/Lato-Black.ttf",
+              "family": "Lato Black"
+            },
+            "size": 114.4,
+            "weight": 900,
+            "trackingEm": -0.024,
+            "leading": 1.02,
+            "measure": 1080
+          },
+          {
+            "id": "subtitle",
+            "role": "subtitle",
+            "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+            "font": {
+              "file": "assets/fonts/Lato-Regular.ttf",
+              "family": "Lato"
+            },
+            "size": 24,
+            "weight": 400,
+            "trackingEm": 0,
+            "leading": 1.45,
+            "measure": 660
+          }
+        ],
+        "gaps": [28]
+      },
+      "controlOf": "pilot-hero"
+    },
+    {
+      "id": "pilot-editorial",
+      "projectId": "pilot-editorial",
+      "designer": "Physics of Design project",
+      "source": "examples/editorial.json",
+      "attribution": "Original specimen text and arrangement created for this project; bundled fonts retain their OFL licenses.",
+      "year": 2026,
+      "genre": "editorial",
+      "audience": "general English readers",
+      "stratum": "original-pilot",
+      "split": "calibration",
+      "rights": {
+        "basis": "original",
+        "license": "CC0-1.0 for specimen text and arrangement; fonts separately OFL-1.1",
+        "evidence": "research/pilot-rights.md"
+      },
+      "state": {
+        "version": 1,
+        "archetype": "editorial",
+        "platform": "web",
+        "viewport": {
+          "width": 1000,
+          "height": 1000,
+          "textScale": 1
+        },
+        "padding": 48,
+        "blocks": [
+          {
+            "id": "heading",
+            "role": "title",
+            "text": "The shape of a thoughtful pause",
+            "font": {
+              "file": "assets/fonts/Lato-Black.ttf",
+              "family": "Lato Black"
+            },
+            "size": 44,
+            "weight": 900,
+            "trackingEm": -0.012,
+            "leading": 1.12,
+            "measure": 760
+          },
+          {
+            "id": "prose",
+            "role": "prose",
+            "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+            "font": {
+              "file": "assets/fonts/Spectral-Regular.ttf",
+              "family": "Spectral"
+            },
+            "size": 21,
+            "weight": 400,
+            "trackingEm": 0,
+            "leading": 1.55,
+            "measure": 650
+          }
+        ],
+        "gaps": [24]
+      }
+    },
+    {
+      "id": "pilot-editorial-0.85",
+      "projectId": "pilot-editorial",
+      "designer": "Physics of Design project",
+      "source": "examples/editorial.json",
+      "attribution": "Original specimen text and arrangement created for this project; bundled fonts retain their OFL licenses.",
+      "year": 2026,
+      "genre": "editorial",
+      "audience": "general English readers",
+      "stratum": "controlled-perturbation",
+      "split": "calibration",
+      "rights": {
+        "basis": "original",
+        "license": "CC0-1.0 for specimen text and arrangement; fonts separately OFL-1.1",
+        "evidence": "research/pilot-rights.md"
+      },
+      "state": {
+        "version": 1,
+        "archetype": "editorial",
+        "platform": "web",
+        "viewport": {
+          "width": 1000,
+          "height": 1000,
+          "textScale": 1
+        },
+        "padding": 48,
+        "blocks": [
+          {
+            "id": "heading",
+            "role": "title",
+            "text": "The shape of a thoughtful pause",
+            "font": {
+              "file": "assets/fonts/Lato-Black.ttf",
+              "family": "Lato Black"
+            },
+            "size": 37.4,
+            "weight": 900,
+            "trackingEm": -0.012,
+            "leading": 1.12,
+            "measure": 760
+          },
+          {
+            "id": "prose",
+            "role": "prose",
+            "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+            "font": {
+              "file": "assets/fonts/Spectral-Regular.ttf",
+              "family": "Spectral"
+            },
+            "size": 21,
+            "weight": 400,
+            "trackingEm": 0,
+            "leading": 1.55,
+            "measure": 650
+          }
+        ],
+        "gaps": [24]
+      },
+      "controlOf": "pilot-editorial"
+    },
+    {
+      "id": "pilot-editorial-1.3",
+      "projectId": "pilot-editorial",
+      "designer": "Physics of Design project",
+      "source": "examples/editorial.json",
+      "attribution": "Original specimen text and arrangement created for this project; bundled fonts retain their OFL licenses.",
+      "year": 2026,
+      "genre": "editorial",
+      "audience": "general English readers",
+      "stratum": "controlled-perturbation",
+      "split": "calibration",
+      "rights": {
+        "basis": "original",
+        "license": "CC0-1.0 for specimen text and arrangement; fonts separately OFL-1.1",
+        "evidence": "research/pilot-rights.md"
+      },
+      "state": {
+        "version": 1,
+        "archetype": "editorial",
+        "platform": "web",
+        "viewport": {
+          "width": 1000,
+          "height": 1000,
+          "textScale": 1
+        },
+        "padding": 48,
+        "blocks": [
+          {
+            "id": "heading",
+            "role": "title",
+            "text": "The shape of a thoughtful pause",
+            "font": {
+              "file": "assets/fonts/Lato-Black.ttf",
+              "family": "Lato Black"
+            },
+            "size": 57.2,
+            "weight": 900,
+            "trackingEm": -0.012,
+            "leading": 1.12,
+            "measure": 760
+          },
+          {
+            "id": "prose",
+            "role": "prose",
+            "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+            "font": {
+              "file": "assets/fonts/Spectral-Regular.ttf",
+              "family": "Spectral"
+            },
+            "size": 21,
+            "weight": 400,
+            "trackingEm": 0,
+            "leading": 1.55,
+            "measure": 650
+          }
+        ],
+        "gaps": [24]
+      },
+      "controlOf": "pilot-editorial"
+    }
+  ],
+  "widths": [360, 767, 1280],
+  "textScales": [1, 2],
+  "probes": true
+}

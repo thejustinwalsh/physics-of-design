@@ -1,0 +1,1397 @@
+[
+  {
+    "inputHash": "889183941d09e35946003185e0c2c92d2e7045627f7737b6433a9bd8776a4a36",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 288,
+          "height": 66.0625
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 183.625,
+            "height": 34,
+            "start": 0,
+            "end": 15,
+            "text": "What the river "
+          },
+          {
+            "x": 16,
+            "y": 48.03125,
+            "width": 138.375,
+            "height": 34,
+            "start": 15,
+            "end": 24,
+            "text": "remembers"
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 177.296875,
+          "height": 67.03125
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 16,
+          "y": 102.0625,
+          "width": 288,
+          "height": 303.90625
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 102.0625,
+            "width": 280.65625,
+            "height": 29,
+            "start": 0,
+            "end": 35,
+            "text": "At the edge of the old bridge, the "
+          },
+          {
+            "x": 16,
+            "y": 132.453125,
+            "width": 285.296875,
+            "height": 29,
+            "start": 35,
+            "end": 72,
+            "text": "water carries a record of the hills. "
+          },
+          {
+            "x": 16,
+            "y": 162.84375,
+            "width": 274.203125,
+            "height": 29,
+            "start": 72,
+            "end": 104,
+            "text": "Every bend changes the current; "
+          },
+          {
+            "x": 16,
+            "y": 193.234375,
+            "width": 269.953125,
+            "height": 29,
+            "start": 104,
+            "end": 136,
+            "text": "every season changes the shore. "
+          },
+          {
+            "x": 16,
+            "y": 223.625,
+            "width": 262.328125,
+            "height": 29,
+            "start": 136,
+            "end": 168,
+            "text": "Looking closely reveals a place "
+          },
+          {
+            "x": 16,
+            "y": 254.015625,
+            "width": 283.359375,
+            "height": 29,
+            "start": 168,
+            "end": 201,
+            "text": "that is always moving, even when "
+          },
+          {
+            "x": 16,
+            "y": 284.40625,
+            "width": 227.703125,
+            "height": 29,
+            "start": 201,
+            "end": 231,
+            "text": "it appears still. The task of "
+          },
+          {
+            "x": 16,
+            "y": 314.796875,
+            "width": 250.78125,
+            "height": 29,
+            "start": 231,
+            "end": 262,
+            "text": "observation is to notice those "
+          },
+          {
+            "x": 16,
+            "y": 345.1875,
+            "width": 270.625,
+            "height": 29,
+            "start": 262,
+            "end": 293,
+            "text": "small changes without hurrying "
+          },
+          {
+            "x": 16,
+            "y": 375.578125,
+            "width": 146.515625,
+            "height": 29,
+            "start": 293,
+            "end": 311,
+            "text": "them into a story."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 102.0625,
+          "width": 280.546875,
+          "height": 302.515625
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "383450a9fa4cd0627847d7c4357289e26088a5ecc7096a01a7d46dae6002587e",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 288,
+          "height": 198.234375
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 243.375,
+            "height": 67,
+            "start": 0,
+            "end": 9,
+            "text": "What the "
+          },
+          {
+            "x": 16,
+            "y": 81.078125,
+            "width": 123.859375,
+            "height": 67,
+            "start": 9,
+            "end": 15,
+            "text": "river "
+          },
+          {
+            "x": 16,
+            "y": 147.15625,
+            "width": 276.734375,
+            "height": 67,
+            "start": 15,
+            "end": 24,
+            "text": "remembers"
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 276.734375,
+          "height": 199.15625
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 16,
+          "y": 234.234375,
+          "width": 288,
+          "height": 1276.734375
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 235.234375,
+            "width": 244.6875,
+            "height": 58,
+            "start": 0,
+            "end": 15,
+            "text": "At the edge of "
+          },
+          {
+            "x": 16,
+            "y": 296.03125,
+            "width": 253.15625,
+            "height": 58,
+            "start": 15,
+            "end": 31,
+            "text": "the old bridge, "
+          },
+          {
+            "x": 16,
+            "y": 356.828125,
+            "width": 290.25,
+            "height": 58,
+            "start": 31,
+            "end": 49,
+            "text": "the water carries "
+          },
+          {
+            "x": 16,
+            "y": 417.625,
+            "width": 252.59375,
+            "height": 58,
+            "start": 49,
+            "end": 65,
+            "text": "a record of the "
+          },
+          {
+            "x": 16,
+            "y": 478.421875,
+            "width": 288.15625,
+            "height": 58,
+            "start": 65,
+            "end": 83,
+            "text": "hills. Every bend "
+          },
+          {
+            "x": 16,
+            "y": 539.21875,
+            "width": 208.78125,
+            "height": 58,
+            "start": 83,
+            "end": 95,
+            "text": "changes the "
+          },
+          {
+            "x": 16,
+            "y": 600.015625,
+            "width": 240.515625,
+            "height": 58,
+            "start": 95,
+            "end": 110,
+            "text": "current; every "
+          },
+          {
+            "x": 16,
+            "y": 660.8125,
+            "width": 267.453125,
+            "height": 58,
+            "start": 110,
+            "end": 125,
+            "text": "season changes "
+          },
+          {
+            "x": 16,
+            "y": 721.609375,
+            "width": 174.625,
+            "height": 58,
+            "start": 125,
+            "end": 136,
+            "text": "the shore. "
+          },
+          {
+            "x": 16,
+            "y": 782.40625,
+            "width": 273.375,
+            "height": 58,
+            "start": 136,
+            "end": 152,
+            "text": "Looking closely "
+          },
+          {
+            "x": 16,
+            "y": 843.203125,
+            "width": 251.265625,
+            "height": 58,
+            "start": 152,
+            "end": 168,
+            "text": "reveals a place "
+          },
+          {
+            "x": 16,
+            "y": 904,
+            "width": 235.453125,
+            "height": 58,
+            "start": 168,
+            "end": 183,
+            "text": "that is always "
+          },
+          {
+            "x": 16,
+            "y": 964.796875,
+            "width": 230.515625,
+            "height": 58,
+            "start": 183,
+            "end": 196,
+            "text": "moving, even "
+          },
+          {
+            "x": 16,
+            "y": 1025.59375,
+            "width": 275.625,
+            "height": 58,
+            "start": 196,
+            "end": 212,
+            "text": "when it appears "
+          },
+          {
+            "x": 16,
+            "y": 1086.390625,
+            "width": 280.53125,
+            "height": 58,
+            "start": 212,
+            "end": 231,
+            "text": "still. The task of "
+          },
+          {
+            "x": 16,
+            "y": 1147.1875,
+            "width": 287.09375,
+            "height": 58,
+            "start": 231,
+            "end": 249,
+            "text": "observation is to "
+          },
+          {
+            "x": 16,
+            "y": 1207.984375,
+            "width": 214.484375,
+            "height": 58,
+            "start": 249,
+            "end": 262,
+            "text": "notice those "
+          },
+          {
+            "x": 16,
+            "y": 1268.78125,
+            "width": 244.46875,
+            "height": 58,
+            "start": 262,
+            "end": 276,
+            "text": "small changes "
+          },
+          {
+            "x": 16,
+            "y": 1329.578125,
+            "width": 296.78125,
+            "height": 58,
+            "start": 276,
+            "end": 293,
+            "text": "without hurrying "
+          },
+          {
+            "x": 16,
+            "y": 1390.375,
+            "width": 201.71875,
+            "height": 58,
+            "start": 293,
+            "end": 305,
+            "text": "them into a "
+          },
+          {
+            "x": 16,
+            "y": 1451.171875,
+            "width": 91.328125,
+            "height": 58,
+            "start": 305,
+            "end": 311,
+            "text": "story."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 235.234375,
+          "width": 287.28125,
+          "height": 1273.9375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "ee6b99d57731a79a8c3e48c5383c154f32e0704748bcf3538ffd5c1eb7ba4761",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 358,
+          "height": 33.03125
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 321.96875,
+            "height": 34,
+            "start": 0,
+            "end": 24,
+            "text": "What the river remembers"
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 321.96875,
+          "height": 34
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 16,
+          "y": 69.03125,
+          "width": 358,
+          "height": 243.125
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 69.03125,
+            "width": 332.46875,
+            "height": 29,
+            "start": 0,
+            "end": 41,
+            "text": "At the edge of the old bridge, the water "
+          },
+          {
+            "x": 16,
+            "y": 99.421875,
+            "width": 331.953125,
+            "height": 29,
+            "start": 41,
+            "end": 83,
+            "text": "carries a record of the hills. Every bend "
+          },
+          {
+            "x": 16,
+            "y": 129.8125,
+            "width": 358.359375,
+            "height": 29,
+            "start": 83,
+            "end": 125,
+            "text": "changes the current; every season changes "
+          },
+          {
+            "x": 16,
+            "y": 160.203125,
+            "width": 349.625,
+            "height": 29,
+            "start": 125,
+            "end": 168,
+            "text": "the shore. Looking closely reveals a place "
+          },
+          {
+            "x": 16,
+            "y": 190.59375,
+            "width": 300.78125,
+            "height": 29,
+            "start": 168,
+            "end": 204,
+            "text": "that is always moving, even when it "
+          },
+          {
+            "x": 16,
+            "y": 220.984375,
+            "width": 353.828125,
+            "height": 29,
+            "start": 204,
+            "end": 249,
+            "text": "appears still. The task of observation is to "
+          },
+          {
+            "x": 16,
+            "y": 251.375,
+            "width": 299.90625,
+            "height": 29,
+            "start": 249,
+            "end": 284,
+            "text": "notice those small changes without "
+          },
+          {
+            "x": 16,
+            "y": 281.765625,
+            "width": 224.46875,
+            "height": 29,
+            "start": 284,
+            "end": 311,
+            "text": "hurrying them into a story."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 69.03125,
+          "width": 353.609375,
+          "height": 241.734375
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "effbf1f8edcf666791cdb54935a09437e50d0f63e096f148bb5e2f6a1ce99683",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 358,
+          "height": 132.15625
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 367.21875,
+            "height": 67,
+            "start": 0,
+            "end": 15,
+            "text": "What the river "
+          },
+          {
+            "x": 16,
+            "y": 81.078125,
+            "width": 276.734375,
+            "height": 67,
+            "start": 15,
+            "end": 24,
+            "text": "remembers"
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 354.578125,
+          "height": 133.078125
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 16,
+          "y": 168.15625,
+          "width": 358,
+          "height": 972.75
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 169.15625,
+            "width": 308.15625,
+            "height": 58,
+            "start": 0,
+            "end": 19,
+            "text": "At the edge of the "
+          },
+          {
+            "x": 16,
+            "y": 229.953125,
+            "width": 356.796875,
+            "height": 58,
+            "start": 19,
+            "end": 41,
+            "text": "old bridge, the water "
+          },
+          {
+            "x": 16,
+            "y": 290.75,
+            "width": 312.296875,
+            "height": 58,
+            "start": 41,
+            "end": 61,
+            "text": "carries a record of "
+          },
+          {
+            "x": 16,
+            "y": 351.546875,
+            "width": 351.625,
+            "height": 58,
+            "start": 61,
+            "end": 83,
+            "text": "the hills. Every bend "
+          },
+          {
+            "x": 16,
+            "y": 412.34375,
+            "width": 351.4375,
+            "height": 58,
+            "start": 83,
+            "end": 104,
+            "text": "changes the current; "
+          },
+          {
+            "x": 16,
+            "y": 473.140625,
+            "width": 365.296875,
+            "height": 58,
+            "start": 104,
+            "end": 125,
+            "text": "every season changes "
+          },
+          {
+            "x": 16,
+            "y": 533.9375,
+            "width": 324.375,
+            "height": 58,
+            "start": 125,
+            "end": 144,
+            "text": "the shore. Looking "
+          },
+          {
+            "x": 16,
+            "y": 594.734375,
+            "width": 277.484375,
+            "height": 58,
+            "start": 144,
+            "end": 162,
+            "text": "closely reveals a "
+          },
+          {
+            "x": 16,
+            "y": 655.53125,
+            "width": 332.84375,
+            "height": 58,
+            "start": 162,
+            "end": 183,
+            "text": "place that is always "
+          },
+          {
+            "x": 16,
+            "y": 716.328125,
+            "width": 366.09375,
+            "height": 58,
+            "start": 183,
+            "end": 204,
+            "text": "moving, even when it "
+          },
+          {
+            "x": 16,
+            "y": 777.125,
+            "width": 298.390625,
+            "height": 58,
+            "start": 204,
+            "end": 223,
+            "text": "appears still. The "
+          },
+          {
+            "x": 16,
+            "y": 837.921875,
+            "width": 365.796875,
+            "height": 58,
+            "start": 223,
+            "end": 246,
+            "text": "task of observation is "
+          },
+          {
+            "x": 16,
+            "y": 898.71875,
+            "width": 357.09375,
+            "height": 58,
+            "start": 246,
+            "end": 268,
+            "text": "to notice those small "
+          },
+          {
+            "x": 16,
+            "y": 959.515625,
+            "width": 286.1875,
+            "height": 58,
+            "start": 268,
+            "end": 284,
+            "text": "changes without "
+          },
+          {
+            "x": 16,
+            "y": 1020.3125,
+            "width": 357.625,
+            "height": 58,
+            "start": 284,
+            "end": 305,
+            "text": "hurrying them into a "
+          },
+          {
+            "x": 16,
+            "y": 1081.109375,
+            "width": 91.328125,
+            "height": 58,
+            "start": 305,
+            "end": 311,
+            "text": "story."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 169.15625,
+          "width": 356.59375,
+          "height": 969.953125
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "2c027579e488aa4e652da2272873b069b59480ce3d533a67fc5568336abec158",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 600,
+          "height": 33.03125
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 321.96875,
+            "height": 34,
+            "start": 0,
+            "end": 24,
+            "text": "What the river remembers"
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 321.96875,
+          "height": 34
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 16,
+          "y": 69.03125,
+          "width": 600,
+          "height": 151.953125
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 69.03125,
+            "width": 565.9375,
+            "height": 29,
+            "start": 0,
+            "end": 72,
+            "text": "At the edge of the old bridge, the water carries a record of the hills. "
+          },
+          {
+            "x": 16,
+            "y": 99.421875,
+            "width": 544.15625,
+            "height": 29,
+            "start": 72,
+            "end": 136,
+            "text": "Every bend changes the current; every season changes the shore. "
+          },
+          {
+            "x": 16,
+            "y": 129.8125,
+            "width": 563.09375,
+            "height": 29,
+            "start": 136,
+            "end": 204,
+            "text": "Looking closely reveals a place that is always moving, even when it "
+          },
+          {
+            "x": 16,
+            "y": 160.203125,
+            "width": 583.28125,
+            "height": 29,
+            "start": 204,
+            "end": 276,
+            "text": "appears still. The task of observation is to notice those small changes "
+          },
+          {
+            "x": 16,
+            "y": 190.59375,
+            "width": 294.90625,
+            "height": 29,
+            "start": 276,
+            "end": 311,
+            "text": "without hurrying them into a story."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 69.03125,
+          "width": 578.53125,
+          "height": 150.5625
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "9c6c7880a53238f2e5f14fa75df0c9dde70d4f7bd8f7c25eaf7b58aaf2e64fa5",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 600,
+          "height": 132.15625
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 367.21875,
+            "height": 67,
+            "start": 0,
+            "end": 15,
+            "text": "What the river "
+          },
+          {
+            "x": 16,
+            "y": 81.078125,
+            "width": 276.734375,
+            "height": 67,
+            "start": 15,
+            "end": 24,
+            "text": "remembers"
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 354.578125,
+          "height": 133.078125
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 16,
+          "y": 168.15625,
+          "width": 600,
+          "height": 607.96875
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 169.15625,
+            "width": 561.3125,
+            "height": 58,
+            "start": 0,
+            "end": 35,
+            "text": "At the edge of the old bridge, the "
+          },
+          {
+            "x": 16,
+            "y": 229.953125,
+            "width": 570.578125,
+            "height": 58,
+            "start": 35,
+            "end": 72,
+            "text": "water carries a record of the hills. "
+          },
+          {
+            "x": 16,
+            "y": 290.75,
+            "width": 548.390625,
+            "height": 58,
+            "start": 72,
+            "end": 104,
+            "text": "Every bend changes the current; "
+          },
+          {
+            "x": 16,
+            "y": 351.546875,
+            "width": 539.90625,
+            "height": 58,
+            "start": 104,
+            "end": 136,
+            "text": "every season changes the shore. "
+          },
+          {
+            "x": 16,
+            "y": 412.34375,
+            "width": 601.546875,
+            "height": 58,
+            "start": 136,
+            "end": 173,
+            "text": "Looking closely reveals a place that "
+          },
+          {
+            "x": 16,
+            "y": 473.140625,
+            "width": 524.640625,
+            "height": 58,
+            "start": 173,
+            "end": 204,
+            "text": "is always moving, even when it "
+          },
+          {
+            "x": 16,
+            "y": 533.9375,
+            "width": 420.546875,
+            "height": 58,
+            "start": 204,
+            "end": 231,
+            "text": "appears still. The task of "
+          },
+          {
+            "x": 16,
+            "y": 594.734375,
+            "width": 600.71875,
+            "height": 58,
+            "start": 231,
+            "end": 268,
+            "text": "observation is to notice those small "
+          },
+          {
+            "x": 16,
+            "y": 655.53125,
+            "width": 538.234375,
+            "height": 58,
+            "start": 268,
+            "end": 298,
+            "text": "changes without hurrying them "
+          },
+          {
+            "x": 16,
+            "y": 716.328125,
+            "width": 196.890625,
+            "height": 58,
+            "start": 298,
+            "end": 311,
+            "text": "into a story."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 169.15625,
+          "width": 592.046875,
+          "height": 605.171875
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "af16c443228b2e96a9b3d70dae6adc3d5154c30e17d1b938b575f7cd6707e575",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 600,
+          "height": 33.03125
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 321.96875,
+            "height": 34,
+            "start": 0,
+            "end": 24,
+            "text": "What the river remembers"
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 321.96875,
+          "height": 34
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 16,
+          "y": 69.03125,
+          "width": 600,
+          "height": 151.953125
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 69.03125,
+            "width": 565.9375,
+            "height": 29,
+            "start": 0,
+            "end": 72,
+            "text": "At the edge of the old bridge, the water carries a record of the hills. "
+          },
+          {
+            "x": 16,
+            "y": 99.421875,
+            "width": 544.15625,
+            "height": 29,
+            "start": 72,
+            "end": 136,
+            "text": "Every bend changes the current; every season changes the shore. "
+          },
+          {
+            "x": 16,
+            "y": 129.8125,
+            "width": 563.09375,
+            "height": 29,
+            "start": 136,
+            "end": 204,
+            "text": "Looking closely reveals a place that is always moving, even when it "
+          },
+          {
+            "x": 16,
+            "y": 160.203125,
+            "width": 583.28125,
+            "height": 29,
+            "start": 204,
+            "end": 276,
+            "text": "appears still. The task of observation is to notice those small changes "
+          },
+          {
+            "x": 16,
+            "y": 190.59375,
+            "width": 294.90625,
+            "height": 29,
+            "start": 276,
+            "end": 311,
+            "text": "without hurrying them into a story."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 69.03125,
+          "width": 578.53125,
+          "height": 150.5625
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  },
+  {
+    "inputHash": "b4e0fdf61b19637aacb7e6584f803e263e576b86602ddc40ec7bb4e22b858058",
+    "platform": "web",
+    "engine": "chromium/react/stylex",
+    "runtime": {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 16,
+          "y": 16,
+          "width": 600,
+          "height": 132.15625
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 15,
+            "width": 367.21875,
+            "height": 67,
+            "start": 0,
+            "end": 15,
+            "text": "What the river "
+          },
+          {
+            "x": 16,
+            "y": 81.078125,
+            "width": 276.734375,
+            "height": 67,
+            "start": 15,
+            "end": 24,
+            "text": "remembers"
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 15,
+          "width": 354.578125,
+          "height": 133.078125
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 16,
+          "y": 168.15625,
+          "width": 600,
+          "height": 607.96875
+        },
+        "lines": [
+          {
+            "x": 16,
+            "y": 169.15625,
+            "width": 561.3125,
+            "height": 58,
+            "start": 0,
+            "end": 35,
+            "text": "At the edge of the old bridge, the "
+          },
+          {
+            "x": 16,
+            "y": 229.953125,
+            "width": 570.578125,
+            "height": 58,
+            "start": 35,
+            "end": 72,
+            "text": "water carries a record of the hills. "
+          },
+          {
+            "x": 16,
+            "y": 290.75,
+            "width": 548.390625,
+            "height": 58,
+            "start": 72,
+            "end": 104,
+            "text": "Every bend changes the current; "
+          },
+          {
+            "x": 16,
+            "y": 351.546875,
+            "width": 539.90625,
+            "height": 58,
+            "start": 104,
+            "end": 136,
+            "text": "every season changes the shore. "
+          },
+          {
+            "x": 16,
+            "y": 412.34375,
+            "width": 601.546875,
+            "height": 58,
+            "start": 136,
+            "end": 173,
+            "text": "Looking closely reveals a place that "
+          },
+          {
+            "x": 16,
+            "y": 473.140625,
+            "width": 524.640625,
+            "height": 58,
+            "start": 173,
+            "end": 204,
+            "text": "is always moving, even when it "
+          },
+          {
+            "x": 16,
+            "y": 533.9375,
+            "width": 420.546875,
+            "height": 58,
+            "start": 204,
+            "end": 231,
+            "text": "appears still. The task of "
+          },
+          {
+            "x": 16,
+            "y": 594.734375,
+            "width": 600.71875,
+            "height": 58,
+            "start": 231,
+            "end": 268,
+            "text": "observation is to notice those small "
+          },
+          {
+            "x": 16,
+            "y": 655.53125,
+            "width": 538.234375,
+            "height": 58,
+            "start": 268,
+            "end": 298,
+            "text": "changes without hurrying them "
+          },
+          {
+            "x": 16,
+            "y": 716.328125,
+            "width": 196.890625,
+            "height": 58,
+            "start": 298,
+            "end": 311,
+            "text": "into a story."
+          }
+        ],
+        "inlineBounds": {
+          "x": 16,
+          "y": 169.15625,
+          "width": 592.046875,
+          "height": 605.171875
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": true,
+      "issues": []
+    },
+    "scope": [
+      "Only this specimen and viewport were verified.",
+      "Inline bounds are DOM range bounds, not glyph ink bounds.",
+      "Wrapping thresholds are measured brackets, not aesthetic tension scores.",
+      "Text spacing checks content geometry; full WCAG conformance, contrast and assistive technology behavior are outside this report."
+    ]
+  }
+]

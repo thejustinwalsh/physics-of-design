@@ -1,0 +1,17 @@
+[
+  {
+    "source": "examples/fieldwork/site.jsx",
+    "snapshot": "artifacts/review/fieldwork-astra-v1/source-site.jsx",
+    "sha256": "1ab2d53990b871bbaf13bca99f57afdf0f5ad511c5a74691e7f314e29a7a5990"
+  },
+  {
+    "source": "native/FieldworkApp.tsx",
+    "snapshot": "artifacts/review/fieldwork-astra-v1/source-FieldworkApp.tsx",
+    "sha256": "65125ec1eb93d8d1b80e815fedf8c2738a39b2da019ebe5025f75e78a35ebf6c"
+  },
+  {
+    "source": "artifacts/fieldwork/proof-web/summary.json",
+    "snapshot": "artifacts/review/fieldwork-astra-v1/source-summary.json",
+    "sha256": "c81b42844a683c70e5be0b50c0e9975af3177cd40384989edc3869e485d3157a"
+  }
+]

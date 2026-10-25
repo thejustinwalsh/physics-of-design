@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "archetype": "hero",
+  "platform": "web",
+  "viewport": {
+    "width": 1280,
+    "height": 900,
+    "textScale": 1
+  },
+  "padding": 16,
+  "blocks": [
+    {
+      "id": "title",
+      "role": "title",
+      "text": "Keep the questions that change your work.",
+      "font": {
+        "file": "assets/fonts/Lato-Black.ttf",
+        "family": "Lato Black",
+        "axes": {},
+        "opticalSizing": "none"
+      },
+      "size": 34,
+      "weight": 900,
+      "kerning": "auto",
+      "features": {},
+      "trackingEm": -0.015,
+      "leading": 1.15,
+      "measure": 620,
+      "align": "left",
+      "direction": "auto",
+      "language": "en",
+      "maxHeight": null
+    },
+    {
+      "id": "subtitle",
+      "role": "subtitle",
+      "text": "A field notebook for patient observation, useful experiments, and the ideas that deserve another look.",
+      "font": {
+        "file": "assets/fonts/Lato-Regular.ttf",
+        "family": "Lato",
+        "axes": {},
+        "opticalSizing": "none"
+      },
+      "size": 20,
+      "weight": 400,
+      "kerning": "auto",
+      "features": {},
+      "trackingEm": 0,
+      "leading": 1.5,
+      "measure": 540,
+      "align": "left",
+      "direction": "auto",
+      "language": "en",
+      "maxHeight": null
+    }
+  ],
+  "gaps": [
+    24
+  ],
+  "locks": []
+}

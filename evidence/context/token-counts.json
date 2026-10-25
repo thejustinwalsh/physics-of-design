@@ -1,0 +1,22 @@
+{
+  "tokenizer": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "rows": [
+    {
+      "profile": "before",
+      "bytes": 63781,
+      "qwenTokenizerTokens": 16313
+    },
+    {
+      "profile": "compact",
+      "bytes": 1735,
+      "qwenTokenizerTokens": 381
+    },
+    {
+      "profile": "full",
+      "bytes": 89798,
+      "qwenTokenizerTokens": 23662
+    }
+  ],
+  "caveat": "Wire-JSON tokenization under this tokenizer, not every host model framing."
+}

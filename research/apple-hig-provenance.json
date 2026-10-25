@@ -1,0 +1,61 @@
+{
+  "sources": [
+    {
+      "id": "apple-accessibility",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+      "retrieved": "2026-10-24",
+      "sha256": "c45284ed017ba5f39301c216f43a04f4fd1b9ee4299f5ce822b42e5d7b48954a",
+      "privateCache": "artifacts/research/apple-hig/accessibility.md"
+    },
+    {
+      "id": "apple-buttons",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/buttons",
+      "retrieved": "2026-10-24",
+      "sha256": "b30a244fca77b3f0747454233fc3813da3c3c64081fa42bfff1ebe9b2de2ad74",
+      "privateCache": "artifacts/research/apple-hig/buttons.md"
+    },
+    {
+      "id": "apple-color",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/color",
+      "retrieved": "2026-10-24",
+      "sha256": "8129a6851afbb06d0cf93b896b5143254d2f7474f18b24fbe4b19e833d0b1d89",
+      "privateCache": "artifacts/research/apple-hig/color.md"
+    },
+    {
+      "id": "apple-layout",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+      "retrieved": "2026-10-24",
+      "sha256": "92406570a1137346a45d9fa11bd277095661231d5041f7e1b143c18c81340b70",
+      "privateCache": "artifacts/research/apple-hig/layout.md"
+    },
+    {
+      "id": "apple-navigation-and-search",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/navigation-and-search",
+      "retrieved": "2026-10-24",
+      "sha256": "597bb2519c478a7734eb4405c355e728e90580f0d415a65eaaa5706ff48bc2c6",
+      "privateCache": "artifacts/research/apple-hig/navigation-and-search.md"
+    },
+    {
+      "id": "apple-sidebars",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sidebars",
+      "retrieved": "2026-10-24",
+      "sha256": "8d47049ecdda956911f39287ba73ca0bfa2334b04f34f5f7d3a91ea0c97a6b08",
+      "privateCache": "artifacts/research/apple-hig/sidebars.md"
+    },
+    {
+      "id": "apple-tab-bars",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+      "retrieved": "2026-10-24",
+      "sha256": "4d994b4c6986461eec3d0688b5e3b58caab93c3d2f075dea76d06f1ce1496f42",
+      "privateCache": "artifacts/research/apple-hig/tab-bars.md"
+    },
+    {
+      "id": "apple-typography",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+      "retrieved": "2026-10-24",
+      "sha256": "f3131c3bf075cca8b7c010051ac36784f91c4770f7efc7f0d5863fb7ad1dd043",
+      "privateCache": "artifacts/research/apple-hig/typography.md"
+    }
+  ],
+  "redistribution": "Full Apple source pages stay in ignored research cache. Public files contain source links and scoped paraphrases."
+}

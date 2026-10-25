@@ -1,0 +1,864 @@
+{
+  "source": "Fresh headless Playwright Chromium fallback after native cua IAB unavailable and no browser surfaces exposed",
+  "baseUrl": "http://127.0.0.1:4392/",
+  "rows": [
+    {
+      "id": "hero-original-360",
+      "viewport": {
+        "width": 360,
+        "height": 1000
+      },
+      "document": {
+        "width": 360,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 332.140625,
+        "bottom": 332.140625,
+        "padding": "24px"
+      },
+      "blocks": [
+        {
+          "id": "title",
+          "x": 24,
+          "y": 24,
+          "width": 312,
+          "height": 168.46875,
+          "bottom": 192.46875,
+          "fontSize": "52px",
+          "lineHeight": "56.16px",
+          "tracking": "-0.78px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 312,
+          "scrollWidth": 312,
+          "lines": [
+            "Make room",
+            "for what",
+            "matters."
+          ]
+        },
+        {
+          "id": "subtitle",
+          "x": 24,
+          "y": 212.46875,
+          "width": 312,
+          "height": 95.671875,
+          "bottom": 308.140625,
+          "fontSize": "22px",
+          "lineHeight": "31.9px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 312,
+          "scrollWidth": 312,
+          "lines": [
+            "A quieter place to collect your",
+            "ideas, find your focus, and begin",
+            "something worth making."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero-original-390",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "document": {
+        "width": 390,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 347.078125,
+        "bottom": 347.078125,
+        "padding": "24px"
+      },
+      "blocks": [
+        {
+          "id": "title",
+          "x": 24,
+          "y": 24,
+          "width": 342,
+          "height": 181.40625,
+          "bottom": 205.40625,
+          "fontSize": "56px",
+          "lineHeight": "60.48px",
+          "tracking": "-0.84px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 342,
+          "scrollWidth": 342,
+          "lines": [
+            "Make room",
+            "for what",
+            "matters."
+          ]
+        },
+        {
+          "id": "subtitle",
+          "x": 24,
+          "y": 227.40625,
+          "width": 342,
+          "height": 95.671875,
+          "bottom": 323.078125,
+          "fontSize": "22px",
+          "lineHeight": "31.9px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 342,
+          "scrollWidth": 342,
+          "lines": [
+            "A quieter place to collect your",
+            "ideas, find your focus, and begin",
+            "something worth making."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero-original-834",
+      "viewport": {
+        "width": 834,
+        "height": 1000
+      },
+      "document": {
+        "width": 834,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 0,
+        "y": 0,
+        "width": 834,
+        "height": 340.78125,
+        "bottom": 340.78125,
+        "padding": "40px"
+      },
+      "blocks": [
+        {
+          "id": "title",
+          "x": 40,
+          "y": 40,
+          "width": 754,
+          "height": 163.1875,
+          "bottom": 203.1875,
+          "fontSize": "80px",
+          "lineHeight": "81.6px",
+          "tracking": "-1.92px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 754,
+          "scrollWidth": 754,
+          "lines": [
+            "Make room for what",
+            "matters."
+          ]
+        },
+        {
+          "id": "subtitle",
+          "x": 40,
+          "y": 231.1875,
+          "width": 660,
+          "height": 69.59375,
+          "bottom": 300.78125,
+          "fontSize": "24px",
+          "lineHeight": "34.8px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 660,
+          "scrollWidth": 660,
+          "lines": [
+            "A quieter place to collect your ideas, find your focus, and begin",
+            "something worth making."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero-original-1024",
+      "viewport": {
+        "width": 1024,
+        "height": 1000
+      },
+      "document": {
+        "width": 1024,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 373.09375,
+        "bottom": 373.09375,
+        "padding": "48px"
+      },
+      "blocks": [
+        {
+          "id": "title",
+          "x": 48,
+          "y": 48,
+          "width": 928,
+          "height": 179.5,
+          "bottom": 227.5,
+          "fontSize": "88px",
+          "lineHeight": "89.76px",
+          "tracking": "-2.112px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 928,
+          "scrollWidth": 928,
+          "lines": [
+            "Make room for what",
+            "matters."
+          ]
+        },
+        {
+          "id": "subtitle",
+          "x": 48,
+          "y": 255.5,
+          "width": 660,
+          "height": 69.59375,
+          "bottom": 325.09375,
+          "fontSize": "24px",
+          "lineHeight": "34.8px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 660,
+          "scrollWidth": 660,
+          "lines": [
+            "A quieter place to collect your ideas, find your focus, and begin",
+            "something worth making."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero-original-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "document": {
+        "width": 1440,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 80,
+        "y": 0,
+        "width": 1280,
+        "height": 425.40625,
+        "bottom": 425.40625,
+        "padding": "64px"
+      },
+      "blocks": [
+        {
+          "id": "title",
+          "x": 144,
+          "y": 64,
+          "width": 1000,
+          "height": 195.8125,
+          "bottom": 259.8125,
+          "fontSize": "96px",
+          "lineHeight": "97.92px",
+          "tracking": "-2.304px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 1000,
+          "scrollWidth": 1000,
+          "lines": [
+            "Make room for what",
+            "matters."
+          ]
+        },
+        {
+          "id": "subtitle",
+          "x": 144,
+          "y": 291.8125,
+          "width": 660,
+          "height": 69.59375,
+          "bottom": 361.40625,
+          "fontSize": "24px",
+          "lineHeight": "34.8px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 660,
+          "scrollWidth": 660,
+          "lines": [
+            "A quieter place to collect your ideas, find your focus, and begin",
+            "something worth making."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "editorial-original-360",
+      "viewport": {
+        "width": 360,
+        "height": 1000
+      },
+      "document": {
+        "width": 360,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 791.5625,
+        "bottom": 791.5625,
+        "padding": "20px"
+      },
+      "blocks": [
+        {
+          "id": "heading",
+          "x": 20,
+          "y": 20,
+          "width": 320,
+          "height": 80.625,
+          "bottom": 100.625,
+          "fontSize": "36px",
+          "lineHeight": "40.32px",
+          "tracking": "-0.36px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "lines": [
+            "The shape of a",
+            "thoughtful pause"
+          ]
+        },
+        {
+          "id": "prose",
+          "x": 20,
+          "y": 120.625,
+          "width": 320,
+          "height": 650.9375,
+          "bottom": 771.5625,
+          "fontSize": "21px",
+          "lineHeight": "32.55px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "lines": [
+            "A page begins to speak before we",
+            "read its first sentence. The width",
+            "of a column, the space between",
+            "lines, and the quiet around a",
+            "heading tell us how to approach",
+            "it. Those relationships change",
+            "with the words, the typeface, and",
+            "the screen. A useful tool should",
+            "make that change visible while",
+            "leaving room for judgment.",
+            "Consider a heading enlarged by a",
+            "few points. It may cross a",
+            "wrapping threshold, add a line,",
+            "and pull the paragraph below it",
+            "down the page. The right",
+            "response may involve a wider",
+            "measure, a smaller gap, or simply",
+            "accepting the new rhythm. No",
+            "single ratio can settle that choice."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "editorial-original-390",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "document": {
+        "width": 390,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 806.03125,
+        "bottom": 806.03125,
+        "padding": "24px"
+      },
+      "blocks": [
+        {
+          "id": "heading",
+          "x": 24,
+          "y": 24,
+          "width": 342,
+          "height": 85.09375,
+          "bottom": 109.09375,
+          "fontSize": "38px",
+          "lineHeight": "42.56px",
+          "tracking": "-0.38px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 342,
+          "scrollWidth": 342,
+          "lines": [
+            "The shape of a",
+            "thoughtful pause"
+          ]
+        },
+        {
+          "id": "prose",
+          "x": 24,
+          "y": 131.09375,
+          "width": 342,
+          "height": 650.9375,
+          "bottom": 782.03125,
+          "fontSize": "21px",
+          "lineHeight": "32.55px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 342,
+          "scrollWidth": 342,
+          "lines": [
+            "A page begins to speak before we",
+            "read its first sentence. The width of",
+            "a column, the space between lines,",
+            "and the quiet around a heading tell",
+            "us how to approach it. Those",
+            "relationships change with the words,",
+            "the typeface, and the screen. A",
+            "useful tool should make that change",
+            "visible while leaving room for",
+            "judgment.",
+            "Consider a heading enlarged by a",
+            "few points. It may cross a wrapping",
+            "threshold, add a line, and pull the",
+            "paragraph below it down the page.",
+            "The right response may involve a",
+            "wider measure, a smaller gap, or",
+            "simply accepting the new rhythm.",
+            "No single ratio can settle that",
+            "choice."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "editorial-original-834",
+      "viewport": {
+        "width": 834,
+        "height": 1000
+      },
+      "document": {
+        "width": 834,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 9,
+        "y": 0,
+        "width": 816,
+        "height": 511.28125,
+        "bottom": 511.28125,
+        "padding": "40px"
+      },
+      "blocks": [
+        {
+          "id": "heading",
+          "x": 49,
+          "y": 40,
+          "width": 720,
+          "height": 49.265625,
+          "bottom": 89.265625,
+          "fontSize": "44px",
+          "lineHeight": "49.28px",
+          "tracking": "-0.44px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 720,
+          "scrollWidth": 720,
+          "lines": [
+            "The shape of a thoughtful pause"
+          ]
+        },
+        {
+          "id": "prose",
+          "x": 49,
+          "y": 113.265625,
+          "width": 650,
+          "height": 358.015625,
+          "bottom": 471.28125,
+          "fontSize": "21px",
+          "lineHeight": "32.55px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 650,
+          "scrollWidth": 650,
+          "lines": [
+            "A page begins to speak before we read its first sentence. The width of",
+            "a column, the space between lines, and the quiet around a heading tell",
+            "us how to approach it. Those relationships change with the words, the",
+            "typeface, and the screen. A useful tool should make that change",
+            "visible while leaving room for judgment.",
+            "Consider a heading enlarged by a few points. It may cross a wrapping",
+            "threshold, add a line, and pull the paragraph below it down the page.",
+            "The right response may involve a wider measure, a smaller gap, or",
+            "simply accepting the new rhythm. No single ratio can settle that",
+            "choice."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "editorial-original-1024",
+      "viewport": {
+        "width": 1024,
+        "height": 1000
+      },
+      "document": {
+        "width": 1024,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 104,
+        "y": 0,
+        "width": 816,
+        "height": 527.28125,
+        "bottom": 527.28125,
+        "padding": "48px"
+      },
+      "blocks": [
+        {
+          "id": "heading",
+          "x": 152,
+          "y": 48,
+          "width": 720,
+          "height": 49.265625,
+          "bottom": 97.265625,
+          "fontSize": "44px",
+          "lineHeight": "49.28px",
+          "tracking": "-0.44px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 720,
+          "scrollWidth": 720,
+          "lines": [
+            "The shape of a thoughtful pause"
+          ]
+        },
+        {
+          "id": "prose",
+          "x": 152,
+          "y": 121.265625,
+          "width": 650,
+          "height": 358.015625,
+          "bottom": 479.28125,
+          "fontSize": "21px",
+          "lineHeight": "32.55px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 650,
+          "scrollWidth": 650,
+          "lines": [
+            "A page begins to speak before we read its first sentence. The width of",
+            "a column, the space between lines, and the quiet around a heading tell",
+            "us how to approach it. Those relationships change with the words, the",
+            "typeface, and the screen. A useful tool should make that change",
+            "visible while leaving room for judgment.",
+            "Consider a heading enlarged by a few points. It may cross a wrapping",
+            "threshold, add a line, and pull the paragraph below it down the page.",
+            "The right response may involve a wider measure, a smaller gap, or",
+            "simply accepting the new rhythm. No single ratio can settle that",
+            "choice."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "editorial-original-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "document": {
+        "width": 1440,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 312,
+        "y": 0,
+        "width": 816,
+        "height": 527.28125,
+        "bottom": 527.28125,
+        "padding": "48px"
+      },
+      "blocks": [
+        {
+          "id": "heading",
+          "x": 360,
+          "y": 48,
+          "width": 720,
+          "height": 49.265625,
+          "bottom": 97.265625,
+          "fontSize": "44px",
+          "lineHeight": "49.28px",
+          "tracking": "-0.44px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 720,
+          "scrollWidth": 720,
+          "lines": [
+            "The shape of a thoughtful pause"
+          ]
+        },
+        {
+          "id": "prose",
+          "x": 360,
+          "y": 121.265625,
+          "width": 650,
+          "height": 358.015625,
+          "bottom": 479.28125,
+          "fontSize": "21px",
+          "lineHeight": "32.55px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 650,
+          "scrollWidth": 650,
+          "lines": [
+            "A page begins to speak before we read its first sentence. The width of",
+            "a column, the space between lines, and the quiet around a heading tell",
+            "us how to approach it. Those relationships change with the words, the",
+            "typeface, and the screen. A useful tool should make that change",
+            "visible while leaving room for judgment.",
+            "Consider a heading enlarged by a few points. It may cross a wrapping",
+            "threshold, add a line, and pull the paragraph below it down the page.",
+            "The right response may involve a wider measure, a smaller gap, or",
+            "simply accepting the new rhythm. No single ratio can settle that",
+            "choice."
+          ]
+        }
+      ]
+    }
+  ],
+  "dynamic": [
+    {
+      "url": "http://127.0.0.1:4392/hero-original-360.html",
+      "viewport": {
+        "width": 360,
+        "height": 1000
+      },
+      "document": {
+        "width": 360,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 332.140625,
+        "bottom": 332.140625,
+        "padding": "24px"
+      },
+      "blocks": [
+        {
+          "id": "title",
+          "x": 24,
+          "y": 24,
+          "width": 312,
+          "height": 168.46875,
+          "bottom": 192.46875,
+          "fontSize": "52px",
+          "lineHeight": "56.16px",
+          "tracking": "-0.78px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 312,
+          "scrollWidth": 312,
+          "lines": [
+            "Make room",
+            "for what",
+            "matters."
+          ]
+        },
+        {
+          "id": "subtitle",
+          "x": 24,
+          "y": 212.46875,
+          "width": 312,
+          "height": 95.671875,
+          "bottom": 308.140625,
+          "fontSize": "22px",
+          "lineHeight": "31.9px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 312,
+          "scrollWidth": 312,
+          "lines": [
+            "A quieter place to collect your",
+            "ideas, find your focus, and begin",
+            "something worth making."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:4392/hero-original-360.html",
+      "viewport": {
+        "width": 834,
+        "height": 1000
+      },
+      "document": {
+        "width": 834,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 0,
+        "y": 0,
+        "width": 834,
+        "height": 340.78125,
+        "bottom": 340.78125,
+        "padding": "40px"
+      },
+      "blocks": [
+        {
+          "id": "title",
+          "x": 40,
+          "y": 40,
+          "width": 754,
+          "height": 163.1875,
+          "bottom": 203.1875,
+          "fontSize": "80px",
+          "lineHeight": "81.6px",
+          "tracking": "-1.92px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 754,
+          "scrollWidth": 754,
+          "lines": [
+            "Make room for what",
+            "matters."
+          ]
+        },
+        {
+          "id": "subtitle",
+          "x": 40,
+          "y": 231.1875,
+          "width": 660,
+          "height": 69.59375,
+          "bottom": 300.78125,
+          "fontSize": "24px",
+          "lineHeight": "34.8px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 660,
+          "scrollWidth": 660,
+          "lines": [
+            "A quieter place to collect your ideas, find your focus, and begin",
+            "something worth making."
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:4392/hero-original-360.html",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "document": {
+        "width": 390,
+        "height": 1000
+      },
+      "fonts": "loaded",
+      "bodyMaxWidth": "none",
+      "article": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 347.078125,
+        "bottom": 347.078125,
+        "padding": "24px"
+      },
+      "blocks": [
+        {
+          "id": "title",
+          "x": 24,
+          "y": 24,
+          "width": 342,
+          "height": 181.40625,
+          "bottom": 205.40625,
+          "fontSize": "56px",
+          "lineHeight": "60.48px",
+          "tracking": "-0.84px",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 342,
+          "scrollWidth": 342,
+          "lines": [
+            "Make room",
+            "for what",
+            "matters."
+          ]
+        },
+        {
+          "id": "subtitle",
+          "x": 24,
+          "y": 227.40625,
+          "width": 342,
+          "height": 95.671875,
+          "bottom": 323.078125,
+          "fontSize": "22px",
+          "lineHeight": "31.9px",
+          "tracking": "normal",
+          "maxWidth": "100%",
+          "overflowWrap": "anywhere",
+          "clientWidth": 342,
+          "scrollWidth": 342,
+          "lines": [
+            "A quieter place to collect your",
+            "ideas, find your focus, and begin",
+            "something worth making."
+          ]
+        }
+      ]
+    }
+  ]
+}

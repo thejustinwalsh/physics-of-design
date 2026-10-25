@@ -1,0 +1,38 @@
+{
+  "source": "Fresh Codex in-app browser tab 1, native cua_repl; measured 2026-10-24 at http://127.0.0.1:4391/; values transcribed from read-only DOM evaluation",
+  "viewportHeight": 1000,
+  "common": {"bodyMaxWidth":"none","blockMaxWidth":"100%","blockOverflowWrap":"anywhere","horizontalOverflow":false},
+  "lineCountMethod": "Rounded rendered block height divided by computed line height. Editorial prose includes one blank line between paragraphs; subtract one for occupied text lines.",
+  "columns": ["id","titleWidth","bodyWidth","titleHeight","bodyHeight","titleLineBoxes","bodyLineBoxes","bodyTop","articleHeight"],
+  "rows": [
+    ["hero-original-360",232,232,538.546875,173.984375,6,5,630.546875,868.53125],
+    ["hero-original-390",262,262,538.546875,173.984375,6,5,630.546875,868.53125],
+    ["hero-original-834",706,660,179.515625,69.59375,2,2,271.515625,405.109375],
+    ["hero-original-1024",896,660,179.515625,69.59375,2,2,271.515625,405.109375],
+    ["hero-original-1440",1080,660,179.515625,69.59375,2,2,271.515625,405.109375],
+    ["hero-relaxed-360",312,312,700.78125,129.59375,6,4,750.953125,904.546875],
+    ["hero-relaxed-390",342,342,700.78125,97.1953125,6,3,750.953125,872.1484375],
+    ["hero-relaxed-834",786,543.6328125,233.59375,64.796875,2,2,283.765625,372.5625],
+    ["hero-relaxed-1024",976,543.6328125,233.59375,64.796875,2,2,283.765625,372.5625],
+    ["hero-relaxed-1440",1232,543.6328125,233.59375,64.796875,2,2,283.765625,372.5625],
+    ["editorial-original-360",264,264,147.8203125,813.671875,3,25,219.8203125,1081.4921875],
+    ["editorial-original-390",294,294,147.8203125,716.03125,3,22,219.8203125,983.8515625],
+    ["editorial-original-834",738,650,49.2734375,358.015625,1,11,121.2734375,527.2890625],
+    ["editorial-original-1024",760,650,49.2734375,358.015625,1,11,121.2734375,527.2890625],
+    ["editorial-original-1440",760,650,49.2734375,358.015625,1,11,121.2734375,527.2890625],
+    ["editorial-relaxed-360",312,312,237.03125,659.203125,4,21,282.21875,965.421875],
+    ["editorial-relaxed-390",342,342,177.7734375,627.8125,3,20,222.9609375,874.7734375],
+    ["editorial-relaxed-834",786,652.6015625,59.2578125,345.296875,1,11,104.4453125,473.7421875],
+    ["editorial-relaxed-1024",929.171875,652.6015625,59.2578125,345.296875,1,11,104.4453125,473.7421875],
+    ["editorial-relaxed-1440",929.171875,652.6015625,59.2578125,345.296875,1,11,104.4453125,473.7421875]
+  ],
+  "computedTypography": {
+    "hero-original":{"titleSize":88,"bodySize":24,"titleLineHeight":89.76,"bodyLineHeight":34.8,"titleTracking":-2.112,"bodyTracking":0,"padding":64},
+    "hero-relaxed":{"titleSize":114.4,"bodySize":24,"titleLineHeight":116.802,"bodyLineHeight":32.4,"titleTracking":-3.6722,"bodyTracking":0.024,"padding":24},
+    "editorial-original":{"titleSize":44,"bodySize":21,"titleLineHeight":49.28,"bodyLineHeight":32.55,"titleTracking":-0.528,"bodyTracking":0,"padding":48},
+    "editorial-relaxed":{"titleSize":57.2,"bodySize":21,"titleLineHeight":59.2592,"bodyLineHeight":31.395,"titleTracking":-1.1497,"bodyTracking":0.0693,"padding":24}
+  },
+  "documentHeights": {"editorial-original-360":1081,"allOthers":1000},
+  "fontStatusSamples":"loaded at editorial-relaxed-1440 and editorial-relaxed-360; screenshot wrapping agreed with measurements",
+  "paletteSample":{"page":"editorial-relaxed-360","bodyBackground":"rgb(246, 244, 237)","textColor":"rgb(23, 25, 24)","bodyClass":"","articleBackgroundImage":"none"}
+}

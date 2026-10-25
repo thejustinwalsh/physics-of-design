@@ -1,0 +1,15 @@
+{
+  "platform": "web",
+  "label": "web",
+  "completedAt": "2026-10-25T00:18:10.870Z",
+  "passed": true,
+  "measurements": 28,
+  "searches": 2,
+  "runtimes": [
+    {
+      "chromium": "156.0.8078.4",
+      "deviceScaleFactor": 1
+    }
+  ],
+  "scope": "Actual renderer; widths are virtual artboards unless they equal the recorded native window. Device rotation and physical hardware are not inferred."
+}

@@ -1,0 +1,328 @@
+{
+  "state": {
+    "version": 1,
+    "archetype": "hero",
+    "platform": "native-ios",
+    "viewport": {
+      "width": 402,
+      "height": 874,
+      "textScale": 1
+    },
+    "padding": 64,
+    "blocks": [
+      {
+        "id": "title",
+        "role": "title",
+        "text": "Make room for what matters.",
+        "font": {
+          "file": "assets/fonts/Lato-Black.ttf",
+          "family": "Lato Black",
+          "axes": {},
+          "opticalSizing": "none"
+        },
+        "size": 88,
+        "weight": 900,
+        "kerning": "auto",
+        "features": {},
+        "trackingEm": -0.024,
+        "leading": 1.02,
+        "measure": 1080,
+        "align": "left",
+        "direction": "auto",
+        "language": "en",
+        "maxHeight": null
+      },
+      {
+        "id": "subtitle",
+        "role": "subtitle",
+        "text": "A quieter place to collect your ideas, find your focus, and begin something worth making.",
+        "font": {
+          "file": "assets/fonts/Lato-Regular.ttf",
+          "family": "Lato",
+          "axes": {},
+          "opticalSizing": "none"
+        },
+        "size": 24,
+        "weight": 400,
+        "kerning": "auto",
+        "features": {},
+        "trackingEm": 0,
+        "leading": 1.45,
+        "measure": 660,
+        "align": "left",
+        "direction": "auto",
+        "language": "en",
+        "maxHeight": null
+      }
+    ],
+    "gaps": [
+      28
+    ],
+    "locks": [],
+    "responsive": {
+      "source": "astra-responsive-review-2026-10-24",
+      "anchors": [
+        {
+          "width": 360,
+          "padding": 24,
+          "gapScale": 0.7142857142857143,
+          "contentMaxWidth": 1280,
+          "pattern": "stack",
+          "blocks": {
+            "title": {
+              "sizeScale": 0.5909090909090909,
+              "leadingDelta": 0.06000000000000005,
+              "trackingDelta": 0.009000000000000001,
+              "measureScale": 0.9259259259259259
+            },
+            "subtitle": {
+              "sizeScale": 0.9166666666666666,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 390,
+          "padding": 24,
+          "gapScale": 0.7857142857142857,
+          "contentMaxWidth": 1280,
+          "pattern": "stack",
+          "blocks": {
+            "title": {
+              "sizeScale": 0.6363636363636364,
+              "leadingDelta": 0.06000000000000005,
+              "trackingDelta": 0.009000000000000001,
+              "measureScale": 0.9259259259259259
+            },
+            "subtitle": {
+              "sizeScale": 0.9166666666666666,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 834,
+          "padding": 40,
+          "gapScale": 1,
+          "contentMaxWidth": 1280,
+          "pattern": "stack",
+          "blocks": {
+            "title": {
+              "sizeScale": 0.9090909090909091,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 0.9259259259259259
+            },
+            "subtitle": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 1024,
+          "padding": 48,
+          "gapScale": 1,
+          "contentMaxWidth": 1280,
+          "pattern": "stack",
+          "blocks": {
+            "title": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 0.9259259259259259
+            },
+            "subtitle": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 1440,
+          "padding": 64,
+          "gapScale": 1.1428571428571428,
+          "contentMaxWidth": 1280,
+          "pattern": "stack",
+          "blocks": {
+            "title": {
+              "sizeScale": 1.0909090909090908,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 0.9259259259259259
+            },
+            "subtitle": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        }
+      ],
+      "split": {
+        "titleMinWidth": 240,
+        "textMinWidth": 360,
+        "gap": 40
+      }
+    },
+    "colors": {
+      "tokens": {
+        "canvas": "#101d32",
+        "ink": "#f8f3e8",
+        "accent": "#e7b553"
+      },
+      "roles": [
+        {
+          "id": "reading",
+          "foreground": "ink",
+          "background": "canvas",
+          "use": "text",
+          "source": [
+            "Editable example art direction; opaque sRGB role"
+          ]
+        },
+        {
+          "id": "accent-cue",
+          "foreground": "accent",
+          "background": "canvas",
+          "use": "non-text",
+          "source": [
+            "Editable example art direction; meaningful cue if actually used"
+          ]
+        }
+      ],
+      "harmony": "free"
+    }
+  },
+  "measurement": {
+    "inputHash": "2f07e9e7dcf598fe9d3baa13448cc8208d9181acb60cdde602f5ae22852963ef",
+    "platform": "native-ios",
+    "engine": "react-native/Text+Yoga",
+    "runtime": {
+      "reactNative": "0.88.0",
+      "os": "26.5",
+      "fontScale": 1,
+      "pixelRatio": 3,
+      "windowWidth": 402,
+      "windowHeight": 874,
+      "deviceType": "phone"
+    },
+    "blocks": [
+      {
+        "id": "title",
+        "box": {
+          "x": 24.33333396911621,
+          "y": 24.33333396911621,
+          "width": 353.33331298828125,
+          "height": 183.3333282470703
+        },
+        "lines": [
+          {
+            "x": 24.33333396911621,
+            "y": 24.33333396911621,
+            "width": 281.64636376917446,
+            "height": 61.08867786705625,
+            "text": "Make room ",
+            "start": 0,
+            "end": 10
+          },
+          {
+            "x": 24.33333396911621,
+            "y": 85.42201183617246,
+            "width": 206.09084587289996,
+            "height": 61.08867786705625,
+            "text": "for what ",
+            "start": 10,
+            "end": 19
+          },
+          {
+            "x": 24.33333396911621,
+            "y": 146.5106897032287,
+            "width": 200.58138203067932,
+            "height": 61.08867786705625,
+            "text": "matters.",
+            "start": 19,
+            "end": 27
+          }
+        ],
+        "inlineBounds": {
+          "x": 24.33333396911621,
+          "y": 24.33333396911621,
+          "width": 281.64636376917446,
+          "height": 183.26603360116874
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "subtitle",
+        "box": {
+          "x": 24.33333396911621,
+          "y": 230,
+          "width": 353.33331298828125,
+          "height": 96
+        },
+        "lines": [
+          {
+            "x": 24.33333396911621,
+            "y": 230,
+            "width": 351.6077837837838,
+            "height": 31.978378378378377,
+            "text": "A quieter place to collect your ideas, ",
+            "start": 0,
+            "end": 39
+          },
+          {
+            "x": 24.33333396911621,
+            "y": 261.97837837837835,
+            "width": 250.3576216216216,
+            "height": 31.978378378378377,
+            "text": "find your focus, and begin ",
+            "start": 39,
+            "end": 66
+          },
+          {
+            "x": 24.33333396911621,
+            "y": 293.95675675675676,
+            "width": 245.05362162162163,
+            "height": 31.978378378378373,
+            "text": "something worth making.",
+            "start": 66,
+            "end": 89
+          }
+        ],
+        "inlineBounds": {
+          "x": 24.33333396911621,
+          "y": 230,
+          "width": 351.6077837837838,
+          "height": 95.93513513513511
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": false,
+      "issues": []
+    },
+    "scope": [
+      "Actual Text.onTextLayout and View.onLayout from React Native/Yoga.",
+      "No glyph ink bounds or complete WCAG audit.",
+      "Native user font scaling is reported separately from requested textScale.",
+      "Only this platform/version/device/viewport was measured."
+    ]
+  }
+}

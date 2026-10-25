@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "archetype": "editorial",
+  "platform": "web",
+  "viewport": {
+    "width": 1000,
+    "height": 1000,
+    "textScale": 1
+  },
+  "padding": 20,
+  "blocks": [
+    {
+      "id": "heading",
+      "role": "title",
+      "text": "A library after closing time",
+      "font": {
+        "file": "assets/fonts/Lato-Black.ttf",
+        "family": "Lato Black",
+        "axes": {},
+        "opticalSizing": "none"
+      },
+      "size": 32,
+      "weight": 900,
+      "kerning": "auto",
+      "features": {},
+      "trackingEm": -0.01,
+      "leading": 1.2,
+      "measure": 620,
+      "align": "left",
+      "direction": "auto",
+      "language": "en",
+      "maxHeight": null
+    },
+    {
+      "id": "prose",
+      "role": "prose",
+      "text": "When the last visitor leaves, the room becomes easier to hear. The ventilation turns a page somewhere near the window. A chair settles against the floor. Books that seemed like answers in the afternoon become invitations again. Tomorrow the room will fill with questions, but for now it holds the quiet possibility of another beginning.",
+      "font": {
+        "file": "assets/fonts/Spectral-Regular.ttf",
+        "family": "Spectral",
+        "axes": {},
+        "opticalSizing": "none"
+      },
+      "size": 22,
+      "weight": 400,
+      "kerning": "auto",
+      "features": {},
+      "trackingEm": 0,
+      "leading": 1.6,
+      "measure": 620,
+      "align": "left",
+      "direction": "auto",
+      "language": "en",
+      "maxHeight": null
+    }
+  ],
+  "gaps": [
+    24
+  ],
+  "locks": []
+}

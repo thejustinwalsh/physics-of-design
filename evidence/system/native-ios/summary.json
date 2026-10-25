@@ -1,0 +1,34 @@
+{
+  "platform": "native-ios",
+  "contentCases": 8,
+  "archetypes": 2,
+  "widths": [
+    280,
+    320,
+    390,
+    767,
+    1280
+  ],
+  "textScales": [
+    1,
+    1.3,
+    2
+  ],
+  "measurements": 240,
+  "searches": 4,
+  "searchCandidateBudget": 9,
+  "runtimes": [
+    {
+      "reactNative": "0.88.0",
+      "os": "26.5",
+      "fontScale": 1,
+      "pixelRatio": 3,
+      "windowWidth": 402,
+      "windowHeight": 874,
+      "deviceType": "phone"
+    }
+  ],
+  "rawInfeasibleInputs": 0,
+  "recoveries": [],
+  "failures": []
+}

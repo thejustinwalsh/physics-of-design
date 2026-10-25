@@ -1,0 +1,58 @@
+{
+  "provenance": "Independent scalar oracle, authored for adversarial review. No human judgment or study.",
+  "linearizationBreakpoint": 0.04045,
+  "cases": [
+    {
+      "hex": "#757575",
+      "luminance": 0.17788841598362912,
+      "onWhite": 4.607518093747377,
+      "onBlack": 4.557768319672582
+    },
+    {
+      "hex": "#767676",
+      "luminance": 0.18116424424986022,
+      "onWhite": 4.542224959605253,
+      "onBlack": 4.6232848849972035
+    },
+    {
+      "hex": "#777777",
+      "luminance": 0.18447499450044097,
+      "onWhite": 4.478089453577215,
+      "onBlack": 4.689499890008819
+    },
+    {
+      "hex": "#595959",
+      "luminance": 0.09989872824711389,
+      "onWhite": 7.004729208035935,
+      "onBlack": 2.9979745649422775
+    },
+    {
+      "hex": "#5a5a5a",
+      "luminance": 0.10224173308810132,
+      "onWhite": 6.896926215312931,
+      "onBlack": 3.0448346617620263
+    },
+    {
+      "hex": "#949494",
+      "luminance": 0.2961382707983211,
+      "onWhite": 3.0334698257384747,
+      "onBlack": 6.922765415966421
+    },
+    {
+      "hex": "#959595",
+      "luminance": 0.3005437944157765,
+      "onWhite": 2.9953461357088114,
+      "onBlack": 7.010875888315529
+    }
+  ],
+  "dualBackgroundLuminanceIntervals": {
+    "AA4.5": [
+      0.175,
+      0.18333333333333335
+    ],
+    "AAA7": [
+      0.30000000000000004,
+      0.09999999999999999
+    ]
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "state": {
+    "version": 1,
+    "archetype": "editorial",
+    "platform": "native-android",
+    "viewport": {
+      "width": 411.42857142857144,
+      "height": 814.4761904761905,
+      "textScale": 1
+    },
+    "padding": 48,
+    "blocks": [
+      {
+        "id": "heading",
+        "role": "title",
+        "text": "The shape of a thoughtful pause",
+        "font": {
+          "file": "assets/fonts/Lato-Black.ttf",
+          "family": "Lato Black",
+          "axes": {},
+          "opticalSizing": "none"
+        },
+        "size": 44,
+        "weight": 900,
+        "kerning": "auto",
+        "features": {},
+        "trackingEm": -0.012,
+        "leading": 1.12,
+        "measure": 760,
+        "align": "left",
+        "direction": "auto",
+        "language": "en",
+        "maxHeight": null
+      },
+      {
+        "id": "prose",
+        "role": "prose",
+        "text": "A page begins to speak before we read its first sentence. The width of a column, the space between lines, and the quiet around a heading tell us how to approach it. Those relationships change with the words, the typeface, and the screen. A useful tool should make that change visible while leaving room for judgment.\n\nConsider a heading enlarged by a few points. It may cross a wrapping threshold, add a line, and pull the paragraph below it down the page. The right response may involve a wider measure, a smaller gap, or simply accepting the new rhythm. No single ratio can settle that choice.",
+        "font": {
+          "file": "assets/fonts/Spectral-Regular.ttf",
+          "family": "Spectral",
+          "axes": {},
+          "opticalSizing": "none"
+        },
+        "size": 21,
+        "weight": 400,
+        "kerning": "auto",
+        "features": {},
+        "trackingEm": 0,
+        "leading": 1.55,
+        "measure": 650,
+        "align": "left",
+        "direction": "auto",
+        "language": "en",
+        "maxHeight": null
+      }
+    ],
+    "gaps": [
+      24
+    ],
+    "locks": [],
+    "responsive": {
+      "source": "astra-responsive-review-2026-10-24",
+      "anchors": [
+        {
+          "width": 360,
+          "padding": 20,
+          "gapScale": 0.8333333333333334,
+          "contentMaxWidth": 816,
+          "pattern": "stack",
+          "blocks": {
+            "heading": {
+              "sizeScale": 0.8181818181818182,
+              "leadingDelta": 0,
+              "trackingDelta": 0.002,
+              "measureScale": 0.9473684210526315
+            },
+            "prose": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 390,
+          "padding": 24,
+          "gapScale": 0.9166666666666666,
+          "contentMaxWidth": 816,
+          "pattern": "stack",
+          "blocks": {
+            "heading": {
+              "sizeScale": 0.8636363636363636,
+              "leadingDelta": 0,
+              "trackingDelta": 0.002,
+              "measureScale": 0.9473684210526315
+            },
+            "prose": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 834,
+          "padding": 40,
+          "gapScale": 1,
+          "contentMaxWidth": 816,
+          "pattern": "stack",
+          "blocks": {
+            "heading": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0.002,
+              "measureScale": 0.9473684210526315
+            },
+            "prose": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 1024,
+          "padding": 48,
+          "gapScale": 1,
+          "contentMaxWidth": 816,
+          "pattern": "stack",
+          "blocks": {
+            "heading": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0.002,
+              "measureScale": 0.9473684210526315
+            },
+            "prose": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        },
+        {
+          "width": 1440,
+          "padding": 48,
+          "gapScale": 1,
+          "contentMaxWidth": 816,
+          "pattern": "stack",
+          "blocks": {
+            "heading": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0.002,
+              "measureScale": 0.9473684210526315
+            },
+            "prose": {
+              "sizeScale": 1,
+              "leadingDelta": 0,
+              "trackingDelta": 0,
+              "measureScale": 1
+            }
+          }
+        }
+      ],
+      "split": {
+        "titleMinWidth": 240,
+        "textMinWidth": 360,
+        "gap": 40
+      }
+    }
+  },
+  "measurement": {
+    "inputHash": "998f200c3925e30f79e895dbe94813bdd7cee0288a2963fcd6533c9b17af67e7",
+    "platform": "native-android",
+    "engine": "react-native/Text+Yoga",
+    "runtime": {
+      "reactNative": "0.88.0",
+      "os": "36",
+      "fontScale": 1.2999999523162842,
+      "pixelRatio": 2.625,
+      "windowWidth": 411.42857142857144,
+      "windowHeight": 814.4761904761905,
+      "deviceType": "android-emulator"
+    },
+    "blocks": [
+      {
+        "id": "heading",
+        "box": {
+          "x": 24.761905670166016,
+          "y": 24.761905670166016,
+          "width": 361.9047546386719,
+          "height": 86.09523010253906
+        },
+        "lines": [
+          {
+            "x": 24.761905670166016,
+            "y": 24.761905670166016,
+            "width": 242.7269744873047,
+            "height": 43.0476188659668,
+            "text": "The shape of a ",
+            "start": 0,
+            "end": 15
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 67.80952453613281,
+            "width": 284.4955749511719,
+            "height": 43.0476188659668,
+            "text": "thoughtful pause",
+            "start": 15,
+            "end": 31
+          }
+        ],
+        "inlineBounds": {
+          "x": 24.761905670166016,
+          "y": 24.761905670166016,
+          "width": 284.4955749511719,
+          "height": 86.0952377319336
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      },
+      {
+        "id": "prose",
+        "box": {
+          "x": 24.761905670166016,
+          "y": 132.95237731933594,
+          "width": 361.9047546386719,
+          "height": 655.2380981445312
+        },
+        "lines": [
+          {
+            "x": 24.761905670166016,
+            "y": 132.95237731933594,
+            "width": 359.0014953613281,
+            "height": 32.761905670166016,
+            "text": "A page begins to speak before we ",
+            "start": 0,
+            "end": 33
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 165.71428298950195,
+            "width": 354.2916564941406,
+            "height": 32.761905670166016,
+            "text": "read its first sentence. The width ",
+            "start": 33,
+            "end": 68
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 198.47618865966797,
+            "width": 335.6696472167969,
+            "height": 32.761905670166016,
+            "text": "of a column, the space between ",
+            "start": 68,
+            "end": 99
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 231.23809051513672,
+            "width": 305.51190185546875,
+            "height": 32.761905670166016,
+            "text": "lines, and the quiet around a ",
+            "start": 99,
+            "end": 129
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 264,
+            "width": 343.93450927734375,
+            "height": 32.761905670166016,
+            "text": "heading tell us how to approach ",
+            "start": 129,
+            "end": 161
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 296.76190185546875,
+            "width": 324.11309814453125,
+            "height": 32.761905670166016,
+            "text": "it. Those relationships change ",
+            "start": 161,
+            "end": 192
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 329.5238037109375,
+            "width": 355.3660583496094,
+            "height": 32.761905670166016,
+            "text": "with the words, the typeface, and ",
+            "start": 192,
+            "end": 226
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 362.28570556640625,
+            "width": 338.93304443359375,
+            "height": 32.761905670166016,
+            "text": "the screen. A useful tool should ",
+            "start": 226,
+            "end": 259
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 395.04762268066406,
+            "width": 330.9166564941406,
+            "height": 32.761905670166016,
+            "text": "make that change visible while ",
+            "start": 259,
+            "end": 290
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 427.8095245361328,
+            "width": 293.9866027832031,
+            "height": 32.761905670166016,
+            "text": "leaving room for judgment.\n",
+            "start": 290,
+            "end": 317
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 460.57142639160156,
+            "width": 0,
+            "height": 32.761905670166016,
+            "text": "\n",
+            "start": 317,
+            "end": 318
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 493.3333282470703,
+            "width": 357.9047546386719,
+            "height": 32.761905670166016,
+            "text": "Consider a heading enlarged by a ",
+            "start": 318,
+            "end": 351
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 526.0952301025391,
+            "width": 272.6488037109375,
+            "height": 32.761905670166016,
+            "text": "few points. It may cross a ",
+            "start": 351,
+            "end": 378
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 558.8571319580078,
+            "width": 334.2797546386719,
+            "height": 32.761905670166016,
+            "text": "wrapping threshold, add a line, ",
+            "start": 378,
+            "end": 410
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 591.6190338134766,
+            "width": 337.6934509277344,
+            "height": 32.761905670166016,
+            "text": "and pull the paragraph below it ",
+            "start": 410,
+            "end": 442
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 624.3809356689453,
+            "width": 270.4077453613281,
+            "height": 32.761905670166016,
+            "text": "down the page. The right ",
+            "start": 442,
+            "end": 467
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 657.1428680419922,
+            "width": 314.48809814453125,
+            "height": 32.761905670166016,
+            "text": "response may involve a wider ",
+            "start": 467,
+            "end": 496
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 689.9047698974609,
+            "width": 357.2916564941406,
+            "height": 32.761905670166016,
+            "text": "measure, a smaller gap, or simply ",
+            "start": 496,
+            "end": 530
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 722.6666717529297,
+            "width": 325.7247009277344,
+            "height": 32.761905670166016,
+            "text": "accepting the new rhythm. No ",
+            "start": 530,
+            "end": 559
+          },
+          {
+            "x": 24.761905670166016,
+            "y": 755.4285736083984,
+            "width": 361.577392578125,
+            "height": 32.761905670166016,
+            "text": "single ratio can settle that choice.",
+            "start": 559,
+            "end": 595
+          }
+        ],
+        "inlineBounds": {
+          "x": 24.761905670166016,
+          "y": 132.95237731933594,
+          "width": 361.577392578125,
+          "height": 655.2381019592285
+        },
+        "inkBounds": null,
+        "overflowX": 0,
+        "overflowY": 0
+      }
+    ],
+    "issues": [],
+    "feasible": true,
+    "textSpacing": {
+      "tested": false,
+      "issues": []
+    },
+    "scope": [
+      "Actual Text.onTextLayout and View.onLayout from React Native/Yoga.",
+      "No glyph ink bounds or complete WCAG audit.",
+      "Native user font scaling is reported separately from requested textScale.",
+      "Only this platform/version/device/viewport was measured."
+    ]
+  }
+}

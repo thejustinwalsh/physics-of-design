@@ -1,0 +1,129 @@
+{
+  "inputHash": "686627376aee5317cee0c7910642141d5bfa5238911418ca9beef8bc74182331",
+  "platform": "native-android",
+  "engine": "react-native/Text+Yoga",
+  "runtime": {
+    "reactNative": "0.88.0",
+    "os": "36",
+    "fontScale": 1,
+    "pixelRatio": 2.625,
+    "windowWidth": 411.42857142857144,
+    "windowHeight": 814.4761904761905,
+    "deviceType": "android-emulator"
+  },
+  "blocks": [
+    {
+      "id": "title",
+      "box": {
+        "x": 37.71428680419922,
+        "y": 37.71428680419922,
+        "width": 691.8095092773438,
+        "height": 307.4285583496094
+      },
+      "lines": [
+        {
+          "x": 37.71428680419922,
+          "y": 37.71428680419922,
+          "width": 668.371826171875,
+          "height": 102.47618865966797,
+          "text": "Supercalifragilis",
+          "start": 0,
+          "end": 17
+        },
+        {
+          "x": 37.71428680419922,
+          "y": 140.1904754638672,
+          "width": 672.823486328125,
+          "height": 102.47618865966797,
+          "text": "ticexpialidociou",
+          "start": 17,
+          "end": 33
+        },
+        {
+          "x": 37.71428680419922,
+          "y": 242.66666412353516,
+          "width": 43.99702453613281,
+          "height": 102.47618865966797,
+          "text": "s",
+          "start": 33,
+          "end": 34
+        }
+      ],
+      "inlineBounds": {
+        "x": 37.71428680419922,
+        "y": 37.71428680419922,
+        "width": 672.823486328125,
+        "height": 307.4285659790039
+      },
+      "inkBounds": null,
+      "overflowX": 0,
+      "overflowY": 0
+    },
+    {
+      "id": "subtitle",
+      "box": {
+        "x": 37.71428680419922,
+        "y": 372.19049072265625,
+        "width": 659.8095092773438,
+        "height": 134.85714721679688
+      },
+      "lines": [
+        {
+          "x": 37.71428680419922,
+          "y": 372.19049072265625,
+          "width": 661.5104370117188,
+          "height": 44.9523811340332,
+          "text": "averylongunspacedwordwithmanylettersandnobr",
+          "start": 0,
+          "end": 43
+        },
+        {
+          "x": 37.71428680419922,
+          "y": 417.14287185668945,
+          "width": 596.1964111328125,
+          "height": 44.9523811340332,
+          "text": "eakingopportunities exercises the renderer’s ",
+          "start": 43,
+          "end": 88
+        },
+        {
+          "x": 37.71428680419922,
+          "y": 462.09525299072266,
+          "width": 308.59820556640625,
+          "height": 44.9523811340332,
+          "text": "emergency line breaks.",
+          "start": 88,
+          "end": 110
+        }
+      ],
+      "inlineBounds": {
+        "x": 37.71428680419922,
+        "y": 372.19049072265625,
+        "width": 661.5104370117188,
+        "height": 134.8571434020996
+      },
+      "inkBounds": null,
+      "overflowX": 1.700927734375,
+      "overflowY": 0
+    }
+  ],
+  "issues": [
+    {
+      "code": "horizontal-overflow",
+      "block": "subtitle",
+      "severity": "hard",
+      "message": "Text exceeds its measure by 1.70 units"
+    }
+  ],
+  "feasible": false,
+  "textSpacing": {
+    "tested": false,
+    "issues": []
+  },
+  "scope": [
+    "Actual Text.onTextLayout and View.onLayout from React Native/Yoga.",
+    "No glyph ink bounds or complete WCAG audit.",
+    "Native user font scaling is reported separately from requested textScale.",
+    "Only this platform/version/device/viewport was measured."
+  ]
+}

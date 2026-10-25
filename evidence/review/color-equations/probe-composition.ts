@@ -1,0 +1,25 @@
+import { analyzeComposition, CompositionInputSchema } from '../../../src/composition.ts';
+import {writeFileSync,readFileSync}from'node:fs';import{createHash}from'node:crypto';
+const observations:any[]=[];
+const rect=(id:string,x:number,y:number,width:number,height:number)=>({id,box:{x,y,width,height}});
+const input=(rectangles:any[],extra:any={})=>({viewport:{width:100,height:100},rectangles,...extra});
+function test(id:string,expectation:string,f:()=>unknown){try{observations.push({id,expectation,observed:f()});}catch(e){observations.push({id,expectation,error:String(e)});}}
+const compact=(a:any)=>({whitespace:a.whitespace,balance:a.balance,overlap:a.overlap.pairs,outside:a.outsideViewport,zero:a.zeroAreaRectangles,order:a.readingOrder.steps});
+test('parent-child','Union10000 centroid50/50; parent child overlap400 only describes nesting',()=>compact(analyzeComposition(input([rect('parent',0,0,100,100),rect('child',0,0,20,20)]))));
+test('duplicate-coverage','Duplicate coverage leaves occupancy and centroid unchanged',()=>{const one=analyzeComposition(input([rect('one',0,0,20,20)]));const two=analyzeComposition(input([rect('one',0,0,20,20),rect('two',0,0,20,20)]));return{one:compact(one),two:compact(two)};});
+test('offscreen-clip','Half-width visible area5000 centroid25/50',()=>compact(analyzeComposition(input([rect('part',-50,0,100,100)]))));
+test('overlap-union','Union10000; pair intersection2000; never occupancy12000',()=>compact(analyzeComposition(input([rect('left',0,0,60,100),rect('right',40,0,60,100)]))));
+test('edge-touch','Edge touch is not positive-area overlap',()=>compact(analyzeComposition(input([rect('left',0,0,50,100),rect('right',50,0,50,100)]))));
+test('empty-zero','No active area gives null centroid and empty overlap',()=>compact(analyzeComposition(input([rect('zero',0,0,0,50)]))));
+test('rtl-declared-flow','Declared right-to-left row advances without geometric reversal',()=>analyzeComposition(input([rect('first',70,0,20,20),rect('second',10,0,20,20)],{readingOrder:['first','second'],context:{flow:'row',direction:'rtl'}})).readingOrder);
+test('scale-invariance','Uniform2x scale preserves fractions normalized centroid, with2x tolerance; raw distances double',()=>{const a=input([rect('a',10,20,20,10),rect('b',13,50,40,20)],{groups:[{id:'g',members:['a','b'],source:['synthetic']}],context:{alignmentTolerance:4}});const b={...a,viewport:{width:200,height:200},rectangles:a.rectangles.map((r:any)=>({...r,box:Object.fromEntries(Object.entries(r.box).map(([k,v])=>[k,(v as number)*2]))})),context:{alignmentTolerance:8}};return{one:analyzeComposition(a),two:analyzeComposition(b)};});
+test('group-relabel','Geometry unchanged while caller partition alters gap aggregation',()=>{const rs=[rect('a',0,0,10,10),rect('b',20,0,10,10),rect('c',90,0,10,10)];return[['a','b'],['a','c']].map(m=>{const a=analyzeComposition(input(rs,{groups:[{id:'g',members:m,source:['synthetic-partition']}]}));return{members:m,whitespace:a.whitespace,proximity:a.proximity};});});
+test('invalid-references','Unknown and duplicate references rejected',()=>({unknown:CompositionInputSchema.safeParse(input([rect('a',0,0,1,1)],{readingOrder:['absent']})).success,duplicate:CompositionInputSchema.safeParse(input([rect('a',0,0,1,1)],{readingOrder:['a','a']})).success}));
+test('subnormal-viewport','Either reject numerically degenerate viewport or keep outputs finite',()=>{const a=analyzeComposition({viewport:{width:Number.MIN_VALUE,height:Number.MIN_VALUE},rectangles:[]});return{result:a,unoccupiedFractionFinite:Number.isFinite(a.whitespace.unoccupiedFraction),schemaAccepted:true};});
+test('integer-union-oracle','Exact integration agrees with independent20x20 unit-cell raster oracle for100 seeded integer cases',()=>{
+ let seed=642;const rand=(n:number)=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed%n};const failures=[];
+ for(let t=0;t<100;t++){const rs=Array.from({length:8},(_,i)=>rect(`r${i}`,rand(30)-5,rand(30)-5,rand(12),rand(12)));let count=0,mx=0,my=0;for(let x=0;x<20;x++)for(let y=0;y<20;y++){if(rs.some(r=>x+.5>=r.box.x&&x+.5<r.box.x+r.box.width&&y+.5>=r.box.y&&y+.5<r.box.y+r.box.height)){count++;mx+=x+.5;my+=y+.5;}}const a=analyzeComposition({viewport:{width:20,height:20},rectangles:rs});if(a.whitespace.occupiedUnionArea!==count||(count&&(!a.balance.occupiedUnionCentroid||Math.abs(a.balance.occupiedUnionCentroid.x-mx/count)>1e-10||Math.abs(a.balance.occupiedUnionCentroid.y-my/count)>1e-10)))failures.push({t,count,mx,my,result:compact(a)});}
+ return{checked:100,failures};
+});
+writeFileSync('artifacts/review/color-equations/composition-observations.json',JSON.stringify({provenance:'Independent synthetic probe, including separate raster oracle; no human validation',sourceHash:createHash('sha256').update(readFileSync('src/composition.ts')).digest('hex'),observations},null,2)+'\n');
+console.log(JSON.stringify(observations.map(x=>x.id==='scale-invariance'?{...x,observed:{one:compact(x.observed.one),two:compact(x.observed.two),alignmentOne:x.observed.one.alignment,alignmentTwo:x.observed.two.alignment}}:x),null,2));
