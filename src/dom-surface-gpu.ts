@@ -79,6 +79,7 @@ export function createDomSurfaceGpu(
   const win = element.ownerDocument.defaultView!;
   let pending = 0,
     drawFrame = 0,
+    presentationPending = false,
     pendingIdle = false,
     initializationStart = 0;
   let phase: 'context' | 'link' | 'texture' = 'context';
@@ -87,6 +88,7 @@ export function createDomSurfaceGpu(
   function cancelDraw() {
     if (drawFrame) win.cancelAnimationFrame(drawFrame);
     drawFrame = 0;
+    presentationPending = false;
   }
   function fallback(reason: string) {
     cancelDraw();
@@ -263,11 +265,25 @@ export function createDomSurfaceGpu(
     latest = sample;
     if (disposed || suspended || !gl || !program || stats.status !== 'ready')
       return;
-    if (drawFrame || (!dirty && sampleKey(sample) === lastKey)) return;
-    // Coalesce external-clock samples and synchronous recipe/output edits at presentation.
+    if (
+      drawFrame ||
+      (!dirty && sampleKey(sample) === lastKey && !presentationPending)
+    ) return;
+    queueDraw();
+  }
+  function queueDraw() {
+    if (drawFrame) return;
     drawFrame = win.requestAnimationFrame(() => {
       drawFrame = 0;
-      if (latest) submit(latest);
+      const presentUnchanged = presentationPending;
+      presentationPending = false;
+      if (latest && submit(latest, presentUnchanged) === 'changed') {
+        // One additional identical submission commits a quiet final pose on
+        // the tested Linux WebKit presentation path. New input supersedes it.
+        // This samples no new simulation time and cannot form an idle loop.
+        presentationPending = true;
+        queueDraw();
+      }
     });
   }
   function sampleKey(sample: DomSurfaceLightSample) {
@@ -275,7 +291,10 @@ export function createDomSurfaceGpu(
       .map((v) => Math.round(v * 100000))
       .join(':');
   }
-  function submit(sample: DomSurfaceLightSample) {
+  function submit(
+    sample: DomSurfaceLightSample,
+    presentUnchanged: boolean,
+  ): 'changed' | 'settled' | 'skipped' {
     if (
       disposed ||
       suspended ||
@@ -284,9 +303,10 @@ export function createDomSurfaceGpu(
       stats.status !== 'ready' ||
       gl.isContextLost()
     )
-      return;
+      return 'skipped';
     const renderKey = sampleKey(sample);
-    if (!dirty && renderKey === lastKey) return;
+    const changed = dirty || renderKey !== lastKey;
+    if (!changed && !presentUnchanged) return 'skipped';
     const r = recipe.input;
     // CSS percentage coordinates use down-positive y; shader world uses up-positive y.
     // Light direction already contains the host's pointer/scroll/tilt target, including maxTilt=0.
@@ -332,6 +352,7 @@ export function createDomSurfaceGpu(
     dirty = false;
     lastKey = renderKey;
     stats.draws++;
+    return changed ? 'changed' : 'settled';
   }
   function onLost(event: Event) {
     event.preventDefault();
@@ -367,9 +388,11 @@ export function createDomSurfaceGpu(
     canvas,
     stats,
     setSuspended(value: boolean) {
+      const wasSuspended = suspended;
       suspended = value;
       if (suspended) cancelDraw();
       if (!suspended) {
+        if (wasSuspended) dirty = true;
         schedule();
         if (stats.status === 'ready' && !tile) upload();
         if (latest) draw(latest);

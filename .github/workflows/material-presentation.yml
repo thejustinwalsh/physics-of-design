@@ -2,7 +2,7 @@ name: material-presentation
 on:
   workflow_dispatch:
   push:
-    branches: [diagnose/linux-webkit-presentation]
+    branches: [diagnose/linux-webkit-presentation, fix/quiescent-material-presentation]
 permissions:
   contents: read
 jobs:
