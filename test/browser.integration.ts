@@ -7,10 +7,171 @@ import { scoreRelations } from '../dist/factors.js';
 import { perturb } from '../dist/graph.js';
 import { relax } from '../dist/search.js';
 import { proofHtml } from '../dist/emission.js';
-import { chromium } from 'playwright';
+import { chromium, webkit } from 'playwright';
+import { build } from 'esbuild';
+import { hash } from '../dist/identity.js';
+import {
+  resolveOutputBindings,
+  checkOutputBindings,
+} from '../dist/output-bindings.js';
+import type { collectBrowserOutputBindings } from '../dist/browser-output-bindings.js';
 import { resolveLayout } from '../dist/responsive.js';
 const hero = () =>
   parseState(JSON.parse(readFileSync('examples/hero.json', 'utf8')));
+
+for (const engine of [chromium, webkit])
+  test(
+    `${engine.name()} collects actual binding properties and distinguishes transformed geometry, ambiguity and overrides`,
+    { timeout: 60000 },
+    async () => {
+      const bundle = await build({
+        stdin: {
+          contents:
+            "export { collectBrowserOutputBindings } from './dist/browser-output-bindings.js'",
+          resolveDir: process.cwd(),
+        },
+        bundle: true,
+        format: 'iife',
+        globalName: 'BindingCollector',
+        platform: 'browser',
+        write: false,
+      });
+      const browser = await engine.launch({ headless: true });
+      try {
+        const page = await browser.newPage({
+          viewport: { width: 834, height: 1000 },
+        });
+        await page.setContent(`<style>
+        #box {box-sizing:border-box;display:flex;flex-direction:row;width:120px;height:48px;min-height:48px;
+          padding:4px 8px;gap:6px;font:16px/24px sans-serif;letter-spacing:normal;opacity:.75;
+          color:#123;background:#eaf2f7;border:2px solid #456;transform:scale(1.5);transform-origin:0 0}
+        #ambiguous {display:flex;row-gap:4px;column-gap:8px;line-height:normal;border:1px solid red;border-right-color:blue}
+        #hidden {display:none}
+      </style><div id="box" data-testid="box">Actual row</div>
+      <div id="ambiguous">Automatic line height</div><div id="hidden">Hidden</div>
+      <div data-testid="duplicate">One</div><div data-testid="duplicate">Two</div>`);
+        await page.addScriptTag({ content: bundle.outputFiles[0]!.text });
+        const cases = [
+          ['font', 'box', 'fontSize', 16, 'css-px'],
+          ['leading', 'box', 'lineHeight', 24, 'css-px'],
+          ['tracking', 'box', 'letterSpacing', 0, 'css-px'],
+          ['min-height', 'box', 'minHeight', 48, 'css-px'],
+          ['height', 'box', 'height', 48, 'css-px'],
+          ['width', 'box', 'width', 120, 'css-px'],
+          ['pad-top', 'box', 'paddingTop', 4, 'css-px'],
+          ['pad-left', 'box', 'paddingLeft', 8, 'css-px'],
+          ['gap', 'box', 'gap', 6, 'css-px'],
+          ['ink', 'box', 'color', '#112233', 'color'],
+          ['background', 'box', 'backgroundColor', '#eaf2f7', 'color'],
+          ['border', 'box', 'borderColor', '#445566', 'color'],
+          ['opacity', 'box', 'opacity', 0.75, 'ratio'],
+          ['direction', 'box', 'flexDirection', 'row', 'token'],
+          ['spring', 'box', 'spring.mass', 1, 'spring-parameter'],
+          ['normal', 'ambiguous', 'lineHeight', 24, 'css-px'],
+          ['unequal-gap', 'ambiguous', 'gap', 4, 'css-px'],
+          ['unequal-border', 'ambiguous', 'borderColor', '#ff0000', 'color'],
+          ['hidden', 'hidden', 'width', 120, 'css-px'],
+          ['duplicate', 'duplicate', 'width', 120, 'css-px'],
+          ['missing', 'absent', 'width', 120, 'css-px'],
+        ] as const;
+        const value = Object.fromEntries(
+          cases.map(([id, , , expected]) => [id, expected]),
+        );
+        const current = {
+          designIdentity: hash('synthetic-design'),
+          sourceIdentity: hash('synthetic-fixture-source'),
+          inputIdentity: hash('synthetic-fixture-input'),
+          resultIdentity: hash(value),
+        };
+        const manifest = resolveOutputBindings({
+          operation: 'resolve',
+          source: { value, identity: hash(value) },
+          current,
+          bindings: cases.map(([id, surface, property, , unit]) => ({
+            id,
+            scenario: 'tablet',
+            scenarioIdentity: hash('synthetic-tablet'),
+            platform: 'web',
+            unit,
+            pointer: `/${id}`,
+            target: {
+              surface,
+              property,
+              sourceLocation: 'test/browser.integration.ts',
+            },
+          })),
+        });
+        const context = {
+          current,
+          scenario: 'tablet',
+          scenarioIdentity: hash('synthetic-tablet'),
+          resultRef: `test:real-dom/${engine.name()}`,
+        };
+        const collect = () =>
+          page.evaluate(
+            ({ manifest, context }) =>
+              (
+                globalThis as unknown as {
+                  BindingCollector: {
+                    collectBrowserOutputBindings: typeof collectBrowserOutputBindings;
+                  };
+                }
+              ).BindingCollector.collectBrowserOutputBindings(
+                manifest,
+                context,
+              ),
+            { manifest, context },
+          );
+        const receipt = await collect();
+        const checked = checkOutputBindings({
+          operation: 'check',
+          manifest,
+          current,
+          observations: receipt.observations,
+        });
+        for (const entry of checked.entries.slice(0, 14))
+          assert.equal(entry.status, 'pass', JSON.stringify(entry));
+        assert.equal(checked.entries[14]!.status, 'unsupported');
+        for (const entry of checked.entries.slice(15))
+          assert.equal(entry.status, 'unknown', JSON.stringify(entry));
+        assert.equal(receipt.geometry.box!.width, 180);
+        assert.equal(receipt.viewport.width, 834);
+        assert(
+          receipt.observations.every((o) =>
+            o.runtime.includes(
+              engine.name() === 'webkit' ? 'AppleWebKit' : 'Chrome',
+            ),
+          ),
+        );
+        await page.locator('#box').evaluate((el) => {
+          (el as HTMLElement).style.width = '122px';
+        });
+        const changed = await collect();
+        assert.equal(
+          checkOutputBindings({
+            operation: 'check',
+            manifest,
+            current,
+            observations: changed.observations,
+          }).entries.find((e) => e.id === 'width')!.status,
+          'override',
+        );
+        assert.equal(changed.geometry.box!.width, 183);
+        const stale = checkOutputBindings({
+          operation: 'check',
+          manifest,
+          current,
+          observations: changed.observations.map((o) => ({
+            ...o,
+            current: { ...o.current, sourceIdentity: hash('changed-source') },
+          })),
+        });
+        assert(stale.entries.every((e) => e.status === 'stale'));
+      } finally {
+        await browser.close();
+      }
+    },
+  );
 
 test(
   'real StyleX/React rendering, thresholds, spacing tolerance and stale measurements',

@@ -15,9 +15,13 @@ try {
     path.join(dir, 'consumer.mts'),
     `import {parseState, execute, BrowserRenderer, NativeRenderer, policy, relax, evaluate, CorpusRecordSchema, type DesignState} from '${root}/dist/index.js';
 import {createDrivenMotion} from '${root}/dist/motion-runtime.js';
-import {createDomLightController, type DomLightOptions} from '${root}/dist/browser-runtime.js';
+import {createDomLightController, collectBrowserOutputBindings, type BrowserBindingContext, type DomLightOptions} from '${root}/dist/browser-runtime.js';
 const motion=createDrivenMotion({position:0,target:1});motion.retarget(.8);motion.advance(1/60);
 const effectOptions:DomLightOptions={clock:'external',renderer:'webgl'};void effectOptions;void createDomLightController;
+const bindingContext:BrowserBindingContext={current:{designIdentity:'x',sourceIdentity:'x',inputIdentity:'x',resultIdentity:'x'},scenario:'phone',scenarioIdentity:'x',resultRef:'evidence/dom.json'};
+void bindingContext;void collectBrowserOutputBindings;
+// @ts-expect-error DOM geometry requires an actual document or element, not a declared box.
+collectBrowserOutputBindings({} as Parameters<typeof collectBrowserOutputBindings>[0],bindingContext,{width:390});
 // @ts-expect-error The application clock advances motion in numeric seconds.
 motion.advance('16');
 const state:DesignState=parseState({});

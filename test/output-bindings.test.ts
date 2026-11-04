@@ -111,6 +111,41 @@ test('exact source projection compares numeric values with declared tolerance', 
   assert.ok('complete' in fail && !fail.complete);
   assert.equal(fail.entries[0]!.status, 'override');
 });
+test('color bindings compare equivalent CSS coordinates without flattening alpha or gamut', () => {
+  const r = fixture();
+  const manifest = resolveOutputBindings({
+    operation: 'resolve',
+    current: r.current,
+    source: { value: r.value, identity: hash(r.value) },
+    bindings: [
+      {
+        ...r.binding,
+        tolerance: 0,
+        unit: 'color',
+        pointer: '/values/phone/color',
+        target: { ...r.binding.target, property: 'color' },
+      },
+    ],
+  });
+  const compare = (value: string) =>
+    checkOutputBindings({
+      operation: 'check',
+      manifest,
+      current: r.current,
+      observations: [
+        { ...r.observation, unit: 'color', property: 'color', value },
+      ],
+    }).entries[0]!.status;
+  assert.equal(compare('rgb(17, 34, 51)'), 'pass');
+  assert.equal(compare('#123'), 'pass');
+  assert.equal(compare('rgba(17, 34, 51, 0.5)'), 'override');
+  assert.equal(compare('rgb(18, 34, 51)'), 'override');
+  assert.equal(
+    compare('color(display-p3 0.0666666667 0.1333333333 0.2)'),
+    'override',
+  );
+  assert.equal(compare('var(--ink)'), 'override');
+});
 test('missing observation is unbound, and an unrecognized observation is rejected', () => {
   const r = fixture();
   const missing = checkOutputBindings({

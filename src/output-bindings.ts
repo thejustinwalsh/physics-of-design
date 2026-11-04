@@ -1,6 +1,7 @@
 /** Source-bound property projections and renderer comparisons. Declarations are not authenticated observations. */
 import { z } from 'zod';
 import { hash } from './identity.js';
+import Color from 'colorjs.io';
 const Digest = z.string().regex(/^[a-f0-9]{64}$/),
   Id = z.string().regex(/^[a-z][a-z0-9-]{0,79}$/),
   Value = z.union([z.string().max(1024), z.number().finite(), z.boolean()]);
@@ -122,6 +123,28 @@ export const OutputBindingsCheckSchema = z.discriminatedUnion('operation', [
 ]);
 export type OutputBindingManifest = z.infer<typeof OutputBindingManifestSchema>;
 export type OutputBindingObservation = z.infer<typeof Observation>;
+function sameColor(expected: string, observed: string): boolean {
+  if (expected === observed) return true;
+  try {
+    const a = new Color(expected).to('xyz-d65');
+    const b = new Color(observed).to('xyz-d65');
+    // Floating conversion roundoff only, not a perceptual acceptance threshold.
+    // Do not gamut-map, discard alpha or guess a backdrop to obtain a match.
+    return (
+      Math.abs(a.alpha - b.alpha) <= 1e-10 &&
+      a.coords.every(
+        (n, i) =>
+          n !== null &&
+          b.coords[i] !== null &&
+          Number.isFinite(n) &&
+          Number.isFinite(b.coords[i]) &&
+          Math.abs(n - b.coords[i]!) <= 1e-10,
+      )
+    );
+  } catch {
+    return false;
+  }
+}
 function pointer(value: unknown, path: string): unknown {
   if ((path !== '' && !path.startsWith('/')) || /~(?![01])/u.test(path))
     throw Error('Binding pointer must be an RFC 6901 JSON pointer');
@@ -288,7 +311,11 @@ export function checkOutputBindings(
       status = (
         typeof b.expected === 'number' && typeof o.value === 'number'
           ? Math.abs(o.value - b.expected) <= b.tolerance
-          : o.value === b.expected
+          : b.unit === 'color' &&
+              typeof b.expected === 'string' &&
+              typeof o.value === 'string'
+            ? sameColor(b.expected, o.value)
+            : o.value === b.expected
       )
         ? 'pass'
         : 'override';

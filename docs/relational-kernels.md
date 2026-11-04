@@ -100,6 +100,23 @@ const manifest = resolveOutputBindings({
 
 Use a real adapter to collect `getBoundingClientRect`, computed style or native `onLayout`/`onTextLayout` and the corresponding current input/scenario/source identities. The observation names its provider, runtime, source result reference and timestamp. Supply colors in the same normalized representation as the expected emitted value, and state whether a width is the declared box or a different coordinate frame. A transformed bounding rectangle cannot be compared to an untransformed width without an explicit adapter conversion.
 
+For a browser application, the public browser entry supplies that DOM collector:
+
+```ts
+import { collectBrowserOutputBindings } from '@design-theory/toolkit/browser';
+const receipt = collectBrowserOutputBindings(manifest, {
+  current: runningApplication.current,
+  scenario: runningApplication.scenario,
+  scenarioIdentity: runningApplication.scenarioIdentity,
+  resultRef: 'evidence/current-browser-bindings.json',
+});
+// Save the full receipt; pass receipt.observations to bindings check.
+```
+
+Read `runningApplication` from the current application's build/input snapshot, independently of the expected manifest. Matching hashes establish consistency, not authenticity. Put the stable `id` or `data-testid` on the element whose property is being bound. Missing/duplicate targets, hidden boxes, normal line height and unequal row/column gaps remain unknown. Controller springs/material parameters and native features remain unsupported by this DOM collector. Computed width/height retain CSS box-sizing semantics; the receipt's separate viewport rectangles include transforms. No expected number is used to fill a missing fact. The collector takes one synchronous snapshot and leaves no observer/timer to dispose. Native still requires its actual supported measurement adapter.
+
+Color binding comparisons accept equivalent CSS color representations through Color.js XYZ-D65 conversion. The comparison allows only numerical conversion roundoff, preserves alpha and out-of-gamut coordinates, and performs no gamut mapping, backdrop inference or contrast check.
+
 `checkOutputBindings({operation:'check',manifest,current,observations})` returns:
 
 - `pass` when the current observation matches the expected value within the declared tolerance.

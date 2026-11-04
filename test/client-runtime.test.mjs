@@ -7,7 +7,10 @@ import { build } from 'esbuild';
 const root = fileURLToPath(new URL('../', import.meta.url));
 async function clientBundle(entry, contents) {
   return build({
-    stdin: { contents: `import * as runtime from '${entry}'; ${contents}`, resolveDir: root },
+    stdin: {
+      contents: `import * as runtime from '${entry}'; ${contents}`,
+      resolveDir: root,
+    },
     bundle: true,
     platform: 'browser',
     format: 'iife',
@@ -19,23 +22,50 @@ async function clientBundle(entry, contents) {
 }
 function assertClientInputs(result) {
   const paths = Object.keys(result.metafile.inputs);
-  assert(!paths.some(p => /(?:^|\/)dist\/(?:index|commands|measurement|fonts|selector|mcp)\.js$/.test(p)), paths.join('\n'));
-  assert(!paths.some(p => /node_modules\/(?:playwright|fontkit|@modelcontextprotocol)(?:\/|-)/.test(p)), paths.join('\n'));
+  assert(
+    !paths.some((p) =>
+      /(?:^|\/)dist\/(?:index|commands|measurement|fonts|selector|mcp)\.js$/.test(
+        p,
+      ),
+    ),
+    paths.join('\n'),
+  );
+  assert(
+    !paths.some((p) =>
+      /node_modules\/(?:playwright|fontkit|@modelcontextprotocol)(?:\/|-)/.test(
+        p,
+      ),
+    ),
+    paths.join('\n'),
+  );
   // Validation stays available without bundling every optional error language.
-  const retained = Object.values(result.metafile.outputs).flatMap(output =>
-    Object.entries(output.inputs).filter(([, value]) => value.bytesInOutput > 0).map(([name]) => name));
-  assert(!retained.some(p => /zod\/v4\/locales\/(?!en\.js$)[^/]+\.js$/.test(p)), retained.join('\n'));
+  const retained = Object.values(result.metafile.outputs).flatMap((output) =>
+    Object.entries(output.inputs)
+      .filter(([, value]) => value.bytesInOutput > 0)
+      .map(([name]) => name),
+  );
+  assert(
+    !retained.some((p) => /zod\/v4\/locales\/(?!en\.js$)[^/]+\.js$/.test(p)),
+    retained.join('\n'),
+  );
 }
 
 test('published motion entry bundles and runs exact retargetable dynamics without Node or DOM', async () => {
-  const bundle = await clientBundle('@design-theory/toolkit/motion', `
+  const bundle = await clientBundle(
+    '@design-theory/toolkit/motion',
+    `
     const spring = runtime.createDrivenMotion({position:0, target:1, spring:{mass:1, stiffness:100, damping:20}});
     export const at = spring.advance(.1);
     export const retargeted = spring.retarget(-1);
     export const after = spring.advance(.1);
-  `);
+  `,
+  );
   assertClientInputs(bundle);
-  assert(!Object.keys(bundle.metafile.inputs).some(p => /dist\/(?:browser-|dom-surface)/.test(p)));
+  assert(
+    !Object.keys(bundle.metafile.inputs).some((p) =>
+      /dist\/(?:browser-|dom-surface)/.test(p),
+    ),
+  );
   const scope = {};
   runInNewContext(bundle.outputFiles[0].text, scope);
   const { at, retargeted, after } = scope.ClientResult;
@@ -49,15 +79,19 @@ test('published motion entry bundles and runs exact retargetable dynamics withou
 });
 
 test('published browser entry exposes retained effects without loading authoring or verifier processes', async () => {
-  const bundle = await clientBundle('@design-theory/toolkit/browser', `
-    export const api = ['createDrivenMotion','createDomSurfaceRecipe','createDomLightController','createDomSurfaceGpu','createDeviceTiltController','probeSurface'].map(name => [name, typeof runtime[name]]);
+  const bundle = await clientBundle(
+    '@design-theory/toolkit/browser',
+    `
+    export const api = ['createDrivenMotion','createDomSurfaceRecipe','createDomLightController','createDomSurfaceGpu','createDeviceTiltController','probeSurface','collectBrowserOutputBindings'].map(name => [name, typeof runtime[name]]);
     export const material = runtime.createDomSurfaceRecipe({material:'enamel',roughness:.3}).input;
-  `);
+  `,
+  );
   assertClientInputs(bundle);
   const scope = {};
   // Importing an effect does not require a document or request sensor permission.
   runInNewContext(bundle.outputFiles[0].text, scope);
-  for (const [name, type] of scope.ClientResult.api) assert.equal(type, 'function', name);
+  for (const [name, type] of scope.ClientResult.api)
+    assert.equal(type, 'function', name);
   assert.equal(scope.ClientResult.material.material, 'enamel');
-  assert.equal(scope.ClientResult.material.roughness, .3);
+  assert.equal(scope.ClientResult.material.roughness, 0.3);
 });
