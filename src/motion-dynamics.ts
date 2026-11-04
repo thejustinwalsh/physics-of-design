@@ -3,7 +3,7 @@ import {
   sampleMotion,
   type MotionInput,
 } from './motion.js';
-import { z } from 'zod';
+import * as z from 'zod';
 
 export type DrivenMotionOptions = {
   spring?: MotionInput['spring'];

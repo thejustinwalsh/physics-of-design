@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import * as z from 'zod';
 
 const finite = z.number().finite();
 const coordinateValue = finite.min(-1e6).max(1e6);

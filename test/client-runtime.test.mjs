@@ -21,6 +21,10 @@ function assertClientInputs(result) {
   const paths = Object.keys(result.metafile.inputs);
   assert(!paths.some(p => /(?:^|\/)dist\/(?:index|commands|measurement|fonts|selector|mcp)\.js$/.test(p)), paths.join('\n'));
   assert(!paths.some(p => /node_modules\/(?:playwright|fontkit|@modelcontextprotocol)(?:\/|-)/.test(p)), paths.join('\n'));
+  // Validation stays available without bundling every optional error language.
+  const retained = Object.values(result.metafile.outputs).flatMap(output =>
+    Object.entries(output.inputs).filter(([, value]) => value.bytesInOutput > 0).map(([name]) => name));
+  assert(!retained.some(p => /zod\/v4\/locales\/(?!en\.js$)[^/]+\.js$/.test(p)), retained.join('\n'));
 }
 
 test('published motion entry bundles and runs exact retargetable dynamics without Node or DOM', async () => {

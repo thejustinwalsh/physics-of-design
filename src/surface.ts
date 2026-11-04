@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import * as z from 'zod';
 
 const unit = z.number().finite().min(0).max(1);
 const rgb = z.tuple([unit, unit, unit]);
