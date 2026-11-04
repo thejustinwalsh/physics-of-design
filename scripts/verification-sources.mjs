@@ -17,6 +17,7 @@ const roots = [
   '.agents/skills/design-theory',
 ];
 const rootFiles = new Set([
+  '.npmignore',
   'package.json',
   'package-lock.json',
   'tsconfig.json',

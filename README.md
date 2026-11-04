@@ -31,6 +31,20 @@ npm run gallery:build
 
 `motion dynamics` accounts for retarget work and dissipation. `motion timeline` emits bounded samples for GSAP/other runtimes. Material tools expose linear-RGB reflectance, roughness/metalness, seeded normal/roughness textures and explicit unsupported features. Media tools retain authored crop regions and source-pixel contrast scope. `prose analyze` models authored reader journeys, not literary beauty. Whole-layout technical drawings are editable through the MCP App; proposal edits require new renderer measurements.
 
+After building the toolkit, import its client entry points to apply selected equations in an app:
+
+```ts
+import { createDrivenMotion } from '@design-theory/toolkit/motion';
+const motion = createDrivenMotion({
+  position: 0, target: 1,
+  spring: { mass: 1, stiffness: 200, damping: 28 },
+});
+motion.retarget(0.8); // Preserve current position and velocity.
+const sample = motion.advance(1 / 60); // Seconds from the application's existing clock.
+```
+
+React Native can use this portable motion entry. Browser effects, `createDomSurfaceRecipe` and `DOM_SURFACE_CSS` are available from `@design-theory/toolkit/browser`; see the [DOM surface integration](docs/dom-surface-research.md). These entries exclude filesystem, renderer-verification and model processes. The root entry remains for Node authoring/CLI tools. The motion entry is plain JavaScript; it does not establish native UI-thread execution or device frame rate. Keep per-frame layout and React state updates out of the host integration.
+
 The product name is Design Theory. Physics, energy, tension and entropy remain optional vocabulary. Historical papers, result reference prefixes, the `design` executable and the original GitHub address retain compatibility.
 
 ## Run

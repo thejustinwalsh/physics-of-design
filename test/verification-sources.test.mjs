@@ -48,6 +48,7 @@ test('one exact scope includes consumed sources and excludes declared generated 
     'assets/fonts/font.ttf',
     'fonts/font.ttf',
     '.agents/skills/design-theory/references/composition.md',
+    '.npmignore',
     'package.json',
     'package-lock.json',
     'tsconfig.json',

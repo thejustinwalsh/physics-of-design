@@ -1,0 +1,13 @@
+# Keep compiled client/CLI modules; omit development caches and retained proof images.
+node_modules
+artifacts/
+/evidence/
+.venv/
+native/.expo/
+native/ios/
+native/android/
+*.tsbuildinfo
+.DS_Store
+.impeccable/
+__pycache__/
+*.pyc

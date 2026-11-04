@@ -8,7 +8,15 @@
     "design": "./dist/cli.js"
   },
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./motion": {
+      "types": "./dist/motion-runtime.d.ts",
+      "default": "./dist/motion-runtime.js"
+    },
+    "./browser": {
+      "types": "./dist/browser-runtime.d.ts",
+      "default": "./dist/browser-runtime.js"
+    }
   },
   "scripts": {
     "build": "tsc && chmod +x dist/cli.js",
