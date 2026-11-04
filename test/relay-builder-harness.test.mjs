@@ -69,7 +69,36 @@ const fakeInstall = async (_file, args, cwd) => {
   }
 };
 // Every model/usage value below is a synthetic protocol fixture, not measured model usage.
-function fixture() {
+async function isolatedRuntime(runtime) {
+  const next = structuredClone(runtime),
+    servers = [];
+  try {
+    for (const entry of Object.values(next))
+      for (const key of ['metro', 'proxy', 'observer']) {
+        const server = net.createServer();
+        servers.push(server);
+        // Hold all nine allocations until the fixture's ports are distinct.
+        // A dual-stack listener avoids selecting a port held on either family.
+        await new Promise((resolve, reject) => {
+          server.once('error', reject);
+          server.listen({ port: 0, host: '::', ipv6Only: false }, resolve);
+        });
+        entry[key] = server.address().port;
+      }
+    return next;
+  } finally {
+    await Promise.all(
+      servers.map((server) =>
+        server.listening
+          ? new Promise((resolve, reject) =>
+              server.close((error) => (error ? reject(error) : resolve())),
+            )
+          : undefined,
+      ),
+    );
+  }
+}
+async function fixture() {
   const dir = mkdtempSync(path.join(os.tmpdir(), 'relay-harness-test-')),
     repo = path.join(dir, 'repo'),
     remote = path.join(dir, 'remote.git'),
@@ -79,6 +108,8 @@ function fixture() {
   git(repo, 'init', '--initial-branch=main');
   git(remote, 'init', '--bare');
   const policy = JSON.parse(readFileSync(policyPath));
+  // Synthetic capability/cleanup tests must never probe a real builder's ports.
+  policy.runtime = await isolatedRuntime(policy.runtime);
   const mathematicalFixtures = [
     'examples/hero.json',
     'examples/workflow/editorial.json',
@@ -461,9 +492,18 @@ async function qualifyExperiment(out, receipts, options) {
     leaseFile: path.join(path.dirname(out), 'capability-lease.json'),
   });
 }
-test('published preparation gives identical immutable inputs and a minimal shell, not the spike UI', () => {
-  const f = fixture(),
+test('published preparation gives identical immutable inputs and a minimal shell, not the spike UI', async () => {
+  const f = await fixture(),
     run = f.prepare();
+  const ports = (runtime) =>
+    Object.values(runtime).flatMap((entry) =>
+      ['metro', 'proxy', 'observer'].map((key) => entry[key]),
+    );
+  const productionPorts = new Set(ports(read(policyPath).runtime));
+  assert.equal(new Set(ports(run.policy.runtime)).size, 9);
+  assert.ok(
+    ports(run.policy.runtime).every((port) => !productionPorts.has(port)),
+  );
   assert.equal(run.ready, false);
   assert.equal(
     new Set(
@@ -493,8 +533,8 @@ test('published preparation gives identical immutable inputs and a minimal shell
     assert.equal(existsSync(path.join(b.workspace, '.codex/auth.json')), false);
   }
 });
-test('prepare rejects an unpushed commit, incomplete verification and mutable shared input', () => {
-  const f = fixture();
+test('prepare rejects an unpushed commit, incomplete verification and mutable shared input', async () => {
+  const f = await fixture();
   write(path.join(f.repo, 'new.txt'), 'new');
   git(f.repo, 'add', '.');
   git(
@@ -525,7 +565,7 @@ test('prepare rejects an unpushed commit, incomplete verification and mutable sh
   gate.verification.sha256 = sha256(readFileSync(gate.verification.path));
   write(f.gatePath, gate);
   assert.throws(f.prepare, /Verification is incomplete/);
-  const next = fixture(),
+  const next = await fixture(),
     run = next.prepare(),
     b = run.builders.luna;
   write(
@@ -538,7 +578,7 @@ test('prepare rejects an unpushed commit, incomplete verification and mutable sh
   );
 });
 test('same exact models, null budget, high effort and permissions are enforced', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare(),
     receipts = qualifiers(f, run);
   let installs = 0;
@@ -573,7 +613,7 @@ test('same exact models, null budget, high effort and permissions are enforced',
   );
 });
 test('ACK and installed dependencies never qualify runtime capability or permit a builder turn', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     prepared = f.prepare();
   const run = await qualifyTransport(f.out, qualifiers(f, prepared), {
     install: fakeInstall,
@@ -596,7 +636,7 @@ test('ACK and installed dependencies never qualify runtime capability or permit 
 });
 test('capability failure or absent artifact fails closed without starting a product turn', async () => {
   for (const kind of ['failed-receipt', 'missing-screenshot', 'wrong-review']) {
-    const f = fixture(),
+    const f = await fixture(),
       prepared = f.prepare();
     await qualifyTransport(f.out, qualifiers(f, prepared), {
       install: fakeInstall,
@@ -647,7 +687,7 @@ test('capability failure or absent artifact fails closed without starting a prod
 });
 test('cancellation after the last capability session never commits readiness', async () => {
   for (const mechanism of ['signal', 'cancel-file']) {
-    const f = fixture(),
+    const f = await fixture(),
       prepared = f.prepare(),
       leaseFile = path.join(f.dir, 'capability-lease.json');
     await qualifyTransport(f.out, qualifiers(f, prepared), {
@@ -685,7 +725,7 @@ test('cancellation after the last capability session never commits readiness', a
   }
 });
 test('successful capability artifacts and approval evidence are rechecked before product launch', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare();
   await qualifyExperiment(f.out, qualifiers(f, run), { install: fakeInstall });
   const receipt = path.join(
@@ -709,7 +749,7 @@ test('successful capability artifacts and approval evidence are rechecked before
   assert.equal(called, false);
 });
 test('qualification rejects mismatched model receipt, no usage and changed flags', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare(),
     receipts = qualifiers(f, run),
     receipt = read(path.join(receipts.sol, 'receipt.json'));
@@ -772,7 +812,7 @@ test('tool ledger records event items and reroutes without certifying nested cal
   assert.equal(trace.complete, true);
 });
 test('real synthetic peer runs only authorized assigned builder and preserves streamed usage', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare();
   await qualifyExperiment(f.out, qualifiers(f, run), { install: fakeInstall });
   await assert.rejects(runBuilders(f.out, 'luna'), /authorization/);
@@ -847,7 +887,7 @@ function waitingPeer(dir, wrongModel = false) {
   return syntheticPeer(dir, { wrongModel });
 }
 test('wrong resolved model is rejected before any builder turn starts', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare();
   await qualifyExperiment(f.out, qualifiers(f, run), { install: fakeInstall });
   const peer = waitingPeer(f.dir, true);
@@ -864,7 +904,7 @@ test('wrong resolved model is rejected before any builder turn starts', async ()
   assert.equal(requests.includes('turn/start'), false);
 });
 test('cancel file drains an active synthetic turn and preserves its late reported usage', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare();
   await qualifyExperiment(f.out, qualifiers(f, run), { install: fakeInstall });
   const peer = waitingPeer(f.dir),
@@ -900,8 +940,8 @@ test('application source snapshot ignores reports and generated evidence, but de
   write(path.join(dir, 'src/App.jsx'), 'changed');
   assert.notEqual(snapshotApplication(dir).identity, before.identity);
 });
-test('external selector sources and checkpoint are hash-checked rather than copied or assumed', () => {
-  const f = fixture(),
+test('external selector sources and checkpoint are hash-checked rather than copied or assumed', async () => {
+  const f = await fixture(),
     selector = read(f.gatePath).selector;
   validateSelector(selector);
   write(selector.checkpoint.path, 'changed synthetic bytes');
@@ -909,7 +949,7 @@ test('external selector sources and checkpoint are hash-checked rather than copi
 });
 
 test('resolved permission contract rejects wrong cwd, expanded roots, temp access, network and active profile', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     prepared = f.prepare();
   const run = await qualifyExperiment(f.out, qualifiers(f, prepared), {
     install: fakeInstall,
@@ -959,7 +999,7 @@ test('resolved permission contract rejects wrong cwd, expanded roots, temp acces
 });
 
 test('prepared input tree rejects edits, additions and removals, allowing only predeclared node_modules generation', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare(),
     b = run.builders.sol,
     app = path.join(b.workspace, 'app');
@@ -987,7 +1027,7 @@ test('prepared input tree rejects edits, additions and removals, allowing only p
 });
 
 test('qualification detects post-install cross-builder changes and launch detects post-qualification changes', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare();
   await assert.rejects(
     qualifyExperiment(f.out, qualifiers(f, run), {
@@ -1002,7 +1042,7 @@ test('qualification detects post-install cross-builder changes and launch detect
     }),
     /tree changed/,
   );
-  const g = fixture(),
+  const g = await fixture(),
     initial = g.prepare();
   await qualifyExperiment(g.out, qualifiers(g, initial), {
     install: fakeInstall,
@@ -1027,7 +1067,7 @@ test('qualification detects post-install cross-builder changes and launch detect
 
 test('wrong permissions and input mutation during thread startup both prevent any first turn', async () => {
   for (const kind of ['permissions', 'input']) {
-    const f = fixture(),
+    const f = await fixture(),
       run = f.prepare();
     await qualifyExperiment(f.out, qualifiers(f, run), {
       install: fakeInstall,
@@ -1063,7 +1103,7 @@ test('wrong permissions and input mutation during thread startup both prevent an
 });
 
 test('actual start is recorded once and makes subsequent implementation edits valid', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare();
   await qualifyExperiment(f.out, qualifiers(f, run), { install: fakeInstall });
   const peer = syntheticPeer(f.dir, { complete: true });
@@ -1097,7 +1137,7 @@ test('actual start is recorded once and makes subsequent implementation edits va
 });
 
 test('failure still checks ports, retains the lease and prevents the next builder until cleanup is proven', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare();
   await qualifyExperiment(f.out, qualifiers(f, run), { install: fakeInstall });
   const peer = syntheticPeer(f.dir, { complete: true }),
@@ -1147,7 +1187,7 @@ test('failure still checks ports, retains the lease and prevents the next builde
 });
 
 test('unknown recorder cleanup is retained on exceptional exit without blindly killing processes', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare();
   await qualifyExperiment(f.out, qualifiers(f, run), { install: fakeInstall });
   const leaseFile = path.join(f.dir, 'lease.json');
@@ -1167,7 +1207,7 @@ test('unknown recorder cleanup is retained on exceptional exit without blindly k
 });
 
 test('a live declared PID blocks release even when a report says stopped, and is never signaled', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare();
   await qualifyExperiment(f.out, qualifiers(f, run), { install: fakeInstall });
   const peer = syntheticPeer(f.dir, { complete: true }),
@@ -1193,7 +1233,7 @@ test('a live declared PID blocks release even when a report says stopped, and is
 });
 
 test('preflight port failure also retains the lease until all reserved ports are free', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare(),
     leaseFile = path.join(f.dir, 'lease.json');
   await qualifyExperiment(f.out, qualifiers(f, run), { install: fakeInstall });
@@ -1230,7 +1270,7 @@ test('preflight port failure also retains the lease until all reserved ports are
 });
 
 test('operator recovery preserves a missing builder manifest and verifies final trace, PIDs and dead lease', async () => {
-  const f = fixture(),
+  const f = await fixture(),
     run = f.prepare(),
     b = run.builders.luna;
   f.out = realpathSync(f.out);
@@ -1358,8 +1398,8 @@ test('operator recovery preserves a missing builder manifest and verifies final 
   assert.equal(existsSync(leaseFile), false);
 });
 
-test('launch gate requires exact v4 full stage order and matching stable source snapshots', () => {
-  const f = fixture(),
+test('launch gate requires exact v4 full stage order and matching stable source snapshots', async () => {
+  const f = await fixture(),
     gate = read(f.gatePath),
     original = read(gate.verification.path);
   validateGate(gate, f.commit, f.repo);
@@ -1406,8 +1446,8 @@ test('launch gate requires exact v4 full stage order and matching stable source 
   assert.throws(() => validateGate(gate, f.commit, f.repo), /exactly match/);
 });
 
-test('prepare rejects an internally consistent but incomplete published source snapshot', () => {
-  const f = fixture(),
+test('prepare rejects an internally consistent but incomplete published source snapshot', async () => {
+  const f = await fixture(),
     gate = read(f.gatePath),
     verification = read(gate.verification.path);
   const incomplete = verification.sources.filter(
@@ -1422,7 +1462,7 @@ test('prepare rejects an internally consistent but incomplete published source s
   assert.throws(f.prepare, /complete published source snapshot/);
 });
 
-test('platform gate rejects boolean summaries, missing native or shell evidence, stale artifacts and changed shell bytes', () => {
+test('platform gate rejects boolean summaries, missing native or shell evidence, stale artifacts and changed shell bytes', async () => {
   const cases = [
     (f) => {
       write(read(f.gatePath).platform.path, {
@@ -1466,7 +1506,7 @@ test('platform gate rejects boolean summaries, missing native or shell evidence,
     },
   ];
   for (const mutate of cases) {
-    const f = fixture(),
+    const f = await fixture(),
       gate = read(f.gatePath);
     validateGate(gate, f.commit, f.repo);
     mutate(f);
@@ -1480,9 +1520,9 @@ test('platform gate rejects boolean summaries, missing native or shell evidence,
   }
 });
 
-test('prepare rejects byte or executable-mode mismatches even when receipt source hashes are self-consistent', () => {
+test('prepare rejects byte or executable-mode mismatches even when receipt source hashes are self-consistent', async () => {
   for (const kind of ['sha256', 'mode']) {
-    const f = fixture(),
+    const f = await fixture(),
       gate = read(f.gatePath),
       verification = read(gate.verification.path);
     const forged = structuredClone(verification.sources),
