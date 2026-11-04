@@ -540,6 +540,7 @@ export const MotionEmitSchema = z
     motion: MotionAnalyzeSchema,
     channel: z.enum(['translateX', 'translateY', 'scale', 'rotate', 'opacity']),
     platform: z.enum(['web', 'react-native']),
+    useNativeDriver: z.boolean().default(false),
     reducedMotion: z.boolean().default(false),
     reducedMotionPolicy: z.enum(['instant', 'opacity-fade']).default('instant'),
     fadeDurationSeconds: finite.min(0.001).max(1).default(0.12),
@@ -565,6 +566,8 @@ export function emitMotion(input: MotionEmitInput) {
     analysis,
     plan: null,
   });
+  if (platform === 'web' && request.useNativeDriver)
+    return fail('useNativeDriver is a React Native adapter request; web emission uses WAAPI');
   if (!compatible)
     return fail(
       'channel/unit mismatch; normalized coordinates require an explicit property-space conversion',
@@ -676,7 +679,7 @@ export function emitMotion(input: MotionEmitInput) {
           toValue: motion.coordinate.to,
           duration: request.fadeDurationSeconds * 1000,
           easing: 'Easing.linear',
-          useNativeDriver: false,
+          useNativeDriver: request.useNativeDriver,
         },
         notes,
         reducedMotion: true,
@@ -688,7 +691,7 @@ export function emitMotion(input: MotionEmitInput) {
     );
   if (analysis.regime === 'overdamped')
     return fail(
-      'inspected RN 0.88.0 JS SpringAnimation uses critical formula for zeta>=1; overdamped analytic parity unsupported',
+      'inspected RN 0.88.0 JS/iOS/Android spring backends use critical formula for zeta>=1; overdamped analytic parity unsupported',
     );
   return {
     supported: true as const,
@@ -704,7 +707,7 @@ export function emitMotion(input: MotionEmitInput) {
         overshootClamping: false,
         restDisplacementThreshold: motion.settling.positionTolerance,
         restSpeedThreshold: motion.settling.speedTolerance,
-        useNativeDriver: false,
+        useNativeDriver: request.useNativeDriver,
       },
       binding:
         channel === 'rotate'
@@ -712,7 +715,9 @@ export function emitMotion(input: MotionEmitInput) {
           : `Bind scalar Animated.Value to ${channel}.`,
       notes: [
         ...notes,
-        'JS driver selected to match inspected implementation; native backend parity is unverified.',
+        request.useNativeDriver
+          ? 'Native driver requested for opacity/transform. RN 0.88.0 native source mapping was inspected; current device parity and frame delivery still require measurement.'
+          : 'JS driver selected; this configuration does not establish UI-thread execution.',
         'RN caps per-frame elapsed time, stops and snaps at rest thresholds, and inherits velocity on interruption. Start a fresh value/animation for this mapping.',
         'RN spring duration is threshold-driven and does not equal the analysis horizon.',
       ],

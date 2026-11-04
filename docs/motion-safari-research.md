@@ -47,6 +47,8 @@ For the surface renderer, feature detection needs a real worker initialization a
 
 ## Executed verification
 
+Native follow-up researched on 2026-11-04: [Expo SDK58 lists Reanimated4.7.1 in Expo Go](https://docs.expo.dev/versions/v58.0.0/sdk/reanimated/). Its [sensor hook](https://docs.swmansion.com/react-native-reanimated/docs/device/useAnimatedSensor/) exposes shared sensor values, availability and explicit unregistration. A UI-thread shared-value adapter is a candidate for continuous native tilt; the current browser controller and portable JavaScript spring are not that adapter. No native sensor events, worklet pipeline or physical-device performance were verified here. The existing matched builders retain their frozen dependency versions.
+
 `npx tsx --test test/motion-dynamics.test.ts test/motion.test.ts`: **22/22 passed**. Tests cover independent existing stationary solutions, all damping regimes, continuity, signed target work, conservation/dissipation balance, 30/60/120 Hz and irregular partitions, timeline bounds, reversed scroll ranges, beta wrapping and screen quarter-turns, latest-only input, elapsed-time filtering, permission denial/rejection, insecure context, cleanup, hidden/reduced-motion reset, and permission completion after disposal. `npx tsc --noEmit --pretty false` passed before root integration changes.
 
 The local browser probe used Playwright 1.64.1 on arm64 macOS with Node 26.9.0. WebKit was installed at `artifacts/runtime/playwright/webkit-2370/pw_run.sh`. Both browsers ran headless on an intercepted HTTPS test origin. The worker received a transferred HTML canvas and attempted WebGL2 context creation; no scene draw or physical sensor data was involved.

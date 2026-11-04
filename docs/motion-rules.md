@@ -63,7 +63,17 @@ Explicit property bounds and opacity's intrinsic [0,1] interval are hard emissio
 
 Web emission uses sampled keyframes with linear interpolation, one iteration, a millisecond duration and forwards fill. Its final frame is the exact horizon sample; it does not secretly snap to the target. A conservative scalar interpolation-error bound follows `max|x″|·Δt²/8`, using initial-energy bounds on speed/displacement. This does not bound composited screen-space error or prove frame delivery. Transform composition with other animations remains the renderer's responsibility.
 
-The RN mapping was inspected against installed React Native 0.88.0's `Libraries/Animated/animations/SpringAnimation.js`. It uses stiffness/damping/mass, property-unit velocity, explicit rest thresholds and `overshootClamping:false`. The emitted config selects the inspected JS driver (`useNativeDriver:false`). RN requires positive damping, and its JS implementation treats all damping ratios≥1 with the critical formula. Therefore zero-damping and overdamped spring mappings return unsupported, while analytic analysis and web emission remain available. Native backend parity is not asserted. RN caps frame-time advancement, inherits velocity on interruption, and snaps at rest; its runtime duration is not the analysis horizon. A fresh animation/value is required for the stated initial conditions.
+The RN mapping uses stiffness/damping/mass, property-unit velocity, explicit rest thresholds and `overshootClamping:false`. `useNativeDriver` defaults to false for compatibility; request true explicitly for native opacity/transform plans, including reduced-motion opacity fades. Web emission rejects that native-only request. React Native documents that its native driver can execute on the UI thread after configuration, independently of per-frame JS work. The emitted flag requests this path; it does not establish current renderer execution or frame delivery. [React Native Animated](https://reactnative.dev/docs/animated#using-the-native-driver).
+
+Inspection of installed React Native 0.88.0's JS, iOS and Android spring implementations found the critical formula used for damping ratios≥1. Therefore overdamped spring mappings remain unsupported for either driver. The JS configuration also requires positive damping. RN caps frame-time advancement, inherits velocity on interruption, and snaps at rest; its runtime duration is not the analysis horizon. A fresh animation/value is required for the stated initial conditions. Native trajectory, cancellation, reduced-motion and JS-blocking verification remains pending on actual iOS/Android renderers.
+
+Installed source inspection on 2026-11-04, relative to `native/node_modules/react-native/`:
+
+| Source | SHA-256 |
+| --- | --- |
+| `Libraries/Animated/animations/SpringAnimation.js` | `165e5a9842d956f8ff197b0fc1d3490785870b1e0281510b555159c4cab913a8` |
+| `Libraries/NativeAnimation/Drivers/RCTSpringAnimation.mm` | `f3abfa0fab045170abc4202dbaadcde95219ea084165b949173ded4d9b3295fd` |
+| `ReactAndroid/src/main/java/com/facebook/react/animated/SpringAnimation.kt` | `650b98999ca55108593d40266a17c0b7b66609fc6dbd1178a7f081aedcce3bef` |
 
 Reduced-motion input is a caller-resolved preference, not environment detection. `instant` sets the target immediately. `opacity-fade` allows a short linear transition only on an existing opacity channel; transform channels still set instantly. The fade duration is editable and defaults to 0.12s without claiming a universal accessibility threshold. These substitutes deliberately do not preserve spring energy. The caller must observe preference changes and cancel/regenerate in-flight plans.
 

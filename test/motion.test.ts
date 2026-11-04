@@ -313,6 +313,46 @@ test('RN mapping declares inspected backend limitations and disallows unsupporte
   );
 });
 
+test('explicit native-driver request preserves supported spring parameters and backend limits', () => {
+  for (const damping of [1, 2]) {
+    const motion = {
+      ...input(damping),
+      coordinate: { unit: 'dp' as const, from: 0, to: 60, initialVelocity: 12 },
+    };
+    const result = emitMotion({ motion, channel: 'translateX', platform: 'react-native', useNativeDriver: true });
+    if (result.plan?.kind !== 'react-native-spring') throw Error('native spring plan required');
+    assert.equal(result.plan.config.useNativeDriver, true);
+    assert.equal(result.plan.config.velocity, 12);
+    assert.equal(result.plan.config.mass, motion.spring.mass);
+    assert.equal(result.plan.config.stiffness, motion.spring.stiffness);
+    assert.equal(result.plan.config.damping, damping);
+    assert.equal(result.plan.config.overshootClamping, false);
+    assert(result.plan.notes.some(n => n.includes('require measurement')));
+  }
+  for (const damping of [0, 3]) {
+    const result = emitMotion({
+      motion: { ...input(damping), coordinate: { unit: 'dp', from: 0, to: 60 } },
+      channel: 'translateX', platform: 'react-native', useNativeDriver: true,
+    });
+    assert.equal(result.supported, false);
+  }
+});
+
+test('native-driver request is explicit, target-specific and retained by reduced-motion fade', () => {
+  const motion = { ...input(1), coordinate: { unit: 'opacity' as const, from: 0, to: 1 } };
+  const fade = emitMotion({ motion, channel: 'opacity', platform: 'react-native', useNativeDriver: true,
+    reducedMotion: true, reducedMotionPolicy: 'opacity-fade', fadeDurationSeconds: .06 });
+  if (fade.plan?.kind !== 'react-native-timing') throw Error('native fade plan required');
+  assert.equal(fade.plan.config.useNativeDriver, true);
+  assert.equal(fade.plan.config.duration, 60);
+  assert.equal(fade.plan.config.easing, 'Easing.linear');
+  const instant = emitMotion({ motion, channel: 'opacity', platform: 'react-native', useNativeDriver: true, reducedMotion: true });
+  assert.equal(instant.plan?.kind, 'set');
+  const web = emitMotion({ motion, channel: 'opacity', platform: 'web', useNativeDriver: true });
+  assert.equal(web.supported, false);
+  if (!web.supported) assert.match(web.reason, /React Native adapter request/);
+});
+
 test('linear web keyframe scalar error stays within the reported analytic bound', () => {
   const motion = {
     ...input(1),
