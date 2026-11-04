@@ -37,16 +37,14 @@ import {
 import {
   resolveDesignRuntime,
   type PortableDesign,
-} from '../src/decision-runtime';
-import { emitMotion } from '../src/motion';
-import { evaluateExpression } from '../src/math-expression';
-import policy from '../examples/vela/design.generated.json';
-import { getCoordinateSpace } from './coordinates';
-import {
+  evaluateExpression,
   advanceMeasuredNativeGeometry,
   type MeasuredNativeGeometry,
   type MeasuredNativeState,
-} from '../src/native-root-geometry';
+} from '@design-theory/toolkit/layout';
+import { emitMotion } from '@design-theory/toolkit/motion';
+import policy from '../examples/vela/design.generated.json';
+import { getCoordinateSpace } from './coordinates';
 import { createRestoreGate } from '../src/restore-gate';
 import {
   readStored,
@@ -501,6 +499,7 @@ function Vela({
         },
         channel: 'translateY',
         platform: 'react-native',
+        useNativeDriver: true,
         reducedMotion,
       }),
     [
@@ -517,6 +516,7 @@ function Vela({
         motion: { coordinate: { unit: 'opacity', from: 0, to: 1 } },
         channel: 'opacity',
         platform: 'react-native',
+        useNativeDriver: true,
         reducedMotion: true,
         reducedMotionPolicy: 'opacity-fade',
       }),
@@ -635,15 +635,18 @@ function Vela({
     if (reducedMotion) {
       pageOffset.setValue(0);
       opacity.setValue(0);
-      const duration =
+      const config =
         fadePlan.plan?.kind === 'react-native-timing'
-          ? fadePlan.plan.config.duration
-          : 0;
+          ? fadePlan.plan.config
+          : null;
+      if (!config) {
+        opacity.setValue(1);
+        finished();
+        return;
+      }
       const animation = Animated.timing(opacity, {
-        toValue: 1,
-        duration,
+        ...config,
         easing: Easing.linear,
-        useNativeDriver: false,
       });
       animation.start(({ finished: done }) => {
         if (done) finished();
@@ -1043,6 +1046,11 @@ function Vela({
           motion: {
             spring: entryPlan.analysis.motion.spring,
             kind: reducedMotion ? 'opacity-fade' : entryPlan.plan?.kind,
+            nativeDriverRequested: reducedMotion
+              ? fadePlan.plan?.kind === 'react-native-timing' &&
+                fadePlan.plan.config.useNativeDriver
+              : entryPlan.plan?.kind === 'react-native-spring' &&
+                entryPlan.plan.config.useNativeDriver,
             phase: motionPhase,
           },
           storageError,

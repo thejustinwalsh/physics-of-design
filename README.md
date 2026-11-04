@@ -141,6 +141,7 @@ The pinned Expo58 / React Native0.88 harness returns actual `Text.onTextLayout` 
 On Apple Silicon with Xcode/iOS26.5 available:
 
 ```sh
+npm run build # Includes the public layout/motion entries consumed by native Vela
 npm run native:provision # Project-local Android SDK/JDK; accepts SDK licenses; downloads official Expo Go runtimes
 DESIGN_NATIVE_TOKEN=local-spike npm run native:start
 # Another terminal, while the harnesses are ready:

@@ -11,6 +11,26 @@ export const nativeSourceFiles = [
   'native/observation-clipping.ts',
   'native/metro.config.js',
   'native/package.json',
+  'native/package-lock.json',
+  'package.json',
+  'package-lock.json',
+  // Native Vela now consumes these compiled public entries. Hash their actual
+  // implementation bytes as well as source: a rebuild invalidates prior receipts.
+  // This identifies bytes; the ordered build establishes source/output consistency.
+  ...[
+    'layout-runtime',
+    'decision-runtime',
+    'math-expression',
+    'native-viewport',
+    'native-safe-area',
+    'native-root-geometry',
+    'motion-runtime',
+    'motion',
+    'motion-dynamics',
+  ].map((name) => `dist/${name}.js`),
+  'src/layout-runtime.ts',
+  'src/motion-runtime.ts',
+  'src/motion-dynamics.ts',
   'src/decision-runtime.ts',
   'src/math-expression.ts',
   'src/motion.ts',

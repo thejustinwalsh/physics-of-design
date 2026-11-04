@@ -23,3 +23,5 @@ jobs:
             artifacts/verification
             artifacts/dom-surfaces
             artifacts/dom-surfaces-gpu
+            artifacts/vela/proof-web/report.json
+            artifacts/vela/proof-web/*-bindings.json
