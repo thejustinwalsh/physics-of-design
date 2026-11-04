@@ -2,7 +2,7 @@
 
 2026-10-24, America/Detroit. Engineering verification continued into 2026-10-25 UTC. This supersedes the earlier [spike report](spike-report.md).
 
-**Historical milestone report.** The subsequent brief-driven fast search, choice graph, resolved machine, perceptual color/motion tools and complete Vela proof are described in [the current report](design-machine-report.md). This document retains the original core verification and flat-search evaluation; those measurements are not a test of the new loop.
+**Historical milestone report.** The subsequent brief-driven fast search, choice graph, resolved machine, perceptual color/motion tools and Vela proof are described in [the October 25 app report](design-machine-report.md). See the [November 4 checkpoint](landscape.md#evidence-checkpoint--november-4-2026) for later integration and Relay trial status. This document retains the original core verification and flat-search evaluation; those measurements are not a test of the new loop.
 
 The reusable tool stack is implemented: 24 composable JSON commands, thin MCP wrappers, a typed relational state and dependency graph, real font shaping and browser/native measurement, conditional factors, coupled candidate search, editable responsive flex policies, proof tools, one actual local SemIf/Qwen selector, corpus operations and an evaluation pipeline. The two specimens are executable fixtures for the stack. All typography, color, spacing, responsive anchors, pins and locks remain editable. Complete publication/native-app proofs now supplement the original two text fixtures.
 

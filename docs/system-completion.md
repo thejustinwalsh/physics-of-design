@@ -1,8 +1,10 @@
 # Engineering acceptance ledger and mission gaps
 
-**Current status:** the fast mathematical choice loop, resolved/replayable design machine and complete Vela app are implemented. The current proof and measured limitations are in [the design-machine report](design-machine-report.md). The ledger below is the previous milestone audit, retained to distinguish what the new implementation closes. Award-level preference, neural taste competence and lower end-to-end agent cost remain unproved.
+**Current acceptance remains incomplete.** See the [November 4 evidence checkpoint](landscape.md#evidence-checkpoint--november-4-2026) for the integration and frozen Relay trial scopes. Implemented tools and historical Vela proofs do not establish successful delivery by a new builder. Independent cohort review and fresh native verification remain outstanding; award-level preference, neural taste competence and lower end-to-end agent cost remain unproved.
 
-## Current implementation
+## Earlier implementation milestone
+
+The table below retains its original measurements. In particular, its command/stage counts and native receipts are historical; use the checkpoint above for later evidence.
 
 | Area | Current outcome |
 | --- | --- |

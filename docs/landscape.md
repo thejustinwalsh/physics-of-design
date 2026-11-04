@@ -1,8 +1,26 @@
 # What exists, how it is used, and what is still missing
 
-The current stack has 63 validated decision commands, compact CLI/MCP access, precise component inspection, perceptual color and analytic motion. An authored brief becomes a bounded mathematical search, a graph of evaluated local choices and a resolved design machine. Vela consumes that machine as a complete six-screen web/native app. Fieldwork and the original two typography specimens remain available.
+The stack has 64 typed decision commands, compact CLI/MCP access, precise component inspection, perceptual color and analytic motion. An authored brief becomes a bounded mathematical search, a graph of evaluated local choices and a resolved design machine. Vela and Fieldwork are application consumers; their existence does not establish that another builder will apply the tools successfully.
 
-[The current report](design-theory-extension.md) records throughput, actual local selection, guarded replay, complete-app verification and remaining research limits. The mathematical inner loop is fast; the measured local neural readout is slow and remains outside it. No autonomous taste, award-level output or end-to-end token improvement is claimed.
+## Evidence checkpoint — November 4, 2026
+
+The integration branch and the frozen Relay comparison are separate. The comparison uses toolkit commit `8564509`; fixes on `feat/client-runtime-entries` do not change those trial inputs. The following trial status was recorded during Sol's run, before Astra's build; it is not a final comparison.
+
+| Question | Evidence and limit |
+| --- | --- |
+| Does the toolkit execute? | Integration checkpoint `1821e20` passed all 28 headless stages and 477 unit tests, including browser, CLI/MCP, consumer and native-type checks. [Retained CI run](https://github.com/thejustinwalsh/physics-of-design/actions/runs/41918073726). This does not establish current native playback or native iPad behavior. |
+| Do selected values reach rendered UI? | Vela's browser proof retains 72 scenarios and 360 property comparisons for heading size, leading, tracking and root colors. A real font-size override fails comparisons and restoration passes. These checks cover the named properties, not every property or all application behavior. |
+| Does the local selector and replay work in a builder? | Luna's frozen run records 13 evaluated assignments, 234 factor evaluations and one actual pinned local-model call; replay records three cache hits and zero neural calls. This is a small choice problem, not evidence of broad composition exploration. |
+| Did that builder deliver a verified app? | Luna produced web/iOS/Android captures and exercised task flows, but finished with 78 compiler errors, 12 unknown property comparisons and unapplied selected motion/material settings. Its final delivery failed. Sol's outcome and Astra's build were still pending at this checkpoint. |
+| Has the intended benefit been demonstrated? | No. Luna took about 145 minutes and reported 1,187,920 uncached input tokens and 300,357 output tokens; cached input is tracked separately. These are whole-task totals, not incremental toolkit overhead or a matched baseline. Human preference, award-level quality and current-loop token savings remain unproved. |
+
+Builder observations come from the locally retained `artifacts/relay-runs/20261104/matched-current/luna/metrics/receipt.json` and `artifacts/relay-runs/20261104/review/luna-final-static/review.json`. They are separate from toolkit CI; a public final cohort report is still pending.
+
+The immediate integration gap is the path from selected choices to applied, measured properties. Public `layout`, `motion` and `browser` entries, automatic selected-payload identities and actual DOM property collection reduce manual handoff work. Current native-driver trajectory, JS-blocking independence, cancellation, disposal and native iPad checks remain outstanding. The native sensor/worklet adapter remains research, not implemented functionality. Physical Safari performance is not established by Linux WebKit checks.
+
+Prepared-toolkit packaging also matters: the frozen copy omitted JSON fixtures read by its workflow/responsive tests. The integration fix includes those two inputs for future preparations and documents the test working directory. It does not supply the excluded demonstration/native projects or turn the copied tests into a standalone full verification lane. Original trial failures remain recorded.
+
+Earlier [extension measurements](design-theory-extension.md), [design-field measurements](bold-design-report.md) and [Vela app proof](design-machine-report.md) retain their original source and runtime scopes. Their older command counts and stage counts must not be read as current integration verification. The mathematical inner loop and the local neural readout have separate costs. No autonomous taste, award-level output or end-to-end token improvement is claimed.
 
 ## System map
 
@@ -27,7 +45,7 @@ Deterministic tools establish measurements and feasibility. Conditional factors 
 
 ## Tools actually available
 
-All 63 commands share typed validation across the JSON CLI and MCP. The CLI reads a JSON object or JSONL and writes JSON; diagnostics go to stderr. Tool availability depends on configuration: compiled CLI works locally; an agent host must be configured to expose the MCP server. Nothing silently installs itself into other agents.
+All 64 commands share typed validation across the JSON CLI and MCP. The CLI reads a JSON object or JSONL and writes JSON; diagnostics go to stderr. Tool availability depends on configuration: compiled CLI works locally; an agent host must be configured to expose the MCP server. Nothing silently installs itself into other agents.
 
 | Layer                  | Commands                                                                                                                   | What they do                                                                                                                                 |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,7 +59,7 @@ All 63 commands share typed validation across the JSON CLI and MCP. The CLI read
 | Composition/platform   | `composition plan`, `composition analyze`, `platform audit`                                                                | Editable flex/type/space proposals; rectangle/group/edge/size contracts; source-attributed Apple target/safe-area/scaling/navigation checks. |
 | Mathematical decisions | `energy search`, `energy analyze`, `composition solve`, `decision handoff`, `decision replay`                              | Bounded weighted exploration, local pressures, graph provenance, executable handoffs and guarded reuse.                                      |
 | Motion                 | `motion analyze`, `motion candidates`, `motion emit`, `motion proof`                                                       | Analytic spring behavior, bounded alternatives, platform mappings and inspection.                                                            |
-| Staged decisions       | `decision run`, `field measure`, `field run`, `field validate`, `kernel compile`, `bindings check`, `validation plan`, `validation check`                                                                      | Conditional stage DAGs, cached selection paths and explicit responsive/tool receipt gates.                                                   |
+| Staged decisions       | `decision run`, `field measure`, `field run`, `field validate`, `kernel compile`, `kernel resolve`, `bindings check`, `validation plan`, `validation check`                                                                      | Conditional stage DAGs, named property handoffs, cached selection paths and explicit responsive/tool receipt gates.                                                   |
 | Media/materials        | `surface probe`, `surface map`, `surface textures`, `media analyze`, `media crops`, `material pair`, `material candidates`, `surface css`, `surface light` | Physical response, texture/channel semantics, source-pixel contrast, crop geometry and conditional finish relationships.                     |
 | Inspection/prose       | `wireframe inspect`, `prose analyze`                                                                                       | Whole-layout dimensional drawings, editable MCP App and authored reader journeys.                                                            |
 | Driven motion          | `motion dynamics`, `motion timeline`                                                                                       | Target work, dissipation and bounded runtime samples; optional GSAP/Lenis/browser tilt adapters.                                             |

@@ -2,6 +2,8 @@
 
 October 25, 2026. This report describes the new brief-driven mathematical loop. The older four-project flat-search evaluation remains historical evidence and is not relabeled as a test of this architecture.
 
+**Historical app milestone.** Its source identities, command counts, stage counts and native results apply to the runs cited here. See the [November 4 evidence checkpoint](landscape.md#evidence-checkpoint--november-4-2026) for later integration checks and the unfinished matched Relay trial.
+
 The system now connects an authored brief to bounded weighted mathematical exploration, a recorded graph of local choices, optional local neural frontier selection, an executable design machine and real browser/native verification. Vela is a complete six-screen app consuming that generated contract. It supplements Fieldwork and the original typography specimens.
 
 ## Measured search and reuse

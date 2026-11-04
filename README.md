@@ -4,7 +4,7 @@ Local-first TypeScript CLI/MCP tools for **brief-driven mathematical design deci
 
 Vela is a complete six-screen app built from a generated policy. Fieldwork and the typography specimens remain executable proofs. This is a relational tool stack, not a component catalog or UI composer. Brief preference energy is not universal beauty, and musical ratios remain an optional hypothesis.
 
-[Current design field and integration limits](docs/bold-design-report.md) · [Previous extension](docs/design-theory-extension.md) · [Previous app milestone](docs/design-machine-report.md) · [Full landscape](docs/landscape.md) · [Architecture](docs/adr-002-fast-design-machine.md)
+[Current evidence checkpoint and full landscape](docs/landscape.md#evidence-checkpoint--november-4-2026) · [Design-field milestone](docs/bold-design-report.md) · [Previous extension](docs/design-theory-extension.md) · [Previous app milestone](docs/design-machine-report.md) · [Architecture](docs/adr-002-fast-design-machine.md)
 
 ```sh
 npm ci && npm run build
