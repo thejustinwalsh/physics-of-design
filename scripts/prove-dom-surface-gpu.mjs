@@ -339,32 +339,41 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       });
       proof.pose(0, 0);
       c.setOutput('specular');
-      return { before, immediate: c.renderer.draws };
+      const canvas = proof.cards[1].querySelector('canvas');
+      return { before, immediate: c.renderer.draws, bufferBefore: { width: canvas.width, height: canvas.height } };
     });
-    const smooth = await pixels(page);
-    const afterBatch = await page.evaluate(() => {
+    // Count submissions before a screenshot: full-page capture can change the
+    // headed Chromium scrollbar gutter and legitimately trigger resize draws.
+    await waitForDomSurfacePaint(page);
+    const batchObservation = await page.evaluate(() => {
       const c = proof.controllers[1],
-        draws = c.renderer.draws;
+        draws = c.renderer.draws,
+        canvas = proof.cards[1].querySelector('canvas');
       for (let i = 0; i < 20; i++) c.sample(0);
-      return draws;
+      return { draws, bufferAfter: { width: canvas.width, height: canvas.height } };
     });
+    const afterBatch = batchObservation.draws;
     await waitForDomSurfacePaint(page);
     const afterUnchanged = await page.evaluate(
       () => proof.controllers[1].renderer.draws,
     );
     check(
       engine,
-      'stopped external clock coalesces recipe/output changes and skips unchanged draws',
+      'stopped clock coalesces edits plus final presentation and skips settled draws',
       batched.immediate === batched.before &&
-        afterBatch === batched.before + 1 &&
-        afterUnchanged === afterBatch,
+        afterBatch === batched.before + 2 &&
+        afterUnchanged === afterBatch &&
+        batchObservation.bufferAfter.width === batched.bufferBefore.width &&
+        batchObservation.bufferAfter.height === batched.bufferBefore.height,
       {
         ...batched,
         afterBatch,
         afterUnchanged,
-        finalSpecular: compact(smooth),
+        bufferAfter: batchObservation.bufferAfter,
+        scope: 'Stopped clock and unchanged geometry; pixel capture follows this counter observation.',
       },
     );
+    const smooth = await pixels(page);
     await page.evaluate(() => proof.change(1, { roughness: 0.7 }));
     const rough = await pixels(page);
     check(
@@ -810,7 +819,23 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       earlyDisposed,
     );
     await earlyPage.close();
+    await page.bringToFront();
     await waitForDomSurfacePaint(page);
+    const finalPresentationDisposal = await page.evaluate(() => new Promise(resolve => {
+      const c = proof.controllers[0], before = c.renderer.draws;
+      c.setOutput('roughness');
+      requestAnimationFrame(() => {
+        const first = c.renderer.draws;
+        c.dispose();
+        requestAnimationFrame(() => requestAnimationFrame(() => resolve({
+          before, first, after: c.renderer.draws, status: c.status,
+        })));
+      });
+    }));
+    check(engine, 'disposal between changed draw and final presentation cancels the final submission',
+      finalPresentationDisposal.first === finalPresentationDisposal.before + 1 &&
+      finalPresentationDisposal.after === finalPresentationDisposal.first &&
+      finalPresentationDisposal.status === 'disposed', finalPresentationDisposal);
     const disposal = await page.evaluate(async () => {
       const before = proof.controllers.map((c) => c.renderer.draws);
       proof.change(1, { roughness: 0.63 });
