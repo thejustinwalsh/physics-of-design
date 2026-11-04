@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-11-04-material-quantities",
+  "created": "2026-11-04",
+  "package": "@design-theory/toolkit",
+  "from": "remote main at 4202b9b8f9d00b487ef6442af530f8ee8dce6e2f; relational-kernels-v1",
+  "to": "relational-kernels-v2 with explicit material descriptors and band residuals",
+  "summary": "Separate raw material quantities from normalized authored-band residuals; preserve unknown descriptors as null.",
+  "instructions": "./instructions.md",
+  "transform": "./transform.mjs",
+  "changes": [
+    {
+      "kind": "manual",
+      "from": "values[scenario]['appearance.material.<metric>']",
+      "to": "values[scenario]['appearance.material.<metric>.bandResidual'] for preference distance, or '.value' for the raw descriptor",
+      "automatic": false
+    },
+    {
+      "kind": "manual",
+      "from": "relational-kernels-v1 compilations, resolved output and property bindings",
+      "to": "recompile original inputs, rerun/revalidate choices and regenerate current bindings",
+      "automatic": false
+    },
+    {
+      "kind": "manual",
+      "from": "resolved values are string | number",
+      "to": "resolved values are string | number | null; unknown material quantities are not zero",
+      "automatic": false
+    },
+    {
+      "kind": "manual",
+      "from": "material candidates residuals[].units describes the underlying descriptor",
+      "to": "units is dimensionless; descriptorUnits and scaleUnits retain underlying units",
+      "automatic": false
+    }
+  ],
+  "verification": [
+    "npm ci --prefix codemods",
+    "npm run test:migrations",
+    "npm run build",
+    "npx tsx --test test/material-relations.test.ts test/relational-kernels.test.ts test/output-bindings.test.ts",
+    "node scripts/consumer-check.mjs"
+  ]
+}

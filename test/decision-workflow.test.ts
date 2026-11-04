@@ -212,6 +212,125 @@ test('looked-ahead target changes invalidate the parent but preserve unrelated b
   assert.equal(changed.stages.independent!.status, 'replayed');
 });
 
+test('selector receives requested raw quantities separately from satisfied preferences and cache identity binds the readout', async () => {
+  const dir = await mkdtemp(path.join(tmpdir(), 'quantity-readout-selector-'));
+  try {
+    const input = await fixture();
+    const parent = input.workflow.stages[0]!;
+    parent.selection = 'local-selector';
+    parent.program.factors[0]!.bands = [{ min: 560, max: 720 }];
+    parent.program.scenarios[0]!.values.readoutScale = 1;
+    parent.program.scenarios.push({
+      id: 'enlarged',
+      values: { readoutScale: 0.5 },
+    });
+    (parent.program.derived ??= []).push(
+      {
+        id: 'rawWidth',
+        expression: { ref: 'contentWidth' },
+        unit: 'px',
+        provenance: { kind: 'calculated', source: 's'.repeat(2000) },
+      },
+      {
+        id: 'scaledWidth',
+        expression: {
+          op: 'mul',
+          args: [{ ref: 'contentWidth' }, { ref: 'readoutScale' }],
+        },
+        unit: 'px',
+        provenance: { kind: 'calculated', source: 'synthetic quantity test' },
+      },
+    );
+    parent.consequenceKeys = ['scaledWidth', 'rawWidth'];
+    const gguf = path.join(dir, 'test.gguf');
+    await writeFile(gguf, 'test-only checkpoint bytes');
+    input.selector = { gguf };
+    let calls = 0;
+    const hooks = {
+      testSelectorIdentity: 'requested-quantities-test',
+      testSelector: async (request: any) => {
+        calls++;
+        assert.deepEqual(request.payload.state.quantityReadout.definitions, [
+          { id: 'rawWidth', unit: 'px', basis: 'calculated' },
+          { id: 'scaledWidth', unit: 'px', basis: 'calculated' },
+        ]);
+        assert.ok(!JSON.stringify(request.payload).includes('s'.repeat(2000)));
+        const options = request.payload.options.map((option: any) =>
+          JSON.parse(option.description),
+        );
+        assert.ok(options.length > 1);
+        assert.ok(
+          new Set(options.map((option: any) => option.quantities.rawWidth))
+            .size > 1,
+        );
+        for (const option of options) {
+          assert.ok(
+            option.preferences.every(
+              (p: any) => p.worstScenario.residual === 0,
+            ),
+          );
+          assert.equal(
+            option.quantities.rawWidth,
+            option.assignment.contentWidth,
+          );
+          assert.deepEqual(option.quantities.scaledWidth.byScenario, {
+            desktop: option.assignment.contentWidth,
+            enlarged: option.assignment.contentWidth / 2,
+          });
+        }
+        return { selected: request.payload.options[0].id };
+      },
+    };
+    const first = await runDecisionWorkflow(input, hooks);
+    assert.equal(first.stages.composition!.status, 'chosen');
+    assert.equal(first.statistics.testSelectorCalls, 1);
+    assert.equal(first.statistics.neuralCalls, 0);
+    parent.consequenceKeys.reverse();
+    const replay = await runDecisionWorkflow(
+      { ...input, recipe: first.recipe, mode: 'replay' },
+      hooks,
+    );
+    assert.equal(replay.stages.composition!.status, 'replayed');
+    assert.equal(replay.statistics.testSelectorCalls, 0);
+    parent.consequenceKeys = ['rawWidth'];
+    const changed = await runDecisionWorkflow(
+      { ...input, recipe: first.recipe, mode: 'replay' },
+      hooks,
+    );
+    assert.equal(changed.stages.composition!.status, 'stale');
+    assert.equal(changed.stages.typography!.status, 'blocked');
+    assert.equal(calls, 1);
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test('requested quantities validate their identities and do not invalidate mathematical choices', async () => {
+  const input = await fixture();
+  const parent = input.workflow.stages[0]!;
+  (parent.program.derived ??= []).push({
+    id: 'rawWidth',
+    expression: { ref: 'contentWidth' },
+    unit: 'px',
+    provenance: { kind: 'calculated', source: 'synthetic readout validation' },
+  });
+  const first = await runDecisionWorkflow(input);
+  parent.consequenceKeys = ['rawWidth'];
+  const replay = await runDecisionWorkflow({
+    ...input,
+    recipe: first.recipe,
+    mode: 'replay',
+  });
+  assert.equal(replay.stages.composition!.status, 'replayed');
+  assert.equal(replay.statistics.searches, 0);
+  parent.consequenceKeys = ['missing'];
+  await assert.rejects(runDecisionWorkflow(input), /Unknown consequence key/);
+  parent.consequenceKeys = ['rawWidth', 'rawWidth'];
+  await assert.rejects(runDecisionWorkflow(input), /Duplicate consequence key/);
+  parent.consequenceKeys = Array(17).fill('rawWidth');
+  await assert.rejects(runDecisionWorkflow(input));
+});
+
 test('selector sees successor consequences and may revise preference guidance within viable paths', async () => {
   const dir = await mkdtemp(path.join(tmpdir(), 'lookahead-selector-'));
   try {

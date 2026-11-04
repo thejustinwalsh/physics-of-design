@@ -13,7 +13,7 @@ try {
   );
   await writeFile(
     path.join(dir, 'consumer.mts'),
-    `import {parseState, execute, BrowserRenderer, NativeRenderer, policy, relax, evaluate, CorpusRecordSchema, type DesignState} from '${root}/dist/index.js';
+    `import {parseState, execute, BrowserRenderer, NativeRenderer, policy, relax, evaluate, CorpusRecordSchema, resolveRelationalKernelOutputs, type DesignState, type DecisionWorkflowInput} from '${root}/dist/index.js';
 import {createDrivenMotion} from '${root}/dist/motion-runtime.js';
 import {resolveDesignRuntime, type PortableDesign, advanceNativeViewport, type NativeViewport} from '${root}/dist/layout-runtime.js';
 import {createDomLightController, collectBrowserOutputBindings, type BrowserBindingContext, type DomLightOptions} from '${root}/dist/browser-runtime.js';
@@ -28,6 +28,15 @@ collectBrowserOutputBindings({} as Parameters<typeof collectBrowserOutputBinding
 // @ts-expect-error The application clock advances motion in numeric seconds.
 motion.advance('16');
 const state:DesignState=parseState({});
+declare const selected:ReturnType<typeof resolveRelationalKernelOutputs>;
+const rawMaterialValue=selected.values.phone!['appearance.material.roughnessDifference.value'];
+if(typeof rawMaterialValue==='number')rawMaterialValue.toFixed(3);
+// @ts-expect-error A material descriptor can be unknown; do not treat null or a token as a number.
+rawMaterialValue.toFixed(3);
+declare const workflowInput:DecisionWorkflowInput;
+workflowInput.workflow.stages[0]!.consequenceKeys=['rawWidth'];
+// @ts-expect-error Quantity readouts name declared derived quantities, not numeric values.
+workflowInput.workflow.stages[0]!.consequenceKeys=[42];
 const renderer=new BrowserRenderer();
 const result=await relax(state,renderer,{policy:policy()});
 const candidate=result.candidates[0];if(candidate)candidate.state.blocks[0]?.font.axes;

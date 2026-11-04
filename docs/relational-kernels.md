@@ -16,6 +16,22 @@ Choice reuse does not certify a current renderer. Resolved output retains the ne
 
 The compiler reserves at most 96 numeric evaluations per stage, enough for its finite candidate domains. It retains up to six Pareto/diverse alternatives through the existing search implementation. Requests allow at most eight kernels and 24 scenarios. This is a finite scope, not a claim of globally optimal layout or taste. An infeasible required stage blocks output resolution; it does not quietly drop a region or invent a token.
 
+## Material quantities and preference residuals
+
+`relational-kernels-v2` separates named material descriptors from authored-band distances:
+
+- `appearance.material.roughnessDifference.value` is the absolute difference between declared roughness parameters. Other relation metrics use their own descriptor units.
+- `appearance.material.roughnessDifference.bandResidual` is dimensionless distance from its authored target band, divided by band width. An exact point target uses scale one in descriptor units, matching `material candidates`.
+- A preference factor's energy is its weighted squared residual. It is neither a material quantity nor aesthetic quality.
+
+For example, a roughness difference of 0.58 inside a 0.2–0.7 band has raw value 0.58 and residual zero. The appearance compiler requests a compact `consequenceKeys` readout of descriptors known across its candidates and surface/spring parameters. These raw quantities reach System 1 separately from preference residuals, even when several alternatives satisfy their bands. Constant values are sent once per option; varying values retain scenario identities. Units and basis are defined once per stage, while full provenance remains in compilation/analyzer receipts. The values describe declared parameters, not measured material appearance.
+
+Ordinary decision stages may request at most 16 declared derived quantities through `consequenceKeys`; the default sends none. Unknown or duplicate keys are invalid. Local-selector cache identities include the readout definition, and unchanged replay makes no new call. Changing a mathematical stage's display-only readout does not invalidate its numeric choice. This is a context view of existing calculations, not an added score or model.
+
+Unknown raw descriptors remain null in resolved values. A candidate with an unknown requested comparison metric fails the hard guard, while unknown unrequested descriptors remain inspectable. Alternatives must declare the same comparison metrics; their attributed conditional target ranges can differ. Omitting a metric cannot make an alternative win with an invented zero.
+
+The old ambiguous `appearance.material.<metric>` output names are removed. Regenerate old compilations and selected JSON from original inputs; the resolver rejects the earlier engine. Do not rewrite saved identities or relabel old renderer evidence. The [dated migration recipe](../codemods/2026-11-04-material-quantities/instructions.md) explains residual-versus-descriptor consumers, nullable values and unit labels. The frozen Relay trial continues using its original v1 toolkit.
+
 ## Execute and resolve
 
 Use the repository's compact discovery to inspect `kernel compile` once. The current frozen example is `examples/kernels/relay.json`; its observed text cells are actual Chromium measurements collected by `examples/kernels/relay-proof.mjs`. It supplies a common relational starting input, not a finished Relay design or native receipt.

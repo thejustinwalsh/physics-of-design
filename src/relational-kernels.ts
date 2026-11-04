@@ -11,6 +11,7 @@ import { DecisionWorkflowSchema } from './decision-workflow.js';
 import { PaletteAnalyzeSchema, analyzePalette } from './palette.js';
 import {
   MaterialPairSchema,
+  MaterialRelationMetricSchema,
   analyzeMaterialPair,
 } from './material-relations.js';
 import { MotionAnalyzeSchema, analyzeMotion } from './motion.js';
@@ -207,7 +208,7 @@ interface Output {
   name: string;
   unit: string;
   expression: Expression | null;
-  candidateValues?: Array<string | number>;
+  candidateValues?: Array<string | number | null>;
 }
 export function compileRelationalKernels(input: RelationalKernelInput) {
   const r = RelationalKernelCompileSchema.parse(input);
@@ -279,7 +280,7 @@ export function compileRelationalKernels(input: RelationalKernelInput) {
         unit,
         provenance: {
           kind: 'calculated',
-          source: `relational-kernels-v1:${k.kind}`,
+          source: `relational-kernels-${k.kind === 'appearance' ? 'v2' : 'v1'}:${k.kind}`,
         },
       });
       outputs.push({ stage: k.id, name, expression: ref(name), unit });
@@ -570,6 +571,15 @@ export function compileRelationalKernels(input: RelationalKernelInput) {
         material: analyzeMaterialPair(c.material),
         motion: analyzeMotion(c.motion),
       }));
+      const comparisonMetrics = analyses.map((a) =>
+        JSON.stringify(
+          (a.material.brief?.bands ?? []).map(({ metric }) => metric).sort(),
+        ),
+      );
+      if (new Set(comparisonMetrics).size !== 1)
+        throw Error(
+          `Appearance material comparison metrics differ for ${k.id}`,
+        );
       add(
         'constraintFailures',
         lookup(
@@ -578,6 +588,7 @@ export function compileRelationalKernels(input: RelationalKernelInput) {
             (a) =>
               Number(a.palette.summary.status !== 'pass') +
               Number(!a.motion.constraints.passesAllTimeBounds) +
+              Number(a.material.brief?.status === 'incomplete') +
               a.material.physicalModelChecks.filter(
                 (c) => c.status !== 'parameter-consistent',
               ).length,
@@ -601,7 +612,7 @@ export function compileRelationalKernels(input: RelationalKernelInput) {
           (a) => a.material.brief?.bands.map((b) => b.metric) ?? [],
         ),
       )) {
-        const name = `material.${metric}`;
+        const name = `material.${metric}.bandResidual`;
         add(
           name,
           lookup(
@@ -610,17 +621,36 @@ export function compileRelationalKernels(input: RelationalKernelInput) {
               const b = a.material.brief?.bands.find(
                 (b) => b.metric === metric,
               );
-              return !b
-                ? 0
-                : b.value === null
-                  ? 1
-                  : Math.max(b.min - b.value, 0, b.value - b.max) /
-                    Math.max(1e-6, b.max - b.min);
+              // Unknown requested descriptors already fail the hard guard.
+              // This finite placeholder cannot make them viable or resolve.
+              return b!.residual.value ?? 0;
             }),
           ),
-          'ratio',
+          'dimensionless',
         );
         factor(name, ref(name), 0, 0, 'preference');
+      }
+      for (const metric of MaterialRelationMetricSchema.options) {
+        const descriptors = analyses.map((a) => a.material.descriptors[metric]);
+        const name = `material.${metric}.value`;
+        const unit = descriptors[0]!.units;
+        if (descriptors.every((d) => d.value !== null))
+          add(
+            name,
+            lookup(
+              'choice',
+              descriptors.map((d) => d.value!),
+            ),
+            unit,
+          );
+        else
+          outputs.push({
+            stage: k.id,
+            name,
+            unit,
+            expression: null,
+            candidateValues: descriptors.map((d) => d.value),
+          });
       }
       for (const property of ['mass', 'stiffness', 'damping'] as const)
         add(
@@ -715,6 +745,17 @@ export function compileRelationalKernels(input: RelationalKernelInput) {
       dependsOn: dependencies,
       bindings,
       contextKeys: ['brief'],
+      consequenceKeys:
+        k.kind === 'appearance'
+          ? program.derived
+              .filter(
+                (d) =>
+                  d.id.endsWith('.value') ||
+                  d.id.startsWith('surface.') ||
+                  d.id.startsWith('spring.'),
+              )
+              .map((d) => d.id)
+          : [],
       selection: k.selection,
       question: `Choose the meaningful ${k.kind} alternative for the brief using the named options and measured/calculated consequences. Appearance and task quality remain unverified.`,
       provenance,
@@ -742,7 +783,7 @@ export function compileRelationalKernels(input: RelationalKernelInput) {
   });
   const body = {
     version: 1 as const,
-    engine: 'relational-kernels-v1' as const,
+    engine: 'relational-kernels-v2' as const,
     input: r,
     inputIdentity: hash(r),
     workflow,
@@ -774,8 +815,12 @@ export function resolveRelationalKernelOutputs(
   const { identity, ...body } = compiled;
   if (hash(body) !== identity)
     throw Error('Kernel compilation identity mismatch');
+  if (compiled.engine !== 'relational-kernels-v2')
+    throw Error(
+      'Unsupported kernel compilation engine; recompile the original input',
+    );
   const resultIdentity = hash(result),
-    values: Record<string, Record<string, string | number>> = {};
+    values: Record<string, Record<string, string | number | null>> = {};
   for (const stage of compiled.workflow.stages) {
     const selected = result.stages[stage.id];
     if (

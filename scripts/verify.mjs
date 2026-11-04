@@ -75,7 +75,7 @@ const steps = [
   ],
   ['validation-phases', ['node', 'scripts/prove-validation-machine.mjs']],
   ['typography', ['node', 'scripts/prove-typography.mjs']],
-  ['migrations', ['node', 'codemods/2026-10-25-nullable-glyph-ink/test.mjs']],
+  ['migrations', ['npm', 'run', 'test:migrations']],
 ];
 if (all) {
   if (!process.env.DESIGN_NATIVE_TOKEN)

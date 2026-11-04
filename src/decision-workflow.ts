@@ -60,6 +60,7 @@ export const DecisionStageSchema = z
       .max(40)
       .default([]),
     contextKeys: z.array(Id).max(40).default([]),
+    consequenceKeys: z.array(Id).max(16).default([]),
     when: ExpressionSchema.optional(),
     program: EnergyProgramSchema,
     options: EnergySearchOptionsSchema.optional(),
@@ -334,6 +335,11 @@ function normalize(input: DecisionWorkflowInput) {
       throw new Error(`Duplicate dependency in ${stage.id}`);
     if (new Set(stage.contextKeys).size !== stage.contextKeys.length)
       throw new Error(`Duplicate context key in ${stage.id}`);
+    if (new Set(stage.consequenceKeys).size !== stage.consequenceKeys.length)
+      throw new Error(`Duplicate consequence key in ${stage.id}`);
+    for (const key of stage.consequenceKeys)
+      if (!stage.program.derived.some((d) => d.id === key))
+        throw new Error(`Unknown consequence key ${stage.id}.${key}`);
     for (const key of stage.contextKeys)
       if (!Object.hasOwn(request.workflow.context, key))
         throw new Error(`Unknown context input ${key}`);
@@ -924,6 +930,7 @@ export class DecisionWorkflowMachine {
               : 'semif-direct-options-v1',
           }
         : 'mathematical';
+    const consequenceKeys = [...stage.consequenceKeys].sort();
     const key = hash({
       engine: 'design-decision-workflow-v1',
       workflowId: this.request.workflow.id,
@@ -946,6 +953,14 @@ export class DecisionWorkflowMachine {
       options,
       context,
       policy,
+      ...(stage.selection === 'local-selector' && consequenceKeys.length
+        ? {
+            quantityReadout: {
+              format: 'declared-derived-values-v1',
+              keys: consequenceKeys,
+            },
+          }
+        : {}),
       ...(stage.lookahead ? { lookahead: this.lookaheadIdentity(stage) } : {}),
     });
     const previous =
@@ -1140,6 +1155,26 @@ export class DecisionWorkflowMachine {
               bindings,
               scope: pendingScope,
               variables: selectorVariables(compiled.program),
+              ...(consequenceKeys.length
+                ? {
+                    quantityReadout: {
+                      format: 'declared-derived-values-v1',
+                      programIdentity: compiled.identity,
+                      scope:
+                        'Calculated consequences from declared inputs, not new renderer measurements or preference scores. Full provenance remains in the source-bound program receipt.',
+                      definitions: consequenceKeys.map((id) => {
+                        const derived = compiled.program.derived.find(
+                          (d) => d.id === id,
+                        )!;
+                        return {
+                          id,
+                          unit: derived.unit ?? null,
+                          basis: derived.provenance?.kind ?? null,
+                        };
+                      }),
+                    },
+                  }
+                : {}),
               consequenceSummary: {
                 limit: preferenceSummaryLimit,
                 order:
@@ -1171,6 +1206,28 @@ export class DecisionWorkflowMachine {
                 id: `alternative-${i}`,
                 description: JSON.stringify({
                   assignment: candidate.assignment,
+                  ...(consequenceKeys.length
+                    ? {
+                        quantities: Object.fromEntries(
+                          consequenceKeys.map((name) => {
+                            const rows = compiled.program.scenarios.map(
+                              (scenario) =>
+                                [
+                                  scenario.id,
+                                  candidate.derived[scenario.id]![name]!,
+                                ] as const,
+                            );
+                            const first = rows[0]![1];
+                            return [
+                              name,
+                              rows.every(([, value]) => value === first)
+                                ? first
+                                : { byScenario: Object.fromEntries(rows) },
+                            ];
+                          }),
+                        ),
+                      }
+                    : {}),
                   preferences: summary.rows,
                   omittedPreferenceFactors: summary.omitted,
                   hardGuards: 'passed in every declared scenario',

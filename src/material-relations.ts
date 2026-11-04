@@ -323,9 +323,29 @@ export function analyzeMaterialPair(input: unknown) {
   const bands =
     r.profile?.bands.map((band) => {
       const value = descriptors[band.metric].value;
+      const width = band.max - band.min;
+      const scale = width === 0 ? 1 : width;
+      const residual =
+        value === null
+          ? null
+          : Math.max(0, band.min - value, value - band.max) / scale;
+      if (residual !== null && !Number.isFinite(residual))
+        throw new RangeError(
+          `Nonfinite material band residual for ${band.metric}`,
+        );
       return {
         ...band,
         value,
+        residual: {
+          value: residual,
+          scale,
+          normalization:
+            width === 0
+              ? ('zero-width-target-unit-scale' as const)
+              : ('authored-band-width' as const),
+          units: 'dimensionless' as const,
+          scaleUnits: descriptors[band.metric].units,
+        },
         status:
           value === null
             ? ('unknown' as const)
@@ -448,21 +468,14 @@ export function materialPairCandidates(input: unknown) {
       profile: r.profile,
     });
     const residuals = analysis.brief!.bands.map((band) => {
-      const width = band.max - band.min,
-        scale = width === 0 ? 1 : width;
-      const residual =
-        band.value === null
-          ? null
-          : Math.max(0, band.min - band.value, band.value - band.max) / scale;
       return {
         metric: band.metric,
-        residual,
-        scale,
-        normalization:
-          width === 0
-            ? ('zero-width-target-unit-scale' as const)
-            : ('authored-band-width' as const),
-        units: analysis.descriptors[band.metric].units,
+        residual: band.residual.value,
+        scale: band.residual.scale,
+        normalization: band.residual.normalization,
+        units: band.residual.units,
+        descriptorUnits: analysis.descriptors[band.metric].units,
+        scaleUnits: band.residual.scaleUnits,
         source: band.source,
       };
     });

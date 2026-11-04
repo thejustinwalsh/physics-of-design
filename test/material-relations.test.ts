@@ -26,6 +26,42 @@ test('identical inputs yield zero descriptors without claiming preference or tex
   assert.equal(result.descriptors.texturePhysicalFrequencyOctaves.value, null);
 });
 
+test('band residuals preserve unknown quantities and reject nonfinite normalization instead of inventing zero', () => {
+  const profile = {
+    id: 'precise-material',
+    intent: 'Inspect exact authored facts',
+    roleRelation: 'counterpoint',
+    source: 'synthetic test',
+    bands: [
+      {
+        metric: 'texturePhysicalFrequencyOctaves',
+        min: 0,
+        max: 1,
+        rationale: 'Declared scale needed',
+        source: 'synthetic test',
+      },
+    ],
+  };
+  const unknown = analyzeMaterialPair({ first, second, profile });
+  assert.equal(unknown.brief!.bands[0]!.value, null);
+  assert.equal(unknown.brief!.bands[0]!.residual.value, null);
+  assert.equal(unknown.brief!.bands[0]!.residual.units, 'dimensionless');
+  assert.throws(
+    () =>
+      analyzeMaterialPair({
+        first,
+        second: { ...second, surface: { ...second.surface, roughness: 0.2 } },
+        profile: {
+          ...profile,
+          bands: [
+            { ...profile.bands[0], metric: 'roughnessDifference', max: 1e-320 },
+          ],
+        },
+      }),
+    /Nonfinite material band residual for roughnessDifference/,
+  );
+});
+
 test('black to white OKLab distance is one; swapping pair order preserves all differences', () => {
   const a = {
     ...first,

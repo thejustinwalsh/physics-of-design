@@ -10,6 +10,8 @@ import {
 } from '../src/relational-kernels.js';
 import { runDecisionWorkflow } from '../src/decision-workflow.js';
 import { execute } from '../src/commands.js';
+import { compileEnergy } from '../src/energy.js';
+import { materialPairCandidates } from '../src/material-relations.js';
 // Synthetic observations test contracts only; actual browser evidence is a separate recorded fixture.
 function fixture(): RelationalKernelInput {
   const scenarios = [
@@ -165,6 +167,199 @@ function fixture(): RelationalKernelInput {
     ],
   };
 }
+function materialBand(
+  metric: 'roughnessDifference' | 'texturePhysicalFrequencyOctaves',
+  min: number,
+  max: number,
+) {
+  const input = fixture();
+  const kernel = input.kernels.find((k) => k.kind === 'appearance')!;
+  for (const candidate of kernel.candidates)
+    candidate.material.profile = {
+      id: 'shared-material-brief',
+      intent: 'Compare declared material quantities separately from preference',
+      roleRelation: 'counterpoint',
+      source: 'synthetic regression',
+      bands: [
+        {
+          metric,
+          min,
+          max,
+          rationale: 'Editable test band',
+          source: 'synthetic regression',
+        },
+      ],
+    };
+  return { input, kernel };
+}
+
+test('raw material descriptors stay distinct from satisfied-band residuals and retain units', async () => {
+  const { input } = materialBand('roughnessDifference', 0.1, 0.7);
+  const compiled = compileRelationalKernels(input);
+  const program = compiled.workflow.stages.find(
+    (s) => s.id === 'appearance',
+  )!.program;
+  const readoutKeys = compiled.workflow.stages.find(
+    (s) => s.id === 'appearance',
+  )!.consequenceKeys;
+  assert.ok(readoutKeys.includes('material.roughnessDifference.value'));
+  assert.ok(readoutKeys.includes('surface.roughness'));
+  assert.ok(readoutKeys.includes('spring.stiffness'));
+  const evaluator = compileEnergy(program);
+  const a = evaluator.evaluate({ choice: 0 }).derived.phone!;
+  const b = evaluator.evaluate({ choice: 1 }).derived.phone!;
+  assert.ok(Math.abs(a['material.roughnessDifference.value']! - 0.2) < 1e-12);
+  assert.ok(Math.abs(b['material.roughnessDifference.value']! - 0.6) < 1e-12);
+  assert.equal(a['material.roughnessDifference.bandResidual'], 0);
+  assert.equal(b['material.roughnessDifference.bandResidual'], 0);
+  const result = await runDecisionWorkflow({ workflow: compiled.workflow });
+  const selected = resolveRelationalKernelOutputs(compiled, result);
+  assert.equal(
+    selected.values.phone!['appearance.material.roughnessDifference'],
+    undefined,
+  );
+  assert.equal(
+    selected.values.phone![
+      'appearance.material.roughnessDifference.bandResidual'
+    ],
+    0,
+  );
+  assert.equal(
+    selected.values.phone![
+      'appearance.material.texturePhysicalFrequencyOctaves.value'
+    ],
+    null,
+  );
+  assert.equal(
+    compiled.outputs.find(
+      (o) => o.name === 'material.roughnessDifference.value',
+    )!.unit,
+    'parameter',
+  );
+  assert.equal(
+    compiled.outputs.find(
+      (o) => o.name === 'material.roughnessDifference.bandResidual',
+    )!.unit,
+    'dimensionless',
+  );
+  assert.equal(
+    program.derived.find((d) => d.id === 'material.roughnessDifference.value')!
+      .provenance?.kind,
+    'calculated',
+  );
+  const replay = await runDecisionWorkflow({
+    workflow: compiled.workflow,
+    recipe: result.recipe,
+    mode: 'replay',
+  });
+  assert.deepEqual(
+    resolveRelationalKernelOutputs(compiled, replay).values,
+    selected.values,
+  );
+  assert.equal(replay.statistics.neuralCalls, 0);
+});
+
+test('point-target residual normalization agrees with material candidates while energy remains separate', () => {
+  const { input, kernel } = materialBand('roughnessDifference', 0, 0);
+  const compiled = compileRelationalKernels(input);
+  const program = compiled.workflow.stages.find(
+    (s) => s.id === 'appearance',
+  )!.program;
+  const evaluation = compileEnergy(program).evaluate({ choice: 0 });
+  const pair = kernel.candidates[0]!.material;
+  const comparison = materialPairCandidates({
+    anchor: pair.first,
+    alternatives: [pair.second],
+    profile: pair.profile,
+  });
+  const residual = comparison.candidates[0]!.residuals[0]!.residual!;
+  assert.ok(Math.abs(residual - 0.2) < 1e-12);
+  const factors = evaluation.factors.filter(
+    (f) => f.id === 'material.roughnessDifference.bandResidual',
+  );
+  assert.equal(factors.length, input.scenarios.length);
+  assert.equal(comparison.candidates[0]!.residuals[0]!.units, 'dimensionless');
+  assert.equal(
+    comparison.candidates[0]!.residuals[0]!.descriptorUnits,
+    'parameter',
+  );
+  assert.equal(comparison.candidates[0]!.residuals[0]!.scaleUnits, 'parameter');
+  for (const f of factors) {
+    assert.ok(Math.abs(f.residual - residual) < 1e-12);
+    assert.ok(Math.abs(f.energy - 0.04) < 1e-12);
+    assert.notEqual(f.energy, residual);
+  }
+});
+
+test('unknown requested material facts cannot win; known alternatives retain the actual descriptor', async () => {
+  const { input, kernel } = materialBand(
+    'texturePhysicalFrequencyOctaves',
+    0,
+    2,
+  );
+  const unknown = compileRelationalKernels(input);
+  const failure = await runDecisionWorkflow({ workflow: unknown.workflow });
+  assert.equal(failure.stages.appearance!.status, 'failed');
+  assert.throws(
+    () => resolveRelationalKernelOutputs(unknown, failure),
+    /Unresolved kernel/,
+  );
+  kernel.candidates[1]!.material.first.texture = {
+    cyclesPerTile: 4,
+    heightAmplitudeFraction: 0.01,
+    tileWidthMm: 8,
+  };
+  kernel.candidates[1]!.material.second.texture = {
+    cyclesPerTile: 8,
+    heightAmplitudeFraction: 0.01,
+    tileWidthMm: 8,
+  };
+  const compiled = compileRelationalKernels(input);
+  const result = await runDecisionWorkflow({ workflow: compiled.workflow });
+  assert.equal(result.stages.appearance!.assignment!.choice, 1);
+  const selected = resolveRelationalKernelOutputs(compiled, result);
+  assert.equal(
+    selected.values.phone![
+      'appearance.material.texturePhysicalFrequencyOctaves.value'
+    ],
+    1,
+  );
+  assert.equal(
+    selected.values.phone![
+      'appearance.material.texturePhysicalFrequencyOctaves.bandResidual'
+    ],
+    0,
+  );
+});
+
+test('appearance alternatives cannot omit a comparison metric but can use attributed conditional target bands', () => {
+  const first = materialBand('roughnessDifference', 0.1, 0.7);
+  first.kernel.candidates[1]!.material.profile = null;
+  assert.throws(
+    () => compileRelationalKernels(first.input),
+    /comparison metrics differ/,
+  );
+  const second = materialBand('roughnessDifference', 0.1, 0.7);
+  second.kernel.candidates[1]!.material.profile!.bands[0]!.max = 0.8;
+  assert.doesNotThrow(() => compileRelationalKernels(second.input));
+});
+
+test('old compilation engines require regeneration rather than relabeling residuals', async () => {
+  const compiled = compileRelationalKernels(fixture());
+  const result = await runDecisionWorkflow({ workflow: compiled.workflow });
+  const legacy = { ...compiled, engine: 'relational-kernels-v1' };
+  const { identity: _identity, ...body } = legacy;
+  legacy.identity = hash(body);
+  assert.throws(
+    () =>
+      resolveRelationalKernelOutputs(
+        legacy as unknown as typeof compiled,
+        result,
+      ),
+    /Unsupported kernel compilation engine/,
+  );
+});
+
 test('three kernels compile to the existing engine and preserve alternatives and dependencies', async () => {
   const compiled = compileRelationalKernels(fixture()),
     first = await runDecisionWorkflow({ workflow: compiled.workflow });
