@@ -539,7 +539,9 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       const canvas = proof.cards[1].querySelector('canvas');
       return { before, immediate: c.renderer.draws, bufferBefore: { width: canvas.width, height: canvas.height } };
     });
-    const smooth = await pixels(page);
+    // Count submissions before a screenshot: full-page capture can change the
+    // headed Chromium scrollbar gutter and legitimately trigger resize draws.
+    await waitForDomSurfacePaint(page);
     const batchObservation = await page.evaluate(() => {
       const c = proof.controllers[1],
         draws = c.renderer.draws,
@@ -557,15 +559,18 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       'stopped clock coalesces edits plus final presentation and skips settled draws',
       batched.immediate === batched.before &&
         afterBatch === batched.before + 2 &&
-        afterUnchanged === afterBatch,
+        afterUnchanged === afterBatch &&
+        batchObservation.bufferAfter.width === batched.bufferBefore.width &&
+        batchObservation.bufferAfter.height === batched.bufferBefore.height,
       {
         ...batched,
         afterBatch,
         afterUnchanged,
         bufferAfter: batchObservation.bufferAfter,
-        finalSpecular: compact(smooth),
+        scope: 'Stopped clock and unchanged geometry; pixel capture follows this counter observation.',
       },
     );
+    const smooth = await pixels(page);
     await page.evaluate(() => proof.change(1, { roughness: 0.7 }));
     const rough = await pixels(page);
     check(
