@@ -411,17 +411,16 @@ try {
           scale,
           selectedPolicy.colors,
         );
-        const current = {
+        const sourceContext = {
           designIdentity: selectedPolicy.handoff.identity,
           sourceIdentity:
             implementationProvenance.files['artifacts/vela/web/app.js'],
           inputIdentity: hash({ ...input, screen: view }),
-          resultIdentity: hash(expected),
         };
         const manifest = resolveOutputBindings({
           operation: 'resolve',
-          current,
-          source: { value: expected, identity: hash(expected) },
+          current: sourceContext,
+          source: { value: expected },
           bindings: Object.keys(expected).map((property) => ({
             id: `vela-${property.toLowerCase()}`,
             scenario: name.replaceAll('.', '-'),
@@ -441,6 +440,7 @@ try {
             },
           })),
         });
+        const current = manifest.current;
         const actualInput = { ...observation.bindingInput };
         delete actualInput.screen;
         const context = {

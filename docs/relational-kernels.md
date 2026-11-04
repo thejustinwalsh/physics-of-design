@@ -63,17 +63,16 @@ The Relay font preflight found that the supplied Roboto Flex advertises `pnum` b
 
 ## Bind exact outputs to actual properties
 
-`resolveOutputBindings` accepts one exact source JSON value and its hash, current design/source/input identities, and an array of typed targets. `current.resultIdentity` must equal that exact source hash. For a kernel handoff, use the whole `selected` object as `source.value`; its own embedded `resultIdentity` separately preserves the source workflow hash.
+`resolveOutputBindings` accepts one exact source JSON value, current design/source/input identities, and an array of typed targets. It derives `sourceValueIdentity` and `current.resultIdentity` from that JSON value. Callers may still supply `source.identity` and/or `current.resultIdentity` as pins; either supplied value must equal the exact source hash. A file's byte SHA, a workflow identity and the hash of a selected subobject are different identities. For a kernel handoff, pass the entire resolved output as `source.value`; its embedded `resultIdentity` separately preserves the source workflow hash.
 
 Each target declares a binding ID, scenario identity, platform/unit, RFC 6901 source pointer, rendered surface/test ID, supported property alias, source location and optional numeric tolerance. The resolver copies the scalar expected value from the pointer and signs the manifest with an ordinary integrity hash. It does not read a file, infer a property mapping or claim that the app imported the value.
 
 ```ts
-const source = { value: selected, identity: hash(selected) };
+const source = { value: selected };
 const current = {
   designIdentity,
   sourceIdentity: currentApplicationSourceHash,
   inputIdentity: selected.inputIdentity,
-  resultIdentity: source.identity,
 };
 const manifest = resolveOutputBindings({
   operation: 'resolve',
@@ -97,6 +96,8 @@ const manifest = resolveOutputBindings({
   ],
 });
 ```
+
+The returned `manifest.current` contains the complete expected identity. Checking and renderer observations still require all current identities, including the actual selected-payload hash; automatic construction does not relax stale-input checks.
 
 Use a real adapter to collect `getBoundingClientRect`, computed style or native `onLayout`/`onTextLayout` and the corresponding current input/scenario/source identities. The observation names its provider, runtime, source result reference and timestamp. Supply colors in the same normalized representation as the expected emitted value, and state whether a width is the declared box or a different coordinate frame. A transformed bounding rectangle cannot be compared to an untransformed width without an explicit adapter conversion.
 

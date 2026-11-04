@@ -84,8 +84,10 @@ export const OutputBindingManifestSchema = z
 export const OutputBindingsResolveSchema = z
   .object({
     operation: z.literal('resolve'),
-    current: Current,
-    source: z.object({ value: z.unknown(), identity: Digest }).strict(),
+    current: Current.extend({ resultIdentity: Digest.optional() }),
+    source: z
+      .object({ value: z.unknown(), identity: Digest.optional() })
+      .strict(),
     bindings: z.array(Binding).min(1).max(512),
   })
   .strict();
@@ -228,9 +230,13 @@ export function resolveOutputBindings(
   input: z.input<typeof OutputBindingsResolveSchema>,
 ) {
   const r = OutputBindingsResolveSchema.parse(input);
+  if (r.source.value === undefined)
+    throw Error('Binding source requires a JSON value');
+  const sourceIdentity = hash(r.source.value);
   if (
-    hash(r.source.value) !== r.source.identity ||
-    r.current.resultIdentity !== r.source.identity
+    (r.source.identity !== undefined && r.source.identity !== sourceIdentity) ||
+    (r.current.resultIdentity !== undefined &&
+      r.current.resultIdentity !== sourceIdentity)
   )
     throw Error('Binding source payload identity mismatch');
   const entries = r.bindings.map((b) => ({
@@ -241,8 +247,8 @@ export function resolveOutputBindings(
   const body = {
     version: 1 as const,
     engine: 'output-bindings-v1' as const,
-    current: r.current,
-    sourceValueIdentity: r.source.identity,
+    current: { ...r.current, resultIdentity: sourceIdentity },
+    sourceValueIdentity: sourceIdentity,
     entries,
     scope:
       'Expected values projected from exact source pointers. No renderer ran; hashes detect payload changes, not authenticity or causal consumption.',

@@ -111,6 +111,50 @@ test('exact source projection compares numeric values with declared tolerance', 
   assert.ok('complete' in fail && !fail.complete);
   assert.equal(fail.entries[0]!.status, 'override');
 });
+test('binding construction derives source identities while supplied pins still reject mismatches', () => {
+  const r = fixture();
+  const { resultIdentity, ...current } = r.current;
+  const request = {
+    operation: 'resolve' as const,
+    current,
+    source: { value: r.value },
+    bindings: [r.binding],
+  };
+  const manifest = resolveOutputBindings(request);
+  assert.deepEqual(manifest, r.manifest);
+  assert.equal(manifest.current.resultIdentity, resultIdentity);
+  assert.equal(manifest.sourceValueIdentity, hash(r.value));
+  assert(!Object.hasOwn(current, 'resultIdentity'));
+  assert.throws(
+    () =>
+      resolveOutputBindings({
+        ...request,
+        source: { value: r.value, identity: hash('wrong-source') },
+      }),
+    /source payload identity/,
+  );
+  assert.throws(
+    () =>
+      resolveOutputBindings({
+        ...request,
+        current: { ...current, resultIdentity: hash('wrong-result') },
+      }),
+    /source payload identity/,
+  );
+  assert.throws(
+    () => resolveOutputBindings({ ...request, source: { value: undefined } }),
+    /requires a JSON value/,
+  );
+  assert.equal(
+    checkOutputBindings({
+      operation: 'check',
+      manifest,
+      current: r.current,
+      observations: [r.observation],
+    }).entries[0]!.status,
+    'pass',
+  );
+});
 test('color bindings compare equivalent CSS coordinates without flattening alpha or gamut', () => {
   const r = fixture();
   const manifest = resolveOutputBindings({
