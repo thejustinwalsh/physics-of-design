@@ -13,6 +13,10 @@
       "types": "./dist/motion-runtime.d.ts",
       "default": "./dist/motion-runtime.js"
     },
+    "./layout": {
+      "types": "./dist/layout-runtime.d.ts",
+      "default": "./dist/layout-runtime.js"
+    },
     "./browser": {
       "types": "./dist/browser-runtime.d.ts",
       "default": "./dist/browser-runtime.js"

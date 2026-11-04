@@ -45,6 +45,8 @@ const sample = motion.advance(1 / 60); // Seconds from the application's existin
 
 React Native can use this portable motion entry. Browser effects, `createDomSurfaceRecipe` and `DOM_SURFACE_CSS` are available from `@design-theory/toolkit/browser`; see the [DOM surface integration](docs/dom-surface-research.md). These entries exclude filesystem, renderer-verification and model processes. The root entry remains for Node authoring/CLI tools. The motion entry is plain JavaScript; it does not establish native UI-thread execution or device frame rate. Keep per-frame layout and React state updates out of the host integration.
 
+Use `@design-theory/toolkit/layout` for the existing portable handoff evaluator (`resolveDesignRuntime`, `evaluateExpression`) and native root/safe-area geometry helpers. It applies previously validated equations to current inputs without search, inference or renderer startup. Respect its admissibility/held/unavailable results. Geometry helpers consume actual measurements in one coordinate space; they do not measure a device or infer system bars. Revalidate changed content/fonts and measure actual web/native finalists.
+
 The product name is Design Theory. Physics, energy, tension and entropy remain optional vocabulary. Historical papers, result reference prefixes, the `design` executable and the original GitHub address retain compatibility.
 
 ## Run

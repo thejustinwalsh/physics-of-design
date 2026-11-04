@@ -50,6 +50,47 @@ function assertClientInputs(result) {
   );
 }
 
+test('published layout entry applies a relational handoff and safe-root projection without Node or DOM', async () => {
+  const bundle = await clientBundle(
+    '@design-theory/toolkit/layout',
+    `
+    const handoff = {
+      assignment:{base:16,padding:24}, runtimePolicy:{unsampledScenarioBands:'base'},
+      program:{scenarios:[{id:'phone',values:{width:320,height:740,textScale:1}},{id:'desktop',values:{width:1440,height:1024,textScale:2}}],
+        derived:[{id:'measure',expression:{op:'sub',args:[{ref:'width'},{op:'mul',args:[2,{ref:'padding'}]}]}}],
+        factors:[{id:'measure-fit',mode:'hard',expression:{ref:'measure'},bands:[{min:180,max:2000}]}]},
+      machine:{states:[{id:'home',on:[],regions:[{id:'body',role:'prose',bindings:{width:{ref:'measure'},fontSize:{op:'mul',args:[{ref:'base'},{ref:'textScale'}]}}}]}],motions:{}}
+    };
+    export const layout=runtime.resolveDesignRuntime(handoff,{width:390,height:844,textScale:1.5});
+    export const insets=runtime.projectNativeSafeArea({screen:{width:400,height:800},window:{width:400,height:752},screenOffset:{x:0,y:24},insets:{top:24,right:0,bottom:24,left:0}});
+    const current=runtime.advanceNativeViewport(null,{window:{width:390,height:844,fontScale:1.5,scale:3},insets:{top:47,right:0,bottom:34,left:0}});
+    export const held=runtime.advanceNativeViewport(current,{...current.accepted,window:{...current.accepted.window,width:0}});
+    export const rebased=runtime.nativeFrameRelativeToRoot({x:20,y:90,width:120,height:40},{x:0,y:24});
+  `,
+  );
+  assertClientInputs(bundle);
+  assert(
+    !Object.keys(bundle.metafile.inputs).some((p) =>
+      /dist\/(?:energy|motion|browser-|dom-surface|output-bindings)/.test(p),
+    ),
+  );
+  const scope = {};
+  runInNewContext(bundle.outputFiles[0].text, scope);
+  const { layout, insets, held, rebased } = scope.ClientResult;
+  assert.equal(layout.admissible, true);
+  assert.equal(layout.regions.home.body.width, 342);
+  assert.equal(layout.regions.home.body.fontSize, 24);
+  assert.deepEqual(JSON.parse(JSON.stringify(insets)), {
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  });
+  assert.equal(held.status, 'held');
+  assert.equal(held.accepted.window.width, 390);
+  assert.equal(rebased.y, 66);
+});
+
 test('published motion entry bundles and runs exact retargetable dynamics without Node or DOM', async () => {
   const bundle = await clientBundle(
     '@design-theory/toolkit/motion',

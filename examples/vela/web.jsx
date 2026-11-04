@@ -8,8 +8,10 @@ import React, {
 import { createRoot } from 'react-dom/client';
 import * as stylex from '@stylexjs/stylex';
 import { assign, createActor, createMachine } from 'xstate';
-import { resolveDesignRuntime } from '../../src/decision-runtime.ts';
-import { evaluateExpression } from '../../src/math-expression.ts';
+import {
+  resolveDesignRuntime,
+  evaluateExpression,
+} from '@design-theory/toolkit/layout';
 import { emitMotion } from '../../src/motion.ts';
 import { glueAccentPunctuation } from '../../src/typography-flow.ts';
 import policy from './design.generated.json';
