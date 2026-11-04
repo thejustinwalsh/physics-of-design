@@ -358,13 +358,17 @@ function App() {
   const scale = Number(parameters.get('textScale') || 1),
     density = Number(parameters.get('density') || 1),
     expression = Number(parameters.get('expression') || 1);
-  const p = planComposition({
-      mode: 'publication',
-      width,
-      textScale: scale,
-      density,
-      expression,
-    }),
+  const planInput = {
+    mode: 'publication',
+    width,
+    textScale: scale,
+    density,
+    expression,
+  };
+  // Capture the exact rejected input synchronously; a later page/resize may
+  // already have different geometry when an external error handler runs.
+  window.__FIELDWORK_LAST_PLAN_INPUT__ = planInput;
+  const p = planComposition(planInput),
     compact = width < 700;
   window.__FIELDWORK_PLAN__ = p;
   const text = (size, leading = 1.4, tracking = 0) =>

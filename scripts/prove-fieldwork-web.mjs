@@ -51,13 +51,46 @@ const directory =
 await mkdir(directory, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const observations = [];
+const errors = [];
+let phase = 'initial';
 try {
   const page = await browser.newPage();
-  const errors = [];
-  page.on('pageerror', (error) => errors.push(String(error)));
+  await page.addInitScript(() => {
+    addEventListener('error', (event) => {
+      console.error(
+        '__FIELDWORK_DIAGNOSTIC__' +
+          JSON.stringify({
+            url: location.href,
+            width: innerWidth,
+            height: innerHeight,
+            input: window.__FIELDWORK_LAST_PLAN_INPUT__,
+            issues: event.error?.issues,
+            message: event.error?.message,
+            stack: event.error?.stack,
+          }),
+      );
+    });
+  });
+  page.on('console', (message) => {
+    const prefix = '__FIELDWORK_DIAGNOSTIC__';
+    if (message.text().startsWith(prefix)) {
+      try {
+        errors.push({
+          phase,
+          diagnostic: JSON.parse(message.text().slice(prefix.length)),
+        });
+      } catch {
+        errors.push({ phase, diagnostic: message.text() });
+      }
+    }
+  });
+  page.on('pageerror', (error) =>
+    errors.push({ phase, message: String(error), stack: error.stack }),
+  );
   for (const width of [390, 834, 1440])
     for (const view of ['cover', 'issue', 'story'])
       for (const textScale of [1, 2]) {
+        phase = `${view}-${width}-${textScale}`;
         await page.setViewportSize({ width, height: width < 700 ? 844 : 1000 });
         await page.goto(`${base}/?view=${view}&textScale=${textScale}`);
         await page.waitForFunction(() => window.__FIELDWORK_READY__);
@@ -192,6 +225,7 @@ try {
           `${file}: text overflow ${JSON.stringify(measurement.textOverflow)}`,
         );
       }
+  phase = 'navigation-and-local-subscription';
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(`${base}/?density=0.9&textScale=1.3`);
   await page
@@ -253,12 +287,12 @@ try {
     await page.evaluate(() => localStorage.getItem('fieldwork-preview-email')),
     'reader@example.test',
   );
-  assert.deepEqual(errors, []);
   await writeFile(
     `${directory}/summary.json`,
     JSON.stringify(
       {
-        passed: true,
+        passed: errors.length === 0,
+        errors,
         scenarios: observations.length,
         interactions: [
           'issue navigation',
@@ -276,13 +310,18 @@ try {
       2,
     ) + '\n',
   );
+  assert.deepEqual(errors, []);
   console.log(
     `Passed ${observations.length} complete-composition browser scenarios and interaction flows.`,
   );
 } catch (error) {
   await writeFile(
     `${directory}/failure.json`,
-    JSON.stringify({ error: String(error), observations }, null, 2),
+    JSON.stringify(
+      { error: String(error), stack: error.stack, errors, phase, observations },
+      null,
+      2,
+    ),
   );
   throw error;
 } finally {
