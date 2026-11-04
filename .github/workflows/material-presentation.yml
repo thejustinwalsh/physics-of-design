@@ -15,7 +15,9 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - run: node --test test/dom-surface-xwd.test.mjs
       - run: npx playwright install --with-deps chromium webkit
+      - run: sudo apt-get install -y x11-apps
       - name: Strict uninstrumented control
         id: control
         continue-on-error: true
@@ -49,6 +51,16 @@ jobs:
           DESIGN_DOM_GPU_READBACK_DIAGNOSTIC: '0'
           DESIGN_DOM_GPU_HEADED_DIAGNOSTIC: '1'
         run: xvfb-run --auto-servernum --server-args="-screen 0 1920x1600x24" node scripts/prove-dom-surface-gpu.mjs
+      - name: Separate headed virtual-screen comparison
+        id: os_screen
+        if: ${{ !cancelled() && steps.control.outcome != 'skipped' }}
+        continue-on-error: true
+        env:
+          DESIGN_DOM_GPU_OUTPUT: artifacts/material-presentation/os-screen
+          DESIGN_DOM_GPU_READBACK_DIAGNOSTIC: '0'
+          DESIGN_DOM_GPU_HEADED_DIAGNOSTIC: '1'
+          DESIGN_DOM_GPU_OS_SCREEN_DIAGNOSTIC: '1'
+        run: xvfb-run --auto-servernum --server-args="-screen 0 1920x1600x24" node scripts/prove-dom-surface-gpu.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -56,5 +68,5 @@ jobs:
           path: artifacts/material-presentation
           if-no-files-found: warn
       - name: Preserve strict failure status
-        if: ${{ !cancelled() && (steps.control.outcome != 'success' || steps.instrumented.outcome != 'success' || steps.transform_none.outcome != 'success' || steps.headed.outcome != 'success') }}
+        if: ${{ !cancelled() && (steps.control.outcome != 'success' || steps.instrumented.outcome != 'success' || steps.transform_none.outcome != 'success' || steps.headed.outcome != 'success' || steps.os_screen.outcome != 'success') }}
         run: exit 1

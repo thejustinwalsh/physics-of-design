@@ -2,6 +2,10 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+import { gzipSync } from 'node:zlib';
+import { parseXwd, registerXwdSample, screenFiducials, assertVirtualScreenEnvironment } from './dom-surface-xwd.mjs';
 import { build } from 'esbuild';
 import { chromium, webkit } from 'playwright';
 import {
@@ -18,6 +22,12 @@ const transformDiagnostic =
   process.env.DESIGN_DOM_GPU_TRANSFORM_DIAGNOSTIC === 'none';
 const headedDiagnostic =
   process.env.DESIGN_DOM_GPU_HEADED_DIAGNOSTIC === '1';
+const osScreenDiagnostic =
+  process.env.DESIGN_DOM_GPU_OS_SCREEN_DIAGNOSTIC === '1';
+if (osScreenDiagnostic) {
+  assertVirtualScreenEnvironment({ headed: headedDiagnostic });
+  assert(!readbackDiagnostic && !transformDiagnostic, 'OS-screen case must keep the default fixture and omit readback');
+}
 const transformDiagnosticCss =
   '.proof-card.dt-dom-surface{transform:none!important}';
 await mkdir(output, { recursive: true });
@@ -31,6 +41,7 @@ const files = [
   'examples/dom-surfaces/gpu-proof-client.js',
   'examples/dom-surfaces/gpu-recipes.json',
   'scripts/prove-dom-surface-gpu.mjs',
+  'scripts/dom-surface-xwd.mjs',
 ];
 const hashes = () =>
   Promise.all(
@@ -54,6 +65,14 @@ const report = {
     'Contrast covers the recorded real DOM copy at sampled poses/exposures. It cannot certify every supplied color, backdrop or motion path.',
   ],
 };
+if (osScreenDiagnostic)
+  report.osScreenDiagnostic = {
+    kind: 'xvfb-root-xwd',
+    command: ['xwd', '-root', '-silent'],
+    display: process.env.DISPLAY,
+    fiducials: screenFiducials,
+    caveat: 'Independent virtual X11 screen pixels bracket the existing settled protocol-screenshot sequence. XWD capture and synchronous gzip add observation time; this is not a physical screen or a timing benchmark.',
+  };
 if (headedDiagnostic)
   report.limits.push(
     'Headed diagnostic changes browser display participation but retains the same Playwright screenshot API. An Xvfb snapshot is not an observation of a physical screen or a performance benchmark.',
@@ -73,6 +92,43 @@ if (readbackDiagnostic)
       'Diagnostic-only synchronous readPixels/uniform queries perturb execution and can hide the timing failure. Compare with the separately executed uninstrumented control; this is not a production fix or GPU timing benchmark.',
     engines: [],
   };
+async function captureVirtualScreen(page, stem, oracle) {
+  assertVirtualScreenEnvironment({ headed: headedDiagnostic });
+  const startedAt = new Date().toISOString();
+  let artifact;
+  try {
+    const geometry = await page.evaluate((markers) => ({
+      devicePixelRatio,
+      viewport: { width: innerWidth, height: innerHeight },
+      scroll: { x: scrollX, y: scrollY },
+      markers: markers.map(m => {
+        const r = document.getElementById(m.id).getBoundingClientRect();
+        return { ...m, x: r.x, y: r.y, width: r.width, height: r.height };
+      }),
+    }), screenFiducials);
+    assert(geometry.devicePixelRatio === 1, 'XWD diagnostic requires 1:1 CSS/device pixels');
+    // proof.oracle returns viewport coordinates from getBoundingClientRect.
+    // The existing full-page pixel oracle assumes this fixture remains unscrolled.
+    assert(geometry.scroll.x === 0 && geometry.scroll.y === 0, 'XWD comparison requires the unchanged unscrolled oracle fixture');
+    const point = { x: oracle.x, y: oracle.y };
+    assert(point.x >= 0 && point.y >= 0 && point.x < geometry.viewport.width && point.y < geometry.viewport.height, 'Oracle pixel must be visible in the viewport');
+    const { stdout } = await promisify(execFile)('xwd', ['-root', '-silent'], { encoding: 'buffer', maxBuffer: 64 * 1024 * 1024 });
+    const capturedAt = new Date().toISOString(), compressed = gzipSync(stdout);
+    const path = `${stem}.xwd.gz`;
+    await writeFile(`${output}/${path}`, compressed);
+    artifact = {
+      path, rawByteLength: stdout.length,
+      rawSha256: createHash('sha256').update(stdout).digest('hex'),
+      byteLength: compressed.length,
+      sha256: createHash('sha256').update(compressed).digest('hex'),
+    };
+    const sample = registerXwdSample(parseXwd(stdout), geometry.markers, point);
+    return { startedAt, capturedAt, artifact, geometry, viewportPoint: point, ...sample,
+      maxChannelError: Math.max(...sample.rgb.map((v, i) => Math.abs(v - oracle.expected[i]))) };
+  } catch (error) {
+    return { startedAt, failedAt: new Date().toISOString(), ...(artifact ? { artifact } : {}), error: String(error) };
+  }
+}
 async function installReadbackDiagnostic(page) {
   await page.evaluate(() => {
     const trace = (window.__dtReadback = {
@@ -348,6 +404,16 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       (inputs) => (window.proof = DomProof.mount(inputs)),
       inputs,
     );
+    if (osScreenDiagnostic)
+      await page.evaluate((markers) => {
+        for (const m of markers) {
+          const node = document.createElement('div');
+          node.id = m.id;
+          node.setAttribute('aria-hidden', 'true');
+          node.style.cssText = `position:fixed;left:${m.x}px;top:${m.y}px;width:8px;height:8px;background:rgb(${m.rgb.join(',')});z-index:2147483647;pointer-events:none`;
+          document.body.append(node);
+        }
+      }, screenFiducials);
     await page.waitForFunction(() =>
       proof.controllers.every((c) => c.renderer.status !== 'initializing'),
     );
@@ -585,9 +651,24 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
                   .toJSON(),
               }))
             : null;
+          let osBefore;
+          if (osScreenDiagnostic) {
+            await waitForDomSurfacePaint(page);
+            osBefore = await captureVirtualScreen(page, `${engine}-${probeId}-before`, oracle);
+          }
           const { bytes, captureSha256 } = await captureStaticDomSurface(page, {
             fullPage: true,
           });
+          let osScreen;
+          if (osScreenDiagnostic) {
+            const after = await captureVirtualScreen(page, `${engine}-${probeId}-after`, oracle);
+            const path = `${engine}-${probeId}-protocol.png`;
+            await writeFile(`${output}/${path}`, bytes);
+            osScreen = {
+              before: osBefore, after,
+              protocol: { path, byteLength: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') },
+            };
+          }
           const png = bytes.toString('base64');
           const observed = await page.evaluate(
             async ({ png, x, y }) => {
@@ -623,6 +704,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
             expected: oracle.expected,
             observed,
             captureSha256,
+            ...(osScreen ? { osScreen, screenshotPoint: { x: oracle.x, y: oracle.y } } : {}),
             ...(fixture
               ? { fixture, screenshotPoint: { x: oracle.x, y: oracle.y } }
               : {}),
@@ -643,6 +725,15 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       parity.every((p) => p.maxChannelError < 3),
       parity,
     );
+    if (osScreenDiagnostic) {
+      check(engine, 'virtual screen registers both fiducials before and after every GGX snapshot',
+        parity.length === 8 && parity.every(p => !p.osScreen.before.error && !p.osScreen.after.error),
+        parity.map(p => ({ pass: p.pass, metalness: p.metalness, roughness: p.roughness, ...p.osScreen })));
+      for (const phase of ['before', 'after'])
+        check(engine, `virtual screen ${phase} protocol snapshot agrees with CPU GGX oracle`,
+          parity.every(p => p.osScreen[phase].maxChannelError < 3),
+          parity.map(p => ({ expected: p.expected, ...p.osScreen[phase] })));
+    }
     if (transformDiagnostic)
       check(
         engine,
