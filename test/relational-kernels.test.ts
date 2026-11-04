@@ -217,6 +217,89 @@ test('selected type width genuinely conditions region widths', async () => {
     b.values.wide!['workspace.list.width'],
   );
 });
+
+test('content provenance changes preserve unchanged stage choices but require current renderer evidence', async () => {
+  const input = fixture();
+  const compiled = compileRelationalKernels(input);
+  const first = await runDecisionWorkflow({ workflow: compiled.workflow });
+  const updated = structuredClone(input);
+  updated.identities.content = hash(
+    'new content record; exact kernel copy/facts unchanged',
+  );
+  const next = compileRelationalKernels(updated);
+  assert.notEqual(next.identity, compiled.identity);
+  assert.notEqual(next.inputIdentity, compiled.inputIdentity);
+  const replay = await runDecisionWorkflow({
+    workflow: next.workflow,
+    recipe: first.recipe,
+    mode: 'replay',
+  });
+  assert.equal(replay.state, 'complete');
+  assert.equal(replay.statistics.cacheHits, 3);
+  assert.equal(replay.statistics.searches, 0);
+  assert.equal(replay.statistics.neuralCalls, 0);
+  const resolved = resolveRelationalKernelOutputs(next, replay);
+  assert.equal(resolved.identities.content, updated.identities.content);
+  assert.equal(resolved.inputIdentity, next.inputIdentity);
+  assert.deepEqual(
+    resolved.values,
+    resolveRelationalKernelOutputs(compiled, first).values,
+  );
+  assert.equal(resolved.verification, 'pending-current-renderer');
+});
+
+test('content plus row geometry edits invalidate the row and its dependent workspace while preserving appearance', async () => {
+  const input = fixture();
+  const first = await runDecisionWorkflow({
+    workflow: compileRelationalKernels(input).workflow,
+  });
+  const updated = structuredClone(input);
+  updated.identities.content = hash('new content record');
+  const row = updated.kernels.find((k) => k.kind === 'type-row')!;
+  assert.equal(row.kind, 'type-row');
+  if (row.kind === 'type-row') row.paddingBlock.push(12);
+  const replay = await runDecisionWorkflow({
+    workflow: compileRelationalKernels(updated).workflow,
+    recipe: first.recipe,
+    mode: 'replay',
+  });
+  assert.equal(replay.stages.row!.status, 'stale');
+  assert.equal(replay.stages.workspace!.status, 'blocked');
+  assert.equal(replay.stages.appearance!.status, 'replayed');
+  assert.equal(replay.statistics.cacheHits, 1);
+  assert.equal(replay.statistics.neuralCalls, 0);
+});
+
+test('reusable content provenance does not relax measured copy/source or shared direction guards', async () => {
+  const input = fixture();
+  const first = await runDecisionWorkflow({
+    workflow: compileRelationalKernels(input).workflow,
+  });
+  const changedText = structuredClone(input);
+  const row = changedText.kernels.find((k) => k.kind === 'type-row')!;
+  if (row.kind === 'type-row') row.text += ' changed';
+  assert.throws(
+    () => compileRelationalKernels(changedText),
+    /Stale text parameters/,
+  );
+  const changedSource = structuredClone(input);
+  changedSource.identities.source = hash('new renderer source');
+  assert.throws(
+    () => compileRelationalKernels(changedSource),
+    /Stale text source/,
+  );
+  const changedBrief = structuredClone(input);
+  changedBrief.brief += ' New direction.';
+  const replay = await runDecisionWorkflow({
+    workflow: compileRelationalKernels(changedBrief).workflow,
+    recipe: first.recipe,
+    mode: 'replay',
+  });
+  assert.equal(replay.statistics.cacheHits, 0);
+  assert.equal(replay.stages.appearance!.status, 'stale');
+  assert.equal(replay.stages.row!.status, 'stale');
+  assert.equal(replay.stages.workspace!.status, 'blocked');
+});
 test('changed content, source, text parameters and missing cells cannot reuse observations', () => {
   for (const edit of [
     (r: RelationalKernelInput) => {

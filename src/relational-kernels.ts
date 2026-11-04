@@ -244,7 +244,15 @@ export function compileRelationalKernels(input: RelationalKernelInput) {
       version: 1,
       id: k.id,
       brief: { intent: k.purpose, source: k.source },
-      identity: { ...r.identities, kernel: hash(k), brief: hash(r.brief) },
+      // Actual copy/measurements are already bound by the complete kernel hash.
+      // Keep the global content tag in compilation/output provenance, rather
+      // than invalidating every stage for an unrelated content-record update.
+      identity: {
+        design: r.identities.design,
+        source: r.identities.source,
+        kernel: hash(k),
+        brief: hash(r.brief),
+      },
       variables: [
         {
           id: 'choice',
