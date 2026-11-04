@@ -61,6 +61,17 @@ jobs:
           DESIGN_DOM_GPU_HEADED_DIAGNOSTIC: '1'
           DESIGN_DOM_GPU_OS_SCREEN_DIAGNOSTIC: '1'
         run: xvfb-run --auto-servernum --server-args="-screen 0 1920x1600x24" node scripts/prove-dom-surface-gpu.mjs
+      - name: Separate unchanged-frame resubmission comparison
+        id: repeat_draw
+        if: ${{ !cancelled() && steps.control.outcome != 'skipped' }}
+        continue-on-error: true
+        env:
+          DESIGN_DOM_GPU_OUTPUT: artifacts/material-presentation/repeat-draw
+          DESIGN_DOM_GPU_READBACK_DIAGNOSTIC: '0'
+          DESIGN_DOM_GPU_HEADED_DIAGNOSTIC: '1'
+          DESIGN_DOM_GPU_OS_SCREEN_DIAGNOSTIC: '1'
+          DESIGN_DOM_GPU_REPEAT_DRAW_DIAGNOSTIC: '1'
+        run: xvfb-run --auto-servernum --server-args="-screen 0 1920x1600x24" node scripts/prove-dom-surface-gpu.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -68,5 +79,5 @@ jobs:
           path: artifacts/material-presentation
           if-no-files-found: warn
       - name: Preserve strict failure status
-        if: ${{ !cancelled() && (steps.control.outcome != 'success' || steps.instrumented.outcome != 'success' || steps.transform_none.outcome != 'success' || steps.headed.outcome != 'success' || steps.os_screen.outcome != 'success') }}
+        if: ${{ !cancelled() && (steps.control.outcome != 'success' || steps.instrumented.outcome != 'success' || steps.transform_none.outcome != 'success' || steps.headed.outcome != 'success' || steps.os_screen.outcome != 'success' || steps.repeat_draw.outcome != 'success') }}
         run: exit 1

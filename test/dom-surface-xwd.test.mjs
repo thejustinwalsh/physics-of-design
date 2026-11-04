@@ -2,12 +2,17 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { parseXwd, registerXwdSample, screenFiducials, assertVirtualScreenEnvironment } from '../scripts/dom-surface-xwd.mjs';
 
-function fixture({ width = 3, height = 2, byteOrder = 0, bits = 24, colors = 2, masks = [0xff0000, 0xff00, 0xff] } = {}) {
-  const stride = Math.ceil(width * bits / 32) * 4, headerSize = 104;
+function fixture({ width = 3, height = 2, byteOrder = 0, bits = 24, colors = 2, masks = [0xff0000, 0xff00, 0xff], visualClass = 4, extraStride = 0 } = {}) {
+  const stride = Math.ceil(width * bits / 32) * 4 + extraStride, headerSize = 104;
   const bytes = Buffer.alloc(headerSize + colors * 12 + stride * height);
-  const words = [headerSize, 7, 2, 24, width, height, 0, byteOrder, 32, 0, 32, bits, stride, 4, ...masks, 8, 256, colors, width, height, 0, 0, 0];
+  const words = [headerSize, 7, 2, 24, width, height, 0, byteOrder, 32, 0, 32, bits, stride, visualClass, ...masks, 8, 256, colors, width, height, 0, 0, 0];
   words.forEach((v, i) => bytes.writeUInt32BE(v, i * 4));
   bytes.write('ci\0', 100);
+  if (visualClass === 5) for (let i = 0; i < colors; i++) {
+    const at = headerSize + i * 12;
+    bytes.writeUInt32BE(i * 0x010101, at);
+    for (let channel = 0; channel < 3; channel++) bytes.writeUInt16BE(i * 257, at + 4 + channel * 2);
+  }
   function paint(x, y, rgb) {
     const shifts = masks.map(m => { let s = 0; while (((m >>> s) & 1) === 0) s++; return s; });
     const value = rgb.reduce((v, c, i) => (v | (c << shifts[i])) >>> 0, 0);
@@ -32,7 +37,7 @@ test('XWD follows channel masks rather than assuming RGB order', () => {
   assert.deepEqual(parseXwd(f.bytes).pixel(1, 1), [17, 88, 230]);
 });
 test('XWD fails closed on unsupported or malformed headers/payloads', () => {
-  for (const [word, value] of [[0, 99], [1, 8], [2, 1], [3, 16], [4, 0], [6, 1], [7, 2], [9, 2], [10, 7], [11, 16], [12, 8], [13, 5], [14, 0xff00], [14, 0xff000000], [14, 0xf10000], [17, 10], [19, 4097]]) {
+  for (const [word, value] of [[0, 99], [1, 8], [2, 1], [3, 16], [4, 0], [6, 1], [7, 2], [9, 2], [10, 7], [11, 16], [12, 8], [13, 3], [14, 0xff00], [14, 0xff000000], [14, 0xf10000], [17, 10], [19, 4097]]) {
     const f = fixture(); f.bytes.writeUInt32BE(value, word * 4);
     assert.throws(() => parseXwd(f.bytes), undefined, `word ${word} = ${value}`);
   }
@@ -66,4 +71,22 @@ test('screen capture guard rejects macOS, local sessions, remote DISPLAY and hea
   const good = { platform: 'linux', headed: true, env: { GITHUB_ACTIONS: 'true', RUNNER_OS: 'Linux', DISPLAY: ':99', DESIGN_DOM_GPU_OS_SCREEN_DIAGNOSTIC: '1' } };
   assert.doesNotThrow(() => assertVirtualScreenEnvironment(good));
   for (const change of [{ platform: 'darwin' }, { headed: false }, { env: {} }, { env: { ...good.env, DISPLAY: 'otherhost:0' } }, { env: { ...good.env, GITHUB_ACTIONS: 'false' } }, { env: { ...good.env, DESIGN_DOM_GPU_OS_SCREEN_DIAGNOSTIC: '0' } }]) assert.throws(() => assertVirtualScreenEnvironment({ ...good, ...change }), /requires/);
+});
+
+for (const byteOrder of [0, 1]) test(`identity DirectColor honors padded 24-bit rows, byte order ${byteOrder}`, () => {
+  const f = fixture({ byteOrder, visualClass: 5, colors: 256, extraStride: 8 });
+  f.bytes.writeUInt32BE(8, 10 * 4);
+  f.paint(0, 0, [3, 251, 17]); f.paint(2, 1, [249, 5, 239]);
+  const image = parseXwd(f.bytes);
+  assert.deepEqual(image.pixel(0, 0), [3, 251, 17]);
+  assert.deepEqual(image.pixel(2, 1), [249, 5, 239]);
+});
+test('DirectColor rejects missing, duplicate and non-identity colormap entries', () => {
+  assert.throws(() => parseXwd(fixture({ visualClass: 5 }).bytes), /complete identity/);
+  const nonIdentity = fixture({ visualClass: 5, colors: 256 });
+  nonIdentity.bytes.writeUInt16BE(42 * 257 + 1, 104 + 42 * 12 + 4);
+  assert.throws(() => parseXwd(nonIdentity.bytes), /Non-identity/);
+  const duplicate = fixture({ visualClass: 5, colors: 256 });
+  duplicate.bytes.copy(duplicate.bytes, 104 + 42 * 12, 104 + 41 * 12, 104 + 42 * 12);
+  assert.throws(() => parseXwd(duplicate.bytes), /complete identity/);
 });

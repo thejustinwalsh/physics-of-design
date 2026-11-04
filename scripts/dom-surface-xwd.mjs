@@ -2,6 +2,9 @@
 // Primary layout: X.Org xorgproto-2024.1/include/X11/XWDFile.h.
 // https://www.x.org/releases/individual/proto/xorgproto-2024.1.tar.xz
 // Header words are always MSB-first; byte_order describes only image pixels.
+// Xlib image stride may exceed its minimum. DirectColor needs its colormap:
+// https://www.x.org/releases/X11R7.6/doc/libX11/specs/libX11/libX11.html
+// This diagnostic accepts only complete identity DirectColor ramps.
 import assert from 'node:assert/strict';
 
 export const screenFiducials = [
@@ -33,11 +36,12 @@ export function parseXwd(bytes) {
   const header = Object.fromEntries(names.map((name, i) => [name, bytes.readUInt32BE(i * 4)]));
   const h = header;
   assert(h.headerSize >= 101 && h.headerSize <= 4096 && h.headerSize <= bytes.length && bytes[h.headerSize - 1] === 0, 'Invalid XWD name/header');
-  assert(h.version === 7 && h.format === 2 && h.depth === 24 && h.visualClass === 4 && h.bitsPerRgb === 8, 'Only XWD v7 24-bit TrueColor ZPixmap is supported');
+  assert(h.version === 7 && h.format === 2 && h.depth === 24 && [4, 5].includes(h.visualClass) && h.bitsPerRgb === 8, 'Only XWD v7 24-bit TrueColor or identity DirectColor ZPixmap is supported');
   assert(h.width > 0 && h.height > 0 && h.width <= 8192 && h.height <= 8192 && h.width * h.height <= 16 * 1024 * 1024, 'Invalid XWD dimensions');
   assert(h.xoffset === 0 && [0, 1].includes(h.byteOrder) && [0, 1].includes(h.bitmapBitOrder) && [8, 16, 32].includes(h.bitmapUnit) && [8, 16, 32].includes(h.bitmapPad) && [24, 32].includes(h.bitsPerPixel), 'Unsupported XWD packing');
   const pixelBytes = h.bitsPerPixel / 8;
-  assert(h.bytesPerLine === Math.ceil(h.width * h.bitsPerPixel / h.bitmapPad) * h.bitmapPad / 8, 'Invalid XWD stride');
+  const minimumStride = Math.ceil(h.width * h.bitsPerPixel / h.bitmapPad) * h.bitmapPad / 8;
+  assert(h.bytesPerLine >= minimumStride && h.bytesPerLine % (h.bitmapPad / 8) === 0, 'Invalid XWD stride');
   const masks = [h.redMask, h.greenMask, h.blueMask];
   const shifts = masks.map(mask => {
     assert(mask > 0 && mask < 2 ** h.bitsPerPixel, 'Invalid XWD channel mask');
@@ -49,6 +53,19 @@ export function parseXwd(bytes) {
   assert((masks[0] & masks[1]) === 0 && (masks[0] & masks[2]) === 0 && (masks[1] & masks[2]) === 0, 'Overlapping XWD masks');
   const offset = h.headerSize + h.ncolors * 12;
   assert(h.ncolors <= 4096 && offset + h.bytesPerLine * h.height === bytes.length, 'Invalid XWD colors/pixel payload');
+  if (h.visualClass === 5) {
+    assert(h.ncolors === 256 && h.colormapEntries === 256, 'DirectColor requires complete identity ramps');
+    const indices = masks.map(() => new Set());
+    for (let i = 0; i < h.ncolors; i++) {
+      const at = h.headerSize + i * 12, pixel = bytes.readUInt32BE(at);
+      for (let channel = 0; channel < 3; channel++) {
+        const index = (pixel & masks[channel]) >>> shifts[channel];
+        assert(bytes.readUInt16BE(at + 4 + channel * 2) === index * 257, 'Non-identity DirectColor ramp is unsupported');
+        indices[channel].add(index);
+      }
+    }
+    assert(indices.every(values => values.size === 256), 'DirectColor requires complete identity ramps');
+  }
   return {
     header,
     pixel(x, y) {

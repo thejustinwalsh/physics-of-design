@@ -24,6 +24,9 @@ const headedDiagnostic =
   process.env.DESIGN_DOM_GPU_HEADED_DIAGNOSTIC === '1';
 const osScreenDiagnostic =
   process.env.DESIGN_DOM_GPU_OS_SCREEN_DIAGNOSTIC === '1';
+const repeatDrawDiagnostic =
+  process.env.DESIGN_DOM_GPU_REPEAT_DRAW_DIAGNOSTIC === '1';
+if (repeatDrawDiagnostic) assert(osScreenDiagnostic, 'Repeat-draw comparison requires independent virtual-screen capture');
 if (osScreenDiagnostic) {
   assertVirtualScreenEnvironment({ headed: headedDiagnostic });
   assert(!readbackDiagnostic && !transformDiagnostic, 'OS-screen case must keep the default fixture and omit readback');
@@ -73,6 +76,8 @@ if (osScreenDiagnostic)
     fiducials: screenFiducials,
     caveat: 'Independent virtual X11 screen pixels bracket the existing settled protocol-screenshot sequence. XWD capture and synchronous gzip add observation time; this is not a physical screen or a timing benchmark.',
   };
+if (repeatDrawDiagnostic)
+  report.limits.push('Diagnostic-only: after the normal renderer settles, submit one identical fullscreen draw and flush before each of the eight GGX comparisons. Original renderer draw statistics omit this probe submission. No production fix or performance result follows.');
 if (headedDiagnostic)
   report.limits.push(
     'Headed diagnostic changes browser display participation but retains the same Playwright screenshot API. An Xvfb snapshot is not an observation of a physical screen or a performance benchmark.',
@@ -651,6 +656,17 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
                   .toJSON(),
               }))
             : null;
+          if (repeatDrawDiagnostic) {
+            await waitForDomSurfacePaint(page);
+            await page.evaluate(() => {
+              const gl = proof.cards[1].querySelector('canvas').getContext('webgl2');
+              if (!gl || gl.isContextLost()) throw Error('Missing live GPU context for repeat-draw comparison');
+              // Same default framebuffer, program and uniforms as the settled renderer.
+              gl.drawArrays(gl.TRIANGLES, 0, 3);
+              gl.flush();
+            });
+            await waitForDomSurfacePaint(page);
+          }
           let osBefore;
           if (osScreenDiagnostic) {
             await waitForDomSurfacePaint(page);
