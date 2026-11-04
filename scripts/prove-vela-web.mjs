@@ -5,7 +5,14 @@ import path from 'node:path';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { inflateSync } from 'node:zlib';
 import { chromium } from 'playwright';
+import { build } from 'esbuild';
 import { convertColor, analyzePalette } from '../dist/palette.js';
+import { resolveDesignRuntime } from '../dist/decision-runtime.js';
+import { hash } from '../dist/identity.js';
+import {
+  resolveOutputBindings,
+  checkOutputBindings,
+} from '../dist/output-bindings.js';
 import { nativeSourceIdentity } from './native-source-identity.mjs';
 
 // Bind this run to both the served build and its inputs. The shared identity
@@ -30,6 +37,32 @@ const implementationProvenance = {
     ),
   ),
   sharedNativeSourceIdentity: await nativeSourceIdentity(),
+};
+const selectedPolicy = JSON.parse(
+  await readFile('examples/vela/design.generated.json', 'utf8'),
+);
+const collectorBundle = await build({
+  stdin: {
+    contents:
+      "export {collectBrowserOutputBindings} from '@design-theory/toolkit/browser'",
+    resolveDir: process.cwd(),
+  },
+  bundle: true,
+  platform: 'browser',
+  format: 'iife',
+  globalName: 'VelaBindingCollector',
+  write: false,
+});
+const bindingValues = (resolution, view, scale, colors) => {
+  const p = resolution.regions[view].screen;
+  const fontSize = p.headingSize * scale;
+  return {
+    fontSize,
+    lineHeight: p.titleLeading * fontSize,
+    letterSpacing: p.tracking * fontSize,
+    color: colors.ink,
+    backgroundColor: colors.canvas,
+  };
 };
 const directory = process.env.VELA_PROOF_DIR ?? 'artifacts/vela/proof-web';
 await mkdir(directory, { recursive: true });
@@ -72,6 +105,8 @@ const browser = await chromium.launch({ headless: true });
 const observations = [],
   errors = [],
   failures = [];
+const propertyBindings = [];
+let bindingOverrideControl;
 const check = (condition, message) => {
   if (!condition) failures.push(message);
 };
@@ -145,9 +180,15 @@ try {
           height: width === 390 ? 844 : 1000,
         });
         await page.evaluate(() => localStorage.clear());
+        const servedScript = page.waitForResponse(
+          (response) => new URL(response.url()).pathname === '/app.js',
+        );
         await page.goto(
           `${base}/?view=${view === 'complete' ? 'detail' : view}&textScale=${scale}`,
         );
+        const servedScriptHash = createHash('sha256')
+          .update(await (await servedScript).body())
+          .digest('hex');
         await page.waitForFunction(() => window.__VELA_READY__);
         if (view === 'complete') {
           await page
@@ -168,6 +209,14 @@ try {
           );
         });
         const observation = await page.evaluate(() => ({
+          bindingInput: {
+            width: innerWidth,
+            height: innerHeight,
+            textScale: window.__VELA__.textScale,
+            reducedMotion: Number(window.__VELA__.reducedMotion),
+            screen: window.__VELA__.screen,
+          },
+          policyColors: window.__VELA__.colors,
           primaryAction: (() => {
             const button = document.querySelector('[data-primary-action]');
             if (!button) return null;
@@ -350,13 +399,136 @@ try {
             !observation.regions.some((r) => r.id === 'session-card'),
             `${name}: duplicated promotional session card`,
           );
-        const expectedHeading =
-          observation.resolution.regions[view].screen.headingSize * scale;
-        check(
-          Math.abs(parseFloat(observation.heading[0].size) - expectedHeading) <
-            0.05,
-          `${name}: heading ignores semantic shared binding`,
+        const input = {
+          width,
+          height: width === 390 ? 844 : 1000,
+          textScale: scale,
+          reducedMotion: 1,
+        };
+        const expected = bindingValues(
+          resolveDesignRuntime(selectedPolicy.handoff, input),
+          view,
+          scale,
+          selectedPolicy.colors,
         );
+        const current = {
+          designIdentity: selectedPolicy.handoff.identity,
+          sourceIdentity:
+            implementationProvenance.files['artifacts/vela/web/app.js'],
+          inputIdentity: hash({ ...input, screen: view }),
+          resultIdentity: hash(expected),
+        };
+        const manifest = resolveOutputBindings({
+          operation: 'resolve',
+          current,
+          source: { value: expected, identity: hash(expected) },
+          bindings: Object.keys(expected).map((property) => ({
+            id: `vela-${property.toLowerCase()}`,
+            scenario: name.replaceAll('.', '-'),
+            scenarioIdentity: hash(input),
+            platform: 'web',
+            unit: ['color', 'backgroundColor'].includes(property)
+              ? 'color'
+              : 'css-px',
+            pointer: `/${property}`,
+            tolerance: typeof expected[property] === 'number' ? 0.05 : 0,
+            target: {
+              surface: ['color', 'backgroundColor'].includes(property)
+                ? 'vela-screen'
+                : 'vela-heading',
+              property,
+              sourceLocation: 'examples/vela/web.jsx:Heading/root',
+            },
+          })),
+        });
+        const actualInput = { ...observation.bindingInput };
+        delete actualInput.screen;
+        const context = {
+          current: {
+            designIdentity: observation.policyIdentity,
+            sourceIdentity: servedScriptHash,
+            inputIdentity: hash(observation.bindingInput),
+            resultIdentity: hash(
+              bindingValues(
+                observation.resolution,
+                observation.screen,
+                observation.bindingInput.textScale,
+                observation.policyColors,
+              ),
+            ),
+          },
+          scenario: name.replaceAll('.', '-'),
+          scenarioIdentity: hash(actualInput),
+          resultRef: `${directory}/${name}-bindings.json`,
+        };
+        await page.addScriptTag({
+          content: collectorBundle.outputFiles[0].text,
+        });
+        const collect = () =>
+          page.evaluate(
+            ({ manifest, context }) =>
+              window.VelaBindingCollector.collectBrowserOutputBindings(
+                manifest,
+                context,
+              ),
+            { manifest, context },
+          );
+        const receipt = await collect();
+        const result = checkOutputBindings({
+          operation: 'check',
+          manifest,
+          current,
+          observations: receipt.observations,
+        });
+        check(
+          result.verified,
+          `${name}: consumed property mismatch: ${JSON.stringify(result.entries.filter((e) => e.status !== 'pass'))}`,
+        );
+        await writeFile(
+          context.resultRef,
+          JSON.stringify({ manifest, receipt, result }, null, 2) + '\n',
+        );
+        propertyBindings.push({
+          scenario: name,
+          verified: result.verified,
+          properties: result.entries.length,
+          resultRef: context.resultRef,
+        });
+        if (!bindingOverrideControl) {
+          const heading = page.getByTestId('vela-heading');
+          const before = await heading.getAttribute('style');
+          await heading.evaluate((element, size) => {
+            element.style.fontSize = `${size + 2}px`;
+          }, expected.fontSize);
+          const altered = await collect();
+          const changed = checkOutputBindings({
+            operation: 'check',
+            manifest,
+            current,
+            observations: altered.observations,
+          });
+          await heading.evaluate((element, style) => {
+            if (style === null) element.removeAttribute('style');
+            else element.setAttribute('style', style);
+          }, before);
+          const restored = await collect();
+          const recovered = checkOutputBindings({
+            operation: 'check',
+            manifest,
+            current,
+            observations: restored.observations,
+          });
+          bindingOverrideControl = { scenario: name, changed, recovered };
+          check(
+            changed.entries.find((e) => e.target.property === 'fontSize')
+              .status === 'override',
+            'A real two-pixel heading override escaped binding detection',
+          );
+          check(
+            recovered.verified,
+            'Restoring the live heading failed to restore all bindings',
+          );
+        }
         await page.screenshot({
           path: `${directory}/${name}.png`,
           fullPage: true,
@@ -1067,6 +1239,8 @@ try {
     browser: browser.version(),
     scenarios: observations.length,
     observations,
+    propertyBindings,
+    bindingOverrideControl,
     interactions: {
       saved,
       discarded,

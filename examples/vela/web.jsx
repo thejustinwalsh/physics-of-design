@@ -527,6 +527,7 @@ const Heading = ({ children }) => {
   return (
     <h1
       data-motion-heading
+      data-testid="vela-heading"
       tabIndex="-1"
       {...sx(
         styles.headline(
@@ -1022,6 +1023,7 @@ function Vela({ viewport }) {
       transitions: transitions.current,
       animations: animations.current,
       policyIdentity: policy.handoff.identity,
+      colors: c,
     };
     window.__VELA_READY__ = true;
   });
@@ -1095,6 +1097,7 @@ function Vela({ viewport }) {
         {...sx(styles.root, styles.surface(c.canvas, c.ink))}
         data-screen={screen}
         data-color="canvas"
+        data-testid="vela-screen"
       >
         <a href="#main" className="skip">
           Skip to main content
