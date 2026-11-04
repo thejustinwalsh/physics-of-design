@@ -3,6 +3,59 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { ResultStore, summarizeResult } from '../src/mcp-context.js';
 
+test('geometry summaries expose bounded consequences without repeating full regime receipts', () => {
+  const large = 'full retained provenance'.repeat(1000);
+  const output = {
+    id: 'pane',
+    unit: 'dp'.repeat(1000),
+    provenance: large,
+    sensitivity: {
+      status: 'smooth',
+      value: 400,
+      derivatives: Object.fromEntries(
+        Array.from({ length: 16 }, (_, i) => [`input${i}`, i]),
+      ),
+    },
+    enclosure: { status: 'bounded', interval: { min: 150, max: 700 } },
+    regimes: {
+      exhausted: false,
+      cells: Array.from({ length: 200 }, (_, i) => ({
+        status: i % 2 ? 'stable' : 'transition-bracket',
+        receipt: large,
+      })),
+    },
+  };
+  const summary = summarizeResult(
+    'energy analyze',
+    {
+      baseline: { energy: 0, status: 'mathematically-admissible' },
+      effects: [],
+      geometry: {
+        identity: 'current',
+        scenario: 'tablet',
+        outputs: Array.from({ length: 16 }, () => output),
+        hardConstraints: [{ status: 'unresolved' }],
+        scope: 'Model calculations only',
+      },
+    },
+    'pod:1',
+  );
+  const geometry = (summary.summary as any).geometry;
+  assert.equal(geometry.outputs.length, 4);
+  assert.equal(geometry.omittedOutputs, 12);
+  assert.equal(geometry.outputs[0].unit.length, 80);
+  assert.equal(geometry.outputs[0].unitTruncated, true);
+  assert.equal(
+    Object.keys(geometry.outputs[0].sensitivity.derivatives).length,
+    4,
+  );
+  assert.equal(geometry.outputs[0].sensitivity.omittedInputs, 12);
+  assert.equal(geometry.outputs[0].regimes.transitions, 100);
+  assert.equal(geometry.hardConstraints.unresolved, 1);
+  assert.ok(!JSON.stringify(summary).includes(large));
+  assert.ok(JSON.stringify(summary).length < 3000);
+});
+
 test('bounded result references preserve exact values, clone on read and reject prototype/malformed paths', () => {
   const store = new ResultStore(10000, 2);
   const first = store.put({ state: { size: 88 }, 'a/b': { '~x': 3 } })!;

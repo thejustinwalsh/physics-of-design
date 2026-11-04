@@ -619,7 +619,10 @@ export function summarizeResult(
       verification: r.verification,
       scope: r.scope,
     };
-  else if (command === 'energy analyze')
+  else if (command === 'energy analyze') {
+    const geometry = record(r.geometry);
+    const quantities = rows(geometry.outputs);
+    const constraints = rows(geometry.hardConstraints);
     summary = {
       programIdentity: r.programIdentity,
       baseline: {
@@ -632,9 +635,71 @@ export function summarizeResult(
         locked: e.locked,
         negativeEnergySlope: e.negativeEnergySlope,
       })),
+      ...(r.geometry
+        ? {
+            geometry: {
+              identity: geometry.identity,
+              scenario: geometry.scenario,
+              outputs: quantities.slice(0, 4).map((output) => {
+                const sensitivity = record(output.sensitivity),
+                  regimes = record(output.regimes);
+                const derivatives = Object.entries(
+                  record(sensitivity.derivatives),
+                );
+                const cells = rows(regimes.cells);
+                return {
+                  id: output.id,
+                  unit:
+                    typeof output.unit === 'string'
+                      ? output.unit.slice(0, 80)
+                      : output.unit,
+                  unitTruncated:
+                    typeof output.unit === 'string' && output.unit.length > 80,
+                  sensitivity: {
+                    status: sensitivity.status,
+                    value: sensitivity.value,
+                    derivatives: Object.fromEntries(derivatives.slice(0, 4)),
+                    omittedInputs: Math.max(0, derivatives.length - 4),
+                  },
+                  enclosure: output.enclosure
+                    ? {
+                        status: record(output.enclosure).status,
+                        interval: record(output.enclosure).interval,
+                      }
+                    : undefined,
+                  regimes: output.regimes
+                    ? {
+                        stable: cells.filter((cell) => cell.status === 'stable')
+                          .length,
+                        transitions: cells.filter(
+                          (cell) => cell.status === 'transition-bracket',
+                        ).length,
+                        unresolved: cells.filter(
+                          (cell) => cell.status === 'unresolved',
+                        ).length,
+                        exhausted: regimes.exhausted,
+                      }
+                    : undefined,
+                };
+              }),
+              omittedOutputs: Math.max(0, quantities.length - 4),
+              hardConstraints: {
+                proven: constraints.filter(
+                  (c) => c.status === 'proven-mathematical',
+                ).length,
+                violatedThroughout: constraints.filter(
+                  (c) => c.status === 'violated-throughout',
+                ).length,
+                unresolved: constraints.filter((c) => c.status === 'unresolved')
+                  .length,
+              },
+              scope: geometry.scope,
+            },
+          }
+        : {}),
       scope: r.scope,
     };
-  else if (command === 'palette analyze')
+  } else if (command === 'palette analyze')
     summary = {
       summary: r.summary,
       measurementRef: r.measurementRef,

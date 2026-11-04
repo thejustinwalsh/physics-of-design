@@ -274,6 +274,18 @@ const inputs: Record<string, unknown> = {
   'energy analyze': {
     program: velaProblem.program,
     assignment: velaDesign.handoff.assignment,
+    geometry: {
+      scenario: velaProblem.program.scenarios[0].id,
+      outputs: ['paneWidth', 'titleSize'],
+      wrt: ['width', 'textScale'],
+      envelope: {
+        input: 'width',
+        min: 390,
+        max: 1440,
+        precision: 0.25,
+        maxCells: 128,
+      },
+    },
   },
   'energy search': {
     program: velaProblem.program,
@@ -493,6 +505,15 @@ test(
         assert.equal(result.err, '', command);
         const value = JSON.parse(result.out);
         assert.ok(value !== undefined, command);
+        if (command === 'energy analyze') {
+          assert.equal(value.geometry.outputs.length, 2);
+          assert.equal(value.geometry.engine, 'layout-calculus-v1');
+          assert.equal(
+            typeof value.geometry.outputs[0].sensitivity.value,
+            'number',
+          );
+          assert.ok(value.geometry.outputs[0].regimes.cells.length > 0);
+        }
         const mcp = await client.callTool({
           name: `design_${command.replaceAll(' ', '_')}`,
           arguments: input as Record<string, unknown>,

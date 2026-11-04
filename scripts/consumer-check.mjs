@@ -15,11 +15,20 @@ try {
     path.join(dir, 'consumer.mts'),
     `import {parseState, execute, BrowserRenderer, NativeRenderer, policy, relax, evaluate, CorpusRecordSchema, resolveRelationalKernelOutputs, type DesignState, type DecisionWorkflowInput} from '${root}/dist/index.js';
 import {createDrivenMotion} from '${root}/dist/motion-runtime.js';
-import {resolveDesignRuntime, type PortableDesign, advanceNativeViewport, type NativeViewport} from '${root}/dist/layout-runtime.js';
+import {resolveDesignRuntime, type PortableDesign, advanceNativeViewport, type NativeViewport, differentiateExpression, encloseExpression, classifyEnclosureBands, mapExpressionRegimes} from '${root}/dist/layout-runtime.js';
 import {createDomLightController, collectBrowserOutputBindings, type BrowserBindingContext, type DomLightOptions} from '${root}/dist/browser-runtime.js';
 const motion=createDrivenMotion({position:0,target:1});motion.retarget(.8);motion.advance(1/60);
 const viewport:NativeViewport={window:{width:390,height:844,fontScale:1,scale:3},insets:{top:47,right:0,bottom:34,left:0}};
 advanceNativeViewport(null,viewport);void resolveDesignRuntime;const portable:PortableDesign|null=null;void portable;
+const sensitivity=differentiateExpression({ref:'width'},{width:390},['width']);
+const slope=sensitivity.derivatives.width;if(typeof slope==='number')slope.toFixed(3);
+// @ts-expect-error Boundary derivatives are unavailable, not invented numeric zeros.
+const requiredSlope:number=sensitivity.derivatives.width;
+const enclosure=encloseExpression({ref:'width'},{width:{min:320,max:1920}});
+classifyEnclosureBands(enclosure,[{min:0,max:2000}]);
+mapExpressionRegimes({ref:'width'},{width:390},{input:'width',min:320,max:1920});
+// @ts-expect-error Enclosure endpoints must be numeric.
+encloseExpression({ref:'width'},{width:{min:'320',max:1920}});
 const effectOptions:DomLightOptions={clock:'external',renderer:'webgl'};void effectOptions;void createDomLightController;
 const bindingContext:BrowserBindingContext={current:{designIdentity:'x',sourceIdentity:'x',inputIdentity:'x',resultIdentity:'x'},scenario:'phone',scenarioIdentity:'x',resultRef:'evidence/dom.json'};
 void bindingContext;void collectBrowserOutputBindings;
