@@ -1,0 +1,11 @@
+{
+  "railWidth": 220,
+  "phoneDestinations": 3,
+  "fontSize": 14,
+  "controlMinHeight": 44,
+  "stiffness": 200,
+  "damping": 28,
+  "workflowIdentity": "fe587b83cb7fa213be1ff7affdd44de398550c69f865fd7ca90fe29ad5947e8d",
+  "inputIdentity": "1ad505224ce02e157803275a5d9fc0137c626da71f5540f327893421d1312642",
+  "resultIdentity": "d8057040c27a4955c7d52cab9dbea8cea2a2bbe621ce8f9b856789187dbbb66b"
+}

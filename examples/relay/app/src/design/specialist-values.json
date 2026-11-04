@@ -1,0 +1,42 @@
+{
+  "palette": {
+    "dark": {
+      "canvas": "#0e1720",
+      "ink": "#eaf2f7",
+      "accent": "#66d9ed",
+      "panel": "#14232e",
+      "raised": "#1b303c",
+      "line": "#38505e",
+      "muted": "#abc0cd",
+      "critical": "#ffab9b",
+      "warning": "#efcc80",
+      "healthy": "#9de2bd",
+      "selection": "#164857"
+    },
+    "light": {
+      "canvas": "#edf0eb",
+      "ink": "#182b35",
+      "accent": "#00667a",
+      "panel": "#ffffff",
+      "raised": "#e0e9e8",
+      "line": "#a3b4b7",
+      "muted": "#475f6c",
+      "critical": "#9d2c20",
+      "warning": "#775100",
+      "healthy": "#17633b",
+      "selection": "#d0edf0"
+    }
+  },
+  "controls": {
+    "minHeight": 44,
+    "paddingInline": 12,
+    "paddingBlock": 8,
+    "fieldMinHeight": 48
+  },
+  "composition": {
+    "railWidth": 220,
+    "minimumPairedMeasure": 620,
+    "phoneNavigation": "menu",
+    "provenance": "Measured round1 phone navigation required three rows at 150% text; shared adapter uses Home/Queue/Menu."
+  }
+}

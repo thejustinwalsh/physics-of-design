@@ -75,3 +75,7 @@ try {
 finally { server.close(); await writeFile(`${output}/proof.json`, JSON.stringify(report, null, 2)); }
 console.log(JSON.stringify({ output, checks: report.checks.length, failed: report.checks.filter((c) => !c.passed), errors: report.failures }, null, 2));
 if (report.failures.length || report.checks.some((c) => !c.passed)) process.exitCode = 1;
+else {
+  const { proveRelayStatic } = await import('./prove-relay-static.mjs');
+  await proveRelayStatic();
+}

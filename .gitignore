@@ -4,6 +4,7 @@ artifacts/
 .venv/
 native/node_modules/
 native/.expo/
+examples/relay/app/.expo/
 native/ios/
 native/android/
 *.tsbuildinfo

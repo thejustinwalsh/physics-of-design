@@ -1,0 +1,200 @@
+{
+  "recordedAt": "2026-11-04T23:36:07.837925+00:00",
+  "scope": "Provisional isolated functional integration base. This is not a benchmark winner, new selection recipe or current renderer proof. Original completed Sol trial source/evidence is unchanged. UI, bindings and calculations require new verification.",
+  "sourceRun": "20261104/matched-current/sol",
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "57b00bb90e1570f7c63a93cf9626c6ddb6a2d6ca4953b2dd3bab1b41168a2178"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "7ef37231357a5fec2ecc0bb992ae6ce44fef370b41e9b077eab028e170fe7156"
+    },
+    {
+      "path": "app.json",
+      "sha256": "b4b125edc127acd170526bade81ddcd4ac495cfb0b84dc5504f3dc358d7287f9"
+    },
+    {
+      "path": "index.js",
+      "sha256": "fe279463ab64c8d2b1057c5595fdc8c01fb2c0a288657d5e01681be180a73729"
+    },
+    {
+      "path": "metro.config.js",
+      "sha256": "e746ada24a7ee087e06e361ca23526c21ef3def61cb617abefc906aa52c1e4ca"
+    },
+    {
+      "path": "babel.config.js",
+      "sha256": "7bf5079996ef39a36dc8801d571607988a68c9480ae6378cfafb02c6469da191"
+    },
+    {
+      "path": "postcss.config.js",
+      "sha256": "64616c00a3afdc85185146cc95c41dd09514d0c271d31db5e38d510b2fb5ba55"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "ba945066f305c4e7af9263c4d071af62f60994c1f20b2dcbb7c39fafb497bfb6"
+    },
+    {
+      "path": "strict.css",
+      "sha256": "2c87a07763a379df62870b6ebded590dedf7df150f3c2e3c8ba8305deda7356f"
+    },
+    {
+      "path": "src/App.jsx",
+      "sha256": "df59f405fd9cfcd0a8fcf8270536c0bdb13bfc65db89ae507a6ac1a2688482b0"
+    },
+    {
+      "path": "src/FontAxes.jsx",
+      "sha256": "df1cf6bd42e33df91325fd6bf9ad9ba8eaab1b8dc12ad98c39b9b8422f6ed742"
+    },
+    {
+      "path": "src/FontAxes.native.jsx",
+      "sha256": "b3a8676fd3dc2bb1154b5f184df971fe8cacb44a52027d37bfe613f4bdf60870"
+    },
+    {
+      "path": "src/Materials.jsx",
+      "sha256": "bc590eeb2e37d7b4bcda8abdb97b77d1bc1b1da021204493d66942471b2c1d3f"
+    },
+    {
+      "path": "src/Materials.native.jsx",
+      "sha256": "ca20d5cb02988b18f2fb66b61d5c893da4bd6191839ce7946eac85f9de95bb5b"
+    },
+    {
+      "path": "src/MediaImage.jsx",
+      "sha256": "9ae08ed83fd25e1f6114f9ccf5e8a8ff8c44ff01bf8fc1dfe832ca0290a2940c"
+    },
+    {
+      "path": "src/MediaImage.native.jsx",
+      "sha256": "ec044c7dade68ba6b5f1363da7d9789f042fbed12bc6407692cde0ca1bc73ba6"
+    },
+    {
+      "path": "src/Overlay.jsx",
+      "sha256": "0247be6fd5ef3dd7d2e5f09710c33be9f2e90096f3bfc706ee759058870af058"
+    },
+    {
+      "path": "src/Overlay.native.jsx",
+      "sha256": "51d765bdeadd2e7cc35938d7fc53bb3361ba2c341b2f9ccb9731eaf7ede832ae"
+    },
+    {
+      "path": "src/PlotInteraction.jsx",
+      "sha256": "f25127869561b5b251b9af7711f7c2c815e560f8a96454a58e97077847f873a8"
+    },
+    {
+      "path": "src/PlotInteraction.native.jsx",
+      "sha256": "9e62fa3b5405ca6832be3c0f7daadbc2bb62423305817939d2b6b714b68ec0aa"
+    },
+    {
+      "path": "src/Relay.jsx",
+      "sha256": "43e3bae06146ccde66cfd0a62ac8d07d5f9bd691e60637626246b5294baba0e0"
+    },
+    {
+      "path": "src/Screen.jsx",
+      "sha256": "96469c133d2423871688821ace902000d886e394784f106a3648b98a8769b453"
+    },
+    {
+      "path": "src/Screen.native.jsx",
+      "sha256": "9c7cdd3f14f1c724e05206a332001d1b0dd736881d6d344c6eba7144f81b69fc"
+    },
+    {
+      "path": "src/Scroll.jsx",
+      "sha256": "86780ba49f08e4bbfd1856261ee67bd27168b5d455e8f3bfb70f0b138eecada4"
+    },
+    {
+      "path": "src/Scroll.native.jsx",
+      "sha256": "fb5ff8410f572239c4fdef07c0327370f9864f18ac81e672d70669d7855de055"
+    },
+    {
+      "path": "src/TextWrap.jsx",
+      "sha256": "5533fb807a425ecc33a99afb4adfcdf160996f49efd56874a8feded0cc13111d"
+    },
+    {
+      "path": "src/TextWrap.native.jsx",
+      "sha256": "85ea3f6f62b0d07ab03b8862e13fee67692e20a94b7e098bec6801539d3f4bc5"
+    },
+    {
+      "path": "src/assets.d.ts",
+      "sha256": "389c6664a09022ff95b854d3cb1e741053efc727fde8f6ffa3acdd5796cde167"
+    },
+    {
+      "path": "src/clock.mjs",
+      "sha256": "1bac5da9a915c8e8afc207982b5b14501e484404dbc3e971148e71cd6e618d74"
+    },
+    {
+      "path": "src/design/font-axes.json",
+      "sha256": "5f562dbfdfafc3d7f12a71e224d8a51e478e75e2f96865f36e5c2a2c26774706"
+    },
+    {
+      "path": "src/design/resolved.json",
+      "sha256": "04fa68a366b9da37375fb0eef9259f5b919a346a996edc9ce2a3b3d164ececf0"
+    },
+    {
+      "path": "src/design/specialist-values.json",
+      "sha256": "5ac710affb8927e065402a79f84fb2f8a55b79302cd5cc19f7aa20af0b123f08"
+    },
+    {
+      "path": "src/design/staged-values.json",
+      "sha256": "3e72f2592b7fc26c5e62405f5ff47ea57cdae88724217d7ca3ead106a43b9802"
+    },
+    {
+      "path": "src/design/surface-values.json",
+      "sha256": "bca19a27fb2b84cdd6a8f8eb9627b4712c59f60626cbf616d5d56f48ce029381"
+    },
+    {
+      "path": "src/model.mjs",
+      "sha256": "d32c0ff1d2f17490399fe7f189584031da8107c633ec1433666c9c1e0d3cc35a"
+    },
+    {
+      "path": "src/storage.jsx",
+      "sha256": "ae3ff2da578a679e79a51b0c362a22cc8ae10b31c78deb01ccdd8ff2437c3ee9"
+    },
+    {
+      "path": "src/storage.native.jsx",
+      "sha256": "2fc0f3edeaff21590cccabd3ef58fd1528d000b3e099eda00886a8a55b435f15"
+    },
+    {
+      "path": "src/ui.jsx",
+      "sha256": "ce83d5d493006e197af0e39d18b98276f166631fb819d90d66c7f836b70887de"
+    },
+    {
+      "path": "src/useKeyboard.jsx",
+      "sha256": "6b21538ba912d8912038e0376771fdd6ff6371f03ee20959bfacecd653290bff"
+    },
+    {
+      "path": "src/useKeyboard.native.jsx",
+      "sha256": "47f3c61b8fddb327e88b3b22077546194defec40b78f60370ed48c74bb1eb84a"
+    },
+    {
+      "path": "src/useObservations.jsx",
+      "sha256": "8a56dc034ecd0dea63e07610aa82f174f92c01af3a761bb0220f22a41f7dc06a"
+    },
+    {
+      "path": "assets/diagnostic-trace.png",
+      "sha256": "a0da3ca6eab18011be29b4bd74981ffbcf9eaf5989be6052bde22d32d66b2e58"
+    },
+    {
+      "path": "assets/service-topology.png",
+      "sha256": "a172f44258fc59f8885b59167e0f681062b4255ba94d1ba51004baf4e23b53ea"
+    }
+  ],
+  "adaptations": [
+    "repository-relative fixtures/fonts",
+    "public toolkit runtime imports instead of copied minified bundles",
+    "dedicated integration app namespace and port",
+    "no builder reports, evidence, runtime processes or node_modules copied",
+    "separate integration storage namespace",
+    "coupled responsive expression policy and computed inspection readout",
+    "copied builder-authored model/markup tests retain their authorship; not an independent review"
+  ],
+  "testOrigins": [
+    {
+      "path": "test/model.test.mjs",
+      "source": "completed Sol scripts/model.test.mjs",
+      "originalSha256": "435a0937f3a6c64f005fb3a971b2fcaa8cbff472f067e3f4255cb18234132cad"
+    },
+    {
+      "path": "test/native-markup.test.mjs",
+      "source": "completed Sol scripts/native-markup.test.mjs",
+      "originalSha256": "4acf8a19f153124cfbfd61ff34dfed253e7fedbc0a19fcdd8f1604ff2118f675"
+    }
+  ]
+}

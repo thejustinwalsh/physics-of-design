@@ -1,0 +1,80 @@
+{
+  "opsz": {
+    "name": "Optical Size",
+    "min": 8,
+    "default": 14,
+    "max": 144
+  },
+  "wght": {
+    "name": "Weight",
+    "min": 100,
+    "default": 400,
+    "max": 1000
+  },
+  "GRAD": {
+    "name": "Grade",
+    "min": -200,
+    "default": 0,
+    "max": 150
+  },
+  "wdth": {
+    "name": "Width",
+    "min": 25,
+    "default": 100,
+    "max": 151
+  },
+  "slnt": {
+    "name": "Slant",
+    "min": -10,
+    "default": 0,
+    "max": 0
+  },
+  "XOPQ": {
+    "name": "Parametric Thick Stroke",
+    "min": 27,
+    "default": 96,
+    "max": 175
+  },
+  "YOPQ": {
+    "name": "Parametric Thin Stroke",
+    "min": 25,
+    "default": 79,
+    "max": 135
+  },
+  "XTRA": {
+    "name": "Parametric Counter Width",
+    "min": 323,
+    "default": 468,
+    "max": 603
+  },
+  "YTUC": {
+    "name": "Parametric Uppercase Height",
+    "min": 528,
+    "default": 712,
+    "max": 760
+  },
+  "YTLC": {
+    "name": "Parametric Lowercase Height",
+    "min": 416,
+    "default": 514,
+    "max": 570
+  },
+  "YTAS": {
+    "name": "Parametric Ascender Height",
+    "min": 649,
+    "default": 750,
+    "max": 854
+  },
+  "YTDE": {
+    "name": "Parametric Descender Depth",
+    "min": -305,
+    "default": -203,
+    "max": -98
+  },
+  "YTFI": {
+    "name": "Parametric Figure Height",
+    "min": 560,
+    "default": 738,
+    "max": 788
+  }
+}

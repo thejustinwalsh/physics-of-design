@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "Relay",
+    "slug": "design-theory-relay",
+    "version": "0.0.1",
+    "ios": {
+      "bundleIdentifier": "local.designtheory.relay.integration",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        }
+      }
+    },
+    "android": {
+      "package": "local.designtheory.relay.integration"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-font"
+    ]
+  }
+}
