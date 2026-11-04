@@ -16,8 +16,37 @@ import {
 } from '../dist/output-bindings.js';
 import type { collectBrowserOutputBindings } from '../dist/browser-output-bindings.js';
 import { resolveLayout } from '../dist/responsive.js';
+import { analyzeMediaFile } from '../dist/media.js';
 const hero = () =>
   parseState(JSON.parse(readFileSync('examples/hero.json', 'utf8')));
+
+test('real local original raster decodes with source hash and full-resolution region evidence', async () => {
+  const result = await analyzeMediaFile({
+    file: 'native/assets/fieldwork/headland.png',
+    sampleLimit: 32,
+    provenance: {
+      origin: 'original-generated',
+      source: 'research/fieldwork-asset-provenance.json',
+      expectedSha256:
+        '8fee5f6272e740a888eb4212c52223758a7c94a2db4c234aa9b2ab389ce639a3',
+    },
+    contrastRegions: [
+      {
+        id: 'text',
+        foreground: [1, 1, 1],
+        region: { x: 0, y: 0, width: 0.1, height: 0.1 },
+      },
+    ],
+  });
+  assert.equal(result.width, 1536);
+  assert.equal(result.height, 1024);
+  assert.equal(result.mime, 'image/png');
+  assert.equal(result.provenance.hashVerified, true);
+  assert.equal(result.provenance.rightsStatus, 'unknown');
+  assert.equal(result.contrastRegions[0]!.pixelsVisited, 154 * 103);
+  assert.ok(result.sampledDescriptors.samples <= 32);
+  assert.ok(result.metadataUnknown.includes('calibrated albedo'));
+});
 
 for (const engine of [chromium, webkit])
   test(
