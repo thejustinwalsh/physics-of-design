@@ -89,6 +89,15 @@ The launcher loads both hash-bound receipts and calls the canonical `validateExp
 
 The shared input manifest must include REPORTING and the compact relational recipe plus its hash-bound measurements. Preparation checks every listed byte length/hash. Toolkit source, scripts, tests, the Design Theory skill/references and selected documentation are copied equally. The original published AGENTS.md and skill are available in each workspace. Builders load only relevant facets. Other example app implementations are not copied.
 
+The mathematical workflow and responsive tests also need `examples/workflow/editorial.json` and `examples/hero.json`; the toolkit file allowlist includes both JSON inputs. Run these tests from `toolkit/`, because some existing tests resolve fixture paths against the working directory:
+
+```sh
+cd toolkit
+node --import tsx --test test/relational-kernels.test.ts test/output-bindings.test.ts test/decision-workflow.test.ts test/component-contract.test.ts test/motion-dynamics.test.ts test/palette.test.ts test/responsive.test.ts
+```
+
+This command exercises deterministic contracts with synthetic observations and selectors. It does not launch a browser, native renderer or real model. The prepared toolkit deliberately excludes the other product demonstrations and their native app files, so its copied tests are not a standalone replacement for the repository's full verification lane. This fixture correction applies to newly prepared experiments; previously frozen builder inputs and outcomes remain unchanged.
+
 The Expo allowlist copies pinned integration configuration, entry point and approved primitive adapters. Preparation replaces the spike's product UI with the same minimal RSD/SafeAreaProvider shell. It does not copy its content, generated design, ready-made app or fixed-port session launcher. The only per-builder changes are disclosed metadata, bundle/storage namespace and runtime ports. The shell is a starting integration artifact; the original spike's native proof does not certify the newly built app.
 
 The prepared app snapshot includes every directory, regular file, content hash and executable bit. Before its first actual turn, additions, removals and edits invalidate preparation. The only excluded generated directory is the real top-level `node_modules`, created from the pinned lock. Hidden files, evidence directories, alternate caches and symlinks are not exceptions. Qualification checks all three app trees before and after installation, including cross-builder changes; the thread-start validation checks the selected app again immediately before permitting inference. A `starting` state alone does not make inputs mutable. Only the recorder's actual turn-start callback records `actualStartedAt` and transitions the builder to `running`.

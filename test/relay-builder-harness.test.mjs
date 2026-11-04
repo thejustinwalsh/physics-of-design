@@ -79,6 +79,10 @@ function fixture() {
   git(repo, 'init', '--initial-branch=main');
   git(remote, 'init', '--bare');
   const policy = JSON.parse(readFileSync(policyPath));
+  const mathematicalFixtures = [
+    'examples/hero.json',
+    'examples/workflow/editorial.json',
+  ];
   policy.toolkitRoots = ['src', '.agents/skills/design-theory'];
   policy.toolkitFiles = [
     'package.json',
@@ -86,7 +90,10 @@ function fixture() {
     'scripts/relay-capabilities.mjs',
     'scripts/relay-selector-capability.mjs',
     'scripts/relay-native-capability.mjs',
+    ...policy.toolkitFiles.filter((p) => mathematicalFixtures.includes(p)),
   ];
+  for (const name of mathematicalFixtures)
+    write(path.join(repo, name), { syntheticFixture: name });
   for (const name of policy.toolkitFiles.filter((p) =>
     p.startsWith('scripts/'),
   ))
@@ -474,6 +481,15 @@ test('published preparation gives identical immutable inputs and a minimal shell
       COMMON_PROMPT,
     );
     assertSnapshot(b.workspace, b.immutable);
+    // These are read by workflow and responsive tests in the copied toolkit.
+    // Keep their inclusion dependent on the real published policy above.
+    for (const name of [
+      'examples/hero.json',
+      'examples/workflow/editorial.json',
+    ])
+      assert.deepEqual(read(path.join(b.workspace, 'toolkit', name)), {
+        syntheticFixture: name,
+      });
     assert.equal(existsSync(path.join(b.workspace, '.codex/auth.json')), false);
   }
 });

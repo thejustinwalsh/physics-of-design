@@ -34,6 +34,8 @@
     "package-lock.json",
     "tsconfig.json",
     "physics_of_design_white_paper.md",
+    "examples/hero.json",
+    "examples/workflow/editorial.json",
     "docs/relational-kernels.md",
     "docs/relay-experiment.md",
     "docs/cli-context.md",
