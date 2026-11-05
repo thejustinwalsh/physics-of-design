@@ -8,7 +8,12 @@ const styles = css.create({
 // Strict DOM does not implement a native scroll container. The documented
 // compat boundary preserves the shared style contract around a real ScrollView.
 const positions = new Map();
-export default function Scroll({ children, routeKey = null }) {
+export default function Scroll({
+  children,
+  routeKey = null,
+  observationRef = null,
+  observationId = 'relay-task-viewport',
+}) {
   const ref = useRef(null);
   const offset = useRef(0),
     timers = useRef([]);
@@ -61,10 +66,12 @@ export default function Scroll({ children, routeKey = null }) {
           {...nativeProps}
           ref={(node) => {
             ref.current = node;
+            observationRef?.(node?.getNativeScrollRef?.() ?? node);
             const provided = nativeProps.ref;
             if (typeof provided === 'function') provided(node);
             else if (provided) provided.current = node;
           }}
+          testID={observationRef ? observationId : undefined}
           keyboardShouldPersistTaps="handled"
           automaticallyAdjustKeyboardInsets={true}
           keyboardDismissMode="interactive"

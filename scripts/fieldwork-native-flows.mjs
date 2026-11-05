@@ -1,3 +1,4 @@
+import { dumpAndroidAccessibility } from './android-accessibility.mjs';
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
@@ -61,23 +62,10 @@ async function tap(name, predicate) {
   // UIAutomator waits for native accessibility idle and provides an independent
   // physical-pixel oracle. This prevents a momentum-stopping tap from being
   // mistaken for a product transition and cross-checks our coordinate adapter.
-  await exec(adb, [
-    '-s',
-    device,
-    'shell',
-    'uiautomator',
-    'dump',
-    '/sdcard/fieldwork-flow.xml',
-  ]);
-  const xml = (
-    await exec(adb, [
-      '-s',
-      device,
-      'exec-out',
-      'cat',
-      '/sdcard/fieldwork-flow.xml',
-    ])
-  ).stdout;
+  const { xml } = await dumpAndroidAccessibility({
+    prefix: 'fieldwork-flow',
+    run: (_label, args, options) => exec(adb, ['-s', device, ...args], options),
+  });
   const escaped = name
     .replaceAll('&', '&amp;')
     .replaceAll('"', '&quot;')

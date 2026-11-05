@@ -15,6 +15,48 @@ const ref = (name) => ({ ref: name });
 // Authored task-space targets in em, not measured text widths or beauty laws.
 // The same expression definitions drive the app and its inspection tools.
 export const relayFrameDefinitions = {
+  // Stable authored chrome budgets, not feedback from the current compact view.
+  minimumTaskHeight: op(
+    'mul',
+    ref('minTaskEm'),
+    ref('fontSize'),
+    ref('textScale'),
+  ),
+  expandedChromeHeight: op(
+    'add',
+    op('mul', ref('expandedChromeEm'), ref('fontSize'), ref('textScale')),
+    op('mul', 2, ref('padding')),
+  ),
+  compactChromeHeight: op(
+    'add',
+    op('mul', ref('compactChromeEm'), ref('fontSize'), ref('textScale')),
+    op('mul', 2, ref('padding')),
+  ),
+  compactChrome: op(
+    'mul',
+    ref('heightKnown'),
+    op(
+      'lt',
+      op('sub', ref('height'), ref('expandedChromeHeight')),
+      ref('minimumTaskHeight'),
+    ),
+  ),
+  railAllowed: op('sub', 1, ref('compactChrome')),
+  predictedTaskHeight: op(
+    'sub',
+    ref('height'),
+    op(
+      'if',
+      ref('compactChrome'),
+      ref('compactChromeHeight'),
+      ref('expandedChromeHeight'),
+    ),
+  ),
+  taskHeightFits: op(
+    'mul',
+    ref('heightKnown'),
+    op('lte', ref('minimumTaskHeight'), ref('predictedTaskHeight')),
+  ),
   gap: op(
     'mul',
     ref('baseGap'),
@@ -28,7 +70,11 @@ export const relayFrameDefinitions = {
     op('mul', 2, ref('padding')),
     op('mul', ref('workspaceEm'), ref('fontSize'), ref('textScale')),
   ),
-  wide: op('lte', ref('railThreshold'), ref('width')),
+  wide: op(
+    'mul',
+    ref('railAllowed'),
+    op('lte', ref('railThreshold'), ref('width')),
+  ),
   workWidth: op(
     'sub',
     ref('innerWidth'),
@@ -45,6 +91,10 @@ export const relayFrameDefinitions = {
 
 export function resolveRelayFrame({
   width,
+  height,
+  minTaskEm = 8,
+  expandedChromeEm = 10,
+  compactChromeEm = 4,
   textScale = 1,
   fontSize = 14,
   railWidth = 220,
@@ -55,6 +105,11 @@ export function resolveRelayFrame({
 }) {
   const inputs = {
     width,
+    height: height ?? 0,
+    heightKnown: height === undefined ? 0 : 1,
+    minTaskEm,
+    expandedChromeEm,
+    compactChromeEm,
     textScale,
     fontSize,
     railWidth,
@@ -66,6 +121,10 @@ export function resolveRelayFrame({
   if (
     Object.values(inputs).some((value) => !Number.isFinite(value)) ||
     width <= 2 * padding ||
+    (height !== undefined && (!Number.isFinite(height) || height <= 0)) ||
+    minTaskEm <= 0 ||
+    compactChromeEm <= 0 ||
+    expandedChromeEm < compactChromeEm ||
     textScale <= 0 ||
     fontSize <= 0 ||
     railWidth < 0 ||
@@ -81,6 +140,7 @@ export function resolveRelayFrame({
       reason:
         'A positive usable width, text scale and role measures are required',
     };
+  /** @type {Record<string, number>} */
   const values = { ...inputs };
   for (const [id, expression] of Object.entries(relayFrameDefinitions))
     values[id] = evaluateExpression(expression, values);
@@ -89,7 +149,19 @@ export function resolveRelayFrame({
     inputs,
     values,
     inputKey: JSON.stringify(inputs),
-    policy: 'relay-responsive-v1',
+    policy: 'relay-responsive-v2',
+    vertical:
+      height === undefined
+        ? {
+            status: 'unavailable',
+            reason: 'Current usable height not supplied',
+          }
+        : {
+            status: 'predicted',
+            minimumTaskHeight: values.minimumTaskHeight,
+            predictedTaskHeight: values.predictedTaskHeight,
+            fits: values.taskHeightFits === 1,
+          },
     provenance: {
       kind: 'brief',
       source:
@@ -125,7 +197,7 @@ export function inspectRelayFrame(
     sensitivity: differentiateExpression(
       expression,
       frame.inputs,
-      ['width', 'textScale'],
+      ['width', 'height', 'textScale'],
       relayFrameDefinitions,
     ),
     enclosure: encloseExpression(expression, boxes, relayFrameDefinitions),

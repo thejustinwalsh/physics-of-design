@@ -1,3 +1,4 @@
+import { dumpAndroidAccessibility } from './android-accessibility.mjs';
 import { nativeSourceIdentity } from './native-source-identity.mjs';
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
@@ -102,35 +103,13 @@ async function tap(name, predicate) {
   // Keep that oracle explicitly unavailable; prove the measured tap's fresh
   // product transition below without freezing or slowing the product clock.
   if (!current.snapshot.running) {
-    const remote = `/sdcard/vela-${runId}-${events.length}.xml`;
-    await exec(adb, ['-s', device, 'shell', 'rm', '-f', remote], {
-      timeout: 5000,
+    const { xml } = await dumpAndroidAccessibility({
+      prefix: 'vela-flow',
+      run: (_label, args, options) =>
+        exec(adb, ['-s', device, ...args], options),
     });
-    const dumped = await exec(
-      adb,
-      ['-s', device, 'shell', 'uiautomator', 'dump', remote],
-      { timeout: 15000 },
-    );
-    assert.ok(
-      /dumped to:/i.test(dumped.stdout) &&
-        dumped.stdout.includes(remote) &&
-        !/ERROR:/i.test(dumped.stdout + dumped.stderr),
-      `Accessibility oracle unavailable for idle action ${name}: ${dumped.stdout} ${dumped.stderr}`,
-    );
-    const xml = (
-      await exec(adb, ['-s', device, 'exec-out', 'cat', remote], {
-        timeout: 5000,
-      })
-    ).stdout;
-    assert.ok(
-      xml.includes('<hierarchy') && xml.includes('</hierarchy>'),
-      'Incomplete fresh accessibility XML',
-    );
     const xmlFile = `${events.length}-accessibility.xml`;
     await writeFile(`${directory}/${xmlFile}`, xml);
-    await exec(adb, ['-s', device, 'shell', 'rm', '-f', remote], {
-      timeout: 5000,
-    });
     const escaped = name
       .replaceAll('&', '&amp;')
       .replaceAll('"', '&quot;')

@@ -171,6 +171,9 @@ export const styles = css.create({
     borderStyle: 'solid',
     borderRadius: 12,
   }),
+  dialogHeader: { flexShrink: 0, flexWrap: 'nowrap' },
+  dialogTitle: { flexGrow: 1, flexShrink: 1, minWidth: 0, flexBasis: 0 },
+  dialogAction: { flexShrink: 0 },
   separator: (line) => ({
     borderBottomColor: line,
     borderBottomWidth: 1,
@@ -524,18 +527,37 @@ export function Modal({ title, children, onClose, id = 'relay-dialog' }) {
           ref={u.bind(id)}
           style={styles.dialog(u.t.panel, u.t.line)}
         >
-          <Row spread>
-            <Heading>{title}</Heading>
-            {u.keyboard?.visible && (
-              <Button id="keyboard-dismiss" onPress={u.keyboard.dismiss}>
-                Done editing
-              </Button>
-            )}
-            <Button id="dialog-close" onPress={onClose}>
+          <html.div
+            data-testid={id + '-header'}
+            ref={u.bind(id + '-header')}
+            style={[styles.row, styles.spread, styles.dialogHeader]}
+          >
+            <html.div style={styles.dialogTitle}>
+              <Heading id={id + '-title'}>{title}</Heading>
+            </html.div>
+            <Button
+              id={id + '-close'}
+              onPress={onClose}
+              style={styles.dialogAction}
+            >
               Close
             </Button>
-          </Row>
-          <Scroll>{children}</Scroll>
+          </html.div>
+          {u.keyboard?.visible && (
+            <Button
+              id={id + '-keyboard-dismiss'}
+              onPress={u.keyboard.dismiss}
+              style={styles.dialogAction}
+            >
+              Done editing
+            </Button>
+          )}
+          <Scroll
+            observationRef={u.bind(id + '-body')}
+            observationId={id + '-body'}
+          >
+            {children}
+          </Scroll>
         </html.div>
       </html.div>
     </Overlay>

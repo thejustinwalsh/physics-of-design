@@ -24,3 +24,14 @@ Build and verify these coupled capabilities:
 6. Show a live width/enlargement consequence map and actual-element drawings in inspection. Provide one reproducible task walkthrough that links a choice to numeric exploration, local selection, replay and current renderer evidence.
 
 Use the brief's phone 320/390, narrow 768, iPad 834 and desktop 1440/1920 scenarios, plus event-adjacent/interior widths, long content, enlarged text, day/night, reduced motion and recovery. Validate real pointer/keyboard/touch task flows and disposal. Measure numeric work, renderer calls, selector calls, cache reuse, latency and coding-agent tokens separately. Distribution-weighted soft costs require attributed usage data; synthetic distributions stay labeled, and hard failures cannot be averaged away. No award-level quality, human preference, musical-prior advantage, physical Safari performance or token saving is inferred from a mathematical pass.
+
+
+## Short-window task budget — 2026-11-05
+
+Preserve an actual task scroll viewport in short landscape windows and under compounded app/OS text enlargement. The responsive policy now takes current usable height as well as width. Its editable, authored estimates reserve eight effective text em for the task and budget ten em plus frame padding for expanded chrome versus four em plus padding for compact chrome. These are Relay brief assumptions, not Apple constants or measured chrome sizes. Use a stable expanded-mode budget to choose compact mode; do not feed compact chrome measurements back into that choice.
+
+Compact mode uses Menu and Search, moves filters/range/inspection into the destination menu, removes persistent bottom navigation and disables the tall rail. Preserve destinations and state. Measure the real task viewport separately, retain unknown/unsatisfied budgets and test actual native Text/Yoga with safe areas, keyboard and orientation. Current browser/native estimates alone do not establish fit.
+
+Native inspection should show the time of the last meaningful observation change. Equivalent geometry/identity invalidations must not tick the visible Inspector. Android accessibility capture must confirm a new nonce-path dump and complete XML, including when UIAutomator exits zero with an idle error. Dialog orientation support must follow actual supported app windows; physical/device rotation remains a separate verification obligation.
+
+Dialog anatomy must preserve a nonshrinking header with a wrapping title and independent Close target, followed by the remaining scroll viewport. Keep the keyboard dismissal action out of the title/Close row. Bind title, header, body and Close to modal-scoped identities; a child chooser must not replace its parent's observation. Verify current renderer containment, non-overlap, visible controls, real dismissal and child disposal. These are interaction/geometry constraints, not aesthetic scores.

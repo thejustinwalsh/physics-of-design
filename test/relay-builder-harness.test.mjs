@@ -139,6 +139,7 @@ async function fixture() {
     'scripts/relay-capabilities.mjs',
     'scripts/relay-selector-capability.mjs',
     'scripts/relay-native-capability.mjs',
+    'scripts/android-accessibility.mjs',
     ...policy.toolkitFiles.filter((p) => mathematicalFixtures.includes(p)),
   ];
   for (const name of mathematicalFixtures)
@@ -425,6 +426,7 @@ async function fakeCapabilitySession(spec, output, options) {
     const sources = [
       'relay-capabilities.mjs',
       ...(kind === 'browser' ? [] : [`relay-${kind}-capability.mjs`]),
+      ...(kind === 'native' ? ['android-accessibility.mjs'] : []),
     ].map((name) => {
       const p = path.join(spec.cwd, 'toolkit/scripts', name);
       return { path: p, sha256: sha256(readFileSync(p)) };
@@ -1554,4 +1556,34 @@ test('prepare rejects byte or executable-mode mismatches even when receipt sourc
     validateGate(gate, f.commit, f.repo);
     assert.throws(f.prepare, /complete published source snapshot/);
   }
+});
+
+test('native capability producer rejects an altered accessibility-helper digest', async () => {
+  const f = await fixture(),
+    run = f.prepare(),
+    receipts = qualifiers(f, run);
+  await qualifyTransport(f.out, receipts, { install: fakeInstall });
+  await assert.rejects(
+    qualifyCapabilities(f.out, {
+      authorize: true,
+      leaseFile: path.join(f.dir, 'helper-tamper-lease.json'),
+      session: async (...args) => {
+        const metrics = await fakeCapabilitySession(...args);
+        const [spec] = args;
+        const receiptFile = path.resolve(
+          spec.cwd,
+          '../cache/capabilities/native/receipt.json',
+        );
+        const receipt = read(receiptFile);
+        const helper = receipt.sources.find((source) =>
+          source.path.endsWith('/android-accessibility.mjs'),
+        );
+        assert.ok(helper);
+        helper.sha256 = '0'.repeat(64);
+        write(receiptFile, receipt);
+        return metrics;
+      },
+    }),
+    /Capability producer source changed/,
+  );
 });

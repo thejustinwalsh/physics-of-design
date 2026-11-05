@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import {
   mkdtempSync,
@@ -124,6 +125,7 @@ for (const kind of ['selector', 'native'])
       'relay-capabilities.mjs',
       'relay-selector-capability.mjs',
       'relay-native-capability.mjs',
+      'android-accessibility.mjs',
     ])
       copyFileSync(
         new URL('../scripts/' + name, import.meta.url),
@@ -179,6 +181,16 @@ for (const kind of ['selector', 'native'])
     if (kind === 'selector')
       assert.equal(receipt.result.readout.selectedId, 'a');
     else {
+      const helperSource = receipt.sources.find((source) =>
+        source.path.endsWith('/android-accessibility.mjs'),
+      );
+      assert.ok(helperSource);
+      assert.equal(
+        helperSource.sha256,
+        createHash('sha256')
+          .update(readFileSync(helperSource.path))
+          .digest('hex'),
+      );
       assert.match(
         receipt.error.message,
         /synthetic native snapshot reached 3/,

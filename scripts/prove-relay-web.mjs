@@ -128,6 +128,19 @@ export async function proveRelayWeb() {
           report.scenarios.push(scenario);
           page.on('pageerror', (error) => errors.push(error.message));
           const click = async (id) => {
+            // Wait for the current root after a viewport change before deciding
+            // whether this destination lives in the rail, tabs or Menu.
+            if (id.startsWith('nav-'))
+              await page.waitForFunction(() => {
+                const r = globalThis.__RELAY_CAPTURE__?.();
+                return (
+                  r?.measuredRoot?.status === 'current' &&
+                  Math.abs(r.measuredRoot.width - innerWidth) < 1 &&
+                  Math.abs(r.measuredRoot.height - innerHeight) < 1 &&
+                  Math.abs(r.geometry.inputs.width - innerWidth) < 1 &&
+                  Math.abs(r.geometry.inputs.height - innerHeight) < 1
+                );
+              });
             if (id.startsWith('nav-') && !(await page.getByTestId(id).count()))
               await page.getByTestId('nav-menu').click();
             await page.getByTestId(id).click();
@@ -843,7 +856,7 @@ export async function proveRelayWeb() {
               await click('table-filters');
               await choose('sort-key', 'p95Ms');
               await choose('sort-direction', 'desc');
-              await click('dialog-close');
+              await click('relay-dialog-close');
               await click('save-view');
               await fill('view-name', 'Proof slow services');
               await click('view-save-confirm');
@@ -987,6 +1000,105 @@ export async function proveRelayWeb() {
               await click('nav-overview');
               await snap('desktop-final');
             });
+            await step(
+              'short landscape retains a measured task viewport and reachable secondary controls',
+              async () => {
+                await click('nav-settings');
+                await choose('settings-text', '1.5');
+                for (const shortHeight of [390, 320]) {
+                  await page.setViewportSize({
+                    width: 844,
+                    height: shortHeight,
+                  });
+                  await page.waitForFunction(
+                    () =>
+                      globalThis.__RELAY_CAPTURE__?.()?.geometry.values
+                        .compactChrome === 1,
+                  );
+                  await click('nav-overview');
+                  const receipt = (await snap(`landscape-${shortHeight}-large`))
+                    .receipt;
+                  const task = receipt.boxes['relay-task-viewport'];
+                  assert.ok(
+                    task &&
+                      task.height >= receipt.geometry.values.minimumTaskHeight,
+                    JSON.stringify({ task, policy: receipt.geometry }),
+                  );
+                  assert.ok(
+                    task.y >= 0 && task.y + task.height <= shortHeight + 1,
+                  );
+                  assert.equal(receipt.geometry.values.wide, 0);
+                  assert.equal(
+                    await page.getByTestId('relay-navigation').count(),
+                    0,
+                  );
+                  await click('nav-menu');
+                  await click('global-filters-open');
+                  await page.getByTestId('global-team').waitFor();
+                  const checkDialog = async (id) => {
+                    const ids = [
+                      id,
+                      id + '-header',
+                      id + '-title',
+                      id + '-close',
+                      id + '-body',
+                    ];
+                    const boxes = await Promise.all(
+                      ids.map((key) => page.getByTestId(key).boundingBox()),
+                    );
+                    const [panel, header, title, close, body] = boxes;
+                    const inside = (child, parent) =>
+                      child &&
+                      parent &&
+                      child.width > 0 &&
+                      child.height > 0 &&
+                      child.x >= parent.x - 1 &&
+                      child.y >= parent.y - 1 &&
+                      child.x + child.width <= parent.x + parent.width + 1 &&
+                      child.y + child.height <= parent.y + parent.height + 1;
+                    assert.ok(
+                      inside(panel, {
+                        x: 0,
+                        y: 0,
+                        width: 844,
+                        height: shortHeight,
+                      }),
+                      'Dialog stays inside current viewport',
+                    );
+                    assert.ok(inside(header, panel) && inside(body, panel));
+                    assert.ok(inside(title, header) && inside(close, header));
+                    assert.ok(
+                      header.y + header.height <= body.y + 1,
+                      'Dialog header/body do not overlap',
+                    );
+                    assert.ok(
+                      title.x + title.width <= close.x + 1,
+                      'Title and Close do not overlap',
+                    );
+                  };
+                  await checkDialog('relay-dialog');
+                  await page.getByTestId('global-team').click();
+                  await page.getByTestId('global-team-dialog').waitFor();
+                  await checkDialog('global-team-dialog');
+                  await page.getByTestId('global-team-dialog-close').click();
+                  await checkDialog('relay-dialog');
+                  await page.getByTestId('relay-dialog-close').click();
+                  await click('nav-menu');
+                  await click('phone-range');
+                  await click('range-60');
+                  await click('command-open');
+                  await page.getByTestId('command-query').waitFor();
+                  await checkDialog('relay-command-settings');
+                  await page
+                    .getByTestId('relay-command-settings-close')
+                    .click();
+                }
+                await page.setViewportSize({ width: 1440, height: 1000 });
+                await click('nav-settings');
+                await choose('settings-text', '1');
+                await click('nav-overview');
+              },
+            );
             await step('reset restores fixture', async () => {
               await click('nav-settings');
               await click('reset-demo');

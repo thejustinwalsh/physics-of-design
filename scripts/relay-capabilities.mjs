@@ -241,6 +241,13 @@ export async function runCapability(kind, { workspace = process.cwd() } = {}) {
         path: fileURLToPath(module),
         sha256: hash(readFileSync(module)),
       });
+      if (kind === 'native') {
+        const helper = new URL('./android-accessibility.mjs', import.meta.url);
+        sources.push({
+          path: fileURLToPath(helper),
+          sha256: hash(readFileSync(helper)),
+        });
+      }
       const loaded = await import(module.href);
       probe = loaded.probe;
       validateDeep =

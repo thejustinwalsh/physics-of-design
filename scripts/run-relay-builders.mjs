@@ -1024,6 +1024,7 @@ export async function inspectCapabilities(out, run, builder) {
     const sources = [
       'relay-capabilities.mjs',
       ...(kind === 'browser' ? [] : [`relay-${kind}-capability.mjs`]),
+      ...(kind === 'native' ? ['android-accessibility.mjs'] : []),
     ].map((f) => path.join(b.workspace, 'toolkit/scripts', f));
     fail(
       digest(receipt.sources?.map((s) => s.path)) === digest(sources) &&

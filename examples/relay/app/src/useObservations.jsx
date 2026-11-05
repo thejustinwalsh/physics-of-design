@@ -12,6 +12,10 @@ export function useObservations(snapshot) {
   const refs = useRef({}),
     callbacks = useRef(new Map()),
     latest = useRef(null);
+  const captureSequence = useRef(0),
+    captureSession = useRef(
+      `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+    );
   const frame = useRef(0),
     mounted = useRef(false);
   const bind = useCallback((id) => {
@@ -21,9 +25,15 @@ export function useObservations(snapshot) {
       callback = (node) => {
         if (node) {
           attached = node;
-          refs.current[id] = node;
+          if (refs.current[id] !== node) {
+            refs.current[id] = node;
+            invalidateInspection();
+          }
         } else {
-          if (refs.current[id] === attached) delete refs.current[id];
+          if (refs.current[id] === attached) {
+            delete refs.current[id];
+            invalidateInspection();
+          }
           attached = null;
         }
       };
@@ -96,6 +106,8 @@ export function useObservations(snapshot) {
     }
     const receipt = {
       ...current,
+      captureSession: captureSession.current,
+      captureSequence: ++captureSequence.current,
       boxes,
       unavailable,
       captureScope: options.onlyIds ?? 'all-mounted-hosts',

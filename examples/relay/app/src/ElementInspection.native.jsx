@@ -1,5 +1,6 @@
 import { useContext, useLayoutEffect, useState } from 'react';
 import { UI } from './ui';
+import { preserveInspectionSample } from './inspection-sample.mjs';
 import { subscribeInspection } from './inspection-events.mjs';
 
 export function useElementInspection(targetId) {
@@ -25,22 +26,25 @@ export function useElementInspection(targetId) {
           previous.join('\n') === next.join('\n') ? previous : next,
         );
         const box = capture?.boxes?.[targetId] ?? null;
-        setSample({
-          provider: capture?.provider ?? 'native',
-          coordinateSpace: 'native-host-coordinates',
-          status: box ? 'measured' : 'missing',
-          targetId,
-          context: {
-            sourceIdentity: capture?.sourceIdentity ?? 'unbound',
-            inputKey,
-          },
-          observedAt: capture?.observedAt ?? null,
-          box,
-          contentBox: null,
-          computed: null,
-          detail:
-            'Actual host rectangle; projection into the OS modal coordinate space is unverified. Text baselines, ink and variable axes are unavailable.',
-        });
+        setSample((previous) =>
+          preserveInspectionSample(previous, {
+            foreground: ui.foreground,
+            provider: capture?.provider ?? 'native',
+            coordinateSpace: 'native-host-coordinates',
+            status: box ? 'measured' : 'missing',
+            targetId,
+            context: {
+              sourceIdentity: capture?.sourceIdentity ?? 'unbound',
+              inputKey,
+            },
+            observedAt: capture?.observedAt ?? null,
+            box,
+            contentBox: null,
+            computed: null,
+            detail:
+              'Actual host rectangle; projection into the OS modal coordinate space is unverified. Text baselines, ink and variable axes are unavailable.',
+          }),
+        );
       });
     };
     const unsubscribe = subscribeInspection(refresh);

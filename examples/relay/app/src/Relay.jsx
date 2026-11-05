@@ -420,6 +420,10 @@ function Root() {
         (measuredRoot?.width ?? viewport.width) -
         safeArea.left -
         safeArea.right,
+      height:
+        (measuredRoot?.height ?? viewport.height) -
+        safeArea.top -
+        safeArea.bottom,
       textScale: scale * (viewport.fontScale || 1),
       fontSize: staged.fontSize,
       railWidth: staged.railWidth,
@@ -431,7 +435,9 @@ function Root() {
         ? geometry.values.gap
         : chosen['workspace.gap'],
     wide = geometry.status === 'predicted' && geometry.values.wide === 1,
-    phone = geometry.status !== 'predicted' || geometry.values.phone === 1;
+    phone = geometry.status !== 'predicted' || geometry.values.phone === 1,
+    compactChrome =
+      geometry.status === 'predicted' && geometry.values.compactChrome === 1;
   const primary = state.data.incidents.find((i) => i.id === 'INC-1042');
   const snapshot = {
     phase: 'relay-app',
@@ -662,6 +668,23 @@ function Root() {
                     </Text>
                     <html.div style={styles.grow} />
                   </>
+                ) : compactChrome ? (
+                  <>
+                    <Button
+                      id="nav-menu"
+                      onPress={() => setInspect('destinations')}
+                    >
+                      Menu
+                    </Button>
+                    <html.div style={styles.grow} />
+                    <Button
+                      id="command-open"
+                      onPress={() => setCommand(true)}
+                      label="Open command search"
+                    >
+                      Search
+                    </Button>
+                  </>
                 ) : (
                   <>
                     {!wide && (
@@ -733,7 +756,10 @@ function Root() {
                   </Text>
                 </html.div>
               )}
-              <Scroll routeKey={route}>
+              <Scroll
+                routeKey={route}
+                observationRef={bind('relay-task-viewport')}
+              >
                 <html.main
                   data-testid="relay-workspace"
                   ref={bind('relay-workspace')}
@@ -795,7 +821,7 @@ function Root() {
                   </html.div>
                 </html.main>
               </Scroll>
-              {!wide && !keyboard.visible && (
+              {!wide && !keyboard.visible && !compactChrome && (
                 <html.nav
                   data-testid="relay-navigation"
                   ref={bind('relay-navigation')}
@@ -856,6 +882,25 @@ function Root() {
                     {name}
                   </Button>
                 ))}
+                {compactChrome && (
+                  <>
+                    <Button
+                      id="global-filters-open"
+                      onPress={() => setInspect('filters')}
+                    >
+                      Global filters
+                    </Button>
+                    <Button
+                      id="phone-range"
+                      onPress={() => setInspect('range')}
+                    >
+                      Time range · {state.context.range}m
+                    </Button>
+                    <Button id="inspect-open" onPress={() => setInspect(true)}>
+                      Inspect surface
+                    </Button>
+                  </>
+                )}
               </Column>
             </Modal>
           )}

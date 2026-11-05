@@ -1,3 +1,7 @@
+import {
+  dumpAndroidAccessibility,
+  queryAndroidProcessState,
+} from './android-accessibility.mjs';
 // Runs only when called. Native capability is measured on the prepared app itself.
 import assert from 'node:assert/strict';
 import { createHash, randomUUID } from 'node:crypto';
@@ -567,7 +571,7 @@ export async function runNativeCapability({
     name,
     command,
     args,
-    { binary = false, allowFailure = false, cleanup = false } = {},
+    { binary = false, allowFailure = false, cleanup = false, timeout } = {},
   ) {
     const prefix = `${String(commands.length).padStart(3, '0')}-${name}`;
     const entry = { name, command, args, cwd: workspace, startedAt: now() };
@@ -579,6 +583,7 @@ export async function runNativeCapability({
         env,
         encoding: binary ? 'buffer' : 'utf8',
         maxBuffer: 16 * 1024 * 1024,
+        ...(timeout === undefined ? {} : { timeout }),
         ...(!cleanup ? { signal: abort.signal } : {}),
       });
       entry.code = 0;
@@ -676,16 +681,10 @@ export async function runNativeCapability({
         row: row ?? null,
       };
     }
-    const r = await adb(
-      'android-app-state',
-      ['shell', 'pidof', bundle[platform]],
-      { allowFailure: true, cleanup },
-    );
-    assert(
-      r.code === 0 || r.code === 1,
-      'Could not establish Android app state',
-    );
-    return { pids: r.stdout.trim().split(/\s+/).filter(Boolean).map(Number) };
+    return queryAndroidProcessState({
+      packageName: bundle[platform],
+      run: (name, args, options) => adb(name, args, { ...options, cleanup }),
+    });
   }
   async function stopApplication(platform, cleanup = false) {
     if (platform === 'native-ios')
@@ -697,7 +696,7 @@ export async function runNativeCapability({
     else
       await adb(
         'android-stop-expo-go',
-        ['shell', 'am', 'force-stop', bundle[platform]],
+        ['shell', 'am', 'force-stop', '--user', 'current', bundle[platform]],
         { cleanup },
       );
     const state = await applicationState(platform, cleanup);
@@ -933,17 +932,18 @@ export async function runNativeCapability({
           return value.some((n) => n.AXUniqueId === 'shell-button') && value;
         }, 'native-ios-accessibility-ready');
       else {
-        const remote = `/sdcard/relay-capability-${nonce}.xml`;
-        remoteFiles.push(remote);
-        await adb('android-accessibility-dump', [
-          'shell',
-          'uiautomator',
-          'dump',
-          remote,
-        ]);
-        tree = (
-          await adb('android-accessibility-read', ['exec-out', 'cat', remote])
-        ).stdout;
+        const captured = await dumpAndroidAccessibility({
+          prefix: 'relay-capability',
+          registerRemote: (remote) => remoteFiles.push(remote),
+          run: (label, args, options) =>
+            adb(`android-accessibility-${label}`, args, options),
+          cleanupRun: (label, args, options) =>
+            adb(`android-accessibility-${label}`, args, {
+              ...options,
+              cleanup: true,
+            }),
+        });
+        tree = captured.xml;
       }
       const point = nativeButtonPoint(platform, tree);
       const accessibility = await save(
@@ -1115,7 +1115,7 @@ export async function runNativeCapability({
     }
     for (const remote of remoteFiles)
       try {
-        await adb('android-dump-remove', ['shell', 'rm', remote], {
+        await adb('android-dump-remove', ['shell', 'rm', '-f', remote], {
           cleanup: true,
         });
       } catch (error) {
