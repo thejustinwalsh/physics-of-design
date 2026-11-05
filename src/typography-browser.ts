@@ -1,7 +1,12 @@
 /** Browser-only, horizontal, uniform-style text inspection. No font-table baseline inference. */
 export function collectTypographyElement(el: HTMLElement, lineLimit = 64) {
+  const document = el.ownerDocument;
+  const view = document.defaultView;
+  if (!view) throw new Error('Typography inspection requires a live document');
+  if (!Number.isInteger(lineLimit) || lineLimit < 1 || lineLimit > 256)
+    throw new RangeError('lineLimit must be an integer in [1,256]');
   const text = el.textContent ?? '';
-  const style = getComputedStyle(el);
+  const style = view.getComputedStyle(el);
   const origin = el.getBoundingClientRect();
   const segments = [
     ...new Intl.Segmenter(el.lang || 'en', { granularity: 'grapheme' }).segment(
@@ -150,15 +155,30 @@ export function collectTypographyElement(el: HTMLElement, lineLimit = 64) {
         'display:inline;padding:0;margin:0;border:0;vertical-align:baseline';
       owner.setAttribute('aria-hidden', 'true');
       owner.append(marker);
-      range.insertNode(owner);
-      const y = marker.getBoundingClientRect().bottom - origin.y;
-      const same = unchanged();
-      // A baseline can fall inside several overlapping selection boxes. The
-      // inline wrapper exposes which font fragment actually owns this marker.
-      const ownerFragments = [...owner.getClientRects()].map((r) => ({
-        y: r.y - origin.y,
-        height: r.height,
-      }));
+      // Preserve the application's exact Text objects. normalize() would merge
+      // adjacent React-owned nodes and detach references needed by later edits.
+      const originalData = p.node.textContent,
+        originalNext = p.node.nextSibling;
+      let split: Node | null = null;
+      let y: number, same: boolean;
+      let ownerFragments: { y: number; height: number }[];
+      try {
+        range.insertNode(owner);
+        split = owner.nextSibling;
+        y = marker.getBoundingClientRect().bottom - origin.y;
+        same = unchanged();
+        // A baseline can fall inside several overlapping selection boxes. The
+        // inline wrapper exposes which font fragment actually owns this marker.
+        ownerFragments = [...owner.getClientRects()].map((r) => ({
+          y: r.y - origin.y,
+          height: r.height,
+        }));
+      } finally {
+        owner.remove();
+        if (split && split !== originalNext && split.nodeType === 3)
+          split.parentNode?.removeChild(split);
+        p.node.textContent = originalData;
+      }
       const onThisLine =
         ownerFragments.length === 1 &&
         Math.abs(ownerFragments[0]!.y - g.y) <= tolerance &&
@@ -169,8 +189,6 @@ export function collectTypographyElement(el: HTMLElement, lineLimit = 64) {
         onThisLine,
         ownerFragments,
       });
-      owner.remove();
-      el.normalize();
       if (same && onThisLine) {
         baseline = y;
         probeOffset = offset;

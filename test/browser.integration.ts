@@ -22,6 +22,71 @@ const hero = () =>
 
 for (const engine of [chromium, webkit])
   test(
+    `${engine.name()} baseline inspection preserves React text ownership and cleans up rejected probes`,
+    { timeout: 60000 },
+    async () => {
+      const compiled = await build({
+        stdin: {
+          contents: `
+      import React, {useState} from 'react';
+      import {createRoot} from 'react-dom/client';
+      import {flushSync} from 'react-dom';
+      import {collectTypographyElement} from './dist/typography-browser.js';
+      let update;
+      function Text(){const [value,setValue]=useState(['Checkout','production']);update=setValue;return React.createElement('p',{id:'label',style:{fontSize:'20px',lineHeight:'30px',width:'250px'}},value[0],' · ',value[1]);}
+      export const mount=()=>{const root=createRoot(document.getElementById('app'));flushSync(()=>root.render(React.createElement(Text)));};
+      export const change=()=>flushSync(()=>update(['Inventory','staging']));
+      export {collectTypographyElement};
+    `,
+          resolveDir: process.cwd(),
+        },
+        bundle: true,
+        format: 'iife',
+        globalName: 'LiveTypography',
+        platform: 'browser',
+        write: false,
+        define: { 'process.env.NODE_ENV': '"production"' },
+      });
+      const browser = await engine.launch({ headless: true });
+      try {
+        const page = await browser.newPage();
+        const errors: string[] = [];
+        page.on('pageerror', (error) => errors.push(error.message));
+        await page.setContent('<div id="app"></div>');
+        await page.addScriptTag({ content: compiled.outputFiles[0]!.text });
+        const result: any = await page.evaluate(`(()=>{
+        LiveTypography.mount();
+        const label=document.querySelector('#label');
+        const original=[...label.childNodes];
+        if(original.length!==3)throw Error('Fixture must have three React-owned adjacent Text objects');
+        const measurement=LiveTypography.collectTypographyElement(label);
+        const preserved=original.every((node,index)=>node===label.childNodes[index]);
+        LiveTypography.change();
+        const changed=label.textContent;
+        const afterEdit=original.every((node,index)=>node===label.childNodes[index]);
+        const bounding=HTMLElement.prototype.getBoundingClientRect;
+        let rejection='';
+        HTMLElement.prototype.getBoundingClientRect=function(){if(this.style.display==='inline-block' && this.style.width==='0px')throw Error('injected baseline probe failure');return bounding.call(this);};
+        try {LiveTypography.collectTypographyElement(label);}catch(error){rejection=String(error);}finally{HTMLElement.prototype.getBoundingClientRect=bounding;}
+        return {preserved,afterEdit,changed,baselines:measurement.lines.map(line=>line.baseline),rejection,clean:label.childNodes.length===3 && original.every((node,index)=>node===label.childNodes[index]) && label.textContent==='Inventory · staging'};
+      })()`);
+        assert.equal(result.preserved, true);
+        assert.equal(result.afterEdit, true);
+        assert.equal(result.changed, 'Inventory · staging');
+        assert.ok(
+          result.baselines.some((baseline: number | null) => baseline !== null),
+        );
+        assert.match(result.rejection, /injected baseline probe failure/);
+        assert.equal(result.clean, true);
+        assert.deepEqual(errors, []);
+      } finally {
+        await browser.close();
+      }
+    },
+  );
+
+for (const engine of [chromium, webkit])
+  test(
     `${engine.name()} live inspection follows current elements without overlay feedback or stale identities`,
     { timeout: 60000 },
     async () => {
