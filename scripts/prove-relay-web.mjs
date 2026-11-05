@@ -149,7 +149,10 @@ export async function proveRelayWeb() {
                 'relay-error-chart-plot',
               ].flatMap((surface) =>
                 ['height', 'gap', 'position', 'boxSizing'].map((property) => ({
-                  id: surface + '-' + property,
+                  id:
+                    surface +
+                    '-' +
+                    property.replace(/[A-Z]/g, (c) => '-' + c.toLowerCase()),
                   scenario: scenario.id,
                   scenarioIdentity,
                   platform: 'web',
