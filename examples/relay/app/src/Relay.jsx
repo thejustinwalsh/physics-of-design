@@ -51,6 +51,10 @@ import fontAxes from './design/font-axes.json';
 import specialists from './design/specialist-values.json';
 import staged from './design/staged-values.json';
 import attention from './design/attention.generated.json';
+import useMeasuredFlowGap from './useMeasuredFlowGap';
+import { responseSpacing } from './design/response-spacing.mjs';
+import { captureLayoutObservations } from './layout-observations.mjs';
+import { subscribeInspection } from './inspection-events.mjs';
 import {
   overviewVariants,
   resolveOverviewVariant,
@@ -444,7 +448,17 @@ function Root() {
     compactChrome =
       geometry.status === 'predicted' && geometry.values.compactChrome === 1;
   const primary = state.data.incidents.find((i) => i.id === 'INC-1042');
+  const inspectionInputKey = JSON.stringify({
+    geometry: geometry.inputs,
+    route,
+    preferences: state.preferences,
+    context: state.context,
+    auditRevision: state.data.auditLog.length,
+    fontLoaded: loaded,
+    hydrated,
+  });
   const snapshot = {
+    inspectionInputKey,
     phase: 'relay-app',
     platform: Platform.OS === 'web' ? 'web' : 'native-' + Platform.OS,
     viewport,
@@ -509,15 +523,7 @@ function Root() {
     scale,
     bind,
     observations,
-    inspectionInputKey: JSON.stringify({
-      geometry: geometry.inputs,
-      route,
-      preferences: state.preferences,
-      context: state.context,
-      auditRevision: state.data.auditLog.length,
-      fontLoaded: loaded,
-      hydrated,
-    }),
+    inspectionInputKey,
     phone,
     wide,
     viewport,
@@ -997,12 +1003,27 @@ function Root() {
   );
 }
 function Content() {
-  const { route, back } = useData();
+  const { route, back, state } = useData();
+  const ui = useContext(UI);
   const parts = route.split('/').filter(Boolean),
     [section, id, action] = parts;
   const name = destinations.find((d) => d[0] === section)?.[2];
+  const selected = resolveOverviewVariant(
+    state.preferences.overviewVariant,
+    attention.selectedVariant,
+  );
+  const contentGap = useMeasuredFlowGap({
+    active: section === 'overview' && !id,
+    automatic: state.preferences.responseSpacing !== 'fixed',
+    intervalsBefore: selected.regions.indexOf('incident') + 1,
+    policy: responseSpacing,
+  });
   return (
-    <Column gap={20}>
+    <html.div
+      data-testid="relay-content-flow"
+      ref={ui.bind('relay-content-flow')}
+      style={[styles.column, styles.space(contentGap)]}
+    >
       <Row spread>
         <Column gap={4}>
           <Text tone="muted" size={12}>
@@ -1044,7 +1065,7 @@ function Content() {
       ) : (
         <NotFound />
       )}
-    </Column>
+    </html.div>
   );
 }
 function NotFound() {
@@ -2686,6 +2707,16 @@ function Settings() {
           onChange={(density) => pref({ density })}
         />
         <Choice
+          id="settings-response-spacing"
+          label="Response spacing"
+          value={state.preferences.responseSpacing ?? 'adaptive'}
+          options={[
+            { value: 'adaptive', label: 'Adapt to available space' },
+            { value: 'fixed', label: 'Keep preferred spacing' },
+          ]}
+          onChange={(responseSpacing) => pref({ responseSpacing })}
+        />
+        <Choice
           id="settings-motion"
           label="Reduced motion"
           value={state.preferences.reducedMotion}
@@ -3072,6 +3103,44 @@ function FrameConsequences() {
     </Column>
   );
 }
+function FlowGapReadout() {
+  const [sample, setSample] = useState(null);
+  useEffect(() => {
+    const refresh = () => {
+      const current =
+        captureLayoutObservations().find((r) => r.id === 'relay-content-gap') ??
+        null;
+      setSample((previous) =>
+        JSON.stringify(previous) === JSON.stringify(current)
+          ? previous
+          : current,
+      );
+    };
+    const unsubscribe = subscribeInspection(refresh);
+    refresh();
+    return unsubscribe;
+  }, []);
+  return (
+    <Column gap={4}>
+      <Heading>Measured response spacing</Heading>
+      <Text>
+        State: {sample?.phase ?? 'pending'} · applied gap{' '}
+        {sample?.appliedGap ?? 'unknown'}
+      </Text>
+      <Text>
+        Initial action fraction:{' '}
+        {sample?.exposure?.regions[0]?.visibleFraction ?? 'unmeasured'} ·
+        projections {sample?.projections ?? 0} · observations{' '}
+        {sample?.observations ?? 0}
+      </Text>
+      <Text tone="muted">
+        Current frame clipping and bounded gap projection only. Predictions
+        await remeasurement; scrolled content stays in place. The 65% action-end
+        preference remains separate from containment.
+      </Text>
+    </Column>
+  );
+}
 function Inspection({ onClose }) {
   const { state, dispatch } = useData();
   const [selection, setSelection] = useState('relay-context-toolbar');
@@ -3123,6 +3192,7 @@ function Inspection({ onClose }) {
           renderer and choice validation pending.
         </Text>
         <FrameConsequences />
+        <FlowGapReadout />
         <Text>
           Proposed row: {chosen['service-row.rowHeight']} · font{' '}
           {chosen['service-row.fontSize']} · gap {chosen['workspace.gap']} ·

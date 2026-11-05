@@ -4,6 +4,35 @@ import { readFile } from 'node:fs/promises';
 import { ResultStore, summarizeResult } from '../src/mcp-context.js';
 import { analyzeComposition } from '../src/composition.js';
 
+test('gap projection summaries retain an exact result reference without duplicating provenance', () => {
+  const source = 'Authored gap policy '.repeat(300);
+  const result = analyzeComposition({
+    viewport: { width: 100, height: 100 },
+    rectangles: [{ id: 'action', box: { x: 0, y: 80, width: 60, height: 30 } }],
+    gapProjection: {
+      currentGap: 20,
+      preferredGap: 20,
+      minimumGap: 0,
+      maximumGap: 20,
+      targets: [{ member: 'action', intervalsBefore: 1 }],
+      source,
+    },
+  });
+  const store = new ResultStore(),
+    ref = store.put(result)!;
+  const summary: any = summarizeResult(
+    'composition analyze',
+    result,
+    ref,
+  ).summary;
+  assert.equal(summary.exposure.gapProjection.suggestedGap, 10);
+  assert.deepEqual(
+    store.resolve(summary.exposure.gapProjection.full),
+    result.exposure.gapProjection,
+  );
+  assert.ok(!JSON.stringify(summary).includes(source));
+});
+
 test('composition exposure summary is bounded while its exact result reference preserves all authored policies', () => {
   const source = 'Authored policy provenance '.repeat(300);
   const result = analyzeComposition({

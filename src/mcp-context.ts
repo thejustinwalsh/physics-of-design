@@ -828,6 +828,24 @@ export function summarizeResult(
   else if (command === 'composition analyze')
     summary = {
       exposure: {
+        ...(record(r.exposure).gapProjection
+          ? {
+              gapProjection: {
+                status: record(record(r.exposure).gapProjection).status,
+                suggestedGap: record(record(r.exposure).gapProjection)
+                  .suggestedGap,
+                feasibleBand: record(record(r.exposure).gapProjection)
+                  .feasibleBand,
+                scope: record(record(r.exposure).gapProjection).scope,
+                full: resultRef
+                  ? {
+                      $designRef: resultRef,
+                      pointer: '/exposure/gapProjection',
+                    }
+                  : null,
+              },
+            }
+          : {}),
         regions: rows(record(r.exposure).regions).slice(0, 12),
         rules: rows(record(r.exposure).rules)
           .slice(0, 12)

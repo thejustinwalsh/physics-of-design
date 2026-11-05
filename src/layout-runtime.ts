@@ -6,3 +6,5 @@ export * from './layout-calculus.js';
 export * from './native-viewport.js';
 export * from './native-safe-area.js';
 export * from './native-root-geometry.js';
+export { analyzeComposition } from './composition.js';
+export * from './flow-gap.js';

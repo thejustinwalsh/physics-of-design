@@ -91,6 +91,25 @@ test('published layout entry applies a relational handoff and safe-root projecti
   assert.equal(rebased.y, 66);
 });
 
+test('published layout entry projects measured spacing without authoring services or optional error languages', async () => {
+  const bundle = await clientBundle(
+    '@design-theory/toolkit/layout',
+    `
+    export const result = runtime.analyzeComposition({
+      viewport:{width:100,height:100},
+      rectangles:[{id:'action',box:{x:0,y:80,width:60,height:30}}],
+      gapProjection:{currentGap:20,preferredGap:20,minimumGap:0,maximumGap:20,targets:[{member:'action',intervalsBefore:1}],source:'Synthetic portable fixture'}
+    });
+  `,
+  );
+  assertClientInputs(bundle);
+  const scope = {};
+  runInNewContext(bundle.outputFiles[0].text, scope);
+  const projection = scope.ClientResult.result.exposure.gapProjection;
+  assert.equal(projection.suggestedGap, 10);
+  assert.equal(projection.requiresRendererVerification, true);
+});
+
 test('published motion entry bundles and runs exact retargetable dynamics without Node or DOM', async () => {
   const bundle = await clientBundle(
     '@design-theory/toolkit/motion',

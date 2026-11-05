@@ -1,4 +1,5 @@
-import { z } from 'zod';
+import * as z from 'zod';
+import { FlowGapControlSchema, projectFlowGap } from './flow-gap.js';
 
 const id = z.string().regex(/^[a-z][a-z0-9-]*$/);
 const coordinate = z.number().finite().min(-1e6).max(1e6);
@@ -84,6 +85,7 @@ export const CompositionInputSchema = z
       )
       .max(128)
       .default([]),
+    gapProjection: FlowGapControlSchema.optional(),
     readingOrder: z.array(id).max(128).default([]),
     context: CompositionContextSchema.default({
       direction: 'ltr',
@@ -152,6 +154,9 @@ export const CompositionInputSchema = z
       });
     input.exposureRules.forEach((rule, index) =>
       check([rule.member], ['exposureRules', index, 'member']),
+    );
+    input.gapProjection?.targets.forEach((target, index) =>
+      check([target.member], ['gapProjection', 'targets', index, 'member']),
     );
     check(input.readingOrder, ['readingOrder']);
     input.groups.forEach((g, i) => check(g.members, ['groups', i, 'members']));
@@ -438,6 +443,54 @@ export function analyzeComposition(value: unknown) {
     exposure: {
       regions: exposure,
       rules: exposureRules,
+      ...(input.gapProjection
+        ? {
+            gapProjection: projectFlowGap(input.gapProjection, {
+              extent:
+                input.context.flow === 'row'
+                  ? input.viewport.width
+                  : input.viewport.height,
+              regions: input.rectangles.map((region) => {
+                const e = exposure.find((r) => r.id === region.id)!;
+                const horizontal = input.context.flow === 'row';
+                const extent = horizontal
+                  ? input.viewport.width
+                  : input.viewport.height;
+                const physicalStart = horizontal ? region.box.x : region.box.y;
+                const physicalEnd =
+                  physicalStart +
+                  (horizontal ? region.box.width : region.box.height);
+                const reverse = horizontal && input.context.direction === 'rtl';
+                const crossStart = horizontal ? region.box.y : region.box.x;
+                const crossEnd =
+                  crossStart +
+                  (horizontal ? region.box.height : region.box.width);
+                const crossExtent = horizontal
+                  ? input.viewport.height
+                  : input.viewport.width;
+                return {
+                  id: region.id,
+                  start:
+                    e.startFraction === null
+                      ? null
+                      : reverse
+                        ? extent - physicalEnd
+                        : physicalStart,
+                  end:
+                    e.endFraction === null
+                      ? null
+                      : reverse
+                        ? extent - physicalStart
+                        : physicalEnd,
+                  crossAxisFits:
+                    e.status === 'unavailable'
+                      ? null
+                      : crossStart >= 0 && crossEnd <= crossExtent,
+                };
+              }),
+            }),
+          }
+        : {}),
       interpretation:
         'Supplied frame clipping and declared flow-axis position only; no occlusion, focus, gaze, salience or aesthetic quality is inferred. Constraint/preference labels are authored by the caller.',
     },

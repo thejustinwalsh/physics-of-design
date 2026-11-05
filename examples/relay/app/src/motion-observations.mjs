@@ -1,10 +1,12 @@
 import { clockStats } from './clock.mjs';
 import { invalidateInspection } from './inspection-events.mjs';
+import { captureLayoutObservations } from './layout-observations.mjs';
 const active = new Map();
 const inspect = () => [...active].map(([id, read]) => ({ id, ...read() }));
 export const captureRuntimeObservations = () => ({
   motion: inspect(),
   clock: clockStats(),
+  layout: captureLayoutObservations(),
 });
 export function registerMotion(id, read) {
   if (active.has(id)) throw Error(`Duplicate active motion identity: ${id}`);

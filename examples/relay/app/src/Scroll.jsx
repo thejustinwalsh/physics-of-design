@@ -1,5 +1,6 @@
 import { css, html } from 'react-strict-dom';
 import { useCallback, useLayoutEffect, useRef } from 'react';
+import { invalidateInspection } from './inspection-events.mjs';
 const styles = css.create({
   scroll: { overflow: 'auto', flexGrow: 1, flexShrink: 1, minHeight: 0 },
 });
@@ -22,7 +23,10 @@ export default function Scroll({
     if (!routeKey) return;
     const node = ref.current;
     node.scrollTop = positions.get(routeKey) ?? 0;
-    const listener = () => positions.set(routeKey, node.scrollTop);
+    const listener = () => {
+      positions.set(routeKey, node.scrollTop);
+      invalidateInspection();
+    };
     node.addEventListener('scroll', listener);
     return () => node.removeEventListener('scroll', listener);
   }, [routeKey]);

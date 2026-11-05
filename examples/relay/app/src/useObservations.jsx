@@ -83,6 +83,8 @@ export function useObservations(snapshot) {
         scrollHeight: node.scrollHeight,
         clientWidth: node.clientWidth,
         clientHeight: node.clientHeight,
+        scrollTop: Number.isFinite(node.scrollTop) ? node.scrollTop : null,
+        scrollLeft: Number.isFinite(node.scrollLeft) ? node.scrollLeft : null,
         computed: computed
           ? Object.fromEntries(
               [
@@ -170,5 +172,15 @@ export function useObservations(snapshot) {
         .sort(),
     [],
   );
-  return useMemo(() => ({ bind, capture, ids }), [bind, capture, ids]);
+  const scrollPosition = useCallback((id) => {
+    const node = refs.current[id];
+    if (!mounted.current || !node || node.isConnected === false) return null;
+    const x = node.scrollLeft,
+      y = node.scrollTop;
+    return Number.isFinite(x) && Number.isFinite(y) ? { x, y } : null;
+  }, []);
+  return useMemo(
+    () => ({ bind, capture, ids, scrollPosition }),
+    [bind, capture, ids, scrollPosition],
+  );
 }

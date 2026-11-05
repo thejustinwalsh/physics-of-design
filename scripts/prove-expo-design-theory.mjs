@@ -80,4 +80,5 @@ else {
   await proveRelayStatic();
   const { proveRelayWeb } = await import('./prove-relay-web.mjs');
   await proveRelayWeb();
+  await import('./prove-relay-flow-gap.mjs');
 }

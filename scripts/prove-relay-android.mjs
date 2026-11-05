@@ -539,10 +539,30 @@ try {
     await tap('reset-demo');
     await tap('confirm-demo-action');
     await waitFor(() => current()?.activeCount === 22, 'reset fixture');
+    await waitFor(
+      () =>
+        current()?.route === '/overview' &&
+        current()?.layout?.some(
+          (item) =>
+            item.id === 'relay-content-gap' && item.phase === 'measured-fit',
+        ),
+      'fresh initial-position spacing measurement after reset',
+    );
     const r = await snap('reset');
     assert.equal(r.measuredRoot.status, 'current');
     assert.equal(r.geometry.rendererRootObserved, true);
     assert.ok(r.boxes['relay-task-viewport']?.height > 0);
+    const gap = r.layout.find((item) => item.id === 'relay-content-gap');
+    assert.equal(gap.phase, 'measured-fit');
+    const task = r.boxes['relay-task-viewport'],
+      action = r.boxes['diagnose-checkout'];
+    assert.ok(
+      action &&
+        task &&
+        action.y >= task.y &&
+        action.y + action.height <= task.y + task.height - 4,
+      'Actual native action satisfies the authored end clearance',
+    );
     return { viewport: r.viewport, root: r.measuredRoot };
   });
   await step(

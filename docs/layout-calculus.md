@@ -1,5 +1,13 @@
 # Inspect layout sensitivities and responsive regimes
 
+## Project one measured flow gap
+
+`composition analyze` accepts optional `gapProjection`; the portable layout entry also exports `projectFlowGap`. Supply `currentGap`, `preferredGap`, `minimumGap`, `maximumGap`, optional `step` (default 0.25), optional `endClearance` (default 0), `targets: [{member, intervalsBefore}]` and attributed `source`. Every quantity uses the current renderer's coordinate units. The grid is anchored at `minimumGap`.
+
+For each target, the model predicts `start(g) = measuredStart + intervalsBefore * (g - currentGap)` and the analogous end. It chooses the feasible grid point nearest the preferred gap, breaking equal-distance ties toward the smaller gap. Bounds preserve nonnegative start and end clearance. Unknown measurements remain unavailable; fixed or cross-axis violations remain infeasible. Strict reconstructed floating-point coordinates determine feasibility; no tolerance relaxes containment. Returned grid endpoints describe this conditional affine model, not an interval of verified renderer layouts or an aesthetic score.
+
+The caller must provide the correct translation count and remeasure after applying a proposal. Wrapping, font changes, nested layout and scrolling can invalidate that affine assumption. Relay's bounded adapter only adjusts at the initial scroll position, publishes committed React inputs, and separates proposed/applied/currently measured fit. Its editable brief supplies the 8–20 gap range and four-unit clearance. `node scripts/prove-relay-flow-gap.mjs` exercises actual Expo Chromium/WebKit resize, scrolling, manual, infeasible and idle cases after a current static export; it does not verify native Text/Yoga or preference.
+
 The calculus layer extends the existing `energy analyze` command and the portable `@design-theory/toolkit/layout` entry. It analyzes declared geometry separately from brief preference energy. It is intended for Relay's actual-element inspection mode; the product integration and renderer validation are separate work. [Integration brief](../examples/relay/DESIGN.md).
 
 An ordinary `energy analyze` request retains its finite-neighbor pressure analysis. Add an explicit geometry request to inspect named derived quantities:

@@ -17,6 +17,7 @@ export * from './identity.js';
 export * from './responsive.js';
 export * from './color.js';
 export * from './composition.js';
+export * from './flow-gap.js';
 export * from './design-color.js';
 export * from './tuning.js';
 
