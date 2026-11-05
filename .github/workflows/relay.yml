@@ -31,3 +31,4 @@ jobs:
           name: relay-affected
           path: |
             artifacts/relay-integration
+            artifacts/relay-palettes

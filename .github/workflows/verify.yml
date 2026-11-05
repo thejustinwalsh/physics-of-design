@@ -23,6 +23,8 @@ jobs:
           path: |
             artifacts/verification
             artifacts/layout-calculus
+            artifacts/palette-context
+            artifacts/relay-palettes
             artifacts/relay-integration/static-receipt.json
             artifacts/relay-integration/metro-runtime-receipt.json
             artifacts/relay-integration/*.log
