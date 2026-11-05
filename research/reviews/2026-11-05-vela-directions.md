@@ -32,7 +32,7 @@ The first combined final native attempt completed five static groups but then fa
 
 `artifacts/vela/native-final-confirmation.json` validates 40 hashed native receipts. `artifacts/vela/native-final-cleanup.json` reports zero cleanup errors, all four owned process groups absent and all requested ports free, after app absence and reverse restoration were checked. The corrected launcher exited0 and the font scale was restored to1.0. These sampled Android facts do not establish iOS/native-iPad parity or physical-device performance.
 
-The freshly rebuilt web output still hashes exactly to the frozen public build `4de6042e9cb0531b7f07285f1dff72f5e92629ef52c251d52fee5adf82a6889b`; no changed file was found. The public preview therefore remains the current web implementation even though later native observer/verification fixes have a different whole-source identity.
+The rebuilt Vela app/index/font/license file set still hashes exactly to the frozen public build `4de6042e9cb0531b7f07285f1dff72f5e92629ef52c251d52fee5adf82a6889b`; no changed file was found. The public preview therefore remains the current Vela implementation even though later native observer/verification fixes have a different whole-source identity. The later gallery stage additionally creates a separate `design-theory/` sibling export; that developer-gallery directory is outside this Vela preview snapshot. Hashing the entire post-lane output directory, including that additional export, gives `6e8669f5e3cde0f6f8bca04547472baa717228baf6213361050dd90159d8aafa`. This does not change any of the five served Vela files.
 
 
 ## Final ordered checkpoint
