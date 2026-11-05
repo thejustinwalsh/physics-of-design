@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "selectedVariant": "response-action",
+  "palette": "graphite",
+  "physics": {
+    "mass": 1,
+    "dampingRatio": 0.85,
+    "lightResponse": 7,
+    "roughness": 0.55,
+    "stiffness": 200,
+    "damping": 24.041630560342615
+  },
+  "workflowIdentity": "42c8d34a3c0147d76e0f95dd0faa91666bfc95128402212f2f3643f7594787ae",
+  "resultIdentity": "a1d2926d5daaeaea0e461f41a39eb2b7f14671372ef1c0501444dc85302076e2",
+  "designIdentity": "4749a07f71722a4aeeba55b4a3936272c9fd42c70dbbc759b63746c8ec0d3b15",
+  "matrixIdentity": "8e20c4efe49177e7c7f777764204369fcbf41cd1b8a1afebf9bc4ae886e0902f",
+  "origin": "Three real staged local qwen3.5-4b/SemIf choices among viable alternatives; deterministic validation and current renderer verification stay separate.",
+  "rendererVerification": "pending-current-selected-build"
+}

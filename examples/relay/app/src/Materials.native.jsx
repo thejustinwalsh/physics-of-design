@@ -1,5 +1,5 @@
-// Native static semantic finishes use the same palette/roughness role selection.
-// CSS lighting, GPU planes, blur and variable highlight response are unsupported.
+// Native static semantic finishes consume palette roles only.
+// Selected roughness/light response, CSS lighting, GPU planes and blur are unsupported.
 export default function Materials() {
   return null;
 }

@@ -798,3 +798,96 @@ test('replay refuses changed selector options before any neural call', async () 
     await rm(dir, { recursive: true, force: true });
   }
 });
+
+test('single-scenario selector shares units and targets without losing exact values/residuals or predecessor vocabulary', async () => {
+  const dir = await mkdtemp(path.join(tmpdir(), 'compact-preferences-'));
+  try {
+    const input = await fixture();
+    const parent = input.workflow.stages[0]!,
+      child = input.workflow.stages[1]!;
+    parent.selection = child.selection = 'local-selector';
+    parent.program.variables[0]!.valueAliases = [
+      { value: 560, label: 'Narrow column' },
+      { value: 640, label: 'Balanced column' },
+      { value: 720, label: 'Wide column' },
+    ];
+    const gguf = path.join(dir, 'test.gguf');
+    await writeFile(gguf, 'test-only bytes');
+    input.selector = { gguf };
+    const seen: any[] = [];
+    const result = await runDecisionWorkflow(input, {
+      testSelectorIdentity: 'compact-preference-fixture',
+      testSelector: async (request: any) => {
+        seen.push(request.payload);
+        const metadata = request.payload.state.consequenceSummary;
+        assert.equal(metadata.format, 'shared-single-scenario-definitions-v1');
+        assert.equal(metadata.scenario, 'desktop');
+        for (const option of request.payload.options) {
+          const decoded = JSON.parse(option.description);
+          for (const row of decoded.preferences) {
+            const definition = metadata.definitions.find(
+              (d: any) => d.id === row.id,
+            );
+            assert.ok(definition);
+            assert.ok(definition.targetBands.length);
+            assert.equal(Object.hasOwn(row, 'unit'), false);
+            assert.equal(Object.hasOwn(row, 'worstScenario'), false);
+            assert.ok(
+              Number.isFinite(row.value) && Number.isFinite(row.residual),
+            );
+          }
+          if (request.payload.state.stage === 'composition') {
+            const row = decoded.preferences.find(
+              (p: any) => p.id === 'column-target',
+            );
+            const width = decoded.assignment.contentWidth;
+            assert.equal(row.value, width);
+            assert.equal(
+              row.residual,
+              Math.max(0, 600 - width, width - 680) / 80,
+            );
+            assert.equal(
+              metadata.definitions.find((d: any) => d.id === 'column-target')
+                .unit,
+              'px',
+            );
+          }
+        }
+        if (request.payload.state.stage === 'typography') {
+          assert.deepEqual(request.payload.state.bindingDefinitions, [
+            {
+              input: 'columnWidth',
+              stage: 'composition',
+              variable: 'contentWidth',
+              unit: 'px',
+              valueAliases: parent.program.variables[0]!.valueAliases,
+            },
+          ]);
+          assert.equal(request.payload.state.bindings.columnWidth, 640);
+        }
+        return {
+          selected:
+            request.payload.options.find(
+              (o: any) =>
+                JSON.parse(o.description).assignment.contentWidth === 640,
+            )?.id ?? request.payload.options[0].id,
+        };
+      },
+    });
+    assert.equal(result.status, 'proposed');
+    assert.equal(seen.length, 2);
+    const replay = await runDecisionWorkflow(
+      { ...input, recipe: result.recipe, mode: 'replay' },
+      {
+        testSelectorIdentity: 'compact-preference-fixture',
+        testSelector: async () => {
+          throw Error('No replay inference');
+        },
+      },
+    );
+    assert.equal(replay.status, 'replayed');
+    assert.equal(replay.statistics.testSelectorCalls, 0);
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});

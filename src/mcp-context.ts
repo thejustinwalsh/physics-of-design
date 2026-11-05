@@ -827,6 +827,28 @@ export function summarizeResult(
     };
   else if (command === 'composition analyze')
     summary = {
+      exposure: {
+        regions: rows(record(r.exposure).regions).slice(0, 12),
+        rules: rows(record(r.exposure).rules)
+          .slice(0, 12)
+          .map((rule) => ({
+            id: rule.id,
+            member: rule.member,
+            mode: rule.mode,
+            status: rule.status,
+            pass: rule.pass,
+            tests: rule.tests,
+          })),
+        omittedRegions: Math.max(
+          0,
+          rows(record(r.exposure).regions).length - 12,
+        ),
+        omittedRules: Math.max(0, rows(record(r.exposure).rules).length - 12),
+        full: resultRef
+          ? { $designRef: resultRef, pointer: '/exposure' }
+          : null,
+        interpretation: record(r.exposure).interpretation,
+      },
       whitespace: r.whitespace,
       balance: r.balance,
       hierarchy: r.hierarchy,

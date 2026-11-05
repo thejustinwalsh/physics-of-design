@@ -1,11 +1,12 @@
 {
   "version": 1,
-  "identity": "9f95464435b04a1188679fc86117cd908c5c9029dd9f997595b48f2bf0ff9524",
+  "identity": "527f56ae955fe36db65ef7eb44ccc55d5596a9684907d0cc3e438f7d74e8d576",
+  "choiceIdentity": "a1d2926d5daaeaea0e461f41a39eb2b7f14671372ef1c0501444dc85302076e2",
   "supported": true,
   "config": {
     "mass": 1,
     "stiffness": 200,
-    "damping": 28,
+    "damping": 24.041630560342615,
     "toValue": 1,
     "velocity": 0,
     "overshootClamping": false,
@@ -13,7 +14,7 @@
     "restSpeedThreshold": 0.01,
     "useNativeDriver": true
   },
-  "origin": "Historical starting spring parameters evaluated by current motion emit; not a fresh selector recipe or native-device verification.",
+  "origin": "Staged local selector handoff through current deterministic motion emit; runtime/native verification remains separate.",
   "coordinate": "Actual plot-content dp. Target derives from current bucket centers; geometry changes snap. The native backend owns retarget propagation; position/velocity continuity require current platform measurement. Bounds clipping is presentation policy.",
   "reducedMotion": "instant; stop native animation and set exact current target"
 }

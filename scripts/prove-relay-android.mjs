@@ -40,6 +40,12 @@ const root = process.cwd(),
   before = snapshotVerificationSources(root),
   sourceIdentity = verificationSourceFields(before, before).sourceIdentity;
 await mkdir(output, { recursive: true });
+const selectedChoice = JSON.parse(
+  await readFile(path.join(app, 'src/design/attention.generated.json'), 'utf8'),
+);
+const cursorPlan = JSON.parse(
+  await readFile(path.join(app, 'src/design/cursor-motion.json'), 'utf8'),
+);
 const report = {
   version: 1,
   startedAt: new Date().toISOString(),
@@ -48,6 +54,7 @@ const report = {
   scope:
     'Current Expo Go Android integration: actual input, Text/Yoga/host geometry, task flows, app/OS scaling, landscape and Inspector. No iOS/iPad, physical-device, native UI-thread performance or human preference claim.',
   steps: [],
+  expectedSteps: 6,
   commands: [],
   failures: [],
 };
@@ -265,6 +272,8 @@ async function tap(id, { scroll = true, towardStart = false } = {}) {
   throw Error('No current accessible native target: ' + id);
 }
 async function nav(destination) {
+  // An already-current route has no new product mutation/capture to await.
+  if (current()?.route === '/' + destination) return;
   const id = 'nav-' + destination;
   if (!find(await tree(), id)) await tap('nav-menu', { scroll: false });
   await tap(id);
@@ -537,9 +546,56 @@ try {
     return { viewport: r.viewport, root: r.measuredRoot };
   });
   await step(
+    'selected native spring starts through an actual chart action',
+    async () => {
+      await nav('overview');
+      const before = await waitFor(() => {
+        const r = current();
+        return (
+          r?.attentionChoice?.resultIdentity ===
+            selectedChoice.resultIdentity &&
+          r.motion?.some((m) => m.id === 'relay-latency-chart-cursor') &&
+          r
+        );
+      }, 'selected composition and registered native cursor');
+      const previous = before.motion.find(
+        (m) => m.id === 'relay-latency-chart-cursor',
+      );
+      await tap('relay-latency-chart-previous');
+      const changed = await waitFor(() => {
+        const r = current(),
+          cursor = r?.motion?.find(
+            (m) => m.id === 'relay-latency-chart-cursor',
+          );
+        return (
+          r?.context.bucket < before.context.bucket &&
+          cursor?.starts > previous.starts &&
+          r
+        );
+      }, 'native cursor start after actual accessibility action');
+      const cursor = changed.motion.find(
+        (m) => m.id === 'relay-latency-chart-cursor',
+      );
+      assert.equal(cursor.planIdentity, cursorPlan.identity);
+      assert.equal(cursor.choiceIdentity, selectedChoice.resultIdentity);
+      assert.equal(cursor.nativeDriverRequested, true);
+      assert.deepEqual(cursor.spring, {
+        mass: selectedChoice.physics.mass,
+        stiffness: selectedChoice.physics.stiffness,
+        damping: selectedChoice.physics.damping,
+      });
+      await snap('selected-native-spring');
+      return {
+        cursor,
+        scope:
+          'Actual native action and driver start/configuration; no sampled native trajectory or UI-thread performance claim',
+      };
+    },
+  );
+  await step(
     'primary diagnosis reaches linked incident and trace through native controls',
     async () => {
-      await tap('diagnose-checkout');
+      await tap('diagnose-checkout', { towardStart: true });
       await tap('service-incident-INC-1042');
       await choose('incident-owner', 'member-01');
       await tap('incident-ack');
@@ -982,9 +1038,16 @@ try {
     report,
     verificationSourceFields(before, snapshotVerificationSources(root)),
   );
+  if (
+    report.failures.length === 0 &&
+    report.steps.length !== report.expectedSteps
+  )
+    report.failures.push(
+      `Incomplete native proof: ${report.steps.length}/${report.expectedSteps} steps`,
+    );
   report.passed =
     report.failures.length === 0 &&
-    report.steps.length === 5 &&
+    report.steps.length === report.expectedSteps &&
     report.steps.every((step) => step.passed) &&
     report.sourceStable &&
     cleanup.confirmedEmpty;

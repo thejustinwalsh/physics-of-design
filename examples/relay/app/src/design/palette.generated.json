@@ -1,7 +1,8 @@
 {
   "version": 1,
-  "inputIdentity": "19f1afad52449b6cb1ef61e9ac4ea99f090341063321f016179e5ed30bb76308",
+  "inputIdentity": "4e9ab4c482c89164d0325c1f74849bbbe467837353ac609770b0ed1919819d08",
   "defaultDirection": "graphite",
+  "choiceIdentity": "a1d2926d5daaeaea0e461f41a39eb2b7f14671372ef1c0501444dc85302076e2",
   "provenance": {
     "kind": "authored",
     "source": "User review, November 5, 2026: repeated teal palettes are unsatisfactory. These whole-palette alternatives are integration art direction, not human preference labels or a fresh System1 choice.",

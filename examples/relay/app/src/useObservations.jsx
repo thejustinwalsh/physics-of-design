@@ -1,5 +1,6 @@
 import { useCallback, useLayoutEffect, useMemo, useRef } from 'react';
 import { Platform } from 'react-native';
+import { captureRuntimeObservations } from './motion-observations.mjs';
 import {
   invalidateInspection,
   subscribeInspection,
@@ -106,6 +107,7 @@ export function useObservations(snapshot) {
     }
     const receipt = {
       ...current,
+      ...captureRuntimeObservations(),
       captureSession: captureSession.current,
       captureSequence: ++captureSequence.current,
       boxes,

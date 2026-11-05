@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { hash } from '../dist/identity.js';
 import { execute } from '../dist/commands.js';
+import { resolveRelayRuntimeChoice } from '../examples/relay/app/src/design/runtime-choice.mjs';
 
 const repository = fileURLToPath(new URL('..', import.meta.url));
 const file = (name) => path.join(repository, name);
@@ -19,6 +20,19 @@ const surfaceTemplates = JSON.parse(
   ),
 );
 const brief = JSON.parse(await readFile(briefFile, 'utf8'));
+const choice = resolveRelayRuntimeChoice(
+  JSON.parse(
+    await readFile(
+      file('examples/relay/app/src/design/attention.generated.json'),
+      'utf8',
+    ),
+  ),
+);
+if (choice)
+  assert.ok(
+    brief.directions.some((d) => d.id === choice.palette),
+    'Selected palette must exist',
+  );
 const roles = [];
 const add = (foreground, background, use) =>
   roles.push({
@@ -49,8 +63,9 @@ add('accent', 'selection', 'text');
 add('ink', 'selection', 'text');
 const output = {
   version: 1,
-  inputIdentity: hash(brief),
-  defaultDirection: brief.defaultDirection,
+  inputIdentity: hash({ brief, choiceIdentity: choice?.resultIdentity ?? null }),
+  defaultDirection: choice?.palette ?? brief.defaultDirection,
+  choiceIdentity: choice?.resultIdentity ?? null,
   provenance: brief.provenance,
   directions: {},
 };
@@ -107,7 +122,12 @@ for (const theme of ['dark', 'light']) {
   receipts.push({ theme, input, result });
 }
 output.resultIdentity = hash(output.directions);
-const surfaces = { paletteIdentity: output.resultIdentity, directions: {} };
+const surfaces = {
+  paletteIdentity: output.resultIdentity,
+  choiceIdentity: choice?.resultIdentity ?? null,
+  lightResponse: choice?.lightResponse ?? 5,
+  directions: {},
+};
 for (const [id, direction] of Object.entries(output.directions)) {
   surfaces.directions[id] = {};
   for (const theme of ['dark', 'light']) {
@@ -123,12 +143,14 @@ for (const [id, direction] of Object.entries(output.directions)) {
         surfaceTemplates[name];
       surfaces.directions[id][theme][name] = await execute('surface css', {
         ...template.input,
+        ...(choice && name === 'action' ? { roughness: choice.roughness } : {}),
         baseColor: palette[base],
         ink: palette.ink,
       });
     }
   }
 }
+surfaces.resultIdentity = hash(surfaces);
 const bytes = JSON.stringify(output, null, 2) + '\n';
 const surfaceBytes = JSON.stringify(surfaces, null, 2) + '\n';
 if (process.argv.includes('--check')) {

@@ -50,6 +50,11 @@ import FontAxes from './FontAxes';
 import fontAxes from './design/font-axes.json';
 import specialists from './design/specialist-values.json';
 import staged from './design/staged-values.json';
+import attention from './design/attention.generated.json';
+import {
+  overviewVariants,
+  resolveOverviewVariant,
+} from './design/attention-policy.mjs';
 import { plotAnatomy } from './design/plot-anatomy.mjs';
 import {
   resolveRelayFrame,
@@ -468,6 +473,14 @@ function Root() {
     resultIdentity: resolved.resultIdentity,
     stagedWorkflowIdentity: staged.workflowIdentity,
     stagedResultIdentity: staged.resultIdentity,
+    attentionChoice: {
+      ...resolveOverviewVariant(
+        state.preferences.overviewVariant,
+        attention.selectedVariant,
+      ),
+      resultIdentity: attention.resultIdentity,
+      origin: attention.origin,
+    },
     context: state.context,
     preferences: state.preferences,
     storageMode,
@@ -1080,9 +1093,17 @@ function Overview() {
     },
     { healthy: 0, degraded: 0, critical: 0 },
   );
-  return (
-    <>
+  const policy = resolveOverviewVariant(
+    state.preferences.overviewVariant,
+    attention.selectedVariant,
+  );
+  const explanation = state.preferences.longText
+    ? 'Pool waits dominate the linked diagnostic trace across the synthetic checkout and inventory-cache path. Connection-pool saturation remains a hypothesis from these observations; inspect the selected span, compare its duration and preserve the historical telemetry when coordinating a response.'
+    : 'Pool waits dominate the linked diagnostic trace. Connection-pool saturation is a hypothesis from synthetic observations.';
+  const regions = {
+    summary: (
       <html.section
+        key="summary"
         data-testid="relay-overview-summary"
         ref={ui.bind('relay-overview-summary')}
         style={layout.hero(t.panel, t.line, ui.gap)}
@@ -1135,31 +1156,62 @@ function Overview() {
           </Button>
         )}
       </html.section>
-      <Panel title="Checkout needs a closer look">
-        <Row spread>
-          <Column>
-            <Badge status="P1">P1 · Checkout latency</Badge>
-            <Text size={22} weight="500">
-              1,850 ms against a 450 ms target
-            </Text>
-            <Text tone="muted">
-              Pool waits dominate the linked diagnostic trace. Connection-pool
-              saturation is a hypothesis from synthetic observations.
-            </Text>
-          </Column>
-          <Button
-            id="diagnose-checkout"
-            kind="primary"
-            onPress={() => nav('/services/service-001')}
-          >
-            Investigate checkout-api →
-          </Button>
-        </Row>
+    ),
+    incident: (
+      <Panel
+        key="incident"
+        id="relay-overview-incident"
+        title="Checkout needs a closer look"
+      >
+        {policy.actionLead ? (
+          <>
+            <Row spread>
+              <Column>
+                <Badge status="P1">P1 · Checkout latency</Badge>
+              </Column>
+              <Button
+                id="diagnose-checkout"
+                kind="primary"
+                onPress={() => nav('/services/service-001')}
+              >
+                Investigate checkout-api →
+              </Button>
+            </Row>
+            <Column>
+              <Text size={22} weight="500">
+                1,850 ms against a 450 ms target
+              </Text>
+              <Text tone="muted">{explanation}</Text>
+            </Column>
+          </>
+        ) : (
+          <>
+            <Row spread>
+              <Column>
+                <Badge status="P1">P1 · Checkout latency</Badge>
+                <Text size={22} weight="500">
+                  1,850 ms against a 450 ms target
+                </Text>
+                <Text tone="muted">{explanation}</Text>
+              </Column>
+              <Button
+                id="diagnose-checkout"
+                kind="primary"
+                onPress={() => nav('/services/service-001')}
+              >
+                Investigate checkout-api →
+              </Button>
+            </Row>
+          </>
+        )}
         <Text tone="muted">
           Workflow resolution does not change these historical metrics.
         </Text>
       </Panel>
+    ),
+    latency: (
       <Chart
+        key="latency"
         id="relay-latency-chart"
         title="Fleet & checkout latency"
         metric="p95Ms"
@@ -1168,6 +1220,11 @@ function Overview() {
         comparisonSeries={state.data.serviceSeries[0].buckets}
         target={450}
       />
+    ),
+  };
+  return (
+    <>
+      {policy.regions.map((region) => regions[region])}
       <html.div
         data-testid="relay-comparison-charts"
         ref={ui.bind('relay-comparison-charts')}
@@ -2359,10 +2416,10 @@ function TraceDetail({ id }) {
               style={styles.spanBar(
                 `${(s.offsetMs / trace.durationMs) * 100}%`,
                 `${(s.durationMs / trace.durationMs) * 100}%`,
-                span.id === s.id
-                  ? ui.t.accent
-                  : s.status === 'error'
-                    ? ui.t.critical
+                s.status === 'error'
+                  ? ui.t.critical
+                  : span.id === s.id
+                    ? ui.t.accent
                     : ui.t.line,
               )}
             />
@@ -2610,7 +2667,7 @@ function Settings() {
         <Choice
           id="settings-palette"
           label="Color direction"
-          value={state.preferences.palette ?? 'graphite'}
+          value={state.preferences.palette ?? 'selected'}
           options={paletteOptions}
           onChange={(palette) => pref({ palette })}
         />
@@ -2657,6 +2714,19 @@ function Settings() {
             { value: 1.5, label: '150%' },
           ]}
           onChange={(textScale) => pref({ textScale })}
+        />
+        <Choice
+          id="settings-triage"
+          label="Triage composition"
+          value={state.preferences.overviewVariant ?? 'selected'}
+          options={[
+            { value: 'selected', label: 'Generated choice' },
+            ...overviewVariants.map((variant) => ({
+              value: variant.id,
+              label: variant.label,
+            })),
+          ]}
+          onChange={(overviewVariant) => pref({ overviewVariant })}
         />
         <Text>
           Native system text scaling remains enabled in addition to this demo
@@ -2864,11 +2934,7 @@ function Command({ onClose }) {
     i.run();
   };
   return (
-    <Modal
-      title="Search workspace"
-      id="relay-command-search"
-      onClose={onClose}
-    >
+    <Modal title="Search workspace" id="relay-command-search" onClose={onClose}>
       <html.div
         onKeyDown={(e) => {
           if (e.key === 'ArrowDown') {

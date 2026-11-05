@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { emitMotion } from '../dist/motion.js';
 import { hash } from '../dist/identity.js';
 import { fileURLToPath } from 'node:url';
+import { resolveRelayRuntimeChoice } from '../examples/relay/app/src/design/runtime-choice.mjs';
 const directory = fileURLToPath(
   new URL('../examples/relay/app/src/design', import.meta.url),
 );
@@ -12,8 +13,11 @@ const staged = JSON.parse(
 const selected = JSON.parse(
   await readFile(directory + '/resolved.json', 'utf8'),
 ).values.desktop;
+const choice = resolveRelayRuntimeChoice(
+  JSON.parse(await readFile(directory + '/attention.generated.json', 'utf8')),
+);
 const input = {
-  spring: {
+  spring: choice?.spring ?? {
     mass: selected['appearance.spring.mass'],
     stiffness: staged.stiffness,
     damping: staged.damping,
@@ -38,11 +42,17 @@ assert.equal(
 assert.equal(emitted.plan.kind, 'react-native-spring');
 const result = {
   version: 1,
-  identity: hash({ input, plan: emitted.plan }),
+  identity: hash({
+    input,
+    plan: emitted.plan,
+    choice: choice?.resultIdentity ?? null,
+  }),
+  choiceIdentity: choice?.resultIdentity ?? null,
   supported: emitted.supported,
   config: emitted.plan.config,
-  origin:
-    'Historical starting spring parameters evaluated by current motion emit; not a fresh selector recipe or native-device verification.',
+  origin: choice
+    ? 'Staged local selector handoff through current deterministic motion emit; runtime/native verification remains separate.'
+    : 'Historical starting spring parameters evaluated by current motion emit; not a fresh selector recipe or native-device verification.',
   coordinate:
     'Actual plot-content dp. Target derives from current bucket centers; geometry changes snap. The native backend owns retarget propagation; position/velocity continuity require current platform measurement. Bounds clipping is presentation policy.',
   reducedMotion: 'instant; stop native animation and set exact current target',

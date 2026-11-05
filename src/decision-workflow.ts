@@ -917,6 +917,36 @@ export class DecisionWorkflowMachine {
     const guard =
       stage.when === undefined ||
       evaluateExpression(stage.when, bindings) !== 0;
+    const singleScenarioReadout = compiled.program.scenarios.length === 1;
+    const bindingDefinitions = [...stage.bindings]
+      .sort((a, b) => a.input.localeCompare(b.input))
+      .map((binding) => {
+        const variable = this.stages
+          .get(binding.stage)!
+          .program.variables.find((v) => v.id === binding.variable)!;
+        return {
+          input: binding.input,
+          stage: binding.stage,
+          variable: binding.variable,
+          unit: variable.unit,
+          ...(variable.label ? { label: variable.label } : {}),
+          ...(variable.valueAliases
+            ? { valueAliases: variable.valueAliases }
+            : {}),
+        };
+      });
+    const payloadSemantics =
+      singleScenarioReadout || bindingDefinitions.length
+        ? {
+            base: selectorPayloadSemantics,
+            ...(singleScenarioReadout
+              ? { preferences: 'shared-single-scenario-definitions-v1' }
+              : {}),
+            ...(bindingDefinitions.length
+              ? { bindings: 'declared-predecessor-vocabulary-v1' }
+              : {}),
+          }
+        : selectorPayloadSemantics;
     const policy =
       stage.selection === 'local-selector'
         ? {
@@ -924,7 +954,7 @@ export class DecisionWorkflowMachine {
             readout: this.request.selector!.readout,
             maxPromptTokens: this.request.selector!.maxPromptTokens,
             checkpoint: this.checkpoint,
-            payloadSemantics: selectorPayloadSemantics,
+            payloadSemantics,
             implementation: this.hooks
               ? `test-injected:${this.hooks.testSelectorIdentity}`
               : 'semif-direct-options-v1',
@@ -1153,6 +1183,7 @@ export class DecisionWorkflowMachine {
               brief: program.brief,
               context,
               bindings,
+              ...(bindingDefinitions.length ? { bindingDefinitions } : {}),
               scope: pendingScope,
               variables: selectorVariables(compiled.program),
               ...(consequenceKeys.length
@@ -1176,6 +1207,43 @@ export class DecisionWorkflowMachine {
                   }
                 : {}),
               consequenceSummary: {
+                ...(singleScenarioReadout
+                  ? {
+                      format: 'shared-single-scenario-definitions-v1',
+                      scenario: compiled.program.scenarios[0]!.id,
+                      definitions: compiled.program.factors
+                        .filter(
+                          (f) =>
+                            f.mode === 'preference' &&
+                            alternatives.some((candidate) =>
+                              preferenceSummary(
+                                compiled.program,
+                                candidate.factors,
+                              ).rows.some((row) => row.id === f.id),
+                            ),
+                        )
+                        .map((f) => {
+                          const expression = f.expression;
+                          const unit =
+                            typeof expression !== 'number' &&
+                            'ref' in expression
+                              ? [
+                                  ...compiled.program.variables,
+                                  ...compiled.program.derived,
+                                ].find((v) => v.id === expression.ref)?.unit
+                              : undefined;
+                          return {
+                            id: f.id,
+                            ...(unit ? { unit } : {}),
+                            targetBands:
+                              f.scenarioBands?.[
+                                compiled.program.scenarios[0]!.id
+                              ] ?? f.bands,
+                            provenanceKind: f.provenance.kind,
+                          };
+                        }),
+                    }
+                  : {}),
                 limit: preferenceSummaryLimit,
                 order:
                   'largest worst-scenario normalized residual first; source-bound full factors remain in the receipt',
@@ -1228,7 +1296,13 @@ export class DecisionWorkflowMachine {
                         ),
                       }
                     : {}),
-                  preferences: summary.rows,
+                  preferences: singleScenarioReadout
+                    ? summary.rows.map((row) => ({
+                        id: row.id,
+                        value: row.worstScenario.value,
+                        residual: row.maxResidual,
+                      }))
+                    : summary.rows,
                   omittedPreferenceFactors: summary.omitted,
                   hardGuards: 'passed in every declared scenario',
                   ...(lookahead

@@ -6,7 +6,10 @@ import { plotCursorX } from './design/plot-geometry.mjs';
 import { plotAnatomy } from './design/plot-anatomy.mjs';
 import plan from './design/cursor-motion.json';
 import { registerMotion } from './motion-observations.mjs';
-import { subscribeInspection } from './inspection-events.mjs';
+import {
+  subscribeInspection,
+  invalidateInspection,
+} from './inspection-events.mjs';
 
 export default function PlotCursor({ id, fraction, bucketCount }) {
   const ui = useContext(UI),
@@ -30,6 +33,12 @@ export default function PlotCursor({ id, fraction, bucketCount }) {
       registerMotion(id, () => ({
         ...diagnostic.current,
         planIdentity: plan.identity,
+        choiceIdentity: plan.choiceIdentity,
+        spring: {
+          mass: plan.config.mass,
+          stiffness: plan.config.stiffness,
+          damping: plan.config.damping,
+        },
         projection: 'decorative overlay clipped to actual plot bounds',
       })),
     [id],
@@ -60,6 +69,7 @@ export default function PlotCursor({ id, fraction, bucketCount }) {
         : !visible || !ui.foreground
           ? 'suspended'
           : 'settled';
+      invalidateInspection();
       return;
     }
     if (!plan.supported || !plan.config.useNativeDriver)
@@ -71,6 +81,7 @@ export default function PlotCursor({ id, fraction, bucketCount }) {
     });
     diagnostic.current.phase = 'playing';
     diagnostic.current.starts++;
+    invalidateInspection();
     let pending = 0;
     const release = () => {
       unsubscribe();
@@ -87,17 +98,22 @@ export default function PlotCursor({ id, fraction, bucketCount }) {
           rect.y >= ui.viewport.height ||
           rect.y + rect.height <= 0
         ) {
+          // Retire this animation before stop can deliver a completion callback.
+          generation.current++;
+          diagnostic.current.phase = 'suspended';
           animation.stop();
           value.setValue(target);
-          diagnostic.current.phase = 'suspended';
           release();
+          invalidateInspection();
         }
       });
     });
     animation.start(({ finished }) => {
       release();
-      if (generation.current === epoch)
+      if (generation.current === epoch) {
         diagnostic.current.phase = finished ? 'settled' : 'stopped';
+        invalidateInspection();
+      }
     });
     return () => {
       release();

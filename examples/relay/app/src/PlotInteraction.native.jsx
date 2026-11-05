@@ -1,9 +1,35 @@
 // Native adapter exception: DOM pointer events are not an Expo Go drag adapter.
 // Only horizontal plot gestures claim the responder; vertical scrolling remains native.
-import { forwardRef, useRef, useState } from 'react';
+import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
 import { compat, html } from 'react-strict-dom';
 import { PanResponder, View } from 'react-native';
 import { PlotFrameContext } from './PlotFrameContext';
+
+// Keep the measured parent host attached while child layout effects retarget.
+// Compatibility/external callback refs may change without clearing this object.
+function NativePlotHost({
+  nativeProps,
+  host,
+  panHandlers,
+  setWidth,
+  children,
+}) {
+  const { ref: bridgeRef, ...props } = nativeProps;
+  useImperativeHandle(bridgeRef, () => host.current);
+  return (
+    <View
+      {...props}
+      {...panHandlers}
+      ref={host}
+      onLayout={(event) => {
+        nativeProps.onLayout?.(event);
+        setWidth(event.nativeEvent.layout.width);
+      }}
+    >
+      {children}
+    </View>
+  );
+}
 export default forwardRef(
   /** @param {import('react').ComponentProps<typeof html.div> & {onSelectFraction: (fraction: number) => void}} input */ function PlotInteraction(
     input,
@@ -22,6 +48,7 @@ export default forwardRef(
     const host = useRef(null),
       select = useRef(onSelectFraction);
     const [width, setWidth] = useState(0);
+    useImperativeHandle(ref, () => host.current);
     select.current = onSelectFraction;
     const pan = useRef(null);
     if (!pan.current) {
@@ -50,24 +77,14 @@ export default forwardRef(
       <PlotFrameContext.Provider value={{ width, host }}>
         <compat.native as="div" {...props} style={style}>
           {(nativeProps) => (
-            <View
-              {...nativeProps}
-              {...pan.current.panHandlers}
-              onLayout={(event) => {
-                nativeProps.onLayout?.(event);
-                setWidth(event.nativeEvent.layout.width);
-              }}
-              ref={(node) => {
-                host.current = node;
-                const provided = nativeProps.ref;
-                if (typeof provided === 'function') provided(node);
-                else if (provided) provided.current = node;
-                if (typeof ref === 'function') ref(node);
-                else if (ref) ref.current = node;
-              }}
+            <NativePlotHost
+              nativeProps={nativeProps}
+              host={host}
+              panHandlers={pan.current.panHandlers}
+              setWidth={setWidth}
             >
               {children}
-            </View>
+            </NativePlotHost>
           )}
         </compat.native>
       </PlotFrameContext.Provider>

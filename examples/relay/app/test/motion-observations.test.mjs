@@ -1,6 +1,32 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { registerMotion } from '../src/motion-observations.mjs';
+import {
+  registerMotion,
+  captureRuntimeObservations,
+} from '../src/motion-observations.mjs';
+import { subscribeInspection } from '../src/inspection-events.mjs';
+test('explicit captures read current controller state without a React render or polling loop', () => {
+  let phase = 'playing',
+    invalidations = 0;
+  const unsubscribe = subscribeInspection(() => invalidations++);
+  const release = registerMotion('live', () => ({ phase }));
+  try {
+    const first = captureRuntimeObservations();
+    phase = 'settled';
+    const next = captureRuntimeObservations();
+    assert.equal(first.motion[0].phase, 'playing');
+    assert.equal(next.motion[0].phase, 'settled');
+    assert.deepEqual(next.clock, { subscribers: 0, scheduled: false });
+    assert.equal(invalidations, 1, 'Reads do not schedule recurring work');
+    release();
+    release();
+    assert.equal(invalidations, 2, 'Disposal only invalidates once');
+    assert.deepEqual(captureRuntimeObservations().motion, []);
+  } finally {
+    release();
+    unsubscribe();
+  }
+});
 test('out-of-order motion disposal releases the global reader and retained controllers', () => {
   const first = registerMotion('first', () => ({ phase: 'playing' }));
   const second = registerMotion('second', () => ({ phase: 'settled' }));

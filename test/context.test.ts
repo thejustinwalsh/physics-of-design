@@ -2,6 +2,45 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { ResultStore, summarizeResult } from '../src/mcp-context.js';
+import { analyzeComposition } from '../src/composition.js';
+
+test('composition exposure summary is bounded while its exact result reference preserves all authored policies', () => {
+  const source = 'Authored policy provenance '.repeat(300);
+  const result = analyzeComposition({
+    viewport: { width: 200, height: 400 },
+    rectangles: Array.from({ length: 20 }, (_, i) => ({
+      id: `region-${i}`,
+      box: { x: 0, y: i * 30, width: 100, height: 25 },
+    })),
+    exposureRules: Array.from({ length: 20 }, (_, i) => ({
+      id: `policy-${i}`,
+      member: `region-${i}`,
+      minimumVisibleFraction: 1,
+      mode: 'preference' as const,
+      source,
+    })),
+  });
+  const store = new ResultStore();
+  const ref = store.put(result)!;
+  const summary: any = summarizeResult(
+    'composition analyze',
+    result,
+    ref,
+  ).summary;
+  assert.equal(summary.exposure.regions.length, 12);
+  assert.equal(summary.exposure.rules.length, 12);
+  assert.equal(summary.exposure.omittedRegions, 8);
+  assert.equal(summary.exposure.omittedRules, 8);
+  assert.deepEqual(store.resolve(summary.exposure.full), result.exposure);
+  assert.ok(!JSON.stringify(summary.exposure).includes(source));
+  assert.equal(summary.exposure.rules[0].mode, 'preference');
+  assert.equal(summary.exposure.rules[0].pass, true);
+  assert.equal(
+    (summarizeResult('composition analyze', result, null).summary as any)
+      .exposure.full,
+    null,
+  );
+});
 
 test('palette summaries preserve exact reusable systems without duplicating role graphs', () => {
   const large = 'retained role provenance'.repeat(300);

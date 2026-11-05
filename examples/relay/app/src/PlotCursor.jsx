@@ -6,8 +6,8 @@ import {
   useState,
 } from 'react';
 import { html } from 'react-strict-dom';
-import { UI, styles, chosen } from './ui';
-import staged from './design/staged-values.json';
+import { UI, styles } from './ui';
+import plan from './design/cursor-motion.json';
 import { createDrivenMotion } from '@design-theory/toolkit/motion';
 import { plotCursorX } from './design/plot-geometry.mjs';
 import { plotAnatomy } from './design/plot-anatomy.mjs';
@@ -51,7 +51,14 @@ export default function PlotCursor({ id, fraction, bucketCount }) {
     intersection.observe(parent);
     const unregister = registerMotion(id, () => ({
       ...diagnostic.current,
-      source: 'historical-selected-spring/current-runtime-adapter',
+      source: plan.origin,
+      planIdentity: plan.identity,
+      choiceIdentity: plan.choiceIdentity,
+      spring: {
+        mass: plan.config.mass,
+        stiffness: plan.config.stiffness,
+        damping: plan.config.damping,
+      },
     }));
     return () => {
       resize.disconnect();
@@ -92,9 +99,9 @@ export default function PlotCursor({ id, fraction, bucketCount }) {
     ) {
       motion.current = createDrivenMotion({
         spring: {
-          mass: chosen['appearance.spring.mass'],
-          stiffness: staged.stiffness,
-          damping: staged.damping,
+          mass: plan.config.mass,
+          stiffness: plan.config.stiffness,
+          damping: plan.config.damping,
         },
         position: target,
         target,

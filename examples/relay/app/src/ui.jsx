@@ -20,9 +20,13 @@ export const paletteIdentity = {
   inputIdentity: palettes.inputIdentity,
   resultIdentity: palettes.resultIdentity,
 };
-export const paletteOptions = Object.entries(palettes.directions).map(
-  ([value, direction]) => ({ value, label: direction.label }),
-);
+export const paletteOptions = [
+  { value: 'selected', label: 'Generated direction' },
+  ...Object.entries(palettes.directions).map(([value, direction]) => ({
+    value,
+    label: direction.label,
+  })),
+];
 export function themeFor(preferences) {
   const paletteId = Object.hasOwn(palettes.directions, preferences.palette)
     ? preferences.palette

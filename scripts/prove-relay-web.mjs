@@ -37,6 +37,15 @@ export async function proveRelayWeb() {
       'utf8',
     ),
   );
+  const attention = JSON.parse(
+    await readFile(
+      'examples/relay/app/src/design/attention.generated.json',
+      'utf8',
+    ),
+  );
+  const cursorPlan = JSON.parse(
+    await readFile('examples/relay/app/src/design/cursor-motion.json', 'utf8'),
+  );
   const collector = await build({
     stdin: {
       contents:
@@ -499,6 +508,19 @@ export async function proveRelayWeb() {
                         palettes.directions[direction][theme][token],
                       );
                       assert.equal(material.cssBase, material.baseColor);
+                      assert.equal(
+                        material.choiceIdentity,
+                        attention.resultIdentity,
+                      );
+                      assert.equal(
+                        material.responseRate,
+                        attention.physics.lightResponse,
+                      );
+                      if (material.name === 'action')
+                        assert.equal(
+                          material.roughness,
+                          attention.physics.roughness,
+                        );
                     }
                     observed.push({
                       direction,
@@ -767,6 +789,17 @@ export async function proveRelayWeb() {
                 ) < 0.2,
                 'Actual cursor must align with the selected bucket center',
               );
+              const runtime = movement.runtime.find(
+                (item) => item.id === 'relay-latency-chart-cursor',
+              );
+              assert.ok(runtime, 'Current cursor runtime must be registered');
+              assert.equal(runtime.choiceIdentity, attention.resultIdentity);
+              assert.equal(runtime.planIdentity, cursorPlan.identity);
+              assert.deepEqual(runtime.spring, {
+                mass: attention.physics.mass,
+                stiffness: attention.physics.stiffness,
+                damping: attention.physics.damping,
+              });
               const first = movement.frames[0].x,
                 last = movement.frames.at(-1).x;
               assert.ok(
@@ -791,6 +824,110 @@ export async function proveRelayWeb() {
                 propertyBindings: bound,
               };
             });
+            await step(
+              'selected light response moves the DOM finish without moving controls',
+              async () => {
+                const toolbar = page.getByTestId('relay-context-toolbar');
+                const box = await toolbar.boundingBox();
+                const read = () =>
+                  toolbar.evaluate((element) => ({
+                    light: getComputedStyle(element)
+                      .getPropertyValue('--dt-light-x')
+                      .trim(),
+                    box: element.getBoundingClientRect().toJSON(),
+                    controls: [
+                      ...element.querySelectorAll(
+                        'button,input,select,[role="button"]',
+                      ),
+                    ].map((control) => ({
+                      identity:
+                        control.getAttribute('data-testid') ??
+                        control.getAttribute('aria-label') ??
+                        control.textContent,
+                      box: control.getBoundingClientRect().toJSON(),
+                    })),
+                  }));
+                await page.mouse.move(
+                  box.x + box.width * 0.1,
+                  box.y + box.height * 0.5,
+                  { steps: 8 },
+                );
+                const first = await read();
+                await page.mouse.move(
+                  box.x + box.width * 0.9,
+                  box.y + box.height * 0.5,
+                  { steps: 16 },
+                );
+                await page.waitForFunction(
+                  (previous) =>
+                    getComputedStyle(
+                      document.querySelector(
+                        '[data-testid="relay-context-toolbar"]',
+                      ),
+                    )
+                      .getPropertyValue('--dt-light-x')
+                      .trim() !== previous,
+                  first.light,
+                );
+                const last = await read();
+                assert.deepEqual(
+                  last.box,
+                  first.box,
+                  'Decorative light cannot move the toolbar or its controls',
+                );
+                assert.ok(
+                  first.controls.length > 0,
+                  'Measure actual interactive children',
+                );
+                assert.deepEqual(
+                  last.controls,
+                  first.controls,
+                  'Moving light must preserve the actual controls',
+                );
+                assert.notEqual(first.light, last.light);
+                return {
+                  first,
+                  last,
+                  renderer:
+                    'CSS approximation; not PBR transport or composite contrast validation',
+                };
+              },
+            );
+            await step(
+              'reduced motion snaps the selected cursor and releases the host clock',
+              async () => {
+                await page.emulateMedia({ reducedMotion: 'reduce' });
+                await page.waitForFunction(() =>
+                  globalThis
+                    .__RELAY_MATERIALS__?.()
+                    .every((m) => m.stats.reduced),
+                );
+                await click('relay-latency-chart-previous');
+                await page.waitForFunction(() => {
+                  const cursor = globalThis
+                    .__RELAY_MOTION__?.()
+                    .find((m) => m.id === 'relay-latency-chart-cursor');
+                  return (
+                    cursor?.phase === 'reduced-instant' &&
+                    Math.abs(cursor.position - cursor.target) < 0.01
+                  );
+                });
+                const reduced = (await snap('selected-reduced-motion')).receipt;
+                assert.equal(reduced.clock.subscribers, 0);
+                assert.equal(reduced.clock.scheduled, false);
+                await page.emulateMedia({ reducedMotion: 'no-preference' });
+                await page.waitForFunction(() =>
+                  globalThis
+                    .__RELAY_MATERIALS__?.()
+                    .every((m) => !m.stats.reduced),
+                );
+                return {
+                  clock: reduced.clock,
+                  scope:
+                    'Actual cursor target and shared scheduler; no physical-device power measurement',
+                };
+              },
+            );
             await step('primary diagnosis and coordination', async () => {
               await click('diagnose-checkout');
               await click('service-incident-INC-1042');

@@ -8,6 +8,8 @@ Design Theory can execute a dependency-ordered sequence of design decisions. Eac
 
 `RunDecisionWorkflowSchema`, `DecisionWorkflowSchema`, `DecisionStageSchema`, and `DecisionWorkflowRecipeSchema` are strict Zod input boundaries. Unknown object fields, undeclared binding inputs, missing dependencies, duplicate identifiers, and cyclic graphs are rejected before execution.
 
+Both execution functions accept `(input, testHooks?, execution?)`. Production progress/cancellation belongs in the **third** argument: `compileDecisionWorkflow(input, undefined, {signal, onProgress})`. The second argument is reserved for explicit test-selector injection. Progress callbacks are presentation observers; their errors do not change readouts or suppress cancellation.
+
 The request contains:
 
 | Field      | Meaning                                                                                    |
@@ -26,6 +28,8 @@ Every stage declares `id`, `purpose`, an `EnergyProgram` in `program`, and `prov
 `contextKeys` declares which workflow context values affect the stage and are visible to its selector. Unused context values do not invalidate it. A stage's optional `when` expression uses only its bound predecessor inputs: zero skips the stage, any finite nonzero result activates it. Dependants of a skipped, stale, blocked, or failed stage are blocked because that stage supplies no chosen assignment. Independent branches continue.
 
 `options` uses `EnergySearchOptionsSchema`. `selection` defaults to `mathematical`; `local-selector` requires the workflow selector configuration. `question` supplies the local selection criterion. The model sees the stage brief, declared context, conditioned bindings, assignments, and compact ranges of preference observations. Every offered alternative has passed that stage's mathematical hard guards across its declared scenarios. At most 16 candidates are offered for single readout, or six for balanced readout. All retained search candidates remain available in the result, including those not offered to the model.
+
+For a single-scenario stage, `state.consequenceSummary` uses `shared-single-scenario-definitions-v1`: the scenario and retained factor definitions (ID, units where known, target bands and provenance kind) appear once. Each option retains exact factor ID, value and residual. Multi-scenario stages retain their worst-scenario summaries. `state.bindingDefinitions` supplies predecessor labels, units and discrete value aliases in input-name order. These vocabulary/format versions are part of the selector cache policy; affected older recipes become stale. Prompt overflow is rejected; this format does not raise the configured token cap or silently truncate candidates.
 
 The mathematical policy selects the lowest declared preference energy with deterministic ties. Neither policy certifies aesthetics or renderer behavior. A one-candidate stage does not call the model.
 

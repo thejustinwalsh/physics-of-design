@@ -56,6 +56,34 @@ export const CompositionInputSchema = z
       )
       .max(128)
       .default([]),
+    exposureRules: z
+      .array(
+        z
+          .object({
+            id,
+            member: id,
+            minimumVisibleFraction: z
+              .number()
+              .finite()
+              .min(0)
+              .max(1)
+              .optional(),
+            latestStartFraction: z.number().finite().optional(),
+            latestEndFraction: z.number().finite().optional(),
+            mode: z.enum(['constraint', 'preference']),
+            source: z.string().min(1),
+          })
+          .strict()
+          .refine(
+            (rule) =>
+              rule.minimumVisibleFraction !== undefined ||
+              rule.latestStartFraction !== undefined ||
+              rule.latestEndFraction !== undefined,
+            'At least one exposure target is required',
+          ),
+      )
+      .max(128)
+      .default([]),
     readingOrder: z.array(id).max(128).default([]),
     context: CompositionContextSchema.default({
       direction: 'ltr',
@@ -112,6 +140,18 @@ export const CompositionInputSchema = z
       });
     input.constraints.forEach((c, i) =>
       check(c.members, ['constraints', i, 'members']),
+    );
+    if (
+      new Set(input.exposureRules.map((rule) => rule.id)).size !==
+      input.exposureRules.length
+    )
+      ctx.addIssue({
+        code: 'custom',
+        path: ['exposureRules'],
+        message: 'exposure rule IDs must be unique',
+      });
+    input.exposureRules.forEach((rule, index) =>
+      check([rule.member], ['exposureRules', index, 'member']),
     );
     check(input.readingOrder, ['readingOrder']);
     input.groups.forEach((g, i) => check(g.members, ['groups', i, 'members']));
@@ -209,6 +249,92 @@ export function analyzeComposition(value: unknown) {
     };
   });
   const bounds = { x: 0, y: 0, ...input.viewport };
+  // Exposure is geometric clipping in the supplied frame, never gaze, salience
+  // or hit-test visibility. Targets are caller-authored and remain separate.
+  const exposure = input.rectangles.map((region) => {
+    const b = region.box;
+    const horizontal = input.context.flow === 'row';
+    const extent = horizontal ? input.viewport.width : input.viewport.height;
+    const start = horizontal
+      ? input.context.direction === 'rtl'
+        ? extent - b.x - b.width
+        : b.x
+      : b.y;
+    const end = start + (horizontal ? b.width : b.height);
+    const positiveArea = area(b) > 0;
+    const representable =
+      Number.isFinite(start / extent) && Number.isFinite(end / extent);
+    const available = positiveArea && representable;
+    return {
+      id: region.id,
+      status: available ? ('calculated' as const) : ('unavailable' as const),
+      visibleFraction: available ? area(intersect(b, bounds)) / area(b) : null,
+      startFraction: available ? start / extent : null,
+      endFraction: available ? end / extent : null,
+      reason: available
+        ? null
+        : !positiveArea
+          ? 'Zero-area region has no defined exposure fraction'
+          : 'Exposure normalization exceeds finite numeric range',
+    };
+  });
+  const exposureRules = input.exposureRules.map((rule) => {
+    const observation = exposure.find((region) => region.id === rule.member)!;
+    const tests =
+      observation.status === 'unavailable'
+        ? []
+        : [
+            ...(rule.minimumVisibleFraction === undefined
+              ? []
+              : [
+                  {
+                    quantity: 'visibleFraction',
+                    value: observation.visibleFraction!,
+                    target: rule.minimumVisibleFraction,
+                    residual: Math.max(
+                      0,
+                      rule.minimumVisibleFraction -
+                        observation.visibleFraction!,
+                    ),
+                  },
+                ]),
+            ...(rule.latestStartFraction === undefined
+              ? []
+              : [
+                  {
+                    quantity: 'startFraction',
+                    value: observation.startFraction!,
+                    target: rule.latestStartFraction,
+                    residual: Math.max(
+                      0,
+                      observation.startFraction! - rule.latestStartFraction,
+                    ),
+                  },
+                ]),
+            ...(rule.latestEndFraction === undefined
+              ? []
+              : [
+                  {
+                    quantity: 'endFraction',
+                    value: observation.endFraction!,
+                    target: rule.latestEndFraction,
+                    residual: Math.max(
+                      0,
+                      observation.endFraction! - rule.latestEndFraction,
+                    ),
+                  },
+                ]),
+          ];
+    return {
+      ...rule,
+      status: observation.status,
+      tests,
+      pass:
+        observation.status === 'unavailable'
+          ? null
+          : tests.every((test) => test.residual === 0),
+    };
+  });
   const active = input.rectangles.filter((r) => area(r.box) > 0);
   const clipped = active
     .map((r) => ({ id: r.id, box: intersect(r.box, bounds) }))
@@ -309,6 +435,12 @@ export function analyzeComposition(value: unknown) {
     : null;
   return {
     constraints,
+    exposure: {
+      regions: exposure,
+      rules: exposureRules,
+      interpretation:
+        'Supplied frame clipping and declared flow-axis position only; no occlusion, focus, gaze, salience or aesthetic quality is inferred. Constraint/preference labels are authored by the caller.',
+    },
     viewport: input.viewport,
     context: input.context,
     rectangleCount: input.rectangles.length,

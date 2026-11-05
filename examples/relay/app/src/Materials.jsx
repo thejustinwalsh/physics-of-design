@@ -35,7 +35,7 @@ export default function Materials({ route, theme, palette, reduced }) {
           tilt: false,
           maxTiltDegrees: 0,
           renderer: 'css',
-          responseRate: 5,
+          responseRate: generated.lightResponse,
         },
       );
       let stop = null;
@@ -71,6 +71,9 @@ export default function Materials({ route, theme, palette, reduced }) {
         palette: paletteId,
         theme,
         baseColor: surfaces[name].input.baseColor,
+        roughness: surfaces[name].input.roughness,
+        responseRate: generated.lightResponse,
+        choiceIdentity: generated.choiceIdentity,
       }));
     return () => {
       cleanups.forEach((fn) => fn());
