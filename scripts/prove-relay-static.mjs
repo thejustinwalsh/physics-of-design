@@ -11,6 +11,8 @@ import { createHash } from 'node:crypto';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { hash } from '../dist/identity.js';
+import { plotAnatomy } from '../examples/relay/app/src/design/plot-anatomy.mjs';
 import {
   snapshotVerificationSources,
   verificationSourceFields,
@@ -27,6 +29,14 @@ export async function proveRelayStatic() {
     before,
   ).sourceIdentity;
   const steps = [];
+  const briefIdentity = createHash('sha256')
+    .update(await readFile(path.join(repository, 'examples/relay/DESIGN.md')))
+    .digest('hex');
+  const bindingInputIdentity = hash({
+    scope: 'relay-authored-plot-anatomy-v1',
+    anatomy: plotAnatomy,
+  });
+  const bindingResultIdentity = hash({ plot: plotAnatomy });
   const run = async (name, command, args) => {
     const log = path.join(output, `${name}.log`),
       fd = await open(log, 'w');
@@ -40,6 +50,9 @@ export async function proveRelayStatic() {
             CI: '1',
             EXPO_NO_TELEMETRY: '1',
             EXPO_PUBLIC_DESIGN_SOURCE_HASH: sourceIdentity,
+            EXPO_PUBLIC_DESIGN_BRIEF_HASH: briefIdentity,
+            EXPO_PUBLIC_DESIGN_BINDING_INPUT_HASH: bindingInputIdentity,
+            EXPO_PUBLIC_DESIGN_BINDING_RESULT_HASH: bindingResultIdentity,
             __UNSAFE_EXPO_HOME_DIRECTORY: path.join(output, 'expo-home'),
             DOTSLASH_CACHE: path.join(output, 'dotslash'),
           },
@@ -132,6 +145,9 @@ export async function proveRelayStatic() {
     steps,
     bundles,
     failure,
+    briefIdentity,
+    bindingInputIdentity,
+    bindingResultIdentity,
     ...sources,
   };
   await writeFile(

@@ -10,6 +10,7 @@ import { UI, styles, chosen } from './ui';
 import staged from './design/staged-values.json';
 import { createDrivenMotion } from '@design-theory/toolkit/motion';
 import { plotCursorX } from './design/plot-geometry.mjs';
+import { plotAnatomy } from './design/plot-anatomy.mjs';
 import { subscribeFrame } from './clock.mjs';
 import { registerMotion } from './motion-observations.mjs';
 
@@ -69,7 +70,10 @@ export default function PlotCursor({ id, fraction, bucketCount }) {
       return;
     }
     const paint = (sample) => {
-      const projected = Math.max(0, Math.min(width - 2, sample.position));
+      const projected = Math.max(
+        0,
+        Math.min(width - plotAnatomy.stroke, sample.position),
+      );
       element.style.transform = `translate3d(${projected}px,0,0)`;
       diagnostic.current = {
         ...diagnostic.current,
@@ -129,7 +133,7 @@ export default function PlotCursor({ id, fraction, bucketCount }) {
       ref={attach}
       data-testid={id}
       aria-hidden={true}
-      style={styles.cursor(0, ui.t.accent)}
+      style={styles.cursor(0, ui.t.accent, plotAnatomy.stroke)}
     />
   );
 }

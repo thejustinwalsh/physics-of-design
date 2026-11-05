@@ -1,6 +1,13 @@
+import { plotAnatomy } from './plot-anatomy.mjs';
 /** Bucket centers in the actual plot content box. Gap/stroke are authored
  * component anatomy, not perceptual constants. Invalid fit remains unknown. */
-export function plotCursorX(fraction, width, count, gap = 2, stroke = 2) {
+export function plotCursorX(
+  fraction,
+  width,
+  count,
+  gap = plotAnatomy.gap,
+  stroke = plotAnatomy.stroke,
+) {
   if (
     ![fraction, width, count, gap, stroke].every(Number.isFinite) ||
     fraction < 0 ||

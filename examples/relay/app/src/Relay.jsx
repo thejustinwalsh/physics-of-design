@@ -50,6 +50,7 @@ import FontAxes from './FontAxes';
 import fontAxes from './design/font-axes.json';
 import specialists from './design/specialist-values.json';
 import staged from './design/staged-values.json';
+import { plotAnatomy } from './design/plot-anatomy.mjs';
 import {
   resolveRelayFrame,
   inspectRelayFrame,
@@ -443,6 +444,12 @@ function Root() {
     },
     route,
     sourceIdentity: process.env.EXPO_PUBLIC_DESIGN_SOURCE_HASH ?? 'unbound',
+    briefIdentity: process.env.EXPO_PUBLIC_DESIGN_BRIEF_HASH ?? 'unbound',
+    bindingInputIdentity:
+      process.env.EXPO_PUBLIC_DESIGN_BINDING_INPUT_HASH ?? 'unbound',
+    bindingResultIdentity:
+      process.env.EXPO_PUBLIC_DESIGN_BINDING_RESULT_HASH ?? 'unbound',
+    declaredPlotAnatomy: plotAnatomy,
     designIdentity: resolved.identities.design,
     inputIdentity: resolved.inputIdentity,
     resultIdentity: resolved.resultIdentity,
@@ -1288,7 +1295,12 @@ function Chart({
           dragBounds.current = null;
         }}
         onPointerCancel={() => setDrag(false)}
-        style={styles.plot}
+        style={styles.plot(
+          plotAnatomy.height,
+          plotAnatomy.gap,
+          plotAnatomy.position,
+          plotAnatomy.boxSizing,
+        )}
       >
         {buckets.map((b) => (
           <html.button
@@ -1301,14 +1313,14 @@ function Chart({
             {comparisonSeries && (
               <html.div
                 style={styles.bar(
-                  `${Math.max(1, (value(comparisonSeries[b.index]) / max) * 100)}%`,
+                  `${Math.max(0, (value(comparisonSeries[b.index]) / max) * 100)}%`,
                   ui.t.accent,
                 )}
               />
             )}
             <html.div
               style={styles.bar(
-                `${Math.max(1, (value(b) / max) * 100)}%`,
+                `${Math.max(0, (value(b) / max) * 100)}%`,
                 b.index === index
                   ? ui.t.accent
                   : metric === 'errorRate'

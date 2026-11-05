@@ -54,6 +54,67 @@ function fixture() {
   };
   return { value, current, binding, manifest, observation };
 }
+
+test('containing-block position is a token property and cannot be reported in length units', () => {
+  const { current, binding, observation } = fixture();
+  const value = { position: 'relative' };
+  const manifest = resolveOutputBindings({
+    operation: 'resolve',
+    current: { ...current, resultIdentity: hash(value) },
+    source: { value },
+    bindings: [
+      {
+        ...binding,
+        pointer: '/position',
+        unit: 'token',
+        target: { ...binding.target, property: 'position' },
+        tolerance: 0,
+      },
+    ],
+  });
+  const observed = {
+    ...observation,
+    current: manifest.current,
+    unit: 'token' as const,
+    property: 'position' as const,
+    value: 'relative',
+  };
+  assert.equal(
+    checkOutputBindings({
+      operation: 'check',
+      manifest,
+      current: manifest.current,
+      observations: [observed],
+    }).entries[0]!.status,
+    'pass',
+  );
+  assert.equal(
+    checkOutputBindings({
+      operation: 'check',
+      manifest,
+      current: manifest.current,
+      observations: [{ ...observed, value: 'static' }],
+    }).entries[0]!.status,
+    'override',
+  );
+  assert.throws(
+    () =>
+      resolveOutputBindings({
+        operation: 'resolve',
+        current: { ...current, resultIdentity: hash(value) },
+        source: { value },
+        bindings: [
+          {
+            ...binding,
+            pointer: '/position',
+            target: { ...binding.target, property: 'position' },
+            tolerance: 0,
+          },
+        ],
+      }),
+    /Wrong unit for position/,
+  );
+});
 function check(edit?: (r: ReturnType<typeof fixture>) => void) {
   const r = fixture();
   edit?.(r);

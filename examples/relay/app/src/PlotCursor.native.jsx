@@ -3,6 +3,7 @@ import { Animated, View } from 'react-native';
 import { UI } from './ui';
 import { PlotFrameContext } from './PlotFrameContext';
 import { plotCursorX } from './design/plot-geometry.mjs';
+import { plotAnatomy } from './design/plot-anatomy.mjs';
 import plan from './design/cursor-motion.json';
 import { registerMotion } from './motion-observations.mjs';
 import { subscribeInspection } from './inspection-events.mjs';
@@ -133,7 +134,7 @@ export default function PlotCursor({ id, fraction, bucketCount }) {
           left: 0,
           top: 0,
           bottom: 0,
-          width: 2,
+          width: plotAnatomy.stroke,
           backgroundColor: ui.t.accent,
           transform: [{ translateX: value }],
         }}

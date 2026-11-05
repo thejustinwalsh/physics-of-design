@@ -268,7 +268,7 @@ for (const engine of [chromium, webkit])
           viewport: { width: 834, height: 1000 },
         });
         await page.setContent(`<style>
-        #box {box-sizing:border-box;display:flex;flex-direction:row;width:120px;height:48px;min-height:48px;
+        #box {box-sizing:border-box;display:flex;position:relative;flex-direction:row;width:120px;height:48px;min-height:48px;
           padding:4px 8px;gap:6px;font:16px/24px sans-serif;letter-spacing:normal;opacity:.75;
           color:#123;background:#eaf2f7;border:2px solid #456;transform:scale(1.5);transform-origin:0 0}
         #ambiguous {display:flex;row-gap:4px;column-gap:8px;line-height:normal;border:1px solid red;border-right-color:blue}
@@ -292,6 +292,8 @@ for (const engine of [chromium, webkit])
           ['border', 'box', 'borderColor', '#445566', 'color'],
           ['opacity', 'box', 'opacity', 0.75, 'ratio'],
           ['direction', 'box', 'flexDirection', 'row', 'token'],
+          ['containing-block', 'box', 'position', 'relative', 'token'],
+          ['box-model', 'box', 'boxSizing', 'border-box', 'token'],
           ['spring', 'box', 'spring.mass', 1, 'spring-parameter'],
           ['normal', 'ambiguous', 'lineHeight', 24, 'css-px'],
           ['unequal-gap', 'ambiguous', 'gap', 4, 'css-px'],
@@ -355,10 +357,10 @@ for (const engine of [chromium, webkit])
           current,
           observations: receipt.observations,
         });
-        for (const entry of checked.entries.slice(0, 14))
+        for (const entry of checked.entries.slice(0, 16))
           assert.equal(entry.status, 'pass', JSON.stringify(entry));
-        assert.equal(checked.entries[14]!.status, 'unsupported');
-        for (const entry of checked.entries.slice(15))
+        assert.equal(checked.entries[16]!.status, 'unsupported');
+        for (const entry of checked.entries.slice(17))
           assert.equal(entry.status, 'unknown', JSON.stringify(entry));
         assert.equal(receipt.geometry.box!.width, 180);
         assert.equal(receipt.viewport.width, 834);

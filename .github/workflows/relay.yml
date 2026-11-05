@@ -1,0 +1,33 @@
+name: relay affected checks
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'examples/relay/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/relay.yml'
+jobs:
+  product:
+    name: Relay product checks (whole-system lane remains required)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm ci --prefix examples/relay/app
+      - run: npx playwright install --with-deps chromium webkit --only-shell
+      - run: npm run build
+      - run: node scripts/prove-relay-static.mjs
+      - run: node scripts/prove-relay-web.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: relay-affected
+          path: |
+            artifacts/relay-integration

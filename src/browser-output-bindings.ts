@@ -120,9 +120,14 @@ export function collectBrowserOutputBindings(
     }
     let value: number | string | undefined;
     if (
-      ['color', 'backgroundColor', 'borderColor', 'flexDirection'].includes(
-        property,
-      )
+      [
+        'color',
+        'backgroundColor',
+        'borderColor',
+        'flexDirection',
+        'position',
+        'boxSizing',
+      ].includes(property)
     ) {
       if (raw) value = raw;
     } else if (property === 'opacity') {

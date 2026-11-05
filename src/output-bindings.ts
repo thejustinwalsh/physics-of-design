@@ -33,6 +33,8 @@ const Property = z.enum([
   'borderColor',
   'opacity',
   'flexDirection',
+  'position',
+  'boxSizing',
   'columns',
   'nativeFinish',
   'spring.mass',
@@ -174,7 +176,9 @@ function validUnit(entry: z.infer<typeof Binding>) {
       ? 'count'
       : ['color', 'backgroundColor', 'borderColor'].includes(property)
         ? 'color'
-        : ['nativeFinish', 'flexDirection'].includes(property)
+        : ['nativeFinish', 'flexDirection', 'position', 'boxSizing'].includes(
+              property,
+            )
           ? 'token'
           : property.startsWith('spring.')
             ? 'spring-parameter'

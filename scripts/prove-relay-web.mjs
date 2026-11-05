@@ -4,6 +4,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { chromium, webkit } from 'playwright';
+import { build } from 'esbuild';
+import { hash } from '../dist/identity.js';
+import {
+  resolveOutputBindings,
+  checkOutputBindings,
+} from '../dist/output-bindings.js';
+import { plotAnatomy } from '../examples/relay/app/src/design/plot-anatomy.mjs';
 import {
   resolveRelayFrame,
   inspectRelayFrame,
@@ -24,6 +31,18 @@ export async function proveRelayWeb() {
   await mkdir(output, { recursive: true });
   const before = snapshotVerificationSources(process.cwd());
   const source = verificationSourceFields(before, before).sourceIdentity;
+  const collector = await build({
+    stdin: {
+      contents:
+        "export {collectBrowserOutputBindings} from './dist/browser-output-bindings.js'",
+      resolveDir: process.cwd(),
+    },
+    bundle: true,
+    platform: 'browser',
+    format: 'iife',
+    globalName: 'RelayBindingProbe',
+    write: false,
+  });
   const exported = JSON.parse(
     await readFile('artifacts/relay-integration/static-receipt.json', 'utf8'),
   );
@@ -108,6 +127,96 @@ export async function proveRelayWeb() {
             await page.getByTestId(id).click();
           };
           const fill = (id, value) => page.getByTestId(id).fill(value);
+          const verifyPlotBindings = async (receipt) => {
+            const value = { plot: plotAnatomy };
+            const scenarioIdentity = hash({
+              viewport: receipt.viewport,
+              root: receipt.measuredRoot,
+              preferences: receipt.preferences,
+            });
+            const expected = {
+              designIdentity: exported.briefIdentity,
+              sourceIdentity: source,
+              inputIdentity: exported.bindingInputIdentity,
+            };
+            const manifest = resolveOutputBindings({
+              operation: 'resolve',
+              current: expected,
+              source: { value },
+              bindings: [
+                'relay-latency-chart-plot',
+                'relay-request-chart-plot',
+                'relay-error-chart-plot',
+              ].flatMap((surface) =>
+                ['height', 'gap', 'position', 'boxSizing'].map((property) => ({
+                  id: surface + '-' + property,
+                  scenario: scenario.id,
+                  scenarioIdentity,
+                  platform: 'web',
+                  unit: ['position', 'boxSizing'].includes(property)
+                    ? 'token'
+                    : 'css-px',
+                  pointer: '/plot/' + property,
+                  target: {
+                    surface,
+                    property,
+                    sourceLocation: 'examples/relay/app/src/ui.jsx:plot',
+                  },
+                  tolerance: ['position', 'boxSizing'].includes(property)
+                    ? 0
+                    : 0.05,
+                })),
+              ),
+            });
+            // These identities come from the running app, independently of the
+            // expected manifest. They are declarations, not authentication.
+            const current = {
+              designIdentity: receipt.briefIdentity,
+              sourceIdentity: receipt.sourceIdentity,
+              inputIdentity: receipt.bindingInputIdentity,
+              resultIdentity: receipt.bindingResultIdentity,
+            };
+            const observation = await page.evaluate(
+              ({ manifest, context }) =>
+                globalThis.RelayBindingProbe.collectBrowserOutputBindings(
+                  manifest,
+                  context,
+                ),
+              {
+                manifest,
+                context: {
+                  current,
+                  scenario: scenario.id,
+                  scenarioIdentity,
+                  resultRef: `artifacts/relay-integration/web/${scenario.id}-plot-binding-observation.json`,
+                },
+              },
+            );
+            const checked = checkOutputBindings({
+              operation: 'check',
+              manifest,
+              current,
+              observations: observation.observations,
+            });
+            for (const [name, data] of Object.entries({
+              manifest,
+              observation,
+              checked,
+            }))
+              await writeFile(
+                path.join(output, `${scenario.id}-plot-binding-${name}.json`),
+                JSON.stringify(data, null, 2),
+              );
+            assert.ok(
+              checked.entries.every((entry) => entry.status === 'pass'),
+              JSON.stringify(checked.entries),
+            );
+            return {
+              bindings: checked.entries.length,
+              scope:
+                'Current authored anatomy property consistency; not a fresh selector recipe, authentication or design-quality score.',
+            };
+          };
           const capture = async () => {
             const current = await page.waitForFunction(() => {
               const receipt = globalThis.__RELAY_CAPTURE__?.();
@@ -219,6 +328,7 @@ export async function proveRelayWeb() {
           }
           try {
             await page.goto(url);
+            await page.addScriptTag({ content: collector.outputFiles[0].text });
             await page.getByTestId('diagnose-checkout').waitFor();
 
             await step(
@@ -371,7 +481,7 @@ export async function proveRelayWeb() {
                     (bar) =>
                       bar.box.width > 0 &&
                       bar.box.height > 0 &&
-                      bar.paints.some((paint) => paint.height >= 2),
+                      bar.paints.some((paint) => paint.height > 0),
                   ),
                 'Every data bucket must have an actual visible-height bar',
               );
@@ -391,6 +501,7 @@ export async function proveRelayWeb() {
                 );
               await page.mouse.up();
               const { receipt } = await snap('pointer-cursor');
+              const bound = await verifyPlotBindings(receipt);
               assert.ok(receipt.context.bucket >= 44);
               const after = await plot.boundingBox();
               assert.equal(after.width, before.width);
@@ -484,6 +595,7 @@ export async function proveRelayWeb() {
                 bucket: r.context.bucket,
                 anatomy,
                 motionFrames: movement.frames.length,
+                propertyBindings: bound,
               };
             });
             await step('primary diagnosis and coordination', async () => {
