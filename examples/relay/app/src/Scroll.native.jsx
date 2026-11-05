@@ -1,6 +1,7 @@
 import { compat, css } from 'react-strict-dom';
 import { ScrollView, Keyboard, TextInput } from 'react-native';
 import { useEffect, useRef } from 'react';
+import { invalidateInspection } from './inspection-events.mjs';
 const styles = css.create({
   scroll: { flexGrow: 1, flexShrink: 1, minHeight: 0 },
 });
@@ -70,14 +71,17 @@ export default function Scroll({ children, routeKey = null }) {
           onLayout={(event) => {
             nativeProps.onLayout?.(event);
             scheduleReveal();
+            invalidateInspection();
           }}
           onFocus={scheduleReveal}
           onScroll={(e) => {
+            nativeProps.onScroll?.(e);
             offset.current = e.nativeEvent.contentOffset.y;
             if (routeKey)
               positions.set(routeKey, e.nativeEvent.contentOffset.y);
+            invalidateInspection();
           }}
-          scrollEventThrottle={100}
+          scrollEventThrottle={16}
         >
           {children}
         </ScrollView>

@@ -1,123 +1,160 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useLayoutEffect, useMemo, useRef } from 'react';
 import { Platform } from 'react-native';
+import {
+  invalidateInspection,
+  subscribeInspection,
+} from './inspection-events.mjs';
 
-/** Optional experiment instrumentation. Reads actual host-node rectangles;
- * declared snapshot values are deliberately separate from observed boxes. */
+/** Explicit actual-host capture for tests/native inspection. Normal product use
+ * has no polling, observer network traffic or recurring measurement clock.
+ */
 export function useObservations(snapshot) {
   const refs = useRef({}),
-    latest = useRef(snapshot);
-  latest.current = snapshot;
-  const bind = useCallback(
-    (id) => (node) => {
-      if (node) refs.current[id] = node;
-      else delete refs.current[id];
-    },
+    callbacks = useRef(new Map()),
+    latest = useRef(null);
+  const frame = useRef(0),
+    mounted = useRef(false);
+  const bind = useCallback((id) => {
+    let callback = callbacks.current.get(id);
+    if (!callback) {
+      let attached = null;
+      callback = (node) => {
+        if (node) {
+          attached = node;
+          refs.current[id] = node;
+        } else {
+          if (refs.current[id] === attached) delete refs.current[id];
+          attached = null;
+        }
+      };
+      callbacks.current.set(id, callback);
+    }
+    return callback;
+  }, []);
+  /** @param {{onlyIds?: string[], publish?: boolean}} [options] */
+  const capture = useCallback((options = {}) => {
+    const current = latest.current;
+    if (
+      !mounted.current ||
+      !current ||
+      current.foreground === false ||
+      (Platform.OS === 'web' && document.hidden)
+    )
+      return null;
+    const boxes = {},
+      unavailable = {};
+    for (const [id, node] of Object.entries(refs.current)) {
+      if (options.onlyIds && !options.onlyIds.includes(id)) continue;
+      if (
+        node.isConnected === false ||
+        typeof node.getBoundingClientRect !== 'function'
+      ) {
+        unavailable[id] =
+          'Current host rectangle API unavailable or node detached';
+        continue;
+      }
+      const r = node.getBoundingClientRect();
+      if (
+        !r ||
+        !['x', 'y', 'width', 'height'].every((key) => Number.isFinite(r[key]))
+      ) {
+        unavailable[id] = 'Host did not return a finite rectangle';
+        continue;
+      }
+      const computed = Platform.OS === 'web' ? getComputedStyle(node) : null;
+      boxes[id] = {
+        x: r.x,
+        y: r.y,
+        width: r.width,
+        height: r.height,
+        nodeName: node.nodeName,
+        scrollWidth: node.scrollWidth,
+        scrollHeight: node.scrollHeight,
+        clientWidth: node.clientWidth,
+        clientHeight: node.clientHeight,
+        computed: computed
+          ? Object.fromEntries(
+              [
+                'fontSize',
+                'fontFamily',
+                'fontOpticalSizing',
+                'fontVariationSettings',
+                'fontKerning',
+                'fontFeatureSettings',
+                'letterSpacing',
+                'lineHeight',
+                'paddingLeft',
+                'paddingTop',
+                'gap',
+                'color',
+                'backgroundColor',
+                'flexDirection',
+              ].map((key) => [key, computed[key] ?? null]),
+            )
+          : null,
+      };
+    }
+    const receipt = {
+      ...current,
+      boxes,
+      unavailable,
+      captureScope: options.onlyIds ?? 'all-mounted-hosts',
+      observedAt: new Date().toISOString(),
+      runtime: `Expo58 / React19.3 / RN0.88 / RSD0.0.55 / ${Platform.OS}`,
+      provider: Platform.OS === 'web' ? 'browser' : `native-${Platform.OS}`,
+    };
+    if (options.publish !== false) {
+      globalThis.__RELAY_INSPECTION__ = receipt;
+      if (Platform.OS === 'web') globalThis.__EXPO_DESIGN_PROOF__ = receipt;
+    }
+    const url = process.env.EXPO_PUBLIC_DESIGN_OBSERVER;
+    if (url && Platform.OS !== 'web' && options.publish !== false)
+      fetch(url, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(receipt),
+      }).catch(() => {});
+    return receipt;
+  }, []);
+  useLayoutEffect(() => {
+    mounted.current = true;
+    globalThis.__RELAY_CAPTURE__ = capture;
+    const automatic =
+      Boolean(process.env.EXPO_PUBLIC_DESIGN_OBSERVER) ||
+      process.env.EXPO_PUBLIC_DESIGN_AUTOCAPTURE === '1';
+    const unsubscribe = subscribeInspection(() => {
+      if (automatic && !frame.current)
+        frame.current = requestAnimationFrame(() => {
+          frame.current = 0;
+          capture();
+        });
+    });
+    return () => {
+      unsubscribe();
+      if (frame.current) cancelAnimationFrame(frame.current);
+      frame.current = 0;
+      mounted.current = false;
+      if (globalThis.__RELAY_CAPTURE__ === capture) {
+        delete globalThis.__RELAY_CAPTURE__;
+        delete globalThis.__RELAY_INSPECTION__;
+        if (Platform.OS === 'web') delete globalThis.__EXPO_DESIGN_PROOF__;
+      }
+    };
+  }, [capture]);
+  useLayoutEffect(() => {
+    latest.current = snapshot;
+    if (globalThis.__RELAY_CAPTURE__ === capture) {
+      globalThis.__RELAY_INSPECTION__ = null;
+      if (Platform.OS === 'web') globalThis.__EXPO_DESIGN_PROOF__ = null;
+    }
+    invalidateInspection();
+  }, [snapshot, capture]);
+  const ids = useCallback(
+    () =>
+      Object.keys(refs.current)
+        .filter((id) => id.startsWith('relay-'))
+        .sort(),
     [],
   );
-  useEffect(() => {
-    const capture = () => {
-      const boxes = {};
-      for (const [id, node] of Object.entries(refs.current)) {
-        const r = node.getBoundingClientRect?.();
-        if (r) {
-          const children = Array.from(node.childNodes ?? [])
-            .flatMap((child) => {
-              const box = child['getBoundingClientRect']?.();
-              return box
-                ? [
-                    {
-                      x: box.x,
-                      y: box.y,
-                      width: box.width,
-                      height: box.height,
-                      nodeName: child['nodeName'],
-                    },
-                  ]
-                : [];
-            })
-            .slice(0, 8);
-          const computed =
-            Platform.OS === 'web' ? getComputedStyle(node) : null;
-          const ancestors = [];
-          let parent = node.parentNode;
-          for (
-            let depth = 0;
-            parent && depth < 4;
-            depth++, parent = parent.parentNode
-          ) {
-            const box = parent.getBoundingClientRect?.();
-            if (box)
-              ancestors.push({
-                x: box.x,
-                y: box.y,
-                width: box.width,
-                height: box.height,
-                nodeName: parent.nodeName,
-              });
-          }
-          boxes[id] = {
-            ancestors,
-            x: r.x,
-            y: r.y,
-            width: r.width,
-            height: r.height,
-            nodeName: node.nodeName,
-            scrollWidth: node.scrollWidth,
-            scrollHeight: node.scrollHeight,
-            clientWidth: node.clientWidth,
-            clientHeight: node.clientHeight,
-            children,
-            computed: computed
-              ? {
-                  fontSize: computed.fontSize,
-                  fontFamily: computed.fontFamily,
-                  fontOpticalSizing: computed.fontOpticalSizing,
-                  fontVariationSettings: computed.fontVariationSettings,
-                  fontKerning: computed.fontKerning,
-                  fontFeatureSettings: computed.fontFeatureSettings,
-                  letterSpacing: computed.letterSpacing,
-                  lineHeight: computed.lineHeight,
-                  paddingLeft: computed.paddingLeft,
-                  paddingTop: computed.paddingTop,
-                  gap: computed.gap,
-                  color: computed.color,
-                  backgroundColor: computed.backgroundColor,
-                  flexDirection: computed.flexDirection,
-                }
-              : null,
-          };
-        }
-      }
-      const receipt = {
-        ...latest.current,
-        boxes,
-        observedAt: new Date().toISOString(),
-        runtime: `Expo58 / React19.3 / RN0.88 / RSD0.0.55 / ${Platform.OS}`,
-        provider: Platform.OS === 'web' ? 'browser' : `native-${Platform.OS}`,
-      };
-      if (Platform.OS === 'web') globalThis.__EXPO_DESIGN_PROOF__ = receipt;
-      globalThis.__RELAY_INSPECTION__ = receipt;
-      const url = process.env.EXPO_PUBLIC_DESIGN_OBSERVER;
-      if (url && Platform.OS !== 'web')
-        fetch(url, {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify(receipt),
-        }).catch(() => {});
-    };
-    const interval = setInterval(() => {
-      if (
-        latest.current.foreground !== false &&
-        (Platform.OS !== 'web' || !document.hidden)
-      )
-        capture();
-    }, 800);
-    capture();
-    return () => {
-      clearInterval(interval);
-      delete globalThis.__RELAY_INSPECTION__;
-      if (Platform.OS === 'web') delete globalThis.__EXPO_DESIGN_PROOF__;
-    };
-  }, []);
-  return bind;
+  return useMemo(() => ({ bind, capture, ids }), [bind, capture, ids]);
 }

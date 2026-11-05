@@ -16,7 +16,7 @@ try {
     `import {parseState, execute, BrowserRenderer, NativeRenderer, policy, relax, evaluate, CorpusRecordSchema, resolveRelationalKernelOutputs, type DesignState, type DecisionWorkflowInput} from '${root}/dist/index.js';
 import {createDrivenMotion} from '${root}/dist/motion-runtime.js';
 import {resolveDesignRuntime, type PortableDesign, advanceNativeViewport, type NativeViewport, differentiateExpression, encloseExpression, classifyEnclosureBands, mapExpressionRegimes} from '${root}/dist/layout-runtime.js';
-import {createDomLightController, collectBrowserOutputBindings, type BrowserBindingContext, type DomLightOptions} from '${root}/dist/browser-runtime.js';
+import {createDomLightController, collectBrowserOutputBindings, createBrowserElementInspector, type BrowserBindingContext, type DomLightOptions} from '${root}/dist/browser-runtime.js';
 const motion=createDrivenMotion({position:0,target:1});motion.retarget(.8);motion.advance(1/60);
 const viewport:NativeViewport={window:{width:390,height:844,fontScale:1,scale:3},insets:{top:47,right:0,bottom:34,left:0}};
 advanceNativeViewport(null,viewport);void resolveDesignRuntime;const portable:PortableDesign|null=null;void portable;
@@ -32,6 +32,13 @@ encloseExpression({ref:'width'},{width:{min:'320',max:1920}});
 const effectOptions:DomLightOptions={clock:'external',renderer:'webgl'};void effectOptions;void createDomLightController;
 const bindingContext:BrowserBindingContext={current:{designIdentity:'x',sourceIdentity:'x',inputIdentity:'x',resultIdentity:'x'},scenario:'phone',scenarioIdentity:'x',resultRef:'evidence/dom.json'};
 void bindingContext;void collectBrowserOutputBindings;
+const inspector=createBrowserElementInspector({root:document,targetId:'actual-surface',context:{sourceIdentity:'source',inputKey:'current'},onSample:receipt=>{
+  if(receipt.box)receipt.box.width.toFixed(2);
+  if(receipt.contentBox)receipt.contentBox.coordinateSpace satisfies 'local-content-css-px';
+}});
+inspector.update({targetId:'actual-surface',context:{sourceIdentity:'source',inputKey:'changed'}});inspector.dispose();
+// @ts-expect-error Inspection binds a small exact current key, not a declared rectangle.
+inspector.update({targetId:'actual-surface',context:{sourceIdentity:'source',inputKey:{width:390}}});
 // @ts-expect-error DOM geometry requires an actual document or element, not a declared box.
 collectBrowserOutputBindings({} as Parameters<typeof collectBrowserOutputBindings>[0],bindingContext,{width:390});
 // @ts-expect-error The application clock advances motion in numeric seconds.

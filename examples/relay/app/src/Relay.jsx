@@ -36,6 +36,8 @@ import {
 } from './model.mjs';
 import { storage, exportState } from './storage';
 import { useObservations } from './useObservations';
+import ElementInspection, { useElementInspection } from './ElementInspection';
+import InspectorPanel from './InspectorPanel';
 import Scroll from './Scroll';
 import PlotInteraction from './PlotInteraction';
 import Screen from './Screen';
@@ -454,12 +456,23 @@ function Root() {
     foreground,
     clock: clockStats(),
   };
-  const bind = useObservations(snapshot);
+  const observations = useObservations(snapshot);
+  const bind = observations.bind;
   const ui = {
     t,
     size,
     scale,
     bind,
+    observations,
+    inspectionInputKey: JSON.stringify({
+      geometry: geometry.inputs,
+      route,
+      preferences: state.preferences,
+      context: state.context,
+      auditRevision: state.data.auditLog.length,
+      fontLoaded: loaded,
+      hydrated,
+    }),
     phone,
     wide,
     viewport,
@@ -2955,26 +2968,19 @@ function FrameConsequences() {
 }
 function Inspection({ onClose }) {
   const { state, dispatch } = useData();
-  const [selection, setSelection] = useState('relay-context-toolbar'),
-    [receipt, setReceipt] = useState(null);
+  const [selection, setSelection] = useState('relay-context-toolbar');
+  const { receipt, ids } = useElementInspection(selection);
   const ui = useContext(UI);
-  useEffect(() => {
-    const capture = () => setReceipt(globalThis.__RELAY_INSPECTION__ ?? null);
-    capture();
-    const timer = setInterval(capture, 800);
-    return () => clearInterval(timer);
-  }, []);
-  const box = receipt?.boxes?.[selection];
+  const box = receipt?.status === 'measured' ? receipt.box : null;
   return (
-    <Modal title="Current surface inspection" onClose={onClose}>
+    <InspectorPanel onClose={onClose}>
+      <ElementInspection receipt={receipt} />
       <Column>
         <Choice
           id="inspection-surface"
           label="Observed element"
           value={selection}
-          options={Object.keys(receipt?.boxes ?? {}).filter((x) =>
-            x.startsWith('relay-'),
-          )}
+          options={[...new Set([selection, ...ids])]}
           onChange={setSelection}
         />
         <Text>
@@ -2984,9 +2990,28 @@ function Inspection({ onClose }) {
             : 'unavailable'}
         </Text>
         <Text>
-          Observed at: {receipt?.observedAt ?? 'unavailable'} · source{' '}
-          {(receipt?.sourceIdentity ?? 'unknown').slice(0, 12)}
+          Observed at: {receipt?.observedAt ?? 'pending'} ·{' '}
+          {receipt?.status ?? 'pending'} · source{' '}
+          {(receipt?.context.sourceIdentity ?? 'unknown').slice(0, 12)}
         </Text>
+        <Text tone="muted">
+          {receipt?.detail ?? 'Waiting for the current element and inputs.'}
+        </Text>
+        {receipt?.contentBox && (
+          <Text>
+            Observed local content box: {receipt.contentBox.width.toFixed(2)} ×{' '}
+            {receipt.contentBox.height.toFixed(2)} CSS px. Viewport bounding
+            boxes include transforms.
+          </Text>
+        )}
+        {receipt?.computed && (
+          <Text>
+            Computed type: {receipt.computed.fontSize} /{' '}
+            {receipt.computed.lineHeight} · tracking{' '}
+            {receipt.computed.letterSpacing}. Computed style does not establish
+            a resolved glyph baseline or ink.
+          </Text>
+        )}
         <Text>
           Historical starting preset: {resolved.inputIdentity.slice(0, 12)}. New
           renderer and choice validation pending.
@@ -3037,7 +3062,7 @@ function Inspection({ onClose }) {
           Inspecting does not change the selected control's hit geometry.
         </Text>
       </Column>
-    </Modal>
+    </InspectorPanel>
   );
 }
 function TechnicalMedia({ kind }) {

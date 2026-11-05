@@ -65,3 +65,4 @@ export * from './design-field-vocabulary.js';
 export * from './relational-kernels.js';
 export * from './output-bindings.js';
 export * from './browser-output-bindings.js';
+export * from './browser-inspection.js';

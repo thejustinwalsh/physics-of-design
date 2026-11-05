@@ -20,6 +20,138 @@ import { analyzeMediaFile } from '../dist/media.js';
 const hero = () =>
   parseState(JSON.parse(readFileSync('examples/hero.json', 'utf8')));
 
+for (const engine of [chromium, webkit])
+  test(
+    `${engine.name()} live inspection follows current elements without overlay feedback or stale identities`,
+    { timeout: 60000 },
+    async () => {
+      const bundle = await build({
+        stdin: {
+          contents:
+            "export { createBrowserElementInspector } from './dist/browser-inspection.js'",
+          resolveDir: process.cwd(),
+        },
+        bundle: true,
+        format: 'iife',
+        globalName: 'LiveInspector',
+        platform: 'browser',
+        write: false,
+      });
+      const browser = await engine.launch({ headless: true });
+      try {
+        const page = await browser.newPage({
+          viewport: { width: 800, height: 600 },
+        });
+        const errors: string[] = [];
+        page.on('pageerror', (error) => errors.push(error.message));
+        await page.setContent(
+          `<style>body{margin:0}#target{width:123.5px;height:40px;padding:4px;border:1px solid;box-sizing:content-box}#other{width:80px;height:30px}[data-design-inspection-ui]{position:fixed;right:0;top:0}</style><div id="scroller" style="overflow:auto;height:180px"><div id="target" data-testid="target"><div data-design-inspection-ui id="drawing"></div></div><div style="height:800px"></div></div><div id="other"></div>`,
+        );
+        await page.addScriptTag({ content: bundle.outputFiles[0]!.text });
+        await page.evaluate(
+          `window.receipts=[];window.inspector=LiveInspector.createBrowserElementInspector({targetId:'target',context:{sourceIdentity:'browser-test-source',inputKey:'a'},onSample:receipt=>{window.receipts.push(receipt);window.inspector.update({targetId:receipt.targetId,context:receipt.context});document.querySelector('#drawing').textContent=String(receipt.sequence);}});`,
+        );
+        await page.waitForFunction(
+          `window.receipts.at(-1)?.contentBox?.width===123.5 && window.receipts.at(-1)?.intersection?.isIntersecting && !window.inspector.stats().pendingFrame`,
+        );
+        const initial: any = await page.evaluate(`window.receipts.at(-1)`);
+        assert.equal(initial.status, 'measured');
+        assert.equal(initial.box.width, 133.5);
+        assert.equal(initial.computed.paddingLeft, '4px');
+        assert.equal(
+          initial.contentBox.coordinateSpace,
+          'local-content-css-px',
+        );
+        const quiet: any = await page.evaluate(`window.inspector.stats()`);
+        await page.waitForTimeout(100);
+        assert.equal(
+          await page.evaluate(`window.inspector.stats().reads`),
+          quiet.reads,
+          'Inspection UI writes must not create a read loop',
+        );
+
+        const changed: any = await page.evaluate(
+          `document.querySelector('#target').style.width='201.25px';window.inspector.read()`,
+        );
+        assert.equal(changed.box.width, 211.25);
+        assert.equal(
+          changed.contentBox,
+          null,
+          'A previous content observation must not impersonate the new layout',
+        );
+        await page.waitForFunction(
+          `window.receipts.at(-1)?.contentBox?.width===201.25`,
+        );
+        await page.evaluate(
+          `const replacement=document.querySelector('#target').cloneNode(true);replacement.style.width='225px';document.querySelector('#target').replaceWith(replacement);`,
+        );
+        await page.waitForFunction(`window.receipts.at(-1)?.box?.width===235`);
+        const renamed: any = await page.evaluate(
+          `document.querySelector('#target').id='renamed';document.querySelector('#renamed').removeAttribute('data-testid');window.inspector.read()`,
+        );
+        assert.equal(renamed.status, 'missing');
+        assert.equal(renamed.box, null);
+
+        await page.evaluate(
+          `window.inspector.update({targetId:'other',context:{sourceIdentity:'browser-test-source',inputKey:'b'}});`,
+        );
+        await page.waitForFunction(
+          `window.receipts.at(-1)?.targetId==='other' && window.receipts.at(-1)?.context.inputKey==='b' && window.receipts.at(-1)?.intersection?.isIntersecting`,
+        );
+        const duplicate: any = await page.evaluate(
+          `document.body.appendChild(document.querySelector('#other').cloneNode(true));window.inspector.read()`,
+        );
+        assert.equal(duplicate.status, 'ambiguous');
+        assert.equal(duplicate.box, null);
+        await page.evaluate(
+          `document.querySelectorAll('#other')[1].remove();window.inspector.update({targetId:'other',context:{sourceIdentity:'browser-test-source',inputKey:'c'}});`,
+        );
+        await page.waitForFunction(
+          `window.receipts.at(-1)?.context.inputKey==='c' && window.receipts.at(-1)?.intersection?.isIntersecting`,
+        );
+        await page.evaluate(
+          `window.moving=document.querySelector('#other').animate([{transform:'translateX(0px)'},{transform:'translateX(150px)'}],{duration:400,fill:'forwards'});window.inspector.invalidate();`,
+        );
+        await page.waitForFunction(`window.receipts.at(-1)?.box?.x>30`);
+        await page.evaluate(`window.moving.finish()`);
+        await page.waitForFunction(
+          `window.receipts.at(-1)?.box?.x===150 && !window.inspector.stats().pendingFrame`,
+        );
+        const finished: any = await page.evaluate(`window.inspector.stats()`);
+        await page.waitForTimeout(100);
+        assert.equal(
+          await page.evaluate(`window.inspector.stats().reads`),
+          finished.reads,
+          'An ended animation must release the frame loop',
+        );
+
+        await page.evaluate(
+          `document.querySelector('#other').style.display='none'`,
+        );
+        await page.waitForFunction(`window.receipts.at(-1)?.status==='hidden'`);
+        assert.equal(await page.evaluate(`window.receipts.at(-1).box`), null);
+        const stopped: any = await page.evaluate(
+          `window.inspector.dispose();window.inspector.dispose();window.inspector.stats()`,
+        );
+        await page.evaluate(
+          `document.querySelector('#other').style.display='block';window.dispatchEvent(new Event('resize'));`,
+        );
+        await page.waitForTimeout(100);
+        const disposed: any = await page.evaluate(`window.inspector.stats()`);
+        assert.equal(disposed.reads, stopped.reads);
+        assert.equal(disposed.observers, 0);
+        assert.equal(disposed.pendingFrame, false);
+        assert.equal(
+          await page.evaluate(`window.inspector.read().status`),
+          'disposed',
+        );
+        assert.deepEqual(errors, []);
+      } finally {
+        await browser.close();
+      }
+    },
+  );
+
 test('real local original raster decodes with source hash and full-resolution region evidence', async () => {
   const result = await analyzeMediaFile({
     file: 'native/assets/fieldwork/headland.png',
