@@ -31,6 +31,12 @@ export async function proveRelayWeb() {
   await mkdir(output, { recursive: true });
   const before = snapshotVerificationSources(process.cwd());
   const source = verificationSourceFields(before, before).sourceIdentity;
+  const palettes = JSON.parse(
+    await readFile(
+      'examples/relay/app/src/design/palette.generated.json',
+      'utf8',
+    ),
+  );
   const collector = await build({
     stdin: {
       contents:
@@ -127,6 +133,102 @@ export async function proveRelayWeb() {
             await page.getByTestId(id).click();
           };
           const fill = (id, value) => page.getByTestId(id).fill(value);
+          const verifyPaletteBindings = async (receipt, direction, theme) => {
+            const expected = {
+              designIdentity: exported.briefIdentity,
+              sourceIdentity: source,
+              inputIdentity: palettes.inputIdentity,
+            };
+            const current = {
+              designIdentity: receipt.briefIdentity,
+              sourceIdentity: receipt.sourceIdentity,
+              inputIdentity: receipt.paletteIdentity.inputIdentity,
+              resultIdentity: receipt.paletteIdentity.resultIdentity,
+            };
+            const bucket = 48 - receipt.context.range / 5;
+            assert.notEqual(
+              bucket,
+              receipt.context.bucket,
+              'Probe a nonselected data bucket',
+            );
+            const scenarioIdentity = hash({
+              viewport: receipt.viewport,
+              direction,
+              theme,
+              preferences: receipt.preferences,
+            });
+            const manifest = resolveOutputBindings({
+              operation: 'resolve',
+              current: expected,
+              source: { value: palettes.directions },
+              bindings: [
+                ['canvas', 'relay-root', 'backgroundColor', 'canvas'],
+                ['ink', 'relay-root', 'color', 'ink'],
+                ['action', 'diagnose-checkout', 'backgroundColor', 'accent'],
+                ['action-ink', 'diagnose-checkout', 'color', 'on-accent'],
+                ['panel', 'relay-latency-chart', 'backgroundColor', 'panel'],
+                [
+                  'series',
+                  `relay-latency-chart-data-bar-${bucket}`,
+                  'backgroundColor',
+                  'data',
+                ],
+                [
+                  'comparison',
+                  `relay-latency-chart-comparison-bar-${bucket}`,
+                  'backgroundColor',
+                  'comparison',
+                ],
+              ].map(([id, surface, property, token]) => ({
+                id,
+                scenario: scenario.id,
+                scenarioIdentity,
+                platform: 'web',
+                unit: 'color',
+                pointer: `/${direction}/${theme}/${token}`,
+                target: {
+                  surface,
+                  property,
+                  sourceLocation: 'examples/relay/app/src/ui.jsx',
+                },
+                tolerance: 0,
+              })),
+            });
+            const observation = await page.evaluate(
+              ({ manifest, context }) =>
+                globalThis.RelayBindingProbe.collectBrowserOutputBindings(
+                  manifest,
+                  context,
+                ),
+              {
+                manifest,
+                context: {
+                  current,
+                  scenario: scenario.id,
+                  scenarioIdentity,
+                  resultRef: `artifacts/relay-integration/web/${scenario.id}-${direction}-${theme}-colors.json`,
+                },
+              },
+            );
+            const checked = checkOutputBindings({
+              operation: 'check',
+              manifest,
+              current,
+              observations: observation.observations,
+            });
+            await writeFile(
+              path.join(
+                output,
+                `${scenario.id}-${direction}-${theme}-colors.json`,
+              ),
+              JSON.stringify({ manifest, observation, checked }, null, 2),
+            );
+            assert.ok(
+              checked.entries.every((entry) => entry.status === 'pass'),
+              JSON.stringify(checked.entries),
+            );
+            return checked.entries.length;
+          };
           const verifyPlotBindings = async (receipt) => {
             const value = { plot: plotAnatomy };
             const scenarioIdentity = hash({
@@ -333,6 +435,81 @@ export async function proveRelayWeb() {
             await page.goto(url);
             await page.addScriptTag({ content: collector.outputFiles[0].text });
             await page.getByTestId('diagnose-checkout').waitFor();
+
+            await step(
+              'whole palette directions reach actual controls, data and material bases',
+              async () => {
+                const observed = [];
+                for (const direction of Object.keys(palettes.directions)) {
+                  for (const theme of ['dark', 'light']) {
+                    await click('nav-settings');
+                    await choose('settings-palette', direction);
+                    await choose('settings-theme', theme);
+                    await click('nav-overview');
+                    await page.waitForFunction(
+                      ({ direction, theme }) => {
+                        const materials = globalThis.__RELAY_MATERIALS__?.();
+                        return (
+                          materials?.length === 3 &&
+                          materials.every(
+                            (item) =>
+                              item.palette === direction &&
+                              item.theme === theme,
+                          )
+                        );
+                      },
+                      { direction, theme },
+                    );
+                    const { receipt } = await snap(
+                      `palette-${direction}-${theme}`,
+                    );
+                    assert.equal(receipt.preferences.palette, direction);
+                    assert.equal(receipt.preferences.theme, theme);
+                    const materialBases = await page.evaluate(() =>
+                      globalThis.__RELAY_MATERIALS__().map((item) => ({
+                        ...item,
+                        cssBase: getComputedStyle(
+                          document.querySelector(`[data-testid="${item.id}"]`),
+                        )
+                          .getPropertyValue('--dt-base')
+                          .trim(),
+                      })),
+                    );
+                    for (const material of materialBases) {
+                      const token = {
+                        substrate: 'panel',
+                        navigation: 'canvas',
+                        action: 'raised',
+                      }[material.name];
+                      assert.equal(
+                        material.baseColor,
+                        palettes.directions[direction][theme][token],
+                      );
+                      assert.equal(material.cssBase, material.baseColor);
+                    }
+                    observed.push({
+                      direction,
+                      theme,
+                      bindings: await verifyPaletteBindings(
+                        receipt,
+                        direction,
+                        theme,
+                      ),
+                      materialBases,
+                    });
+                  }
+                }
+                await click('nav-settings');
+                await choose('settings-palette', palettes.defaultDirection);
+                await choose('settings-theme', 'dark');
+                await click('nav-overview');
+                return {
+                  observed,
+                  scope:
+                    'Actual computed role properties and material base variables; lit composite contrast and aesthetic preference require separate evidence.',
+                };
+              },
+            );
 
             await step(
               'live inspection follows actual target and leaves workspace usable',
@@ -730,6 +907,10 @@ export async function proveRelayWeb() {
                   await page.locator('body').innerText(),
                   /Proof weighted errors/,
                 );
+                // Narrow rows reveal secondary actions through their actual
+                // Details control; returning from edit starts collapsed.
+                if (!(await page.getByTestId('toggle-' + ruleId).count()))
+                  await click('expand-' + ruleId);
                 await click('toggle-' + ruleId);
                 assert.match(await page.locator('body').innerText(), /muted/);
                 await click('evaluate-rules');

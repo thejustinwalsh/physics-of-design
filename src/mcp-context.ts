@@ -729,9 +729,18 @@ export function summarizeResult(
     };
   else if (command === 'palette candidates')
     summary = {
-      statistics: r.statistics,
+      attempted: r.attempted,
+      duplicates: r.duplicates,
+      termination: r.termination,
+      exploration: rows(r.exploration).map((direction) => ({
+        id: direction.id,
+        retained: direction.retained,
+        attempted: direction.attempted,
+        termination: direction.termination,
+      })),
       candidates: rows(r.candidates).map((c) => ({
         id: c.id,
+        direction: record(c.direction).id,
         system: c.system,
         objective: c.objective,
         measurementRef: c.measurementRef,

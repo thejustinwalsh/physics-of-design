@@ -1,5 +1,11 @@
 # Relay: one product with inspectable consequences
 
+## Color correction — November 5, 2026
+
+The user rejected repeated teal across outputs. This is actual art-direction feedback, not a preference study. The original frozen comparison brief and builder outputs remain historical. This integration now compares **Graphite / citron**, **Plum / rose** and **Chalk / cobalt**, each with light/dark role mappings. Graphite is the authored initial direction; it is not a fresh local-selector decision. Preserve action foreground, focus, data, comparison and severity as distinct semantic roles. Coordinate material base colors with the chosen palette so an independent lighting recipe cannot silently reintroduce the former cyan enclosure. Keep all directions editable. A contrast pass establishes declared-edge feasibility, not visual appeal; inspect actual composited states and gather blinded preference before claiming a quality improvement.
+
+## Integration scope
+
 Recorded November 4, 2026 from the user's request to turn the responsive-calculus research into one concrete product. This is an authored integration brief, not a new human interview or preference study. The frozen Luna/Sol/Astra comparison remains unchanged. Post-trial integration must use a separate application copy and retain the original trial outcomes.
 
 Relay remains the incident-management product defined in [the full behavior brief](../../experiments/relay/shared/BRIEF.md), using the supplied synthetic fixtures and licensed assets. Preserve its complete primary investigation/resolution flow, useful secondary routes, canonical state, persistence, recovery and native iOS/Android plus Expo web targets. Do not substitute a layout playground for the working app. The completed Sol implementation supplies a provisional functional source base after source inspection and its seven model/markup checks; that is not an independent full behavior/design review or a comparison winner. Original source hashes and adaptations are retained in `integration-origin.json`. Astra's trial continues unchanged; final integration needs independent renderer/behavior/design review.

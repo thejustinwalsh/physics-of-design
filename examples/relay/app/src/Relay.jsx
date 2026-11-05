@@ -60,7 +60,9 @@ import { subscribeFrame, clockStats } from './clock.mjs';
 import {
   UI,
   chosen,
-  themes,
+  themeFor,
+  paletteOptions,
+  paletteIdentity,
   styles,
   Text,
   Heading,
@@ -201,12 +203,12 @@ const layout = css.create({
   rowTitle: (basis) => ({ flexBasis: basis, flexGrow: 2, minWidth: 180 }),
   notice: (bg) => ({ padding: 10, backgroundColor: bg }),
   buttonNav: { justifyContent: 'flex-start', width: '100%' },
-  note: {
+  note: (color) => ({
     borderLeftWidth: 2,
     borderLeftStyle: 'solid',
-    borderLeftColor: '#66d9ed',
+    borderLeftColor: color,
     paddingLeft: 14,
-  },
+  }),
   axis: {
     display: 'flex',
     flexDirection: 'row',
@@ -214,7 +216,11 @@ const layout = css.create({
     gap: 8,
   },
   traceChoice: { width: '100%', justifyContent: 'flex-start' },
-  loading: { height: 100, backgroundColor: '#263d4b', borderRadius: 8 },
+  loading: (background) => ({
+    height: 100,
+    backgroundColor: background,
+    borderRadius: 8,
+  }),
   startup: (background, color) => ({
     backgroundColor: background,
     color,
@@ -408,7 +414,7 @@ function Root() {
   }, [route]);
   const scale = state.preferences.textScale ?? 1,
     size = staged.fontSize * scale,
-    t = themes[state.preferences.theme] ?? themes.dark,
+    t = themeFor(state.preferences),
     geometry = resolveRelayFrame({
       width:
         (measuredRoot?.width ?? viewport.width) -
@@ -450,6 +456,7 @@ function Root() {
     bindingResultIdentity:
       process.env.EXPO_PUBLIC_DESIGN_BINDING_RESULT_HASH ?? 'unbound',
     declaredPlotAnatomy: plotAnatomy,
+    paletteIdentity,
     designIdentity: resolved.identities.design,
     inputIdentity: resolved.inputIdentity,
     resultIdentity: resolved.resultIdentity,
@@ -561,9 +568,9 @@ function Root() {
           <html.p role="status" style={layout.startupLabel}>
             Loading Relay…
           </html.p>
-          <html.div style={layout.loading} />
-          <html.div style={layout.loading} />
-          <html.div style={layout.loading} />
+          <html.div style={layout.loading(t.raised)} />
+          <html.div style={layout.loading(t.raised)} />
+          <html.div style={layout.loading(t.raised)} />
         </html.div>
       </>
     );
@@ -602,6 +609,7 @@ function Root() {
             <Materials
               route={route}
               theme={state.preferences.theme}
+              palette={state.preferences.palette}
               reduced={ui.reduced}
             />
           )}
@@ -733,14 +741,14 @@ function Root() {
                 >
                   {!hydrated || (!loaded && !fontError) ? (
                     <Panel title="Loading local workspace">
-                      <html.div style={layout.loading} />
+                      <html.div style={layout.loading(t.raised)} />
                       <Text>
                         Reading local demo state and licensed UI font…
                       </Text>
                     </Panel>
                   ) : state.recovery === 'loading' ? (
                     <Panel title="Demo loading state">
-                      <html.div style={layout.loading} />
+                      <html.div style={layout.loading(t.raised)} />
                       <Text>
                         Structure reserved; no fresh telemetry is claimed.
                       </Text>
@@ -1300,6 +1308,7 @@ function Chart({
           plotAnatomy.gap,
           plotAnatomy.position,
           plotAnatomy.boxSizing,
+          ui.t.line,
         )}
       >
         {buckets.map((b) => (
@@ -1312,20 +1321,18 @@ function Chart({
           >
             {comparisonSeries && (
               <html.div
+                data-testid={id + '-comparison-bar-' + b.index}
                 style={styles.bar(
                   `${Math.max(0, (value(comparisonSeries[b.index]) / max) * 100)}%`,
-                  ui.t.accent,
+                  ui.t.comparison,
                 )}
               />
             )}
             <html.div
+              data-testid={id + '-data-bar-' + b.index}
               style={styles.bar(
                 `${Math.max(0, (value(b) / max) * 100)}%`,
-                b.index === index
-                  ? ui.t.accent
-                  : metric === 'errorRate'
-                    ? ui.t.warning
-                    : ui.t.line,
+                b.index === index ? ui.t.accent : ui.t.data,
               )}
             />
           </html.button>
@@ -1384,8 +1391,10 @@ function Chart({
       </Row>
       <Text tone="muted" size={12}>
         Bars:{' '}
-        {comparisonSeries ? 'cyan checkout / slate fleet' : title.toLowerCase()}{' '}
-        · cyan marker: shared selected bucket
+        {comparisonSeries
+          ? 'left: checkout / right: fleet'
+          : title.toLowerCase()}{' '}
+        · vertical marker: shared selected bucket
         {target ? ' · target is an authored threshold' : ''}.{' '}
         {metric === 'p95Ms'
           ? 'Supplied synthetic aggregate; not an average of service percentiles.'
@@ -2222,7 +2231,7 @@ function IncidentDetail({ id }) {
       </Panel>
       <Panel title="Incident timeline">
         {[...incident.timeline].reverse().map((e) => (
-          <html.div key={e.id} style={layout.note}>
+          <html.div key={e.id} style={layout.note(ui.t.accent)}>
             <Row>
               <Badge>{e.kind}</Badge>
               <Text tone="muted" size={12}>
@@ -2300,7 +2309,7 @@ function TraceDetail({ id }) {
             {s.parentId ? '↳ ' : ''}
             {s.operation} · {s.durationMs} ms · {s.status}
           </Button>
-          <html.div style={styles.spanTrack}>
+          <html.div style={styles.spanTrack(ui.t.raised)}>
             <html.div
               style={styles.spanBar(
                 `${(s.offsetMs / trace.durationMs) * 100}%`,
@@ -2554,6 +2563,13 @@ function Settings() {
           local device session.
         </Text>
         <Choice
+          id="settings-palette"
+          label="Color direction"
+          value={state.preferences.palette ?? 'graphite'}
+          options={paletteOptions}
+          onChange={(palette) => pref({ palette })}
+        />
+        <Choice
           id="settings-theme"
           label="Theme"
           value={state.preferences.theme}
@@ -2682,7 +2698,7 @@ function Settings() {
           .reverse()
           .slice((currentAuditPage - 1) * 40, currentAuditPage * 40)
           .map((e) => (
-            <html.div key={e.id} style={layout.note}>
+            <html.div key={e.id} style={layout.note(ui.t.accent)}>
               <Text weight="500">
                 {e.action} · {e.entityId}
               </Text>

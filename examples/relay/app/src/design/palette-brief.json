@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "defaultDirection": "graphite",
+  "provenance": {
+    "kind": "authored",
+    "source": "User review, November 5, 2026: repeated teal palettes are unsatisfactory. These whole-palette alternatives are integration art direction, not human preference labels or a fresh System1 choice.",
+    "selectorCalls": 0
+  },
+  "directions": [
+    {
+      "id": "graphite",
+      "label": "Graphite / citron",
+      "source": [
+        "Relay integration brief: warm graphite enclosure, sharp citron action, periwinkle data; no universal palette rule"
+      ],
+      "dark": {
+        "canvas": "#181714",
+        "ink": "#f6f3e8",
+        "accent": "#e3f780",
+        "on-accent": "#181714",
+        "panel": "#22211d",
+        "raised": "#2e2c25",
+        "line": "#8f8c7e",
+        "muted": "#beb9ab",
+        "critical": "#ffafaa",
+        "warning": "#f5c46b",
+        "healthy": "#a7d4a3",
+        "selection": "#3b4225",
+        "data": "#a6b5ff",
+        "comparison": "#b6a898",
+        "focus": "#b9a4ff"
+      },
+      "light": {
+        "canvas": "#f3efe7",
+        "ink": "#242019",
+        "accent": "#3f3a8a",
+        "on-accent": "#fffaf0",
+        "panel": "#fffcf5",
+        "raised": "#e9e2d4",
+        "line": "#87806e",
+        "muted": "#665c4e",
+        "critical": "#9e2c31",
+        "warning": "#75500a",
+        "healthy": "#24613e",
+        "selection": "#e0dcf8",
+        "data": "#4d4e9c",
+        "comparison": "#8a5a43",
+        "focus": "#5e3daf"
+      }
+    },
+    {
+      "id": "plum",
+      "label": "Plum / rose",
+      "source": [
+        "Relay integration brief: aubergine field, rose action, lavender data; an authored alternative"
+      ],
+      "dark": {
+        "canvas": "#1d1424",
+        "ink": "#f9f1fa",
+        "accent": "#f5a8d7",
+        "on-accent": "#29172a",
+        "panel": "#291e31",
+        "raised": "#36263f",
+        "line": "#9e82ad",
+        "muted": "#c6b0d0",
+        "critical": "#ffb5b3",
+        "warning": "#f7cf91",
+        "healthy": "#a4e8b4",
+        "selection": "#4c2341",
+        "data": "#bcadff",
+        "comparison": "#badd9a",
+        "focus": "#d7f86c"
+      },
+      "light": {
+        "canvas": "#faf4fc",
+        "ink": "#2f1937",
+        "accent": "#87365f",
+        "on-accent": "#ffffff",
+        "panel": "#fffaff",
+        "raised": "#f0e4f6",
+        "line": "#936da4",
+        "muted": "#715277",
+        "critical": "#9c2b42",
+        "warning": "#75510a",
+        "healthy": "#24613e",
+        "selection": "#f1dce9",
+        "data": "#6f3992",
+        "comparison": "#55642a",
+        "focus": "#4f33c1"
+      }
+    },
+    {
+      "id": "cobalt",
+      "label": "Chalk / cobalt",
+      "source": [
+        "Relay integration brief: chalk and royal cobalt, sand comparison series; an authored alternative"
+      ],
+      "dark": {
+        "canvas": "#101722",
+        "ink": "#edf2fd",
+        "accent": "#91afff",
+        "on-accent": "#142039",
+        "panel": "#192231",
+        "raised": "#243247",
+        "line": "#8194b2",
+        "muted": "#b6c2d5",
+        "critical": "#ffb4a4",
+        "warning": "#f0ca7a",
+        "healthy": "#a3dab8",
+        "selection": "#273c69",
+        "data": "#91afff",
+        "comparison": "#d7bb91",
+        "focus": "#ffe8a3"
+      },
+      "light": {
+        "canvas": "#f2f5fd",
+        "ink": "#1b2338",
+        "accent": "#2454cf",
+        "on-accent": "#ffffff",
+        "panel": "#ffffff",
+        "raised": "#e5ebf6",
+        "line": "#7183a4",
+        "muted": "#4a5d7d",
+        "critical": "#a02e26",
+        "warning": "#775300",
+        "healthy": "#1d6545",
+        "selection": "#dde6ff",
+        "data": "#2454cf",
+        "comparison": "#795530",
+        "focus": "#6b3bb5"
+      }
+    }
+  ]
+}

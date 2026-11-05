@@ -21,6 +21,7 @@ export function initialState(fixture) {
     data: JSON.parse(JSON.stringify(fixture)),
     preferences: {
       theme: 'dark',
+      palette: 'graphite',
       density: 'comfortable',
       reducedMotion: 'system',
       timezone: 'UTC',

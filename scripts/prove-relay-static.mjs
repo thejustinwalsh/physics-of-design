@@ -76,6 +76,10 @@ export async function proveRelayStatic() {
       path.join(repository, 'scripts/relay-motion-plan.mjs'),
       '--check',
     ]);
+    await run('palette-plan', process.execPath, [
+      path.join(repository, 'scripts/relay-palette.mjs'),
+      '--check',
+    ]);
     await run('export', process.execPath, [
       'node_modules/expo/bin/cli',
       'export',

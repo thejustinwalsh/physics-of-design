@@ -24,6 +24,156 @@ const system = {
   roles: [role('body', 'ink'), role('control', 'accent', 'non-text')],
 };
 
+const directionSystem = {
+  tokens: {
+    canvas: '#ffffff',
+    ink: '#151515',
+    accent: '#0055aa',
+    'on-accent': '#ffffff',
+  },
+  roles: [
+    role('body', 'ink'),
+    { ...role('action', 'on-accent'), background: 'accent' },
+  ],
+};
+test('named whole-palette directions retain distinct families under one role graph and shared work limit', () => {
+  const input = {
+    system: directionSystem,
+    maxAttempts: 12,
+    limit: 3,
+    directions: [
+      {
+        id: 'copper',
+        source: ['brief:warm mineral'],
+        tokens: { canvas: '#fff6ef', ink: '#28170f', accent: '#863d24' },
+      },
+      {
+        id: 'violet',
+        source: ['brief:graphic violet'],
+        tokens: { canvas: '#f7f3ff', ink: '#21152e', accent: '#6537a0' },
+      },
+      {
+        id: 'cobalt',
+        source: ['brief:technical cobalt'],
+        tokens: { canvas: '#f0f4ff', ink: '#111d31', accent: '#174fb6' },
+      },
+    ],
+  };
+  const original = structuredClone(input);
+  const result = paletteCandidates(input);
+  assert.deepEqual(input, original);
+  assert.equal(result.candidates.length, 3);
+  assert.equal(result.attempted, 3);
+  assert.ok('exploration' in result);
+  assert.deepEqual(
+    result.exploration.map((direction) => direction.retained),
+    [1, 1, 1],
+  );
+  assert.deepEqual(
+    result.candidates.map(
+      (candidate) => 'direction' in candidate && candidate.direction.id,
+    ),
+    ['copper', 'violet', 'cobalt'],
+  );
+  for (const candidate of result.candidates) {
+    assert.equal(
+      analyzePalette({ system: candidate.system }).summary.status,
+      'pass',
+    );
+    assert.deepEqual(
+      candidate.system.roles.map((r) => r.id),
+      ['body', 'action'],
+    );
+    assert.equal(candidate.changes.length, 0); // authored direction is not a repair
+    assert.ok(
+      'direction' in candidate &&
+        candidate.direction.authoredChanges.length === 3,
+    );
+  }
+  assert.deepEqual(paletteCandidates(input), result);
+});
+
+test('failed directions retain their unresolved edges; aliases cannot fabricate variety', () => {
+  const result = paletteCandidates({
+    system: directionSystem,
+    editableTokens: [],
+    limit: 3,
+    maxAttempts: 6,
+    directions: [
+      {
+        id: 'good',
+        source: ['test:seed'],
+        tokens: { canvas: 'white', ink: '#151515' },
+      },
+      {
+        id: 'alias',
+        source: ['test:alias'],
+        tokens: { canvas: '#fff', ink: '#151515' },
+      },
+      { id: 'failed', source: ['test:invalid-role'], tokens: { ink: 'white' } },
+    ],
+  });
+  assert.equal(result.candidates.length, 1);
+  assert.equal(result.duplicates, 1);
+  assert.ok('exploration' in result);
+  assert.equal(result.exploration[1]!.retained, 0);
+  assert.equal(result.exploration[2]!.generated, 0);
+  assert.ok(
+    result.exploration[2]!.bestUnresolved!.unresolvedChecks.some(
+      (check) => check.status === 'fail',
+    ),
+  );
+});
+
+test('direction intent cannot bypass locks, change the role graph or starve other declared directions', () => {
+  const direction = (id: string, tokens: Record<string, string>) => ({
+    id,
+    tokens,
+    source: ['test:authored'],
+  });
+  const base = {
+    system: directionSystem,
+    directions: [
+      direction('one', { accent: 'red' }),
+      direction('two', { accent: 'blue' }),
+    ],
+  };
+  assert.throws(
+    () => paletteCandidates({ ...base, lockedTokens: ['accent'] }),
+    /locked token/,
+  );
+  assert.throws(
+    () => paletteCandidates({ ...base, limit: 1 }),
+    /per declared direction/,
+  );
+  assert.throws(
+    () => paletteCandidates({ ...base, maxAttempts: 1 }),
+    /per declared direction/,
+  );
+  assert.throws(
+    () =>
+      paletteCandidates({
+        ...base,
+        directions: [
+          direction('one', { missing: 'red' }),
+          direction('two', { accent: 'blue' }),
+        ],
+      }),
+    /Unknown direction token/,
+  );
+  assert.throws(
+    () =>
+      paletteCandidates({
+        ...base,
+        directions: [
+          direction('one', { accent: 'red' }),
+          direction('one', { accent: 'blue' }),
+        ],
+      }),
+    /unique/,
+  );
+});
+
 test('CSS conversion agrees with published OKLab red vector and exact sRGB endpoints', () => {
   // Björn Ottosson's published linear-sRGB → OKLab matrices, evaluated at red.
   const red = convertColor({ color: 'red' });

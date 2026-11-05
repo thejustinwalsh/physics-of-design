@@ -88,7 +88,9 @@ async function fake(mode, timeoutMs = 250, cancelAfterUsage = false) {
       cwd: dir,
       prompt: 'synthetic test only',
       timeoutMs,
-      interruptGraceMs: 40,
+      // This exercises receipt draining, not a 40ms OS scheduling guarantee.
+      // Keep exact usage/status assertions under a loaded parallel test run.
+      interruptGraceMs: 1000,
     },
     out,
     {

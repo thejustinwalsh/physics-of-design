@@ -11,11 +11,26 @@ import Scroll from './Scroll';
 import Overlay from './Overlay';
 import resolved from './design/resolved.json';
 import specialists from './design/specialist-values.json';
+import palettes from './design/palette.generated.json';
 import staged from './design/staged-values.json';
 import textWrap from './TextWrap';
 export const UI = createContext(null);
 export const chosen = resolved.values.desktop;
-export const themes = specialists.palette;
+export const paletteIdentity = {
+  inputIdentity: palettes.inputIdentity,
+  resultIdentity: palettes.resultIdentity,
+};
+export const paletteOptions = Object.entries(palettes.directions).map(
+  ([value, direction]) => ({ value, label: direction.label }),
+);
+export function themeFor(preferences) {
+  const paletteId = Object.hasOwn(palettes.directions, preferences.palette)
+    ? preferences.palette
+    : palettes.defaultDirection;
+  return palettes.directions[paletteId][
+    preferences.theme === 'light' ? 'light' : 'dark'
+  ];
+}
 export const styles = css.create({
   column: {
     boxSizing: 'border-box',
@@ -162,7 +177,7 @@ export const styles = css.create({
     borderBottomStyle: 'solid',
     paddingBottom: 12,
   }),
-  plot: (height, gap, position, boxSizing) => ({
+  plot: (height, gap, position, boxSizing, line) => ({
     boxSizing,
     flexShrink: 0,
     minWidth: 0,
@@ -174,7 +189,7 @@ export const styles = css.create({
     gap,
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
-    borderBottomColor: '#607988',
+    borderBottomColor: line,
     paddingTop: 0,
   }),
   bar: (height, color) => ({
@@ -228,14 +243,14 @@ export const styles = css.create({
     gap,
     minWidth: 0,
   }),
-  spanTrack: {
+  spanTrack: (background) => ({
     height: 16,
-    backgroundColor: '#314854',
+    backgroundColor: background,
     position: 'relative',
     borderRadius: 3,
     overflow: 'hidden',
     width: '100%',
-  },
+  }),
   spanBar: (left, width, color) => ({
     position: 'absolute',
     left,
@@ -336,14 +351,14 @@ export function Button({
       style={[
         styles.button(
           active ? u.t.selection : kind === 'primary' ? u.t.accent : u.t.raised,
-          kind === 'primary' ? u.t.canvas : u.t.ink,
+          kind === 'primary' && !active ? u.t['on-accent'] : u.t.ink,
           active ? u.t.accent : u.t.line,
           staged.controlMinHeight,
           u.size,
           chosen['service-row.lineHeightRatio'],
           chosen['service-row.letterSpacing'],
         ),
-        Platform.OS === 'web' && styles.webFocus(u.t.accent),
+        Platform.OS === 'web' && styles.webFocus(u.t.focus),
         disabled && styles.disabled,
         style,
       ]}
@@ -445,7 +460,7 @@ export function Field({
             chosen['service-row.lineHeightRatio'],
             chosen['service-row.letterSpacing'],
           ),
-          Platform.OS === 'web' && styles.webFocus(u.t.accent),
+          Platform.OS === 'web' && styles.webFocus(u.t.focus),
           multiline && styles.height(100),
         ]}
       />

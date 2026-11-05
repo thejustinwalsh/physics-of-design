@@ -418,8 +418,12 @@ export function colorCandidates(input: unknown, optionsInput: unknown = {}) {
       const token = editable[(n - 1) % editable.length]!;
       const k = Math.floor((n - 1) / editable.length);
       const original = base.tokens[token]!.oklch;
-      const L = clamp(original.L + deltas[k % deltas.length]!);
-      const hDelta = hues[Math.floor(k / deltas.length) % hues.length]!;
+      // Interleave hue families before local lightness refinements. Otherwise
+      // the usual six-result prefix never reaches a hue change at all.
+      const L = clamp(
+        original.L + deltas[Math.floor(k / hues.length) % deltas.length]!,
+      );
+      const hDelta = hues[k % hues.length]!;
       const C =
         original.C *
         chromas[
@@ -483,6 +487,7 @@ export function colorCandidates(input: unknown, optionsInput: unknown = {}) {
       'Out-of-sRGB proposals reduce chroma at fixed requested lightness/hue, then quantize to 8-bit sRGB and recheck contrast.',
       'This simple chroma reduction is a local search policy, not the CSS Color 4 gamut-mapping algorithm.',
       'Sampling angles/deltas describe search coverage only; they are not empirically optimal hue or lightness constants.',
+      'Hue offsets are interleaved before lightness refinements so a short candidate list can cover different families. Use palette candidates with authored directions for coherent multi-token alternatives.',
     ],
   };
 }

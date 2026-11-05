@@ -80,7 +80,7 @@ export const PaletteAnalyzeSchema = z
     contrastLevel: z.enum(['AA', 'AAA']).default('AA'),
   })
   .strict();
-export const PaletteCandidateSchema = z
+const PaletteRepairSchema = z
   .object({
     system: PaletteSystemSchema,
     contrastLevel: z.enum(['AA', 'AAA']).default('AA'),
@@ -91,6 +91,65 @@ export const PaletteCandidateSchema = z
     beamWidth: z.number().int().min(1).max(16).default(4),
   })
   .strict();
+export const PaletteCandidateSchema = PaletteRepairSchema.extend({
+  directions: z
+    .array(
+      z
+        .object({
+          id: id.max(64),
+          tokens: z
+            .record(id, cssColor)
+            .refine(
+              (tokens) =>
+                Object.keys(tokens).length >= 1 &&
+                Object.keys(tokens).length <= 64,
+              'Supply 1–64 authored token overrides',
+            ),
+          source: z.array(z.string().min(1).max(512)).min(1).max(16),
+        })
+        .strict(),
+    )
+    .min(2)
+    .max(12)
+    .optional(),
+}).superRefine((request, ctx) => {
+  if (!request.directions) return;
+  if (
+    new Set(request.directions.map((direction) => direction.id)).size !==
+    request.directions.length
+  )
+    ctx.addIssue({
+      code: 'custom',
+      path: ['directions'],
+      message: 'Direction IDs must be unique',
+    });
+  for (const key of ['limit', 'maxAttempts'] as const)
+    if (request[key] < request.directions.length)
+      ctx.addIssue({
+        code: 'custom',
+        path: [key],
+        message: `${key} must allow at least one candidate/attempt per declared direction`,
+      });
+  request.directions.forEach((direction, index) => {
+    for (const [token, value] of Object.entries(direction.tokens)) {
+      if (!Object.hasOwn(request.system.tokens, token))
+        ctx.addIssue({
+          code: 'custom',
+          path: ['directions', index, 'tokens', token],
+          message: `Unknown direction token ${token}`,
+        });
+      if (
+        request.lockedTokens.includes(token) &&
+        value !== request.system.tokens[token]
+      )
+        ctx.addIssue({
+          code: 'custom',
+          path: ['directions', index, 'tokens', token],
+          message: `Direction cannot change locked token ${token}`,
+        });
+    }
+  });
+});
 export type PaletteSystem = z.infer<typeof PaletteSystemSchema>;
 export type PaletteStatus = 'pass' | 'fail' | 'unknown' | 'not-applicable';
 const algorithm =
@@ -663,9 +722,8 @@ function objective(node: SearchNode): PaletteObjective {
 }
 
 /** Bounded joint repair: internal partial states can progress, returned candidates satisfy every known required edge. */
-export function paletteCandidates(input: unknown) {
-  const request = PaletteCandidateSchema.parse(input),
-    cachedConvert = converter(),
+function repairPalette(request: z.infer<typeof PaletteRepairSchema>) {
+  const cachedConvert = converter(),
     base = analyze(request.system, request.contrastLevel, cachedConvert);
   for (const name of [
     ...request.lockedTokens,
@@ -811,6 +869,112 @@ export function paletteCandidates(input: unknown) {
       'Every candidate is checked after sRGB gamut mapping, 8-bit quantization and declared compositing against all role/adjacency edges.',
       'No-role/decorative-only candidates report not-applicable, never an accessibility pass.',
       'Run palette analyze on a candidate system for full role facts under the same measurementRef.',
+    ],
+  };
+}
+
+/** Named whole-palette exploration reuses the same role graph and deterministic
+ * repair. Direction seeds are authored intent, never inferred color meaning. */
+export function paletteCandidates(input: unknown) {
+  const { directions, ...request } = PaletteCandidateSchema.parse(input);
+  if (!directions) return repairPalette(request);
+  const share = (total: number, index: number) =>
+    Math.floor(total / directions.length) +
+    (index < total % directions.length ? 1 : 0);
+  const results = directions.map((direction, index) => ({
+    direction,
+    result: repairPalette({
+      ...request,
+      system: {
+        ...request.system,
+        tokens: { ...request.system.tokens, ...direction.tokens },
+      },
+      maxAttempts: share(request.maxAttempts, index),
+      limit: share(request.limit, index),
+    }),
+  }));
+  const cachedConvert = converter();
+  const seen = new Set<string>();
+  const candidates: (ReturnType<typeof repairPalette>['candidates'][number] & {
+    direction: {
+      id: string;
+      source: string[];
+      authoredChanges: { token: string; before: string; after: string }[];
+    };
+  })[] = [];
+  let crossDirectionDuplicates = 0;
+  // Present one viable option from every direction before further refinements.
+  const maximum = Math.max(
+    ...results.map(({ result }) => result.candidates.length),
+  );
+  for (let round = 0; round < maximum; round++)
+    for (const { direction, result } of results) {
+      const candidate = result.candidates[round];
+      if (!candidate) continue;
+      const identity = hash(
+        Object.fromEntries(
+          Object.entries(candidate.system.tokens).map(([name, value]) => [
+            name,
+            cachedConvert(value).emitted.css,
+          ]),
+        ),
+      );
+      if (seen.has(identity)) {
+        crossDirectionDuplicates++;
+        continue;
+      }
+      seen.add(identity);
+      candidates.push({
+        ...candidate,
+        id: `${direction.id}--${candidate.id}`,
+        direction: {
+          id: direction.id,
+          source: direction.source,
+          authoredChanges: Object.entries(direction.tokens)
+            .filter(([name, value]) => value !== request.system.tokens[name])
+            .map(([token, after]) => ({
+              token,
+              before: request.system.tokens[token]!,
+              after,
+            })),
+        },
+      });
+    }
+  return {
+    candidates,
+    attempted: results.reduce((sum, { result }) => sum + result.attempted, 0),
+    duplicates: results.reduce(
+      (sum, { result }) => sum + result.duplicates,
+      crossDirectionDuplicates,
+    ),
+    maxAttempts: request.maxAttempts,
+    invariantFailedChecks: results[0]!.result.invariantFailedChecks.filter(
+      (id) =>
+        results.every(({ result }) =>
+          result.invariantFailedChecks.includes(id),
+        ),
+    ),
+    termination: 'directions-complete' as const,
+    bestUnresolved: null,
+    exploration: results.map(({ direction, result }, index) => ({
+      id: direction.id,
+      source: direction.source,
+      maxAttempts: share(request.maxAttempts, index),
+      attempted: result.attempted,
+      generated: result.candidates.length,
+      retained: candidates.filter(
+        (candidate) => candidate.direction.id === direction.id,
+      ).length,
+      termination: result.termination,
+      invariantFailedChecks: result.invariantFailedChecks,
+      bestUnresolved: result.bestUnresolved,
+    })),
+    algorithm,
+    notes: [
+      'Named authored directions replace multiple tokens while keeping the same declared role/adjacency graph, contrast level and token locks. No color family or harmony is imposed.',
+      'Finite work and output slots are allocated across all directions before search; one viable candidate per direction is presented before refinements. Emitted-identical palettes are deduplicated.',
+      'direction.authoredChanges records art direction; changes and objective.deltaEOKSum record repair relative to that direction seed, not distance from a universal ideal.',
+      'Each candidate is rechecked after gamut mapping, quantization and declared compositing. Unresolved/failed directions remain in exploration; no global feasibility or aesthetic claim.',
     ],
   };
 }

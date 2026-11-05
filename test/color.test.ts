@@ -30,6 +30,29 @@ const near = (actual: number, expected: number, tolerance = 1e-8) =>
     `${actual} != ${expected}`,
   );
 
+test('short candidate prefixes explore hue before spending every slot on lightness', () => {
+  const seed = {
+    tokens: { canvas: '#ffffff', ink: '#101010', accent: '#009ca6' },
+    roles: [role('body', 'ink', 'canvas')],
+  };
+  const result = colorCandidates(seed, { limit: 6 });
+  assert.equal(result.candidates.length, 6);
+  const reference = describeColor(seed.tokens.accent).oklch.h!;
+  const deviations = result.candidates.map((candidate) => {
+    assert.equal(candidate.system.tokens.canvas, '#ffffff');
+    assert.equal(candidate.system.tokens.ink, '#101010');
+    assert.equal(candidate.analysis.hardConstraintsPass, true);
+    const h = describeColor(candidate.system.tokens.accent!).oklch.h!;
+    return Math.abs(((h - reference + 540) % 360) - 180);
+  });
+  assert.ok(
+    deviations.filter((distance) => distance > 20).length >= 4,
+    JSON.stringify(deviations),
+  );
+  assert.ok(Math.max(...deviations) > 100);
+  assert.deepEqual(colorCandidates(seed, { limit: 6 }), result);
+});
+
 test('WCAG sRGB reference colors and contrast are symmetric, unrounded and correctly classified', () => {
   near(relativeLuminance('#000'), 0);
   near(relativeLuminance('#fff'), 1);

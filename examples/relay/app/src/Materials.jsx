@@ -1,9 +1,15 @@
 import { useEffect } from 'react';
 import { createDomLightController } from './design/dom-light-runtime';
-import surfaces from './design/surface-values.json';
+import generated from './design/surfaces.generated.json';
+import palettes from './design/palette.generated.json';
 import { subscribeFrame } from './clock.mjs';
-export default function Materials({ route, theme, reduced }) {
+export default function Materials({ route, theme, palette, reduced }) {
   useEffect(() => {
+    const paletteId = Object.hasOwn(generated.directions, palette)
+      ? palette
+      : palettes.defaultDirection;
+    const direction = generated.directions[paletteId];
+    const surfaces = direction[theme] ?? direction.dark;
     const style = document.createElement('style');
     style.textContent =
       surfaces.action.cssText +
@@ -18,8 +24,7 @@ export default function Materials({ route, theme, reduced }) {
     ]) {
       const element = document.querySelector(`[data-testid="${id}"]`);
       if (!element) continue;
-      const recipe =
-        surfaces[(theme === 'light' ? 'light-' : '') + name] ?? surfaces[name];
+      const recipe = surfaces[name];
       const controller = createDomLightController(
         /** @type {HTMLElement} */ (element),
         recipe,
@@ -63,12 +68,15 @@ export default function Materials({ route, theme, reduced }) {
         status: controller.status,
         stats: controller.stats,
         renderer: controller.renderer,
+        palette: paletteId,
+        theme,
+        baseColor: surfaces[name].input.baseColor,
       }));
     return () => {
       cleanups.forEach((fn) => fn());
       style.remove();
       delete globalThis.__RELAY_MATERIALS__;
     };
-  }, [route, theme, reduced]);
+  }, [route, theme, palette, reduced]);
   return null;
 }
