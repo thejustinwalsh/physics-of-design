@@ -119,6 +119,14 @@ async function main() {
             ...fullResult,
             pointer: '/workflow',
           };
+        if (command === 'palette candidates')
+          for (const [index, candidate] of (
+            view.summary as { candidates: Record<string, unknown>[] }
+          ).candidates.entries())
+            candidate.system = {
+              ...fullResult,
+              pointer: `/candidates/${index}/system`,
+            };
       }
       process.stdout.write(
         JSON.stringify({

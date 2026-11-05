@@ -3,6 +3,64 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { ResultStore, summarizeResult } from '../src/mcp-context.js';
 
+test('palette summaries preserve exact reusable systems without duplicating role graphs', () => {
+  const large = 'retained role provenance'.repeat(300);
+  const system = {
+    tokens: { canvas: '#ffffff', ink: '#101010', accent: '#603ab0' },
+    roles: [{ id: 'body', source: [large] }],
+  };
+  const result = {
+    attempted: 12,
+    termination: 'limit',
+    candidates: Array.from({ length: 8 }, (_, i) => ({
+      id: `palette-${i}`,
+      system,
+      objective: { changedTokens: 0 },
+      measurementRef: `facts-${i}`,
+    })),
+  };
+  const store = new ResultStore();
+  const ref = store.put(result)!;
+  const summary: any = summarizeResult(
+    'palette candidates',
+    result,
+    ref,
+  ).summary;
+  assert.equal(summary.candidates.length, 6);
+  assert.equal(summary.omittedCandidates, 2);
+  assert.deepEqual(summary.candidates[0].tokenPreview, system.tokens);
+  assert.deepEqual(store.resolve(summary.candidates[0].system), system);
+  assert.ok(!JSON.stringify(summary).includes(large));
+  assert.ok(JSON.stringify(summary).length < JSON.stringify(result).length / 5);
+  assert.equal(
+    (summarizeResult('palette candidates', result, null).summary as any)
+      .candidates[0].system,
+    null,
+  );
+  const expanded = {
+    candidates: [
+      {
+        system: {
+          tokens: Object.fromEntries(
+            Array.from({ length: 20 }, (_, i) => [
+              `token-${i}`,
+              'x'.repeat(512),
+            ]),
+          ),
+        },
+      },
+    ],
+  };
+  const bounded: any = summarizeResult(
+    'palette candidates',
+    expanded,
+    'pod:1',
+  ).summary;
+  assert.equal(Object.keys(bounded.candidates[0].tokenPreview).length, 16);
+  assert.equal(bounded.candidates[0].omittedTokens, 4);
+  assert.equal(bounded.candidates[0].truncatedTokens.length, 16);
+});
+
 test('geometry summaries expose bounded consequences without repeating full regime receipts', () => {
   const large = 'full retained provenance'.repeat(1000);
   const output = {

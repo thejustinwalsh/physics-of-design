@@ -738,13 +738,35 @@ export function summarizeResult(
         attempted: direction.attempted,
         termination: direction.termination,
       })),
-      candidates: rows(r.candidates).map((c) => ({
-        id: c.id,
-        direction: record(c.direction).id,
-        system: c.system,
-        objective: c.objective,
-        measurementRef: c.measurementRef,
-      })),
+      candidates: rows(r.candidates)
+        .slice(0, 6)
+        .map((c, index) => {
+          const tokens = Object.entries(record(record(c.system).tokens));
+          return {
+            id: c.id,
+            direction: record(c.direction).id,
+            tokenPreview: Object.fromEntries(
+              tokens
+                .slice(0, 16)
+                .map(([name, color]) => [name, String(color).slice(0, 128)]),
+            ),
+            omittedTokens: Math.max(0, tokens.length - 16),
+            truncatedTokens: tokens
+              .slice(0, 16)
+              .filter(([, color]) => String(color).length > 128)
+              .map(([name]) => name),
+            system: resultRef
+              ? {
+                  $designRef: resultRef,
+                  pointer: `/candidates/${index}/system`,
+                }
+              : null,
+            objective: c.objective,
+            measurementRef: c.measurementRef,
+          };
+        }),
+      omittedCandidates: Math.max(0, rows(r.candidates).length - 6),
+      note: 'Token previews are bounded display data. Pass the exact system reference to downstream commands; full role/adjacency graphs remain in the retained result.',
       capabilities: r.capabilities,
     };
   else if (command === 'training export')

@@ -6,6 +6,136 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
+import {
+  snapshotVerificationSources,
+  verificationSourceFields,
+} from '../scripts/verification-sources.mjs';
+
+test('palette compact CLI/MCP references retain exact role graphs without repeated context', async () => {
+  const before = snapshotVerificationSources(process.cwd());
+  const directory = 'artifacts/palette-context';
+  await mkdir(directory, { recursive: true });
+  const input = {
+    system: {
+      tokens: { canvas: '#fff', ink: '#101010', accent: '#603ab0' },
+      roles: Array.from({ length: 64 }, (_, i) => ({
+        id: `body-${i}`,
+        foreground: 'ink',
+        background: 'canvas',
+        use: 'text',
+        state: `state-${i}`,
+        source: [
+          'test:declared role graph; not sixty-four independent accessibility findings',
+        ],
+      })),
+    },
+    limit: 6,
+  };
+  await writeFile(`${directory}/input.json`, JSON.stringify(input) + '\n');
+  const run = promisify(execFile);
+  const cli = await run(process.execPath, [
+    'dist/cli.js',
+    'palette',
+    'candidates',
+    '--input',
+    `${directory}/input.json`,
+    '--output',
+    `${directory}/full.json`,
+    '--summary',
+  ]);
+  const compact = JSON.parse(cli.stdout);
+  const fullBytes = await readFile(`${directory}/full.json`, 'utf8');
+  const full = JSON.parse(fullBytes);
+  assert.equal(
+    compact.summary.candidates[0].system.pointer,
+    '/candidates/0/system',
+  );
+  await writeFile(
+    `${directory}/analyze-input.json`,
+    JSON.stringify({ system: compact.summary.candidates[0].system }) + '\n',
+  );
+  const replay = await run(process.execPath, [
+    'dist/cli.js',
+    'palette',
+    'analyze',
+    '--input',
+    `${directory}/analyze-input.json`,
+    '--resolve-file-refs',
+  ]);
+  const cliFacts = JSON.parse(replay.stdout);
+  assert.equal(cliFacts.measurementRef, full.candidates[0].measurementRef);
+  const client = new Client({ name: 'palette-context-proof', version: '1' });
+  try {
+    await client.connect(
+      new StdioClientTransport({
+        command: process.execPath,
+        args: ['dist/cli.js', 'mcp'],
+        cwd: process.cwd(),
+        env: { ...process.env, DESIGN_MCP_PROFILE: 'compact' },
+      }),
+    );
+    assert.equal((await client.listTools()).tools.length, 3);
+    const catalog = await client.callTool({
+      name: 'design_catalog',
+      arguments: { command: 'palette candidates' },
+    });
+    assert.ok(!catalog.isError);
+    const generated = await client.callTool({
+      name: 'design_execute',
+      arguments: { command: 'palette candidates', input },
+    });
+    assert.ok(!generated.isError);
+    const summary: any = generated.structuredContent!.summary;
+    assert.deepEqual(
+      summary.candidates[0].tokenPreview,
+      compact.summary.candidates[0].tokenPreview,
+    );
+    const actual = await client.callTool({
+      name: 'design_execute',
+      arguments: {
+        command: 'palette analyze',
+        input: { system: summary.candidates[0].system },
+        response: 'full',
+      },
+    });
+    assert.ok(!actual.isError);
+    assert.deepEqual(actual.structuredContent, cliFacts);
+    const receipt = {
+      ...verificationSourceFields(
+        before,
+        snapshotVerificationSources(process.cwd()),
+      ),
+      scope:
+        'Deterministic palette protocol reuse, not neural calls, token savings, renderer or aesthetic verification.',
+      schemaFetches: 1,
+      mcpTools: 3,
+      roles: input.system.roles.length,
+      candidates: full.candidates.length,
+      fullResultBytes: Buffer.byteLength(fullBytes),
+      cliSummaryBytes: Buffer.byteLength(cli.stdout),
+      mcpSummaryBytes: Buffer.byteLength(
+        JSON.stringify(generated.structuredContent),
+      ),
+      cliReferenceRequestBytes: Buffer.byteLength(
+        JSON.stringify({ system: compact.summary.candidates[0].system }),
+      ),
+      mcpReferenceRequestBytes: Buffer.byteLength(
+        JSON.stringify({ system: summary.candidates[0].system }),
+      ),
+      measurementRef: cliFacts.measurementRef,
+      exactEquivalent: true,
+    };
+    assert.equal(receipt.sourceStable, true);
+    assert.ok(receipt.cliSummaryBytes < receipt.fullResultBytes / 5);
+    assert.ok(receipt.mcpSummaryBytes < receipt.fullResultBytes / 5);
+    await writeFile(
+      `${directory}/receipt.json`,
+      JSON.stringify(receipt, null, 2) + '\n',
+    );
+  } finally {
+    await client.close();
+  }
+});
 
 test('compact MCP discovers one schema and reuses exact states without repeated input context', async () => {
   const client = new Client({ name: 'compact-context-test', version: '1' });

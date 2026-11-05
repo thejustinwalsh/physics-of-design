@@ -1,5 +1,7 @@
 # Compact CLI receipts
 
+`palette candidates` compact responses show up to six candidates with bounded `tokenPreview` data (16 tokens, 128 characters per value), explicit omission/truncation counts, and exact `system` references. Pass those references into downstream inputs; do not reconstruct a role graph from swatches. CLI references use the hash-bound output file and MCP references stay in the active session. Full JSON is unchanged. Existing summary consumers should follow the [dated migration](../codemods/2026-11-05-palette-summary-references/instructions.md).
+
 The CLI retains full JSON by default. Agents can fetch one input schema without running a command or reading stdin, then keep large results on disk while reading a compact summary:
 
 ```sh

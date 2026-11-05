@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-11-05-palette-summary-references",
+  "created": "2026-11-05",
+  "package": "@design-theory/toolkit",
+  "from": "palette candidates compact summaries on remote main at 4202b9b8f9d00b487ef6442af530f8ee8dce6e2f",
+  "to": "bounded token previews and exact retained-system references",
+  "summary": "Keep full palette role graphs outside compact CLI/MCP context while preserving exact downstream inputs.",
+  "instructions": "./instructions.md",
+  "transform": "./transform.mjs",
+  "changes": [
+    {
+      "kind": "manual",
+      "from": "compact.summary.candidates[i].system.tokens",
+      "to": "compact.summary.candidates[i].tokenPreview for display; exact system reference for downstream input",
+      "automatic": false
+    },
+    {
+      "kind": "manual",
+      "from": "all candidates and token strings assumed present in compact summary",
+      "to": "honor omittedCandidates, omittedTokens and truncatedTokens; use full result for omitted content",
+      "automatic": false
+    }
+  ],
+  "verification": [
+    "npm run test:migrations",
+    "npm run build",
+    "npx tsx --test test/context.test.ts test/context.integration.ts"
+  ]
+}
