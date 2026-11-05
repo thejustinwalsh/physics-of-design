@@ -5,6 +5,10 @@ import { fileURLToPath } from 'node:url';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { chromium, webkit } from 'playwright';
 import {
+  resolveRelayFrame,
+  inspectRelayFrame,
+} from '../examples/relay/app/src/design/layout-policy.mjs';
+import {
   snapshotVerificationSources,
   verificationSourceFields,
 } from './verification-sources.mjs';
@@ -500,6 +504,123 @@ export async function proveRelayWeb() {
               assert.equal(r.savedViews.length, 2);
             });
 
+            if (form === 'desktop')
+              await step(
+                'calculated regime boundaries and interiors reach the actual renderer',
+                async () => {
+                  const validations = [];
+                  await page.setViewportSize({ width: 1920, height: 1080 });
+                  await click('nav-settings');
+                  await click('settings-long-text');
+                  for (const scale of [1, 1.5]) {
+                    await choose('settings-text', String(scale));
+                    for (const theme of ['dark', 'light']) {
+                      await choose('settings-theme', theme);
+                      const baseline = await capture();
+                      const frame = resolveRelayFrame(baseline.geometry.inputs);
+                      const maps = ['workWidth', 'columns'].map(
+                        (output) => inspectRelayFrame(frame, output).regimes,
+                      );
+                      const widths = [
+                        ...new Set(maps.flatMap((map) => map.validationInputs)),
+                      ].sort((a, b) => a - b);
+                      await click('nav-overview');
+                      for (const requestedWidth of widths) {
+                        await page.evaluate((width) => {
+                          document.getElementById('root').style.width =
+                            `${width}px`;
+                        }, requestedWidth);
+                        // CSS layout may quantize a requested fractional width. Bind the
+                        // calculation to observed local content width, not the request.
+                        await page.waitForFunction(() => {
+                          const receipt = globalThis.__RELAY_CAPTURE__();
+                          return (
+                            receipt?.measuredRoot?.status === 'current' &&
+                            Math.abs(
+                              receipt.measuredRoot.width -
+                                document
+                                  .getElementById('root')
+                                  .getBoundingClientRect().width,
+                            ) < 0.02
+                          );
+                        });
+                        const receipt = await capture();
+                        const observed = await page.evaluate(() => {
+                          const main = document.querySelector(
+                            '[data-testid="relay-workspace"]',
+                          );
+                          const style = getComputedStyle(main);
+                          return {
+                            contentWidth:
+                              main.getBoundingClientRect().width -
+                              parseFloat(style.paddingLeft) -
+                              parseFloat(style.paddingRight),
+                            direction: getComputedStyle(
+                              document.querySelector(
+                                '[data-testid="relay-comparison-charts"]',
+                              ),
+                            ).flexDirection,
+                            documentWidth: document.documentElement.scrollWidth,
+                            viewportWidth: innerWidth,
+                          };
+                        });
+                        assert.equal(
+                          observed.direction,
+                          receipt.geometry.values.columns === 1
+                            ? 'column'
+                            : 'row',
+                        );
+                        assert.ok(
+                          Math.abs(
+                            observed.contentWidth -
+                              receipt.geometry.values.workWidth,
+                          ) < 0.6,
+                          JSON.stringify({
+                            requestedWidth,
+                            observed,
+                            geometry: receipt.geometry,
+                          }),
+                        );
+                        assert.ok(
+                          observed.documentWidth <= observed.viewportWidth + 1,
+                        );
+                        validations.push({
+                          scale,
+                          theme,
+                          requestedWidth,
+                          observedWidth: receipt.measuredRoot.width,
+                          columns: receipt.geometry.values.columns,
+                          observed,
+                        });
+                      }
+                      await page.evaluate(() =>
+                        document
+                          .getElementById('root')
+                          .style.removeProperty('width'),
+                      );
+                      await click('nav-settings');
+                    }
+                  }
+                  await writeFile(
+                    path.join(output, `${scenario.id}-regime-validation.json`),
+                    JSON.stringify(
+                      {
+                        validations,
+                        scope:
+                          'Finite actual renderer samples derived from expression regime brackets/interiors; no continuous renderer guarantee.',
+                      },
+                      null,
+                      2,
+                    ),
+                  );
+                  return {
+                    samples: validations.length,
+                    scope:
+                      'Actual finite geometry checks; all other content and platform conditions remain separate obligations.',
+                  };
+                },
+              );
+
             assert.equal(errors.length, 0, errors.join('\n'));
           } catch (error) {
             report.failures.push({
@@ -514,6 +635,8 @@ export async function proveRelayWeb() {
         await browser.close();
       }
     }
+  } catch (error) {
+    report.failures.push({ phase: 'runner', message: String(error) });
   } finally {
     await new Promise((resolve) => server.close(resolve));
     Object.assign(
@@ -526,6 +649,7 @@ export async function proveRelayWeb() {
     report.passed =
       report.sourceStable &&
       report.failures.length === 0 &&
+      report.scenarios.length === 6 &&
       report.scenarios.every(
         (scenario) =>
           scenario.steps.length > 0 &&
