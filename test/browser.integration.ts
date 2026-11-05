@@ -8,7 +8,14 @@ import { perturb } from '../dist/graph.js';
 import { relax } from '../dist/search.js';
 import { proofHtml } from '../dist/emission.js';
 import { chromium, webkit } from 'playwright';
+import { transformAsync } from '@babel/core';
+import stylexPlugin from '@stylexjs/babel-plugin';
+import { planBento } from '../dist/bento.js';
 import { build } from 'esbuild';
+import {
+  snapshotVerificationSources,
+  verificationSourceFields,
+} from '../scripts/verification-sources.mjs';
 import { hash } from '../dist/identity.js';
 import {
   resolveOutputBindings,
@@ -19,6 +26,181 @@ import { resolveLayout } from '../dist/responsive.js';
 import { analyzeMediaFile } from '../dist/media.js';
 const hero = () =>
   parseState(JSON.parse(readFileSync('examples/hero.json', 'utf8')));
+
+for (const engine of [chromium, webkit])
+  test(
+    `${engine.name()} bento StyleX agrees with predicted flex boxes across widths, RTL and enlarged changed content`,
+    { timeout: 120000 },
+    async () => {
+      const before = snapshotVerificationSources(process.cwd());
+      const browser = await engine.launch({ headless: true });
+      try {
+        const page = await browser.newPage();
+        const cases = [];
+        for (const width of [0.5, 320, 390, 768, 834, 1440, 1920])
+          for (const scale of [1, 2])
+            for (const direction of ['ltr', 'rtl'] as const) {
+              const tiny = width < 1;
+              const height = tiny ? 0.5 : 1200 * scale;
+              const input = {
+                width,
+                height,
+                gap: tiny ? 0 : 16,
+                unit: 'css-px',
+                direction,
+                regions: Array.from({ length: tiny ? 2 : 4 }, (_, i) => ({
+                  id: `surface-${i}`,
+                  minWidth: tiny ? 0.001 : 160 * scale,
+                  minHeight: tiny ? 0.001 : 150 * scale,
+                  basis: 'authored',
+                  source: [
+                    'test:conservative content minima, not native measurement',
+                  ],
+                  aspect: {
+                    min: 0.8,
+                    max: 2.5,
+                    source: ['test:brief proportions'],
+                  },
+                  areaWeight: [3, 2, 1, 1][i],
+                })),
+              };
+              const result = planBento(input);
+              assert.equal(result.status, 'proposed');
+              for (const candidate of result.candidates.slice(0, 2)) {
+                const emitted = candidate.styles;
+                assert.ok(emitted.stylex.source);
+                assert.equal(emitted.reactNative.source, null);
+                const source = `${emitted.stylex.source}
+import React from 'react';import {createRoot} from 'react-dom/client';import {flushSync} from 'react-dom';
+const tree=${JSON.stringify(candidate.tree)}, keys=${JSON.stringify(emitted.styleKeys)};
+function frame(node,path='root') {return React.createElement('section',{...stylex.props(styles[keys[path]]),'data-node':path,'data-region':node.kind==='region'?node.id:undefined},node.kind==='split'?node.children.map((child,i)=>React.cloneElement(frame(child,path+'.'+i),{key:i})):${tiny}?null:React.createElement('div',{className:'card'},React.createElement('strong',null,node.id+' · incident response'),React.createElement('p',null,${JSON.stringify(scale === 2 ? 'Changed content: Checkout-api needs a closer investigation after the connection pool saturated during this synthetic incident.' : 'Checkout-api · 1,850 ms p95 · synthetic incident')},),React.createElement('span',null,'Target 450 ms · Open investigation →')));}
+const root=createRoot(document.getElementById('app'));flushSync(()=>root.render(frame(tree)));export const dispose=()=>root.unmount();`;
+                const compiled = await transformAsync(source, {
+                  filename: 'bento-specimen.jsx',
+                  babelrc: false,
+                  configFile: false,
+                  plugins: [
+                    [stylexPlugin, { dev: false, runtimeInjection: true }],
+                  ],
+                });
+                assert.ok(compiled?.code);
+                const bundled = await build({
+                  stdin: {
+                    contents: compiled.code,
+                    resolveDir: process.cwd(),
+                    sourcefile: 'bento-specimen.jsx',
+                  },
+                  bundle: true,
+                  format: 'iife',
+                  globalName: 'BentoSpecimen',
+                  platform: 'browser',
+                  write: false,
+                  define: { 'process.env.NODE_ENV': '"production"' },
+                });
+                await page.evaluate('globalThis.BentoSpecimen?.dispose()');
+                await page.setViewportSize({
+                  width: Math.ceil(width),
+                  height: Math.ceil(height + 16),
+                });
+                await page.setContent(
+                  `<style>body{margin:0;font:${14 * scale}px/${1.4} system-ui}.card{box-sizing:border-box;padding:12px;min-width:0}p{margin:8px 0}</style><div id="app"></div>`,
+                );
+                await page.addScriptTag({
+                  content: bundled.outputFiles[0]!.text,
+                });
+                const actual = await page.evaluate(() =>
+                  [...document.querySelectorAll('[data-region]')].map(
+                    (element) => {
+                      const b = element.getBoundingClientRect();
+                      return {
+                        id: element.getAttribute('data-region'),
+                        box: {
+                          x: b.x,
+                          y: b.y,
+                          width: b.width,
+                          height: b.height,
+                        },
+                        scrollWidth: element.scrollWidth,
+                        scrollHeight: element.scrollHeight,
+                        clientWidth: element.clientWidth,
+                        clientHeight: element.clientHeight,
+                      };
+                    },
+                  ),
+                );
+                const expected = candidate.consequences.boxes;
+                assert.deepEqual(
+                  actual.map((item) => item.id),
+                  expected.map((item) => item.id),
+                );
+                for (const [index, item] of actual.entries()) {
+                  for (const key of ['x', 'y', 'width', 'height'] as const)
+                    assert.ok(
+                      Math.abs(item.box[key] - expected[index]!.box[key]) <
+                        (tiny ? 0.02 : 1),
+                      JSON.stringify({
+                        engine: engine.name(),
+                        width,
+                        scale,
+                        direction,
+                        id: item.id,
+                        key,
+                        expected: expected[index]!.box,
+                        actual: item.box,
+                      }),
+                    );
+                  assert.ok(
+                    item.scrollWidth <= item.clientWidth + 1,
+                    'Changed text must not overflow horizontally',
+                  );
+                  assert.ok(
+                    item.scrollHeight <= item.clientHeight + 1,
+                    'Changed text must not be clipped vertically',
+                  );
+                }
+                cases.push({
+                  identity: result.identity,
+                  renderedInputIdentity: hash({
+                    source,
+                    width,
+                    height,
+                    scale,
+                    direction,
+                    font: 'system-ui',
+                  }),
+                  width,
+                  scale,
+                  direction,
+                  candidate: candidate.id,
+                  expected,
+                  actual,
+                });
+              }
+            }
+        await page.evaluate('globalThis.BentoSpecimen?.dispose()');
+        const { mkdir, writeFile } = await import('node:fs/promises');
+        await mkdir('artifacts/bento', { recursive: true });
+        await writeFile(
+          `artifacts/bento/${engine.name()}-flex.json`,
+          JSON.stringify(
+            {
+              ...verificationSourceFields(
+                before,
+                snapshotVerificationSources(process.cwd()),
+              ),
+              scope:
+                'Actual compiled React/StyleX flex geometry and content fit at declared widths, RTL and enlarged changed copy. No native or preference evidence.',
+              cases,
+            },
+            null,
+            2,
+          ) + '\n',
+        );
+      } finally {
+        await browser.close();
+      }
+    },
+  );
 
 for (const engine of [chromium, webkit])
   test(

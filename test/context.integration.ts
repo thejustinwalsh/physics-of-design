@@ -319,3 +319,134 @@ test('geometry analysis uses the same CLI/MCP contract and a retained applicatio
     await client.close();
   }
 });
+
+test('bento compact CLI/MCP placement references feed the existing wireframe inspector exactly', async () => {
+  const before = snapshotVerificationSources(process.cwd());
+  const directory = 'artifacts/bento/context';
+  await mkdir(directory, { recursive: true });
+  const input = {
+    width: 1440,
+    mode: 'app',
+    bento: {
+      height: 800,
+      unit: 'css-px',
+      regions: Array.from({ length: 4 }, (_, i) => ({
+        id: `region-${i}`,
+        minWidth: 180,
+        minHeight: 100,
+        basis: 'authored',
+        source: ['test:brief minima'],
+        areaWeight: [3, 2, 1, 1][i],
+        aspect: {
+          min: 0.8,
+          max: 2.5,
+          source: ['test:authored proportion band'],
+        },
+      })),
+    },
+  };
+  await writeFile(`${directory}/input.json`, JSON.stringify(input));
+  const run = promisify(execFile);
+  const cli = await run(process.execPath, [
+    'dist/cli.js',
+    'composition',
+    'plan',
+    '--input',
+    `${directory}/input.json`,
+    '--output',
+    `${directory}/full.json`,
+    '--summary',
+  ]);
+  const compact = JSON.parse(cli.stdout),
+    fullBytes = await readFile(`${directory}/full.json`, 'utf8'),
+    full = JSON.parse(fullBytes);
+  const placement = compact.summary.bento.candidates[0].placement;
+  assert.equal(placement.pointer, '/bento/candidates/0');
+  const wireframe = { ...placement, pointer: placement.pointer + '/wireframe' };
+  await writeFile(
+    `${directory}/inspect-input.json`,
+    JSON.stringify({ wireframe, interactive: false }),
+  );
+  const inspected = await run(process.execPath, [
+    'dist/cli.js',
+    'wireframe',
+    'inspect',
+    '--input',
+    `${directory}/inspect-input.json`,
+    '--resolve-file-refs',
+  ]);
+  const cliFacts = JSON.parse(inspected.stdout);
+  const client = new Client({ name: 'bento-context-proof', version: '1' });
+  try {
+    await client.connect(
+      new StdioClientTransport({
+        command: process.execPath,
+        args: ['dist/cli.js', 'mcp'],
+        cwd: process.cwd(),
+        env: { ...process.env, DESIGN_MCP_PROFILE: 'compact' },
+      }),
+    );
+    assert.equal((await client.listTools()).tools.length, 3);
+    const schema = await client.callTool({
+      name: 'design_catalog',
+      arguments: { command: 'composition plan' },
+    });
+    assert.ok(!schema.isError);
+    const generated = await client.callTool({
+      name: 'design_execute',
+      arguments: { command: 'composition plan', input },
+    });
+    assert.ok(!generated.isError);
+    const summary: any = generated.structuredContent!.summary;
+    assert.equal(summary.bento.identity, full.bento.identity);
+    const reference = summary.bento.candidates[0].placement;
+    const actual = await client.callTool({
+      name: 'design_execute',
+      arguments: {
+        command: 'wireframe inspect',
+        input: {
+          wireframe: {
+            ...reference,
+            pointer: reference.pointer + '/wireframe',
+          },
+          interactive: false,
+        },
+        response: 'full',
+      },
+    });
+    assert.ok(!actual.isError);
+    assert.deepEqual(actual.structuredContent, cliFacts);
+    assert.deepEqual(
+      cliFacts.nodes.map((node: any) => node.box),
+      full.bento.candidates[0].consequences.boxes.map((node: any) => node.box),
+    );
+    const receipt = {
+      ...verificationSourceFields(
+        before,
+        snapshotVerificationSources(process.cwd()),
+      ),
+      scope:
+        'Exact proposed placement/inspection reuse and transport bytes; not model token savings, actual renderer, preference, or neural selection.',
+      schemaFetches: 1,
+      mcpTools: 3,
+      selectorCalls: 0,
+      identity: full.bento.identity,
+      candidates: full.bento.candidates.length,
+      fullResultBytes: Buffer.byteLength(fullBytes),
+      cliSummaryBytes: Buffer.byteLength(cli.stdout),
+      mcpSummaryBytes: Buffer.byteLength(
+        JSON.stringify(generated.structuredContent),
+      ),
+      exactEquivalent: true,
+    };
+    assert.equal(receipt.sourceStable, true);
+    assert.ok(receipt.mcpSummaryBytes < receipt.fullResultBytes / 5);
+    assert.ok(receipt.cliSummaryBytes < receipt.fullResultBytes / 5);
+    await writeFile(
+      `${directory}/receipt.json`,
+      JSON.stringify(receipt, null, 2) + '\n',
+    );
+  } finally {
+    await client.close();
+  }
+});

@@ -727,7 +727,36 @@ export function summarizeResult(
       })),
       scope: r.scope,
     };
-  else if (command === 'palette candidates')
+  else if (command === 'composition plan' && r.bento) {
+    const bento = record(r.bento);
+    summary = {
+      contentWidth: r.contentWidth,
+      gap: r.gap,
+      navigation: r.navigation,
+      columns: r.columns,
+      bento: {
+        identity: bento.identity,
+        status: bento.status,
+        statistics: bento.statistics,
+        candidates: rows(bento.candidates)
+          .slice(0, 6)
+          .map((candidate, index) => ({
+            id: candidate.id,
+            policy: candidate.policy,
+            costs: record(candidate.consequences).costs,
+            placement: resultRef
+              ? { $designRef: resultRef, pointer: `/bento/candidates/${index}` }
+              : null,
+          })),
+        omittedCandidates: Math.max(0, rows(bento.candidates).length - 6),
+        program:
+          resultRef && bento.program
+            ? { $designRef: resultRef, pointer: '/bento/program' }
+            : null,
+        scope: bento.scope,
+      },
+    };
+  } else if (command === 'palette candidates')
     summary = {
       attempted: r.attempted,
       duplicates: r.duplicates,

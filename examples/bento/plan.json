@@ -1,0 +1,102 @@
+{
+  "width": 1440,
+  "mode": "app",
+  "density": 1,
+  "bento": {
+    "height": 920,
+    "unit": "css-px",
+    "identity": {
+      "brief": "examples/bento/DESIGN.md:v1",
+      "content": "synthetic incident dashboard:v1"
+    },
+    "regions": [
+      {
+        "id": "incident-feed",
+        "minWidth": 280,
+        "minHeight": 240,
+        "basis": "authored",
+        "source": [
+          "examples/bento/DESIGN.md:synthetic content requirements; remeasure actual content"
+        ],
+        "areaWeight": 3,
+        "aspect": {
+          "min": 0.7,
+          "max": 2.4,
+          "source": [
+            "examples/bento/DESIGN.md:editable preferred shape band"
+          ]
+        }
+      },
+      {
+        "id": "service-health",
+        "minWidth": 220,
+        "minHeight": 200,
+        "basis": "authored",
+        "source": [
+          "examples/bento/DESIGN.md:synthetic content requirements; remeasure actual content"
+        ],
+        "areaWeight": 2,
+        "aspect": {
+          "min": 0.7,
+          "max": 2.4,
+          "source": [
+            "examples/bento/DESIGN.md:editable preferred shape band"
+          ]
+        }
+      },
+      {
+        "id": "latency",
+        "minWidth": 220,
+        "minHeight": 180,
+        "basis": "authored",
+        "source": [
+          "examples/bento/DESIGN.md:synthetic content requirements; remeasure actual content"
+        ],
+        "areaWeight": 2,
+        "aspect": {
+          "min": 0.7,
+          "max": 2.4,
+          "source": [
+            "examples/bento/DESIGN.md:editable preferred shape band"
+          ]
+        }
+      },
+      {
+        "id": "deployments",
+        "minWidth": 180,
+        "minHeight": 160,
+        "basis": "authored",
+        "source": [
+          "examples/bento/DESIGN.md:synthetic content requirements; remeasure actual content"
+        ],
+        "areaWeight": 1,
+        "aspect": {
+          "min": 0.7,
+          "max": 2.4,
+          "source": [
+            "examples/bento/DESIGN.md:editable preferred shape band"
+          ]
+        }
+      }
+    ],
+    "adjacency": [
+      {
+        "first": "incident-feed",
+        "second": "service-health",
+        "maxGap": 40,
+        "source": [
+          "examples/bento/DESIGN.md:investigation context"
+        ]
+      }
+    ],
+    "gapCoverage": {
+      "min": 0.02,
+      "max": 0.16,
+      "source": [
+        "examples/bento/DESIGN.md:editable whitespace band"
+      ]
+    },
+    "maxEvaluations": 512,
+    "limit": 6
+  }
+}

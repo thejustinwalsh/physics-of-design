@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import { BentoOptionsSchema, planBento } from './bento.js';
+import { hash } from './identity.js';
 
 export const CompositionPlanSchema = z
   .object({
@@ -9,6 +11,7 @@ export const CompositionPlanSchema = z
     expression: z.number().finite().min(0.7).max(1.4).default(1),
     readingSize: z.number().finite().min(17).max(28).default(20),
     readingLeading: z.number().finite().min(1.3).max(2).default(1.55),
+    bento: BentoOptionsSchema.optional(),
   })
   .strict();
 
@@ -39,6 +42,27 @@ export function planComposition(input: z.input<typeof CompositionPlanSchema>) {
   const displaySize = display * expression;
   return {
     request,
+    ...(request.bento
+      ? {
+          bento: planBento({
+            ...request.bento,
+            width: contentWidth,
+            gap,
+            identity: {
+              ...request.bento.identity,
+              'composition-plan': hash({
+                width,
+                textScale,
+                density,
+                expression,
+                mode,
+                readingSize: request.readingSize,
+                readingLeading: request.readingLeading,
+              }),
+            },
+          }),
+        }
+      : {}),
     gutter,
     gap,
     sidebarWidth,

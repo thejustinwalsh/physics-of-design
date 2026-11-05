@@ -127,6 +127,23 @@ async function main() {
               ...fullResult,
               pointer: `/candidates/${index}/system`,
             };
+        if (command === 'composition plan' && r.bento) {
+          const bento = (
+            view.summary as {
+              bento: {
+                program: unknown;
+                candidates: Record<string, unknown>[];
+              };
+            }
+          ).bento;
+          if ((r.bento as { program: unknown }).program)
+            bento.program = { ...fullResult, pointer: '/bento/program' };
+          for (const [index, candidate] of bento.candidates.entries())
+            candidate.placement = {
+              ...fullResult,
+              pointer: `/bento/candidates/${index}`,
+            };
+        }
       }
       process.stdout.write(
         JSON.stringify({
