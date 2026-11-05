@@ -96,7 +96,10 @@ import {
   MotionEmitSchema,
   emitMotion,
 } from './motion.js';
-import { CompositionPlanSchema, planComposition } from './composition-plan.js';
+import {
+  CompositionAuthoringSchema,
+  planCompositionWithBento,
+} from './composition-authoring.js';
 import { AppleAuditSchema, auditAppleHig } from './apple-hig.js';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -216,7 +219,7 @@ export const commandSchemas = {
   'motion analyze': MotionAnalyzeSchema,
   'motion candidates': MotionCandidatesSchema,
   'motion emit': MotionEmitSchema,
-  'composition plan': CompositionPlanSchema,
+  'composition plan': CompositionAuthoringSchema,
   'platform audit': AppleAuditSchema,
   'color analyze': z
     .object({
@@ -437,7 +440,7 @@ export async function execute(
       case 'motion emit':
         return emitMotion(commandSchemas[command].parse(input));
       case 'composition plan':
-        return planComposition(commandSchemas[command].parse(input));
+        return planCompositionWithBento(commandSchemas[command].parse(input));
       case 'platform audit':
         return auditAppleHig(input);
       case 'training export':

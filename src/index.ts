@@ -21,6 +21,7 @@ export * from './design-color.js';
 export * from './tuning.js';
 
 export * from './composition-plan.js';
+export * from './composition-authoring.js';
 export * from './bento.js';
 export * from './apple-hig.js';
 

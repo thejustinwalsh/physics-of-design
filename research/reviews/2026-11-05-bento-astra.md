@@ -13,3 +13,8 @@ The reviewer also requested meaningful unit-bearing dimensions for the existing 
 Follow-up static review found the fixes coherent and no further correctness blocker. It did not verify native parity, interactions, motion or aesthetic quality.
 
 Root verification, retained outside model context: `artifacts/bento-affected-current.log`, `artifacts/bento/context/receipt.json`, `artifacts/bento/{chromium,webkit}-flex.json`, and `artifacts/bento-browser-corrected.log`. Initial local browser launches failed under sandbox Mach-port restrictions; the same checks ran with reviewed browser execution permissions. Two corrected browser tests passed, with 52 current renderer cases each, including subpixel, six ordinary widths, RTL and enlarged changed content. Exact CLI/MCP placement references produced identical proposed wireframe-inspector facts. These facts do not prove native Yoga parity, task accessibility, token advantage or visual preference.
+
+
+## Ordered-lane correction
+
+The full 142752f verification failed after focused checks passed: adding bento search to the historically portable `composition-plan` module pulled Node crypto into Fieldwork and gallery browser/native consumers. Their builds failed, then dependent gallery proofs lacked output. `planComposition` and its original schema are now portable again; Node-only `CompositionAuthoringSchema`/`planCompositionWithBento` implement the extended CLI contract. A browser bundling regression checks that authoring/search/hash dependencies stay outside the portable entry. Actual Fieldwork and gallery build commands passed locally after this fix. The failed CI logs remain historical evidence; no green whole-system result is inferred from the narrower rebuilds.

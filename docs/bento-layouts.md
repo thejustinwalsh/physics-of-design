@@ -1,5 +1,7 @@
 # Choose bento placements
 
+For Node authoring, `planCompositionWithBento` and `CompositionAuthoringSchema` expose the same command contract. Keep `planComposition`/`CompositionPlanSchema` from `composition-plan` portable for browser/native geometry; they do not import search or Node identity code. Runtime clients consume generated bento handoffs, rather than bundling its authoring engine.
+
 `composition plan` optionally accepts a `bento` problem. It proposes ordered flex slicing layouts, keeps separate preference factors and reuses the existing energy/Pareto search. It emits stylesheet rules and proposed wireframe data, not components or a universal beauty score.
 
 Build and run the recorded example:

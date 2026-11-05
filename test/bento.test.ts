@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { planBento, BentoSchema, type BentoFlexNode } from '../src/bento.js';
 import { planComposition } from '../src/composition-plan.js';
+import { planCompositionWithBento } from '../src/composition-authoring.js';
 import { compileEnergy } from '../src/energy.js';
 import { resolveWireframe, WireframeSchema } from '../src/wireframe.js';
 
@@ -169,7 +170,7 @@ test('finite exploration limits retain unknown coverage and the existing energy 
 test('composition plan couples bento to its calculated content width and gap without changing legacy calls', () => {
   const { width: _width, gap: _gap, ...options } = base;
   const legacy = planComposition({ mode: 'app', width: 1440 });
-  const proposed = planComposition({
+  const proposed = planCompositionWithBento({
     mode: 'app',
     width: 1440,
     bento: options,
@@ -346,4 +347,26 @@ test('incomplete search without a witness remains distinct from a complete empty
   };
   assert.equal(planBento(input).status, 'search-exhausted-without-witness');
   assert.equal(planBento({ ...input, maxEvaluations: 512 }).status, 'proposed');
+});
+
+test('portable composition geometry bundles for browsers without the Node authoring engine', async () => {
+  const { build } = await import('esbuild');
+  const result = await build({
+    stdin: {
+      contents:
+        "export {planComposition,cropMedia} from './src/composition-plan.ts'",
+      resolveDir: process.cwd(),
+    },
+    platform: 'browser',
+    bundle: true,
+    write: false,
+    metafile: true,
+  });
+  assert.ok(result.outputFiles[0]!.text.length);
+  assert.ok(
+    !Object.keys(result.metafile!.inputs).some((path) =>
+      /(?:composition-authoring|bento|identity|energy)\.ts$/.test(path),
+    ),
+  );
+  assert.throws(() => planComposition({ ...base, mode: 'app' }));
 });
