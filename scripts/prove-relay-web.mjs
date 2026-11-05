@@ -109,14 +109,48 @@ export async function proveRelayWeb() {
           };
           const fill = (id, value) => page.getByTestId(id).fill(value);
           const capture = async () => {
-            await page.waitForFunction(
-              () =>
-                typeof globalThis.__RELAY_CAPTURE__ === 'function' &&
-                globalThis.__RELAY_CAPTURE__()?.hydrated &&
-                globalThis.__RELAY_CAPTURE__()?.fontLoaded,
-            );
-            return page.evaluate(() => globalThis.__RELAY_CAPTURE__());
+            const current = await page.waitForFunction(() => {
+              const receipt = globalThis.__RELAY_CAPTURE__?.();
+              return receipt?.hydrated && receipt?.fontLoaded ? receipt : null;
+            });
+            try {
+              return await current.jsonValue();
+            } finally {
+              await current.dispose();
+            }
           };
+          async function diagnose(name, error) {
+            const file = `${scenario.id}-failed-${name.replaceAll(/[^a-z0-9]/gi, '-')}`;
+            const diagnostic = await page
+              .evaluate(() => ({
+                receipt: globalThis.__RELAY_CAPTURE__?.() ?? null,
+                url: location.href,
+                title: document.title,
+                bodyText: document.body.innerText.slice(0, 4096),
+              }))
+              .catch((failure) => ({ captureFailure: String(failure) }));
+            await writeFile(
+              path.join(output, file + '.json'),
+              JSON.stringify(
+                { error: String(error), diagnostic, errors },
+                null,
+                2,
+              ),
+            );
+            await page
+              .screenshot({ path: path.join(output, file + '.png') })
+              .catch((failure) => {
+                scenario.snapshots.push({
+                  name: 'diagnostic-screenshot-failed',
+                  error: String(failure),
+                });
+              });
+            scenario.snapshots.push({
+              name: 'failure-' + name,
+              file: file + '.json',
+              screenshot: file + '.png',
+            });
+          }
           async function snap(name, screen = true) {
             const receipt = await capture();
             assert.equal(receipt.sourceIdentity, source);
@@ -169,7 +203,13 @@ export async function proveRelayWeb() {
                 ms: performance.now() - started,
                 error: String(error),
               });
-              await snap('failed-' + name.replaceAll(/[^a-z0-9]/gi, '-'));
+              await diagnose(name, error).catch((diagnosticError) => {
+                steps.push({
+                  name: 'failure-artifact',
+                  status: 'failed',
+                  error: String(diagnosticError),
+                });
+              });
               throw error;
             }
           }
@@ -256,6 +296,14 @@ export async function proveRelayWeb() {
                     1440,
                 );
                 await page.setViewportSize({ width: width, height: height });
+                await page.waitForFunction((expected) => {
+                  const current = globalThis.__RELAY_CAPTURE__?.();
+                  return (
+                    current?.viewport.width === expected &&
+                    current?.measuredRoot.width === expected &&
+                    current.geometry.inputs.width === expected
+                  );
+                }, width);
                 return { before, after, embeddedRoot: embedded.measuredRoot };
               },
             );
@@ -264,6 +312,36 @@ export async function proveRelayWeb() {
                 await click('phone-range');
               await click('range-60');
               const plot = page.getByTestId('relay-latency-chart-plot');
+              await plot.scrollIntoViewIfNeeded();
+              const anatomy = await plot.evaluate((element) => ({
+                height: element.getBoundingClientRect().height,
+                position: getComputedStyle(element).position,
+                gap: getComputedStyle(element).columnGap,
+                bars: [...element.querySelectorAll('button')].map((button) => ({
+                  box: button.getBoundingClientRect().toJSON(),
+                  paints: [...button.children].map((child) => ({
+                    height: child.getBoundingClientRect().height,
+                    color: getComputedStyle(child).backgroundColor,
+                  })),
+                })),
+              }));
+              assert.equal(
+                anatomy.position,
+                'relative',
+                'Actual StyleX plot styles must survive the custom interaction adapter',
+              );
+              assert.ok(anatomy.height >= 129 && anatomy.height <= 131);
+              assert.equal(anatomy.gap, '2px');
+              assert.ok(
+                anatomy.bars.length >= 3 &&
+                  anatomy.bars.every(
+                    (bar) =>
+                      bar.box.width > 0 &&
+                      bar.box.height > 0 &&
+                      bar.paints.some((paint) => paint.height >= 2),
+                  ),
+                'Every data bucket must have an actual visible-height bar',
+              );
               const before = await plot.boundingBox();
               await page.mouse.move(
                 before.x + before.width * 0.1,
@@ -283,11 +361,97 @@ export async function proveRelayWeb() {
               assert.ok(receipt.context.bucket >= 44);
               const after = await plot.boundingBox();
               assert.equal(after.width, before.width);
+              await page.waitForFunction(() =>
+                globalThis
+                  .__RELAY_MOTION__?.()
+                  .every((motion) => motion.phase !== 'playing'),
+              );
               await page.getByTestId('relay-latency-chart-previous').focus();
+              await page.evaluate(() => {
+                const cursor = document.querySelector(
+                  '[data-testid="relay-latency-chart-cursor"]',
+                );
+                const selected = document.querySelector(
+                  '[data-testid="relay-latency-chart-plot"] button[aria-pressed="true"]',
+                );
+                window.__CURSOR_FRAMES__ = [
+                  {
+                    time: performance.now(),
+                    x: cursor.getBoundingClientRect().x,
+                  },
+                ];
+                window.__CURSOR_BEFORE__ = selected
+                  .getBoundingClientRect()
+                  .toJSON();
+                const sample = () => {
+                  window.__CURSOR_FRAMES__.push({
+                    time: performance.now(),
+                    x: cursor.getBoundingClientRect().x,
+                  });
+                  if (window.__CURSOR_FRAMES__.length < 61)
+                    requestAnimationFrame(sample);
+                };
+                requestAnimationFrame(sample);
+              });
               await page.keyboard.press('Enter');
+              await page.waitForFunction(
+                () => window.__CURSOR_FRAMES__?.length === 61,
+              );
+              await page.waitForFunction(() =>
+                globalThis
+                  .__RELAY_MOTION__?.()
+                  .every((motion) => motion.phase !== 'playing'),
+              );
               const r = (await snap('keyboard-cursor')).receipt;
               assert.ok(r.context.bucket < receipt.context.bucket);
-              return { before, after, bucket: r.context.bucket };
+              const movement = await page.evaluate(() => {
+                const cursor = document
+                  .querySelector('[data-testid="relay-latency-chart-cursor"]')
+                  .getBoundingClientRect();
+                const selected = document
+                  .querySelector(
+                    '[data-testid="relay-latency-chart-plot"] button[aria-pressed="true"]',
+                  )
+                  .getBoundingClientRect();
+                return {
+                  frames: window.__CURSOR_FRAMES__,
+                  before: window.__CURSOR_BEFORE__,
+                  cursor: cursor.toJSON(),
+                  selected: selected.toJSON(),
+                  runtime: globalThis.__RELAY_MOTION__?.(),
+                };
+              });
+              assert.ok(
+                Math.abs(
+                  movement.cursor.x +
+                    movement.cursor.width / 2 -
+                    movement.selected.x -
+                    movement.selected.width / 2,
+                ) < 0.2,
+                'Actual cursor must align with the selected bucket center',
+              );
+              const first = movement.frames[0].x,
+                last = movement.frames.at(-1).x;
+              assert.ok(
+                Math.abs(first - last) > 1 &&
+                  movement.frames.some(
+                    (frame) =>
+                      frame.x > Math.min(first, last) + 0.1 &&
+                      frame.x < Math.max(first, last) - 0.1,
+                  ),
+                'Actual intermediate cursor positions must be observed',
+              );
+              await writeFile(
+                path.join(output, `${scenario.id}-cursor-motion.json`),
+                JSON.stringify(movement, null, 2),
+              );
+              return {
+                before,
+                after,
+                bucket: r.context.bucket,
+                anatomy,
+                motionFrames: movement.frames.length,
+              };
             });
             await step('primary diagnosis and coordination', async () => {
               await click('diagnose-checkout');
@@ -623,6 +787,7 @@ export async function proveRelayWeb() {
 
             assert.equal(errors.length, 0, errors.join('\n'));
           } catch (error) {
+            if (!steps.length) await diagnose('startup', error).catch(() => {});
             report.failures.push({
               scenario: scenario.id,
               message: String(error),

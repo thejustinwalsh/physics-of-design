@@ -53,7 +53,7 @@ import {
   resolveRelayFrame,
   inspectRelayFrame,
 } from './design/layout-policy.mjs';
-import { createDrivenMotion } from './design/motion-runtime';
+import PlotCursor from './PlotCursor';
 import { subscribeFrame, clockStats } from './clock.mjs';
 import {
   UI,
@@ -465,6 +465,7 @@ function Root() {
     recovery: state.recovery,
     foreground,
     clock: clockStats(),
+    motion: globalThis.__RELAY_MOTION__?.() ?? [],
   };
   const observations = useObservations(snapshot);
   const bind = observations.bind;
@@ -1218,64 +1219,9 @@ function Chart({
     ) * 1.15;
   const bucket = series[Math.max(start, state.context.bucket)],
     index = bucket.index;
-  const [cursor, setCursor] = useState((index - start) / (buckets.length - 1));
   const [drag, setDrag] = useState(false);
   const plot = useRef(null);
   const dragBounds = useRef(null);
-  const motion = useRef(null);
-  if (!motion.current)
-    motion.current = createDrivenMotion({
-      spring: {
-        mass: chosen['appearance.spring.mass'],
-        stiffness: staged.stiffness,
-        damping: staged.damping,
-      },
-      position: cursor,
-      target: cursor,
-    });
-  const [onScreen, setOnScreen] = useState(true);
-  useEffect(() => {
-    if (Platform.OS !== 'web') return;
-    const observer = new IntersectionObserver((entries) =>
-      setOnScreen(entries[0].isIntersecting),
-    );
-    if (plot.current) observer.observe(plot.current);
-    return () => observer.disconnect();
-  }, []);
-  useEffect(() => {
-    const target = (index - start) / (buckets.length - 1);
-    motion.current.retarget(target);
-    const nativeBox =
-      Platform.OS === 'web' ? null : plot.current?.getBoundingClientRect?.();
-    const nativeVisible =
-      Platform.OS === 'web' ||
-      (!!nativeBox &&
-        nativeBox.y < ui.viewport.height &&
-        nativeBox.y + nativeBox.height > 0);
-    if (ui.reduced || !onScreen || !nativeVisible) {
-      motion.current = createDrivenMotion({
-        spring: {
-          mass: chosen['appearance.spring.mass'],
-          stiffness: staged.stiffness,
-          damping: staged.damping,
-        },
-        position: target,
-        target,
-      });
-      setCursor(target);
-      return;
-    }
-    if (!ui.foreground) return;
-    return subscribeFrame((dt) => {
-      if (Platform.OS === 'web' && document.hidden) return true;
-      const sample = motion.current.advance(dt);
-      setCursor(sample.position);
-      return (
-        Math.abs(sample.position - target) < 0.001 &&
-        Math.abs(sample.velocity) < 0.001
-      );
-    });
-  }, [index, start, ui.reduced, ui.foreground, onScreen]);
   const select = (i) =>
     dispatch({
       type: 'context',
@@ -1371,7 +1317,11 @@ function Chart({
             />
           </html.button>
         ))}
-        <html.div style={styles.cursor(`${cursor * 100}%`, ui.t.accent)} />
+        <PlotCursor
+          id={id + '-cursor'}
+          fraction={(index - start) / (buckets.length - 1)}
+          bucketCount={buckets.length}
+        />
         {target && (
           <html.div
             style={styles.threshold(`${(target / max) * 100}%`, ui.t.warning)}

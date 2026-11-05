@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "identity": "9f95464435b04a1188679fc86117cd908c5c9029dd9f997595b48f2bf0ff9524",
+  "supported": true,
+  "config": {
+    "mass": 1,
+    "stiffness": 200,
+    "damping": 28,
+    "toValue": 1,
+    "velocity": 0,
+    "overshootClamping": false,
+    "restDisplacementThreshold": 0.01,
+    "restSpeedThreshold": 0.01,
+    "useNativeDriver": true
+  },
+  "origin": "Historical starting spring parameters evaluated by current motion emit; not a fresh selector recipe or native-device verification.",
+  "coordinate": "Actual plot-content dp. Target derives from current bucket centers; geometry changes snap. The native backend owns retarget propagation; position/velocity continuity require current platform measurement. Bounds clipping is presentation policy.",
+  "reducedMotion": "instant; stop native animation and set exact current target"
+}

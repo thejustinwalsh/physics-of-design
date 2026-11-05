@@ -59,6 +59,10 @@ export async function proveRelayStatic() {
   try {
     await run('tests', 'npm', ['test']);
     await run('types', 'npm', ['run', 'typecheck']);
+    await run('motion-plan', process.execPath, [
+      path.join(repository, 'scripts/relay-motion-plan.mjs'),
+      '--check',
+    ]);
     await run('export', process.execPath, [
       'node_modules/expo/bin/cli',
       'export',
