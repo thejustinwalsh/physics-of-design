@@ -11,6 +11,7 @@ import {
   realpathSync,
 } from 'node:fs';
 import net from 'node:net';
+import { randomInt } from 'node:crypto';
 import path from 'node:path';
 import os from 'node:os';
 import { recordSession } from '../scripts/design-builder-metrics.mjs';
@@ -69,20 +70,37 @@ const fakeInstall = async (_file, args, cwd) => {
   }
 };
 // Every model/usage value below is a synthetic protocol fixture, not measured model usage.
+// Keep released fixture ports out of the automatic ephemeral range used by
+// the many concurrent HTTP/client tests. A port-0 reservation followed by
+// release can be reused immediately by an unrelated outbound connection.
+// Check real availability while reserving, and never reuse a fixture's number
+// within this test process. Real builder ports are outside this test pool.
+const claimedFixturePorts = new Set();
 async function isolatedRuntime(runtime) {
   const next = structuredClone(runtime),
     servers = [];
   try {
     for (const entry of Object.values(next))
       for (const key of ['metro', 'proxy', 'observer']) {
-        const server = net.createServer();
+        let server;
+        for (let attempt = 0; attempt < 200; attempt++) {
+          const port = randomInt(10000, 16000);
+          if (claimedFixturePorts.has(port)) continue;
+          const candidate = net.createServer();
+          try {
+            await new Promise((resolve, reject) => {
+              candidate.once('error', reject);
+              candidate.listen({ port, host: '::', ipv6Only: false }, resolve);
+            });
+            claimedFixturePorts.add(port);
+            server = candidate;
+            break;
+          } catch (error) {
+            if (error.code !== 'EADDRINUSE') throw error;
+          }
+        }
+        assert.ok(server, 'No isolated fixture port available');
         servers.push(server);
-        // Hold all nine allocations until the fixture's ports are distinct.
-        // A dual-stack listener avoids selecting a port held on either family.
-        await new Promise((resolve, reject) => {
-          server.once('error', reject);
-          server.listen({ port: 0, host: '::', ipv6Only: false }, resolve);
-        });
         entry[key] = server.address().port;
       }
     return next;

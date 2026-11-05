@@ -78,4 +78,6 @@ if (report.failures.length || report.checks.some((c) => !c.passed)) process.exit
 else {
   const { proveRelayStatic } = await import('./prove-relay-static.mjs');
   await proveRelayStatic();
+  const { proveRelayWeb } = await import('./prove-relay-web.mjs');
+  await proveRelayWeb();
 }

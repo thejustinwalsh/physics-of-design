@@ -26,6 +26,7 @@ jobs:
             artifacts/relay-integration/static-receipt.json
             artifacts/relay-integration/*.log
             artifacts/relay-integration/static
+            artifacts/relay-integration/web
             artifacts/dom-surfaces
             artifacts/dom-surfaces-gpu
             artifacts/vela/proof-web/report.json
