@@ -269,6 +269,39 @@ export async function proveRelayWeb() {
                   return { actual, measured };
                 };
                 const before = await compare();
+                const slant = page.getByTestId('axis-slnt');
+                await slant.fill('');
+                await slant.press('-');
+                assert.equal(
+                  await slant.inputValue(),
+                  '-',
+                  'An intermediate sign must stay editable',
+                );
+                await slant.evaluate((element) => {
+                  window.__AXIS_NODE__ = element;
+                });
+                await slant.press('5');
+                await page.waitForFunction(
+                  () =>
+                    globalThis.__RELAY_CAPTURE__()?.preferences.axes?.slnt ===
+                    -5,
+                );
+                assert.equal(await slant.inputValue(), '-5');
+                assert.equal(
+                  await slant.evaluate(
+                    (element) =>
+                      element === window.__AXIS_NODE__ &&
+                      document.activeElement === element,
+                  ),
+                  true,
+                  'Committing an axis must preserve the focused input node',
+                );
+                await slant.fill('0');
+                await page.waitForFunction(
+                  () =>
+                    globalThis.__RELAY_CAPTURE__()?.preferences.axes?.slnt ===
+                    0,
+                );
                 await page.setViewportSize({ width: 834, height: 1194 });
                 const after = await compare();
                 assert.notEqual(before.actual.width, after.actual.width);

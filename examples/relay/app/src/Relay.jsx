@@ -38,6 +38,7 @@ import { storage, exportState } from './storage';
 import { useObservations } from './useObservations';
 import ElementInspection, { useElementInspection } from './ElementInspection';
 import InspectorPanel from './InspectorPanel';
+import EditableAxis from './EditableAxis';
 import Scroll from './Scroll';
 import PlotInteraction from './PlotInteraction';
 import Screen from './Screen';
@@ -2996,9 +2997,10 @@ function Inspection({ onClose }) {
         </Text>
         <Heading>Editable Roboto Flex axes</Heading>
         {Object.entries(fontAxes).map(([tag, axis]) => (
-          <Field
+          <EditableAxis
             key={tag}
             id={'axis-' + tag}
+            axis={axis}
             label={
               tag +
               ' · ' +
@@ -3008,19 +3010,13 @@ function Inspection({ onClose }) {
               (Platform.OS === 'web' ? '' : ' · native unsupported')
             }
             value={state.preferences.axes?.[tag] ?? axis.default}
-            onChange={(value) => {
-              const numeric = Number(value);
-              if (
-                Number.isFinite(numeric) &&
-                numeric >= axis.min &&
-                numeric <= axis.max
-              )
-                dispatch({
-                  type: 'preferences',
-                  patch: {
-                    axes: { ...state.preferences.axes, [tag]: numeric },
-                  },
-                });
+            onCommit={(numeric) => {
+              dispatch({
+                type: 'preferences',
+                patch: {
+                  axes: { ...state.preferences.axes, [tag]: numeric },
+                },
+              });
             }}
           />
         ))}
