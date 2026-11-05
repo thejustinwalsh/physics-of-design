@@ -41,6 +41,7 @@ import InspectorPanel from './InspectorPanel';
 import Scroll from './Scroll';
 import PlotInteraction from './PlotInteraction';
 import Screen from './Screen';
+import { ScreenContext } from './ScreenContext';
 import { useKeyboard } from './useKeyboard';
 import MediaImage from './MediaImage';
 import Materials from './Materials';
@@ -225,6 +226,7 @@ const initialRoute = () =>
     ? globalThis.location.hash.slice(1) || '/overview'
     : '/overview';
 function Root() {
+  const measuredRoot = useContext(ScreenContext);
   const keyboard = useKeyboard();
   const [storagePaused, setStoragePaused] = useState(false);
   const safeArea = useSafeAreaInsets(),
@@ -406,7 +408,10 @@ function Root() {
     size = staged.fontSize * scale,
     t = themes[state.preferences.theme] ?? themes.dark,
     geometry = resolveRelayFrame({
-      width: viewport.width - safeArea.left - safeArea.right,
+      width:
+        (measuredRoot?.width ?? viewport.width) -
+        safeArea.left -
+        safeArea.right,
       textScale: scale * (viewport.fontScale || 1),
       fontSize: staged.fontSize,
       railWidth: staged.railWidth,
@@ -425,9 +430,14 @@ function Root() {
     platform: Platform.OS === 'web' ? 'web' : 'native-' + Platform.OS,
     viewport,
     safeArea,
+    measuredRoot,
     geometry: {
       ...geometry,
-      inputProvider: 'nominal-window-minus-safe-insets',
+      inputProvider: measuredRoot
+        ? measuredRoot.provider + '-minus-applied-safe-padding'
+        : 'pending-root-nominal-window-minus-safe-insets',
+      rootInputStatus: measuredRoot?.status ?? 'pending',
+      rendererRootObserved: measuredRoot?.status === 'current',
       rendererRootVerified: false,
     },
     route,
@@ -477,6 +487,7 @@ function Root() {
     wide,
     viewport,
     geometry,
+    measuredRoot,
     gap,
     reduced: systemReduced || state.preferences.reducedMotion === 'reduce',
     foreground,
@@ -2934,6 +2945,11 @@ function FrameConsequences() {
       <Text>
         Input width {number(frame.inputs.width)} · effective text scale{' '}
         {number(frame.inputs.textScale)} · {analysis.policy}
+      </Text>
+      <Text tone="muted">
+        Root input: {ui.measuredRoot?.status ?? 'pending'} ·{' '}
+        {ui.measuredRoot?.provider ?? 'provisional nominal window'}. Renderer
+        validation is a separate receipt.
       </Text>
       {analysis.enclosure.status === 'bounded' ? (
         <Text>

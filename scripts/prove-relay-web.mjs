@@ -230,8 +230,29 @@ export async function proveRelayWeb() {
                 assert.notEqual(before.actual.width, after.actual.width);
                 await page.getByTestId('inspection-close').click();
                 assert.equal(await drawing.count(), 0);
+                await page.setViewportSize({ width: 1440, height: 1000 });
+                await page.evaluate(() => {
+                  document.getElementById('root').style.width = '900px';
+                });
+                await page.waitForFunction(
+                  () =>
+                    globalThis.__RELAY_CAPTURE__()?.geometry.inputs.width ===
+                    900,
+                );
+                const embedded = await capture();
+                assert.equal(embedded.viewport.width, 1440);
+                assert.equal(embedded.measuredRoot.width, 900);
+                assert.equal(embedded.geometry.rendererRootObserved, true);
+                await page.evaluate(() => {
+                  document.getElementById('root').style.removeProperty('width');
+                });
+                await page.waitForFunction(
+                  () =>
+                    globalThis.__RELAY_CAPTURE__()?.geometry.inputs.width ===
+                    1440,
+                );
                 await page.setViewportSize({ width: width, height: height });
-                return { before, after };
+                return { before, after, embeddedRoot: embedded.measuredRoot };
               },
             );
             await step('continuous chart pointer and keyboard', async () => {
