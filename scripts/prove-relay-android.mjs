@@ -142,6 +142,16 @@ async function waitFor(predicate, label, timeout = 120000) {
   }
   throw Error('Timed out: ' + label);
 }
+const containsBox = (child, parent) =>
+  child &&
+  parent &&
+  child.width > 0 &&
+  child.height > 0 &&
+  child.x >= parent.x - 1 &&
+  child.y >= parent.y - 1 &&
+  child.x + child.width <= parent.x + parent.width + 1 &&
+  child.y + child.height <= parent.y + parent.height + 1;
+
 function current() {
   return latest?.sourceIdentity === sourceIdentity &&
     latest?.provider === 'native-android' &&
@@ -331,6 +341,15 @@ try {
   assert.match(deviceUser, /^\d+$/);
   const ready = await command('device-state', ['get-state']);
   assert.match(ready.stdout, /device/);
+  report.initialAppState = await queryAndroidProcessState({
+    packageName: 'host.exp.exponent',
+    run: command,
+  });
+  assert.deepEqual(
+    report.initialAppState.pids,
+    [],
+    'Expo Go is already running on this device; refusing to take over an unowned app session',
+  );
   for (const setting of [
     'font_scale',
     'accelerometer_rotation',
@@ -698,27 +717,18 @@ try {
           close.y + close.height <= header.y + header.height + 1,
         'Close remains inside the header hit region',
       );
-      const contained = (child, parent) =>
-        child &&
-        parent &&
-        child.width > 0 &&
-        child.height > 0 &&
-        child.x >= parent.x - 1 &&
-        child.y >= parent.y - 1 &&
-        child.x + child.width <= parent.x + parent.width + 1 &&
-        child.y + child.height <= parent.y + parent.height + 1;
       assert.ok(
-        contained(title, header),
+        containsBox(title, header),
         'Visible title stays inside its header',
       );
-      assert.ok(contained(close, header), 'Close stays inside its header');
+      assert.ok(containsBox(close, header), 'Close stays inside its header');
       assert.ok(
-        contained(header, panel) && contained(body, panel),
+        containsBox(header, panel) && containsBox(body, panel),
         'Dialog contains header and body',
       );
       const surface = inspector.boxes['inspection-surface'];
       assert.ok(
-        contained(surface, body),
+        containsBox(surface, body),
         'Observed-element control remains usable inside scroll body',
       );
       assert.ok(
@@ -755,49 +765,79 @@ try {
         () => current()?.viewport.height > current()?.viewport.width,
         'portrait recovery',
       );
-      // Exercise the long Inspector title and keyboard action in enlarged
+      // Exercise the long Inspector title in enlarged
       // portrait too; landscape containment does not establish this case.
-      await tap('nav-menu', { scroll: false });
+      await nav('settings');
       await tap('inspect-open');
-      await tap('inspection-surface', { scroll: false });
-      await tap('inspection-surface-search', { scroll: false });
-      await command('type-portrait-inspector-search', [
-        'shell',
-        'input',
-        'text',
-        'relay-task',
-      ]);
-      assert.ok(
-        find(await tree(), 'inspection-surface-dialog-keyboard-dismiss'),
+      await waitFor(
+        () => current()?.boxes?.['inspection-panel-title'],
+        'Portrait Inspector title',
       );
-      const keyboard = await snap('inspector-portrait-keyboard');
-      const child = keyboard.boxes['inspection-surface-dialog'];
-      const childHeader = keyboard.boxes['inspection-surface-dialog-header'];
-      const childBody = keyboard.boxes['inspection-surface-dialog-body'];
-      assert.ok(contained(childHeader, child) && contained(childBody, child));
+      const portrait = await snap('inspector-portrait');
       assert.ok(
-        contained(
-          keyboard.boxes['inspection-surface-dialog-title'],
-          childHeader,
+        containsBox(
+          portrait.boxes['inspection-panel-title'],
+          portrait.boxes['inspection-panel-header'],
         ),
       );
       assert.ok(
-        contained(
-          keyboard.boxes['inspection-surface-dialog-close'],
-          childHeader,
+        containsBox(
+          portrait.boxes['inspection-panel-close'],
+          portrait.boxes['inspection-panel-header'],
         ),
       );
-      assert.ok(childHeader.y + childHeader.height <= childBody.y + 1);
-      await tap('inspection-surface-dialog-keyboard-dismiss', {
-        scroll: false,
-      });
       assert.ok(
-        !find(await tree(), 'inspection-surface-dialog-keyboard-dismiss'),
+        containsBox(
+          portrait.boxes['inspection-surface'],
+          portrait.boxes['inspection-panel-body'],
+        ),
       );
-      await tap('inspection-surface-dialog-close', { scroll: false });
       await tap('inspection-panel-close', { scroll: false });
       assert.ok(!find(await tree(), 'inspection-panel'));
       await snap('portrait-recovered');
+    },
+  );
+  await step(
+    'enlarged portrait command search accepts text and dismisses keyboard',
+    async () => {
+      await tap('command-open', { scroll: false });
+      await tap('command-query', { scroll: false });
+      await command('type-portrait-command-search', [
+        'shell',
+        'input',
+        'text',
+        'cache',
+      ]);
+      const nodes = await tree();
+      assert.equal(find(nodes, 'command-query')?.text, 'cache');
+      assert.ok(find(nodes, 'relay-command-search-keyboard-dismiss'));
+      const r = await snap('command-portrait-keyboard');
+      const panel = r.boxes['relay-command-search'];
+      const header = r.boxes['relay-command-search-header'];
+      const body = r.boxes['relay-command-search-body'];
+      assert.ok(
+        r.boxes['relay-command-settings'],
+        'Settings observation survives independent command dialog',
+      );
+      assert.ok(containsBox(header, panel) && containsBox(body, panel));
+      assert.ok(containsBox(r.boxes['relay-command-search-title'], header));
+      assert.ok(containsBox(r.boxes['relay-command-search-close'], header));
+      assert.ok(containsBox(r.boxes['command-query'], body));
+      assert.ok(
+        containsBox(r.boxes['relay-command-search-keyboard-dismiss'], panel),
+      );
+      assert.ok(header.y + header.height <= body.y + 1);
+      await tap('relay-command-search-keyboard-dismiss', { scroll: false });
+      assert.ok(!find(await tree(), 'relay-command-search-keyboard-dismiss'));
+      await tap('relay-command-search-close', { scroll: false });
+      assert.ok(!find(await tree(), 'relay-command-search'));
+      await waitFor(
+        () =>
+          current()?.boxes?.['relay-command-settings'] &&
+          !current()?.boxes?.['relay-command-search'],
+        'Settings observation retained after command disposal',
+      );
+      await snap('command-portrait-dismissed');
     },
   );
 } catch (error) {
@@ -944,7 +984,7 @@ try {
   );
   report.passed =
     report.failures.length === 0 &&
-    report.steps.length === 4 &&
+    report.steps.length === 5 &&
     report.steps.every((step) => step.passed) &&
     report.sourceStable &&
     cleanup.confirmedEmpty;

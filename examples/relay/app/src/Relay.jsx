@@ -2866,7 +2866,7 @@ function Command({ onClose }) {
   return (
     <Modal
       title="Search workspace"
-      id="relay-command-settings"
+      id="relay-command-search"
       onClose={onClose}
     >
       <html.div

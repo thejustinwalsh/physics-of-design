@@ -952,6 +952,20 @@ export async function proveRelayWeb() {
               'settings recovery storage failure and export',
               async () => {
                 await click('nav-settings');
+                await click('command-open');
+                assert.equal(
+                  await page.getByTestId('relay-command-settings').count(),
+                  1,
+                );
+                assert.equal(
+                  await page.getByTestId('relay-command-search').count(),
+                  1,
+                );
+                await click('relay-command-search-close');
+                assert.equal(
+                  await page.getByTestId('relay-command-settings').count(),
+                  1,
+                );
                 await choose('settings-theme', 'light');
                 await choose('settings-density', 'compact');
                 await choose('settings-motion', 'reduce');
@@ -1088,10 +1102,8 @@ export async function proveRelayWeb() {
                   await click('range-60');
                   await click('command-open');
                   await page.getByTestId('command-query').waitFor();
-                  await checkDialog('relay-command-settings');
-                  await page
-                    .getByTestId('relay-command-settings-close')
-                    .click();
+                  await checkDialog('relay-command-search');
+                  await page.getByTestId('relay-command-search-close').click();
                 }
                 await page.setViewportSize({ width: 1440, height: 1000 });
                 await click('nav-settings');
