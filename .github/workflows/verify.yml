@@ -24,6 +24,7 @@ jobs:
             artifacts/verification
             artifacts/layout-calculus
             artifacts/relay-integration/static-receipt.json
+            artifacts/relay-integration/metro-runtime-receipt.json
             artifacts/relay-integration/*.log
             artifacts/relay-integration/static
             artifacts/relay-integration/web

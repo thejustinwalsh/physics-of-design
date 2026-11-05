@@ -34,6 +34,7 @@ test('native identity binds consumed client bytes and package resolution, includ
       'dist/layout-runtime.js',
       'dist/motion.js',
       'native/package-lock.json',
+      'scripts/metro-toolkit-resolver.cjs',
       'package.json',
     ]) {
       assert(nativeSourceFiles.includes(file), file);

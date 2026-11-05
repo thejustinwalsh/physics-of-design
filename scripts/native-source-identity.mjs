@@ -10,6 +10,7 @@ export const nativeSourceFiles = [
   'native/observation-scheduler.ts',
   'native/observation-clipping.ts',
   'native/metro.config.js',
+  'scripts/metro-toolkit-resolver.cjs',
   'native/package.json',
   'native/package-lock.json',
   'package.json',

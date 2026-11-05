@@ -87,6 +87,23 @@ export async function proveRelayStatic() {
       web.some((file) => file.endsWith('.js')),
       'No web JavaScript export',
     );
+    const entries = web.filter(
+      (file) => file.startsWith('index-') && file.endsWith('.js'),
+    );
+    assert.equal(entries.length, 1, 'Expected one current Expo web entry');
+    const webFile = path.join('_expo/static/js/web', entries[0]);
+    const webBytes = await readFile(path.join(output, 'static', webFile));
+    bundles.push({
+      platform: 'web',
+      file: webFile,
+      bytes: webBytes.length,
+      sha256: createHash('sha256').update(webBytes).digest('hex'),
+    });
+    await run('metro-runtime', process.execPath, [
+      path.join(repository, 'scripts/check-metro-runtime.mjs'),
+      path.join(output, 'static', webFile),
+      path.join(output, 'metro-runtime-receipt.json'),
+    ]);
     await readFile(path.join(output, 'static/index.html'));
     await mkdir(path.join(output, 'static/licenses'), { recursive: true });
     await copyFile(
@@ -106,7 +123,7 @@ export async function proveRelayStatic() {
     version: 1,
     recordedAt: new Date().toISOString(),
     scope:
-      'Isolated Relay integration: model/markup/policy tests, TypeScript and actual Expo web/iOS/Android static exports. No browser/native execution, geometry, motion, accessibility, selector, preference or hardware performance verification.',
+      'Isolated Relay integration: model/markup/policy tests, TypeScript, actual Expo web/iOS/Android exports and execution of emitted web toolkit factories in Node vm. No app bootstrap, browser/native rendering, geometry, native-driver, accessibility, selector, preference or hardware performance verification.',
     passed: !failure && sources.sourceStable,
     steps,
     bundles,
