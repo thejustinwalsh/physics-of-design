@@ -100,12 +100,14 @@ test('published layout entry projects measured spacing without authoring service
       rectangles:[{id:'action',box:{x:0,y:80,width:60,height:30}}],
       gapProjection:{currentGap:20,preferredGap:20,minimumGap:0,maximumGap:20,targets:[{member:'action',intervalsBefore:1}],source:'Synthetic portable fixture'}
     });
+    export const anchored = runtime.projectScrollAnchor({offset:100,before:200,after:250,extent:1000,viewport:400});
   `,
   );
   assertClientInputs(bundle);
   const scope = {};
   runInNewContext(bundle.outputFiles[0].text, scope);
   const projection = scope.ClientResult.result.exposure.gapProjection;
+  assert.equal(scope.ClientResult.anchored.offset, 150);
   assert.equal(projection.suggestedGap, 10);
   assert.equal(projection.requiresRendererVerification, true);
 });

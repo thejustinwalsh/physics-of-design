@@ -1,14 +1,15 @@
 {
   "program": {
     "version": 1,
-    "id": "vela",
+    "id": "vela-momentum-v2",
     "brief": {
       "intent": "Vela is a bold, precise training journal for people who want purposeful movement, not a gamified medical authority. Ink, electric lime and cobalt; oversized confident numerals; asymmetric editorial hierarchy; generous grouped space; one primary action per screen; expressive spring page entrances with clear anticipation, hold and release. Phone-first native app, useful iPad split/rail adaptation and desktop companion. Content and accessible controls remain intact under text enlargement and reduced motion.",
       "source": "examples/vela/brief.md; user direction October 2026"
     },
     "identity": {
-      "policy": "vela-v1",
+      "policy": "vela-momentum-v2-responsive-directions",
       "font": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
+      "designDocument": "35cb390afc4cdb194407d82aeb76adf74fb7d97530f25fccc636ec9f7cccdd96",
       "math": "energy-v1",
       "motion": "stationary spring; RN 0.88 underdamped mapping"
     },
@@ -125,6 +126,60 @@
       }
     ],
     "scenarios": [
+      {
+        "id": "w320h740s1",
+        "values": {
+          "width": 320,
+          "height": 740,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w320h740s2",
+        "values": {
+          "width": 320,
+          "height": 740,
+          "textScale": 2,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w320h740s3.6",
+        "values": {
+          "width": 320,
+          "height": 740,
+          "textScale": 3.6,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w844h320s1",
+        "values": {
+          "width": 844,
+          "height": 320,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w844h320s2",
+        "values": {
+          "width": 844,
+          "height": 320,
+          "textScale": 2,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w844h320s3.6",
+        "values": {
+          "width": 844,
+          "height": 320,
+          "textScale": 3.6,
+          "reducedMotion": 0
+        }
+      },
       {
         "id": "w390h700s1",
         "values": {
@@ -250,6 +305,27 @@
                   "ref": "width"
                 },
                 0.08
+              ]
+            },
+            {
+              "op": "max",
+              "args": [
+                8,
+                {
+                  "op": "div",
+                  "args": [
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "ref": "paneWidth"
+                        },
+                        280
+                      ]
+                    },
+                    2
+                  ]
+                }
               ]
             }
           ]
@@ -410,17 +486,53 @@
       {
         "id": "timerSize",
         "expression": {
-          "op": "mul",
+          "op": "min",
           "args": [
             {
-              "ref": "titleSize"
+              "op": "mul",
+              "args": [
+                {
+                  "ref": "titleSize"
+                },
+                1.1
+              ]
             },
-            1.1
+            {
+              "op": "div",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "ref": "timerInnerWidth"
+                    },
+                    2
+                  ]
+                },
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "ref": "textScale"
+                    },
+                    {
+                      "op": "add",
+                      "args": [
+                        1.16,
+                        {
+                          "ref": "tracking"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         "unit": "dp",
         "provenance": {
-          "kind": "calculated",
+          "kind": "predicted",
           "source": "Vela brief geometry v1; editable art direction, not universal beauty"
         }
       },
@@ -934,7 +1046,7 @@
                       "ref": "contentWidth"
                     },
                     {
-                      "ref": "gap"
+                      "ref": "sectionGap"
                     }
                   ]
                 },
@@ -949,6 +1061,54 @@
         "unit": "dp",
         "provenance": {
           "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "compactDirectionLabels",
+        "expression": {
+          "op": "lt",
+          "args": [
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "ref": "cardWidth"
+                },
+                {
+                  "op": "add",
+                  "args": [
+                    {
+                      "op": "mul",
+                      "args": [
+                        2,
+                        {
+                          "ref": "pageGutter"
+                        }
+                      ]
+                    },
+                    28
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "mul",
+              "args": [
+                5.2405,
+                {
+                  "ref": "body"
+                },
+                {
+                  "ref": "textScale"
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "boolean",
+        "provenance": {
+          "kind": "predicted",
           "source": "Vela brief geometry v1; editable art direction, not universal beauty"
         }
       },
@@ -1497,27 +1657,27 @@
       "today": {
         "default": "Build\nmomentum",
         "compact": "Build\nyour pace",
-        "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+        "source": "examples/vela/content.json — authored product copy"
       },
       "detail": {
         "default": "Steady\nbuild",
         "compact": "Steady\nbuild",
-        "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+        "source": "examples/vela/content.json — authored product copy"
       },
       "complete": {
         "default": "You\nshowed up",
         "compact": "You\ndid it",
-        "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+        "source": "examples/vela/content.json — authored product copy"
       },
       "insights": {
         "default": "Your\nrhythm",
         "compact": "Your\npace",
-        "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+        "source": "examples/vela/content.json — authored product copy"
       },
       "profile": {
         "default": "Make\nit yours",
         "compact": "Make\nit yours",
-        "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+        "source": "examples/vela/content.json — authored product copy"
       },
       "phase-0": {
         "default": "Find your rhythm",
@@ -1538,6 +1698,51 @@
         "default": "No session\nsaved",
         "compact": "No time\nsaved",
         "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+      },
+      "today-expanded": {
+        "default": "Room for\nsteady progress",
+        "compact": "Room for\nsteady progress",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "detail-expanded": {
+        "default": "A steadier\nkind of effort",
+        "compact": "A steadier\nkind of effort",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "complete-expanded": {
+        "default": "Make room\nfor what comes next",
+        "compact": "Make room\nfor what comes next",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "insights-expanded": {
+        "default": "Small steps\nacross a longer week",
+        "compact": "Small steps\nacross a longer week",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "profile-expanded": {
+        "default": "A little more\nroom for yourself",
+        "compact": "A little more\nroom for yourself",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "intro-description": {
+        "default": "Not every day needs a personal best. Just a place to start.",
+        "compact": "Not every day needs a personal best. Just a place to start.",
+        "source": "examples/vela/content.json — authored product copy"
+      },
+      "intro-description-expanded": {
+        "default": "Some days bring a little more room for movement. Others call for an easy beginning, a slower pace, and the freedom to change your plans. This journal keeps that space open without turning every session into a competition.",
+        "compact": "Some days bring a little more room for movement. Others call for an easy beginning, a slower pace, and the freedom to change your plans. This journal keeps that space open without turning every session into a competition.",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "session-description": {
+        "default": "A little rhythm. A little effort. Enough room to finish feeling like you.",
+        "compact": "A little rhythm. A little effort. Enough room to finish feeling like you.",
+        "source": "examples/vela/content.json — authored product copy"
+      },
+      "session-description-expanded": {
+        "default": "Begin gently, build into a steady middle, and leave enough room to ease back. You can pause whenever you need to. The timer and your journal keep their place while you choose a different direction, revisit the details, or take a little longer to decide.",
+        "compact": "Begin gently, build into a steady middle, and leave enough room to ease back. You can pause whenever you need to. The timer and your journal keep their place while you choose a different direction, revisit the details, or take a little longer to decide.",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
       }
     },
     "states": [
@@ -1593,6 +1798,9 @@
               },
               "timerSize": {
                 "ref": "timerSize"
+              },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
               },
               "timerStacked": {
                 "ref": "timerStacked"
@@ -1720,6 +1928,9 @@
               "timerSize": {
                 "ref": "timerSize"
               },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
+              },
               "timerStacked": {
                 "ref": "timerStacked"
               },
@@ -1840,6 +2051,9 @@
               },
               "timerSize": {
                 "ref": "timerSize"
+              },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
               },
               "timerStacked": {
                 "ref": "timerStacked"
@@ -1967,6 +2181,9 @@
               "timerSize": {
                 "ref": "timerSize"
               },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
+              },
               "timerStacked": {
                 "ref": "timerStacked"
               },
@@ -2088,6 +2305,9 @@
               "timerSize": {
                 "ref": "timerSize"
               },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
+              },
               "timerStacked": {
                 "ref": "timerStacked"
               },
@@ -2208,6 +2428,9 @@
               },
               "timerSize": {
                 "ref": "timerSize"
+              },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
               },
               "timerStacked": {
                 "ref": "timerStacked"

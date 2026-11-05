@@ -20,6 +20,9 @@ export const nativeSourceFiles = [
   // This identifies bytes; the ordered build establishes source/output consistency.
   ...[
     'layout-runtime',
+    'composition',
+    'flow-gap',
+    'scroll-anchor',
     'decision-runtime',
     'math-expression',
     'math-enclosure',
@@ -32,6 +35,9 @@ export const nativeSourceFiles = [
     'motion-dynamics',
   ].map((name) => `dist/${name}.js`),
   'src/layout-runtime.ts',
+  'src/composition.ts',
+  'src/flow-gap.ts',
+  'src/scroll-anchor.ts',
   'src/motion-runtime.ts',
   'src/motion-dynamics.ts',
   'src/decision-runtime.ts',
@@ -46,6 +52,9 @@ export const nativeSourceFiles = [
   'src/native-safe-area.ts',
   'src/native-root-geometry.ts',
   'examples/vela/design.generated.json',
+  'examples/vela/design.field-notes.generated.json',
+  'examples/vela/DESIGN.md',
+  'examples/vela/content.json',
   'assets/fonts/Lato-Black.ttf',
   'assets/fonts/Lato-Regular.ttf',
 ];

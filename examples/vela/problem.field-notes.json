@@ -1,0 +1,2520 @@
+{
+  "program": {
+    "version": 1,
+    "id": "vela-field-notes",
+    "brief": {
+      "intent": "Vela Field Notes is an authored alternative for the same training journal: warm paper, charcoal and terracotta; smaller editorial hierarchy, compact ruled grouping, shallow corners, short low-overshoot motion. Preserve all six screens, state, text enlargement and reduced motion. These are editable brief preferences, not human preference evidence.",
+      "source": "examples/vela/DESIGN.md: authored Field Notes direction"
+    },
+    "identity": {
+      "policy": "vela-field-notes-v1",
+      "font": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
+      "designDocument": "35cb390afc4cdb194407d82aeb76adf74fb7d97530f25fccc636ec9f7cccdd96",
+      "math": "energy-v1",
+      "motion": "stationary spring; RN 0.88 underdamped mapping"
+    },
+    "variables": [
+      {
+        "id": "display",
+        "unit": "dp",
+        "values": [
+          44,
+          48,
+          52,
+          56
+        ]
+      },
+      {
+        "id": "titleLeading",
+        "unit": "ratio",
+        "values": [
+          1.08,
+          1.12,
+          1.16
+        ]
+      },
+      {
+        "id": "bodyLeading",
+        "unit": "ratio",
+        "values": [
+          1.4,
+          1.5,
+          1.6
+        ]
+      },
+      {
+        "id": "body",
+        "unit": "dp",
+        "values": [
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "id": "space",
+        "unit": "dp",
+        "values": [
+          14,
+          16,
+          18
+        ]
+      },
+      {
+        "id": "density",
+        "unit": "ratio",
+        "values": [
+          0.9,
+          1,
+          1.1
+        ]
+      },
+      {
+        "id": "gutter",
+        "unit": "dp",
+        "values": [
+          20,
+          24,
+          28
+        ]
+      },
+      {
+        "id": "radius",
+        "unit": "dp",
+        "values": [
+          4,
+          6,
+          8
+        ]
+      },
+      {
+        "id": "tracking",
+        "unit": "em",
+        "values": [
+          -0.025,
+          -0.02,
+          -0.015
+        ]
+      },
+      {
+        "id": "stiffness",
+        "unit": "normalized/s²",
+        "values": [
+          260,
+          300,
+          340
+        ]
+      },
+      {
+        "id": "damping",
+        "unit": "normalized/s",
+        "values": [
+          28,
+          30,
+          32
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "w320h740s1",
+        "values": {
+          "width": 320,
+          "height": 740,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w320h740s2",
+        "values": {
+          "width": 320,
+          "height": 740,
+          "textScale": 2,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w320h740s3.6",
+        "values": {
+          "width": 320,
+          "height": 740,
+          "textScale": 3.6,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w844h320s1",
+        "values": {
+          "width": 844,
+          "height": 320,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w844h320s2",
+        "values": {
+          "width": 844,
+          "height": 320,
+          "textScale": 2,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w844h320s3.6",
+        "values": {
+          "width": 844,
+          "height": 320,
+          "textScale": 3.6,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w390h700s1",
+        "values": {
+          "width": 390,
+          "height": 700,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w390h700s2",
+        "values": {
+          "width": 390,
+          "height": 700,
+          "textScale": 2,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w390h700s3.6",
+        "values": {
+          "width": 390,
+          "height": 700,
+          "textScale": 3.6,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w390h844s1",
+        "values": {
+          "width": 390,
+          "height": 844,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w390h844s2",
+        "values": {
+          "width": 390,
+          "height": 844,
+          "textScale": 2,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w390h844s3.6",
+        "values": {
+          "width": 390,
+          "height": 844,
+          "textScale": 3.6,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w834h1210s1",
+        "values": {
+          "width": 834,
+          "height": 1210,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w834h1210s2",
+        "values": {
+          "width": 834,
+          "height": 1210,
+          "textScale": 2,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w834h1210s3.6",
+        "values": {
+          "width": 834,
+          "height": 1210,
+          "textScale": 3.6,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w1440h1024s1",
+        "values": {
+          "width": 1440,
+          "height": 1024,
+          "textScale": 1,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w1440h1024s2",
+        "values": {
+          "width": 1440,
+          "height": 1024,
+          "textScale": 2,
+          "reducedMotion": 0
+        }
+      },
+      {
+        "id": "w1440h1024s3.6",
+        "values": {
+          "width": 1440,
+          "height": 1024,
+          "textScale": 3.6,
+          "reducedMotion": 0
+        }
+      }
+    ],
+    "derived": [
+      {
+        "id": "pageGutter",
+        "expression": {
+          "op": "min",
+          "args": [
+            {
+              "ref": "gutter"
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "ref": "width"
+                },
+                0.08
+              ]
+            },
+            {
+              "op": "max",
+              "args": [
+                8,
+                {
+                  "op": "div",
+                  "args": [
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "ref": "paneWidth"
+                        },
+                        280
+                      ]
+                    },
+                    2
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "gap",
+        "expression": {
+          "op": "mul",
+          "args": [
+            {
+              "ref": "space"
+            },
+            {
+              "ref": "density"
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "navRailWidth",
+        "expression": {
+          "op": "if",
+          "args": [
+            {
+              "ref": "navRail"
+            },
+            220,
+            0
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "paneWidth",
+        "expression": {
+          "op": "sub",
+          "args": [
+            {
+              "ref": "width"
+            },
+            {
+              "ref": "navRailWidth"
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "contentWidth",
+        "expression": {
+          "op": "min",
+          "args": [
+            1120,
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "ref": "paneWidth"
+                },
+                {
+                  "op": "mul",
+                  "args": [
+                    2,
+                    {
+                      "ref": "pageGutter"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "titleSize",
+        "expression": {
+          "op": "min",
+          "args": [
+            {
+              "ref": "display"
+            },
+            {
+              "op": "max",
+              "args": [
+                40,
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "ref": "paneWidth"
+                    },
+                    0.18
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "div",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "ref": "contentWidth"
+                    },
+                    2
+                  ]
+                },
+                {
+                  "op": "add",
+                  "args": [
+                    5.386,
+                    {
+                      "op": "mul",
+                      "args": [
+                        8,
+                        {
+                          "ref": "tracking"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "timerSize",
+        "expression": {
+          "op": "min",
+          "args": [
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "ref": "titleSize"
+                },
+                1.1
+              ]
+            },
+            {
+              "op": "div",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "ref": "timerInnerWidth"
+                    },
+                    4
+                  ]
+                },
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "ref": "textScale"
+                    },
+                    {
+                      "op": "add",
+                      "args": [
+                        1.16,
+                        {
+                          "ref": "tracking"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "predicted",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "timerInnerWidth",
+        "expression": {
+          "op": "sub",
+          "args": [
+            {
+              "ref": "contentWidth"
+            },
+            {
+              "op": "mul",
+              "args": [
+                2,
+                {
+                  "ref": "pageGutter"
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "timerStacked",
+        "expression": {
+          "op": "lt",
+          "args": [
+            {
+              "ref": "timerInnerWidth"
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "ref": "textScale"
+                },
+                {
+                  "ref": "timerSize"
+                },
+                {
+                  "op": "add",
+                  "args": [
+                    2.581,
+                    {
+                      "op": "mul",
+                      "args": [
+                        4,
+                        {
+                          "ref": "tracking"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "boolean",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "predictedHeadlineLines",
+        "expression": {
+          "op": "add",
+          "args": [
+            1,
+            {
+              "op": "ceil",
+              "args": [
+                {
+                  "op": "div",
+                  "args": [
+                    {
+                      "op": "mul",
+                      "args": [
+                        {
+                          "ref": "titleSize"
+                        },
+                        {
+                          "ref": "textScale"
+                        },
+                        {
+                          "op": "add",
+                          "args": [
+                            5.386,
+                            {
+                              "op": "mul",
+                              "args": [
+                                8,
+                                {
+                                  "ref": "tracking"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "contentWidth"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "lines",
+        "provenance": {
+          "kind": "predicted",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "predictedHeadlineHeight",
+        "expression": {
+          "op": "mul",
+          "args": [
+            {
+              "ref": "predictedHeadlineLines"
+            },
+            {
+              "ref": "titleSize"
+            },
+            {
+              "ref": "titleLeading"
+            },
+            {
+              "ref": "textScale"
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "predicted",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "compactHierarchy",
+        "expression": {
+          "op": "lt",
+          "args": [
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "ref": "height"
+                },
+                0.42
+              ]
+            },
+            {
+              "ref": "predictedHeadlineHeight"
+            }
+          ]
+        },
+        "unit": "boolean",
+        "provenance": {
+          "kind": "predicted",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "operatingHeadingSize",
+        "expression": {
+          "op": "mul",
+          "args": [
+            {
+              "ref": "body"
+            },
+            1.4
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "sectionHeadingSize",
+        "expression": {
+          "op": "if",
+          "args": [
+            {
+              "ref": "compactHierarchy"
+            },
+            {
+              "ref": "operatingHeadingSize"
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "ref": "body"
+                },
+                2.2
+              ]
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "expressiveHeadingSize",
+        "expression": {
+          "op": "if",
+          "args": [
+            {
+              "ref": "compactHierarchy"
+            },
+            {
+              "ref": "operatingHeadingSize"
+            },
+            {
+              "ref": "titleSize"
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "heroActionFirst",
+        "expression": {
+          "ref": "compactHierarchy"
+        },
+        "unit": "boolean",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "navLabelSize",
+        "expression": {
+          "op": "mul",
+          "args": [
+            {
+              "ref": "body"
+            },
+            0.63
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "railLabelSize",
+        "expression": {
+          "op": "mul",
+          "args": [
+            {
+              "ref": "body"
+            },
+            0.85
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "navCompact",
+        "expression": {
+          "op": "lt",
+          "args": [
+            {
+              "ref": "contentWidth"
+            },
+            {
+              "op": "mul",
+              "args": [
+                3,
+                {
+                  "op": "max",
+                  "args": [
+                    52,
+                    {
+                      "op": "add",
+                      "args": [
+                        {
+                          "op": "mul",
+                          "args": [
+                            3.4765,
+                            {
+                              "ref": "body"
+                            },
+                            0.63,
+                            {
+                              "ref": "textScale"
+                            }
+                          ]
+                        },
+                        {
+                          "op": "mul",
+                          "args": [
+                            {
+                              "ref": "gap"
+                            },
+                            0.6
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "boolean",
+        "provenance": {
+          "kind": "predicted",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "sessionNumeralSize",
+        "expression": {
+          "op": "if",
+          "args": [
+            {
+              "ref": "compactHierarchy"
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "ref": "body"
+                },
+                1.65
+              ]
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "ref": "titleSize"
+                },
+                1.5
+              ]
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "phaseStacked",
+        "expression": {
+          "op": "lt",
+          "args": [
+            {
+              "ref": "contentWidth"
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "ref": "body"
+                },
+                18,
+                {
+                  "ref": "textScale"
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "boolean",
+        "provenance": {
+          "kind": "predicted",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "bodySize",
+        "expression": {
+          "ref": "body"
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "sectionGap",
+        "expression": {
+          "op": "mul",
+          "args": [
+            {
+              "ref": "gap"
+            },
+            2
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "paired",
+        "expression": {
+          "op": "lte",
+          "args": [
+            {
+              "op": "add",
+              "args": [
+                {
+                  "op": "mul",
+                  "args": [
+                    2,
+                    300,
+                    {
+                      "ref": "textScale"
+                    }
+                  ]
+                },
+                {
+                  "ref": "gap"
+                }
+              ]
+            },
+            {
+              "ref": "contentWidth"
+            }
+          ]
+        },
+        "unit": "boolean",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "navRail",
+        "expression": {
+          "op": "lte",
+          "args": [
+            {
+              "op": "add",
+              "args": [
+                220,
+                {
+                  "op": "mul",
+                  "args": [
+                    500,
+                    {
+                      "ref": "textScale"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "ref": "width"
+            }
+          ]
+        },
+        "unit": "boolean",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "cardWidth",
+        "expression": {
+          "op": "if",
+          "args": [
+            {
+              "ref": "paired"
+            },
+            {
+              "op": "div",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "ref": "contentWidth"
+                    },
+                    {
+                      "ref": "sectionGap"
+                    }
+                  ]
+                },
+                2
+              ]
+            },
+            {
+              "ref": "contentWidth"
+            }
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "compactDirectionLabels",
+        "expression": {
+          "op": "lt",
+          "args": [
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "ref": "cardWidth"
+                },
+                {
+                  "op": "add",
+                  "args": [
+                    {
+                      "op": "mul",
+                      "args": [
+                        2,
+                        {
+                          "ref": "pageGutter"
+                        }
+                      ]
+                    },
+                    30
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "mul",
+              "args": [
+                5.2405,
+                {
+                  "ref": "body"
+                },
+                {
+                  "ref": "textScale"
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "boolean",
+        "provenance": {
+          "kind": "predicted",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "hierarchy",
+        "expression": {
+          "op": "log2",
+          "args": [
+            {
+              "op": "div",
+              "args": [
+                {
+                  "ref": "titleSize"
+                },
+                {
+                  "ref": "body"
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "octaves",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "trackingTarget",
+        "expression": {
+          "op": "mul",
+          "args": [
+            {
+              "ref": "titleSize"
+            },
+            -0.00055
+          ]
+        },
+        "unit": "em",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "trackingResidual",
+        "expression": {
+          "op": "sub",
+          "args": [
+            {
+              "ref": "tracking"
+            },
+            {
+              "ref": "trackingTarget"
+            }
+          ]
+        },
+        "unit": "em",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "leadingTarget",
+        "expression": {
+          "op": "min",
+          "args": [
+            1.65,
+            {
+              "op": "max",
+              "args": [
+                1.4,
+                {
+                  "op": "add",
+                  "args": [
+                    1.35,
+                    {
+                      "op": "mul",
+                      "args": [
+                        {
+                          "op": "div",
+                          "args": [
+                            {
+                              "ref": "contentWidth"
+                            },
+                            {
+                              "ref": "body"
+                            }
+                          ]
+                        },
+                        0.004
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "ratio",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "leadingResidual",
+        "expression": {
+          "op": "sub",
+          "args": [
+            {
+              "ref": "bodyLeading"
+            },
+            {
+              "ref": "leadingTarget"
+            }
+          ]
+        },
+        "unit": "ratio",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "displayLeadingResidual",
+        "expression": {
+          "op": "sub",
+          "args": [
+            {
+              "ref": "titleLeading"
+            },
+            {
+              "op": "sub",
+              "args": [
+                1.2,
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "ref": "titleSize"
+                    },
+                    0.001
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "ratio",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "groupRatio",
+        "expression": {
+          "op": "div",
+          "args": [
+            {
+              "ref": "gap"
+            },
+            {
+              "ref": "body"
+            }
+          ]
+        },
+        "unit": "ratio",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "dampingRatio",
+        "expression": {
+          "op": "div",
+          "args": [
+            {
+              "ref": "damping"
+            },
+            {
+              "op": "mul",
+              "args": [
+                2,
+                {
+                  "op": "sqrt",
+                  "args": [
+                    {
+                      "ref": "stiffness"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "ratio",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "overshoot",
+        "expression": {
+          "op": "pow",
+          "args": [
+            2.718281828459045,
+            {
+              "op": "div",
+              "args": [
+                {
+                  "op": "mul",
+                  "args": [
+                    -3.141592653589793,
+                    {
+                      "ref": "dampingRatio"
+                    }
+                  ]
+                },
+                {
+                  "op": "sqrt",
+                  "args": [
+                    {
+                      "op": "sub",
+                      "args": [
+                        1,
+                        {
+                          "op": "pow",
+                          "args": [
+                            {
+                              "ref": "dampingRatio"
+                            },
+                            2
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unit": "ratio",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "pageDistance",
+        "expression": {
+          "op": "mul",
+          "args": [
+            {
+              "ref": "gap"
+            },
+            0.45
+          ]
+        },
+        "unit": "dp",
+        "provenance": {
+          "kind": "calculated",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      },
+      {
+        "id": "titleFill",
+        "expression": {
+          "op": "div",
+          "args": [
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "ref": "titleSize"
+                },
+                {
+                  "op": "add",
+                  "args": [
+                    5.386,
+                    {
+                      "op": "mul",
+                      "args": [
+                        8,
+                        {
+                          "ref": "tracking"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "ref": "contentWidth"
+            }
+          ]
+        },
+        "unit": "ratio",
+        "provenance": {
+          "kind": "predicted",
+          "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+        }
+      }
+    ],
+    "factors": [
+      {
+        "id": "minimum-content",
+        "expression": {
+          "ref": "contentWidth"
+        },
+        "bands": [
+          {
+            "min": 280,
+            "max": 1440
+          }
+        ],
+        "scale": 20,
+        "weight": 1,
+        "category": "content",
+        "mode": "hard",
+        "provenance": {
+          "kind": "heuristic",
+          "source": "Vela supported geometry contract; renderer verification remains pending"
+        }
+      },
+      {
+        "id": "native-underdamped",
+        "expression": {
+          "ref": "dampingRatio"
+        },
+        "bands": [
+          {
+            "min": 0.5,
+            "max": 0.95
+          }
+        ],
+        "scale": 0.1,
+        "weight": 1,
+        "category": "motion",
+        "mode": "hard",
+        "provenance": {
+          "kind": "heuristic",
+          "source": "Vela supported geometry contract; renderer verification remains pending"
+        }
+      },
+      {
+        "id": "body-legibility",
+        "expression": {
+          "ref": "body"
+        },
+        "bands": [
+          {
+            "min": 17,
+            "max": 20
+          }
+        ],
+        "scale": 1,
+        "weight": 1,
+        "category": "readability",
+        "mode": "hard",
+        "provenance": {
+          "kind": "heuristic",
+          "source": "Vela supported geometry contract; renderer verification remains pending"
+        }
+      },
+      {
+        "id": "editorial-hierarchy",
+        "expression": {
+          "ref": "hierarchy"
+        },
+        "bands": [
+          {
+            "min": 1.8,
+            "max": 2.15
+          }
+        ],
+        "scale": 0.18,
+        "weight": 2,
+        "category": "hierarchy",
+        "mode": "preference",
+        "provenance": {
+          "kind": "brief",
+          "source": "examples/vela/DESIGN.md: authored Field Notes direction"
+        }
+      },
+      {
+        "id": "tracking-size-coupling",
+        "expression": {
+          "ref": "trackingResidual"
+        },
+        "bands": [
+          {
+            "min": -0.003,
+            "max": 0.003
+          }
+        ],
+        "scale": 0.01,
+        "weight": 1.5,
+        "category": "typography",
+        "mode": "preference",
+        "provenance": {
+          "kind": "brief",
+          "source": "examples/vela/DESIGN.md: authored Field Notes direction"
+        }
+      },
+      {
+        "id": "body-leading-measure",
+        "expression": {
+          "ref": "leadingResidual"
+        },
+        "bands": [
+          {
+            "min": -0.03,
+            "max": 0.03
+          }
+        ],
+        "scale": 0.1,
+        "weight": 1.2,
+        "category": "typography",
+        "mode": "preference",
+        "provenance": {
+          "kind": "brief",
+          "source": "examples/vela/DESIGN.md: authored Field Notes direction"
+        }
+      },
+      {
+        "id": "display-leading-size",
+        "expression": {
+          "ref": "displayLeadingResidual"
+        },
+        "bands": [
+          {
+            "min": -0.015,
+            "max": 0.015
+          }
+        ],
+        "scale": 0.04,
+        "weight": 1,
+        "category": "typography",
+        "mode": "preference",
+        "provenance": {
+          "kind": "brief",
+          "source": "examples/vela/DESIGN.md: authored Field Notes direction"
+        }
+      },
+      {
+        "id": "grouping-space",
+        "expression": {
+          "ref": "groupRatio"
+        },
+        "bands": [
+          {
+            "min": 0.75,
+            "max": 1
+          }
+        ],
+        "scale": 0.2,
+        "weight": 1.2,
+        "category": "proximity",
+        "mode": "preference",
+        "provenance": {
+          "kind": "brief",
+          "source": "examples/vela/DESIGN.md: authored Field Notes direction"
+        }
+      },
+      {
+        "id": "headline-tension",
+        "expression": {
+          "ref": "titleFill"
+        },
+        "bands": [
+          {
+            "min": 0.7,
+            "max": 0.94
+          }
+        ],
+        "scale": 0.2,
+        "weight": 1,
+        "category": "expressive-tension",
+        "mode": "preference",
+        "provenance": {
+          "kind": "brief",
+          "source": "examples/vela/DESIGN.md: authored Field Notes direction"
+        }
+      },
+      {
+        "id": "motion-release",
+        "expression": {
+          "ref": "overshoot"
+        },
+        "bands": [
+          {
+            "min": 0.001,
+            "max": 0.015
+          }
+        ],
+        "scale": 0.03,
+        "weight": 2,
+        "category": "motion",
+        "mode": "preference",
+        "provenance": {
+          "kind": "brief",
+          "source": "examples/vela/DESIGN.md: authored Field Notes direction"
+        }
+      },
+      {
+        "id": "surface-radius",
+        "expression": {
+          "op": "div",
+          "args": [
+            {
+              "ref": "radius"
+            },
+            {
+              "ref": "gap"
+            }
+          ]
+        },
+        "bands": [
+          {
+            "min": 0.2,
+            "max": 0.5
+          }
+        ],
+        "scale": 0.25,
+        "weight": 0.6,
+        "category": "geometry",
+        "mode": "preference",
+        "provenance": {
+          "kind": "brief",
+          "source": "examples/vela/DESIGN.md: authored Field Notes direction"
+        }
+      }
+    ]
+  },
+  "machine": {
+    "id": "vela",
+    "initial": "today",
+    "content": {
+      "today": {
+        "default": "Build\nmomentum",
+        "compact": "Build\nyour pace",
+        "source": "examples/vela/content.json — authored product copy"
+      },
+      "detail": {
+        "default": "Steady\nbuild",
+        "compact": "Steady\nbuild",
+        "source": "examples/vela/content.json — authored product copy"
+      },
+      "complete": {
+        "default": "You\nshowed up",
+        "compact": "You\ndid it",
+        "source": "examples/vela/content.json — authored product copy"
+      },
+      "insights": {
+        "default": "Your\nrhythm",
+        "compact": "Your\npace",
+        "source": "examples/vela/content.json — authored product copy"
+      },
+      "profile": {
+        "default": "Make\nit yours",
+        "compact": "Make\nit yours",
+        "source": "examples/vela/content.json — authored product copy"
+      },
+      "phase-0": {
+        "default": "Find your rhythm",
+        "compact": "Warm up",
+        "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+      },
+      "phase-1": {
+        "default": "Hold your pace",
+        "compact": "Hold pace",
+        "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+      },
+      "phase-2": {
+        "default": "Ease back",
+        "compact": "Ease back",
+        "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+      },
+      "complete-empty": {
+        "default": "No session\nsaved",
+        "compact": "No time\nsaved",
+        "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+      },
+      "today-expanded": {
+        "default": "Room for\nsteady progress",
+        "compact": "Room for\nsteady progress",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "detail-expanded": {
+        "default": "A steadier\nkind of effort",
+        "compact": "A steadier\nkind of effort",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "complete-expanded": {
+        "default": "Make room\nfor what comes next",
+        "compact": "Make room\nfor what comes next",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "insights-expanded": {
+        "default": "Small steps\nacross a longer week",
+        "compact": "Small steps\nacross a longer week",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "profile-expanded": {
+        "default": "A little more\nroom for yourself",
+        "compact": "A little more\nroom for yourself",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "intro-description": {
+        "default": "Not every day needs a personal best. Just a place to start.",
+        "compact": "Not every day needs a personal best. Just a place to start.",
+        "source": "examples/vela/content.json — authored product copy"
+      },
+      "intro-description-expanded": {
+        "default": "Some days bring a little more room for movement. Others call for an easy beginning, a slower pace, and the freedom to change your plans. This journal keeps that space open without turning every session into a competition.",
+        "compact": "Some days bring a little more room for movement. Others call for an easy beginning, a slower pace, and the freedom to change your plans. This journal keeps that space open without turning every session into a competition.",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      },
+      "session-description": {
+        "default": "A little rhythm. A little effort. Enough room to finish feeling like you.",
+        "compact": "A little rhythm. A little effort. Enough room to finish feeling like you.",
+        "source": "examples/vela/content.json — authored product copy"
+      },
+      "session-description-expanded": {
+        "default": "Begin gently, build into a steady middle, and leave enough room to ease back. You can pause whenever you need to. The timer and your journal keep their place while you choose a different direction, revisit the details, or take a little longer to decide.",
+        "compact": "Begin gently, build into a steady middle, and leave enough room to ease back. You can pause whenever you need to. The timer and your journal keep their place while you choose a different direction, revisit the details, or take a little longer to decide.",
+        "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+      }
+    },
+    "states": [
+      {
+        "id": "today",
+        "purpose": "Understand readiness and choose one purposeful session",
+        "regions": [
+          {
+            "id": "screen",
+            "role": "dashboard",
+            "bindings": {
+              "titleSize": {
+                "ref": "titleSize"
+              },
+              "bodySize": {
+                "ref": "bodySize"
+              },
+              "pageGutter": {
+                "ref": "pageGutter"
+              },
+              "gap": {
+                "ref": "gap"
+              },
+              "sectionGap": {
+                "ref": "sectionGap"
+              },
+              "cardWidth": {
+                "ref": "cardWidth"
+              },
+              "contentWidth": {
+                "ref": "contentWidth"
+              },
+              "paired": {
+                "ref": "paired"
+              },
+              "navRail": {
+                "ref": "navRail"
+              },
+              "navRailWidth": {
+                "ref": "navRailWidth"
+              },
+              "paneWidth": {
+                "ref": "paneWidth"
+              },
+              "pageDistance": {
+                "ref": "pageDistance"
+              },
+              "titleLeading": {
+                "ref": "titleLeading"
+              },
+              "bodyLeading": {
+                "ref": "bodyLeading"
+              },
+              "timerSize": {
+                "ref": "timerSize"
+              },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
+              },
+              "timerStacked": {
+                "ref": "timerStacked"
+              },
+              "timerInnerWidth": {
+                "ref": "timerInnerWidth"
+              },
+              "compactHierarchy": {
+                "ref": "compactHierarchy"
+              },
+              "heroActionFirst": {
+                "ref": "heroActionFirst"
+              },
+              "navCompact": {
+                "ref": "navCompact"
+              },
+              "navLabelSize": {
+                "ref": "navLabelSize"
+              },
+              "railLabelSize": {
+                "ref": "railLabelSize"
+              },
+              "sessionNumeralSize": {
+                "ref": "sessionNumeralSize"
+              },
+              "phaseStacked": {
+                "ref": "phaseStacked"
+              },
+              "operatingHeadingSize": {
+                "ref": "operatingHeadingSize"
+              },
+              "sectionHeadingSize": {
+                "ref": "sectionHeadingSize"
+              },
+              "radius": {
+                "ref": "radius"
+              },
+              "tracking": {
+                "ref": "tracking"
+              },
+              "headingSize": {
+                "ref": "expressiveHeadingSize"
+              },
+              "persistentActions": 0,
+              "actionDockMaxHeight": {
+                "op": "mul",
+                "args": [
+                  {
+                    "ref": "height"
+                  },
+                  0.45
+                ]
+              }
+            }
+          }
+        ],
+        "on": [
+          {
+            "event": "OPEN_SESSION",
+            "target": "detail",
+            "motion": "page"
+          },
+          {
+            "event": "INSIGHTS",
+            "target": "insights",
+            "motion": "page"
+          },
+          {
+            "event": "PROFILE",
+            "target": "profile",
+            "motion": "page"
+          }
+        ]
+      },
+      {
+        "id": "detail",
+        "purpose": "Inspect an interval session before committing",
+        "regions": [
+          {
+            "id": "screen",
+            "role": "detail",
+            "bindings": {
+              "titleSize": {
+                "ref": "titleSize"
+              },
+              "bodySize": {
+                "ref": "bodySize"
+              },
+              "pageGutter": {
+                "ref": "pageGutter"
+              },
+              "gap": {
+                "ref": "gap"
+              },
+              "sectionGap": {
+                "ref": "sectionGap"
+              },
+              "cardWidth": {
+                "ref": "cardWidth"
+              },
+              "contentWidth": {
+                "ref": "contentWidth"
+              },
+              "paired": {
+                "ref": "paired"
+              },
+              "navRail": {
+                "ref": "navRail"
+              },
+              "navRailWidth": {
+                "ref": "navRailWidth"
+              },
+              "paneWidth": {
+                "ref": "paneWidth"
+              },
+              "pageDistance": {
+                "ref": "pageDistance"
+              },
+              "titleLeading": {
+                "ref": "titleLeading"
+              },
+              "bodyLeading": {
+                "ref": "bodyLeading"
+              },
+              "timerSize": {
+                "ref": "timerSize"
+              },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
+              },
+              "timerStacked": {
+                "ref": "timerStacked"
+              },
+              "timerInnerWidth": {
+                "ref": "timerInnerWidth"
+              },
+              "compactHierarchy": {
+                "ref": "compactHierarchy"
+              },
+              "heroActionFirst": {
+                "ref": "heroActionFirst"
+              },
+              "navCompact": {
+                "ref": "navCompact"
+              },
+              "navLabelSize": {
+                "ref": "navLabelSize"
+              },
+              "railLabelSize": {
+                "ref": "railLabelSize"
+              },
+              "sessionNumeralSize": {
+                "ref": "sessionNumeralSize"
+              },
+              "phaseStacked": {
+                "ref": "phaseStacked"
+              },
+              "operatingHeadingSize": {
+                "ref": "operatingHeadingSize"
+              },
+              "sectionHeadingSize": {
+                "ref": "sectionHeadingSize"
+              },
+              "radius": {
+                "ref": "radius"
+              },
+              "tracking": {
+                "ref": "tracking"
+              },
+              "headingSize": {
+                "ref": "sectionHeadingSize"
+              },
+              "persistentActions": 1,
+              "actionDockMaxHeight": {
+                "op": "mul",
+                "args": [
+                  {
+                    "ref": "height"
+                  },
+                  0.45
+                ]
+              }
+            }
+          }
+        ],
+        "on": [
+          {
+            "event": "BACK",
+            "target": "today",
+            "motion": "page"
+          },
+          {
+            "event": "START",
+            "target": "active",
+            "motion": "page"
+          }
+        ]
+      },
+      {
+        "id": "active",
+        "purpose": "Run, pause, resume and finish a local training timer",
+        "regions": [
+          {
+            "id": "screen",
+            "role": "session",
+            "bindings": {
+              "titleSize": {
+                "ref": "titleSize"
+              },
+              "bodySize": {
+                "ref": "bodySize"
+              },
+              "pageGutter": {
+                "ref": "pageGutter"
+              },
+              "gap": {
+                "ref": "gap"
+              },
+              "sectionGap": {
+                "ref": "sectionGap"
+              },
+              "cardWidth": {
+                "ref": "cardWidth"
+              },
+              "contentWidth": {
+                "ref": "contentWidth"
+              },
+              "paired": {
+                "ref": "paired"
+              },
+              "navRail": {
+                "ref": "navRail"
+              },
+              "navRailWidth": {
+                "ref": "navRailWidth"
+              },
+              "paneWidth": {
+                "ref": "paneWidth"
+              },
+              "pageDistance": {
+                "ref": "pageDistance"
+              },
+              "titleLeading": {
+                "ref": "titleLeading"
+              },
+              "bodyLeading": {
+                "ref": "bodyLeading"
+              },
+              "timerSize": {
+                "ref": "timerSize"
+              },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
+              },
+              "timerStacked": {
+                "ref": "timerStacked"
+              },
+              "timerInnerWidth": {
+                "ref": "timerInnerWidth"
+              },
+              "compactHierarchy": {
+                "ref": "compactHierarchy"
+              },
+              "heroActionFirst": {
+                "ref": "heroActionFirst"
+              },
+              "navCompact": {
+                "ref": "navCompact"
+              },
+              "navLabelSize": {
+                "ref": "navLabelSize"
+              },
+              "railLabelSize": {
+                "ref": "railLabelSize"
+              },
+              "sessionNumeralSize": {
+                "ref": "sessionNumeralSize"
+              },
+              "phaseStacked": {
+                "ref": "phaseStacked"
+              },
+              "operatingHeadingSize": {
+                "ref": "operatingHeadingSize"
+              },
+              "sectionHeadingSize": {
+                "ref": "sectionHeadingSize"
+              },
+              "radius": {
+                "ref": "radius"
+              },
+              "tracking": {
+                "ref": "tracking"
+              },
+              "headingSize": {
+                "ref": "operatingHeadingSize"
+              },
+              "persistentActions": 1,
+              "actionDockMaxHeight": {
+                "op": "mul",
+                "args": [
+                  {
+                    "ref": "height"
+                  },
+                  0.45
+                ]
+              }
+            }
+          }
+        ],
+        "on": [
+          {
+            "event": "FINISH",
+            "target": "complete",
+            "motion": "page"
+          },
+          {
+            "event": "DISCARD",
+            "target": "today",
+            "motion": "page"
+          },
+          {
+            "event": "BACK",
+            "target": "detail",
+            "motion": "page"
+          }
+        ]
+      },
+      {
+        "id": "complete",
+        "purpose": "Release effort and record the completed local session",
+        "regions": [
+          {
+            "id": "screen",
+            "role": "completion",
+            "bindings": {
+              "titleSize": {
+                "ref": "titleSize"
+              },
+              "bodySize": {
+                "ref": "bodySize"
+              },
+              "pageGutter": {
+                "ref": "pageGutter"
+              },
+              "gap": {
+                "ref": "gap"
+              },
+              "sectionGap": {
+                "ref": "sectionGap"
+              },
+              "cardWidth": {
+                "ref": "cardWidth"
+              },
+              "contentWidth": {
+                "ref": "contentWidth"
+              },
+              "paired": {
+                "ref": "paired"
+              },
+              "navRail": {
+                "ref": "navRail"
+              },
+              "navRailWidth": {
+                "ref": "navRailWidth"
+              },
+              "paneWidth": {
+                "ref": "paneWidth"
+              },
+              "pageDistance": {
+                "ref": "pageDistance"
+              },
+              "titleLeading": {
+                "ref": "titleLeading"
+              },
+              "bodyLeading": {
+                "ref": "bodyLeading"
+              },
+              "timerSize": {
+                "ref": "timerSize"
+              },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
+              },
+              "timerStacked": {
+                "ref": "timerStacked"
+              },
+              "timerInnerWidth": {
+                "ref": "timerInnerWidth"
+              },
+              "compactHierarchy": {
+                "ref": "compactHierarchy"
+              },
+              "heroActionFirst": {
+                "ref": "heroActionFirst"
+              },
+              "navCompact": {
+                "ref": "navCompact"
+              },
+              "navLabelSize": {
+                "ref": "navLabelSize"
+              },
+              "railLabelSize": {
+                "ref": "railLabelSize"
+              },
+              "sessionNumeralSize": {
+                "ref": "sessionNumeralSize"
+              },
+              "phaseStacked": {
+                "ref": "phaseStacked"
+              },
+              "operatingHeadingSize": {
+                "ref": "operatingHeadingSize"
+              },
+              "sectionHeadingSize": {
+                "ref": "sectionHeadingSize"
+              },
+              "radius": {
+                "ref": "radius"
+              },
+              "tracking": {
+                "ref": "tracking"
+              },
+              "headingSize": {
+                "ref": "expressiveHeadingSize"
+              },
+              "persistentActions": 1,
+              "actionDockMaxHeight": {
+                "op": "mul",
+                "args": [
+                  {
+                    "ref": "height"
+                  },
+                  0.45
+                ]
+              }
+            }
+          }
+        ],
+        "on": [
+          {
+            "event": "DONE",
+            "target": "today",
+            "motion": "page"
+          },
+          {
+            "event": "INSIGHTS",
+            "target": "insights",
+            "motion": "page"
+          }
+        ]
+      },
+      {
+        "id": "insights",
+        "purpose": "Review clearly labeled sample history and local completed sessions",
+        "regions": [
+          {
+            "id": "screen",
+            "role": "insights",
+            "bindings": {
+              "titleSize": {
+                "ref": "titleSize"
+              },
+              "bodySize": {
+                "ref": "bodySize"
+              },
+              "pageGutter": {
+                "ref": "pageGutter"
+              },
+              "gap": {
+                "ref": "gap"
+              },
+              "sectionGap": {
+                "ref": "sectionGap"
+              },
+              "cardWidth": {
+                "ref": "cardWidth"
+              },
+              "contentWidth": {
+                "ref": "contentWidth"
+              },
+              "paired": {
+                "ref": "paired"
+              },
+              "navRail": {
+                "ref": "navRail"
+              },
+              "navRailWidth": {
+                "ref": "navRailWidth"
+              },
+              "paneWidth": {
+                "ref": "paneWidth"
+              },
+              "pageDistance": {
+                "ref": "pageDistance"
+              },
+              "titleLeading": {
+                "ref": "titleLeading"
+              },
+              "bodyLeading": {
+                "ref": "bodyLeading"
+              },
+              "timerSize": {
+                "ref": "timerSize"
+              },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
+              },
+              "timerStacked": {
+                "ref": "timerStacked"
+              },
+              "timerInnerWidth": {
+                "ref": "timerInnerWidth"
+              },
+              "compactHierarchy": {
+                "ref": "compactHierarchy"
+              },
+              "heroActionFirst": {
+                "ref": "heroActionFirst"
+              },
+              "navCompact": {
+                "ref": "navCompact"
+              },
+              "navLabelSize": {
+                "ref": "navLabelSize"
+              },
+              "railLabelSize": {
+                "ref": "railLabelSize"
+              },
+              "sessionNumeralSize": {
+                "ref": "sessionNumeralSize"
+              },
+              "phaseStacked": {
+                "ref": "phaseStacked"
+              },
+              "operatingHeadingSize": {
+                "ref": "operatingHeadingSize"
+              },
+              "sectionHeadingSize": {
+                "ref": "sectionHeadingSize"
+              },
+              "radius": {
+                "ref": "radius"
+              },
+              "tracking": {
+                "ref": "tracking"
+              },
+              "headingSize": {
+                "ref": "sectionHeadingSize"
+              },
+              "persistentActions": 0,
+              "actionDockMaxHeight": {
+                "op": "mul",
+                "args": [
+                  {
+                    "ref": "height"
+                  },
+                  0.45
+                ]
+              }
+            }
+          }
+        ],
+        "on": [
+          {
+            "event": "TODAY",
+            "target": "today",
+            "motion": "page"
+          },
+          {
+            "event": "PROFILE",
+            "target": "profile",
+            "motion": "page"
+          }
+        ]
+      },
+      {
+        "id": "profile",
+        "purpose": "Control appearance and motion preferences",
+        "regions": [
+          {
+            "id": "screen",
+            "role": "settings",
+            "bindings": {
+              "titleSize": {
+                "ref": "titleSize"
+              },
+              "bodySize": {
+                "ref": "bodySize"
+              },
+              "pageGutter": {
+                "ref": "pageGutter"
+              },
+              "gap": {
+                "ref": "gap"
+              },
+              "sectionGap": {
+                "ref": "sectionGap"
+              },
+              "cardWidth": {
+                "ref": "cardWidth"
+              },
+              "contentWidth": {
+                "ref": "contentWidth"
+              },
+              "paired": {
+                "ref": "paired"
+              },
+              "navRail": {
+                "ref": "navRail"
+              },
+              "navRailWidth": {
+                "ref": "navRailWidth"
+              },
+              "paneWidth": {
+                "ref": "paneWidth"
+              },
+              "pageDistance": {
+                "ref": "pageDistance"
+              },
+              "titleLeading": {
+                "ref": "titleLeading"
+              },
+              "bodyLeading": {
+                "ref": "bodyLeading"
+              },
+              "timerSize": {
+                "ref": "timerSize"
+              },
+              "compactDirectionLabels": {
+                "ref": "compactDirectionLabels"
+              },
+              "timerStacked": {
+                "ref": "timerStacked"
+              },
+              "timerInnerWidth": {
+                "ref": "timerInnerWidth"
+              },
+              "compactHierarchy": {
+                "ref": "compactHierarchy"
+              },
+              "heroActionFirst": {
+                "ref": "heroActionFirst"
+              },
+              "navCompact": {
+                "ref": "navCompact"
+              },
+              "navLabelSize": {
+                "ref": "navLabelSize"
+              },
+              "railLabelSize": {
+                "ref": "railLabelSize"
+              },
+              "sessionNumeralSize": {
+                "ref": "sessionNumeralSize"
+              },
+              "phaseStacked": {
+                "ref": "phaseStacked"
+              },
+              "operatingHeadingSize": {
+                "ref": "operatingHeadingSize"
+              },
+              "sectionHeadingSize": {
+                "ref": "sectionHeadingSize"
+              },
+              "radius": {
+                "ref": "radius"
+              },
+              "tracking": {
+                "ref": "tracking"
+              },
+              "headingSize": {
+                "ref": "sectionHeadingSize"
+              },
+              "persistentActions": 0,
+              "actionDockMaxHeight": {
+                "op": "mul",
+                "args": [
+                  {
+                    "ref": "height"
+                  },
+                  0.45
+                ]
+              }
+            }
+          }
+        ],
+        "on": [
+          {
+            "event": "TODAY",
+            "target": "today",
+            "motion": "page"
+          },
+          {
+            "event": "INSIGHTS",
+            "target": "insights",
+            "motion": "page"
+          }
+        ]
+      }
+    ],
+    "motions": {
+      "page": {
+        "stiffness": {
+          "ref": "stiffness"
+        },
+        "damping": {
+          "ref": "damping"
+        },
+        "mass": 1,
+        "channel": "translateY",
+        "reducedMotion": "opacity-fade"
+      }
+    },
+    "buildContract": {
+      "layout": "flex",
+      "web": "React + StyleX",
+      "native": "React Native Text + Yoga",
+      "requirements": [
+        "Use resolved region bindings and transition topology, not hardcoded replacement geometry",
+        "Maintain natural text heights, 44pt minimum iOS control targets and safe areas",
+        "Native font scaling stays enabled; reflow topology changes with text scale",
+        "Reduced motion substitutes a short opacity transition with no spatial movement",
+        "Final rendering and task proofs required before accepted status"
+      ]
+    }
+  }
+}

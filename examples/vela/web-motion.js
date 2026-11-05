@@ -14,6 +14,9 @@ export function installVelaMotion({
   reduced,
   spring,
   distance,
+  durationSeconds = 0.8,
+  staggerSeconds = 0.065,
+  animateScene = true,
 }) {
   const diagnostics = (window.__VELA_WEB_MOTION__ ??= {
     implementation: 'vela-web-motion-v1',
@@ -43,7 +46,7 @@ export function installVelaMotion({
     motion: {
       spring,
       coordinate: { unit: 'normalized', from: 0, to: 1 },
-      durationSeconds: 0.8,
+      durationSeconds,
     },
     min: 0,
     max: 1.08,
@@ -51,14 +54,14 @@ export function installVelaMotion({
   });
   const springEase = (progress) => sampleTimelineProgress(table, progress);
   let disposed = false;
-  let sceneActive = true;
-  diagnostics.activeScenes++;
-  record('scene-start', {
+  let sceneActive = animateScene;
+  if (animateScene) diagnostics.activeScenes++;
+  record(animateScene ? 'scene-start' : 'scene-rebind', {
     entries: headings.length + cards.length,
     completion: Boolean(success),
     durationSeconds: reduced
       ? 0.12
-      : 0.8 + Math.max(0, cards.length - 1) * 0.065,
+      : durationSeconds + Math.max(0, cards.length - 1) * staggerSeconds,
   });
   const finishScene = () => {
     if (!sceneActive) return;
@@ -67,6 +70,7 @@ export function installVelaMotion({
     record('scene-complete');
   };
   const context = gsap.context(() => {
+    if (!animateScene) return;
     const timeline = gsap.timeline({ onComplete: finishScene });
     if (reduced) {
       // No translation, scaling, rotation or press displacement in this mode.
@@ -83,7 +87,7 @@ export function installVelaMotion({
       {
         y: 0,
         opacity: 1,
-        duration: 0.7,
+        duration: durationSeconds * 0.875,
         ease: springEase,
         stagger: 0.045,
         clearProps: 'transform,opacity',
@@ -97,9 +101,9 @@ export function installVelaMotion({
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
+          duration: durationSeconds,
           ease: springEase,
-          stagger: 0.065,
+          stagger: staggerSeconds,
           clearProps: 'transform,opacity',
         },
         0.055,
@@ -112,7 +116,7 @@ export function installVelaMotion({
           scale: 1,
           y: 0,
           opacity: 1,
-          duration: 0.8,
+          duration: durationSeconds,
           ease: springEase,
           clearProps: 'transform,transformOrigin,opacity',
         },
@@ -124,7 +128,7 @@ export function installVelaMotion({
         {
           scale: 1,
           rotation: 0,
-          duration: 0.65,
+          duration: durationSeconds * 0.8125,
           ease: springEase,
           clearProps: 'transform,transformOrigin',
         },

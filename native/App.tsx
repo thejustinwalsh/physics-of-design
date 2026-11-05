@@ -388,6 +388,16 @@ export default function App() {
             : 'today'
         }
         proofId={query.get('proof') ?? ''}
+        initialDirection={
+          query.get('direction') === 'field-notes'
+            ? 'field-notes'
+            : query.get('direction') === 'momentum'
+              ? 'momentum'
+              : undefined
+        }
+        contentFixture={
+          query.get('copy') === 'expanded' ? 'expanded' : 'default'
+        }
       />
     );
   }

@@ -44,6 +44,8 @@ import {
 } from '@design-theory/toolkit/layout';
 import { emitMotion } from '@design-theory/toolkit/motion';
 import policy from '../examples/vela/design.generated.json';
+import fieldNotesPolicy from '../examples/vela/design.field-notes.generated.json';
+const defaultPolicy = policy;
 import { getCoordinateSpace } from './coordinates';
 import { createRestoreGate } from '../src/restore-gate';
 import {
@@ -286,13 +288,22 @@ function Duration({
 export default function VelaApp({
   initialScreen = 'today',
   proofId = '',
+  initialDirection,
+  contentFixture = 'default',
 }: {
   initialScreen?: VelaScreen;
   proofId?: string;
+  initialDirection?: Preferences['direction'];
+  contentFixture?: 'default' | 'expanded';
 }) {
   return (
     <SafeAreaProvider>
-      <ViewportBoundary initialScreen={initialScreen} proofId={proofId} />
+      <ViewportBoundary
+        initialScreen={initialScreen}
+        proofId={proofId}
+        initialDirection={initialDirection}
+        contentFixture={contentFixture}
+      />
     </SafeAreaProvider>
   );
 }
@@ -300,9 +311,13 @@ export default function VelaApp({
 function ViewportBoundary({
   initialScreen,
   proofId,
+  initialDirection,
+  contentFixture,
 }: {
   initialScreen: VelaScreen;
   proofId: string;
+  initialDirection?: Preferences['direction'];
+  contentFixture: 'default' | 'expanded';
 }) {
   const nominalWindow = useWindowDimensions(),
     physicalInsets = useSafeAreaInsets();
@@ -365,6 +380,8 @@ function ViewportBoundary({
         <Vela
           initialScreen={initialScreen}
           proofId={proofId}
+          initialDirection={initialDirection}
+          contentFixture={contentFixture}
           geometry={measured.accepted}
           viewportGuard={{
             status: measured.status,
@@ -386,9 +403,13 @@ function Vela({
   proofId,
   geometry,
   viewportGuard,
+  initialDirection,
+  contentFixture,
 }: {
   initialScreen: VelaScreen;
   proofId: string;
+  initialDirection?: Preferences['direction'];
+  contentFixture: 'default' | 'expanded';
   geometry: MeasuredNativeGeometry;
   viewportGuard: Omit<MeasuredNativeState, 'accepted'>;
 }) {
@@ -399,7 +420,10 @@ function Vela({
     VelaHeavy: require('../assets/fonts/Lato-Black.ttf'),
   });
   const [screen, setScreen] = useState<VelaScreen>(initialScreen),
-    [preferences, setPreferences] = useState<Preferences>(INITIAL_PREFERENCES);
+    [preferences, setPreferences] = useState<Preferences>(() => ({
+      ...INITIAL_PREFERENCES,
+      ...(initialDirection ? { direction: initialDirection } : {}),
+    }));
   const [entries, setEntries] = useState<Entry[]>([]),
     [hydrated, setHydrated] = useState(false),
     [storageError, setStorageError] = useState('');
@@ -443,9 +467,11 @@ function Vela({
   const pageOffset = useRef(new Animated.Value(0)).current,
     opacity = useRef(new Animated.Value(1)).current;
   const reducedMotion = systemReduced || preferences.motion === 'reduced';
+  const policy =
+    preferences.direction === 'field-notes' ? fieldNotesPolicy : defaultPolicy;
   const c = policy.colors;
-  const accent = c[preferences.accent],
-    onAccent = preferences.accent === 'lime' ? c['on-lime'] : c['on-cobalt'];
+  const accent = preferences.accent === 'lime' ? c.action : c.held,
+    onAccent = preferences.accent === 'lime' ? c['on-action'] : c['on-held'];
   const designViewport = {
     width: window.width - insets.left - insets.right,
     height: window.height - insets.top - insets.bottom,
@@ -461,6 +487,7 @@ function Vela({
       designViewport.height,
       window.fontScale,
       reducedMotion,
+      policy,
     ],
   );
   const useRail = resolved.values.navRail === 1;
@@ -474,8 +501,16 @@ function Vela({
   }
   const n = (key: string) => p[key]!;
   const copyMode = n('heroActionFirst') === 1 ? 'compact' : 'default';
-  const copy = (key: keyof typeof policy.handoff.machine.content) =>
-    policy.handoff.machine.content[key][copyMode];
+  const copy = (key: keyof typeof policy.handoff.machine.content) => {
+    const expanded =
+      `${key}-expanded` as keyof typeof policy.handoff.machine.content;
+    return policy.handoff.machine.content[
+      contentFixture === 'expanded' &&
+      expanded in policy.handoff.machine.content
+        ? expanded
+        : key
+    ][copyMode];
+  };
   useEffect(() => {
     if (useRail || n('navCompact') !== 1) setMenuOpen(false);
   }, [useRail, p.navCompact]);
@@ -539,6 +574,9 @@ function Vela({
     padding: n('pageGutter'),
     gap: n('gap'),
     backgroundColor: c.surface,
+    ...(policy.direction.finish === 'ruled-paper'
+      ? { borderWidth: 1, borderColor: c.separator }
+      : {}),
   };
   const row: ViewStyle = {
     flexDirection: 'row',
@@ -582,7 +620,10 @@ function Vela({
       .restore()
       .then((saved) => {
         if (!current) return;
-        setPreferences(saved.preferences);
+        setPreferences({
+          ...saved.preferences,
+          ...(initialDirection ? { direction: initialDirection } : {}),
+        });
         setEntries(saved.entries);
         setStorageError('');
         setRestoreState('ready');
@@ -896,18 +937,18 @@ function Vela({
             alignItems: 'center',
             gap: n('gap') * 0.35,
             backgroundColor:
-              selectedDestination === item.id ? c.lime : c.canvas,
+              selectedDestination === item.id ? c.action : c.canvas,
           }}
         >
           <Icon
             name={item.icon}
-            color={selectedDestination === item.id ? c['on-lime'] : c.muted}
+            color={selectedDestination === item.id ? c['on-action'] : c.muted}
           />
           <Text
             style={type(
               n(useRail ? 'railLabelSize' : 'navLabelSize'),
               true,
-              selectedDestination === item.id ? c['on-lime'] : c.muted,
+              selectedDestination === item.id ? c['on-action'] : c.muted,
             )}
           >
             {item.label}
@@ -1032,6 +1073,8 @@ function Vela({
           nominalWindow: geometry.nominalWindow,
           measuredRootFrame: geometry.rootFrame,
           palette: c,
+          direction: policy.direction,
+          contentFixture,
           plan: p,
           resolvedAdmissible: resolved.admissible,
           resolvedFailures: resolved.failures,
@@ -1056,7 +1099,13 @@ function Vela({
           storageError,
         }}
       >
-        <StatusBar barStyle="light-content" />
+        <StatusBar
+          barStyle={
+            policy.direction.colorScheme === 'light'
+              ? 'dark-content'
+              : 'light-content'
+          }
+        />
         <View
           accessibilityElementsHidden={menuOpen}
           importantForAccessibility={menuOpen ? 'no-hide-descendants' : 'auto'}
@@ -1135,8 +1184,30 @@ function Vela({
                         : 'SESSION SUMMARY'
                       : 'SESSION DETAILS'}
               </Text>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel="Change art direction"
+                onPress={() =>
+                  setPreferences((old) => ({
+                    ...old,
+                    direction:
+                      old.direction === 'field-notes'
+                        ? 'momentum'
+                        : 'field-notes',
+                  }))
+                }
+                style={{
+                  minHeight: 44,
+                  justifyContent: 'center',
+                  maxWidth: '40%',
+                }}
+              >
+                <Text style={type(size(0.65), true)}>
+                  {policy.direction.label}
+                </Text>
+              </Pressable>
               {screen === 'active' && (
-                <Text style={type(size(0.7), true, c.lime)}>
+                <Text style={type(size(0.7), true, c.action)}>
                   {running ? 'LIVE' : 'PAUSED'}
                 </Text>
               )}
@@ -1166,7 +1237,7 @@ function Vela({
                     {n('heroActionFirst') === 1 && todayAction}
                     <Heading>
                       {copy('today')}
-                      <Text style={{ color: c.lime }}>
+                      <Text style={{ color: c.action }}>
                         {glueAccentPunctuation('.')}
                       </Text>
                     </Heading>
@@ -1190,14 +1261,14 @@ function Vela({
                         style={[
                           card,
                           {
-                            backgroundColor: c.cobalt,
+                            backgroundColor: c.held,
                             flexGrow: n('paired') ? 1 : 0,
                             flexShrink: 0,
                             flexBasis: n('paired') ? n('cardWidth') : 'auto',
                           },
                         ]}
                       >
-                        <Text style={[label, { color: c['on-cobalt'] }]}>
+                        <Text style={[label, { color: c['on-held'] }]}>
                           TODAY’S SESSION
                         </Text>
                         <View
@@ -1210,7 +1281,7 @@ function Vela({
                         >
                           <Text
                             style={[
-                              type(size(2), true, c['on-cobalt']),
+                              type(size(2), true, c['on-held']),
                               { flex: 1 },
                             ]}
                           >
@@ -1221,21 +1292,21 @@ function Vela({
                               style={type(
                                 n('sessionNumeralSize'),
                                 true,
-                                c['on-cobalt'],
+                                c['on-held'],
                               )}
                             >
                               22
                             </Text>
-                            <Text style={[label, { color: c['on-cobalt'] }]}>
+                            <Text style={[label, { color: c['on-held'] }]}>
                               MINUTES
                             </Text>
                           </View>
                         </View>
                         <Trace
-                          color={c['on-cobalt']}
+                          color={c['on-held']}
                           height={n('titleSize') * 1.15}
                         />
-                        <Text style={type(size(0.85), false, c['on-cobalt'])}>
+                        <Text style={type(size(0.85), false, c['on-held'])}>
                           Find your rhythm. Hold it.{'\n'}Make room to ease
                           back.
                         </Text>
@@ -1284,7 +1355,7 @@ function Vela({
                                     borderRadius: n('radius'),
                                     backgroundColor:
                                       preferences.checkIn === value
-                                        ? c.lime
+                                        ? c.action
                                         : c.canvas,
                                   }}
                                 >
@@ -1293,7 +1364,7 @@ function Vela({
                                       size(0.7),
                                       true,
                                       preferences.checkIn === value
-                                        ? c['on-lime']
+                                        ? c['on-action']
                                         : c.ink,
                                     )}
                                   >
@@ -1304,20 +1375,20 @@ function Vela({
                             )}
                           </View>
                         </View>
-                        <View style={[card, { backgroundColor: c.lime }]}>
-                          <Text style={[label, { color: c['on-lime'] }]}>
+                        <View style={[card, { backgroundColor: c.action }]}>
+                          <Text style={[label, { color: c['on-action'] }]}>
                             SHOWING UP COUNTS
                           </Text>
                           <Text
                             style={type(
                               n('titleSize') * 0.7,
                               true,
-                              c['on-lime'],
+                              c['on-action'],
                             )}
                           >
                             {entries.length.toString().padStart(2, '0')}
                           </Text>
-                          <Text style={type(size(0.85), false, c['on-lime'])}>
+                          <Text style={type(size(0.85), false, c['on-action'])}>
                             sessions logged on this device
                           </Text>
                         </View>
@@ -1333,7 +1404,7 @@ function Vela({
                   <>
                     <Heading>
                       {copy('detail')}
-                      <Text style={{ color: c.lime }}>
+                      <Text style={{ color: c.action }}>
                         {glueAccentPunctuation('.')}
                       </Text>
                     </Heading>
@@ -1359,7 +1430,7 @@ function Vela({
                             paddingTop: n('gap'),
                           }}
                         >
-                          <Text style={type(size(0.75), true, c.lime)}>
+                          <Text style={type(size(0.75), true, c.action)}>
                             0{i + 1}
                           </Text>
                           <View style={{ flex: 1, gap: n('gap') * 0.3 }}>
@@ -1381,9 +1452,9 @@ function Vela({
                       Choose your effort. Pause or finish whenever you choose.
                     </Text>
                     {/* Decision information precedes decorative reinforcement. */}
-                    <View style={[card, { backgroundColor: c.cobalt }]}>
-                      <Trace color={c['on-cobalt']} height={n('gap') * 3} />
-                      <Text style={type(size(), false, c['on-cobalt'])}>
+                    <View style={[card, { backgroundColor: c.held }]}>
+                      <Trace color={c['on-held']} height={n('gap') * 3} />
+                      <Text style={type(size(), false, c['on-held'])}>
                         A simple structure for purposeful movement. You choose
                         the activity and effort.
                       </Text>
@@ -1399,7 +1470,7 @@ function Vela({
                         style={type(n('headingSize'), true)}
                       >
                         {phaseName}
-                        <Text style={{ color: c.lime }}>
+                        <Text style={{ color: c.action }}>
                           {glueAccentPunctuation('.')}
                         </Text>
                       </Text>
@@ -1407,15 +1478,15 @@ function Vela({
                     <View
                       style={[
                         card,
-                        { backgroundColor: c.cobalt, gap: n('sectionGap') },
+                        { backgroundColor: c.held, gap: n('sectionGap') },
                       ]}
                     >
-                      <Text style={[label, { color: c['on-cobalt'] }]}>
+                      <Text style={[label, { color: c['on-held'] }]}>
                         TIME REMAINING
                       </Text>
                       <Duration
                         seconds={TOTAL_SECONDS - elapsed}
-                        color={c['on-cobalt']}
+                        color={c['on-held']}
                         description="remaining"
                       />
                       <View
@@ -1437,11 +1508,11 @@ function Vela({
                           style={{
                             width: `${(elapsed / TOTAL_SECONDS) * 100}%`,
                             height: '100%',
-                            backgroundColor: c.lime,
+                            backgroundColor: c.action,
                           }}
                         />
                       </View>
-                      <Text style={type(size(), false, c['on-cobalt'])}>
+                      <Text style={type(size(), false, c['on-held'])}>
                         {running
                           ? 'Stay with your rhythm.'
                           : 'Take your time. Your place is held.'}
@@ -1465,7 +1536,7 @@ function Vela({
                             width: n('titleSize'),
                             height: n('titleSize'),
                             borderRadius: n('radius'),
-                            backgroundColor: c.lime,
+                            backgroundColor: c.action,
                             alignItems: 'center',
                             justifyContent: 'center',
                             transform: [{ rotate: '-8deg' }],
@@ -1473,26 +1544,26 @@ function Vela({
                         >
                           <Icon
                             name="check"
-                            color={c['on-lime']}
+                            color={c['on-action']}
                             size={n('titleSize') * 0.6}
                           />
                         </View>
                         <Heading>
                           {copy('complete')}
-                          <Text style={{ color: c.lime }}>
+                          <Text style={{ color: c.action }}>
                             {glueAccentPunctuation('.')}
                           </Text>
                         </Heading>
-                        <View style={[card, { backgroundColor: c.lime }]}>
-                          <Text style={[label, { color: c['on-lime'] }]}>
+                        <View style={[card, { backgroundColor: c.action }]}>
+                          <Text style={[label, { color: c['on-action'] }]}>
                             YOUR SESSION
                           </Text>
                           <Duration
                             seconds={elapsed}
-                            color={c['on-lime']}
+                            color={c['on-action']}
                             description="completed"
                           />
-                          <Text style={type(size(), false, c['on-lime'])}>
+                          <Text style={type(size(), false, c['on-action'])}>
                             Steady build ·{' '}
                             {persistence === 'saved'
                               ? 'Saved on this device'
@@ -1506,7 +1577,7 @@ function Vela({
                       <>
                         <Heading>
                           {copy('complete-empty')}
-                          <Text style={{ color: c.lime }}>
+                          <Text style={{ color: c.action }}>
                             {glueAccentPunctuation('.')}
                           </Text>
                         </Heading>
@@ -1525,7 +1596,7 @@ function Vela({
                   <>
                     <Heading>
                       {copy('insights')}
-                      <Text style={{ color: c.lime }}>
+                      <Text style={{ color: c.action }}>
                         {glueAccentPunctuation('.')}
                       </Text>
                     </Heading>
@@ -1577,7 +1648,7 @@ function Vela({
                                 ).toLocaleDateString()}
                               </Text>
                             </View>
-                            <Text style={type(size(), true, c.lime)}>
+                            <Text style={type(size(), true, c.action)}>
                               {formatTime(entry.seconds)}
                             </Text>
                           </View>
@@ -1591,7 +1662,7 @@ function Vela({
                         send('OPEN_SESSION', 'today');
                       }}
                     />
-                    <View style={[card, { backgroundColor: c.cobalt }]}>
+                    <View style={[card, { backgroundColor: c.held }]}>
                       <View
                         style={[
                           row,
@@ -1602,14 +1673,14 @@ function Vela({
                         ]}
                       >
                         <View>
-                          <Text style={[label, { color: c['on-cobalt'] }]}>
+                          <Text style={[label, { color: c['on-held'] }]}>
                             SAMPLE WEEK
                           </Text>
                           <Text
-                            style={type(n('titleSize'), true, c['on-cobalt'])}
+                            style={type(n('titleSize'), true, c['on-held'])}
                           >
                             76
-                            <Text style={type(size(), false, c['on-cobalt'])}>
+                            <Text style={type(size(), false, c['on-held'])}>
                               {' '}
                               MIN
                             </Text>
@@ -1617,7 +1688,7 @@ function Vela({
                         </View>
                         <Text
                           style={[
-                            type(size(0.7), false, c['on-cobalt']),
+                            type(size(0.7), false, c['on-held']),
                             { maxWidth: n('contentWidth') * 0.35 },
                           ]}
                         >
@@ -1656,14 +1727,12 @@ function Vela({
                                     (minutes / 24) * n('titleSize') * 1.8,
                                   ),
                                   backgroundColor:
-                                    i === 5 ? c.lime : c['on-cobalt'],
+                                    i === 5 ? c.action : c['on-held'],
                                   borderRadius: n('radius') * 0.2,
                                 }}
                               />
                             </View>
-                            <Text
-                              style={type(size(0.63), true, c['on-cobalt'])}
-                            >
+                            <Text style={type(size(0.63), true, c['on-held'])}>
                               {['M', 'T', 'W', 'T', 'F', 'S', 'S'][i]}
                             </Text>
                           </View>
@@ -1676,7 +1745,7 @@ function Vela({
                   <>
                     <Heading>
                       {copy('profile')}
-                      <Text style={{ color: c.lime }}>
+                      <Text style={{ color: c.action }}>
                         {glueAccentPunctuation('.')}
                       </Text>
                     </Heading>
@@ -1714,7 +1783,7 @@ function Vela({
                                 flexBasis: n('bodySize') * 6,
                                 backgroundColor:
                                   preferences.motion === mode
-                                    ? c.lime
+                                    ? c.action
                                     : c.canvas,
                               },
                             ]}
@@ -1724,7 +1793,7 @@ function Vela({
                                 size(0.85),
                                 true,
                                 preferences.motion === mode
-                                  ? c['on-lime']
+                                  ? c['on-action']
                                   : c.ink,
                               )}
                             >
@@ -1751,7 +1820,7 @@ function Vela({
                           <Pressable
                             key={value}
                             accessibilityRole="radio"
-                            accessibilityLabel={`${value === 'lime' ? 'Lime' : 'Cobalt'} accent`}
+                            accessibilityLabel={`${value === 'lime' ? policy.direction.actionLabel : policy.direction.heldLabel} accent`}
                             accessibilityState={{
                               checked: preferences.accent === value,
                             }}
@@ -1767,7 +1836,8 @@ function Vela({
                               alignItems: 'center',
                               justifyContent: 'space-between',
                               gap: n('gap') * 0.5,
-                              backgroundColor: c[value],
+                              backgroundColor:
+                                value === 'lime' ? c.action : c.held,
                             }}
                           >
                             <Text
@@ -1776,21 +1846,23 @@ function Vela({
                                   size(0.85),
                                   true,
                                   value === 'lime'
-                                    ? c['on-lime']
-                                    : c['on-cobalt'],
+                                    ? c['on-action']
+                                    : c['on-held'],
                                 ),
                                 { flexShrink: 1 },
                               ]}
                             >
-                              {value === 'lime' ? 'Lime' : 'Cobalt'}
+                              {value === 'lime'
+                                ? policy.direction.actionLabel
+                                : policy.direction.heldLabel}
                             </Text>
                             {preferences.accent === value && (
                               <Icon
                                 name="check"
                                 color={
                                   value === 'lime'
-                                    ? c['on-lime']
-                                    : c['on-cobalt']
+                                    ? c['on-action']
+                                    : c['on-held']
                                 }
                                 size={20}
                               />
@@ -1822,7 +1894,7 @@ function Vela({
                 {storageError !== '' && (
                   <Text
                     accessibilityRole="alert"
-                    style={type(size(0.8), false, c.lime)}
+                    style={type(size(0.8), false, c.action)}
                   >
                     {storageError}
                   </Text>
@@ -1976,7 +2048,7 @@ function Vela({
                         ...primary,
                         backgroundColor:
                           selectedDestination === destination
-                            ? c.lime
+                            ? c.action
                             : c.canvas,
                       }}
                     >
@@ -1985,7 +2057,7 @@ function Vela({
                           size(),
                           true,
                           selectedDestination === destination
-                            ? c['on-lime']
+                            ? c['on-action']
                             : c.ink,
                         )}
                       >

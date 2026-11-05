@@ -16,11 +16,15 @@ const metroHost = process.env.FIELDWORK_ANDROID_HOST ?? '127.0.0.1:8088';
 await mkdir(directory, { recursive: true });
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const quote = (value) => "'" + value.replaceAll("'", "'\\''") + "'";
+const initialDirection = process.env.VELA_DIRECTION ?? 'momentum';
+assert.ok(['momentum', 'field-notes'].includes(initialDirection));
+let firstOpen = true;
 let proofId = runId,
   receipt,
   receiptObservedAt;
 const events = [];
-async function latest(predicate = () => true, after = 0) {
+const routeAttempts = [];
+async function latest(predicate = () => true, after = 0, onWait) {
   const file = `artifacts/fieldwork/native-observations/request-${createHash('sha256').update(proofId).digest('hex')}.json`;
   for (let i = 0; i < 100; i++) {
     try {
@@ -45,20 +49,31 @@ async function latest(predicate = () => true, after = 0) {
         return value;
       }
     } catch {}
+    await onWait?.();
     await sleep(300);
   }
   throw new Error(`No expected native transition after ${after}: ${file}`);
 }
 async function open(screen = 'today', story = '') {
   const started = Date.now(),
-    url = `exp://${metroHost}/--/vela?screen=${screen}${story ? `&story=${story}` : ''}&proof=${proofId}`;
-  await exec(adb, [
-    '-s',
-    device,
-    'shell',
-    `am start -W -a android.intent.action.VIEW -d ${quote(url)} -p host.exp.exponent`,
-  ]);
-  return latest((value) => value.snapshot.screen === screen, started);
+    url = `exp://${metroHost}/--/vela?screen=${screen}${story ? `&story=${story}` : ''}${firstOpen ? `&direction=${initialDirection}` : ''}&proof=${proofId}`;
+  firstOpen = false;
+  let attempts = 0, nextAttempt = 0;
+  const deliverRoute = async () => {
+    if (Date.now() < nextAttempt || attempts >= 8) return;
+    attempts++;
+    nextAttempt = Date.now() + 3000;
+    await exec(adb, [
+      '-s', device, 'shell',
+      `am start -W -a android.intent.action.VIEW -d ${quote(url)} -p host.exp.exponent`,
+    ], { timeout: 15000 });
+    routeAttempts.push({ screen, proofId, attempt: attempts, deliveredAt: Date.now() });
+  };
+  // Android may recreate Expo Go after a system font-scale change. Delivery is
+  // bounded and requires a fresh product receipt; a successful am-start alone
+  // does not establish that JS received the route.
+  await deliverRoute();
+  return latest((value) => value.snapshot.screen === screen, started, deliverRoute);
 }
 async function tap(name, predicate) {
   let current = await latest();
@@ -165,6 +180,32 @@ async function tap(name, predicate) {
   });
   return result;
 }
+async function changeDirectionWhilePaused() {
+  assert.equal(receipt.snapshot.running, false);
+  const oldDirection = receipt.snapshot.direction.id;
+  const elapsed = receipt.snapshot.elapsedSeconds;
+  const { xml } = await dumpAndroidAccessibility({
+    prefix: 'vela-direction-flow',
+    run: (_label, args, options) => exec(adb, ['-s', device, ...args], options),
+  });
+  const xmlFile = `${events.length}-direction-accessibility.xml`;
+  await writeFile(`${directory}/${xmlFile}`, xml);
+  const node = xml.match(/<node\b[^>]*>/g)?.find((value) =>
+    value.includes('content-desc="Change art direction"') && value.includes('clickable="true"'));
+  assert.ok(node, 'Fresh accessible direction control');
+  const bounds = node.match(/bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"/).slice(1).map(Number);
+  assert.ok(bounds[2] > bounds[0] && bounds[3] > bounds[1]);
+  const started = Date.now();
+  await exec(adb, ['-s', device, 'shell', 'input', 'tap',
+    String(Math.round((bounds[0] + bounds[2]) / 2)),
+    String(Math.round((bounds[1] + bounds[3]) / 2))]);
+  await latest((value) => value.snapshot.direction.id !== oldDirection && !value.snapshot.running, started);
+  assert.equal(receipt.snapshot.screen, 'active');
+  assert.equal(receipt.snapshot.elapsedSeconds, elapsed);
+  events.push({ name: 'Change art direction', from: oldDirection,
+    to: receipt.snapshot.direction.id, elapsed, tapBoundsPx: bounds,
+    accessibilityOracle: { status: 'verified', file: xmlFile }, receiptObservedAt });
+}
 async function swipe() {
   const window = receipt.snapshot.window,
     started = Date.now();
@@ -227,6 +268,9 @@ try {
   await latest((v) => !v.snapshot.running);
   assert.equal(receipt.snapshot.elapsedSeconds, paused);
   await capture('paused');
+  await changeDirectionWhilePaused();
+  const selectedDirection = receipt.snapshot.direction.id;
+  await capture('direction-switched');
   await tap('Resume session', (v) => v.snapshot.running);
   await latest((v) => v.snapshot.elapsedSeconds > paused);
   await reveal('Finish session');
@@ -253,6 +297,7 @@ try {
   );
   await capture('reduced-page');
   await open('profile');
+  assert.equal(receipt.snapshot.direction.id, selectedDirection);
   assert.equal(receipt.snapshot.preferences.motion, 'reduced');
   assert.equal(receipt.snapshot.completedSessions, initialCount + 1);
   await reveal('Follow system motion');
@@ -266,6 +311,10 @@ try {
       {
         passed: true,
         events,
+        routeAttempts,
+        initialDirection,
+        selectedDirection,
+        implementationIdentity: expectedSource,
         initialCount,
         completedCount: initialCount + 1,
         accessibilityCoverage: {
@@ -277,7 +326,7 @@ try {
           ).length,
         },
         scope:
-          'Actual Android gestures and fresh measured state transitions, elapsed timer pause/resume, completion persistence, and reduced-motion substitution. Idle actions independently cross-check fresh accessibility XML bounds. Live-clock taps use measured visible bounds with fresh transition evidence; their accessibility oracle is explicitly unavailable. iOS static/scale proofs separate.',
+          'Actual Android gestures, paused in-session direction switch with elapsed-state preservation and persistence, and fresh measured state transitions, elapsed timer pause/resume, completion persistence, and reduced-motion substitution. Idle actions independently cross-check fresh accessibility XML bounds. Live-clock taps use measured visible bounds with fresh transition evidence; their accessibility oracle is explicitly unavailable. iOS static/scale proofs separate.',
       },
       null,
       2,

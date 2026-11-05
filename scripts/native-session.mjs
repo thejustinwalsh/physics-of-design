@@ -1,3 +1,10 @@
+import { cleanupAndroidResources } from './native-session-cleanup.mjs';
+import { acquireLease } from './run-relay-builders.mjs';
+import {
+  stopOwnedProcessGroups,
+  portsAvailable,
+} from './relay-native-capability.mjs';
+import { queryAndroidProcessState } from './android-accessibility.mjs';
 import { nativeSourceIdentity } from './native-source-identity.mjs';
 import { spawn, execFile } from 'node:child_process';
 import { promisify } from 'node:util';
@@ -27,6 +34,12 @@ const product = process.argv.includes('--vela')
     ? 'fieldwork'
     : null;
 const productMode = Boolean(product);
+const androidOnly = process.argv.includes('--android-only');
+const platforms = androidOnly ? ['android'] : ['ios', 'android'];
+let lease = null;
+let launchedAndroid = false;
+let reverseBefore = null;
+const reverseOwned = [];
 const children = [];
 const set = '/private/tmp/physics-design-simulators';
 let bootedPhone;
@@ -105,6 +118,10 @@ try {
       throw new Error(
         `Port ${port} is occupied. Stop its service before starting this isolated native session.`,
       );
+  lease = acquireLease('/private/tmp/design-theory-relay-resources.lock', {
+    run: path.join(root, 'artifacts/native-session'),
+    kind: 'native-measurement-session',
+  });
   if (productMode)
     await start('app-observer', process.execPath, ['scripts/app-observer.mjs']);
   await start('bridge', process.execPath, ['dist/cli.js', 'native', 'serve']);
@@ -150,6 +167,15 @@ try {
       ).stdout.trim() === '1',
     'Android boot',
   );
+  const priorApp = await queryAndroidProcessState({
+    packageName: 'host.exp.exponent',
+    run: (name, args, options) =>
+      exec(adb, ['-s', 'emulator-5554', ...args], { env, ...options }),
+  });
+  if (priorApp.pids.length)
+    throw Error(
+      'An existing Expo Go app is active; refusing to replace an unowned session',
+    );
   await exec(
     adb,
     [
@@ -164,12 +190,28 @@ try {
     ],
     { env },
   );
-  for (const port of ['8088', '4319', ...(productMode ? ['4321'] : [])])
-    await exec(
-      adb,
-      ['-s', 'emulator-5554', 'reverse', `tcp:${port}`, `tcp:${port}`],
-      { env },
+  reverseBefore = (
+    await exec(adb, ['-s', 'emulator-5554', 'reverse', '--list'], { env })
+  ).stdout
+    .trim()
+    .split(String.fromCharCode(10))
+    .filter(Boolean)
+    .sort();
+  for (const port of ['8088', '4319', ...(productMode ? ['4321'] : [])]) {
+    const mapping = reverseBefore.find(
+      (line) => line.split(/ +/)[1] === `tcp:${port}`,
     );
+    if (mapping && mapping.split(/ +/)[2] !== `tcp:${port}`)
+      throw Error(`Unowned reverse mapping conflicts at ${port}`);
+    if (!mapping) {
+      await exec(
+        adb,
+        ['-s', 'emulator-5554', 'reverse', `tcp:${port}`, `tcp:${port}`],
+        { env },
+      );
+      reverseOwned.push(port);
+    }
+  }
   await exec(
     adb,
     [
@@ -188,78 +230,63 @@ try {
     ],
     { env },
   );
-  await mkdir(set, { recursive: true });
+  launchedAndroid = true;
   let id;
-  try {
-    id = (await readFile(path.join(runtime, 'iphone-udid.txt'), 'utf8')).trim();
-  } catch {}
-  if (!id) {
-    id = (
-      await exec('xcrun', [
-        'simctl',
-        '--set',
-        set,
-        'create',
-        'Physics of Design Phone',
-        'com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro',
-        'com.apple.CoreSimulator.SimRuntime.iOS-26-5',
-      ])
-    ).stdout.trim();
-    await writeFile(path.join(runtime, 'iphone-udid.txt'), id + '\n');
-  }
-  const inventory = JSON.parse(
-    (await exec('xcrun', ['simctl', '--set', set, 'list', 'devices', '--json']))
-      .stdout,
-  );
-  const device = Object.values(inventory.devices)
-    .flat()
-    .find((d) => d.udid === id);
-  if (!device)
-    throw new Error(
-      `Stored simulator ${id} no longer exists; remove artifacts/runtime/iphone-udid.txt to create a new one.`,
+  if (!androidOnly) {
+    await mkdir(set, { recursive: true });
+    try {
+      id = (
+        await readFile(path.join(runtime, 'iphone-udid.txt'), 'utf8')
+      ).trim();
+    } catch {}
+    if (!id) {
+      id = (
+        await exec('xcrun', [
+          'simctl',
+          '--set',
+          set,
+          'create',
+          'Physics of Design Phone',
+          'com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro',
+          'com.apple.CoreSimulator.SimRuntime.iOS-26-5',
+        ])
+      ).stdout.trim();
+      await writeFile(path.join(runtime, 'iphone-udid.txt'), id + '\n');
+    }
+    const inventory = JSON.parse(
+      (
+        await exec('xcrun', [
+          'simctl',
+          '--set',
+          set,
+          'list',
+          'devices',
+          '--json',
+        ])
+      ).stdout,
     );
-  if (device.state !== 'Booted') {
-    await exec('xcrun', ['simctl', '--set', set, 'boot', id]);
-    bootedPhone = id;
-  }
-  await exec('xcrun', [
-    'simctl',
-    '--set',
-    set,
-    'install',
-    id,
-    path.join(
-      root,
-      'artifacts/expo-home/ios-simulator-app-cache/Expo-Go-58.0.7.tar.app',
-    ),
-  ]);
-  await exec('xcrun', [
-    'simctl',
-    '--set',
-    set,
-    'launch',
-    '--terminate-running-process',
-    id,
-    'host.exp.Exponent',
-    '--initialUrl',
-    'exp://localhost:8087',
-    '-EXDevMenuIsOnboardingFinished',
-    'YES',
-    '-ExpoGoOnboardingFinished',
-    'YES',
-  ]);
-  await waitFor(async () => {
-    const health = await (
-      await fetch('http://127.0.0.1:4319/health', {
-        headers: { authorization: `Bearer ${env.DESIGN_NATIVE_TOKEN}` },
-      })
-    ).json();
-    return ['native-ios', 'native-android'].every((platform) =>
-      health.clients?.some((c) => c.platform === platform),
-    );
-  }, 'both native harnesses');
-  if (productMode) {
-    const started = Date.now();
+    const device = Object.values(inventory.devices)
+      .flat()
+      .find((d) => d.udid === id);
+    if (!device)
+      throw new Error(
+        `Stored simulator ${id} no longer exists; remove artifacts/runtime/iphone-udid.txt to create a new one.`,
+      );
+    if (device.state !== 'Booted') {
+      await exec('xcrun', ['simctl', '--set', set, 'boot', id]);
+      bootedPhone = id;
+    }
+    await exec('xcrun', [
+      'simctl',
+      '--set',
+      set,
+      'install',
+      id,
+      path.join(
+        root,
+        'artifacts/expo-home/ios-simulator-app-cache/Expo-Go-58.0.7.tar.app',
+      ),
+    ]);
     await exec('xcrun', [
       'simctl',
       '--set',
@@ -269,12 +296,43 @@ try {
       id,
       'host.exp.Exponent',
       '--initialUrl',
-      `exp://localhost:8087/--/${product}?proof=session-ios-${started}`,
+      'exp://localhost:8087',
       '-EXDevMenuIsOnboardingFinished',
       'YES',
       '-ExpoGoOnboardingFinished',
       'YES',
     ]);
+  }
+  await waitFor(async () => {
+    const health = await (
+      await fetch('http://127.0.0.1:4319/health', {
+        headers: { authorization: `Bearer ${env.DESIGN_NATIVE_TOKEN}` },
+      })
+    ).json();
+    return platforms
+      .map((platform) => `native-${platform}`)
+      .every((platform) =>
+        health.clients?.some((c) => c.platform === platform),
+      );
+  }, 'requested native harnesses');
+  if (productMode) {
+    const started = Date.now();
+    if (!androidOnly)
+      await exec('xcrun', [
+        'simctl',
+        '--set',
+        set,
+        'launch',
+        '--terminate-running-process',
+        id,
+        'host.exp.Exponent',
+        '--initialUrl',
+        `exp://localhost:8087/--/${product}?proof=session-ios-${started}`,
+        '-EXDevMenuIsOnboardingFinished',
+        'YES',
+        '-ExpoGoOnboardingFinished',
+        'YES',
+      ]);
     await exec(
       adb,
       [
@@ -295,7 +353,7 @@ try {
     );
     await waitFor(async () => {
       const receipts = await Promise.all(
-        ['ios', 'android'].map(async (platform) =>
+        platforms.map(async (platform) =>
           JSON.parse(
             await readFile(
               `artifacts/fieldwork/native-observations/request-${createHash('sha256').update(`session-${platform}-${started}`).digest('hex')}.json`,
@@ -310,9 +368,9 @@ try {
           r.incomplete === false &&
           r.snapshot.hydrated,
       );
-    }, `both actual ${product} app observations`);
+    }, `requested actual ${product} app observations`);
     console.log(
-      `${product} native apps ready on iPhone and Android. Observer:4321; Metro:8087/proxy:8088. Ctrl-C stops this session’s owned services.`,
+      `${product} native apps ready on ${platforms.join(' and ')}. Observer:4321; Metro:8087/proxy:8088. Ctrl-C stops this session’s owned services.`,
     );
   } else {
     console.log(
@@ -327,10 +385,34 @@ try {
     throw serviceFailure;
 } finally {
   stopping = true;
-  for (const child of children.reverse()) {
-    try {
-      process.kill(-child.pid, 'SIGTERM');
-    } catch {}
+  const cleanup = {
+    scope:
+      'Owned native services, Android app, reverse mappings and requested host ports',
+    errors: [],
+    groups: [],
+    confirmedEmpty: false,
+  };
+  cleanup.errors.push(...await cleanupAndroidResources({
+    launched: launchedAndroid,
+    reverseOwned,
+    reverseBefore,
+    run: (args) => exec(adb, ['-s', 'emulator-5554', ...args], { env }),
+    queryApp: () => queryAndroidProcessState({
+      packageName: 'host.exp.exponent',
+      run: (_name, args, options) =>
+        exec(adb, ['-s', 'emulator-5554', ...args], { env, ...options }),
+    }),
+  }));
+  try {
+    cleanup.groups = await stopOwnedProcessGroups(
+      children.map((child) => ({
+        pid: child.pid,
+        name: 'native-session-child',
+        owned: true,
+      })),
+    );
+  } catch (error) {
+    cleanup.errors.push(String(error));
   }
   if (bootedPhone)
     await exec('xcrun', [
@@ -339,12 +421,26 @@ try {
       set,
       'shutdown',
       bootedPhone,
-    ]).catch(() => {});
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  for (const child of children) {
-    try {
-      process.kill(-child.pid, 'SIGKILL');
-    } catch {}
+    ]).catch((error) => cleanup.errors.push(String(error)));
+  const ports = await portsAvailable([
+    4319,
+    8087,
+    8088,
+    ...(productMode ? [4321] : []),
+  ]);
+  cleanup.confirmedEmpty =
+    cleanup.errors.length === 0 &&
+    cleanup.groups.every((group) => group.absent) &&
+    ports.every((port) => port.free);
+  await writeFile(
+    'artifacts/native-session/cleanup.json',
+    JSON.stringify({ ...cleanup, ports }, null, 2),
+  );
+  if (lease)
+    cleanup.confirmedEmpty ? lease.release(cleanup) : lease.retain(cleanup);
+  if (!cleanup.confirmedEmpty) {
+    process.exitCode = 1;
+    console.error('Native cleanup remains unresolved; resource lease retained. See artifacts/native-session/cleanup.json');
   }
   process.removeListener('SIGINT', requestStop);
   process.removeListener('SIGTERM', requestStop);

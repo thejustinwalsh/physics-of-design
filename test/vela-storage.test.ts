@@ -21,6 +21,28 @@ test('actual native decoder preserves strict preferences and fractional history'
   );
 });
 
+test('native direction preferences preserve legacy journals and reject invalid directions', () => {
+  assert.deepEqual(readStored(JSON.stringify(valid())), valid());
+  for (const direction of ['momentum', 'field-notes']) {
+    const value = {
+      ...valid(),
+      preferences: { ...valid().preferences, direction },
+    };
+    assert.deepEqual(readStored(JSON.stringify(value)), value);
+  }
+  for (const direction of [null, [], {}, 1, 'unknown', '__proto__'])
+    assert.throws(
+      () =>
+        readStored(
+          JSON.stringify({
+            ...valid(),
+            preferences: { ...valid().preferences, direction },
+          }),
+        ),
+      /preferences/,
+    );
+});
+
 test('actual native decoder rejects coercible enums, null/array records, invalid dates and nonfinite or out-of-range history', () => {
   const cases: unknown[] = [
     null,

@@ -1,4 +1,19 @@
 {
+  "direction": {
+    "id": "momentum",
+    "label": "Momentum",
+    "shortLabel": "Ink",
+    "kind": "authored",
+    "source": "examples/vela/brief.md",
+    "finish": "ink-instrument",
+    "colorScheme": "dark",
+    "actionLabel": "Electric lime",
+    "heldLabel": "Deep cobalt",
+    "choreography": {
+      "durationSeconds": 0.8,
+      "staggerSeconds": 0.065
+    }
+  },
   "colors": {
     "canvas": "#111310",
     "surface": "#232621",
@@ -7,7 +22,14 @@
     "lime": "#d5ff3f",
     "cobalt": "#3d44e8",
     "on-lime": "#152000",
-    "on-cobalt": "#ffffff"
+    "on-cobalt": "#ffffff",
+    "action": "#d5ff3f",
+    "held": "#3d44e8",
+    "on-action": "#152000",
+    "on-held": "#ffffff",
+    "border": "#41473d",
+    "separator": "#353a32",
+    "focus": "#d5ff3f"
   },
   "handoff": {
     "version": 1,
@@ -15,14 +37,15 @@
     "runtimeSemantics": "scenario-bands-v2",
     "program": {
       "version": 1,
-      "id": "vela",
+      "id": "vela-momentum-v2",
       "brief": {
         "intent": "Vela is a bold, precise training journal for people who want purposeful movement, not a gamified medical authority. Ink, electric lime and cobalt; oversized confident numerals; asymmetric editorial hierarchy; generous grouped space; one primary action per screen; expressive spring page entrances with clear anticipation, hold and release. Phone-first native app, useful iPad split/rail adaptation and desktop companion. Content and accessible controls remain intact under text enlargement and reduced motion.",
         "source": "examples/vela/brief.md; user direction October 2026"
       },
       "identity": {
-        "policy": "vela-v1",
+        "policy": "vela-momentum-v2-responsive-directions",
         "font": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
+        "designDocument": "35cb390afc4cdb194407d82aeb76adf74fb7d97530f25fccc636ec9f7cccdd96",
         "math": "energy-v1",
         "motion": "stationary spring; RN 0.88 underdamped mapping"
       },
@@ -167,6 +190,33 @@
           }
         },
         {
+          "id": "w320h740s1",
+          "values": {
+            "width": 320,
+            "height": 740,
+            "textScale": 1,
+            "reducedMotion": 0
+          }
+        },
+        {
+          "id": "w320h740s2",
+          "values": {
+            "width": 320,
+            "height": 740,
+            "textScale": 2,
+            "reducedMotion": 0
+          }
+        },
+        {
+          "id": "w320h740s3.6",
+          "values": {
+            "width": 320,
+            "height": 740,
+            "textScale": 3.6,
+            "reducedMotion": 0
+          }
+        },
+        {
           "id": "w390h700s1",
           "values": {
             "width": 390,
@@ -243,6 +293,33 @@
           "values": {
             "width": 834,
             "height": 1210,
+            "textScale": 3.6,
+            "reducedMotion": 0
+          }
+        },
+        {
+          "id": "w844h320s1",
+          "values": {
+            "width": 844,
+            "height": 320,
+            "textScale": 1,
+            "reducedMotion": 0
+          }
+        },
+        {
+          "id": "w844h320s2",
+          "values": {
+            "width": 844,
+            "height": 320,
+            "textScale": 2,
+            "reducedMotion": 0
+          }
+        },
+        {
+          "id": "w844h320s3.6",
+          "values": {
+            "width": 844,
+            "height": 320,
             "textScale": 3.6,
             "reducedMotion": 0
           }
@@ -477,6 +554,25 @@
           }
         },
         {
+          "id": "paneWidth",
+          "expression": {
+            "op": "sub",
+            "args": [
+              {
+                "ref": "width"
+              },
+              {
+                "ref": "navRailWidth"
+              }
+            ]
+          },
+          "unit": "dp",
+          "provenance": {
+            "kind": "calculated",
+            "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+          }
+        },
+        {
           "id": "pageGutter",
           "expression": {
             "op": "min",
@@ -492,25 +588,27 @@
                   },
                   0.08
                 ]
-              }
-            ]
-          },
-          "unit": "dp",
-          "provenance": {
-            "kind": "calculated",
-            "source": "Vela brief geometry v1; editable art direction, not universal beauty"
-          }
-        },
-        {
-          "id": "paneWidth",
-          "expression": {
-            "op": "sub",
-            "args": [
-              {
-                "ref": "width"
               },
               {
-                "ref": "navRailWidth"
+                "op": "max",
+                "args": [
+                  8,
+                  {
+                    "op": "div",
+                    "args": [
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "ref": "paneWidth"
+                          },
+                          280
+                        ]
+                      },
+                      2
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -703,42 +801,6 @@
           }
         },
         {
-          "id": "cardWidth",
-          "expression": {
-            "op": "if",
-            "args": [
-              {
-                "ref": "paired"
-              },
-              {
-                "op": "div",
-                "args": [
-                  {
-                    "op": "sub",
-                    "args": [
-                      {
-                        "ref": "contentWidth"
-                      },
-                      {
-                        "ref": "gap"
-                      }
-                    ]
-                  },
-                  2
-                ]
-              },
-              {
-                "ref": "contentWidth"
-              }
-            ]
-          },
-          "unit": "dp",
-          "provenance": {
-            "kind": "calculated",
-            "source": "Vela brief geometry v1; editable art direction, not universal beauty"
-          }
-        },
-        {
           "id": "phaseStacked",
           "expression": {
             "op": "lt",
@@ -797,6 +859,90 @@
           "unit": "dp",
           "provenance": {
             "kind": "calculated",
+            "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+          }
+        },
+        {
+          "id": "cardWidth",
+          "expression": {
+            "op": "if",
+            "args": [
+              {
+                "ref": "paired"
+              },
+              {
+                "op": "div",
+                "args": [
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "ref": "contentWidth"
+                      },
+                      {
+                        "ref": "sectionGap"
+                      }
+                    ]
+                  },
+                  2
+                ]
+              },
+              {
+                "ref": "contentWidth"
+              }
+            ]
+          },
+          "unit": "dp",
+          "provenance": {
+            "kind": "calculated",
+            "source": "Vela brief geometry v1; editable art direction, not universal beauty"
+          }
+        },
+        {
+          "id": "compactDirectionLabels",
+          "expression": {
+            "op": "lt",
+            "args": [
+              {
+                "op": "sub",
+                "args": [
+                  {
+                    "ref": "cardWidth"
+                  },
+                  {
+                    "op": "add",
+                    "args": [
+                      {
+                        "op": "mul",
+                        "args": [
+                          2,
+                          {
+                            "ref": "pageGutter"
+                          }
+                        ]
+                      },
+                      28
+                    ]
+                  }
+                ]
+              },
+              {
+                "op": "mul",
+                "args": [
+                  5.2405,
+                  {
+                    "ref": "body"
+                  },
+                  {
+                    "ref": "textScale"
+                  }
+                ]
+              }
+            ]
+          },
+          "unit": "boolean",
+          "provenance": {
+            "kind": "predicted",
             "source": "Vela brief geometry v1; editable art direction, not universal beauty"
           }
         },
@@ -1141,17 +1287,53 @@
         {
           "id": "timerSize",
           "expression": {
-            "op": "mul",
+            "op": "min",
             "args": [
               {
-                "ref": "titleSize"
+                "op": "mul",
+                "args": [
+                  {
+                    "ref": "titleSize"
+                  },
+                  1.1
+                ]
               },
-              1.1
+              {
+                "op": "div",
+                "args": [
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "ref": "timerInnerWidth"
+                      },
+                      2
+                    ]
+                  },
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "ref": "textScale"
+                      },
+                      {
+                        "op": "add",
+                        "args": [
+                          1.16,
+                          {
+                            "ref": "tracking"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
             ]
           },
           "unit": "dp",
           "provenance": {
-            "kind": "calculated",
+            "kind": "predicted",
             "source": "Vela brief geometry v1; editable art direction, not universal beauty"
           }
         },
@@ -1504,7 +1686,7 @@
         }
       ]
     },
-    "programIdentity": "0c99a8d5fa432ee17b6dd395d285c381698d3e2f8d4c494762161fe96855f49c",
+    "programIdentity": "50bf2497fcd814cfa52797161cfb8eb20f1c52b9c08601861f6334b0ccea12bf",
     "machine": {
       "id": "vela",
       "initial": "today",
@@ -1512,27 +1694,27 @@
         "today": {
           "default": "Build\nmomentum",
           "compact": "Build\nyour pace",
-          "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+          "source": "examples/vela/content.json — authored product copy"
         },
         "detail": {
           "default": "Steady\nbuild",
           "compact": "Steady\nbuild",
-          "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+          "source": "examples/vela/content.json — authored product copy"
         },
         "complete": {
           "default": "You\nshowed up",
           "compact": "You\ndid it",
-          "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+          "source": "examples/vela/content.json — authored product copy"
         },
         "insights": {
           "default": "Your\nrhythm",
           "compact": "Your\npace",
-          "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+          "source": "examples/vela/content.json — authored product copy"
         },
         "profile": {
           "default": "Make\nit yours",
           "compact": "Make\nit yours",
-          "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+          "source": "examples/vela/content.json — authored product copy"
         },
         "phase-0": {
           "default": "Find your rhythm",
@@ -1553,6 +1735,51 @@
           "default": "No session\nsaved",
           "compact": "No time\nsaved",
           "source": "examples/vela/brief.md — authored equivalent responsive copy, no user-generated content replacement"
+        },
+        "today-expanded": {
+          "default": "Room for\nsteady progress",
+          "compact": "Room for\nsteady progress",
+          "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+        },
+        "detail-expanded": {
+          "default": "A steadier\nkind of effort",
+          "compact": "A steadier\nkind of effort",
+          "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+        },
+        "complete-expanded": {
+          "default": "Make room\nfor what comes next",
+          "compact": "Make room\nfor what comes next",
+          "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+        },
+        "insights-expanded": {
+          "default": "Small steps\nacross a longer week",
+          "compact": "Small steps\nacross a longer week",
+          "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+        },
+        "profile-expanded": {
+          "default": "A little more\nroom for yourself",
+          "compact": "A little more\nroom for yourself",
+          "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+        },
+        "intro-description": {
+          "default": "Not every day needs a personal best. Just a place to start.",
+          "compact": "Not every day needs a personal best. Just a place to start.",
+          "source": "examples/vela/content.json — authored product copy"
+        },
+        "intro-description-expanded": {
+          "default": "Some days bring a little more room for movement. Others call for an easy beginning, a slower pace, and the freedom to change your plans. This journal keeps that space open without turning every session into a competition.",
+          "compact": "Some days bring a little more room for movement. Others call for an easy beginning, a slower pace, and the freedom to change your plans. This journal keeps that space open without turning every session into a competition.",
+          "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
+        },
+        "session-description": {
+          "default": "A little rhythm. A little effort. Enough room to finish feeling like you.",
+          "compact": "A little rhythm. A little effort. Enough room to finish feeling like you.",
+          "source": "examples/vela/content.json — authored product copy"
+        },
+        "session-description-expanded": {
+          "default": "Begin gently, build into a steady middle, and leave enough room to ease back. You can pause whenever you need to. The timer and your journal keep their place while you choose a different direction, revisit the details, or take a little longer to decide.",
+          "compact": "Begin gently, build into a steady middle, and leave enough room to ease back. You can pause whenever you need to. The timer and your journal keep their place while you choose a different direction, revisit the details, or take a little longer to decide.",
+          "source": "examples/vela/content.json — synthetic long-copy stress fixture, not human evidence"
         }
       },
       "states": [
@@ -1608,6 +1835,9 @@
                 },
                 "timerSize": {
                   "ref": "timerSize"
+                },
+                "compactDirectionLabels": {
+                  "ref": "compactDirectionLabels"
                 },
                 "timerStacked": {
                   "ref": "timerStacked"
@@ -1735,6 +1965,9 @@
                 "timerSize": {
                   "ref": "timerSize"
                 },
+                "compactDirectionLabels": {
+                  "ref": "compactDirectionLabels"
+                },
                 "timerStacked": {
                   "ref": "timerStacked"
                 },
@@ -1855,6 +2088,9 @@
                 },
                 "timerSize": {
                   "ref": "timerSize"
+                },
+                "compactDirectionLabels": {
+                  "ref": "compactDirectionLabels"
                 },
                 "timerStacked": {
                   "ref": "timerStacked"
@@ -1982,6 +2218,9 @@
                 "timerSize": {
                   "ref": "timerSize"
                 },
+                "compactDirectionLabels": {
+                  "ref": "compactDirectionLabels"
+                },
                 "timerStacked": {
                   "ref": "timerStacked"
                 },
@@ -2102,6 +2341,9 @@
                 },
                 "timerSize": {
                   "ref": "timerSize"
+                },
+                "compactDirectionLabels": {
+                  "ref": "compactDirectionLabels"
                 },
                 "timerStacked": {
                   "ref": "timerStacked"
@@ -2224,6 +2466,9 @@
                 "timerSize": {
                   "ref": "timerSize"
                 },
+                "compactDirectionLabels": {
+                  "ref": "compactDirectionLabels"
+                },
                 "timerStacked": {
                   "ref": "timerStacked"
                 },
@@ -2320,14 +2565,14 @@
       }
     },
     "assignment": {
-      "body": 19,
+      "body": 17,
       "bodyLeading": 1.5,
-      "damping": 18,
-      "density": 0.9,
-      "display": 80,
-      "gutter": 20,
+      "damping": 20,
+      "density": 1,
+      "display": 76,
+      "gutter": 28,
       "radius": 24,
-      "space": 22,
+      "space": 20,
       "stiffness": 200,
       "titleLeading": 1.12,
       "tracking": -0.04
@@ -2335,10 +2580,10 @@
     "decisions": [
       {
         "variable": "body",
-        "chosen": 19,
+        "chosen": 17,
         "alternatives": [
-          17,
-          18
+          18,
+          19
         ],
         "locked": false
       },
@@ -2353,9 +2598,9 @@
       },
       {
         "variable": "damping",
-        "chosen": 18,
+        "chosen": 20,
         "alternatives": [
-          20,
+          18,
           22,
           24
         ],
@@ -2363,32 +2608,32 @@
       },
       {
         "variable": "density",
-        "chosen": 0.9,
+        "chosen": 1,
         "alternatives": [
-          1,
+          0.9,
           1.1
         ],
         "locked": false
       },
       {
         "variable": "display",
-        "chosen": 80,
+        "chosen": 76,
         "alternatives": [
           56,
           60,
           64,
           68,
           72,
-          76
+          80
         ],
         "locked": false
       },
       {
         "variable": "gutter",
-        "chosen": 20,
+        "chosen": 28,
         "alternatives": [
-          24,
-          28
+          20,
+          24
         ],
         "locked": false
       },
@@ -2404,11 +2649,11 @@
       },
       {
         "variable": "space",
-        "chosen": 22,
+        "chosen": 20,
         "alternatives": [
           16,
           18,
-          20,
+          22,
           24
         ],
         "locked": false
@@ -2453,7 +2698,7 @@
       ]
     },
     "scope": "Resolved design choice machine. Energy expresses this brief; it does not certify quality, renderer feasibility or an optimum.",
-    "identity": "29b7b7ea28ec2882ea1268bc88b3231e31a315bf6d6af37e6ca0817ec8c39eaf"
+    "identity": "80256f87e9d6a7439eb1727e55b52805cf25d994ff75dabbdc4a3124e92cca62"
   },
   "palette": {
     "system": {
@@ -2465,7 +2710,14 @@
         "lime": "#d5ff3f",
         "cobalt": "#3d44e8",
         "on-lime": "#152000",
-        "on-cobalt": "#ffffff"
+        "on-cobalt": "#ffffff",
+        "action": "#d5ff3f",
+        "held": "#3d44e8",
+        "on-action": "#152000",
+        "on-held": "#ffffff",
+        "border": "#41473d",
+        "separator": "#353a32",
+        "focus": "#d5ff3f"
       },
       "roles": [
         {
@@ -2496,8 +2748,8 @@
         },
         {
           "id": "primary-action",
-          "foreground": "on-lime",
-          "background": "lime",
+          "foreground": "on-action",
+          "background": "action",
           "use": "text",
           "source": [
             "Vela visual brief"
@@ -2509,13 +2761,55 @@
         },
         {
           "id": "session",
-          "foreground": "on-cobalt",
-          "background": "cobalt",
+          "foreground": "on-held",
+          "background": "held",
           "use": "text",
           "source": [
             "Vela visual brief"
           ],
           "adjacentBackgrounds": [],
+          "backdrop": null,
+          "state": "default",
+          "theme": "default"
+        },
+        {
+          "id": "surface-text",
+          "foreground": "ink",
+          "background": "surface",
+          "use": "text",
+          "source": [
+            "examples/vela/brief.md; user direction October 2026"
+          ],
+          "adjacentBackgrounds": [],
+          "backdrop": null,
+          "state": "default",
+          "theme": "default"
+        },
+        {
+          "id": "canvas-secondary",
+          "foreground": "muted",
+          "background": "canvas",
+          "use": "text",
+          "source": [
+            "examples/vela/brief.md; user direction October 2026"
+          ],
+          "adjacentBackgrounds": [],
+          "backdrop": null,
+          "state": "default",
+          "theme": "default"
+        },
+        {
+          "id": "focus",
+          "foreground": "focus",
+          "background": "canvas",
+          "use": "non-text",
+          "source": [
+            "examples/vela/brief.md; user direction October 2026"
+          ],
+          "adjacentBackgrounds": [
+            "surface",
+            "held"
+          ],
           "backdrop": null,
           "state": "default",
           "theme": "default"
@@ -2771,6 +3065,223 @@
             0
           ]
         }
+      },
+      "action": {
+        "source": "#d5ff3f",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.8352941176470589,
+            1,
+            0.24705882352941178
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.938444081141788,
+            "C": 0.20845081930867812,
+            "h": 121.64982943632481
+          }
+        },
+        "emitted": {
+          "css": "#d5ff3f",
+          "hex": "#d5ff3f",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.938444081141788,
+            -0.10937965720205195,
+            0.17744811822282247
+          ]
+        }
+      },
+      "held": {
+        "source": "#3d44e8",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.23921568627450981,
+            0.26666666666666666,
+            0.9098039215686274
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.49965265951498516,
+            "C": 0.23992632764975466,
+            "h": 271.88560211757556
+          }
+        },
+        "emitted": {
+          "css": "#3d44e8",
+          "hex": "#3d44e8",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.49965265951498516,
+            0.007894541894232943,
+            -0.23979641137385194
+          ]
+        }
+      },
+      "on-action": {
+        "source": "#152000",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.08235294117647059,
+            0.12549019607843137,
+            0
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.22461257424667352,
+            "C": 0.0571354191078893,
+            "h": 125.94809077786454
+          }
+        },
+        "emitted": {
+          "css": "#152000",
+          "hex": "#152000",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.22461257424667352,
+            -0.033541465052772806,
+            0.04625393214363274
+          ]
+        }
+      },
+      "on-held": {
+        "source": "#ffffff",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            1,
+            1,
+            1
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 1.0000000000000002,
+            "C": 0,
+            "h": null
+          }
+        },
+        "emitted": {
+          "css": "#ffffff",
+          "hex": "#ffffff",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            1.0000000000000002,
+            -4.996003610813204e-16,
+            0
+          ]
+        }
+      },
+      "border": {
+        "source": "#41473d",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.2549019607843137,
+            0.2784313725490196,
+            0.23921568627450981
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.3890757104318239,
+            "C": 0.01831243814270187,
+            "h": 132.72091993543268
+          }
+        },
+        "emitted": {
+          "css": "#41473d",
+          "hex": "#41473d",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.3890757104318239,
+            -0.012423670014477944,
+            0.013453542808555818
+          ]
+        }
+      },
+      "separator": {
+        "source": "#353a32",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.20784313725490197,
+            0.22745098039215686,
+            0.19607843137254902
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.34093570373298343,
+            "C": 0.015269634095094426,
+            "h": 133.5975463167946
+          }
+        },
+        "emitted": {
+          "css": "#353a32",
+          "hex": "#353a32",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.34093570373298343,
+            -0.010529764537694275,
+            0.011058290291848294
+          ]
+        }
+      },
+      "focus": {
+        "source": "#d5ff3f",
+        "intended": {
+          "space": "srgb",
+          "coordinates": [
+            0.8352941176470589,
+            1,
+            0.24705882352941178
+          ],
+          "alpha": 1,
+          "oklch": {
+            "L": 0.938444081141788,
+            "C": 0.20845081930867812,
+            "h": 121.64982943632481
+          }
+        },
+        "emitted": {
+          "css": "#d5ff3f",
+          "hex": "#d5ff3f",
+          "alpha": 1,
+          "alphaQuantized": false,
+          "gamut": "srgb",
+          "gamutMapped": false,
+          "deltaEOK": 0,
+          "oklab": [
+            0.938444081141788,
+            -0.10937965720205195,
+            0.17744811822282247
+          ]
+        }
       }
     },
     "checks": [
@@ -2825,11 +3336,11 @@
         "reason": null
       },
       {
-        "id": "primary-action/lime",
+        "id": "primary-action/action",
         "role": "primary-action",
-        "foreground": "on-lime",
-        "foregroundBackdrop": "lime",
-        "background": "lime",
+        "foreground": "on-action",
+        "foregroundBackdrop": "action",
+        "background": "action",
         "backdrop": null,
         "state": "default",
         "theme": "default",
@@ -2850,11 +3361,11 @@
         "reason": null
       },
       {
-        "id": "session/cobalt",
+        "id": "session/held",
         "role": "session",
-        "foreground": "on-cobalt",
-        "foregroundBackdrop": "cobalt",
-        "background": "cobalt",
+        "foreground": "on-held",
+        "foregroundBackdrop": "held",
+        "background": "held",
         "backdrop": null,
         "state": "default",
         "theme": "default",
@@ -2873,17 +3384,142 @@
         "effectiveBackground": "#3d44e8",
         "status": "pass",
         "reason": null
+      },
+      {
+        "id": "surface-text/surface",
+        "role": "surface-text",
+        "foreground": "ink",
+        "foregroundBackdrop": "surface",
+        "background": "surface",
+        "backdrop": null,
+        "state": "default",
+        "theme": "default",
+        "use": "text",
+        "minimum": 4.5,
+        "ratio": 14.071708231809732,
+        "ratioInterval": {
+          "min": 14.071708231809732,
+          "max": 14.071708231809732
+        },
+        "compositingUncertainty": {
+          "foregroundCodeValues": 0,
+          "backgroundCodeValues": 0
+        },
+        "effectiveForeground": "#f5f6ed",
+        "effectiveBackground": "#232621",
+        "status": "pass",
+        "reason": null
+      },
+      {
+        "id": "canvas-secondary/canvas",
+        "role": "canvas-secondary",
+        "foreground": "muted",
+        "foregroundBackdrop": "canvas",
+        "background": "canvas",
+        "backdrop": null,
+        "state": "default",
+        "theme": "default",
+        "use": "text",
+        "minimum": 4.5,
+        "ratio": 9.316389795501337,
+        "ratioInterval": {
+          "min": 9.316389795501337,
+          "max": 9.316389795501337
+        },
+        "compositingUncertainty": {
+          "foregroundCodeValues": 0,
+          "backgroundCodeValues": 0
+        },
+        "effectiveForeground": "#b4b9ac",
+        "effectiveBackground": "#111310",
+        "status": "pass",
+        "reason": null
+      },
+      {
+        "id": "focus/canvas",
+        "role": "focus",
+        "foreground": "focus",
+        "foregroundBackdrop": "canvas",
+        "background": "canvas",
+        "backdrop": null,
+        "state": "default",
+        "theme": "default",
+        "use": "non-text",
+        "minimum": 3,
+        "ratio": 16.1899215422324,
+        "ratioInterval": {
+          "min": 16.1899215422324,
+          "max": 16.1899215422324
+        },
+        "compositingUncertainty": {
+          "foregroundCodeValues": 0,
+          "backgroundCodeValues": 0
+        },
+        "effectiveForeground": "#d5ff3f",
+        "effectiveBackground": "#111310",
+        "status": "pass",
+        "reason": null
+      },
+      {
+        "id": "focus/surface",
+        "role": "focus",
+        "foreground": "focus",
+        "foregroundBackdrop": "canvas",
+        "background": "surface",
+        "backdrop": null,
+        "state": "default",
+        "theme": "default",
+        "use": "non-text",
+        "minimum": 3,
+        "ratio": 13.281814860075867,
+        "ratioInterval": {
+          "min": 13.281814860075867,
+          "max": 13.281814860075867
+        },
+        "compositingUncertainty": {
+          "foregroundCodeValues": 0,
+          "backgroundCodeValues": 0
+        },
+        "effectiveForeground": "#d5ff3f",
+        "effectiveBackground": "#232621",
+        "status": "pass",
+        "reason": null
+      },
+      {
+        "id": "focus/held",
+        "role": "focus",
+        "foreground": "focus",
+        "foregroundBackdrop": "canvas",
+        "background": "held",
+        "backdrop": null,
+        "state": "default",
+        "theme": "default",
+        "use": "non-text",
+        "minimum": 3,
+        "ratio": 5.705989063400162,
+        "ratioInterval": {
+          "min": 5.705989063400162,
+          "max": 5.705989063400162
+        },
+        "compositingUncertainty": {
+          "foregroundCodeValues": 0,
+          "backgroundCodeValues": 0
+        },
+        "effectiveForeground": "#d5ff3f",
+        "effectiveBackground": "#3d44e8",
+        "status": "pass",
+        "reason": null
       }
     ],
     "summary": {
-      "pass": 4,
+      "pass": 9,
       "fail": 0,
       "unknown": 0,
       "notApplicable": 0,
       "status": "pass"
     },
     "compatibleSystem": null,
-    "measurementRef": "palette:0a07f77383368d4e359bcc16f77ade0e24cb1e6ea22b96cfb0be13febddab2da",
+    "measurementRef": "palette:0ca63aba17947c0884333baf1ea41124b2077ac8d7274fb69261cb7458c1f774",
     "algorithm": "colorjs.io@0.7.1:css-gamut-map/srgb-rgba8/encoded-srgb-source-over-interval-v2",
     "contrastLevel": "AA",
     "standard": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
@@ -2909,7 +3545,7 @@
       "spring": {
         "mass": 1,
         "stiffness": 200,
-        "damping": 18
+        "damping": 20
       },
       "coordinate": {
         "unit": "dp",
@@ -2927,25 +3563,25 @@
     },
     "regime": "underdamped",
     "omega0": 14.142135623730951,
-    "dampingRatio": 0.6363961030678927,
+    "dampingRatio": 0.7071067811865475,
     "metrics": {
-      "peakOvershoot": 2.3960749602912204,
+      "peakOvershoot": 1.382845384440712,
       "overshootHorizonSeconds": 2,
-      "allTimePeakOvershoot": 2.3960749602912204,
-      "allTimePeakOvershootRatio": 0.07487734250910064,
-      "peakOvershootRatio": 0.07487734250910064,
+      "allTimePeakOvershoot": 1.382845384440712,
+      "allTimePeakOvershootRatio": 0.04321391826377225,
+      "peakOvershootRatio": 0.04321391826377225,
       "extrema": {
-        "min": -2.3960749602912204,
+        "min": -1.382845384440712,
         "max": 32
       },
       "allTimeRange": {
-        "min": -2.3960749602912204,
+        "min": -1.382845384440712,
         "max": 32
       },
-      "targetCrossings": 7,
-      "oscillationPeriodSeconds": 0.5759786527641267,
+      "targetCrossings": 6,
+      "oscillationPeriodSeconds": 0.6283185307179586,
       "settling": {
-        "certifiedBySeconds": 1.4854834058966457,
+        "certifiedBySeconds": 1.363131450575367,
         "observedSampledSeconds": null,
         "horizonSeconds": 2,
         "method": "Certificate: E <= min(k*positionTolerance^2,m*speedTolerance^2)/2 implies both bounds for all future times. Conservative, not earliest settling. Sampled observation only covers this horizon."
@@ -2972,7 +3608,7 @@
     },
     "energy": {
       "initial": 102400,
-      "final": 1.804555471230013e-11,
+      "final": 1.4843496784707275e-12,
       "law": "E = (m*v^2+k*(x-target)^2)/2; dE/dt = -c*v^2. Constant for c=0; nonincreasing for stationary unforced target.",
       "passiveAssumptions": [
         "stationary target",
@@ -2992,39 +3628,7 @@
     "sampling": "omitted; observedSampledSeconds is null"
   },
   "selection": {
-    "selected": "path-0",
-    "provenance": {
-      "profile": "qwen3.5-4b",
-      "readoutMode": "single",
-      "readoutPasses": 1,
-      "aggregation": "single restricted-option readout",
-      "promptHashes": [
-        "073fd3aeb541cbfd6a844f3843eda5dd4009a264a406dd25887fe13f62930ae4"
-      ],
-      "experimental": false,
-      "model": {
-        "source": "Qwen/Qwen3.5-4B",
-        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
-        "dtype": "gguf-quantized",
-        "backend": "llamacpp",
-        "serving_config": "llamacpp-direct-v1",
-        "gguf": {
-          "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4"
-        },
-        "vocab_size": 248320,
-        "threads": 8,
-        "n_gpu_layers": 0,
-        "max_prompt_tokens": 4096,
-        "context_tokens": 4352,
-        "decode_chunk": 512,
-        "llama_cpp_python_version": "0.3.35",
-        "transformers_version": "5.17.0"
-      },
-      "promptHash": "073fd3aeb541cbfd6a844f3843eda5dd4009a264a406dd25887fe13f62930ae4",
-      "readout": "quantized last-position logits restricted to declared answer slots; no generated tokens",
-      "latencyMs": 39140.628291999994
-    },
-    "caveat": "Option logits are used only to select a viable alternative. No confidence, validity or aesthetic score is exposed.",
-    "modelCalled": true
+    "policy": "deterministic finite-pool candidate, authored direction; not aesthetic validation",
+    "modelCalled": false
   }
 }

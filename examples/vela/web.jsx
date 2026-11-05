@@ -11,13 +11,18 @@ import { assign, createActor, createMachine } from 'xstate';
 import {
   resolveDesignRuntime,
   evaluateExpression,
+  projectScrollAnchor,
 } from '@design-theory/toolkit/layout';
 import { emitMotion } from '../../src/motion.ts';
 import { glueAccentPunctuation } from '../../src/typography-flow.ts';
 import policy from './design.generated.json';
+import fieldNotesPolicy from './design.field-notes.generated.json';
+const directionPolicies = { momentum: policy, 'field-notes': fieldNotesPolicy };
 import { installVelaMotion } from './web-motion.js';
 
-const c = policy.colors;
+const c = Object.fromEntries(
+  Object.keys(policy.colors).map((key) => [key, `var(--vela-${key})`]),
+);
 const TOTAL = 22 * 60;
 const STORAGE = 'vela-web-local-v1';
 const PHASES = [
@@ -33,6 +38,8 @@ const clock = (seconds) =>
     .toString()
     .padStart(2, '0')}`;
 const query = new URLSearchParams(location.search);
+const contentFixture =
+  query.get('copy') === 'expanded' ? 'expanded' : 'default';
 const requestedScale = Number(query.get('textScale')) || 1;
 const textScale =
   Number.isFinite(requestedScale) && requestedScale >= 1 ? requestedScale : 1;
@@ -61,7 +68,7 @@ const styles = stylex.create({
     padding,
     borderRightWidth: 1,
     borderRightStyle: 'solid',
-    borderRightColor: '#353a32',
+    borderRightColor: 'var(--vela-separator)',
   }),
   focusedLayout: { height: '100dvh', minHeight: 0, overflow: 'hidden' },
   focusedPane: {
@@ -95,10 +102,15 @@ const styles = stylex.create({
     paddingTop: gap,
     borderTopWidth: 1,
     borderTopStyle: 'solid',
-    borderTopColor: '#353a32',
-    backgroundColor: '#111310',
+    borderTopColor: 'var(--vela-separator)',
+    backgroundColor: 'var(--vela-canvas)',
   }),
   column: { display: 'flex', flexDirection: 'column', minWidth: 0 },
+  ruled: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'var(--vela-separator)',
+  },
   fill: { flex: 1, minWidth: 0 },
   row: {
     display: 'flex',
@@ -121,6 +133,7 @@ const styles = stylex.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    flexWrap: 'wrap',
     gap,
     marginBottom: gap * 2,
     minHeight: 48,
@@ -221,7 +234,7 @@ const styles = stylex.create({
   choice: (active, color, fontSize, radius) => ({
     borderWidth: 2,
     borderStyle: 'solid',
-    borderColor: active ? color : '#41473d',
+    borderColor: active ? color : 'var(--vela-border)',
     backgroundColor: 'transparent',
     color,
     fontSize,
@@ -240,10 +253,10 @@ const styles = stylex.create({
     marginTop: rail ? gap * 3 : gap * 2,
     borderTopWidth: rail ? 0 : 1,
     borderTopStyle: 'solid',
-    borderTopColor: '#353a32',
+    borderTopColor: 'var(--vela-separator)',
     paddingTop: rail ? 0 : gap,
   }),
-  navButton: (active, rail, fontSize, gap) => ({
+  navButton: (active, rail, fontSize, gap, radius) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: rail ? 'flex-start' : 'center',
@@ -253,12 +266,12 @@ const styles = stylex.create({
     minWidth: 0,
     minHeight: 52,
     padding: gap * 0.6,
-    borderRadius: 14,
+    borderRadius: radius * 0.6,
     borderWidth: 0,
     borderStyle: 'solid',
     borderColor: 'transparent',
-    backgroundColor: active ? '#232621' : 'transparent',
-    color: active ? '#d5ff3f' : '#b4b9ac',
+    backgroundColor: active ? 'var(--vela-surface)' : 'transparent',
+    color: active ? 'var(--vela-action)' : 'var(--vela-muted)',
     fontSize,
     fontFamily: active ? 'VelaHeavy' : 'VelaRegular',
     cursor: 'pointer',
@@ -269,7 +282,7 @@ const styles = stylex.create({
     borderColor: 'transparent',
     borderTopWidth: 1,
     borderTopStyle: 'solid',
-    borderTopColor: '#41473d',
+    borderTopColor: 'var(--vela-border)',
     width: '100%',
     margin: 0,
   },
@@ -281,14 +294,14 @@ const styles = stylex.create({
     margin: 0,
     fontVariantNumeric: 'tabular-nums',
   }),
-  timer: (fontSize) => ({
+  timer: (fontSize, tracking) => ({
     fontFamily: 'VelaHeavy, sans-serif',
     fontSize,
-    letterSpacing: '-0.04em',
+    letterSpacing: `${tracking}em`,
     lineHeight: 1,
     margin: 0,
     fontVariantNumeric: 'tabular-nums',
-    overflowWrap: 'anywhere',
+    whiteSpace: 'nowrap',
   }),
   badge: (backgroundColor, color, fontSize) => ({
     display: 'inline-flex',
@@ -340,7 +353,7 @@ const styles = stylex.create({
     paddingBottom: gap,
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
-    borderBottomColor: '#41473d',
+    borderBottomColor: 'var(--vela-border)',
   }),
   screen: { display: 'flex', flexDirection: 'column', minWidth: 0 },
   footer: (gap, fontSize) => ({
@@ -352,30 +365,33 @@ const styles = stylex.create({
     paddingTop: gap,
     borderTopWidth: 1,
     borderTopStyle: 'solid',
-    borderTopColor: '#353a32',
-    color: '#b4b9ac',
+    borderTopColor: 'var(--vela-separator)',
+    color: 'var(--vela-muted)',
     fontSize,
   }),
   error: {
     padding: 16,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: '#d5ff3f',
+    borderColor: 'var(--vela-action)',
     borderRadius: 12,
   },
   dialog: {
     width: 'calc(100% - 32px)',
     maxWidth: 560,
     maxHeight: 'calc(100dvh - 32px)',
-    backgroundColor: '#111310',
-    color: '#f5f6ed',
+    backgroundColor: 'var(--vela-canvas)',
+    color: 'var(--vela-ink)',
     padding: 24,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: '#41473d',
+    borderColor: 'var(--vela-border)',
     borderRadius: 16,
   },
-  selected: { backgroundColor: '#d5ff3f', color: '#152000' },
+  selected: {
+    backgroundColor: 'var(--vela-action)',
+    color: 'var(--vela-on-action)',
+  },
 });
 
 function Icon({ name, size = 24 }) {
@@ -430,6 +446,7 @@ function Trace({ height = 130 }) {
 }
 const emptyPreferences = () => ({
   accent: 'lime',
+  direction: 'momentum',
   motion: 'system',
   checkIn: null,
   entries: [],
@@ -443,6 +460,8 @@ function readStored() {
       typeof value !== 'object' ||
       Array.isArray(value) ||
       !['lime', 'cobalt'].includes(value.accent) ||
+      (value.direction !== undefined &&
+        !Object.hasOwn(directionPolicies, value.direction)) ||
       !['system', 'reduced'].includes(value.motion) ||
       ![null, 'easy', 'steady', 'energized'].includes(value.checkIn) ||
       !Array.isArray(value.entries) ||
@@ -483,7 +502,9 @@ function Timer({ seconds, label }) {
     >
       {parts.map((part, i) => (
         <div key={i} {...sx(styles.row, styles.gap(p.gap))}>
-          <span {...sx(styles.timer(p.timerSize * textScale))}>{part}</span>
+          <span {...sx(styles.timer(p.timerSize * textScale, p.tracking))}>
+            {part}
+          </span>
           <span {...sx(styles.text(size(0.8), 'inherit'))}>
             {i === 0 ? 'minutes' : 'seconds'}
           </span>
@@ -492,7 +513,7 @@ function Timer({ seconds, label }) {
     </div>
   ) : (
     <p
-      {...sx(styles.timer(p.timerSize * textScale))}
+      {...sx(styles.timer(p.timerSize * textScale, p.tracking))}
       data-timer
       aria-label={`${clock(seconds)} ${label}`}
     >
@@ -544,13 +565,19 @@ const Heading = ({ children }) => {
     </h1>
   );
 };
-const contentText = (id, p) =>
-  policy.handoff.machine.content[id][
-    p.heroActionFirst === 1 ? 'compact' : 'default'
-  ];
+const contentText = (id, p, activePolicy, fixture) => {
+  const content = activePolicy.handoff.machine.content;
+  const key =
+    fixture === 'expanded' && Object.hasOwn(content, `${id}-expanded`)
+      ? `${id}-expanded`
+      : id;
+  return content[key][p.heroActionFirst === 1 ? 'compact' : 'default'];
+};
 const ContentHeading = ({ contentId }) => {
-  const { p } = React.useContext(Ui);
-  const lines = contentText(contentId, p).split('\n');
+  const { p, policy: activePolicy, contentFixture } = React.useContext(Ui);
+  const lines = contentText(contentId, p, activePolicy, contentFixture).split(
+    '\n',
+  );
   return (
     <Heading>
       {lines.map((line, index) => (
@@ -593,13 +620,22 @@ const Button = ({
   );
 };
 const Card = ({ children, color = c.surface, ink = c.ink, ...rest }) => {
-  const { p, size, accent, onAccent, screen, destination, goDestination } =
-    React.useContext(Ui);
+  const {
+    p,
+    size,
+    accent,
+    onAccent,
+    screen,
+    destination,
+    goDestination,
+    direction,
+  } = React.useContext(Ui);
   return (
     <section
       data-motion-card
       {...sx(
         styles.card(p.radius, p.pageGutter, p.gap),
+        direction.finish === 'ruled-paper' && styles.ruled,
         styles.surface(color, ink),
       )}
       {...rest}
@@ -629,6 +665,7 @@ const Navigation = ({ vertical = false }) => {
             stacked,
             (vertical ? p.railLabelSize : p.navLabelSize) * textScale,
             p.gap,
+            p.radius,
           ),
         )}
         aria-current={screen === id ? 'page' : undefined}
@@ -691,8 +728,17 @@ const Navigation = ({ vertical = false }) => {
   );
 };
 const Phases = () => {
-  const { p, size, accent, onAccent, screen, destination, goDestination } =
-    React.useContext(Ui);
+  const {
+    p,
+    size,
+    accent,
+    onAccent,
+    screen,
+    destination,
+    goDestination,
+    policy: activePolicy,
+    contentFixture,
+  } = React.useContext(Ui);
   return (
     <div {...sx(styles.column)}>
       {PHASES.map((phase, index) => (
@@ -701,7 +747,9 @@ const Phases = () => {
           {...sx(styles.phase(p.gap), p.phaseStacked === 1 && styles.column)}
         >
           <div {...sx(styles.column, styles.gap(p.gap * 0.3), styles.fill)}>
-            <Text heavy>{contentText(`phase-${index}`, p)}</Text>
+            <Text heavy>
+              {contentText(`phase-${index}`, p, activePolicy, contentFixture)}
+            </Text>
             <Text muted ratio={0.85}>
               {phase.note}
             </Text>
@@ -718,9 +766,33 @@ const Phases = () => {
 
 function Vela({ viewport }) {
   const [restore, setRestore] = useState(readStored);
-  const [preferences, setPreferences] = useState(
-    () => restore.preferences ?? emptyPreferences(),
-  );
+  const [preferences, setPreferences] = useState(() => ({
+    ...(restore.preferences ?? emptyPreferences()),
+    ...(Object.hasOwn(directionPolicies, query.get('direction'))
+      ? { direction: query.get('direction') }
+      : {}),
+  }));
+  const policy = directionPolicies[preferences.direction ?? 'momentum'];
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    const previous = Object.fromEntries(
+      Object.keys(policy.colors).map((key) => [
+        key,
+        root.style.getPropertyValue(`--vela-${key}`),
+      ]),
+    );
+    const scheme = root.style.colorScheme;
+    for (const [key, value] of Object.entries(policy.colors))
+      root.style.setProperty(`--vela-${key}`, value);
+    root.style.colorScheme = policy.direction.colorScheme;
+    return () => {
+      for (const [key, value] of Object.entries(previous))
+        value
+          ? root.style.setProperty(`--vela-${key}`, value)
+          : root.style.removeProperty(`--vela-${key}`);
+      root.style.colorScheme = scheme;
+    };
+  }, [policy]);
   const lastSaved = useRef(
     restore.status === 'ready' ? JSON.stringify(restore.preferences) : null,
   );
@@ -738,7 +810,7 @@ function Vela({ viewport }) {
     // navigation or resize and observe a different, already valid viewport.
     window.__VELA_LAST_RUNTIME_INPUT__ = { ...input };
     return resolveDesignRuntime(policy.handoff, input);
-  }, [viewport.width, viewport.height, reduced]);
+  }, [viewport.width, viewport.height, reduced, policy]);
   const actor = useMemo(() => {
     const states = Object.fromEntries(
       policy.handoff.machine.states.map((s) => [
@@ -778,6 +850,9 @@ function Vela({ viewport }) {
   const [elapsed, setElapsed] = useState(0),
     [running, setRunning] = useState(false);
   const timer = useRef({ start: 0, elapsed: 0 });
+  const entryScreen = useRef(null);
+  const sceneScreen = useRef(null);
+  const pendingAnchor = useRef(null);
   const main = useRef(null),
     transitions = useRef([]),
     animations = useRef([]),
@@ -789,14 +864,36 @@ function Vela({ viewport }) {
     Object.entries(region).filter(([, value]) => typeof value === 'number'),
   );
   const size = (ratio = 1) => p.bodySize * ratio * textScale;
-  const accent = c[preferences.accent],
-    onAccent = c[preferences.accent === 'lime' ? 'on-lime' : 'on-cobalt'];
+  const accent = preferences.accent === 'lime' ? c.action : c.held,
+    onAccent = c[preferences.accent === 'lime' ? 'on-action' : 'on-held'];
   const destination = ['today', 'insights', 'profile'].includes(screen);
   const latestEntry = preferences.entries[0];
   const rail = resolved.values.navRail === 1;
   const effectiveContent = p.contentWidth;
   const persistentActions = p.persistentActions === 1;
   const update = (next) => setPreferences((old) => ({ ...old, ...next }));
+  const changeDirection = (direction) => {
+    if (direction === (preferences.direction ?? 'momentum')) return;
+    const node = document.activeElement;
+    if (node instanceof HTMLElement && node.isConnected) {
+      let host = node.parentElement;
+      while (
+        host &&
+        !(
+          host.scrollHeight > host.clientHeight &&
+          /auto|scroll/.test(getComputedStyle(host).overflowY)
+        )
+      )
+        host = host.parentElement;
+      host ??= document.scrollingElement;
+      pendingAnchor.current = {
+        node,
+        host,
+        before: node.getBoundingClientRect().top,
+      };
+    }
+    update({ direction });
+  };
   const nav = (event) => {
     const before = actor.getSnapshot().value;
     actor.send({ type: event });
@@ -945,7 +1042,9 @@ function Vela({ viewport }) {
   useLayoutEffect(() => {
     animation.current?.cancel();
     if (!main.current) return;
+    if (entryScreen.current === screen) return;
     main.current.scrollTop = 0;
+    entryScreen.current = screen;
     const spring = resolved.motions.page;
     const emitted = reduced
       ? emitMotion({
@@ -993,9 +1092,11 @@ function Vela({ viewport }) {
         .catch(() => {});
     }
     return () => animation.current?.cancel();
-  }, [screen, reduced]);
+  }, [screen, reduced, policy]);
   useLayoutEffect(() => {
     if (!main.current) return;
+    const animateScene = sceneScreen.current !== screen;
+    sceneScreen.current = screen;
     return installVelaMotion({
       root: main.current.closest('[data-screen]'),
       main: main.current,
@@ -1007,8 +1108,38 @@ function Vela({ viewport }) {
         damping: resolved.motions.page.damping,
       },
       distance: p.pageDistance,
+      ...policy.direction.choreography,
+      animateScene,
     });
-  }, [screen, reduced, restore.status]);
+  }, [screen, reduced, restore.status, policy]);
+  useLayoutEffect(() => {
+    const anchor = pendingAnchor.current;
+    pendingAnchor.current = null;
+    if (
+      !anchor?.node.isConnected ||
+      !anchor.host?.isConnected ||
+      anchor.host.clientHeight <= 0
+    )
+      return;
+    const projection = projectScrollAnchor({
+      offset: anchor.host.scrollTop,
+      before: anchor.before,
+      after: anchor.node.getBoundingClientRect().top,
+      extent: anchor.host.scrollHeight,
+      viewport: anchor.host.clientHeight,
+    });
+    anchor.host.scrollTop = projection.offset;
+    anchor.node.focus({ preventScroll: true });
+    window.__VELA_DIRECTION_SWITCH__ = {
+      ...projection,
+      direction: policy.direction.id,
+      anchorBefore: anchor.before,
+      anchorAfter: anchor.node.getBoundingClientRect().top,
+      observedOffset: anchor.host.scrollTop,
+      scope:
+        'Current retained DOM anchor; range clamping may prevent identical viewport position',
+    };
+  }, [policy]);
   useEffect(() => {
     main.current?.querySelector('h1')?.focus({ preventScroll: true });
   }, [screen]);
@@ -1025,7 +1156,9 @@ function Vela({ viewport }) {
       transitions: transitions.current,
       animations: animations.current,
       policyIdentity: policy.handoff.identity,
-      colors: c,
+      colors: policy.colors,
+      direction: policy.direction,
+      contentFixture,
     };
     window.__VELA_READY__ = true;
   });
@@ -1061,15 +1194,13 @@ function Vela({ viewport }) {
 
   const sessionCard = (
     <Card
-      color={c.cobalt}
-      ink={c['on-cobalt']}
+      color={c.held}
+      ink={c['on-held']}
       data-color="cobalt"
       data-region="session-card"
     >
       <div {...sx(styles.row, styles.between, styles.gap(p.gap))}>
-        <span
-          {...sx(styles.badge('rgba(255,255,255,0.14)', '#ffffff', size(0.72)))}
-        >
+        <span {...sx(styles.badge('transparent', c['on-held'], size(0.72)))}>
           Intervals · all levels
         </span>
         <Icon name="arrow" size={28} />
@@ -1085,19 +1216,30 @@ function Vela({ viewport }) {
       <h2 {...sx(styles.title(size(1.9)))}>The steady build.</h2>
       <Trace height={p.gap * 5.5} />
       <Text ratio={0.88}>
-        A little rhythm. A little effort. Enough room to finish feeling like
-        you.
+        {contentText('session-description', p, policy, contentFixture)}
       </Text>
     </Card>
   );
 
   return (
     <Ui.Provider
-      value={{ p, size, accent, onAccent, screen, destination, goDestination }}
+      value={{
+        p,
+        size,
+        accent,
+        onAccent,
+        screen,
+        destination,
+        goDestination,
+        direction: policy.direction,
+        policy,
+        contentFixture,
+      }}
     >
       <div
         {...sx(styles.root, styles.surface(c.canvas, c.ink))}
         data-screen={screen}
+        data-direction={policy.direction.id}
         data-color="canvas"
         data-testid="vela-screen"
       >
@@ -1153,6 +1295,20 @@ function Vela({ viewport }) {
                   </Text>
                 )}
                 <div {...sx(styles.row, styles.gap(p.gap))}>
+                  <button
+                    aria-label="Change art direction"
+                    data-direction-toggle
+                    {...sx(styles.plainButton(c.ink, size(0.75)))}
+                    onClick={() =>
+                      changeDirection(
+                        preferences.direction === 'field-notes'
+                          ? 'momentum'
+                          : 'field-notes',
+                      )
+                    }
+                  >
+                    {policy.direction.label}
+                  </button>
                   {!destination && (
                     <button
                       aria-label="Back"
@@ -1221,9 +1377,12 @@ function Vela({ viewport }) {
                           )}
                           <ContentHeading contentId="today" />
                           <Text muted>
-                            Not every day needs a personal best.
-                            <br />
-                            Just a place to start.
+                            {contentText(
+                              'intro-description',
+                              p,
+                              policy,
+                              contentFixture,
+                            )}
                           </Text>
                           {p.heroActionFirst !== 1 && (
                             <>
@@ -1294,7 +1453,7 @@ function Vela({ viewport }) {
                           </Text>
                           <button
                             {...sx(
-                              styles.plainButton(c.lime, size(0.9)),
+                              styles.plainButton(c.action, size(0.9)),
                               styles.row,
                             )}
                             onClick={() => nav('INSIGHTS')}
@@ -1329,7 +1488,7 @@ function Vela({ viewport }) {
                           Your 22 minutes.
                         </h2>
                         <Phases />
-                        <div style={{ color: c.cobalt }}>
+                        <div style={{ color: c.held }}>
                           <Trace height={p.gap * 3} />
                         </div>
                       </section>
@@ -1347,6 +1506,8 @@ function Vela({ viewport }) {
                             {contentText(
                               `phase-${elapsed < 240 ? 0 : elapsed < 960 ? 1 : 2}`,
                               p,
+                              policy,
+                              contentFixture,
                             )}
                           </Heading>
                           <Text muted>
@@ -1366,14 +1527,16 @@ function Vela({ viewport }) {
                           </Text>
                         </div>
                         <Card
-                          color={c.cobalt}
-                          ink={c['on-cobalt']}
+                          color={c.held}
+                          ink={c['on-held']}
                           data-region="current-interval"
                         >
                           <Text heavy>
                             {contentText(
                               `phase-${elapsed < 240 ? 0 : elapsed < 960 ? 1 : 2}`,
                               p,
+                              policy,
+                              contentFixture,
                             )}
                           </Text>
                           <Trace height={p.gap * 7} />
@@ -1412,8 +1575,8 @@ function Vela({ viewport }) {
                         </div>
                         {latestEntry && (
                           <Card
-                            color={c.lime}
-                            ink={c['on-lime']}
+                            color={c.action}
+                            ink={c['on-action']}
                             data-region="saved-session"
                             data-color="lime"
                           >
@@ -1526,7 +1689,7 @@ function Vela({ viewport }) {
                                   {...sx(
                                     styles.chartBar(
                                       minutes * 5,
-                                      i === 5 ? c.lime : c.cobalt,
+                                      i === 5 ? c.action : c.held,
                                     ),
                                   )}
                                 />
@@ -1586,20 +1749,49 @@ function Vela({ viewport }) {
                           </Text>
                         </Card>
                         <Card data-region="appearance-settings">
-                          <h2 {...sx(styles.title(size(1.5)))}>Action color</h2>
+                          <h2 {...sx(styles.title(size(1.5)))}>
+                            Art direction
+                          </h2>
+                          {Object.entries(directionPolicies).map(
+                            ([id, candidate]) => (
+                              <button
+                                key={id}
+                                data-direction-choice={id}
+                                aria-label={candidate.direction.label}
+                                aria-pressed={
+                                  (preferences.direction ?? 'momentum') === id
+                                }
+                                {...sx(
+                                  styles.choice(
+                                    (preferences.direction ?? 'momentum') ===
+                                      id,
+                                    c.ink,
+                                    size(),
+                                    p.radius * 0.6,
+                                  ),
+                                )}
+                                onClick={() => changeDirection(id)}
+                              >
+                                {p.compactDirectionLabels
+                                  ? candidate.direction.shortLabel
+                                  : candidate.direction.label}
+                              </button>
+                            ),
+                          )}
+                          <h3 {...sx(styles.title(size(1.1)))}>Action color</h3>
                           <Text muted ratio={0.9}>
                             Choose the color that gets you moving.
                           </Text>
                           {[
-                            ['lime', 'Electric lime'],
-                            ['cobalt', 'Deep cobalt'],
+                            ['lime', policy.direction.actionLabel],
+                            ['cobalt', policy.direction.heldLabel],
                           ].map(([value, label]) => (
                             <button
                               key={value}
                               {...sx(
                                 styles.button(
-                                  c[value],
-                                  c[value === 'lime' ? 'on-lime' : 'on-cobalt'],
+                                  value === 'lime' ? c.action : c.held,
+                                  c[value === 'lime' ? 'on-action' : 'on-held'],
                                   p.radius * 0.65,
                                   size(),
                                   p.pageGutter,
@@ -1778,9 +1970,9 @@ function ViewportBoundary() {
         >
           {boundary.reason === 'unavailable-geometry'
             ? 'Window dimensions are unavailable. '
-            : `This window is outside this design’s validated range (${viewportEnvelope.width.min}–${viewportEnvelope.width.max} pixels wide, ${viewportEnvelope.height.min}–${viewportEnvelope.height.max} pixels high). `}
+            : `This window is outside this design’s configured viewport bounds (${viewportEnvelope.width.min}–${viewportEnvelope.width.max} pixels wide, ${viewportEnvelope.height.min}–${viewportEnvelope.height.max} pixels high). `}
           {boundary.accepted
-            ? 'Showing the last validated layout; resize to continue.'
+            ? 'Showing the last supported layout; resize to continue.'
             : 'Resize to continue.'}
         </p>
       )}

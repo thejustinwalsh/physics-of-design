@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   nativeLineProbes,
+  plainNativeText,
   nativeTextLayoutIdentity,
   acceptNativeLineProbe,
   diagnoseNativeTextWidths,
@@ -166,4 +167,16 @@ test('probe callbacks must be exact, single-line, finite and within their native
     { x: 1 },
   ])
     assert.equal(acceptNativeLineProbe(probe, [{ ...line, ...changed }]), null);
+});
+
+
+test('unstyled primitive child arrays can obtain exact-line probes; nested elements cannot', () => {
+  assert.equal(plainNativeText(['00:00', ' elapsed · ', ['Pauses ', 'here.'], null, false]), '00:00 elapsed · Pauses here.');
+  assert.equal(plainNativeText([12, ' sessions']), '12 sessions');
+  const element = { type: 'Text', props: { style: { fontSize: 50 }, children: 'different shaping' } };
+  assert.equal(plainNativeText(['elapsed ', element]), null);
+  assert.equal(plainNativeText({}), null);
+  const children = ['A simple structure for purposeful ', 'movement. You choose the activity and ', 'effort.'];
+  assert.equal(nativeLineProbes({ ...input, plain: plainNativeText(children) === text }).length, 1);
+  assert.equal(nativeLineProbes({ ...input, plain: plainNativeText([element]) === text }).length, 0);
 });

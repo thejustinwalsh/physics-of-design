@@ -1,3 +1,15 @@
+/** Concatenate only unstyled React text primitives. Elements/fragments may carry
+ * shaping styles and must retain unknown status rather than borrowing a parent probe.
+ */
+export function plainNativeText(children: unknown): string | null {
+  if (typeof children === 'string') return children;
+  if (typeof children === 'number') return String(children);
+  if (children == null || typeof children === 'boolean') return '';
+  if (!Array.isArray(children)) return null;
+  const parts = children.map(plainNativeText);
+  return parts.some((part) => part === null) ? null : parts.join('');
+}
+
 /** Android Layout.getLineWidth includes trailing whitespace; it is not an ink bound. */
 export interface NativeTextLine {
   text: string;

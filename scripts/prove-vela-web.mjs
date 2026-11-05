@@ -791,8 +791,8 @@ try {
     await boundaryPage
       .getByRole('status')
       .textContent()
-      .then((text) => text.includes('390–1440') && text.includes('700–1210')),
-    'Unsupported initial viewport did not disclose the validated range',
+      .then((text) => text.includes('320–1440') && text.includes('320–1210')),
+    'Unsupported initial viewport did not disclose configured bounds',
   );
   await boundaryPage.evaluate(() => {
     Object.defineProperty(window, 'innerWidth', window.__testWidthDescriptor);
@@ -862,7 +862,7 @@ try {
   const unsupportedViewportCases = [];
   for (const viewport of [
     { width: 1920, height: 1080 },
-    { width: 390, height: 600 },
+    { width: 390, height: 319 },
   ]) {
     await boundaryPage.setViewportSize(viewport);
     await boundaryPage.waitForFunction(
@@ -881,7 +881,7 @@ try {
     check(
       observation.runtimeInput.width === 390 &&
         observation.runtimeInput.height === 844 &&
-        observation.notice.includes('last validated layout'),
+        observation.notice.includes('last supported layout'),
       'Unsupported ordinary viewport silently became current',
     );
   }
@@ -1282,3 +1282,5 @@ try {
   await browser.close();
   await new Promise((resolve) => server.close(resolve));
 }
+
+await import('./prove-vela-directions.mjs');

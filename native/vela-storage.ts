@@ -1,11 +1,13 @@
 export type Entry = { id: string; seconds: number; completedAt: string };
 export type Preferences = {
+  direction?: 'momentum' | 'field-notes';
   motion: 'system' | 'reduced';
   accent: 'lime' | 'cobalt';
   checkIn: 'easy' | 'steady' | 'energized' | null;
 };
 export type StoredVela = { preferences: Preferences; entries: Entry[] };
 export const INITIAL_PREFERENCES: Preferences = {
+  direction: 'momentum',
   motion: 'system',
   accent: 'lime',
   checkIn: null,
@@ -30,10 +32,13 @@ export function readStored(raw: string): StoredVela {
     value.entries.length > 50
   )
     throw new Error('Invalid local data');
-  const { motion, accent, checkIn } = value.preferences;
+  const { motion, accent, checkIn, direction } = value.preferences;
   if (
     (motion !== 'system' && motion !== 'reduced') ||
     (accent !== 'lime' && accent !== 'cobalt') ||
+    (direction !== undefined &&
+      direction !== 'momentum' &&
+      direction !== 'field-notes') ||
     !isCheckIn(checkIn)
   )
     throw new Error('Invalid local preferences');
@@ -59,5 +64,13 @@ export function readStored(raw: string): StoredVela {
       completedAt: entry.completedAt,
     };
   });
-  return { preferences: { motion, accent, checkIn }, entries };
+  return {
+    preferences: {
+      motion,
+      accent,
+      checkIn,
+      ...(direction === undefined ? {} : { direction }),
+    },
+    entries,
+  };
 }

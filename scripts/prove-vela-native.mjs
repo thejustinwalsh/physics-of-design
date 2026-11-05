@@ -21,8 +21,15 @@ const dir = `artifacts/vela/proof-native/${label}`,
   adb = path.resolve('artifacts/runtime/android-sdk/platform-tools/adb');
 await mkdir(dir, { recursive: true });
 const expectedSource = await nativeSourceIdentity();
+const direction = process.env.VELA_DIRECTION ?? 'momentum';
+assert.ok(['momentum', 'field-notes'].includes(direction));
 const policy = JSON.parse(
-    await readFile('examples/vela/design.generated.json', 'utf8'),
+    await readFile(
+      direction === 'field-notes'
+        ? 'examples/vela/design.field-notes.generated.json'
+        : 'examples/vela/design.generated.json',
+      'utf8',
+    ),
   ),
   results = [];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms)),
@@ -136,7 +143,7 @@ for (const screen of [
 ]) {
   const start = Date.now(),
     proof = `vela-${label}-${screen}-${start}`,
-    url = `exp://${platform === 'ios' ? 'localhost:8087' : '127.0.0.1:8088'}/--/vela?screen=${screen}&proof=${proof}`;
+    url = `exp://${platform === 'ios' ? 'localhost:8087' : '127.0.0.1:8088'}/--/vela?screen=${screen}&proof=${proof}&direction=${direction}&copy=${process.env.VELA_COPY_FIXTURE === 'expanded' ? 'expanded' : 'default'}`;
   let androidRoute;
   if (platform === 'ios')
     await exec('xcrun', [
@@ -189,6 +196,7 @@ for (const screen of [
         r.snapshot.viewportGuard?.status === 'current' &&
         r.snapshot.implementationIdentity === expectedSource &&
         r.snapshot.designHandoffIdentity === policy.handoff.identity &&
+        r.snapshot.direction?.id === direction &&
         (platform !== 'android' ||
           Math.abs(r.snapshot.window?.fontScale - expectedAndroidFontScale) <
             0.0001) &&

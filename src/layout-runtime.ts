@@ -8,3 +8,4 @@ export * from './native-safe-area.js';
 export * from './native-root-geometry.js';
 export { analyzeComposition } from './composition.js';
 export * from './flow-gap.js';
+export * from './scroll-anchor.js';

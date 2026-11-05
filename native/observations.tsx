@@ -2,6 +2,7 @@ import { nativeFrameRelativeToRoot } from '../src/native-root-geometry';
 import { createObservationScheduler } from './observation-scheduler';
 import {
   nativeLineProbes,
+  plainNativeText,
   nativeTextLayoutIdentity,
   acceptNativeLineProbe,
   type NativeContentAdvance,
@@ -303,7 +304,7 @@ export function ObservedText(props: React.ComponentProps<typeof NativeText>) {
     (!flatStyle.textAlign || ['left', 'auto'].includes(flatStyle.textAlign));
   const requests = nativeLineProbes({
     platform: Platform.OS,
-    plain: typeof props.children === 'string',
+    plain: plainNativeText(props.children) === text,
     knownStyle,
     text,
     styleIdentity,

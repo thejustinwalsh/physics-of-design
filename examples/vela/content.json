@@ -1,0 +1,44 @@
+{
+  "today": {
+    "role": "heading",
+    "default": "Build\nmomentum",
+    "compact": "Build\nyour pace",
+    "expanded": "Room for\nsteady progress"
+  },
+  "detail": {
+    "role": "heading",
+    "default": "Steady\nbuild",
+    "compact": "Steady\nbuild",
+    "expanded": "A steadier\nkind of effort"
+  },
+  "complete": {
+    "role": "heading",
+    "default": "You\nshowed up",
+    "compact": "You\ndid it",
+    "expanded": "Make room\nfor what comes next"
+  },
+  "insights": {
+    "role": "heading",
+    "default": "Your\nrhythm",
+    "compact": "Your\npace",
+    "expanded": "Small steps\nacross a longer week"
+  },
+  "profile": {
+    "role": "heading",
+    "default": "Make\nit yours",
+    "compact": "Make\nit yours",
+    "expanded": "A little more\nroom for yourself"
+  },
+  "intro-description": {
+    "role": "prose",
+    "default": "Not every day needs a personal best. Just a place to start.",
+    "compact": "Not every day needs a personal best. Just a place to start.",
+    "expanded": "Some days bring a little more room for movement. Others call for an easy beginning, a slower pace, and the freedom to change your plans. This journal keeps that space open without turning every session into a competition."
+  },
+  "session-description": {
+    "role": "prose",
+    "default": "A little rhythm. A little effort. Enough room to finish feeling like you.",
+    "compact": "A little rhythm. A little effort. Enough room to finish feeling like you.",
+    "expanded": "Begin gently, build into a steady middle, and leave enough room to ease back. You can pause whenever you need to. The timer and your journal keep their place while you choose a different direction, revisit the details, or take a little longer to decide."
+  }
+}
