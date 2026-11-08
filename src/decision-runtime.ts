@@ -9,6 +9,9 @@ export const DESIGN_RUNTIME_SEMANTICS = 'scenario-bands-v2' as const;
 export interface DesignRuntimePolicy {
   /** Authored permission to apply the default bands at unsampled inputs. */
   unsampledScenarioBands: 'base';
+  /** Explicit mathematical domains independent of finite test samples.
+   * Every input is still finite; hard factors remain binding. */
+  inputDomains?: Record<string, 'positive'> | undefined;
 }
 export interface DesignRuntimeOptions {
   /** Disambiguates equal input vectors; it cannot override the supplied inputs. */
@@ -64,6 +67,14 @@ export function resolveDesignRuntime(
     throw new Error('Runtime scenario keys differ from design program');
   if (Object.values(scenario).some((v) => !Number.isFinite(v)))
     throw new Error('Runtime scenario inputs must be finite');
+  for (const [key, domain] of Object.entries(
+    handoff.runtimePolicy?.inputDomains ?? {},
+  )) {
+    if (!keys.includes(key))
+      throw new Error(`Runtime domain names undeclared input: ${key}`);
+    if (domain !== 'positive' || !(scenario[key]! > 0))
+      throw new Error(`Runtime input ${key} must be finite and positive`);
+  }
   const matches = handoff.program.scenarios.filter((s) =>
     keys.every((key) => s.values[key] === scenario[key]),
   );
@@ -167,6 +178,7 @@ export function resolveDesignRuntime(
   const outside = keys.filter(
     (k) =>
       relevant.has(k) &&
+      handoff.runtimePolicy?.inputDomains?.[k] !== 'positive' &&
       (scenario[k]! <
         Math.min(...handoff.program.scenarios.map((s) => s.values[k]!)) ||
         scenario[k]! >

@@ -1,0 +1,24 @@
+# Fluid viewport correction
+
+Vela's old viewport guard incorrectly treated its finite test matrix as the only allowed window sizes. A1920px desktop or tall window froze the prior layout and displayed a resize warning. The old tests explicitly expected that rejection, so their passing result did not establish the required responsive behavior. User critique supersedes that product rule.
+
+The correction reaches the shared handoff runtime. An identity-bound `runtimePolicy.inputDomains` can declare width, height and text scale as positive inputs independently of finite samples. Inputs remain finite, genuine hard constraints remain binding, unknown input names are rejected and changing the policy invalidates cached handoffs. Existing bounded consumers retain their behavior unless they opt in. Vela's two newly named fluid programs opt in, use an available-width-relative content constraint and keep title/timer arithmetic positive with a body-size floor. Short windows put session actions into ordinary scroll flow instead of reserving a fixed dock. Wide windows retain a comfortable maximum reading measure. Neither renderer uses a sampled viewport's min/max as a product admission range.
+
+The web adapter now accepts every finite positive measured width/height and recomputes current geometry. It only defers genuinely unavailable, nonfinite or nonpositive geometry. There is no supported-window banner or instruction to widen/resize. Session state is retained through live resize. At physically tiny sizes, scrolling and mounted content replace a false promise that every readable glyph or target can be visible simultaneously.
+
+The focused tests cover1,122 combinations of width/height/text scale across both directions, plus policy identity, replay, hard-factor retention and invalid inputs. The frozen-source browser proof passes384 screen cases and eight flows across Chromium and WebKit. Added samples include1920×1080,2560×1600,3840×2160,390×2000,900×160,240×480 and160×240, plus enlargement. Running-session resize paths verify current geometry without losing timer state. Four one-pixel recovery flows establish that an actual1×1 viewport mounts without a runtime error, then grows to2560×1600 and can start a session without reload. They do not claim simultaneous readability at one pixel.
+
+An earlier exploratory pass rendered384 cases with no behavior failures but its final result remained failed because authored handoff metadata changed while it ran. It is retained as historical, unstable-source evidence, not relabeled a pass. The final browser receipt is source-stable `2f1bc143d7d49cce9c0b9d8818aacf28683d1f3d264ed5670ec08dab199bebed`.
+
+Actual Android Text/Yoga checks pass all six screens in each direction at the observed phone/font-scale1 configuration; a real touch-driven session flow also passes. The owned native session exits with app/process/port/reverse cleanup confirmed. These native samples establish compatibility of the changed shared policies, not exhaustive native viewport coverage or physical iOS parity. No neural selection or aesthetic validation is claimed for this deterministic geometry correction.
+
+The complete ordered verification lane and final publication are pending at this initial checkpoint. Final terminal results and the replacement live snapshot will be recorded after inspection. API semantics: [Responsive input domains](../../docs/responsive-input-domains.md).
+
+
+## Final checkpoint
+
+All28 ordered stages passed with stable source `2f1bc143d7d49cce9c0b9d8818aacf28683d1f3d264ed5670ec08dab199bebed`, including550 unit tests, the384-case/eight-flow browser matrix, both motion directions, Expo/Relay regressions, materials, interactions, typography and migrations. An additional four current-source continuity flows start with elapsed time at least two seconds, resize through desktop/tall/short/narrow/one-pixel windows, require the timer to advance afterward, and save an entry without losing elapsed time. All four pass. This avoids a vacuous clock-preservation assertion at elapsed zero.
+
+Native compatibility confirmation checks12 screen receipts and a gesture flow against actual native identity `3969ed0bac9f01b83c9d91372b4f89df66e638357f2502b74ceeec8bd9ebe68a`, with zero unknown/failed text widths and confirmed terminal cleanup. This is sampled Android evidence, separately scoped from the browser's extreme sizes.
+
+The [evidence archive](../evidence/2026-11-08-fluid-viewports.zip) retains97 files with per-file hashes, including the earlier unstable exploration and final source-bound results. Archive SHA-256: `ea4b700f6e57c9f815ebbb2390eb8caf8ab7908b128ee3f625eff1e908197ba4` (4,063,019bytes). Every entry was read back and verified against the manifest. The published Vela snapshot contains only the app/index/font/license files; the separately built developer gallery is outside that bundle identity.

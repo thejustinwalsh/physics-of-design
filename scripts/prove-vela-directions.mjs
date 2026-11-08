@@ -12,7 +12,8 @@ import {
 const before = snapshotVerificationSources(process.cwd());
 const directory = path.resolve('artifacts/vela/web'),
   output =
-    process.env.VELA_DIRECTIONS_OUTPUT ?? 'artifacts/vela/directions-proof-current';
+    process.env.VELA_DIRECTIONS_OUTPUT ??
+    'artifacts/vela/fluid-directions-proof';
 await mkdir(output, { recursive: true });
 const report = {
   scope:
@@ -178,6 +179,14 @@ try {
           { id: 'small-enlarged', width: 320, height: 740, scale: 2 },
           { id: 'ipad', width: 834, height: 1194, scale: 1 },
           { id: 'desktop', width: 1440, height: 1000, scale: 1 },
+          { id: 'full-hd', width: 1920, height: 1080, scale: 1 },
+          { id: 'large-desktop', width: 2560, height: 1600, scale: 1 },
+          { id: 'four-k', width: 3840, height: 2160, scale: 1 },
+          { id: 'tall-phone', width: 390, height: 2000, scale: 1 },
+          { id: 'short-window', width: 900, height: 160, scale: 1 },
+          { id: 'narrow-window', width: 240, height: 480, scale: 1 },
+          { id: 'tiny-window', width: 160, height: 240, scale: 1 },
+          { id: 'narrow-enlarged', width: 240, height: 480, scale: 2 },
           { id: 'short-landscape', width: 844, height: 320, scale: 1.5 },
           { id: 'phone-extreme', width: 390, height: 844, scale: 3.6 },
           {
@@ -340,6 +349,39 @@ try {
         assert.equal(switched.running, true);
         assert.ok(switched.elapsed >= previous.elapsed);
         assert.notEqual(switched.policyIdentity, previous.policyIdentity);
+        flow.resizes = [];
+        for (const viewport of [
+          { width: 2560, height: 1600 },
+          { width: 390, height: 2000 },
+          { width: 900, height: 160 },
+          { width: 240, height: 480 },
+          { width: 1920, height: 1080 },
+          { width: 390, height: 844 },
+        ]) {
+          await page.setViewportSize(viewport);
+          await page.waitForFunction(
+            ({ width, height }) =>
+              globalThis.__VELA_LAST_RUNTIME_INPUT__?.width === width &&
+              globalThis.__VELA_LAST_RUNTIME_INPUT__?.height === height,
+            viewport,
+          );
+          const facts = await page.evaluate(() => ({
+            screen: globalThis.__VELA__.screen,
+            running: globalThis.__VELA__.running,
+            elapsed: globalThis.__VELA__.elapsed,
+            admissible: globalThis.__VELA__.resolved.admissible,
+            boundary: globalThis.__VELA_VIEWPORT_BOUNDARY__.status,
+            notice: !!document.querySelector('[data-waiting-viewport]'),
+          }));
+          assert.equal(facts.screen, 'active');
+          assert.equal(facts.running, true);
+          assert.ok(facts.elapsed >= switched.elapsed);
+          assert.ok(facts.admissible);
+          assert.equal(facts.boundary, 'current');
+          assert.equal(facts.notice, false);
+          flow.resizes.push({ viewport, facts });
+        }
+
         await page.getByRole('button', { name: 'Pause', exact: true }).click();
         await page
           .getByRole('button', { name: 'Finish session', exact: true })
@@ -440,6 +482,66 @@ try {
         });
       } finally {
         await keyboardContext.close();
+      }
+      // A physically tiny viewport cannot show a readable target at once, but
+      // it still gets current geometry and must recover without a reload.
+      for (const direction of ['momentum', 'field-notes']) {
+        const context = await browser.newContext({
+          viewport: { width: 1, height: 1 },
+          reducedMotion: 'reduce',
+        });
+        const flow = {
+          engine: engine.name(),
+          direction,
+          kind: 'tiny-live-recovery',
+          passed: false,
+        };
+        report.flows.push(flow);
+        try {
+          const page = await context.newPage(),
+            errors = [];
+          page.on('pageerror', (error) => errors.push(error.message));
+          await page.goto(`${origin}/?direction=${direction}`);
+          await ready(page, direction);
+          const tiny = await page.evaluate(() => ({
+            width: globalThis.__VELA__.resolved.values.width,
+            height: globalThis.__VELA__.resolved.values.height,
+            admissible: globalThis.__VELA__.resolved.admissible,
+            current: globalThis.__VELA_VIEWPORT_BOUNDARY__.status,
+          }));
+          assert.deepEqual(tiny, {
+            width: 1,
+            height: 1,
+            admissible: true,
+            current: 'current',
+          });
+          await page.setViewportSize({ width: 2560, height: 1600 });
+          await page.waitForFunction(
+            () =>
+              globalThis.__VELA_LAST_RUNTIME_INPUT__?.width === 2560 &&
+              globalThis.__VELA_LAST_RUNTIME_INPUT__?.height === 1600,
+          );
+          await page
+            .getByRole('button', { name: 'Open session', exact: true })
+            .click();
+          await page
+            .getByRole('button', { name: 'Start session', exact: true })
+            .click();
+          await page.waitForFunction(() => globalThis.__VELA__?.running);
+          assert.deepEqual(errors, []);
+          flow.passed = true;
+          flow.tiny = tiny;
+        } catch (error) {
+          flow.error = String(error);
+          report.failures.push({
+            engine: engine.name(),
+            direction,
+            scenario: 'tiny-live-recovery',
+            error: String(error),
+          });
+        } finally {
+          await context.close();
+        }
       }
     } finally {
       await browser.close();

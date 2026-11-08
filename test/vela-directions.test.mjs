@@ -14,7 +14,7 @@ test('independent directions retain identical task topology/content while bindin
   assert.deepEqual(
     momentum.handoff.program.scenarios,
     notes.handoff.program.scenarios,
-    'The shared viewport guard requires an explicitly common envelope',
+    'The directions share an explicitly common test matrix; these are samples, not admission limits',
   );
   assert.notEqual(
     momentum.handoff.machine.content.today.default,
@@ -51,4 +51,46 @@ test('independent directions retain identical task topology/content while bindin
     resolveDesignRuntime(notes.handoff, scenario).values.pageDistance <
       resolveDesignRuntime(momentum.handoff, scenario).values.pageDistance,
   );
+});
+
+test('responsive equations accept positive widths/heights beyond the sampled matrix', () => {
+  const widths = [
+    1, 1.25, 13.3, 64, 160, 240, 280, 319, 390, 834, 1440, 1920, 2560, 3840,
+    7680, 16384, 1000000,
+  ];
+  const heights = [1, 80, 160, 200, 319, 320, 844, 1210, 1800, 2160, 1000000];
+  for (const policy of [momentum, notes])
+    for (const width of widths)
+      for (const height of heights)
+        for (const textScale of [1, 2, 3.6]) {
+          const result = resolveDesignRuntime(policy.handoff, {
+            width,
+            height,
+            textScale,
+            reducedMotion: 1,
+          });
+          assert.equal(
+            result.admissible,
+            true,
+            JSON.stringify({
+              width,
+              height,
+              textScale,
+              failures: result.failures,
+            }),
+          );
+          assert.ok(Object.values(result.values).every(Number.isFinite));
+          assert.ok(result.values.titleSize >= result.values.body);
+          assert.ok(result.values.timerSize >= result.values.body);
+          assert.ok(
+            result.values.contentWidth > 0 &&
+              result.values.contentWidth <= 1120,
+          );
+          if (height <= 160)
+            assert.equal(
+              result.regions.active.screen.persistentActions,
+              0,
+              'Short windows must use inline scrollable actions',
+            );
+        }
 });

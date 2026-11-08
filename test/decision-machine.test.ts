@@ -597,3 +597,67 @@ test('literal zero transition guard blocks while literal one and absent guards e
     actor.stop();
   }
 });
+
+test('identity-bound positive domains decouple responsive inputs from finite samples while preserving hard guards', () => {
+  const input = fixture();
+  const bounded = createDesignHandoff(input);
+  assert.equal(resolveHandoff(bounded, { width: 1200 }).admissible, false);
+  input.runtimePolicy = {
+    unsampledScenarioBands: 'base',
+    inputDomains: { width: 'positive' },
+  };
+  const fluid = createDesignHandoff(input);
+  assert.notEqual(fluid.identity, bounded.identity);
+  assert.equal(resolveHandoff(fluid, { width: 1200 }).admissible, true);
+  assert.deepEqual(
+    resolveDesignRuntime(fluid, { width: 1200 }),
+    resolveHandoff(fluid, { width: 1200 }),
+  );
+  assert.equal(
+    resolveHandoff(fluid, { width: 10000 }).admissible,
+    false,
+    'Actual hard content bounds remain binding',
+  );
+  assert.throws(
+    () => resolveDesignRuntime(fluid, { width: 0 }),
+    /width.*positive/,
+  );
+  assert.throws(
+    () => resolveDesignRuntime(fluid, { width: -1 }),
+    /width.*positive/,
+  );
+  assert.throws(
+    () => resolveDesignRuntime(fluid, { width: Infinity }),
+    /finite/,
+  );
+  assert.throws(
+    () =>
+      createDesignHandoff({
+        ...input,
+        runtimePolicy: {
+          unsampledScenarioBands: 'base',
+          inputDomains: { typo: 'positive' },
+        },
+      }),
+    /undeclared input/,
+  );
+  assert.equal(
+    replayDesignHandoff({
+      program: input.program,
+      machine: input.machine,
+      runtimePolicy: input.runtimePolicy,
+      recipe: fluid,
+      scenario: { width: 1200 },
+    }).status,
+    'replayed',
+  );
+  assert.equal(
+    replayDesignHandoff({
+      program: input.program,
+      machine: input.machine,
+      recipe: fluid,
+      scenario: { width: 1200 },
+    }).status,
+    'invalidated',
+  );
+});

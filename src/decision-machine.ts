@@ -21,6 +21,7 @@ const Id = z.string().regex(/^[A-Za-z][A-Za-z0-9_.-]{0,79}$/);
 const RuntimePolicySchema = z
   .object({
     unsampledScenarioBands: z.literal('base'),
+    inputDomains: z.record(Id, z.literal('positive')).optional(),
   })
   .strict();
 export const DesignMachineSpecSchema = z

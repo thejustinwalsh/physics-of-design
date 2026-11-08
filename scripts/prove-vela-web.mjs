@@ -768,32 +768,28 @@ try {
     ),
     'Zero initial geometry evaluated the design program',
   );
-  // Positive but unsupported geometry distinguishes a policy-domain guard
-  // from a zero-only guard. The unfixed policy evaluates log2 of a negative
-  // fitted title size at width=1, even though height and scale are valid.
-  await boundaryPage.goto(`${base}/?view=today&textScale=3.6&boundaryWidth=1`);
-  await boundaryPage.locator('[data-waiting-viewport]').waitFor();
-  check(
-    await boundaryPage.evaluate(
-      () =>
-        !window.__VELA_READY__ &&
-        !window.__VELA_LAST_RUNTIME_INPUT__ &&
-        window.__VELA_VIEWPORT_REJECTIONS__.some(
-          (r) =>
-            r.width === 1 && r.reason === 'outside-declared-viewport-envelope',
-        ),
-    ),
-    'Positive out-of-domain initial geometry evaluated the design program',
-  );
-  await boundaryPage.goto(`${base}/?boundaryWidth=1920`);
-  await boundaryPage.locator('[data-viewport-status="unsupported"]').waitFor();
-  check(
-    await boundaryPage
-      .getByRole('status')
-      .textContent()
-      .then((text) => text.includes('320–1440') && text.includes('320–1210')),
-    'Unsupported initial viewport did not disclose configured bounds',
-  );
+  // Positive geometry is always admitted. The equations must remain finite even
+  // when a window is too small to display a glyph/target without scrolling.
+  for (const width of [1, 1920, 5120]) {
+    await boundaryPage.goto(
+      `${base}/?view=today&textScale=3.6&boundaryWidth=${width}`,
+    );
+    await boundaryPage.waitForFunction(
+      (width) =>
+        window.__VELA_READY__ &&
+        window.__VELA__?.resolved.values.width === width,
+      width,
+    );
+    check(
+      await boundaryPage.evaluate(
+        () =>
+          window.__VELA__.resolved.admissible &&
+          window.__VELA_VIEWPORT_BOUNDARY__.status === 'current' &&
+          !document.querySelector('[data-waiting-viewport]'),
+      ),
+      'Positive initial viewport was blocked or failed its equations',
+    );
+  }
   await boundaryPage.evaluate(() => {
     Object.defineProperty(window, 'innerWidth', window.__testWidthDescriptor);
     dispatchEvent(new Event('resize'));
@@ -813,15 +809,13 @@ try {
   check(
     await boundaryPage.evaluate(
       () =>
-        window.__VELA__.resolved.values.width === 390 &&
-        window.__VELA_LAST_RUNTIME_INPUT__.width === 390 &&
-        window.__VELA_VIEWPORT_BOUNDARY__.status === 'held' &&
+        window.__VELA__.resolved.values.width === 1 &&
+        window.__VELA_LAST_RUNTIME_INPUT__.width === 1 &&
+        window.__VELA_VIEWPORT_BOUNDARY__.status === 'current' &&
         window.__VELA_VIEWPORT_BOUNDARY__.current.width === 1 &&
-        window.__VELA_VIEWPORT_REJECTIONS__.some(
-          (r) => r.width === 1 && r.height === 844,
-        ),
+        window.__VELA__.resolved.admissible,
     ),
-    'Positive out-of-domain resize replaced the last valid geometry',
+    'Positive resize failed to recompute current geometry',
   );
   await boundaryPage.evaluate(() => {
     window.__testHeightDescriptor = Object.getOwnPropertyDescriptor(
@@ -850,39 +844,41 @@ try {
   }));
   check(
     deferredViewport.mounted &&
-      deferredViewport.lastResolved.width === 390 &&
+      deferredViewport.lastResolved.width === 1 &&
       deferredViewport.lastResolved.height === 844 &&
-      deferredViewport.rejections.length >= 2,
+      deferredViewport.rejections.length >= 1,
     'Unavailable resize destroyed the last valid view or was not recorded',
   );
   await boundaryPage.evaluate(() => {
     Object.defineProperty(window, 'innerWidth', window.__testWidthDescriptor);
     Object.defineProperty(window, 'innerHeight', window.__testHeightDescriptor);
   });
-  const unsupportedViewportCases = [];
+  const expandedViewportCases = [];
   for (const viewport of [
     { width: 1920, height: 1080 },
+    { width: 2560, height: 1600 },
+    { width: 390, height: 1800 },
     { width: 390, height: 319 },
+    { width: 900, height: 160 },
   ]) {
     await boundaryPage.setViewportSize(viewport);
     await boundaryPage.waitForFunction(
       ({ width, height }) =>
-        window.__VELA_VIEWPORT_BOUNDARY__.status === 'held' &&
-        window.__VELA_VIEWPORT_BOUNDARY__.current.width === width &&
-        window.__VELA_VIEWPORT_BOUNDARY__.current.height === height,
+        window.__VELA_VIEWPORT_BOUNDARY__.status === 'current' &&
+        window.__VELA_LAST_RUNTIME_INPUT__.width === width &&
+        window.__VELA_LAST_RUNTIME_INPUT__.height === height,
       viewport,
     );
     const observation = await boundaryPage.evaluate(() => ({
       boundary: window.__VELA_VIEWPORT_BOUNDARY__,
       runtimeInput: window.__VELA_LAST_RUNTIME_INPUT__,
+      admissible: window.__VELA__.resolved.admissible,
       notice: document.querySelector('[data-waiting-viewport]')?.textContent,
     }));
-    unsupportedViewportCases.push(observation);
+    expandedViewportCases.push(observation);
     check(
-      observation.runtimeInput.width === 390 &&
-        observation.runtimeInput.height === 844 &&
-        observation.notice.includes('last supported layout'),
-      'Unsupported ordinary viewport silently became current',
+      observation.admissible && !observation.notice,
+      'Positive viewport retained a blocking notice or invalid layout',
     );
   }
   await boundaryPage.setViewportSize({ width: 834, height: 1000 });
@@ -1248,7 +1244,7 @@ try {
       storageRecovery,
       deferredViewport,
       recoveredViewport,
-      unsupportedViewportCases,
+      expandedViewportCases,
       paused,
       restored,
       spatialMotion,

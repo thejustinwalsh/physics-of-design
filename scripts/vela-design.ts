@@ -115,13 +115,17 @@ async function compileDirection(direction: 'momentum' | 'field-notes') {
   calc(
     'titleSize',
     op(
-      'min',
-      ref('display'),
-      op('max', 40, op('mul', ref('paneWidth'), 0.18)),
+      'max',
+      ref('body'),
       op(
-        'div',
-        op('sub', ref('contentWidth'), 2),
-        op('add', headlineEm, op('mul', 8, ref('tracking'))),
+        'min',
+        ref('display'),
+        op('max', 40, op('mul', ref('paneWidth'), 0.18)),
+        op(
+          'div',
+          op('sub', ref('contentWidth'), 2),
+          op('add', headlineEm, op('mul', 8, ref('tracking'))),
+        ),
       ),
     ),
     'dp',
@@ -129,12 +133,16 @@ async function compileDirection(direction: 'momentum' | 'field-notes') {
   calc(
     'timerSize',
     op(
-      'min',
-      op('mul', ref('titleSize'), 1.1),
+      'max',
+      ref('body'),
       op(
-        'div',
-        op('sub', ref('timerInnerWidth'), fieldNotes ? 4 : 2),
-        op('mul', ref('textScale'), op('add', timerPairEm, ref('tracking'))),
+        'min',
+        op('mul', ref('titleSize'), 1.1),
+        op(
+          'div',
+          op('sub', ref('timerInnerWidth'), fieldNotes ? 4 : 2),
+          op('mul', ref('textScale'), op('add', timerPairEm, ref('tracking'))),
+        ),
       ),
     ),
     'dp',
@@ -406,12 +414,12 @@ async function compileDirection(direction: 'momentum' | 'field-notes') {
   });
   const program: EnergyProgram = {
     version: 1,
-    id: fieldNotes ? 'vela-field-notes' : 'vela-momentum-v2',
+    id: fieldNotes ? 'vela-field-notes-fluid-v2' : 'vela-momentum-fluid-v3',
     brief,
     identity: {
       policy: fieldNotes
-        ? 'vela-field-notes-v1'
-        : 'vela-momentum-v2-responsive-directions',
+        ? 'vela-field-notes-fluid-v2'
+        : 'vela-momentum-fluid-v3',
       font: fontDigest('assets/fonts/Lato-Black.ttf'),
       designDocument: designContext.sha256,
       math: 'energy-v1',
@@ -473,10 +481,14 @@ async function compileDirection(direction: 'momentum' | 'field-notes') {
     factors: [
       factor(
         'minimum-content',
-        ref('contentWidth'),
-        280,
-        1440,
-        20,
+        op(
+          'div',
+          ref('contentWidth'),
+          op('min', 280, op('mul', ref('paneWidth'), 0.8)),
+        ),
+        1,
+        8,
+        0.1,
         1,
         'content',
         'hard',
@@ -740,6 +752,8 @@ async function compileDirection(direction: 'momentum' | 'field-notes') {
       web: 'React + StyleX',
       native: 'React Native Text + Yoga',
       requirements: [
+        'Test scenarios are samples, not viewport admission limits; positive runtime dimensions reflow through the identity-bound input domain.',
+        'Preserve readable content and scroll access; use inline actions when a fixed dock would consume the viewport.',
         'Use resolved region bindings and transition topology, not hardcoded replacement geometry',
         'Maintain natural text heights, 44pt minimum iOS control targets and safe areas',
         'Native font scaling stays enabled; reflow topology changes with text scale',
@@ -766,7 +780,11 @@ async function compileDirection(direction: 'momentum' | 'field-notes') {
         'active',
         'complete',
       ].includes(state.id)
-        ? 1
+        ? op(
+            'lte',
+            op('add', 104, op('mul', ref('body'), ref('textScale'), 6)),
+            ref('height'),
+          )
         : 0;
       region.bindings.actionDockMaxHeight = op('mul', ref('height'), 0.45);
     }
@@ -891,8 +909,8 @@ async function compileDirection(direction: 'momentum' | 'field-notes') {
     const recorded = JSON.parse(
       await readFile(
         fieldNotes
-          ? 'examples/vela/choice.field-notes.json'
-          : 'examples/vela/choice.momentum-v2.json',
+          ? 'examples/vela/choice.field-notes-fluid-v2.json'
+          : 'examples/vela/choice.momentum-fluid-v3.json',
         'utf8',
       ),
     );
@@ -908,7 +926,20 @@ async function compileDirection(direction: 'momentum' | 'field-notes') {
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
   }
-  const handoff = createDesignHandoff({ program, assignment, machine });
+  const runtimePolicy = {
+    unsampledScenarioBands: 'base' as const,
+    inputDomains: {
+      width: 'positive' as const,
+      height: 'positive' as const,
+      textScale: 'positive' as const,
+    },
+  };
+  const handoff = createDesignHandoff({
+    program,
+    assignment,
+    machine,
+    runtimePolicy,
+  });
   const motion = summarizeMotion({
     spring: {
       mass: 1,
@@ -922,6 +953,7 @@ async function compileDirection(direction: 'momentum' | 'field-notes') {
     program,
     machine,
     recipe: handoff,
+    runtimePolicy,
     scenario: program.scenarios[0]!.values,
   });
   await mkdir('examples/vela', { recursive: true });

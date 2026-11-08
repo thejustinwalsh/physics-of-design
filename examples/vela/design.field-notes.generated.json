@@ -37,15 +37,15 @@
     "runtimeSemantics": "scenario-bands-v2",
     "program": {
       "version": 1,
-      "id": "vela-field-notes",
+      "id": "vela-field-notes-fluid-v2",
       "brief": {
         "intent": "Vela Field Notes is an authored alternative for the same training journal: warm paper, charcoal and terracotta; smaller editorial hierarchy, compact ruled grouping, shallow corners, short low-overshoot motion. Preserve all six screens, state, text enlargement and reduced motion. These are editable brief preferences, not human preference evidence.",
         "source": "examples/vela/DESIGN.md: authored Field Notes direction"
       },
       "identity": {
-        "policy": "vela-field-notes-v1",
+        "policy": "vela-field-notes-fluid-v2",
         "font": "808c62839c62dbce7de689af7603666fc7f8b81e0df537d8a5212c87580d4337",
-        "designDocument": "35cb390afc4cdb194407d82aeb76adf74fb7d97530f25fccc636ec9f7cccdd96",
+        "designDocument": "61c3bc22de4ec338b5596b2d7eaa3aad9f91bf10b6c4a1fd4c797dd9f9c67b6c",
         "math": "energy-v1",
         "motion": "stationary spring; RN 0.88 underdamped mapping"
       },
@@ -964,48 +964,56 @@
         {
           "id": "titleSize",
           "expression": {
-            "op": "min",
+            "op": "max",
             "args": [
               {
-                "ref": "display"
+                "ref": "body"
               },
               {
-                "op": "max",
-                "args": [
-                  40,
-                  {
-                    "op": "mul",
-                    "args": [
-                      {
-                        "ref": "paneWidth"
-                      },
-                      0.18
-                    ]
-                  }
-                ]
-              },
-              {
-                "op": "div",
+                "op": "min",
                 "args": [
                   {
-                    "op": "sub",
-                    "args": [
-                      {
-                        "ref": "contentWidth"
-                      },
-                      2
-                    ]
+                    "ref": "display"
                   },
                   {
-                    "op": "add",
+                    "op": "max",
                     "args": [
-                      5.386,
+                      40,
                       {
                         "op": "mul",
                         "args": [
-                          8,
                           {
-                            "ref": "tracking"
+                            "ref": "paneWidth"
+                          },
+                          0.18
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "op": "div",
+                    "args": [
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "ref": "contentWidth"
+                          },
+                          2
+                        ]
+                      },
+                      {
+                        "op": "add",
+                        "args": [
+                          5.386,
+                          {
+                            "op": "mul",
+                            "args": [
+                              8,
+                              {
+                                "ref": "tracking"
+                              }
+                            ]
                           }
                         ]
                       }
@@ -1277,41 +1285,49 @@
         {
           "id": "timerSize",
           "expression": {
-            "op": "min",
+            "op": "max",
             "args": [
               {
-                "op": "mul",
-                "args": [
-                  {
-                    "ref": "titleSize"
-                  },
-                  1.1
-                ]
+                "ref": "body"
               },
               {
-                "op": "div",
+                "op": "min",
                 "args": [
-                  {
-                    "op": "sub",
-                    "args": [
-                      {
-                        "ref": "timerInnerWidth"
-                      },
-                      4
-                    ]
-                  },
                   {
                     "op": "mul",
                     "args": [
                       {
-                        "ref": "textScale"
+                        "ref": "titleSize"
+                      },
+                      1.1
+                    ]
+                  },
+                  {
+                    "op": "div",
+                    "args": [
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "ref": "timerInnerWidth"
+                          },
+                          4
+                        ]
                       },
                       {
-                        "op": "add",
+                        "op": "mul",
                         "args": [
-                          1.16,
                           {
-                            "ref": "tracking"
+                            "ref": "textScale"
+                          },
+                          {
+                            "op": "add",
+                            "args": [
+                              1.16,
+                              {
+                                "ref": "tracking"
+                              }
+                            ]
                           }
                         ]
                       }
@@ -1569,15 +1585,35 @@
         {
           "id": "minimum-content",
           "expression": {
-            "ref": "contentWidth"
+            "op": "div",
+            "args": [
+              {
+                "ref": "contentWidth"
+              },
+              {
+                "op": "min",
+                "args": [
+                  280,
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "ref": "paneWidth"
+                      },
+                      0.8
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           "bands": [
             {
-              "min": 280,
-              "max": 1440
+              "min": 1,
+              "max": 8
             }
           ],
-          "scale": 20,
+          "scale": 0.1,
           "mode": "hard",
           "weight": 1,
           "category": "content",
@@ -1676,7 +1712,7 @@
         }
       ]
     },
-    "programIdentity": "62dbfc94de8bfb286ca192ef0e1afd677cb396cd304928a37d1c737d8aa0377c",
+    "programIdentity": "70362a5c8c94918cb48b1779f10abfc05e2f3a37762b02cb0ec1ae7a95cc8647",
     "machine": {
       "id": "vela",
       "initial": "today",
@@ -2000,7 +2036,32 @@
                 "headingSize": {
                   "ref": "sectionHeadingSize"
                 },
-                "persistentActions": 1,
+                "persistentActions": {
+                  "op": "lte",
+                  "args": [
+                    {
+                      "op": "add",
+                      "args": [
+                        104,
+                        {
+                          "op": "mul",
+                          "args": [
+                            {
+                              "ref": "body"
+                            },
+                            {
+                              "ref": "textScale"
+                            },
+                            6
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "height"
+                    }
+                  ]
+                },
                 "actionDockMaxHeight": {
                   "op": "mul",
                   "args": [
@@ -2124,7 +2185,32 @@
                 "headingSize": {
                   "ref": "operatingHeadingSize"
                 },
-                "persistentActions": 1,
+                "persistentActions": {
+                  "op": "lte",
+                  "args": [
+                    {
+                      "op": "add",
+                      "args": [
+                        104,
+                        {
+                          "op": "mul",
+                          "args": [
+                            {
+                              "ref": "body"
+                            },
+                            {
+                              "ref": "textScale"
+                            },
+                            6
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "height"
+                    }
+                  ]
+                },
                 "actionDockMaxHeight": {
                   "op": "mul",
                   "args": [
@@ -2253,7 +2339,32 @@
                 "headingSize": {
                   "ref": "expressiveHeadingSize"
                 },
-                "persistentActions": 1,
+                "persistentActions": {
+                  "op": "lte",
+                  "args": [
+                    {
+                      "op": "add",
+                      "args": [
+                        104,
+                        {
+                          "op": "mul",
+                          "args": [
+                            {
+                              "ref": "body"
+                            },
+                            {
+                              "ref": "textScale"
+                            },
+                            6
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "height"
+                    }
+                  ]
+                },
                 "actionDockMaxHeight": {
                   "op": "mul",
                   "args": [
@@ -2546,6 +2657,8 @@
         "web": "React + StyleX",
         "native": "React Native Text + Yoga",
         "requirements": [
+          "Test scenarios are samples, not viewport admission limits; positive runtime dimensions reflow through the identity-bound input domain.",
+          "Preserve readable content and scroll access; use inline actions when a fixed dock would consume the viewport.",
           "Use resolved region bindings and transition topology, not hardcoded replacement geometry",
           "Maintain natural text heights, 44pt minimum iOS control targets and safe areas",
           "Native font scaling stays enabled; reflow topology changes with text scale",
@@ -2566,6 +2679,14 @@
       "stiffness": 260,
       "titleLeading": 1.16,
       "tracking": -0.025
+    },
+    "runtimePolicy": {
+      "unsampledScenarioBands": "base",
+      "inputDomains": {
+        "width": "positive",
+        "height": "positive",
+        "textScale": "positive"
+      }
     },
     "decisions": [
       {
@@ -2678,7 +2799,7 @@
       ]
     },
     "scope": "Resolved design choice machine. Energy expresses this brief; it does not certify quality, renderer feasibility or an optimum.",
-    "identity": "e1220d05c84a91c6f4a119bd7088f91e54b8f035017569a1f86ff7b638a5afad"
+    "identity": "5a43fbb1300b0061ec1adb8b6d2a3586959c520d6ae6c75488c871c00807e39d"
   },
   "palette": {
     "system": {

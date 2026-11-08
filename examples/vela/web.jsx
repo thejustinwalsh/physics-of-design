@@ -1336,15 +1336,7 @@ function Vela({ viewport }) {
                   <Button onClick={savePreferences}>Retry save</Button>
                 </div>
               )}
-              {!resolved.admissible && (
-                <p
-                  role="status"
-                  {...sx(styles.error, styles.text(size(), c.ink))}
-                >
-                  This window is outside the current layout plan. Widen the
-                  window to continue.
-                </p>
-              )}
+
               <main
                 id="main"
                 ref={main}
@@ -1874,12 +1866,8 @@ function Vela({ viewport }) {
   );
 }
 
-const viewportEnvelope = Object.fromEntries(
-  ['width', 'height'].map((key) => {
-    const values = policy.handoff.program.scenarios.map((s) => s.values[key]);
-    return [key, { min: Math.min(...values), max: Math.max(...values) }];
-  }),
-);
+// Scenario dimensions are test samples, not a responsive admission boundary.
+// Only unavailable/nonfinite geometry is deferred; every positive viewport reflows.
 function readAvailableViewport() {
   const value = { width: innerWidth, height: innerHeight };
   const available =
@@ -1887,27 +1875,11 @@ function readAvailableViewport() {
     Number.isFinite(value.height) &&
     value.width > 0 &&
     value.height > 0;
-  // Positive dimensions alone do not establish the policy's mathematical
-  // domain: e.g. a one-pixel transient gives a nonpositive fitted title size.
-  // Admit the handoff's declared dimensional envelope before evaluation.
-  const supported =
-    available &&
-    Object.entries(viewportEnvelope).every(
-      ([key, { min, max }]) => value[key] >= min && value[key] <= max,
-    );
-  if (supported) return { value, reason: null };
-  const reason = available
-    ? 'outside-declared-viewport-envelope'
-    : 'unavailable-geometry';
-  const rejected = window.__VELA_VIEWPORT_REJECTIONS__ ?? [];
+  if (available) return { value, reason: null };
+  const reason = 'unavailable-geometry';
   window.__VELA_VIEWPORT_REJECTIONS__ = [
-    ...rejected.slice(-49),
-    {
-      ...value,
-      reason,
-      envelope: viewportEnvelope,
-      at: performance.now(),
-    },
+    ...(window.__VELA_VIEWPORT_REJECTIONS__ ?? []).slice(-49),
+    { ...value, reason, at: performance.now() },
   ];
   return { value, reason };
 }
@@ -1935,15 +1907,12 @@ function ViewportBoundary() {
     ? 'current'
     : boundary.accepted
       ? 'held'
-      : boundary.reason === 'unavailable-geometry'
-        ? 'unavailable'
-        : 'unsupported';
+      : 'unavailable';
   window.__VELA_VIEWPORT_BOUNDARY__ = {
     status,
     reason: boundary.reason,
     current: boundary.value,
     accepted: boundary.accepted,
-    envelope: viewportEnvelope,
   };
   return (
     <>
@@ -1968,12 +1937,7 @@ function ViewportBoundary() {
               : undefined
           }
         >
-          {boundary.reason === 'unavailable-geometry'
-            ? 'Window dimensions are unavailable. '
-            : `This window is outside this design’s configured viewport bounds (${viewportEnvelope.width.min}–${viewportEnvelope.width.max} pixels wide, ${viewportEnvelope.height.min}–${viewportEnvelope.height.max} pixels high). `}
-          {boundary.accepted
-            ? 'Showing the last supported layout; resize to continue.'
-            : 'Resize to continue.'}
+          Window dimensions are temporarily unavailable.
         </p>
       )}
       {boundary.accepted && <Vela viewport={boundary.accepted} />}
