@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-09T04:56:30.723982+00:00",
+  "archives": [
+    {
+      "file": "2026-11-08-marketing-study.zip",
+      "bytes": 21844342,
+      "sha256": "3ca25c680b229f2dc372701bed1caf8afba56d3a3e4897e1be8c94a24e51dcc7",
+      "entries": 314
+    },
+    {
+      "file": "2026-11-08-marketing-study-bare-images-1.zip",
+      "bytes": 57443883,
+      "sha256": "d37522034a474f19f0d7bd54396b60baf63bfd9af906536188c05219bd387b29",
+      "entries": 150
+    },
+    {
+      "file": "2026-11-08-marketing-study-bare-images-2.zip",
+      "bytes": 15686236,
+      "sha256": "3009533fd825cb271e9dff18e080041cc731f8e34430f7b27dab9098ba2b93e8",
+      "entries": 14
+    },
+    {
+      "file": "2026-11-08-marketing-study-guidance-images-1.zip",
+      "bytes": 56635173,
+      "sha256": "3e408ab580bb5c53e819a980eb9610778b62b50780e307f7e5afa1467ad7f5d1",
+      "entries": 174
+    },
+    {
+      "file": "2026-11-08-marketing-study-guidance-images-2.zip",
+      "bytes": 11916921,
+      "sha256": "83c51a40837fa29a02e782e6a921e85c284ee59a7f91df2f5c770a65535250b8",
+      "entries": 16
+    },
+    {
+      "file": "2026-11-08-marketing-study-full-images-1.zip",
+      "bytes": 58169619,
+      "sha256": "69fb415d2d651dc93ca84f37d36ecf8c63b8af14eaf9d4af857f2b1c65905d9c",
+      "entries": 178
+    },
+    {
+      "file": "2026-11-08-marketing-study-full-images-2.zip",
+      "bytes": 24429990,
+      "sha256": "bdbff3d1d8c1944e6958db9fd5efb073622f64375024169695a9fafbf599c4ff",
+      "entries": 36
+    }
+  ],
+  "originalAndPublishedFileHashes": "EVIDENCE-MANIFEST.json in core archive",
+  "humanPreferenceObservations": 0,
+  "verification": {
+    "at": "2026-11-09T04:57:22.832897+00:00",
+    "archives": 7,
+    "entries": 882,
+    "mappedOriginalFiles": 880,
+    "everyPublishedHashMatched": true,
+    "frozenBytesExact": true,
+    "accountAuthEventsRemoved": true,
+    "nonemptyReasoningContentPresent": false
+  }
+}

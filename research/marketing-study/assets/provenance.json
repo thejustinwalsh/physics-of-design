@@ -1,0 +1,11 @@
+{
+  "artwork": {
+    "file": "assets/sculpture.png",
+    "method": "built-in image_gen, generated November 8 2026",
+    "source": "/Users/mini/.codex/generated_images/01a16fef-8026-7c10-baa1-3ceb18e589f0/exec-e8f5ddd7-eb49-49ce-bae0-4a4b2dd5114d.png",
+    "sha256": "7290260121f884d6e56ac41f91ce34b4fb0bae03bbea29bbae5bfbaf9a2de930",
+    "description": "Original imagined lacquer torus, chalk sphere, chrome ribbon and amber glass studio sculpture; illustrative campaign artwork, not scientific evidence.",
+    "prompt": "Use case ads-marketing; wide editorial artwork for Design Theory; vermilion lacquer torus, rough chalk white stone sphere, polished chrome ribbon, translucent amber glass slab; warm ivory paper architecture, deep charcoal negative spaces; dramatic raking studio light, tactile grain; no text, logos, UI or watermark."
+  },
+  "fonts": "Bundled OFL notices accompany original font bytes. Renamed RobotoFlex.ttf is the original supplied variable font, unchanged."
+}

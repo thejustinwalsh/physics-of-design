@@ -1,0 +1,23 @@
+# Completed-run isolation review
+
+Read-only review of `/private/tmp/design-marketing-20261108-b`, completed November 8, 2026 America/Detroit (November 9 UTC), found no observed condition-boundary violation. This is instruction plus trace-audit isolation, not OS-enforced read denial. The private `audit-review.json` retains per-command IDs, raw-event locations, actual settings, hash checks and suspicion adjudications. No implementation or frozen artifact was changed during review.
+
+All three actual thread-start responses identify `gpt-6.1-sol`, `high` reasoning, `default` service tier and CLI `0.164.0`. Each names only its own `AGENTS.md` as its instruction source. The recorded invocations request the same model/effort/tier and no deadline. Initial model-visible prompt diagnostics contain the standard coding harness, permissions and collaboration policy, the own-workspace study boundary and the shared prompt; they contain no host skill catalog, parent-repository path or sibling ID. Generic skill/plugin instructions and advertised collaboration tools remain part of the common standard harness. No child-agent, MCP or additional builder-model execution appears in the retained event/item types.
+
+| Condition | Unique shell command IDs | Raw start/completion records | Actual build invocations | Automated suspects adjudicated |
+| --- | ---: | ---: | ---: | --- |
+| Bare | 22 | 43 | 8 | None |
+| Guidance | 34 | 68 | 8 | One command, two records: negative `rg` toolkit exclusion glob |
+| Full | 62 | 123 | 7 | Three commands, six records: imports from own `src/` into own supplied `toolkit/` |
+
+Counts deduplicate actual `commandExecution.item.id`; they exclude image views and tool descriptions. Build counts identify executed shell actions outside heredoc-written source/report text, including builds before long-running local preview servers. They count invocations, not eight or seven independently accepted deliveries. A server command can lack a completed item while its server continues; the final recorder receipts confirm owned process-group cleanup.
+
+The review covered all shell command records, embedded script I/O, generated frozen scripts, image-view paths, relevant command outputs and initial contexts. Observed file reads resolve inside each workspace, except ordinary runtime/dependency operations and the full condition's explicitly assigned selector execution. Browser navigation and the guidance condition's `curl` use local preview addresses. GitHub destinations, SVG/schema namespaces and model URLs appear as supplied links or metadata; no external research or asset/package download was observed. The supplied artwork provenance contains an original image path; reading that metadata is not evidence of reading the external image. Browser-cache paths, standard configuration warnings and package error stacks likewise do not demonstrate a prohibited source read.
+
+The full condition made **two actual wrapper invocations**, one failed and one completed, using the assigned trusted executable and GGUF path. Sidecar `.input`, `.output`, `.process` and diagnostic files are not extra invocations. Its runtime/model paths and external runtime stack frames come from the permitted invocation and returned diagnostics. No builder command reads the external runtime implementation. Local-selector usage remains separate from coding-model usage.
+
+Independent recomputation found no changes among 9,446 bare, 9,447 guidance and 9,627 full immutable input files, and no mismatch among their 35, 44 and 133 frozen snapshot files. Recorded post-run identities also match the original input manifests. Raw trace and usage-journal hashes match the recorder receipts. All per-session configuration hashes agree with the manifest, and the current configuration still matches. Frozen and reviewed trace hashes were checked again after review.
+
+The latest actual cumulative coding usage agrees with both final receipts and `cost-summary.json`: input/cached/output are 1,405,953/1,369,984/28,785 bare; 1,830,485/1,790,336/50,012 guidance; and 2,685,609/2,606,464/45,547 full. Cached input is already included in input; reasoning output remains separately reported. All three turns completed with no cumulative-usage regression. These are provider-reported totals with the recorder's unreported-tail limitation, not a monetary claim or general efficiency result.
+
+No syscall/file-open or network-packet capture was collected. Workspace-write allows broad reads, network access remained enabled, and indirect runtime/library/OS accesses cannot be exhaustively ruled out by command review. This review establishes scoped configuration, trace and hash evidence; it makes no human-preference, aesthetic-quality or general token-savings claim.

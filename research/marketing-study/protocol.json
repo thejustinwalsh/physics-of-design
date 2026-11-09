@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "study": "Design Theory single-page marketing case study",
+  "recorded": "2026-11-08",
+  "status": "predeclared before builder launch",
+  "arms": [
+    "bare",
+    "guidance",
+    "full"
+  ],
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "serviceTier": "default",
+  "deadlines": null,
+  "feedback": "none before frozen first delivery; self-tests allowed",
+  "primaryComparison": "guidance vs full",
+  "secondaryComparisons": [
+    "bare vs guidance",
+    "bare vs full"
+  ],
+  "sample": "one shared project, one independently fresh build per arm; no general statistical claim",
+  "primaryQualityOutcome": "actual user blinded overall A/B/tie preference; no fabricated ratings; synthetic critique diagnostic only",
+  "secondaryQualityOutcomes": [
+    "hierarchy/readability",
+    "coherence/character",
+    "motion/imagery effectiveness",
+    "task and responsive hard failures"
+  ],
+  "humanReview": {
+    "reviewers": 1,
+    "identity": "requesting user if they choose to rate",
+    "pairOrder": "randomized",
+    "leftRight": "randomized",
+    "ties": "retained",
+    "stoppingRule": "all three pair comparisons once, no optional sampling until a win",
+    "adoptionThreshold": "none for general superiority; one case study cannot establish it"
+  },
+  "cost": [
+    "provider cumulative coding input/output/cache separately",
+    "selector attempts/completions/input usage/wall time separately",
+    "numeric evaluations and renderer work separately",
+    "wall time and failures"
+  ],
+  "exclusions": "no post-outcome exclusions; incomplete/failed builds remain outcomes; technical pre-turn setup failures retained separately",
+  "isolation": "fresh /private/tmp workspaces, suppressed inherited skills/MCP/plugins/memories, identical model/config; instruction and trace audit unless stronger read denial verified",
+  "freeze": "snapshot source/public/report immediately on first final turn completion; no evaluator repairs",
+  "rendererMatrix": {
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "sizes": [
+      [
+        320,
+        740
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        834,
+        1112
+      ],
+      [
+        1024,
+        768
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ],
+      [
+        2560,
+        1440
+      ],
+      [
+        240,
+        480
+      ],
+      [
+        900,
+        160
+      ]
+    ],
+    "other": [
+      "keyboard",
+      "actual wheel scroll both directions",
+      "resize",
+      "200% text",
+      "changed heading",
+      "reduced motion",
+      "page errors",
+      "imagery loading",
+      "CTA/copy action"
+    ]
+  },
+  "limits": [
+    "one project does not establish general benefit",
+    "token totals across different model tokenizers are not pooled as equivalent cost",
+    "cached input already included in input",
+    "cannot claim human preference before actual observations",
+    "no physical Safari/native performance claim"
+  ]
+}
